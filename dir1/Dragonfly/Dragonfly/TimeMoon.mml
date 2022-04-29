@@ -1,0 +1,64 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Phase of the moon"/>
+<<<$IFCOLOR>>><colorblend posn=background tcolor=#000060 bcolor=#000040/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Phase of the moon
+</xPageTitle>
+
+<p>
+	Look at this page to see what phase the moon will be in.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<p align=right><big><big>
+	<date name=date enterday=false year=2000 month=5 day=30 blank="No date specified" width=33%/>
+</big></big></p>
+
+<!xDayOfWeek>
+	<td width=10 bgcolor=#004000 align=center valign=center>
+		<big><font color=#ffffff><?MacroContent?></font></big>
+	</td>
+</xDayOfWeek>
+
+<!xDay>
+	<td width=10 height=15% MACROATTRIBUTE=1 align=left valign=top>
+		<small><?Macrocontent?></small>
+	</td>
+</xDay>
+
+<!xdaynull>
+	<xday/>
+</xdaynull>
+
+<!xMoon>
+	<threeD posn=background width=100% height=100% border=0>
+		<rotatez val=180/>
+		<lightvector MACROATTRIBUTE=1/>
+		<meshsphere radius=4/>
+		<colordefault color=#c0c0c0/>
+		<shapemeshsurface/>
+	</threed>
+</xmoon>
+
+<table width=100%>
+	<tr>
+		<xDayOfWeek>Sun</xDayOfWeek>
+		<xDayOfWeek>Mon</xDayOfWeek>
+		<xDayOfWeek>Tues</xDayOfWeek>
+		<xDayOfWeek>Wed</xDayOfWeek>
+		<xDayOfWeek>Thurs</xDayOfWeek>
+		<xDayOfWeek>Fri</xDayOfWeek>
+		<xDayOfWeek>Sat</xDayOfWeek>
+	</tr>
+	<<<$MONTH>>>
+</table>
+
+
+</font>

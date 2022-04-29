@@ -1,0 +1,589 @@
+<pageinfo title="CEscSearch"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>CEscSearch</xPageTitle>
+
+
+<p>
+	CEscSearch is the C++ object that allows you to index and search your
+	Escarpment application. It makes it very easy for you to index all the MML
+	documents you have in your application resource, and then present a user
+	interface that lets users <a href="r:112#Be one with help">search through the application</a> just as it were help.
+	Just look at this application as an example.
+</p>
+
+
+<xSectionTitle>CEscSearch Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarBYTE/>
+		<xtd2>m_bCurRelevence</xtd2>
+		<xtd3>
+			Set this in your PESCINDEXCALLBACK (if you specify one when you're indexing)
+			to set the word relevence for all words to be added after this. Higher numbers
+			(up to 255) mean the word is more relevent. For example, if you have a title
+			of the document set this to 64 or 128. If it's only standard text use
+			32 or 64. If it's unimportant text use 0 or 16. This defaults to 64.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCListVariable/>
+		<xtd2>m_listFound</xtd2>
+		<xtd3>
+			List of search results, sorted by highest score.
+			Each element contains a DWORD and a packed set of strings:
+			<p/>
+			DWORD - score. range from 0 to 100,000
+			<br/>
+			WCHAR[] - NULL-terminated document name from &lt;PageInfo&gt;.
+			<br/>
+			WCHAR[] - NULL-terminated section name, from &lt;Section&gt;.
+			<br/>
+			WCHAR[] - Either filename or "r:XXX" (resource number)
+			may be appended with "#YYY" where YYY is the section name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszLastSearch</xtd2>
+		<xtd3>
+			Last string passed into CEscSearch::Search().
+			This may be NULL. <bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCADVANCEDSEARCH</xSectionTitle>
+
+<p>
+	This structure is passed into CEscSearch::Search() with parameters for an advanced search.
+	Parameters should be set to 0 by default.
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwOldest</xtd2>
+		<xtd3>
+			Any docouments older than dwOldest are thrown out of the search.
+			The date is (year &lt;&lt; 16) | (month &lt;&lt; 8) | (day).
+			year = 1999, etc. month=1..12. day=1..31.
+			If this is 0 then documents are not discarded because they're too old.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMostRecent</xtd2>
+		<xtd3>
+			Any docouments newer than dwMostRecent are thrown out of the search.
+			The date is (year &lt;&lt; 16) | (month &lt;&lt; 8) | (day).
+			year = 1999, etc. month=1..12. day=1..31.
+			If this is 0 then documents are not discarded because they're too new.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fExclude</xtd2>
+		<xtd3>
+			If dwOldest != 0 or dwMostRecent != 0, then any documents without a date
+			are excluded if fExclude == TRUE. If fExclude == FALSE then documents without a date
+			are always included.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fRamp</xtd2>
+		<xtd3>
+			If dwOldest != 0 and dwMostRecent != 0 and fRamp == TRUE then the the score of
+			a document is ramped so that documents aged near dwOldest have a low score.
+			As documents are newer (closer to dwMostRecent) their score improves. Thus,
+			more recent documents tend to appear at the top of the list.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPBOOL/>
+		<xtd2>pafUseCategory</xtd2>
+		<xtd3>
+			Pointer to an array of BOOL's that specify which category numbers (see
+			CEscSearch::SectionFlush()) are included in the search. If pafUseCategory[dwCat]
+			is TRUE then documents of dwCat are included. If FALSE, any documents of
+			category dwCat are excluded from the search. If a document's category is &gt;=
+			dwUseCategoryCount then it's included by default.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwUseCategoryCount</xtd2>
+		<xtd3>
+			Number of elements in pagUseCategory.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCINDEX</xSectionTitle>
+
+<p>
+	This structure is passed into CEscSearch::Index() with parameters for indexing.
+	Parameters should be set to 0 by default.
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarHWND/>
+		<xtd2>hhwndUI</xtd2>
+		<xtd3>
+			Window to bring user interface up to show percent complete.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback, used for every document to
+			see if any substitutions should be made. This callback will
+			not have a CEscPage object though.
+			This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fNotEnumMML</xtd2>
+		<xtd3>
+			If FALSE (default) then enumerate all MML resources
+			in the application and index those. NOTE:
+			If <xCodeInline>&lt;pageinfo index=false&gt;</xCodeInline> is
+			set then the page is not indexed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwMMLExclude</xtd2>
+		<xtd3>
+			If not NULL, this is a list of MML resource numbers
+			that are excluded from indexing.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMMLExcludeCount</xtd2>
+		<xtd3>
+			Number of elements in pdwMMLExclude.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>papszIncludeFile</xtd2>
+		<xtd3>
+			If not NULL, this is a pointer to an array of
+			string-pointers of MML files to also index.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIncludeFileCount</xtd2>
+		<xtd3>
+			Number of strings in papszIncludeFile.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPESCINDEXCALLBACK/>
+		<xtd2>pIndexCallback</xtd2>
+		<xtd3>
+			If the application wishes to include its own documents (such as database)
+			in the indexing, it should set a callback.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndexDocuments</xtd2>
+		<xtd3>
+			Number of documents to be passed to pIndexCallback.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pIndexUserData</xtd2>
+		<xtd3>
+			User data to pass to the index callback.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>PCESCINDEXCALLBACK</xSectionTitle>
+
+<p>
+	The index callback is a callback function optionally supplied by the application when it
+	calls CEscSearch::Index(). It allows the application's own documents to be included
+	in the Escarpment index.
+</p>
+
+<p>
+	When called, the application will be passed a document number in dwDocument,
+	from 0 to ESCINDEX.dwIndexDocuments (exclusive). The callback code should
+	load in the appropriate data, and call CEscSearch::IndexText() and/or
+	CEscSearch::IndexData() as appropriate. It may also want to set
+	CEscSearch.m_bCurRelevence. Once all the words have been added, the callback
+	calls CEscSearch::SectionFlush() to write the section to disk. The application
+	can call SectionFlush() as many times as it likes. If it does not call SectionFlush()
+	then the words won't be added at all.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscSearch/>
+		<xtd2>pSearch</xtd2>
+		<xtd3>
+			Search object to call into.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwDocument</xtd2>
+		<xtd3>
+			Document number.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User supplied data, passed in with the ESCINDEX structure.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscSearch::CEscSearch</xSectionTitle>
+
+<p>
+	CEscSearch constructor. After creating the search object you must call Init().
+</p>
+
+
+
+<xSectionTitle>CEscSearch::~CEscSearch</xSectionTitle>
+
+<p>
+	CEscSearch destructor.
+</p>
+
+
+
+
+<xSectionTitle>CEscSearch::Index</xSectionTitle>
+
+<p>
+	Indexes the application's MML.
+</p>
+
+<p>
+	Index() pays attention to the following tags when searching:
+</p>
+<xul>
+	<li><a href="r:114#&lt;KeyWord&gt;">&lt;KeyWord&gt;</a></li>
+	<li><a href="r:114#&lt;PageInfo&gt;">&lt;PageInfo&gt;</a></li>
+	<li><a href="r:114#&lt;Section&gt;">&lt;Section&gt;</a></li>
+</xul>
+
+<xTableParam>
+	<tr>
+		<xVarHWND/>
+		<xtd2>hhwndUI</xtd2>
+		<xtd3>
+			Window to bring user interface up to show percent complete.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback, used for every document to
+			see if any substitutions should be made. This callback will
+			not have a CEscPage object though.
+			This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEnumMML</xtd2>
+		<xtd3>
+			If TRUE (default) then enumerate all MML resources
+			in the application and index those. NOTE:
+			If <xCodeInline>&lt;pageinfo index=false&gt;</xCodeInline> is
+			set then the page is not indexed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwMMLExclude</xtd2>
+		<xtd3>
+			If not NULL, this is a list of MML resource numbers
+			that are excluded from indexing.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMMLExcludeCount</xtd2>
+		<xtd3>
+			Number of elements in pdwMMLExclude.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>papszIncludeFile</xtd2>
+		<xtd3>
+			If not NULL, this is a pointer to an array of
+			string-pointers of MML files to also index.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIncludeFileCount</xtd2>
+		<xtd3>
+			Number of strings in papszIncludeFile.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+<xSectionTitle>CEscSearch::Index</xSectionTitle>
+
+<p>
+	Indexes the application's MML. It's just like the Index() that accepts parameters,
+	except they are wrapped up in a structure.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPESCINDEX/>
+		<xtd2>pIndex</xtd2>
+		<xtd3>
+			Structure containing the parameters.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscSearch::IndexNode</xSectionTitle>
+
+<p>
+	An application's PESCINDEXCALLBACK will call this to add all the text in
+	a PCMMLNode into the
+	index. The node and all its children are automatically parsed for words and they are added to the
+	index with word-relevence m_bCurRelevence. <bold>Only call this from
+	a PCESCINDEXCALLBACK.</bold>
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to index.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscSearch::IndexText</xSectionTitle>
+
+<p>
+	An application's PESCINDEXCALLBACK will call this to add a text string into the
+	index. The string is automatically parsed for words and they are added to the
+	index with word-relevence m_bCurRelevence. <bold>Only call this from
+	a PCESCINDEXCALLBACK.</bold>
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to add.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscSearch::Init</xSectionTitle>
+
+<p>
+	Initalizes the search object.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			Module instance, where any resources may be found.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwAppVersion</xtd2>
+		<xtd3>
+			A number that changes with every version/build
+			of the application. That way if the user upgrades version
+			their search database will be reindexed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			File that's used to store the search data. If this
+			isn't specified one is automatically generated from GetModuleFilename(hInstance).
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscSearch::NeedIndexing</xSectionTitle>
+
+<p>
+	Returns TRUE if the application's MML needs to be reindexed.
+	This happens if it hasn't been indexed on the machine yet, the index has
+	been deleted, or the application's version ID has changed.
+</p>
+
+<p>
+	In general, you should call NeedIndexing() before every call to Search().
+	If it returns true, then call Index() before Search().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarBOOL/>
+		<xreturns/>
+		<xtd3>
+			TRUE if the database needs indexing.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscSearch::Search</xSectionTitle>
+
+<p>
+	Given keywords separated by a space, this searches through the
+	index looking for the best 100 matches. (You should call NeedIndexing() first,
+	and if necessary, Index().)
+</p>
+
+<p>
+	This then fills in m_listFound with the best search elements, sorted by score.
+	It also fills in m_pszLastSearch so your application can remember the search.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszInput</xtd2>
+		<xtd3>
+			Keywords separated by spaces.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPEscAdvancedSearch/>
+		<xtd2>pInfo</xtd2>
+		<xtd3>
+			If not NULL, this points to an advanced-search information structure allowing
+			searches by date or document category. If NULL no special filters are used.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscSearch::SectionFlush</xSectionTitle>
+
+<p>
+	An application's PESCINDEXCALLBACK will call this after it's added all the section
+	words to the search tree using CEscSearch::IndexNode() and CEscSearch::IndexText().
+	Applications can call this more than once per callback. <bold>Only call this from
+	a PCESCINDEXCALLBACK.</bold>
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszDocName</xtd2>
+		<xtd3>
+			Name of the document. If the document is later searched for and found
+			it will be passed back to the application through m_listFound.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSectionName</xtd2>
+		<xtd3>
+			Name of the section within the document. If the document is later searched for and found
+			it will be passed back to the application through m_listFound.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszLinkData</xtd2>
+		<xtd3>
+			Link that brings up the document to the appropriate section.
+			If the document is later searched for and found
+			it will be passed back to the application through m_listFound.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwDate</xtd2>
+		<xtd3>
+			Date field for the seach so that a user can seach for documents occurring
+			within a specific date range. This is (year &lt;&lt; 16) | (month &lt;&lt; 8) | (day). Where
+			year = 2000, etc. month = 1..12. day=1..31. If this is set to 0 (or not specified)
+			then the document has no associated date.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwCategory</xtd2>
+		<xtd3>
+			Category number that allows users to search through specific sections of the application's
+			documentation or database. Category 0 is always documentation (used by indexing the
+			application's mml). All other numbers are application defined. You should order categories
+			from 0,1,2,...,etc. If left blank category 0 is used.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+

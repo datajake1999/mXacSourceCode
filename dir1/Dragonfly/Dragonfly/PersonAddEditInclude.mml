@@ -1,0 +1,250 @@
+
+<xbr/>
+
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Last name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=lastname defcontrol=true/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			First name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=firstname/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Nickname:</xtdleft>
+		<xtdright><xEditInTable name=nickname/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Type of relationship:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright>
+			<combobox name=relationship width=100% cbheight=100 cursel=0>
+				<elem name=Aquaintance><bold>Aquaintance</bold></elem>
+				<elem name=Business><bold>Business</bold></elem>
+				<elem name=Coworker><bold>Coworker</bold></elem>
+				<elem name=Family><bold>Family</bold></elem>
+				<elem name=Friend><bold>Friend</bold></elem>
+				<elem name=Miscellaneous><bold>Miscellaneous</bold></elem>
+				<elem name=Neighbor><bold>Neighbor</bold></elem>
+				<elem name=Relative><bold>Relative</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft valign=top>
+			Gender:
+		</xtdleft>
+		<xtdright>
+			<combobox name=gender width=100% cbheight=100 cursel=0>
+				<elem name="No gender specified"><bold>Not Specified</bold></elem>
+				<elem name=Male><bold>Male</bold></elem>
+				<elem name=Female><bold>Female</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+</xtableclear>
+
+<xbr/>
+
+<xSectionTitle>Contact Information</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Home phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=homephone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Work phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=workphone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Mobile phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=mobilephone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>FAX number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=faxphone/></xtdright>
+	</tr>
+</xtableclear>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Personal E-mail:</xtdleft>
+		<xtdright><xEditInTable name=personalemail/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Business E-mail:</xtdleft>
+		<xtdright><xEditInTable name=businessemail>
+			<xHoverHelp>
+				You can type in the person's work E-mail here. If you select a company in
+				"Company link" then you can leave this field blank because the company's
+				E-mail will be displayed.
+			</xHoverHelp>
+		</xEditInTable></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Personal web site:</xtdleft>
+		<xtdright><xEditInTable name=personalweb/></xtdright>
+	</tr>
+</xtableclear>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Home address:</xtdleft>
+		<xtdright><edit width=100% maxchars=256 multiline=true wordwrap=false name=homeaddress/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Work address:</xtdleft>
+		<xtdright><edit width=100% maxchars=256 multiline=true wordwrap=false name=workaddress>
+			<xHoverHelp>
+				You can type in the person's work address here. If you select a company in
+				"Company link" then you can leave this field blank because the company's
+				address will be displayed.
+			</xHoverHelp>
+		</edit></xtdright>
+	</tr>
+</xtableclear>
+
+<xbr/>
+
+<xSectionTitle>Business information</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Company name:<br/><small>(See hover-help.)</small></xtdleft>
+		<xtdright><xEditInTable name=company>
+			<xHoverHelp>
+				You can type in the company name here, or if it's already listed in your
+				address book you can select it under "Company link".
+			</xHoverHelp>
+		</xEditInTable></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Company link:<br/><small>(See hover-help.)</small></xtdleft>
+		<xtdright><xFilterBusiness name=business>
+			<xHoverHelp>
+				If the company is listed in your address book you can select it here.
+				If you haven't already specified the person's work phone number, address,
+				and E-mail, the person will get the company's phone number, address, and E-mail.
+			</xHoverHelp>
+		</xFilterBusiness></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Job title:</xtdleft>
+		<xtdright><xEditInTable name=jobtitle/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Department:</xtdleft>
+		<xtdright><xEditInTable name=department/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Office:</xtdleft>
+		<xtdright><xEditInTable name=office/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Manager:</xtdleft>
+		<xtdright><xFilterPerson name=manager/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Assistant:</xtdleft>
+		<xtdright><xFilterPerson name=assistant/></xtdright>
+	</tr>
+</xtableclear>
+
+
+<xbr/>
+
+<xSectionTitle>Personal information</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Spouse:</xtdleft>
+		<xtdright><xFilterPerson name=spouse/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft valign=top>Children:</xtdleft>
+		<xtdright>
+			<xFilterPerson name=child1/><br/>
+			<xFilterPerson name=child2/><br/>
+			<xFilterPerson name=child3/><br/>
+			<xFilterPerson name=child4/><br/>
+			<xFilterPerson name=child5/><br/>
+			<xFilterPerson name=child6/><br/>
+			<xFilterPerson name=child7/><br/>
+			<xFilterPerson name=child8/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Mother:</xtdleft>
+		<xtdright><xFilterPerson name=mother/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Father:</xtdleft>
+		<xtdright><xFilterPerson name=father/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft valign=top>Birthday:</xtdleft>
+		<xtdright>
+			<bold><date width=100% name=birthday/></bold>
+			<br/>
+			<button style=x checkbox=true name=showbday>
+				Show the birthday on my calendar.
+			</button>
+			<br/>
+			<button style=x checkbox=true name=remindbday>
+				Remind me 1 week before their birthday.
+			</button>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft valign=top>When they died:</xtdleft>
+		<xtdright>
+			<bold><date width=100% blank="Still alive" name=deathday/></bold>
+		</xtdright>
+	</tr>
+</xtableclear>
+
+
+<xbr/>
+
+<xSectionTitle>Miscellaneous</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<br/><small>(See hover-help.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal>
+			<xHoverHelp>
+				If you link to a journal category then every time
+				you have a phone conversation or meeting with the person a record will be kept
+				in the specified category. If you run a small business, you can use this
+				to bill your time to the person.
+			</xHoverHelp>
+		</xFilterJournal></xtdright>
+	</tr>
+</xtableclear>
+
+<p>
+	Type any notes you may have about the person here:
+</p>
+
+<p>
+	<edit width=100% height=50% multiline=true wordwrap=true name=miscnotes/>
+</p>
+
+<xbr/>
+

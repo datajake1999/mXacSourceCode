@@ -1,0 +1,56 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Numerical Records"/>
+
+<xPageTitle>
+	Numerical Records
+</xPageTitle>
+
+<xNotFunctional/>
+
+<p>
+	<xMoreInfo href=r:111/>Use this page to keep track of numbers that you come across
+	over time, such as a stock price, your weight, or distance driven.
+</p>
+<xbr/>
+
+<xSectionTitle>
+	Current records
+</xSectionTitle>
+
+
+<!xRecordName>
+	<tr>
+		<td>
+			<?MacroContent?>
+		</td>
+	</tr>
+</xRecordName>
+
+<xListTable>
+	<xRecordName>
+		<a href=r:111>My weight</a>
+		<br/>
+		83 entries from 1 January 1989 to 2 March 2000.
+	</xRecordName>
+	<xRecordName>
+		<a href=r:111>Microsoft Stock Price</a>
+		<br/>
+		12 entries from 15 May 1995 to 8 May 2000.
+	</xRecordName>
+</xListTable>
+
+<xbr/>
+
+<xChoiceButton href=r:111>
+	<bold>Add a record</bold>
+	<br/>
+	Add a new record for keeping track of a number.
+</xChoiceButton>
+
+<xChoiceButton href=r:111>
+	<bold>Remove record</bold>
+	<br/>
+	Remove a record that you were keeping track of.
+</xChoiceButton>
+

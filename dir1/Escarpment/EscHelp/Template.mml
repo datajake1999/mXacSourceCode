@@ -1,0 +1,84 @@
+<colorblend posn=background color=#000000/>
+<table width=100%>
+	<tr>
+		<td width=33% align=left>
+			<button href=r:101 style=teapot>
+				<font color=#8080ff>Home</font>
+				<xHoverHelpShort>
+					Jumps to Escarpment's main page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+		<td width=33% align=center>
+			<button href=r:137 style=beveled>
+				<font color=#8080ff>Search</font>
+				<xHoverHelp>
+					Lets you search through the help document.
+					Application search support is built into Escarpment.
+				</xHoverHelp>
+			</button>
+		</td>
+		<td width=33% align=right>
+			<button href=back style=leftarrow>
+				<font color=#8080ff>Back</font>
+				<xHoverHelpShort>
+					Goes back to the previous page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+	</tr>
+	<tr>
+		<td width=20% lrmargin=0 tbmargin=0>
+			<image href=r:101 posn=background jpgresource=136 type=tile>
+				<xHoverHelp>
+					One of many waterfalls found in Darwin's escarpment country;
+					I named my toolkit after the region because of all the
+					stunning scenery and refreshing swimming holes it contains.
+				</xHoverHelp>
+			</image>
+		</td>
+		<td width=80% lrmargin=20 tbmargin=20>
+			<colorblend posn=background tcolor=#d0d0e0 bcolor=#a0a090/>
+			<?TemplateSubst?>
+		</td>
+	</tr>
+	<tr>
+		<td width=20% align=center>
+			<image href="http://www.mxac.com.au" jpgresource=104 scale=50%>
+				<xHoverHelpShort>
+					Brings up the mXac web page.
+				</xHoverHelpShort>
+			</image>
+		</td>
+		<td width=27% align=center valign=center>
+			<button href=viewsource style=uptriangle>
+				<font color=#8080ff>View MML Source</font>
+				<xHoverHelp>
+					Displays the MML source for the current page.
+					You can look at the MML used to generate this application
+					to learn how to write your own.
+				</xHoverHelp>
+			</button>
+		</td>
+		<td width=27% align=center valign=center>
+			<button href=print>
+				<font color=#8080ff>Print</font>
+				<xHoverHelp>
+					Print the current page using printing support
+					built into Escarpment.
+					Printing in an Escarpment
+					application is infinitely easier to implement than printing
+					in a Windows app.
+				</xHoverHelp>
+			</button>
+		</td>
+		<td width=26% align=right valign=center>
+			<button href=back style=leftarrow>
+				<font color=#8080ff>Back</font>
+				<xHoverHelpShort>
+					Goes back to the previous page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+	</tr>
+</table>

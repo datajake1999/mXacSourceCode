@@ -1,0 +1,49 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Meetings"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=222/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Meetings
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:175/>The "Meetings" page lets you see upcoming meetings, and add, edit, or remove
+	them.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=addmeeting>
+	<bold>Add a new meeting appointment</bold>
+	<br/>
+	Add a meeting appointment to the list.
+</xChoiceButton>
+
+<xChoiceButton name=addreoccur>
+	<bold>Add a new reoccurring meeting appointment</bold>
+	<br/>
+	Add a reoccurring meeting to the list.
+</xChoiceButton>
+
+<xChoiceButton name=takenotes>
+	<bold>Take notes on a meeting</bold>
+	<br/>
+	Select this if you've just started an unscheduled meeting and wish to
+	take notes. <italic>(If you have already scheduled the meeting you should click on
+	it and select "I'm holding the meeting now.")</italic>
+</xChoiceButton>
+
+<xChoiceButton href=r:291>
+	<bold>Change your scheduled breaks</bold>
+	<br/>
+	This page lets you change what time you usually start work, when you have lunch
+	and for how long, and when you have dinner.
+</xChoiceButton>
+
+<null>
+	<<<$MEETINGS>>>
+</null>
+

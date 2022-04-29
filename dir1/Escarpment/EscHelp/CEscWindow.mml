@@ -1,0 +1,1514 @@
+<pageinfo title="CEscWindow"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>CEscWindow</xPageTitle>
+
+
+<p>
+	CEscWindow is the C++ object behind window functionality. It is probably the first
+	control you create and use in an Escarpment application since it's the gateway
+	to CEscPage and then CEscControl objects.
+</p>
+
+
+<xSectionTitle>CEscControl Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwStyle</xtd2>
+		<xtd3>
+			Style of window to display, from CEscWindow::Init().
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fCapture</xtd2>
+		<xtd3>
+			Set to TRUE if the mouse is captured.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarIFONTINFO/>
+		<xtd2>m_fi</xtd2>
+		<xtd3>
+			Default font to use for pages when they're created.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fLButtonDown</xtd2>
+		<xtd3>
+			Set to TRUE if the mouse is captured (if a button is down) and the left
+			button is down.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fMButtonDown</xtd2>
+		<xtd3>
+			Set to TRUE if the mouse is captured (if a button is down) and the middle
+			button is down.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fMouseOver</xtd2>
+		<xtd3>
+			Set to TRUE if the mouse is over the window.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fRButtonDown</xtd2>
+		<xtd3>
+			Set to TRUE if the mouse is captured (if a button is down) and the right
+			button is down.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>m_hInstance</xtd2>
+		<xtd3>
+			Application's HINSTANCE handle. Used for loading in resources from the .EXE.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHWND/>
+		<xtd2>m_hWnd</xtd2>
+		<xtd3>
+			Window's window handle. You may need this to make some Windows API calls. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHWND/>
+		<xtd2>m_hWndParent</xtd2>
+		<xtd3>
+			Parent's window handle. You may need this to make some Windows API calls.
+			This is NULL is the window has no parent. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>m_iExitVScroll</xtd2>
+		<xtd3>
+			When a page exits, this is set to its vertical scroll position.
+			Applications can use the value so that a "Back" button
+			returns to the correct scroll position.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>m_pLastMouse</xtd2>
+		<xtd3>
+			Where the mouse was the last time the CEscWindow object checked.
+			In screen coordinates. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>m_pPage</xtd2>
+		<xtd3>
+			The page currently displayed in the window. If no page is displayed this is NULL.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarESCPRINTINFO/>
+		<xtd2>m_PrintInfo</xtd2>
+		<xtd3>
+			Specified how the page is to be printed.
+			If you are going to change this do so immediately after calling
+			CEscWindow::InitForPrint() and before calling any other printing functions.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszExitCode</xtd2>
+		<xtd3>
+			When a page exits, m_pszExitCode is filled with a pointer to the exit string.
+			The string's memory remains valid until a new page is loaded or the CEscWindow
+			object is destroyed. This may be NULL.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>m_rMouseMove</xtd2>
+		<xtd3>
+			If EWS_CLOSENOSE mouse active, close the mouse if it moves off the window
+			AND it's not over m_rMouseMove. Set this after calling init.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>CESCPRINTINFO structure</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fColumnLine</xtd2>
+		<xtd3>
+			If TRUE draw a line separating the columns.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fFooterLine</xtd2>
+		<xtd3>
+			If TRUE draw a line separating the footer from the text.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fHeaderLine</xtd2>
+		<xtd3>
+			If TRUE draw a line separating the header from the text.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fRowLine</xtd2>
+		<xtd3>
+			If TRUE draw a line separating the rows.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iColumnSepX</xtd2>
+		<xtd3>
+			Distance between columns in TWIPS, 1/1440 inch.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iFooterSepY</xtd2>
+		<xtd3>
+			Distance between the footer and text in TWIPS, 1/1440 inch.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iHeaderSepY</xtd2>
+		<xtd3>
+			Distance between the header and text in TWIPS, 1/1440 inch.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iRowSepY</xtd2>
+		<xtd3>
+			Distance between rows in TWIPS, 1/1440 inch.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFooter</xtd2>
+		<xtd3>
+			Footer MML. This may also be NULL for no footer.
+			It may contain substitutions for &lt;&lt;&lt;PAGE&gt;&gt;&gt;,
+			&lt;&lt;&lt;TIME&gt;&gt;&gt;, &lt;&lt;&lt;DATE&gt;&gt;&gt;, &lt;&lt;&lt;SECTION&gt;&gt;&gt;, &lt;&lt;&lt;PAGETITLE&gt;&gt;&gt;.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszHeader</xtd2>
+		<xtd3>
+			Header MML. This may also be NULL for no header.
+			It may contain substitutions for &lt;&lt;&lt;PAGE&gt;&gt;&gt;,
+			&lt;&lt;&lt;TIME&gt;&gt;&gt;, &lt;&lt;&lt;DATE&gt;&gt;&gt;, &lt;&lt;&lt;SECTION&gt;&gt;&gt;, &lt;&lt;&lt;PAGETITLE&gt;&gt;&gt;.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rPageMargin</xtd2>
+		<xtd3>
+			Left, right, top, bottom margin in TWIPS, 1/1440 inch.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWORD/>
+		<xtd2>wColumns</xtd2>
+		<xtd3>
+			Number of columns.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWORD/>
+		<xtd2>wFontScale</xtd2>
+		<xtd3>
+			Scaling for fonts. 0x100 = normal. 0x200=2x, 0x80=1/2x etc.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWORD/>
+		<xtd2>wOtherScale</xtd2>
+		<xtd3>
+			Scaling for printing of buttons/bitmaps. 0x100 = normal. 0x200=2x, 0x80=1/2x etc.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWORD/>
+		<xtd2>wRows</xtd2>
+		<xtd3>
+			Number of rows.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>CEscWindow::CEscWindow</xSectionTitle>
+
+<p>
+	CEscWindow constructor. After creating the window you must call Init().
+</p>
+
+
+
+<xSectionTitle>CEscWindow::~CEscWindow</xSectionTitle>
+
+<p>
+	CEscWindow destructor.
+</p>
+
+
+
+
+
+<xSectionTitle>CEscWindow::Beep</xSectionTitle>
+
+<p>
+	Plays a beep using the MIDI drum channels.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSound</xtd2>
+		<xtd3>
+			Drum (note) number. See ESCBEEP_XXX for some predefined beeps.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwDuration</xtd2>
+		<xtd3>
+			Duration in milliseconds.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::Center</xSectionTitle>
+
+<p>
+	Moves the window so its centered in the screen.
+</p>
+
+<xTableParam>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::DCGet</xSectionTitle>
+
+<p>
+	Returns the HDC of the display area. Controls/views should call this
+	rather than using m_hWnd to get the DC because if the window is used for
+	printing then this will be the DC to the printer. Remember, call DCRelease()
+	once per DCGet(), and call DCRelease() before returning from the function.
+</p>
+<p>
+  NOTE: Do not paint to this DC. Only use it for getting information, such as
+  font sizes, etc. Only paint when have a ESCM_PAINT.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xreturns/>
+		<xtd3>
+			HDC to use. Make sure to call DCRelease().
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscWindow::DCRelease</xSectionTitle>
+
+<p>
+	Frees the DC. Actually reduces a counter, and when it goes to 0 then
+	frees.
+</p>
+
+
+
+
+
+<xSectionTitle>CEscWindow::HoverHelp</xSectionTitle>
+
+<p>
+	Shows a modal help tooltip at the current mouse location. The window
+	stays up until the mose moves. This:
+</p>
+
+<ol>
+	<li>
+		Creates a CEscWindow that is a popup window of the current window, located near
+		the mouse pointer, and which disappears if the mouse moves.
+	</li>
+	<li>
+		Use pNode to create a new PageDialog.
+	</li>
+</ol>
+
+<p>
+	NOTE: If the pNode-&gt;AttribGet("hresize") is found as TRUE then the horizontal
+	size will be adjusted according to the text length. Only use this
+	for short hep messages.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			This will be copied by the HoverHelp call, so nothing in pNode will be modified
+			or erased.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fKeyActivated</xtd2>
+		<xtd3>
+			If TRUE, the user can press escape to close the window.
+			Otherwise, the window closes when the mouse moves.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pUL</xtd2>
+		<xtd3>
+			Upper left-hand corner of the help window.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::IconSet</xSectionTitle>
+
+<p>
+	Sets the icon displayed for the window when it's minimized.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHICON/>
+		<xtd2>hIcon</xtd2>
+		<xtd3>
+			Handle to the icon.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::Init</xSectionTitle>
+
+<p>
+	Initializes the window object. You must call this after creating a CEscWindow.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			Application's hInstance. Used when loading in MML, BMP, and JPEG resources.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHWND/>
+		<xtd2>hWndParent</xtd2>
+		<xtd3>
+			Parent window of the new window. If this is not NULL, the new window will
+			be a pop-up window of hWndParent. If it's NULL, the window is a top-level
+			window.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwStyle</xtd2>
+		<xtd3>
+			(Optional) Style of window to create. The style must be a combination of the following flags:
+			<p/>
+			<xul>
+				<li>
+					EWS_TITLE (to include a titlebar) or EWS_NOTITLE.
+				</li>
+				<li>
+					EWS_SIZABLE (to allow the user to resize) or EWS_FIXEDSIZE.
+				</li>
+				<li>
+					EWS_VSCROLL (to display a vertical scroll bar) or EWS_NOVSCROLL.
+				</li>
+				<li>
+					EWS_FIXEDHEIGHT (so that the window's height is only changed by the user) or
+					EWS_AUTOHEIGHT (the window's height is adjusted to the height of the page)
+				</li>
+				<li>
+					EWS_FIXEDWIDTH (so that the window's width is only changed by the user) or
+					EWS_AUTOWIDTH (so the window's width is adjusted by the width of the page.)
+					If you use EWS_AUTOWIDTH then only use left justification.
+				</li>
+				<li>
+					EWS_NOSPECIALCLOSE (if there aren't any special close conditions),
+					EWS_CLOSEMOUSEMOVE (automatically close if the mouse moves),
+					EWS_CLOSENOMOUSE (automatically close if the mouse moves off the window's
+					display region or m_rMouseMove)
+				</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pRectSize</xtd2>
+		<xtd3>
+			(Optional) Bounding rectangle for the window, in screen coordinates. If NULL or
+			not specified, then something reasonable is used.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::InitForPrint</xSectionTitle>
+
+<p>
+	Initialize the CEscWindow object so that it can be used
+	for printing. If it's initialized for printing it cannot be used for
+	displaying.
+</p>
+
+<p>
+	To print, you must:
+</p>
+<ol>
+	<li>Call CEscWindow::InitForPrint()</li>
+	<li>Modify CEscWindow.m_PrintInfo to specifiy printing styles.</li>
+	<li>Call CEscWindow::PrintPageLoad() to load in a page.</li>
+	<li>Call CEscWindow::Print() to pring the loaded page.</li>
+</ol>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDCPrint</xtd2>
+		<xtd3>
+			Printer DC. If this is NULL then the default printer will be used.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			Application's hInstance. Used when loading in MML, BMP, and JPEG resources.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHWND/>
+		<xtd2>hWndParent</xtd2>
+		<xtd3>
+			If Escarpment needs to display a dialog box, this window is used as its parent.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::Move</xSectionTitle>
+
+<p>
+	Moves the window so it's upper left corner is at the given XY position.
+	In the process this invalidates the CEscPage so it's redrawn.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iX</xtd2>
+		<xtd3>
+			X position.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iY</xtd2>
+		<xtd3>
+			Y position.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::PageClose</xSectionTitle>
+
+<p>
+	Forces the page (if there is one) to close.
+</p>
+
+<xTableParam>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscWindow::PageDialog and PageDialogFile</xSectionTitle>
+
+<p>
+	There are several overloaded page dialogs with
+	different first parameters. PageDialog() basically calls PageDisplay()
+	and then waits in a message loop until the page exits. When it exits
+	it writes its return string under m_pszExitCode.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			MML text to compile page from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the exit string (from PCEscPage::Link() or PCEscPage::Exit()).
+			NULL if there was an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			ANSI MML text to compile page from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the exit string (from PCEscPage::Link() or PCEscPage::Exit()).
+			NULL if there was an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Resource ID (of type "MML") to load the MML from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the exit string (from PCEscPage::Link() or PCEscPage::Exit()).
+			NULL if there was an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			CMMLNode object to create the page from. The object will NOT be deleted.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the exit string (from PCEscPage::Link() or PCEscPage::Exit()).
+			NULL if there was an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>or, with PageDialogFile</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			ANSI or Unicode file containing MML to use.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the exit string (from PCEscPage::Link() or PCEscPage::Exit()).
+			NULL if there was an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::PageDisplay and PageDisplayFile</xSectionTitle>
+
+<p>
+	There are several overloaded page displays with
+	different first parameters. PageDisplay() creates a CEscPage object
+	and initializes it with the given text. Once initialized, it's displayed
+	in the MainWindow. PageDisplay assumes that there's a message proc someplace
+	to handle the messages. (You might want to use PageDialog() to include
+	a message proc.)
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			MML text to compile page from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			ANSI MML text to compile page from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Resource ID (of type "MML") to load the MML from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			CMMLNode object to create the page from. The object will NOT be deleted.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or, with PageDisplayFile</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			ANSI or Unicode file containing MML to use.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::PosnGet</xSectionTitle>
+
+<p>
+	Returns the current bounding rectangle for the window (in screen
+	coordinates.)
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pr</xtd2>
+		<xtd3>
+			Filled in with the window's screen coordinates.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::PosnSet</xSectionTitle>
+
+<p>
+	Basically does a size and then move.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pr</xtd2>
+		<xtd3>
+			New size and location for the window.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::Print</xSectionTitle>
+
+<p>
+	Prints the document.
+</p>
+
+<p>
+	Before calling Print you must:
+</p>
+<ol>
+	<li>Call InitForPrint</li>
+	<li>Set up the m_PrintInfo as desired</li>
+	<li>Call PrintPageLoad</li>
+</ol>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszDocName</xtd2>
+		<xtd3>
+			Document name. If NULL uses a default name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwStart</xtd2>
+		<xtd3>
+			Start page (1-based). Defaults to 1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xtd2>
+		<xtd3>
+			Number of pages. If specify more pages than there are in
+			the document then limits itself to the number of pages in the
+			document.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwFlags</xtd2>
+		<xtd3>
+			Zero or more of the ESCPRINT_XXX flags: (Defaults to 0.)
+			<p/>
+			<xul>
+				<li>ESCPRINT_EVENONLY - Only print even pages</li>
+				<li>ESCPRINT_ODDONLY - Only print odd pages</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwNumPages</xtd2>
+		<xtd3>
+			Filled in with the number of pages processed.
+			If have EVENONLY or ODDONLY, or dwStart!=1 or dwNum too small,
+			not necessarily the number of pages printed.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::PrintCalcPages</xSectionTitle>
+
+<p>
+	Calculate the number of pages needed to print this document.
+	NOTE: This is optional. You don't have to call it.
+</p>
+
+<p>
+	Before calling PrintCalcPages you must:
+</p>
+<ol>
+	<li>Call InitForPrint</li>
+	<li>Set up the m_PrintInfo as desired</li>
+	<li>Call PrintPageLoad</li>
+</ol>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			The number of pages in the MML document.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::PrintPageLoad and PrintPageLoadFile</xSectionTitle>
+
+<p>
+	These load a page into a CEscWindow initialized for printing. Before you call
+	PrintPageLoad() you must call CEscWindow::InitForPrint().
+</p>
+
+<p>
+	Once you've loaded the page you can either call CEscWindow::Print() to print
+	the page using the CEscWindow::m_PrintInfo data, or CEscWindow::PrintCalcPage()
+	to calculate the number of printer pages for the MML document.
+	If you are using a custom print layout you can call CEscWindow::PrintPaint()
+	to send a portion of the page text to the printer HDC yourself.
+</p>
+
+<!xWidthHeight>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			User data that's written into CEscPage::m_pUserData.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iWidth</xtd2>
+		<xtd3>
+			Width (in printer logical units) of the page's text area. The page's text
+			will be word wrapped at this many logical units. If you specify 0 then
+			the width is automatically calculated from the CEscWindow.m_PrintInfo
+			parameters. Most applications will use 0.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iHeight</xtd2>
+		<xtd3>
+			Weight (in printer logical units) of the page's text area. Some MML pages
+			stretch themselves to fit this height.
+			If you specify 0 then
+			the height is automatically calculated from the CEscWindow.m_PrintInfo
+			parameters. Most applications will use 0.
+		</xtd3>
+	</tr>
+</xWidthHeight>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			MML text to compile page from.
+		</xtd3>
+	</tr>
+	<xWidthHeight/>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			ANSI MML text to compile page from.
+		</xtd3>
+	</tr>
+	<xWidthHeight/>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Resource ID (of type "MML") to load the MML from.
+		</xtd3>
+	</tr>
+	<xWidthHeight/>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			CMMLNode object to create the page from. The object will be deleted automatically
+			by CEscWindow when the page is exited.
+		</xtd3>
+	</tr>
+	<xWidthHeight/>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or, with PageDisplayFile</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			ANSI or Unicode file containing MML to use.
+		</xtd3>
+	</tr>
+	<xWidthHeight/>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::PrintPaint</xSectionTitle>
+
+<p>
+	This causes the page to paint to a printer. It's a low-level
+	routines that most applications won't need to use. Before calling
+	this the application must have:
+</p>
+<ol>
+	<li>Called InitForPrint</li>
+	<li>Call SetICMMode (m_hDCPrint, ICM_ON); a appropriate</li>
+	<li>Call SetMapMode() to adjust scaling of fonts and pixels</li>
+	<li>Called PrintPageLoad - Make sure to specify width and height</li>
+	<li>Called StartDoc</li>
+	<li>Called StartPage</li>
+	<li>Call SetICMMode and SetMapMode after every StartPage.</li>
+</ol>
+
+<p>
+	This is a low level API. Most applications will not use it since the functionality
+	is encompassed in CEscWindow::Print().
+</p>
+
+<p>
+	NOTE: You can figure out how much should be displayed by:
+</p>
+
+<ol>
+	<li>
+		Determine the # of vertical hDCPrint units to optimally display
+		Use m_pPage-&gt;m_rTotal to determine the total area needed for printing
+	</li>
+	<li>
+		Determine a minimum range that's acceptable in order not to break text,
+		such as (a) * 0.95.
+	</li>
+	<li>Call m_pPage-&gt;m_TextBlock.FindBreak(), and use that.</li>
+</ol>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPageCoord</xtd2>
+		<xtd3>
+			Rectangle on the page to print.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pHDCCoord</xtd2>
+		<xtd3>
+			Same size rectangle, in HDC coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pScreenCoord</xtd2>
+		<xtd3>
+			Used for 3D controls so they have the proper
+			perspective. Use the rectangle for the entire page. Use the dimensions
+			of the piece of paper.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::SetCursor</xSectionTitle>
+
+<p>
+	Sets the cursor that the page uses.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHCURSOR/>
+		<xtd2>hCursor</xtd2>
+		<xtd3>
+			Handle to the cursor.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Cursor ID. Use values from LoadCursor(NULL, dwID). Or, use IDC_HANDCURSOR
+			or IDC_NOCURSOR to use Escarpment-specific cursors.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::ShowWindow</xSectionTitle>
+
+<p>
+	Shows/hides the window.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>nCmdShow</xtd2>
+		<xtd3>
+			See Windows API ShowWindow().
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscWindow::Size</xSectionTitle>
+
+<p>
+	Changes the size of the window. This in turn tells CEscPage it's size
+	has changed, so it will recalc word-wrap.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iX</xtd2>
+		<xtd3>
+			X width.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iY</xtd2>
+		<xtd3>
+			Y height.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscWindow::TimerKill</xSectionTitle>
+
+<p>
+	Kills a timer.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Returned from TimerSet
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscWindow::TimerSet</xSectionTitle>
+
+<p>
+	Creates a new timer (using windows API TimerSet and a unique ID).
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwTime</xtd2>
+		<xtd3>
+			Interval time, in milliseconds.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			Control to notify when the timer goes off.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message to send.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Returns a unique timer ID, or 0 if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwTime</xtd2>
+		<xtd3>
+			Interval time, in milliseconds.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page to notify when the timer goes off.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message to send.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Returns a unique timer ID, or 0 if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::TitleGet</xSectionTitle>
+
+<p>
+	Gets the window title.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Filled in with the title.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes available in the psz buffer.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscWindow::TitleSet</xSectionTitle>
+
+<p>
+	Sets the window title.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			New title.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+

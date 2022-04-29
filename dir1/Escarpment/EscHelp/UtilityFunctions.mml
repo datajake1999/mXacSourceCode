@@ -1,0 +1,1116 @@
+<pageinfo title="Utility Functions"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Utility Functions</xPageTitle>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>AttribTo3DPoint</xSectionTitle>
+
+<p>
+	Converts an attribute string into a 3D point, which is an array of 4 doubles.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDOUBLE/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>AttribToAccelerator</xSectionTitle>
+
+<p>
+	Parse an attribute and convert it to an accelerator. The string can begin with
+	"alt-", "control-", "ctl-", "ctrl-", and "shift-". It must end with a letter
+	or "enter" or "escape".
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPESCACCELERATOR/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>AttribToColor</xSectionTitle>
+
+<p>
+	Converts an attribute string to a RGB color. The form is "#RRGGBB", where RGB in hex.
+	"Transparent" returns -1.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCOLORREF/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>AttribToDecimal</xSectionTitle>
+
+<p>
+	Converts an attribute string into an integer.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPINT/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>AttribToDecimalOrPercent</xSectionTitle>
+
+<p>
+	Converts an attribute string into an integer or a percent (integer also).
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPBOOL/>
+		<xtd2>pfPercent</xtd2>
+		<xtd3>
+			Filled with TRUE if the string ends in a percent, FALSE if it doesn't.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPINT/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>AttribToDouble</xSectionTitle>
+
+<p>
+	Converts an attribute string into a double.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDOUBLE/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>AttribToHex</xSectionTitle>
+
+<p>
+	Converts an attribute string into hex.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>AttribToPercent</xSectionTitle>
+
+<p>
+	Converts an attribute string into an integer; the string must end in a percent.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPINT/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>AttribToPositioning</xSectionTitle>
+
+<p>
+	Converts the attribute into positiong information for objects. The
+	following strings are valid: Use the "posn" variable.
+</p>
+<xul>
+   <li>"inlinetop", "inlinecenter", "inlinebottom" - It's in the line and vertical position.</li>
+   <li>"edgeleft", "edgeright" - On the edge and left/right side</li>
+   <li>If last character contains "-" then it's located behind ordinary text/objects</li>
+</xul>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>AttribToYesNo</xSectionTitle>
+
+<p>
+	Converts an attribute string into a BOOL. The string values can be "yes", "no",
+	"true", and "false".
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>pRet</xtd2>
+		<xtd3>
+			If the string can be parsed, this is filled with the value.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>ColorToAttrib</xSectionTitle>
+
+<p>
+	Fills in a string based on the colorref, so that it can be sent as an AttribSet().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to be filled in. It needs to be about 16 characters long.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCOLORREF/>
+		<xtd2>cr</xtd2>
+		<xtd3>
+			Color to write into the string.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>EscBitBlt</xSectionTitle>
+
+<p>
+	Replacement for BitBlt so that you can actually print
+	to the printer. It tests to see if the HDC is a printer. If so, it
+	does special code that ensures a color bitmap will print properly.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDCDest</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nXOriginDest</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nYOriginDest</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nWidthDest</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nHeightDest</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDCSrc</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nXOriginSrc</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nYOriginSrc</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwROP</xtd2>
+		<xtd3>
+			See BitBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHBITMAP/>
+		<xtd2>hbmpSource</xtd2>
+		<xtd3>
+			This is used in case talking to a printer, where we have to use
+			StretchDIBits() in order to make sure that color images print properly.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>ESCMIDIEVENT structure</xSectionTitle>
+
+<p>
+	The ESCMIDIEVENT structure is used by EscChime() to specify MIDI notes to play
+	for the chime.
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwDelay</xtd2>
+		<xtd3>
+			Number of milliseconds delay between this event and the previous MIDI event
+			played. Set this to 0 for no delay.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMIDI</xtd2>
+		<xtd3>
+			MIDI message to send. See the midiOutShortMsg() Windows documentation for more details.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+<xSectionTitle>EscChime</xSectionTitle>
+
+<p>
+	Plays a chime (AKA MIDI). If a chime is already playing this fails.
+	This will not play a chime if they're disabled with EscSoundsSet().
+</p>
+
+<p>
+	EscChime() has two forms:
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xTd2>
+		<xtd3>
+			One of the following values:
+			<p/>
+			<xul>
+				<li>
+					ESCCHIME_ERROR - Chimes played when there's an error.
+				</li>
+				<li>
+					ESCCHIME_HOVERHELP - Chimes played when hoverhelp text appears.
+				</li>
+				<li>
+					ESCCHIME_INFORMATION - Chimes played when telling user there's information.
+				</li>
+				<li>
+					ESCCHIME_QUESTION - Chimes played when asking the user a question.
+				</li>
+				<li>
+					ESCCHIME_WARNING - Chimes played when warning the user.
+				</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+<p>
+	or
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPESCMIDIEVENT/>
+		<xtd2>paMidi</xTd2>
+		<xtd3>
+			Pointer to an array of ESCMIDIEVENT structures containing note on/off information.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xTd2>
+		<xtd3>
+			Number of elements in paMidi.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>EscControlAdd</xSectionTitle>
+
+<p>
+	Adds a control to the list of ones being interpreted. If you write a custom control
+	you must call this with a unique control name and a pointer to the control's
+	callback function. This performs a role similar to RegisterWindowClass() in Windows.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Control name. Used in the parsing/interpretation part for
+			the tag name. If one of same name already exists this overwrites.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCCONTROLCALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Callback. If NULL then deletes the control.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>EscControlGet</xSectionTitle>
+
+<p>
+	Returns the pointer to the control callback. This can be used to subclass control
+	classes.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Control name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCCONTROLCALLBACK/>
+		<xreturns/>
+		<xtd3>
+			Callback.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>EscFontScaleGet</xSectionTitle>
+
+<p>
+	Gets the font scaling. See EscFontScaleSet
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarWORD/>
+		<xreturns/>
+		<xtd3>
+			0x100 for 1x normal. 0x200 for 2x normal. 0x80 for 1/2x normal, etc.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>EscFontScaleSet</xSectionTitle>
+
+<p>
+	Sets the font scaling for ALL fonts created by the system.
+	Use this to globally scale fonts for the user. Make sure to call this
+	before creating the page.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarWORD/>
+		<xtd2>wScale</xtd2>
+		<xtd3>
+			0x100 for 1x normal. 0x200 for 2x normal. 0x80 for 1/2x normal, etc.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>EscGetDeviceCaps</xSectionTitle>
+
+<p>
+	This is a utility function that does GetDeviceCaps()
+	on the HDC. If it's going to the printer and there's scaling, then
+	the numbers for LOGPIXELXS, LOGPIXELSY, PHYSICALWIDTH, PHYSICALHEIGHT
+	are scaled appropriately so that when printing is done it all turns
+	out OK.
+<p>
+</p>
+	You should use this instead of GetDeviceCaps() in your controls to ensure
+	they draw properly.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nIndex</xtd2>
+		<xtd3>
+			Set GetDeviceCaps()
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xreturns/>
+		<xtd3>
+			Meaning depends on nIndex.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>EscInitialize</xSectionTitle>
+
+<p>
+	You must call this to initialize the Escarpment DLL. Escarpment will not work
+	properly unless its initialized.
+</p>
+
+<p>
+	EscInitialize() also calls CoInitialize() to initialize COM.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszEMail</xtd2>
+		<xtd3>
+			Your E-mail. The E-mail name that you registered your copy of Escarpment
+			with. You can use "sample" while you are developing your application, but
+			you <bold>must</bold> register and pay for Escarpment to use and
+			distribute it in your application.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwKey</xtd2>
+		<xtd3>
+			The registration key you received when you paid for Escarpment.
+			The key is linked to your E-mail name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwFlags</xtd2>
+		<xtd3>
+			Pass in 0 for now.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>EscRemapBMP, EscRemapJPEG, and EscRemapMML</xSectionTitle>
+
+<p>
+	Given a resource ID specified in a MML file, this causes any
+	access to the resource to be remapped to a file on disk. Useful for debugging in
+	the test application.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Resource ID.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			File to load.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>EscSoundsGet</xSectionTitle>
+
+<p>
+	Returns a DWORD flag containing bits set for which types of sounds are produced by
+	the Escarpment system.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Set of flags. See EscSoundsSet().
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>EscSoundsSet</xSectionTitle>
+
+<p>
+	Specifies which sounds are to be used by the Escarpment system.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwFlags</xTd2>
+		<xtd3>
+			A combination of the following.
+			<p/>
+			<xul>
+				<li>ESCS_ALL - All possible sounds are to be played.</li>
+				<li>ESCS_CHIME - Play chime sounds for message boxes and hover help.</li>
+				<li>ESCS_CLICKS - Click sounds for buttons are to be played.</li>
+				<li>ESCS_SPEAK - Use text-to-speech to speak message boxes and hover help.</li>
+			</xul>
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>EscSpeak</xSectionTitle>
+
+<p>
+	Speak using text-to-speech. This returns an error if TTS is disabled
+	dues to EscSoundsSet(), or it's not installed on the system.
+</p>
+
+<p>
+	NOTE: For this to work the user's system must have a SAPI compliant
+	text-to-speech engine installed. To find out more about
+	SAPI, see <a href="http://www.microsoft.com/iit">http://www.microsoft.com/iit</a>.
+	(If this URL doesn't work, please tell me. Microsoft has a way of changing
+	its URLs from time to time.)
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xTd2>
+		<xtd3>
+			String to speak.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwFlags</xTd2>
+		<xtd3>
+			One or more of the following:
+			<p/>
+			<xul>
+				<li>
+					ESCSPEAK_STOPPREVIOUS - If it was already speaking then stop the previous
+					one immediately and start speaking the new one.
+				</li>
+				<li>
+					ESCSPEAK_WAITFORCHIME - Wait until after the currently playing chime plays
+				</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>EscSpeakTTS</xSectionTitle>
+
+<p>
+	Returns a LPUNKNOWN to the SAPI text-to-speech object being used.
+	This returns NULL if TTS is disabled due to EscSoundsSet(), or it's not installed
+	on the system. NOTE: This breaks from COM convention. The interface is NOT
+	adref-ed prior to this, so don't release it.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPVOID/>
+		<xreturns/>
+		<xtd3>
+			LPUNKNOWN for the TTS engine.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>EscStretchBlt</xSectionTitle>
+
+<p>
+	Replacement for StretchBlt so that you can actually print
+	to the printer. It tests to see if the HDC is a printer. If so, it
+	does special code that ensures a color bitmap will print properly.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDCDest</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nXOriginDest</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nYOriginDest</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nWidthDest</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nHeightDest</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDCSrc</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nXOriginSrc</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nYOriginSrc</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nWidthSrc</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>nHeightSrc</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwROP</xtd2>
+		<xtd3>
+			See StretchBlt() Windows documentation.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHBITMAP/>
+		<xtd2>hbmpSource</xtd2>
+		<xtd3>
+			This is used in case talking to a printer, where we have to use
+			StretchDIBits() in order to make sure that color images print properly.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>EscUninitialize</xSectionTitle>
+
+<p>
+	Call this before your application shuts down, once for every time you called
+	EscInitialize().
+</p>
+
+<p>
+	EscUnnitialize() also calls CoUninitialize() to uninitialize COM.
+</p>
+
+
+<xSectionTitle>ParseMML</xSectionTitle>
+
+<p>
+	ParseMML accepts a Unicode string and parses it into PCMMLNodes. You shouldn't need
+	to use the function, but producing PCMMLNodes from text might be useful.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String containing MML. NULL terminated.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			HINSTANCE to load resources of bitmaps, JPEG, and included MML from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCPAGECALLBACK/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pCallbackParam</xtd2>
+		<xtd3>
+			Page obect. This is only necessary if pCallback references the page object
+			when ESCM_SUBTITUTION is called.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscError/>
+		<xtd2>pError</xtd2>
+		<xtd3>
+			Error object. Filled in with error information if a problem happens.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fDoMacros</xtd2>
+		<xtd3>
+			If TRUE, interpret/convert macros. if FALSE leave them in.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xreturns/>
+		<xtd3>
+			Root PCMMLNode. The caller is responsible for freeing the nodes. Returns
+			NULL if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>StringToMMLString</xSectionTitle>
+
+<p>
+	Converts a normal Unicode string to a string
+	that's safe to have in MML. That means converting stuff like '&lt;' to &amp;lt;, etc.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszString</xtd2>
+		<xtd3>
+			String to convert.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszMML</xtd2>
+		<xtd3>
+			Buffer to be filled with MML.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size of pszMML in bytes.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwNeeded</xtd2>
+		<xtd3>
+			Filled in with the number of bytes needed for the converted string.
+			If *pdwNeeded &gt; dwSize then an error is returned.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+

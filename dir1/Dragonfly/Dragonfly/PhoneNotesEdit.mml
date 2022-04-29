@@ -1,0 +1,166 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Take notes on a phone call" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Take notes on a phone call
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Who is the phone conversation with?
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person width=100%/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+<br>
+	Type your phone conversation notes in here:
+</br>
+
+<p align=center>
+	<edit defcontrol=true name=summary width=80% height=35% multiline=true wordwrap=true maxchars=10000 vscroll=editscroll defcontrol=true/>
+	<scrollbar orient=vert name=editscroll height=35%/>
+</p>
+
+<xtableclear valign=top>
+<tr>
+<td>
+<Button style=righttriangle name=actionself>
+	<bold>Add an action item for yourself</bold>
+	<xhoverhelp>
+		Press this if you accept an action item.
+		After answering a few questions about the action item, the
+		information will be pasted into the meeting notes, and task created for you so that
+		you'll remember to do the action item.
+	</xhoverhelp>
+</Button>
+</td>
+<td>
+<Button style=righttriangle name=actionother>
+	<bold>Add an action item for someone else</bold>
+	<xhoverhelp>
+		Press this if an action item gets accepted by the other person.
+		After answering a few questions about the action item, the
+		information will be pasted into the meeting notes, and a reminder created for you so that
+		you'll remember to follow up on the action item.
+	</xhoverhelp>
+</Button>
+</td>
+</tr>
+<tr>
+	<td>
+		<Button style=righttriangle name=addmeeting>
+			<bold>Add a meeting</bold>
+			<xhoverhelp>
+				Unfortunately, sometimes phone calls spawn meetings.
+				Click this to add a new meeting to your schedule.
+			</xhoverhelp>
+		</Button>
+	</td>
+	<td>
+		<Button style=righttriangle name=schedulecall>
+			<bold>Schedule a call</bold>
+			<xhoverhelp>
+				Click this to schedule a call with this person or someone else.
+			</xhoverhelp>
+		</Button>
+	</td>
+</tr>
+</xtableclear>
+
+<xChoiceButton name=completed>
+	<bold>The phone conversation is finished</bold>
+	<br/>
+	Click this when the phone call is all done. It will note the completion time
+	and exit the page.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xChoiceButton name=noanswer>
+	<bold>No one answered the phone</bold>
+	<br/>
+	Click this if no one answers the phone.
+</xChoiceButton>
+
+<xChoiceButton name=busy>
+	<bold>The phone was busy</bold>
+	<br/>
+	Click this if the number dialed was busy/engaged.
+</xChoiceButton>
+
+<xChoiceButton name=leftmessage>
+	<bold>I left a message</bold>
+	<br/>
+	If you left a message, press this. It will create a reminder for two
+	days from now so you can
+	make sure you get called back.
+</xChoiceButton>
+
+<xbr/>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Incoming or outgoing call?
+		</xtdLeft>
+		<xtdright>
+			<button style=check radiobutton=true checked=true group=incoming,outgoing name=incoming>
+				I receieved the phone call.
+			</button>
+			<br/>
+			<button style=check radiobutton=true group=incoming,outgoing name=outgoing>
+				I made the phone call.
+			</button>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Phone number (if known):
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=phonenum/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Date of the phone call:
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" width=100% name=date/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Call started:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No start time set" width=100% name=start/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Call finished:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=end/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>(This causes a link to appear in the journal category.
+			If you run a small business, you can use this
+			to bill your time for attending the meeting.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+
+</xTableClear>

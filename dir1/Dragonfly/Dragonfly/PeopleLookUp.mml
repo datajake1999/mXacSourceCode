@@ -1,0 +1,16 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Look from someone in your address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Look for someone (or a business) in your address book
+</xPageTitle>
+
+<p>
+	Please select the person or business you wish to look up:
+</p>
+
+<p align=center>
+	<xFilterPersonBusiness width=80% additem="" name=person/>
+</p>

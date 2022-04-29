@@ -1,0 +1,33 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Things to change"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=219/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	Things to change
+</xPageTitle>
+
+<p>
+	<bold>Write down five aspects of your life you'd like
+	to change.</bold> For example: "Get a life", or "Eat healthier."
+</p>
+
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal1 defcontrol=true/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal2/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal3/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal4/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal5/></font>
+</p>
+
+</font>

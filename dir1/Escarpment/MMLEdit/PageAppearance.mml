@@ -1,0 +1,111 @@
+<pageinfo title="Window Appearance"/>
+
+<!xCheckbox>
+	<Button checkbox=yes valign=top style=check MACROATTRIBUTE=1>
+		<?MACROCONTENT?>
+	</Button><br/>
+</xCheckBox>
+
+<!xRadio>
+	<Button radiobutton=yes valign=top style=X MACROATTRIBUTE=1>
+		<?MACROCONTENT?>
+	</Button><br/>
+</xRadio>
+
+<p>
+	The Window Appearance dialog lets you choose what flags you'll send into CEscWindow::Init
+	when it's called during MML/Test.
+</p>
+<p align=center><table width=80% innerlines=0>
+	<colorblend posn=background tcolor=#e0ffe0 bcolor=#80e080/>
+	<tr><td width=100%><p align=left parlinespacing=0>
+		<xCheckBox name=title>
+			<bold>Display a title bar</bold><br/>
+			<small>
+				If this is checked a title bar is displayed on the MML test window, simulating EWS_TITLE. If not
+				checked it simulates EWS_NOTITLE.
+			</small>
+		</xCheckBox>
+
+		<xCheckBox name=sizable>
+			<bold>The user can resize the window</bold><br/>
+			<small>
+				If this is checked a user can click on the border of the window and resize it.
+				It uses EWS_SIZABLE when creating the MML test window. If not
+				checked it simulates EWS_FIXEDSIZE.
+			</small>
+		</xCheckBox>
+
+		<xCheckBox name=vscroll>
+			<bold>The window has a vertical scroll bar</bold><br/>
+			<small>
+				If this is checked a vertical scroll bar will be created when the text/graphics to be
+				displayed are too large for the window.
+				It uses EWS_VSCOLL when creating the MML test window. If not
+				checked it simulates EWS_NOVSCROLL.
+			</small>
+		</xCheckBox>
+
+		<xCheckBox name=autoheight>
+			<bold>The window's height is automatically adjusted</bold><br/>
+			<small>
+				If this is checked a the test window will automatically adjust its display height to the bottom
+				of the text/graphics in the page. Otherwise, the window may display a blank region at the bottom
+				if the text does not completely fill the window, or not all of the text will be visible on
+				the window.
+				It uses EWS_AUTOHEIGHT when creating the MML test window. If not
+				checked it simulates EWS_FIXEDHEIGHT.
+			</small>
+		</xCheckBox>
+
+		<xCheckBox name=autowidth>
+			<bold>The window's width is automatically adjusted</bold><br/>
+			<small>
+				If this is checked a the test window will automatically adjust its display width so that the
+				longest line just fits. (Note: Do not use this option if your window has lines longer than
+				the page, or uses center/right justification.)
+				It uses EWS_AUTOWIDTH when creating the MML test window. If not
+				checked it simulates EWS_FIXEDWIDTH.
+			</small>
+		</xCheckBox>
+		
+		<p align=center><hr width=80%/></p>
+		
+		<xRadio name=normalclose group="normalclose,closemousemove,closenomouse">
+			<bold>The window closes normally</bold><br/>
+			<small>
+				The window closes under normal circumstances, such as when the user clicks on the
+				close button in the title, or presses a button in the page that sends a close message.
+				This represents the EWS_NOSPECIALCLOSE flag.
+			</small>
+		</xRadio>
+		
+		<xRadio name=closemousemove group="normalclose,closemousemove,closenomouse">
+			<bold>The window closes when the mouse is moved</bold><br/>
+			<small>
+				If the user moves the mouse, the window
+				will close.
+				This represents the EWS_CLOSEMOUSEMOVE flag.
+			</small>
+		</xRadio>
+		
+		<xRadio name=closenomouse group="normalclose,closemousemove,closenomouse">
+			<bold>The window closes when the mouse moves off the window</bold><br/>
+			<small>
+				If the user moves the mouse off the window's are or the m_rMouseMove rectangle
+				in CEscWindow, the window will close.
+				This represents the EWS_NOMOUSE flag.
+			</small>
+		</xRadio>
+
+	</p></td></tr>
+</table></p>
+
+<p align=right>
+	<button width=25% href=ok>
+		OK
+	</button>
+	<button width=25% href=cancel>
+		Cancel
+	</button>
+</p>

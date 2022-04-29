@@ -1,0 +1,359 @@
+<pageinfo title="Hello World Sample"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Hello World Sample</xPageTitle>
+
+<xSectionTitle>The Minimum Application</xSectionTitle>
+
+<p>
+	So how does one write a "Hello World!" application using Escarpment? Simple. The code is:
+</p>
+
+<xCode>
+	#include &lt;windows.h&gt;<br/>
+	#include &lt;escarpment.h&gt;<br/>
+	int WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)<br/>
+	{<br/>
+		&tab;EscInitialize ("Your Email", YOUR_REG_KEY, 0);<br/>
+		&tab;CEscWindow cWindow;<br/>
+		&tab;cWindow.Init (hInstance, NULL);<br/>
+		&tab;WCHAR sz[]=L"&lt;p&gt;Hello World!&lt;/p&gt;";<br/>
+		&tab;PWSTR pszRet = cWindow.PageDialog (sz, NULL);<br/>
+		&tab;EscUninitialize ();<br/>
+	}<br/>
+</xCode>
+
+<p align=right> <button href=helloworld>Test Hello World!</button></p>
+<p> </p>
+
+<p>
+	Let me expalin what's going on. The include, <xCodeInline>Escarpment.h</xCodeInline>, defines all the structures,
+	classes, and functions exported by Escarpment.dll. (Oh, I forgot to mention that your application needs to
+	be linked to Escarpment.lib.) Escarpment doesn't replace Windows, but sits on top of it, so you still
+	need Windows.h.
+</p>
+
+<p>
+	The first real line of code calls the Escarpment DLL initialization function. It also ensures that you've
+	properly licensed your copy of Escarpment since you need to pass in your E-mail and the registration
+	key you received when you purchased your license. The last line of code un-initializes Escarpment
+	and frees up any memory still left over.
+</p>
+
+<p>
+	"<xCodeInline>CEscWindow cWindow</xCodeInline>" creates an Escarpment window object:
+</p>
+
+<xDefinition>
+	<p>
+		<bold>Window</bold> - In Escarpment, a Window is a C++ object
+		named <a href=r:131>CEscWindow</a>.
+		It provides the following basic functionality:
+	</p>
+	<ul>
+		<li>Creating and maintaining a Windows "window"</li>
+		<li>Acting as a base upon which pages can be displayed.</li>
+	</ul>
+	
+	Or, in terms people can understand. A window is very similar to a Web browser's window; it provides
+	the framework in which individual weg pages are displayed. As the user moves from page to page
+	the Web browser's window doesn't disappear or change size. It remains fixed while the pages within
+	change. An Escarpment window is basically the same thing.
+</xDefinition>
+
+<p>
+	The creation of CEscWindow is different than the main intiialization function because an application
+	may have several display windows just like a web browser.
+</p>
+
+<p>
+	The next line, <xCodeInline>cWindow.Init (hInstance, NULL)</xCodeInline> initializes the window.
+	The application instance, hInstance, is passed in so that Escarpment can use it later on to load in
+	images or other data from resources within the application. The NULL is a window handle, HWND,
+	which is the parent of the created window. If you pass in a non-NULL window handle then
+	the created window will be a pop-up dialog, just like a standard Windows DialogBox. Init() can also
+	take one more parameter, a set of flags describing some characteristics of the window, such as if
+	it has a title bar or scroll bar. This parameter acts very similarly to the flags parameter in the
+	Windows API CreateWindow (WS_CAPTION | WS_VSCROLL). Because no flags are specified
+	in this call to Init() defaults are used.
+</p>
+
+<p>
+	And finally, to display "Hello World!", the application calls <xCodeInline>
+	cWindow.PageDialog (sz, NULL);</xCodeInline>. This function tells the
+	window to create a "page":
+</p>
+
+<xDefinition>
+	<p>
+		<bold>Page</bold> - A page is a C++ object (<a href=r:130>CEscPage</a>) that displays formatted text within a window.
+		Its main functionality is to:
+	</p>
+	<ul>
+		<li>Display formatted text.</li>
+		<li>Allow developer-defined C++ code to affect the layout and behavior of the page.</li>
+	</ul>
+	
+	Basically, a page is code that displays HTML (or something very similar).
+</xDefinition>
+
+<p>
+	The call, PageDialog, creates a page that persists until a user clicks a button or link within the page,
+	or closes the window. The function then returns a pointer to a string containing the name of the link or
+	button. The function acts almost exactly like the Windows API, DialogBox, which creates a "modal"
+	dialog box that doesn't disappear until the user presses OK or Cancel. It also disables the application
+	window below it, preventing the user from clicking on or typing into it.
+</p>
+
+<p>
+	The first paremeter passed into PageDialog is a Unicode text string, <xCodeInline>
+	L"&lt;p&gt;Hello World!&lt;/p&gt;"</xCodeInline>. Escarpment is all Unicode so that it will support
+	non-European languages. And anyone who has programmed web pages before will notice that
+	the string is awfully similar to HTML. It's very close. I call it MML.
+</p>
+
+<xDefinition>
+	<p>
+		<bold>MML</bold> - <a href=r:113>MML</a> is a page layout language very similar to HTML. For those of you not
+		familiar with HTML, here's the one paragraph summary:
+	</p>
+	<p>
+		MML files are text files containing "<a href=r:114>tags</a>" that modify
+		the appearance or meaning of the text. A
+		tag is identified by left/right angle brackets, such as <xCodeInline>&lt;p&gt;</xCodeInline>.
+		Every tag has a point in the text where it starts affecting the display, and a point after which it's
+		finished. The <xCodeInline>&lt;p&gt;</xCodeInline> indicates the start of a tag because the
+		left angle-bracket is immediately followed by the tag name, "p", which stands for "paragraph."
+		A tag ending is dented by a left angle-bracket followed by a slash. So,
+		<xCodeInline>&lt;/p&gt;</xCodeInline> ends the "p" (paragraph) tag. Tags can be within
+		tags, so you could have <xCodeInline>&lt;p&gt;&lt;bold&gt;Hello&lt;/bold&gt; world!&lt;/p&gt;</xCodeInline>.
+		This means display a paragraph with the word "Hello" bolded. If course, there's more to the language
+		that I'll get into later, but this is enough to start.
+	</p>
+	<xTip>
+		You can see an example of how these tags work by clicking on the "View MML Source" button
+		at the bottom of every page in the help.
+	</XTip>
+	<p>
+		For those of you familiar with HTML, MML has a few significant differences:
+	</p>
+	<ul>
+		<li>
+			All tags have a beginning and end, or then end with a backslash. For example, 
+			<xCodeInline>&lt;br&gt; </xCodeInline> is used
+			to indicate a line-break within a paragraph. <xCodeInline>&lt;br&gt; </xCodeInline> does
+			not have a corresponding tag, <xCodeInline>&lt;/br&gt; </xCodeInline>. In MML it does. As
+			a shorthand, you can always write <xCodeInline>&lt;br/&gt; </xCodeInline> with the slash
+			at the end indicating that there's no text inbetween.
+		</li>
+		<li>
+			I support most of the HTML tags without modification. I have changed some slightly, and
+			have added others.
+		</li>
+		<li>
+			MML contains wonderful time-savers called "<a href="r:113#Macros">Macros</a>",
+			"<a href="r:113#includes">includes</a>", and "<a href="r:113#Templates">templates</a>." I
+			talk about these int the full documentation.
+		</li>
+	</ul>
+	
+</xDefinition>
+
+<p>
+	The sample passes a string into PageDialog(). Although it's possible, it's not standard practice.
+	Usually the MML document is saved as an ANSI or Unicode text file and included in the application's
+	resource data as type "MML". Instead of passing in the string, the application just passes in
+	the resource ID, such as IDR_MMLHELLOWORLD. That's one of the reasons why CEscWindow::Init()
+	needs the HINSTANCE for the application, so it can pull out the resources as they're requested.
+</p>
+
+<xTip>
+	The Escarpment SDK includes a sample application, MMLEdit.Exe, that you can use to edit
+	MML documents. It also lets you test them as you modify them, saving you the hassle of relinking
+	and rerunning your application just to see if the UI looks good.
+</xTip>
+
+<p>
+	The last parameter passed into Page Dialog is NULL. It's an optional pointer to a PESCPAGECALLBACK
+	callback function that lets you write C++ code to handle the page. The callback is very similar to the
+	Windows WindowProc() callback used by windows. The callback receives messages and then decides
+	which ones to process; the unprocessed ones are passed onto a default handler that "does the right thing."
+	Because the "Hello World!" sample is so simple it doesn't require a page callback.
+</p>
+
+<p>
+	That's the "Hello World!" application at its most basic for you.
+</p>
+
+<xSectionTitle>A more complex Hello World!</xSectionTitle>
+
+<p>
+	Right now the "Hello World!" application displays a window with the text, "Hello world!". This is
+	pretty boring. You can, of course, add more text formatting tags to make it more splashy:
+</p>
+
+<xCode>
+	&lt;p align=center&gt;&lt;big&gt;Hello World!&lt;/big&gt;&lt;/p&gt;<br/>
+</xCode>
+<p align=right> <button href=helloworld2>Test Hello World! 2</button></p>
+
+<p>
+	"Hello World! 2" makes the font larger and centers is. One can (and often does) go on forever with
+	different font effects like this. However, lets try something even more interesting: What if
+	you want to add a button?
+</p>
+
+<xCode>
+	&lt;p align=center&gt;&lt;big&gt;Hello World!&lt;/big&gt;&lt;/p&gt;<br/>
+	&lt;button&gt;My button&lt;/button&gt;<br/>
+</xCode>
+<p align=right> <button href=helloworld3>Test Hello World! 3</button></p>
+
+<p>
+	Now we've got some action, text <bold>and</bold> a button. What more could one want? Well, to tell
+	the trush, the button really doesn't do anything. To make it actually do something is pretty
+	easy, just add <xCodeInline>href="http://www.mxac.com.au"</xCodeInline>.
+</p>
+
+<xCode>
+	&lt;p align=center&gt;&lt;big&gt;Hello World!&lt;/big&gt;&lt;/p&gt;<br/>
+	&lt;button href="http://www.mxac.com.au"&gt;My button&lt;/button&gt;<br/>
+</xCode>
+<p align=right> <button href=helloworld4>Test Hello World! 4</button></p>
+
+<p>
+	Now when you press "My button" it brings up your web browser showing my web page. That's the default
+	message handler for CEscPage at work. If a href begins with http:, https:, or mailto:, it invokes the user's
+	web browser and automatically connects to the Internet.
+</p>
+
+<p>
+	However, if I had <xCodeInline>href=mybutton</xCodeInline> it would cause the page to exit and the
+	call to CEscWindow::PageDialog() would return a pointer to a string with
+	<xCodeInline>L"mybutton"</xCodeInline> in it. That way you could have the "Hello World!" application
+	checking pszRet, and based upon that load in a different page.
+</p>
+
+<p>
+	Pretty cool.
+</p>
+
+<xSectionTitle>Page callbacks</xSectionTitle>
+
+<p>
+	Or, you can provide a page callback and trap the button. Then, from within the page you could do other 
+	actions, just like in a Windows WindowProc.
+</p>
+
+<p>
+	A page callback that traps the link follows:
+</p>
+
+<xCode>
+	BOOL PageCallback (PCEscPage pPage, DWORD dwMessage, PVOID pParam)<br/>
+	{<br/>
+		&tab;switch (dwMessage) {<br/>
+		&tab;case ESCM_LINK:<br/>
+			&tab;&tab;PESCMLINK p = (PESCMLINK) pParam;<br/>
+			&tab;&tab;if (!wcsicmp(p, L"mybutton")) {<br/>
+				&tab;&tab;&tab;DoSomething();<br/>
+				&tab;&tab;&tab;return TRUE;<br/>
+				&tab;&tab;&tab;}<br/>
+			&tab;&tab;break;<br/>
+		&tab;}<br/>
+		&tab;return FALSE;<br/>
+	}<br/>
+</xCode>
+
+<p>
+	When calling CEscWindow::PageDialog() you'd pass PageCallback in instead of NULL.
+</p>
+
+<p>
+	Page callbacks are similar to Windows WindowProc() and DialogProc() callbacks. pPage is
+	a pointer to the page object calling the page, just like HWND. dwMessage is a message, and pParam
+	points to memory containing message-specific parameters.
+</p>
+
+<p>
+	The application is expected to look at the messages that comes through. If it doesn't want to process
+	the message it just returns FALSE and the default message handler will deal with it. If the application
+	wishes to process the message it does so and returns TRUE so that the default message handler
+	ignores the message. Note the <xCodeInline>return TRUE;</xCodeInline> line after
+	<xCodeInline>DoSomething();</xCodeInline> has been called. If this weren't there the default handler
+	would see the ESCM_LINK message come through and cause the page to exit. But, because the
+	application returns FALSE, the default handler ignored the message.
+</p>
+
+<p>
+	I haven't bothered coding up a sample "Hello World!" with a PageCallback() because this whole help
+	application is an application running on the same principals. Just look at it, or any of the other
+	samples included in the SDK.
+</p>
+
+
+<xSectionTitle>Controls</xSectionTitle>
+
+<p>
+	The sample "Hello world!" application has introduced you to MML page layout and buttons. Buttons are
+	actually a type of "Control."
+</p>
+
+<xDefinition>
+	<bold>Control</bold> - A control is an object within a page that the user can see and often interact with
+	by clicking on it or typing. Escarpment controls are conceptually the same as Windows controls.
+	Some of the controls included within Escarpment are: <a href=r:115>buttons, list boxes, combo boxes, menus,
+	scroll bars, and images</a>. Many more exist.
+	<p/>
+	Controls are specifed in MML the same as tags, using their name. &lt;button&gt;, &lt;listbox&gt;, &lt;combobox&gt;, etc.
+	The starting tag indicates "attributes" that modify how the control looks and behaves. The contents of the control,
+	between the start and end tags, also affect the control. The meaning of the attributes and contents are specific
+	to each control.
+	<p/>
+	From a page callback, an application can get access to the controls'
+	C++ object, <a href=r:129>CEscControl</a>.
+	Using the CEscControl object, the application can get status information from the control, affect its behaviour,
+	or change how it looks.
+</xDefinition>
+
+<p>
+	To allow the page callback access to the "My button" control, you must slightly modify the MML that creates the control
+	by adding a new attribute, "name=".
+</p>
+<xCode>
+	&lt;button href=mybutton name=mybutton&gt;My button&lt;/button&gt;<br/>
+</xCode>
+
+<p>
+	All controls that you wish to access programmatically must have a unique name. Once a control has a name
+	you just make the following call to get access to it:
+</p>
+
+<xCode>
+	PCEscControl pControl = pPage-&gt;ControlFind (L"mybutton");<br/>
+</xCode>
+
+<p>
+	One you have a PCEscControl you can do  all sorts of things with it, the most common being:
+</p>
+
+<ul>
+	<li>Getting state information, such as the position of a scrollbar</li>
+	<li>Setting attributes, such as the position and scope of a scrollbar</li>
+	<li>Sending messages to the controls, such as adding elements to a list box</li>
+</ul>
+
+<p>
+	Again, this is very similar to Windows. The standard Escarpment controls have similar behaviors,
+	attributes, and messages to Windows controls - only they look better.
+</p>
+
+<xSectionTitle>Beyond Hello World!</xSectionTitle>
+
+<p>
+	That's it for the tutorial. I hope it was enough to get you started. From here on you should browse through the
+	documentation and look at samples. If you have any questions that aren't answered by the Escarpment
+	documentation then please send me E-mail at <xMyEmail/>.
+</p>
+

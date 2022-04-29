@@ -1,0 +1,19 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Add a business to the address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Add a business to the address book
+</xPageTitle>
+
+<p>
+	To add a business to your address book, fill in the details below and press
+	the "Add business" at the bottom of the page.
+</p>
+
+<?Include resource=261?>
+
+<align align=right>
+	<button name=add>Add business</button>
+</align>

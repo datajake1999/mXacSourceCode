@@ -1,0 +1,77 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Add a new project"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=209/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Add a new project
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:155/>This lets you add a new project to your list. A project
+	is a set of tasks needed to accomplish a goal (the completion of the project).
+	The tasks are ordered by you according to which ones you wish to do first.
+	They also have interdependencies; some tasks must be completed before others
+	can begin.
+</p>
+
+<p>
+	The project management section of Dragonfly will help you estimate when you'll
+	finish with your project, and will help you order tasks so you finish as
+	quickly as possible.
+</p>
+
+<xbr/>
+
+<p>
+	Type in the name of the project:
+	<br/>
+	<xEditOneLine defcontrol=true name=name/>
+</p>
+
+<p>
+	Please enter a brief description, for your own records:
+	<br/>
+	<xEditMultiLine name=description/>
+</p>
+
+<p>
+	About how many days a week do you expect to work on it?
+	<br/>
+	<p align=right>
+		<bold><combobox width=75% cbheight=100 cursel=0 name=daysperweek>
+			<elem name=1>One day a week</elem>
+			<elem name=2>Two days a week</elem>
+			<elem name=3>Three days a week</elem>
+			<elem name=4>Four days a week</elem>
+			<elem name=5>Five days a week</elem>
+			<elem name=6>Six days a week</elem>
+			<elem name=7>Seven days a week</elem>
+		</combobox></bold>
+	</p>
+</p>
+
+<p>
+	Do you want to log completed tasks in a specific journal entry? <italic>(If
+	you run a small business, you can use this
+	to bill your time to a specific party.)</italic>
+	<br/>
+	<p align=right>
+		<bold><xFilterJournal name=journal width=75%/></bold>
+	</p>
+</p>
+
+<xbr/>
+
+<p>
+	When you've entered the project's name, description, and how much time
+	you intend to spend on it, press "Add this project" to add it and begin adding
+	individual tasks.
+</p>
+
+<align align=right>
+	<button name=addproject>
+		Add this project
+	</button>
+</align>
+

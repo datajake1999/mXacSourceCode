@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Generated Dependency File, included by MMLEdit.mak
+
+.\MMLEdit.cpp : \
+	"..\..\Include\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MMLEdit.rc : \
+	".\PageAppearance.mml"\
+	".\PageHelp.mml"\
+	".\PageMainEdit.mml"\
+	".\PageRemap.mml"\
+	".\PageSubstitute.mml"\
+	

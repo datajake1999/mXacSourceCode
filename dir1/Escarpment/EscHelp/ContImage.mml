@@ -1,0 +1,219 @@
+<pageinfo title="Image Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xImage>
+	<image jpgresource=104 MACROATTRIBUTE=1/>
+</xImage>
+
+<xPageTitle>Image Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The image control displays a bitmap (BMP) or JPEG (JPG) image. It can also stretch and tile images.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>addcolor</xTd2>
+		<xTd3>
+			If TRUE, the image colors are added to the background image. Defaults to FALSE.
+			<p/>
+			Example: addcolor=TRUE
+			<p/>
+			<xImage addcolor=TRUE/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>bmpresource</xTd2>
+		<xTd3>
+			Bitmap resource ID to load from.
+			An image control must have either "file=", "jpgresource=", or "bmpresource=".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			Sets the image's border size.
+			<p/>
+			Example: border=6
+			<p/>
+			<xImage border=6/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Sets the image's border color.
+			<p/>
+			Example: bordercolor=#00ff00 border=2
+			<p/>
+			<xImage bordercolor=#00ff00 border=2/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>file</xTd2>
+		<xTd3>
+			Tells the control to load its image (either a .BMP or .JPG) from a file.
+			An image control must have either "file=", "jpgresource=", "hbitmap=", or "bmpresource=".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribhex/>
+		<xTd2>hbitmap</xTd2>
+		<xTd3>
+			A handle to a HBITMAP object to display. This must be a valid number at the creation
+			of the image.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			Specifies where the link goes to. If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web. Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			If "href" is not specified then the user cannot click on the image control.
+			<p/>
+			Example: href="http://www.mxac.com.au".
+			<p/>
+			<xImage href="http://www.mxac.com.au"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPercent/>
+		<xTd2>hscale</xTd2>
+		<xTd3>
+			Sets the horizontal scale.
+			<p/>
+			Example: hscale=50%
+			<p/>
+			<xImage hscale=50%/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>jpgresource</xTd2>
+		<xTd3>
+			"JPG" resource ID to load from.
+			An image control must have either "file=", "jpgresource=", or "bmpresource=".
+			<p/>
+			Example: jpgresource=104
+			<p/>
+			<xImage/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPercent/>
+		<xTd2>scale</xTd2>
+		<xTd3>
+			Sets both the horizontal and vertical scale.
+			<p/>
+			Example: scale=50%
+			<p/>
+			<xImage scale=50%/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>transparent</xTd2>
+		<xTd3>
+			If TRUE, a color (usually from the upper left hand corner of the image, or from transparentcolor=) is
+			used as the transparent color. Defaults to FALSE.
+			<p/>
+			Example: transparent=TRUE
+			<p/>
+			<xImage transparent=TRUE/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>transparentcolor</xTd2>
+		<xTd3>
+			When "transparent=true" is set, the default coloration comes from pixel (0,0). However, if transparent
+			color is specified that's used.
+			<p/>
+			Example: transparent=TRUE transparentcolor=#000000
+			<p/>
+			<xImage transparent=TRUE transparentcolor=#000000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>transparentdistance</xTd2>
+		<xTd3>
+			By default, any color close to the transparent color gets made transparent. You can adjust the amount
+			using this value. This is very useful for JPEG's.
+			<p/>
+			Example: transparent=TRUE transparentdistance=50
+			<p/>
+			<xImage transparent=TRUE transparentdistance=50/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>type</xTd2>
+		<xTd3>
+			The image can be one of the following types:
+			<p/>
+			Example: type=htile width=100% height=100%<br/>
+			<xImage type=htile width=100% height=100%/><p/>
+			Example: type=stretchtofit width=100% height=100%<br/>
+			<xImage type=stretchtofit width=100% height=100%/><p/>
+			Example: type=tile width=100% height=100%<br/>
+			<xImage type=tile width=100% height=100%/><p/>
+			Example: type=vtile width=100% height=100%<br/>
+			<xImage type=vtile width=100% height=100%/><p/>
+			Example: type=vtilescale width=100% height=300%<br/>
+			<xImage type=vtilescale width=100% height=300%/><p/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPercent/>
+		<xTd2>vscale</xTd2>
+		<xTd3>
+			Sets the vertical scale.
+			<p/>
+			Example: vscale=50%
+			<p/>
+			<xImage vscale=50%/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The image control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	Image controls don't have any control-specific messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	Image controls don't have any control-specific notifications.
+</p>
+
+

@@ -1,0 +1,108 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Registration"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Registration
+</xPageTitle>
+
+<p align=center><big>
+	<status name=top width=80% height=75/>
+</big></p>
+
+
+<<<$IFPCACTIVE>>>
+	<p align=center><table width=80% border=2><tr><td>
+		<colorblend tcolor=#ffc040 bcolor=#ffff40 posn=background/>
+		<bold><big><big>Special <big>PC Active</big> offer</big></big></bold><p/>
+		Because you are a <bold>PC Active</bold> reader,
+		Dragonfly's <bold>registration fee has been reduced</bold> from the usual USD $20.00 (approx AUD $40.00)
+		to <big><bold>AUD $33.00</bold></big> (includes $3.00 GST).
+		<p/>
+		To take advantage of this offer <bold>send a check for AUD $33.00</bold> to:
+		<p/>
+		<p><blockquote>
+			mXac<br/>
+			PO Box 378<br/>
+			Noonamah, NT 0837
+		</blockquote></p>
+	
+		Include your <bold>E-mail address</bold> and a <bold>note</bold> stating that you're
+		a <bold>PC Active</bold> reader. <italic>This offer is not valid
+		for credit card payments. Offer valid until 1-January-2003.</italic>
+		<p/>
+		
+		When I receive your check I'll E-mail you a registration number that can be entered
+		below.
+	</td></tr></table></p>
+<<<$ENDIFPCACTIVE>>>
+
+
+<p>
+	<bold>I need to pay the bills too.</bold> Dragonfly is shareware software; you can download
+	it and try it out before paying. Some people seem to think that because they
+	have it in hand they no longer need to pay. Please, if you use Dragonfly then
+	pay for it.
+</p>
+
+<p>
+	Note: Because not everyone will listen to the honor system,
+	Dragonfly slowly stops working over time
+	unless you pay <a>US$20.00<xhoverhelpshort>Prices subject to change.</xhoverhelpshort></a> and register it.
+</p>
+
+<xSectionTitle>Paying for Dragonfly</xSectionTitle>
+
+<p>
+	Credit Card payment is handled by <bold>RegNow.com</bold>, a US company
+	that has a <bold>secure
+	Internet site</bold>. Internet Explorer shows a small lock icon in its status
+	bar to indicate that communications with the site are encrypted.
+	Netscape Navigator has similar functionality. To pay, see:
+</p>
+
+<blockquote><p>
+	<a href="https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-8">https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-8</a>
+</p></blockquote>
+
+<p>
+	You may also pay me by personal check in any major currency for the equivalent
+	of <a>US $20.00<xhoverhelpshort>Prices subject to change.</xhoverhelpshort></a>. Check out my web page for details.
+</p>
+
+<xSectionTitle>Registration Key</xSectionTitle>
+
+<p>
+	Type in the <bold>E-mail</bold> name you registered with:
+</p>
+
+<xEditOneLine name=email maxchars=128/>
+
+<p>
+	Once you have paid, you will be shown a registration number on the RegNow.com
+	web site. You will also receive the <bold>registration number in E-mail</bold>. Please type the
+	number below.
+</p>
+
+<xEditOneLine name=regkey maxchars=32/>
+
+<xDefinition>
+	<bold>I need your help marketing Dragonfly!</bold>
+	<p/>
+	Please fill in a "User feedback/rating"
+	form on the download web-site (such
+		as <a href="http://download.cnet.com/downloads/0-10021-100-4798496.html?tag=st.dl.10001-103-1.lst-7-2.4798496">Download.com</a>, 
+		<a href="http://www.bpsoftware.com/asp/PrdRate.asp?idn=2489">BPSoftware.com</a>, 
+		<a href="http://www.supershareware.com/ASP/Buildframe.asp?URL=PostReview&amp;ID=12481&amp;S=Personal+Info+Managers&amp;O=&amp;License=&amp;P=1">SuperShareWare.com</a>, 
+		<a href="http://itprodownloads.com/filedownload?fileid=220117">File Mine/IT Pro</a>, 
+		<a href="http://www.download32.com/proghtml/174/17497.htm">Download32.com</a>, 
+		<a href="http://www.winsite.com/bin/Info?5918">WinSite</a>, 
+		<a href="http://www.yippee.net/html/win/business/title8912.htm">Yippee.net</a>, 
+		<a href="http://www.zdnet.com/downloads/stories/info/0,10615,69321,00.html">ZDNet</a>) where
+	you found Dragonfly. That way other users will hear about Dragonfly and know how good it is.
+</xDefinition>
+
+<p align=center><big>
+	<status name=bottom width=80% height=75/>
+</big></p>

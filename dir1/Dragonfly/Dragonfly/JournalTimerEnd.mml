@@ -1,0 +1,53 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Stop a billing/work timer" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Stop the timer</font>
+		<xhoverhelp>
+			Press this to stop the timer and log the entry.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Stop a billing work timer
+</xPageTitle>
+
+<p>
+	Press "Stop the timer" to stop the timer and log the time in your journal.
+	If you want, you can type a short description of the work done below.
+</p>
+<xEditOneLine name=summary defcontrol=true/>
+
+<xChoiceButton name=delete>
+	<bold>Delete the timer</bold>
+	<br/>
+	Stop the timer but <bold>don't</bold> log it into your journal.
+</xChoiceButton>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Stop the timer</font>
+		<xhoverhelp>
+			Press this to stop the timer and log the entry.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

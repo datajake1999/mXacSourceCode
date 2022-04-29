@@ -1,0 +1,346 @@
+<pageinfo title="MML Basics"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>MML Formatting</xPageTitle>
+
+<xSectionTitle>Text</xSectionTitle>
+
+<p>
+	MML is a <bold>text file saved either as ANSI or Unicode</bold>,
+	or a <bold>Unicode text string</bold> within a C++ application.
+	It contains display text interspersed with tags. (See below for information about tags.) The
+	text is displayed as it's typed, except for a few exceptions:
+</p>
+
+<xUl>
+	<li>
+		<bold>Whitespace</bold> - An end-of-line (CR/LF) followed by
+		one or more tabs and spaces on the next line before text are converted into a single space. If the
+		end-of-line and tabs/spaces precede a tag then they are completely removed. This allows you
+		to indented your lines of text within tabs, for readability purposes. For an example of this,
+		click <a href=viewsource>here</a>.
+	</li>
+	<li>
+		<bold>Character escapes</bold> - Characters can be represented by an escape sequence that
+		begins with '&amp;' followed by either a short mnemomic or a number, and finished off with a ';'.
+		Three characters, <bold>&lt;</bold>, <bold>&gt;</bold> and <bold>&amp;</bold>  must always be represented with escape sequences.
+		The others are optional.
+	</li>
+</xUl>
+
+<p>
+	The following character escape sequences exist:
+</p>
+
+<xTableCenter>
+	<tr>
+		<xTabletitle1>Type in</xTableTitle1>
+		<xTabletitle2>Appears as</xTableTitle2>
+		<xTabletitle3>Description</xTableTitle3>
+	</tr>
+	<tr>
+		<xtd1>&amp;amp;</xtd1>
+		<xtd2>&amp;</xtd2>
+		<xtd3>Ampersand</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;lt;</xtd1>
+		<xtd2>&lt;</xtd2>
+		<xtd3>Left angle bracket</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;gt;</xtd1>
+		<xtd2>&gt;</xtd2>
+		<xtd3>Right angle bracket</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;quot;</xtd1>
+		<xtd2>&quot;</xtd2>
+		<xtd3>Quote (Only required if used within attributes values. See below.)</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;cr;</xtd1>
+		<xtd2>\n</xtd2>
+		<xtd3>Carriage return (Only used within attributes values. See below.)</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;lf;</xtd1>
+		<xtd2>\r</xtd2>
+		<xtd3>Line feed (Only used within attributes values. See below.)</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;tab;</xtd1>
+		<xtd2>\t</xtd2>
+		<xtd3>Tab</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;#dddd;</xtd1>
+		<xtd2></xtd2>
+		<xtd3>Unicode character dddd (decimal)</xtd3>
+	</tr>
+	<tr>
+		<xtd1>&amp;#Xhhhh;</xtd1>
+		<xtd2></xtd2>
+		<xtd3>Unicode character hhhh (hex)</xtd3>
+	</tr>
+</xTableCenter>
+
+<p>
+	For an example of character escapes, click <a href=viewsource>here</a> to see this page's MML.
+</p>
+
+<xSectionTitle>Tags</xSectionTitle>
+
+<p>
+	Tags are special character sequences within the text that <bold>affect how it's displayed</bold> (such as italicising)
+	or <bold>insert controls</bold> (such as buttons). A tag has three parts, the beginning, contents, and end.
+</p>
+
+<p>
+	The <bold>tag beginning</bold> is identified by a left angle bracket (<bold>&lt;</bold>) followed by
+	the tag name, such as <bold>italic</bold>, and finished by a right angle bracket. (<bold>&gt;</bold>)
+</p>
+
+<p>
+	The tag's <bold>name</bold> is case insensitive, which means that "ITALIC" is the same as "italic".
+	All names begin with a letter, underscore (_), or colon (:). The following characters can be a letter,
+	underscore (_), color (:), period(.), hyphen (-), or digit.
+</p>
+
+<p>
+	The tag's <bold>contents</bold> are text, or more tags. The contents are "modified" by the tag. This,
+	the italic tag italicizes all the text within its contents. This means it also italicizes text contained within
+	tags within italic. Therefore, <xCodeInline>&lt;italic&gt;Hello &lt;bold&gt;world!&lt;/bold&gt;&lt;/italic&gt;</xcodeinline>
+	italicisizes "Hello world!". Because the "bold" tag surrounds "World!" that is displayed in bold-italic.
+</p>
+
+<p>
+	The tag's <bold>ending</bold> is identified by a left angle bracket (<bold>&lt;</bold>) followed by
+	a slash (<bold>/</bold>), the tag name, and finished by the right angle bracket.  (<bold>&gt;</bold>)
+</p>
+
+<p>
+	<bold>Exception:</bold> Sometimes a tag won't have any contents. While the tag can still be
+	entered as <xCodeInline>&lt;tag&gt;&lt;/tag&gt;</xCodeInline>, MML provides a shorthand. Just enter a left
+	angle bracket, followed by the tag name, any attributes (see below), a slash, and a right angle bracket.
+	<xCodeInline>&lt;tag/&gt;</xCodeInline> is the same.
+</p>
+
+<p>
+	For an example of tags, click <a href=viewsource>here</a> to see this page's MML.
+</p>
+
+<xSectionTitle>Attributes</xSectionTitle>
+
+<p>
+	Tags may contain <bold>attribute definitions</bold> that modify how the tag behaves. For example, the "font" tag
+	uses the "face" attribute definition to specify what font face to use.
+</p>
+
+<p>
+	<xCodeInline>&lt;font face="Times New Roman"&gt;Hello world!&lt;/font&gt;</xCodeInline> produces 
+	<font face="times new roman">Hello World!</font>.
+</p>
+
+<p>
+	<xCodeInline>&lt;font face="Courier"&gt;Hello world!&lt;/font&gt;</xCodeInline> produces 
+	<font face="Courier">Hello World!</font>.
+</p>
+<p>
+	Attribute definitions appear in the tag's beginning, just after the tag name and before the right angle bracket.
+	You can have one or more attribute definitions separated by <bold>whitespace</bold> (spaces, tabs, or new lines).
+</p>
+
+<p>
+	An attribute definition contains an <bold>attribute name</bold> followed by equals (<bold>=</bold>) and
+	finished with the <bold>attribute value</bold>. The attribute name can have the same characters as a
+	tag name. The attribute value can be a <bold>sequence of non-whitespace characters</bold> or it
+	can be <bold>surrounded by quotes and include any character, except quotes</bold>.
+</p>
+
+<p>
+	For example: In <xCodeInline>&lt;font face="Times New Roman"&gt;Hello world!&lt;/font&gt;</xCodeInline> 
+	"Times New Roman" must be in quotes because it has a space in its name. However, because the font
+	name, "Courier" doesn't require any spaces, either 
+	<xCodeInline>&lt;font face="Courier"&gt;Hello world!&lt;/font&gt;</xCodeInline> or 
+	<xCodeInline>&lt;font face=Courier&gt;Hello world!&lt;/font&gt;</xCodeInline> works.
+</p>
+
+<p>
+	For an example of attribute definitions, click <a href=viewsource>here</a> to see this page's MML.
+</p>
+
+
+<xSectionTitle>Macros</xSectionTitle>
+
+<p>
+	Macros are used to save yourself typing and cutting-and-pasting. They also make it easier to keep your
+	user-interface look-and-feel consistent. My suggestion: Use lots of macros and you will save yourself
+	time in the end.
+</p>
+
+<p>
+	A macro is a special tag, defined by you, that works as a stand in for one more more other tags. In
+	Microsoft Word terms, it's like a style. In C++ terms, it's a <xCodeInline>#define</xCodeInLine>.
+</p>
+
+<p>
+	What follows is a macro for a header, equivalent to HTML's <bold> &lt;H1&gt;</bold>:
+</p>
+
+<xCode>
+	&lt;!xSectionTitle&gt;<br/>
+		&tab;&lt;p&gt; &lt;/p&gt;<br/>
+		&tab;&lt;p MACROATTRIBUTE=1&gt;&lt;big&gt;&lt;bold&gt;<br/>
+			&tab;&tab;&lt;?MacroContent?&gt;<br/>
+		&tab;&lt;/bold&gt;&lt;/big&gt;&lt;/p&gt;<br/>
+	&lt;/xSectionTitle&gt;<br/>
+</xCode>
+<p> </p>
+
+<p>
+	The first line, <xCodeInLine>&lt;!xSectionTitle&gt;</xCodeInline> defines the start of the macro.
+	The exclamation point (<bold>!</bold>) tells the MML compiler that a macro is being defined. What follows
+	the exclamation point is the macro name. I prepend all macros with "x" just so I know they're a macro.
+	The last line, <xCodeInLine>&lt;/xSectionTitle&gt;</xCodeInline> ends the macro definition.
+</p>
+
+<p>
+	What's in-between is the MML that's substituted for the macro during compilation. Just like 
+	<xCodeInline>#define</xCodeInline> can have "variables", such as 
+	<xCodeInline>#define PLUS(x,y) (x+y)</xCodeinline>, so too can macros. Although macros can only
+	contain two variables.
+</p>
+
+<xUl>
+	<li>
+		 <bold>MACROATTRIBUTE=1</bold> - If any attributes are entered in the macro's beginning tag,
+		 they're automatically substituted into the tag(s) where <xCodeInline>MACROATTRIBUTE=1</xCodeInline> appears.
+	</li>
+	<li>
+		<bold>&lt;?MacroContent?&gt;</bold> - The contents of the macro tag are substituted into anyplace
+		in the macro definition where <xCodeInline>&lt;?MacroContent?&gt;</xCodeInline> appears.
+	</li>
+</xUl>
+
+<p>
+	The line <xCodeInline>&lt;xSectionTitle align=right&gt;My title&lt;/xSectionTitle&gt;</xCodeInline> would be translated into:
+</p>
+<xCode>
+	&lt;p&gt; &lt;/p&gt;<br/>
+	&lt;p align=right&gt;&lt;big&gt;&lt;bold&gt;<br/>
+		&tab;My title&gt;<br/>
+	&lt;/bold&gt;&lt;/big&gt;&lt;/p&gt;<br/>
+</xCode>
+<p> </p>
+
+<p>
+	Click <a href=viewmacros>here</a> for a list of macros used in the help sample.
+</p>
+
+
+
+<xSectionTitle>Templates</xSectionTitle>
+
+<p>
+	Templates are the next most important MML improvement you'll use. When you tell a MML document to
+	use a template it loads in the template MML and looks for the <xCodeInline>&lt;?TemplateSubst?&gt;</xCodeInline> 
+	tag within the template. Then, your entire MML document is inserted inside the template.
+</p>
+
+<p>
+	This allows you create a group of pages all containing the same header and footer artwork without having
+	to cut and paste the header/footer MML into every document. This help sample uses one major template,
+	template.mml, to provide some default buttons and look-and-feel to every page.
+</p>
+
+<p>
+	To use a template in your MML document simply add:
+</p>
+
+<xCode>
+	&lt;?Template resource=YOURRESID?&gt;
+</xCode>
+
+<p>&tab;or</p>
+
+<xCode>
+	&lt;?Template file=YOURFILENAME?&gt;
+</xCode>
+
+<p>
+	to the first line of your MML document. Of course, YOURRESID should be changed to whatever MML
+	resource you've stored the template MML in. Likewise, YOURFILENAME is the template's file name.
+</p>
+
+<xTip>
+	Almost all of the pages in the MML help sample include template.mml (resource 102), but you won't
+	find &lt;?Template?&gt; in any page. Instead, I have &lt;&lt;&lt;$TEMPLATE&gt;&gt;&gt; at the top
+	of every page. This is a substitution (see below) that normally gets replaced with 
+	<xCodeInline>&lt;?Template resource=102?&gt;</xCodeInline>. However, if the help user decides
+	to print the page, I don't include the template; that way the printed page doesn't include the
+	header and footer with buttons.
+</xTip>
+
+<p>
+	To write your own template, all you have to do is write a normal MML document. In the place where
+	you want the non-termplate document to be inserted, just use the tag 
+	<xCodeInline>&lt;?TemplateSubst?&gt;</xCodeInline>. Easy. To see help's template,
+	click <a href=viewtemplate>here</a>.
+</p>
+
+<xSectionTitle>Includes</xSectionTitle>
+
+<p>
+	Includes are just like C++ <xCodeInline>#include</xCodeInline>. To use an include, place:
+</p>
+
+<xCode>
+	&lt;?Include resource=YOURRESID?&gt;
+</xCode>
+
+<p>&tab;or</p>
+
+<xCode>
+	&lt;?Include file=YOURFILENAME?&gt;
+</xCode>
+
+<p>
+	anywhere in your MML document. Of course, YOURRESID should be changed to whatever MML
+	resource you've stored the include MML in. Likewise, YOURFILENAME is the include's file name.
+</p>
+
+<xSectionTitle>Substitutions</xSectionTitle>
+
+<p>
+	Substutions kind of act like <xCodeInline>%s</xCodeInline> in a
+	C++ <xCodeInline>printf ("Hi %s. How are you?", szUserName);</xCodeInLine>. They replace
+	a portion of the MML document with a different string at compile/usage time.
+</p>
+
+<p>
+	To use a substituion, include <xCodeInline>&lt;&lt;&lt;SUBNAME&gt;&gt;&gt;</xCodeInline> or 
+	<xCodeInline>&lt;&lt;&lt;$SUBNAME&gt;&gt;&gt;</xCodeInline> anywhere
+	in your document, even in your attributes section. Of course, type something in other than
+	SUBNAME. You can use several different names in each document.
+</p>
+
+<p>
+	When you create the page, such as by calling CEscWindow::PageDisplay(), your page callback
+	will get an ESCM_SUBSTITION message. If it traps it, it can get the substitution name from
+	ESCMSUBSTITUTION.pszSubName. For this example, it would be L"SUBNAME". They,based on
+	the string, your application fills ESCMSUBSTITUTION.pszSubString with a pointer to
+	the string you want to substitute in, such as L"Mike".
+</p>
+
+<p>
+	One thing to watch out for: If you have <xCodeInline>&lt;&lt;&lt;$SUBNAME&gt;&gt;&gt;</xCodeInline> then
+	the string will be substituted into your MML <bold>exactly</bold>. If the substitution include
+	tags, those tags will be compiled in. This can be a very powerful tool, but don't ever substitute in
+	a string that your end-user typed in using the '$' because they'll be able to do nasty and unexpected
+	things to your program. Instead, use <xCodeInline>&lt;&lt;&lt;SUBNAME&gt;&gt;&gt;</xCodeInline> because
+	that will convert all left/right angle bracket, ampersand, and new-line into character escape
+	sequences.
+</p>
+

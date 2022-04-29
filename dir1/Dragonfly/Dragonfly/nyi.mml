@@ -1,0 +1,12 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Not yet implimented"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Not yet implimented
+</xPageTitle>
+
+<p>
+	Sorry, this feature hasn't been implimented yet.
+</p>

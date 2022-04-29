@@ -1,0 +1,39 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a new person/business" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Quickly add a new person/business
+</xPageTitle>
+
+<p>
+	Which do you wish to add?
+</p>
+
+<p><blockquote>
+	<Button href=newperson defcontrol=true accel=alt-p>
+		A new <bold><u>p</u>erson</bold>
+	</Button>
+	<br/>
+	<Button href=newbusiness accel=alt-b>
+		A new <bold><u>b</u>usiness, company, or organization</bold>
+	</Button>
+</blockquote></p>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

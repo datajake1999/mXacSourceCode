@@ -1,0 +1,156 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Holidays"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Holidays
+</xPageTitle>
+
+<p>
+	Use this page to choose what holidays will be listed on your <a href=r:112>calendar</a>.
+</p>
+
+<!xHoliday>
+	<button MACROATTRIBUTE=1 style=check checkbox=true valign=top>
+		<?MacroContent?>
+	</button><br/>
+</xHoliday>
+
+<xbr/>
+
+<xSectionTitle>National holidays</xsectionTitle>
+
+<table innerlines=0 border=0 width=100%>
+<tr><td width=10%/><td width=90%>
+	<xHoliday name=h2>
+		<bold>Australia</bold><br/>
+		<small>
+			New Year's Day, Australia Day,
+			Valentine's Day, Eight Hours Day, Labor Day, Canberra Day,
+			Good Friday, Easter Sunday, Easter Monday,
+			Anzac Day, May Day, Mother's Day, Adelaide Cup Day,
+			Foundation Day, Queen's Birthday Holiday, Picnic Day,
+			Royal Queensland Show Holiday,
+			Father's Day, Melbourne Cup Day,
+			Christmas, Boxing Day
+		</small>
+	</xHoliday>
+	<xHoliday name=h1>
+		<bold>Canada</bold><br/>
+		<small>
+			New Year's Day,
+			Good Friday, Easter Sunday, Easter Monday,
+			Canada Day, Labor Day, American Indian Day,
+			Thanksgiving, Remembrance Day,
+			Christmas, Boxing Day
+		</small>
+	</xHoliday>
+	<xHoliday name=h6>
+		<bold>France</bold><br/>
+		<small>
+			le Jour de l'An, la fête des Rois, la Chandeleur, la Saint - Valentin,
+			le poisson d'avril, la fête du Travail, le 8 mai, la fête des Mères,
+			Good Friday, Easter Sunday, Feast of the Ascension, Pentecost,
+			La Prise de la Bastille, l'Assomption de la Vierge, l'Armistice,
+			la Sainte - Catherine, Noël
+		</small>
+	</xHoliday>
+	<xHoliday name=h5>
+		<bold>New Zealand</bold><br/>
+		<small>
+			New Year's Day, Day after New Year's Day, Waitangi Day,
+			Good Friday, Easter Sunday, Easter Monday,
+			Anzac Day, Queen's Birthday Holiday, Labour Day,
+			Christmas, Boxing Day,
+			Anniversary Days <italic>(Various cities)</italic>
+		</small>
+	</xHoliday>
+	<xHoliday name=h0>
+		<bold>United States</bold><br/>
+		<small>
+			New Year's Day, Martin Luther King Jr's Birthday,
+			Valentine's Day, President's Day,
+			St. Patrick's Day,
+			Good Friday, Easter Sunday
+			Memorial Day, Mother's Day, Armed Forces Day, Father's Day, Flag Day,
+			Independence Day, Labor Day, American Indian Day,
+			Columbus Day, Halloween, Veteran's Day, Election Day, Thanksgiving,
+			Christmas
+		</small>
+	</xHoliday>
+	<italic>
+		I know that I haven't represented all the countries in the world.
+		If your country isn't listed, send me E-mail at <xMyEmail/> telling
+		me what holidays you have and <bold>how to calculate them</bold>.
+		Similarly, if I've omitted a holiday or incorrectly calculate the day,
+		send me E-mail.
+	</italic>
+</td></tr></table>
+<p/>
+
+<xsectiontitle>Religious holidays</xsectiontitle>
+<table innerlines=0 border=0 width=100%>
+<tr><td width=10%/><td width=90%>
+	<xHoliday name=h3>
+		<bold>Christian</bold><br/>
+		<small>
+			Good Friday, Easter Sunday, Feast of the Ascension, Pentecost,
+			Christmas
+		</small>
+	</xHoliday>
+	<italic>
+		I know that I haven't represented all the religions in the world.
+		If your religion isn't listed, send me E-mail at <xMyEmail/> telling
+		me what holidays you have and <bold>how to calculate them</bold>.
+		Similarly, if I've omitted a holiday or incorrectly calculate the day,
+		send me E-mail.
+	</italic>
+</td></tr></table>
+<p/>
+
+<xsectiontitle>Other important days</xsectiontitle>
+<table innerlines=0 border=0 width=100%>
+<tr><td width=10%/><td width=90%>
+	<xHoliday name=h4>
+		<bold>Solstices and equinoxes</bold><br/>
+		<small>
+			Vernal equinox, Summer solstice, Autumnal equinox, Winter solstice
+		</small>
+	</xHoliday>
+	<italic>
+		If you have any suggestions, send me E-mail at <xMyEmail/> telling
+		me what important dates you have and <bold>how to calculate them</bold>.
+		Similarly, if I've incorrectly calculated the day,
+		send me E-mail.
+	</italic>
+</td></tr></table>
+
+
+<xbr/>
+
+<xChoiceButton href=r:280>
+	<bold>Special days</bold>
+	<br/>
+	This allows you to mark special days on your calendar such as anniversaries,
+	holidays not automatically provided by Dragonfly, and birthdays.
+</xChoiceButton>
+
+
+<xChoiceButton href=r:112>
+	<bold>Monthly calendar</bold>
+	<br/>
+	Shows you a monthly calendar.
+</xChoiceButton>
+
+<xChoiceButton href=r:270>
+	<bold>Annual calendar (by months)</bold>
+	<br/>
+	Displays the calendar for the entire year.
+</xChoiceButton>
+
+<xChoiceButton href=r:297>
+	<bold>Annual calendar (by weeks)</bold>
+	<br/>
+	Displays the calendar for the entire year.
+</xChoiceButton>

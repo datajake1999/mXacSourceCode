@@ -1,0 +1,8 @@
+<pageinfo title="Generating Index"/>
+
+<colorblend posn=background tcolor=#c0ffc0 bcolor=#90d090/>
+<p>
+	Please wait one moment while the search index is generated.
+</p>
+
+<progressbar name=progress width=100%/>

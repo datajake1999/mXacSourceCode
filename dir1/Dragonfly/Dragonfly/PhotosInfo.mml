@@ -1,0 +1,72 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Photos page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Photos" page
+</xPageTitle>
+
+<p>
+	The <a href=r:123>photos</a> page lets you include pictures into Dragonfly's
+	database, either photos you've taken with
+	your digital camera or scanned in. That way the images will always be stored along
+	with your Dragonfly data and less likely to be lost.
+</p>
+
+<p>
+	Not only that, but importing images into Dragonfly can be very useful:
+</p>
+
+<xul>
+	<li>
+		When you load in a picture you can type in a title and short description. Later
+		on you can read this to refresh your memory.
+	</li>
+	<li>
+		You can also list what people are in the photo (not that you'd ever forget their
+		names). And, Dragonfly cross-indexes everything, so when you view that person's
+		information you'll see a list of photos he/she is in.
+	</li>
+	<li>
+		Dragonfly's seach will scan through the photo text, helping you to more easily find
+		photos.
+	</li>
+	<li>
+		You can even have Dragonfly change your desktop wallpaper daily to your favorite
+		photos in your photo album.
+	</li>
+</xul>
+
+<p>
+	The only downside is that photos can be large. Make sure they're saved as JPEG images (.jpg)
+	so they're only 100K-500K a piece. If you save them as bitmaps (.bmp) then the same
+	image will use <bold>ten times</bold> more disk space.
+</p>
+
+<p>
+	To load photos into Dragonfly:
+</p>
+
+<ol>
+	<li>
+		Download them from your digital camera or scanner onto your computer's hard
+		disk. Make sure they're saved as .jpg files and aren't too large.
+	</li>
+	<li>
+		Switch to the <a href=r:123>Photos</a> page.
+	</li>
+	<li>
+		Press "Load photos from disk".
+	</li>
+	<li>
+		A file-open dialog will pop up. Direct it to the directory where your photos
+		are saved. Then, select all the photos you want to add by pressing down the
+		shift or control key while clicking on the name.
+	</li>
+	<li>
+		Press "Open" and Dragofly will incorporate all the images into its database,
+		asking your for information about each one.
+	</li>
+</ol>
+

@@ -1,0 +1,29 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Today/Tomorrow page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Today/Tomorrow" page
+</xPageTitle>
+
+<p>
+	The "<a href=r:109>Today</a>" page shows you what's on your plate today.
+	This includes meetings you have scheduled, reminders, tasks, and near-term
+	work for projects. If you don't see anything listed on the Today page
+	then (according to Dragonfly) you have nothing to do and can take
+	a rest.
+</p>
+
+<p>
+	Be aware that the Today page only shows you meetings, reminders, and tasks
+	that are scheduled before or on today. It only shows about a week's worth
+	of project tasks. To see full lists, look
+	in <a href=r:113>meetings</a>, <a href=r:114>reminders</a>, <a href=r:115>tasks</a>, and <a href=r:145>projects</a>.
+</p>
+
+<p>
+	<bold>Tip:</bold> At the end of day, if you're curious about what you need to do
+	tomorrow, click the <a href=r:185>tomorrow</a> menu item. It will show you all
+	the work items left over from today, plus new ones to be added for tomorrow.
+</p>

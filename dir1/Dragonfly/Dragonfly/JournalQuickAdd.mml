@@ -1,0 +1,55 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a journal category" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add category</font>
+		<xhoverhelp>
+			Press this to add the journal category.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Quickly add a journal category
+</xPageTitle>
+
+<p>
+	Just type in a name for the journal category you want to create.
+</p>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Name:
+		</xtdleft>
+		<xtdright><xEditInTable name=name defcontrol=true/></xtdright>
+	</tr>
+</xtableclear>
+
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add category</font>
+		<xhoverhelp>
+			Press this to add the journal category.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

@@ -1,0 +1,112 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Daily wrap-up" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=221/><<<$ENDIFCOLOR>>>
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	Daily wrap-up for <<<DATE>>>
+</xPageTitle>
+
+<<<$IFMICROHELP>>>
+<p>
+	Use the daily wrap-up to think about what you did and/or accomplished during the
+	day. Writing down your activities in the daily wrap-up not only records your
+	activities for future reference, but it also helps you to see where your
+	time goes.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<font color=#000000><xTableCenter>
+	<xtheader>This is what has been logged</xtheader>
+	<<<$LOG>>>
+</xtablecenter></font>
+
+<xsectiontitle>What else did you do/accomplish today?</xsectiontitle>
+
+<xtablecenter>
+	<xtrheader>This morning</xtrheader>
+	<tr><td>
+		<font color=#000000><edit name=morning width=100% height=25% multiline=true wordwrap=true maxchars=10000 defcontrol=true/></font>
+	</td></tr>
+	<xtrheader>This afternoon</xtrheader>
+	<tr><td>
+		<font color=#000000><edit name=afternoon width=100% height=25% multiline=true wordwrap=true maxchars=10000/></font>
+	</td></tr>
+	<xtrheader>This evening</xtrheader>
+	<tr><td>
+		<font color=#000000><edit name=evening width=100% height=25% multiline=true wordwrap=true maxchars=10000/></font>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xsectiontitle>Summary</xsectiontitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Was it a good day?
+		</xtdleft>
+		<xtdright>
+			<combobox name=goodday width=100% cbheight=100 cursel=2>
+				<elem name="Very good"><bold>Very good</bold></elem>
+				<elem name=Good><bold>Good</bold></elem>
+				<elem name=Typical><bold>Typical</bold></elem>
+				<elem name=Bad><bold>Bad</bold></elem>
+				<elem name="Very bad"><bold>Very bad</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How did you feel today?
+		</xtdleft>
+		<xtdright>
+			<combobox name=health width=100% cbheight=100 cursel=2>
+				<elem name="Full of energy"><bold>Full of energy</bold></elem>
+				<elem name=Good><bold>Good</bold></elem>
+				<elem name=Typical><bold>Typical</bold></elem>
+				<elem name=Tired><bold>Tired</bold></elem>
+				<elem name=Ill><bold>Ill</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+<xbr/>
+
+<xsectiontitle>Deeply random question</xsectiontitle>
+
+<p>
+	<<<$RANDOMTHOUGHT>>>
+</p>
+
+<p align=center>
+	<button style=x radiobutton=true group=yes,no name=yes>Yes</button>
+	<button style=x radiobutton=true group=yes,no name=no checked=true>No</button>
+</p>
+
+<null>
+	<<<$REFLECTION>>>
+</null>
+
+<xbr/>
+
+<p>
+	Your changes will automatically be saved; when you're finished editing just
+	switch to another page.
+</p>
+
+
+
+</font>

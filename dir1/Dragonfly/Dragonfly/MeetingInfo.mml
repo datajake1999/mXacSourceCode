@@ -1,0 +1,31 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Meetings page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=222/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Meetings" page
+</xPageTitle>
+
+<p>
+	Use the "<a href=r:113>Meetings</a>" page to set up and track any meetings you organize
+	with other people. The page provides two basic functions:
+</p>
+
+<p>
+	First, you can schedule meetings in your calendar so you won't forget about them.
+	(Although sometimes it is convenient to forget about meetings... I'm quite good
+	at that personally.) While you're scheduling a meeting Dragonfly will make
+	sure you don't have any conflicts. The act of scheduling a meeting also gives
+	you a chance to think about what you want to accomplish during the meeting.
+</p>
+
+<p>
+	Second, you can use the Meetings page to take notes during a meeting. Not only
+	are the notes then archived away, along with a record of who attended the meeting,
+	but you can let Dragonfly track action items. Any action items assigned to
+	you will be incorporated into your <a href=r:115>task list</a>. And, even
+	better, action items assigned to other attendees will appear in
+	your <a href=r:114>reminders list</a> so you won't forget to make sure
+	the other attendees are doing their bit.
+</p>

@@ -1,0 +1,6 @@
+<!h1><p MACROATTRIBUTE=1><font face="TimesNewRoman" MACROATTRIBUTE=1><big><?MACROCONTENT?></big></font></p><br><hr/></br></h1>
+<p align=right><big><big>The Test Page!</big></big></p>
+<p><hr/></p>
+<?TemplateSubst?>
+<p><hr/></p>
+<p align=right>End of the test page</p>

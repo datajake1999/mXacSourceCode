@@ -1,0 +1,77 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Archive Options"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Archive options
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:234/>The "Archive options" page lets you turn on/off the
+	taskbar icon for archiving.
+</p>
+
+<p>
+	To use the taskbar icon:
+</p>
+
+<ol>
+	<li>
+		Use your <bold>web browser to view a web page</bold>, or <bold>open a document</bold> with your word processor.
+	</li>
+	<li>
+		<bold>Left-click on the archive taskbar icon.</bold> It looks like this.
+		<image bmpresource=236 border=0/>
+	</li>
+	<li>
+		Dragonfly will sent a Ctrl-A (to select all the text) and a Ctrl-C (to copy
+		the text). <italic>Sometimes copying all the text in a document takes a few seconds.</italic>
+	</li>
+	<li>
+		Once the text has been automatically copied to the clipboard, Dragonfly
+		adds it to its archive database.
+	</li>
+	<li>
+		You'll hear a set of chimes (and maybe computer voice) if it's archived
+		properly. If there's a problem you'll hear an error tone. Some applications
+		don't respond properly to Ctrl-A (for select all text), or don't have any
+		text to copy. You may have to go to the <a href=r:124>Archive</a> page
+		and press "Remember document" manually.
+	</li>
+</ol>
+
+<xTip>
+	If you right-click on the task-bar icon you'll get a menu showing you a list
+	of <a href=r:121>journal</a> categories you've created. Selecting one of these will archive the document
+	into the journal category.
+</xTip>
+
+<xbr/>
+
+<xChoiceButton style=light checked=false checkbox=true name=iconon>
+	<bold>Turn the taskbar archive icon on</bold>
+	<br/>
+	If the switch is red then the taskbar icon is on.
+</xChoiceButton>
+
+<xChoiceButton style=light checked=false checkbox=true name=noctrla>
+	<bold>Only send control-C</bold>
+	<br/>
+	Normally Dragonfly sends ctrl-A (to select all the text) followed by
+	ctrl-C. Some people prefer not to have all the text archived. If the
+	switch is red then only ctrl-C will be sent; you'll have to select
+	what text will be archived.
+</xChoiceButton>
+
+<xChoiceButton style=light checked=false checkbox=true name=usefirstline>
+	<bold>Use the first line of text for the document's title</bold>
+	<br/>
+	Dragonfly normally uses the window's title-bar text for the archived document
+	title. However, some browsers don't change their title bar to show the web page's
+	title, causing all archived documents to have the same name. If this is on, the
+	first line of the archived text becomes the title. Note: This works best if you
+	have "Only send control-C" turned on and select the text yourself since most
+	web pages have ads and other junk as their first line.
+</xChoiceButton>
+

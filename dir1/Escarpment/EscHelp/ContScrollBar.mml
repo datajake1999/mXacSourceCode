@@ -1,0 +1,293 @@
+<pageinfo title="ScrollBar Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>ScrollBar Control</xPageTitle>
+
+<!xBar>
+	<ScrollBar width=100% pos=50 MACROATTRIBUTE=1/>
+	<p> </p>
+</xBar>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	Scrollbars act just like Windows scroll bars, except they look nicer.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>arrowcolor</xTd2>
+		<xTd3>
+			The arrows' color.
+			<p/>
+			Example: arrowcolor=#00ffff
+			<xBar page=20 arrowcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>arrowstyle</xTd2>
+		<xTd3>
+			The style of the end arrows. It can be one of the following:
+			<p/>
+			arrowstyle=cone<br/>
+			<xBar page=20 arrowstyle=cone/>
+			arrowstyle=sphere<br/>
+			<xBar page=20 arrowstyle=sphere/>
+			arrowstyle=triangle<br/>
+			<xBar page=20 arrowstyle=triangle/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>depth</xTd2>
+		<xTd3>
+			The depth of the scroll bar in pixels. Larger numbers make it seem like its
+			popping out of the window more.
+			<p/>
+			Example: depth=64 margin=12
+			<xBar depth=64 margin=12/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>disabledcolor</xTd2>
+		<xTd3>
+			Sets the color of the scrollbar when it's disabled.
+			<p/>
+			Example: disabledcolor=#00ffff
+			<xBar enabled=false disabledcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>heldcolor</xTd2>
+		<xTd3>
+			The color of the knob, arrow, or track when the user has it clicked down.
+			<p/>
+			Example: heldcolor=#00ffff
+			<xBar heldcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>knobcolor</xTd2>
+		<xTd3>
+			The knob's color.
+			<p/>
+			Example: knobcolor=#00ffff
+			<xBar page=20 knobcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>knobstyle</xTd2>
+		<xTd3>
+			The style of the knob to use. It can be one of the following:
+			<p/>
+			knobstyle=beveled<br/>
+			<xBar page=20 knobstyle=beveled/>
+			knobstyle=box<br/>
+			<xBar page=20 knobstyle=box/>
+			knobstyle=knob<br/>
+			<xBar page=20 knobstyle=knob/>
+			knobstyle=lefttriangle<br/>
+			<xBar page=20 knobstyle=lefttriangle/>
+			knobstyle=righttriangle<br/>
+			<xBar page=20 knobstyle=righttriangle/>
+			knobstyle=sphere<br/>
+			<xBar page=20 knobstyle=sphere/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margin</xTd2>
+		<xTd3>
+			Margin, in pixels, around the progress bar.
+			<p/>
+			Example: margin=0
+			<p/>
+			<xBar margin=0/>
+			Example: margin=8
+			<p/>
+			<xBar margin=8/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>max</xTd2>
+		<xTd3>
+			Maximum value for the scroll bar. Defaults to 100.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>min</xTd2>
+		<xTd3>
+			Minimum value for the scroll bar. Defaults to 0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>orient</xTd2>
+		<xTd3>
+			Controls the scrollbar's orientation, "vert" or "horz".
+			<p/>
+			Example: orient=vert and orient=horz
+			<p/>
+			<scrollbar pos=50 width=50% orient=horz/>
+			<scrollbar pos=50 height=50% orient=vert/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>page</xTd2>
+		<xTd3>
+			The size of a "page" for scrolling. This affects the knob size and how much
+			is scrolled when an arrow/page key is pressed.
+			<p/>
+			Example: page=50
+			<xBar page=50/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>pos</xTd2>
+		<xTd3>
+			Scroll bar position, from "min" to "max".
+			<p/>
+			<xBar pos=0/>
+			<xBar pos=25/>
+			<xBar pos=50/>
+			<xBar pos=75/>
+			<xBar pos=100/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>trackcolor</xTd2>
+		<xTd3>
+			The color of the track.
+			<p/>
+			Example: trackcolor=#80ffff
+			<p/>
+			<xBar trackcolor=#80ffff/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The scrollbar control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	Scrollbar controls don't have any control-specifc messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_SCROLL</xSectionTitle>
+
+<p>
+	This message is sent to the page when the scroll bar has finished scrolling, or
+	has only be scrolled in a one-off manner.
+</p>
+
+<p>
+	ESCNSCROLL structure:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarInt/>
+		<xTd2>iPos</xTd2>
+		<xTd3>
+			Contains the latest scroll position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMin</xTd2>
+		<xTd3>
+			Contains the scrollbar's minimum position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMax</xTd2>
+		<xTd3>
+			Contains the scrollbar's maximum position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iPage</xTd2>
+		<xTd3>
+			Contains the size of the scrollbar's page.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCN_SCROLLING</xSectionTitle>
+
+<p>
+	This message is sent to the page when the scroll bar is in the process of having
+	its knob being dragged around. Some applications may not want to redraw while
+	the knob is still moving.
+</p>
+
+<p>
+	ESCNSCROLLING structure:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarInt/>
+		<xTd2>iPos</xTd2>
+		<xTd3>
+			Contains the latest scroll position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMin</xTd2>
+		<xTd3>
+			Contains the scrollbar's minimum position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMax</xTd2>
+		<xTd3>
+			Contains the scrollbar's maximum position.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iPage</xTd2>
+		<xTd3>
+			Contains the size of the scrollbar's page.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+

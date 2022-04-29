@@ -1,0 +1,216 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Theory"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Theory
+</xPageTitle>
+
+<xSectionTitle>Paper</xSectionTitle>
+
+<p>
+	A number of years ago I noticed that paper made me more intelligent. There
+	were some thoughts and thought processes I could have only by drawing them on paper.
+	Let me explain:
+</p>
+
+<p>
+	For one, you can write information down on paper and store the paper away.
+	When you look at the paper many years later, the information is still there.
+	You may have forgotten details about what you've written down, or even that
+	you'd ever written anything down in the first place. The paper hasn't.
+	In that way, it effectively improves your memory, making you more intelligent.
+</p>
+
+<p>
+	Furthermore, paper allows you to do some tasks that you couldn't possibly
+	do without it. Have you ever tried to do long division in your head? How
+	about a calculus problem? Very few people can manage these in their head,
+	but once they have a piece of paper to scribble on, they're able
+	to tackle the problems. Again, you're more intelligent.
+</p>
+
+<p>
+	To change the analogy slightly, paper acts like a chemical catalyst. It doesn't
+	do any work by itself, it just makes the chemical reaction work better.
+</p>
+
+<p>
+	That's what I want to accomplish with my applications.
+</p>
+
+<xSectionTitle>Dragonfly's reason for existence</xSectionTitle>
+
+<p>
+	I have a terrible memory, especially for names and birthdays. And I really
+	hate worrying about whether or not I've forgotten to attend a meeting
+	that I signed up for.
+	The computer's memory is great and it's internal clock is infinitely more
+	accurate than mine.
+</p>
+
+<p>
+	Dragonfly allows the computer to assist my memory. Basically, it has the functionality
+	of a traditional PIM (personal information manager). It keeps track of meetings
+	and appointments, tasks, and other random reminders. If you just want a PIM you
+	can go download a dozen different PIMs from the Internet.
+</p>
+
+<p>
+	PIMs have a design flaw. They are designed to make sure people get to meetings on time
+	and don't forget tasks. They do not try to solve the more general problem that
+	people face... "I can't remember XYZ."
+</p>
+
+<p>
+	Dragonfly does, or at least attempts to solve it. It does this in several ways:
+</p>
+
+<xul>
+	<li>
+		<bold>Encourage data entry</bold> - Dragonfly encourages you to enter data into
+		it. Not only can you tell it about your meetings and tasks, but it will keep a
+		record of phone calls, thoughts you have, your goals, childhood memories,
+		Internet documents you've looked at, etc. If I could, I'd make Dragonfly remember
+		every piece of information that came your way, just in case you forgot it.
+		Unfortunately, computers aren't that powerful yet.
+	</li>
+	<li>
+		<bold>Dragonfly doesn't forget</bold> - Most PIMs not only remember relatively
+		little information, but they discard it a few months after it's out of date.
+		They do this because they erroneously believe that file sizes need to be small.
+		The fact is that hard drive sizes double every year. At Dragonfly's current
+		data-collection rate of about 10 megabytes per year, disk-space is a non-issue.
+		(If I started to save lots of images it might become a problem.) Most
+		hard drives today have 10+ gigabytes.
+	</li>
+	<li>
+		<bold>Search</bold> - With all that data stored on your machine, searching through
+		it becomes very important. Most PIMs are significantly lacking in search functionality.
+		Dragonfly lets you search through anything it's remembered with one simple
+		search user interface. This means that if you remember you had a meeting two years
+		ago with "Fred Smith" and need to know where, you'll be able to find it.
+	</li>
+	<li>
+		<bold>Password protect</bold> - Dragonfly encrypts the data you give it
+		(assuming you specify a password). While the encryption can be broken by a
+		motivated and skilled person, it's comforting to know that anyone that steals
+		your computer will have to do some brain-work to get at your personal history.
+	</li>
+</xul>
+
+<p>
+	Dragonfly also has a more subtle goal, to <bold>clarify your thinking process</bold>.
+	Once you collect reams of information about your life you can begin to analyze it,
+	just like you use your financial application to see where your money goes.
+	Where does your time go? Are you using it wisely? Are you accomplishing your goals
+	in life?
+</p>
+
+<p>
+	Dragonfly encourages you to analyze your life by providing:
+</p>
+
+<xul>
+	<li>
+		<bold>Daily wrap-up</bold> - Spend some time every day reviewing what
+		you accomplished during the day.
+	</li>
+	<li>
+		<bold>Goals</bold> - Dragonfly lets you type in your goals, people that
+		are important in your life, and other important mantras. It constantly reminds
+		you of these goals, lest you forget in the noise of daily life.
+	</li>
+	<li>
+		<bold>Memories</bold> - You are encouraged to write down your memories and thoughts.
+		And then several years later, go back and see them with a new light. You can
+		discover a lot about yourself by examining who you were.
+	</li>
+</xul>
+
+<p>
+	Dragonfly is a financial application that doesn't keep track of your money, but
+	your time and your memory. Hopefully the tool will let you use your time and
+	memory more wisely. Lost money can be re-earned. Lost time is simply gone.
+</p>
+
+
+<xSectionTitle>Handheld Devices</xSectionTitle>
+
+<p>
+	In a different vein of theory, I think that in the future (approximately 2010)
+	most people will be carrying around a handheld computing
+	device. That computing portion will store their schedule, phone book, journal,
+	play games, access the Internet, and basically anything your current desktop
+	can do. Only it will be more convenient because it will be in your pocket.
+	Furthermore, the device will have a built in mobile phone, digital
+	camera, radio, television, and maybe even a GPS.
+</p>
+
+<p>
+	The device may even supplant some desktops, since the only reason the handheld
+	won't be as good as a desktop is its small display area and tiny (to non-existent)
+	keyboard. (Of course, it's unlikely you'll be lugging a scanner or printer along
+	to connect to it.) Only those people that do lots of text entry or who need a large
+	display to complete their work will need a desktop. Everyone else will be perfectly
+	happy with their handheld.
+</p>
+
+<p>
+	None of this thinking is too revolutionary; you could build the system today with
+	a portable and some PCMCIA cards. The only problem is that it would weigh 5 kg,
+	cost $5000, and it definitely wouldn't fit in your pocket.
+</p>
+
+<p>
+	However, my thinking differs from conventional notions in one way. Most companies
+	are betting that this device will evolve from something like the Palm Pilot,
+	originally a single purpose device. They assume that over time the Palm Pilot's
+	(or equivalent) memory and storage will increase, allowing it to be more general
+	purpose. Even Microsoft seems to be going in this direction, promoting
+	Windows CE.
+</p>
+
+<p>
+	I think that the handheld machines will evolve from notebook computers. Over the
+	last decade notebook computers have gotten smaller, cheaper, and lighter.
+	You've even been able to buy sub-notebooks, which are notebook computers with
+	the floppy and CD-ROM in a separate package, along with a smaller keyboard
+	and monitor. Unfortunately, the sub-notebooks are a bit expensive today, mainly
+	because PC manufacturers are targeting them at high end users; they won't
+	sacrifice CPU speed, memory, storage, or screen quality to get the price point down.
+</p>
+
+<p>
+	The reason I'm making this bet is the same reason why Windows beat the Macintosh...
+	backwards compatibility. Realistically, the only difference between a Palm Pilot
+	and a notebook computer is the hard drive; the size of the monitor, keyboard,
+	and lack of floppy/CD-ROM have very little impact on software design and development. The
+	lack of a hard drive has <bold>significant</bold> implications. Dragonfly, for
+	one, would be impossible without a hard disk because it collects and stores
+	so much data. The same for most other desktop applications,
+	many of which would work well enough on a handheld if only there were more
+	storage. Ultimately, even the Palm Pilot will have a hard disk (or equivalent
+	data storage). At that point the question becomes: Do you run Palm Pilot's OS or
+	Windows? Backwards compatibility tends to win.
+</p>
+
+<p>
+	So what does this have to do with Dragonfly?
+</p>
+
+<p>
+	I expect Dragonfly will be most useful to those people that use their computer
+	all the time. And even more useful to those people with a portable that they
+	carry with them everywhere. Not many people lug around a notebook because it's
+	too bulky. But as I see it, it's only a matter of time (and evolution) before
+	sub-notebooks become the norm. Following those are handhelds with sub-notebook
+	functionality.
+</p>
+
+<p>
+	When you're carrying a light-weight and small handheld everywhere with you, you
+	might as well store all your personal information, history, and memories on
+	it. (Just make sure they're encrypted.) Hence, Dragonfly.
+</p>

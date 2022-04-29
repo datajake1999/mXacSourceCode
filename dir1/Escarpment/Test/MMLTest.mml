@@ -1,0 +1,200 @@
+<comment>
+	<colorblend lcolor=#8080ff rcolor=#80ffff posn=background/>
+</comment>
+<pageinfo title=Test/>
+<p>This is a test.<?Include resource=110?></p>
+<?Template resource=109?>
+<!supermacro><h1 MACROATTRIBUTE=1>Super macor header</h1><p><?MacroContent?></p><h1 align=right>End of super macro</h1></supermacro>
+<h1>This is the first header</h1>
+<p><combobox>
+   <elem name=one data=1>This is list element <bold>One</bold></elem>
+   <elem name=two data=2>Element <big>Two</big></elem>
+   <elem name=three data=3><big><big>Three</big></big></elem>
+   <elem name=four data=4>Element <big>Four</big></elem>
+   <elem name=five data=5>Element <big>Five</big></elem>
+   <elem name=six data=6>Element <image jpgresource=101 width=30% height=20% type=stretchtofit/> <big>Six</big></elem>
+   <elem name=seven data=7>Element <big>Seven</big></elem>
+   <elem name=eight data=8>Element <big>Eight</big></elem>
+   <elem name=nine data=9>Element <big>Nine</big></elem>
+</combobox></p>
+<comment>
+<p><menu>
+   <menutext>Hello</menutext>
+   <menucontents>
+      <colorblend lcolor=#00ff00 rcolor=#0000ff posn=background/>
+      <button href=1>One</button><br/>
+      <button href=2>Two</button><br/>
+      <button href=3>Three</button><br/>
+      <menu appear=right>
+         <menutext>Sub menu</menutext>
+         <menucontents>
+            <colorblend lcolor=#00ff00 rcolor=#0000ff posn=background/>
+            <button href=1>A</button><br/>
+            <button href=2>B</button><br/>
+            <button href=3>C</button><br/>
+            <button href=4>D</button><br/>
+            <button href=5>E</button><br/>
+            <button href=6>F</button>
+         </menucontents>
+      </menu><br/>
+      <button href=4>Four</button><br/>
+      <button href=5>Five</button><br/>
+      <button href=6>Six</button>
+   </menucontents>
+</menu></p>
+</comment>
+<comment>
+<p>
+   <listbox vscroll=vlist sort=yes height=20%>
+      <elem name=one data=1>This is list element <bold>One</bold></elem>
+      <elem name=two data=2>Element <big>Two</big></elem>
+      <elem name=three data=3><big><big>Three</big></big></elem>
+      <elem name=four data=4>Element <big>Four</big></elem>
+      <elem name=five data=5>Element <big>Five</big></elem>
+      <elem name=six data=6>Element <image jpgresource=101 width=30% height=20% type=stretchtofit/> <big>Six</big></elem>
+      <elem name=seven data=7>Element <big>Seven</big></elem>
+      <elem name=eight data=8>Element <big>Eight</big></elem>
+      <elem name=nine data=9>Element <big>Nine</big></elem>
+   </listbox>
+   <scrollbar name=vlist height=20% orient=vert/>
+</p>
+</comment>
+<comment>
+<p>
+   <comment><image jpgresource=101 width=30% height=20% posn=inlinecenter- type=stretchtofit/></comment>
+   <big><edit width=30% height=20% capturetab=yes prelineindent=yes vscroll=vedit hscroll=hedit wordwrap=yes multiline=true text="hello, this is a test!
+line1
+	l	i	n	e2
+	line3
+line4
+All work and no play makes jack a dull boy.
+All work and no play makes jack a dull boy.
+All work and no play makes jack a dull boy.
+All work and no play makes jack a dull boy.
+All work and no play makes jack a dull boy.
+
+What do you think?"/></big>
+   <scrollbar name=vedit height=20% orient=vert/>
+</p>
+<scrollbar name=hedit width=30% orient=horz/>
+<p><big><edit multiline=false maxchars=20 wordwrap=false/></big></p>
+</comment>
+<comment>
+<p><progressbar pos=50 name=p1 width=80% orient=horz/><progressbar pos=50 name=p2 height=30% orient=vert/></p>
+<p><scrollbar width=30% orient=horz/></p>
+</comment>
+<comment>
+<p><ThreeD width=30% height=30% ScrollRotX=x ScrollRotY=y ScrollRotZ=Z ScrollDistance=dist timerinterval=125>
+   <RotateYTime from=0 to=360 interval=20/>
+   <id val=42/><ShapeDeepArrow/>
+</ThreeD>
+<scrollbar name=x height=30% orient=vert/>XRot</p>
+<p><scrollbar name=y width=30% orient=horz/>YRot</p>
+<p><scrollbar name=z width=30% orient=horz/>ZRot</p>
+<p><scrollbar name=dist width=30% orient=horz/>Distance</p>
+</comment>
+<p>This is a test.</p>
+<p><status width=20% height=5% name=status><colorblend lcolor=#00ff00 rcolor=#0000ff posn=background/>Hello there!</status></p>
+<p><button style=beveled buttonwidth=32 name=1 group=1,2,3,4 radiobutton=true>One</button></p>
+<p><button style=righttrianglebuttonheight=32 name=2 group=1,2,3,4 radiobutton=true>Two</button></p>
+<p><button style=light buttonheight=32 buttonwidth=32 name=3 group=1,2,3,4 radiobutton=true>Three</button></p>
+<p><button style=teapot buttonheight=32 buttonwidth=32 name=4 group=1,2,3,4 radiobutton=true>Four</button></p>
+<p><button><p><big>Hello!</big></p>This is a new line.</button></p>
+<p><button name=hello style=light><p><big>Hello!</big></p>This is a new line.</button></p>
+<supermacro align=center>This is the content stream of the supermacor.<br/>And another line!<br/>And another!</supermacro>
+<h1 align=right>This is the second header</h1>
+<p><button name=up style=toggle>Up</button></p>
+<p><button name=left style=leftarrow>Left</button></p>
+<p><button name=down style=downarrow>Down</button></p>
+<p>This is a test.</p>
+<p>This is a test.</p>
+<p>This is a test.</p>
+<p align=center><hr width=80% style=star4 height=50/></p>
+<p align=center><hr width=80% style=doubleline/></p>
+<p align=center><hr width=80% style=star4/></p>
+<p align=center><hr width=80% style=star3/></p>
+<p align=center><hr width=80% style=wave/></p>
+<p align=center><hr width=80% style=S/></p>
+<p align=center><hr width=80% style=3d/></p>
+<p align=center><hr width=80% style=line/></p>
+<p align=center><hr width=80% style=star1/></p>
+<p align=center><hr width=80% style=star2/></p>
+<p>This is a test.<?Include resource=110?></p>
+<p>This is a test.</p>
+<p>This is a test.</p>
+<p>This is a test.</p>
+<p>This is a test.</p>
+<ul type=checkbox color=#0000ff>
+<li>Item 
+<image href="mailto:MikeRozak@bigpond.com" accel=alt-Q jpgresource=101 scale=50% transparent=yes/>
+one</li>
+<p>This is a subparagraph. This is a <a href=hi>subparagraph</a>. This is a subparagraph. This is a subparagraph. This is a subparagraph.</p>
+<colorblend href="test2" accel=alt-s color=#ffffff width=10% height=20/>
+<li>item two</li>
+<ol><li>Sublist</li><li>Sublist</li><li>Sublist</li></ol>
+<li>item 3</li>
+<li>item 6</li>
+</ul>
+<p>This <bold>is</bold> a <bold><strike>test</strike></bold>.
+    This <highlight color=#ff0000>is</highlight> a test.
+    This <u>is</u> a test.</p>
+<p align=center><font color=#ffffff><table lrmargin=20 tbmargin = 5 bordercolor=#000080 border=5 innerlines=2>
+<colorblend color=0x00ffff ulcolor=#00ff00 lrcolor=#0000ff posn=background/>
+    <tr>
+       <td width=20% height=20%>
+<a href=link>Hello!</a></td>
+       <td width=20% align=center valign=middle><big>Pane 2
+</big></td>
+       <td width=60% align=center valign=middle>
+<colorblend tcolor=#00ffff bcolor=#004080 posn=background/>
+<image bmpresource=102 type=tile posn=background transparent=yes/>
+<font color=#ff0000>Pane 3
+<table width=50%><tr><td bgcolor=#8080ff>This is the first column!!!!</td><td>This is the second column!!!</td></tr></table>
+</font></td>
+    </tr>
+    <tr>
+       <td width=20%>The next line.</td>
+       <td width=20%><big>Lots of text goes here to cause a wrap.</big></td>
+       <td width=60%><u>And more</u></td>
+    </tr>
+</table></font></p>
+<p>1<sup>2<sup>3</sup></sup>4567890</p>
+<p>12<sub>3<sub>4</sub></sub>56789</p>
+<table width=250>
+    <tr>
+       <td width=20%><big>Side 1</big></td>
+    </tr>
+    <tr>
+       <td width=80%><p>Hello. All work and no play makes jac ka dull boy</p><p>Hello. All work and no play makes jacka dull boy</p><p>Hello. All work and no play makes jacka dull boy</p></td>
+    </tr>
+</table>
+<p>MMMMMMMM</p>
+<p>M<big>M<big>M<big>M<big>M<big>M<big>M<big>M</big></big></big></big></big></big></big></p>
+<p>M<small>M<small>M<small>M<small>M<small>M<small>M<small>M</small></small></small></small></small></small></small></p>
+<p><font size=24 color=#ff0000><blockquote>
+This is a test.
+    This is a test.
+<h1>This is the third header</h1>
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+</blockquote></font></p>
+<p align="center">
+    This is a test.
+</p>
+<p><font color=#0000ff face="courier new" size=16>
+    This &#x63;is a &lt;test&gt;.
+    This is a test.
+    This is a test.
+    This is a test.<?Include resource=110?>
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+    This is a test.
+</font></p>
+<unktag>Hello</unktag>

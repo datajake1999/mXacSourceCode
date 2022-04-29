@@ -1,0 +1,89 @@
+<pageinfo title="HR - Horizontal Line Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>HR - Horizontal Line Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The horizontal line control draws a horizontal line to separate two sections of text.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<!xhr>
+	<hr width=100% MACROATTRIBUTE=1/><p/>
+</xhr>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the line.
+			<p/>
+			Examples:
+			<p/>
+			color=#ff0000
+			<br/>
+			<xhr color=#ff0000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			Specifies the style of the line.
+			<p/>
+			Examples:
+			<p/>
+			style=doubleline<br/>
+			<xhr style=doubleline/>
+			style=line<br/>
+			<xhr style=line/>
+			style=s<br/>
+			<xhr style=s/>
+			style=star1<br/>
+			<xhr style=star1/>
+			style=star2<br/>
+			<xhr style=star2/>
+			style=star3<br/>
+			<xhr style=star3/>
+			style=star4<br/>
+			<xhr style=star4/>
+			style=wave<br/>
+			<xhr style=wave/>
+			style=3d<br/>
+			<xhr style=3d/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The horizontal line control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	The horizontal line control doesn't have any control-specific messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	The horizontal line control doesn't have any control-specific notifications.
+</p>
+
+

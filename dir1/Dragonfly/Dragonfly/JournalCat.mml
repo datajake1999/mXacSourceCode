@@ -1,0 +1,70 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Journal category" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	<<<CATEGORYNAME>>>
+</xPageTitle>
+
+<xChoiceButton name=add>
+	<bold>Add a new entry</bold>
+	<br/>
+	Adds a new entry in the <<<CATEGORYNAME>>> category.
+</xChoiceButton>
+
+<xChoiceButton name=import>
+	<bold>Add a photo</bold>
+	<br/>
+	Adds one or more photos/images into the journal. The images need to be JPEG (.jpeg)
+	or bitmap (.bmp) and already saved onto your hard drive by your scanner or digital
+	camera software.
+</xChoiceButton>
+
+<xChoiceButton name=timer>
+	<bold>Start a billing or work timer</bold>
+	<br/>
+	Press this if you're starting work for the day on a task and want it logged in this
+	journal category for billing or records purposes. A link will appear just below
+	the main Dragonfly menu; click that when you stop working on the task to log
+	the work into your journal.
+</xChoiceButton>
+
+<xChoiceButton name=copy9>
+	<bold>Copy entry durations to the clipboard</bold>
+	<br/>
+	This copies a history of journal entry durations (in hours) to your clipboard.
+	Just paste the text into your spreadsheet and graph it.
+	If you're doing consulting work you can use this to calculate a monthly bill
+	for your clients.
+</xChoiceButton>
+
+
+<null>
+	<<<$GRAPHBUTTONS>>>
+</null>
+
+<xChoiceButton name=remove>
+	<bold>Remove an entry</bold>
+	<br/>
+	Remove an entry from the journal category.
+</xChoiceButton>
+
+<xbr/>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<p align=right><big><big>
+	<date name=date enterday=false year=-1 month=-1 day=30 blank="Show all dates" width=33%/>
+</big></big></p>
+
+
+<xTableCenter>
+	<xtheader>Journal entries</xtheader>
+	<<<$LOG>>>
+</xtablecenter>
+

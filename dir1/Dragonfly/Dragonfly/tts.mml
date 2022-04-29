@@ -1,0 +1,42 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Text-to-speech"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Text-to-speech
+</xPageTitle>
+
+<p>
+	Dragonfly will use speech synthesis to read out important prompts if
+	you have a SAPI 4.0 (Speech API) compliant text to speech engine installed.
+	The speech isn't necessary but it does improve the user interface.
+</p>
+
+<p>
+	If you have Windows NT 5.0 you'll already have text-to-speech installed and don't
+	have to do anything. However, if you have Windows 95/98/ME or Windows NT 4.0
+	you'll need to install text-to-speech.
+</p>
+
+
+<p>
+	Microsoft's is now distributing SAPI 5 in a 100MB+ download, which is a bit too
+	large for my tastes, so I still have the old SAPI 4 installs on my
+	web site. To install text to speech:
+</p>
+
+<ol>
+	<li>
+		Install the <a href="http://www.users.bigpond.com/MikeRozak/sp/spchapi.exe">speech API components</a> from
+		the internet, about 800K, by clicking here..
+	</li>
+	<li>
+		Install the <a href="http://www.users.bigpond.com/MikeRozak/sp/msttsf22l.exe">female voice</a> from
+		the internet, about 2300K, by clicking here..
+	</li>
+	<li>
+		Shut down and restart Dragonfly.
+	</li>
+</ol>
+

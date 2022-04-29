@@ -1,0 +1,122 @@
+<pageinfo title="MML Editor"/>
+
+<!xMenuButton>
+   <button showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <?MACROCONTENT?>
+   </button><br/>
+</xMenuButton>
+
+<!xMenuSeperator>
+   <hr width=15%/><br/>
+</xMenuSeperator>
+
+<!xMenuText>
+   <menutext>
+      <colorblend color=#8080ff posn=background/>
+      <?MACROCONTENT?>
+   </menutext>
+</xMenuText>
+
+<!xMenuContents>
+   <menucontents>
+      <pageinfo lrmargin=0 tbmargin=0/>
+      <colorblend tcolor=#8080ff bcolor=#6060d0 posn=background/>
+      <?MACROCONTENT?>
+   </menucontents>
+</xMenuContents>
+
+<menu accel=alt-f>
+   <xMenutext>
+      <u>F</u>ile
+   </xMenutext>
+   <xMenucontents>
+      <xMenuButton accel=n href=new><u>N</u>ew</xMenuButton>
+      <xMenuButton accel=o href=open><u>O</u>pen...</xMenuButton>
+      <xMenuButton accel=s href=save><u>S</u>ave</xMenuButton>
+      <xMenuButton accel=a href=saveas>Save <u>A</u>s...</xMenuButton>
+      <xMenuSeperator/>
+      <xMenuButton accel=x href=exit>E<u>x</u>it</xMenuButton>
+   </xMenucontents>
+</menu>
+<menu accel=alt-e>
+   <xMenutext>
+      <u>E</u>dit
+   </xMenutext>
+   <xMenucontents>
+      <xMenuButton accel=u href=undo><u>U</u>ndo</xMenuButton>
+      <xMenuButton accel=r href=redo><u>R</u>edo</xMenuButton>
+      <xMenuSeperator/>
+      <xMenuButton accel=t href=cut>Cu<u>t</u></xMenuButton>
+      <xMenuButton accel=c href=copy><u>C</u>opy</xMenuButton>
+      <xMenuButton accel=p href=paste><u>P</u>aste</xMenuButton>
+      <xMenuButton accel=a href=selectall>Select <u>A</u>ll</xMenuButton>
+   </xMenucontents>
+</menu>
+<menu accel=alt-m>
+   <xMenutext>
+      <u>M</u>ML
+   </xMenutext>
+   <xMenucontents>
+      <xMenuButton accel=t href=test><u>T</u>est</xMenuButton>
+   </xMenucontents>
+</menu>
+<menu accel=alt-o>
+   <xMenutext>
+      <u>O</u>ptions
+   </xMenutext>
+   <xMenucontents>
+      <xMenuButton accel=w href=appearance><u>W</u>indow appearance...</xMenuButton>
+      <xMenuSeperator/>
+      <xMenuButton accel=m href=MMLres><u>M</u>ML resources...</xMenuButton>
+      <xMenuButton accel=j href=JPEGres><u>J</u>Peg resources...</xMenuButton>
+      <xMenuButton accel=b href=Bitmapres><u>B</u>itmap resources...</xMenuButton>
+      <xMenuButton accel=s href=sub><u>S</u>ubstitutions...</xMenuButton>
+   </xMenucontents>
+</menu>
+<menu accel=alt-h>
+   <xMenutext>
+      <u>H</u>elp
+   </xMenutext>
+   <xMenucontents>
+      <xMenuButton accel=h href=help><u>H</u>elp...</xMenuButton>
+      <xMenuButton accel=a href=about><u>A</u>bout MML Edit</xMenuButton>
+   </xMenucontents>
+</menu>
+
+<br/>
+<p> </p>
+
+<stretchstart/>
+<font face="courier new"><small>
+	<p tab=16 align=center parlinespacing=0>
+		<table width=95% lrmargin=0 tbmargin=0 border=0 innerlines=0>
+			<tr>
+				<td width=100%>
+					<edit name=mml width=100% height=200 capturetab=yes prelineindent=yes vscroll=vedit wordwrap=no multiline=true/>
+				</td>
+				<td width=24>
+					<scrollbar name=vedit width=24 height=200 orient=vert/>
+				</td>
+			</tr>
+		</table>
+	</p>
+<stretchstop/>
+<br/>
+
+	<p tab=16 align=center parlinespacing=0>
+		<table width=95% lrmargin=0 tbmargin=0 border=0 innerlines=0 valign=center>
+			<tr>
+				<td width=75%>
+					<edit name=searchstring width=100% wordwrap=no multiline=no/>
+				</td>
+				<td width=25%>
+					<align align=right><button href=search>Search</button></align>
+				</td>
+			</tr>
+		</table>
+	</p>
+
+<br>Last reported error message:</br>
+<status name=status width=100% height=5%/>
+</small></font>
+

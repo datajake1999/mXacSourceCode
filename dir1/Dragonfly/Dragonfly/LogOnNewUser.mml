@@ -1,0 +1,124 @@
+<<<$TEMPLATE2>>>
+<?Include resource=201?>
+<PageInfo index=false title="Create a new user"/>
+
+<xPageTitle>
+	Create a new user
+</xPageTitle>
+
+<p>
+	To create a new user account, Dragonfly needs a get pieces of information from you:
+</p>
+
+<xtablecenter>
+<xtrheader>
+	Your name
+</xtrheader>
+<tr><td>
+<p>
+	Please <bold>type in your name</bold> as you most commonly write it:
+</p>
+
+<xeditoneline name=name text="Type in your name here" maxchars=48 defcontrol=true/>
+</td></tr>
+</xtablecenter>
+
+<xtablecenter>
+<xtrheader>
+	Where the files are written
+</xtrheader>
+<tr><td>
+
+<p>
+	Type in the <bold>directory where you want Dragonfly to save its files</bold>.
+	Dragonfly remembers large amounts of information; its
+	files <bold>can become large</bold>, up to 100 MB.
+</p>
+
+<p>
+	Because the directory name is automatically generated, you can leave the
+	edit field as is.
+</p>
+
+<xeditoneline name=directory/>
+</td></tr>
+</xtablecenter>
+
+
+<xtablecenter>
+<xtrheader>
+	Password
+</xtrheader>
+<tr><td>
+
+<p>
+	You can password protect your Dragonfly files so that if someone steals your
+	computer they will find it difficult to get at your data.
+	Password protections has its downsides though:
+</p>
+
+<font color=#800000><xul>
+	<li>
+		While the Dragonfly files are encrypted, <bold>a determined and knowledgeable
+		person can eventually break the password.</bold> The longer and less obvious
+		your password, the better the protection.
+	</li>
+	<li>
+		<bold>If you forget your password, you're out of luck.</bold> I won't be able to
+		help you recover it.
+	</li>
+	<li>
+		If your password-protected Dragonfly files become corrupted (such as
+		if the power fails while they are being saved) you may not be able to
+		recover the
+		data. <bold>If you password protect your data make sure to back it up once in awhile.</bold>
+	</li>
+</xul></font>
+
+<p>
+	You also have the option of leaving the password entry blank. No data encryption
+	will be used then.
+</p>
+
+<p>
+	Please type in your <bold>password</bold> (or leave it blank):
+</p>
+<xeditoneline name=password1 maxchars=32 password=true/>
+
+<p>
+	<bold>Type it in again</bold> (or leave it blank) to make sure you didn't make any typing errors:
+</p>
+<xeditoneline name=password2 maxchars=32 password=true/>
+</td></tr>
+</xtablecenter>
+
+<xSectionTitle>
+	That's it
+</xSectionTitle>
+
+<p>
+	<bold>Press "Create a new user"</bold> to continue, or "Back" to quit.
+</p>
+
+<bold><table width=100% border=0 innerlines=0>
+	<tr>
+		<td width=50% align=left>
+			<button style=leftarrow href=back>
+				Back
+				<xHoverHelpShort>
+					Go back to the previous page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+		<td width=50% align=right>
+			<button style=rightarrow href=next>
+				Create a new user
+				<xHoverHelp>
+					Press this to create a new user.
+					Make sure you've typed in your name and password first.
+				</xHoverHelp>
+			</button>
+		</td>
+	</tr>
+</table></bold>
+

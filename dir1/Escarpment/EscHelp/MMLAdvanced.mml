@@ -1,0 +1,1020 @@
+<pageinfo title="MML Tags"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>MML Tags</xPageTitle>
+
+
+
+<xSectionTitle>&lt;a&gt; - Link or Definition</xSectionTitle>
+
+<p>
+	Just like HTML, this defines a link. The link is displayed as underlined and blue. If the user clicks on
+	the link it will take them to the location specified by "href". If no href
+	is specified then the text becomes a definition and will not be underlined.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the link. The color defaults to blue.
+			<p/>
+			<p>Examples:</p>
+			<p><a color=#ff0000 href="http://www.mxac.com.au">&lt;a color=#ff0000 href="http://www.mxac.com.au"&gt;</a></p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			Specifies where the link goes to.
+			<p/>
+			If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web.
+			If it begins with "#" then it will jump to the specified section
+			within the page.
+			Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			<p>Examples:</p>
+			<p><a href="http://www.mxac.com.au">&lt;a href="http://www.mxac.com.au"&gt;</a></p>
+			<p><a href="#&lt;Section&gt;">&lt;a href="#&amp;lt;Section&amp;gt;"&gt;</a></p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>name</xTd2>
+		<xTd3>
+			The HTML functionality of &lt;a name=xxx&gt; is <bold>not</bold> supported in
+			&lt;a&gt;. See <a href="#&lt;Section&gt;">&lt;Section&gt;</a> for equivalent functionality.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<p>
+	Links and definitions may have a "HoverHelp" content tag that specified some sort
+	or help text or definition that's to be displayed when the mouse hovers over the link
+	or when the user presses F1. If a link does not contain a "href" then it should
+	contain a "HoverHelp" section so the user can see a definition.
+</p>
+
+<p>
+	The &lt;HoverHelp&gt; tag may contain other formatting tags.
+	If you use "hresize=true" in the attributes then the horizontal width
+	is set to the text with; only use this if your text is short.
+</p>
+
+<p>
+	Example: <a>Hover over me<HoverHelp hresize=true>This is help.</hoverhelp></a>
+</p>
+
+<xCode>
+	&lt;a&gt;<br/>
+		&tab;Hover over me<br/>
+		&tab;&lt;HoverHelp hresize=true&gt;This is help.&lt;/HoverHelp&gt;<br/>
+	&lt;/a&gt;<br/>
+</xCode>
+
+
+<xSectionTitle>&lt;align&gt;</xSectionTitle>
+
+<p>
+	Affects the alignment and spacing of the text. See below:
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>align</xTd2>
+		<xTd3>
+			This controls the horizontal alignment ot the text. It can be "left", "center", or "right". If the attribute is
+			not specified alignment for the text is not changed.
+			<p/>
+			<p>Examples:</p>
+			<xCodeInline><p align=left>&lt;align align=left&gt;</p></xCodeInline>
+			<xCodeInline><p align=center>&lt;align align=center&gt;</p></xCodeInline>
+			<xCodeInline><p align=right>&lt;align align=right&gt;</p></xCodeInline>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>parindent</xTd2>
+		<xTd3>
+			Specifies the number of pixels to indent the beginning of each paragraph.
+			If not specified, the indent amount is left unchanged.
+			<p/>
+			<p>Examples:</p>
+			<p parindent=0>
+				This is a paragraph with no indent. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+			<p parindent=32>
+				This is a paragraph with parindent=32. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumberOrPercent/>
+		<xTd2>parlinespacing</xTd2>
+		<xTd3>
+			Specifies the spacing between paragraphs. If the value is a percentage it's sets the spacing for
+			paragraph lines to a percentage of the text height. If it's a number, it uses that many pixels.
+			If not specified, the spacing amount is left unchanged.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>rightindent</xTd2>
+		<xTd3>
+			Specifies the number of pixels to indent the right side of each paragraph.
+			If not specified, the indent amount is left unchanged.
+			<p/>
+			<p>Examples:</p>
+			<p rightindent=0>
+				This is a paragraph with no indent. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+			<p rightindent=32>
+				This is a paragraph with rightindent=32. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>tab</xTd2>
+		<xTd3>
+			Specifies the number of pixels to be used for a tab. If not specified, the tab amount is left unchanged.
+			<p/>
+			<p>Examples:</p>
+			<xCodeInline><p>No tab</p></xCodeInline>
+			<xCodeInline><p tab=16>&tab;&lt;align tab=16&gt;</p></xCodeInline>
+			<xCodeInline><p tab=32>&tab;&lt;align tab=32&gt;</p></xCodeInline>
+			<xCodeInline><p tab=64>&tab;&lt;align tab=64&gt;</p></xCodeInline>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>wrapindent</xTd2>
+		<xTd3>
+			Specifies the number of pixels to indent wrapped lines of each paragraph.
+			If not specified, the indent amount is left unchanged.
+			<p/>
+			<p>Examples:</p>
+			<p wrapindent=0>
+				This is a paragraph with no indent. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+			<p wrapindent=32>
+				This is a paragraph with wrapindent=32. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+				Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumberOrPercent/>
+		<xTd2>wraplinespacing</xTd2>
+		<xTd3>
+			Specifies the spacing between lines within a paragraph. If the value is a percentage it's sets the spacing for
+			intra-paragraph lines to a percentage of the text height. If it's a number, it uses that many pixels.
+			If not specified, the spacing amount is left unchanged.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+<xSectionTitle>&lt;big&gt;</xSectionTitle>
+
+<p>
+	Makes the text about 30% larger. You can combine several calls to &lt;big&gt; together.
+	&lt;big&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Eamples:
+</p>
+
+<p>
+	<big>&lt;big&gt;Hello world!&lt;/big&gt;</big><br/>
+	<big><big>&lt;big&gt;&lt;big&gt;Hello world!&lt;/big&gt;&lt;/big&gt;</big></big><br/>
+</p>
+
+
+
+
+
+
+<xSectionTitle>&lt;blockquote&gt;</xSectionTitle>
+
+<p>
+	Indents the text on the left and right.
+	&lt;blockquote&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<blockquote><p>
+	This is a paragraph using &lt;blockquote&gt;. Blah blah blah blah. Blah blah blah blah.
+	Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+	Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
+</p></blockquote>
+
+
+
+
+
+
+<xSectionTitle>&lt;bold&gt; or &lt;strong&gt;</xSectionTitle>
+
+<p>
+	Boldfaces the text.
+	&lt;bold&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <bold>bold</bold> text.<br/>
+	<xCodeInline>This is &lt;bold&gt;bold&lt;/bold&gt; text.</xCodeInline>
+</p>
+
+
+<xSectionTitle>&lt;br/&gt; - Line break</xSectionTitle>
+
+<p>
+	Inserts a line break into text within a paragraph (&lt;p&gt;). Line-break has no attributes.
+</p>
+
+
+
+
+<xSectionTitle>&lt;comment&gt;</xSectionTitle>
+
+<p>
+	The text within the comment tag is not displayed and not searched for indexing.
+</p>
+
+
+
+<xSectionTitle>&lt;CONTROL&gt;</xSectionTitle>
+
+<p>
+	You can create a control (such as a button) in your MML document by including a tag named after the control,
+	such as <xCodeInline>&lt;Button&gt;</xCodeInline> or <xCodeInline>&lt;Scrollbar&gt;</xCodeInline>.
+	For a complete list of standard controls click <a href=r:115>here</a>.
+</p>
+
+
+
+
+<xSectionTitle>&lt;font&gt;</xSectionTitle>
+
+<p>
+	Changes the font or font color for the text within the tag.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the font. It not set, the color is left the same.
+			<p/>
+			<p>Examples:</p>
+			<p><font color=#ff0000>&lt;font color=#ff0000&gt;</font></p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>face</xTd2>
+		<xTd3>
+			The font face to change to. If this is not specified the font face is not changed.
+			<p/>
+			<p>Examples:</p>
+			<p><font face="Courier New">&lt;font face="Courier New"&gt;</font></p>
+			<p><font face="Times New Roman">&lt;font face="Times New Roman"&gt;</font></p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>size</xTd2>
+		<xTd3>
+			Sets the font to the specified point size. In general, if you want to change the font size you
+			should use <xCodeInline>&lt;big&gt;</xCodeInline> or <xCodeInline>&lt;small&gt;</xCodeInline>.
+			<p/>
+			<p>Examples:</p>
+			<p><font size=8>&lt;font size=8&gt;</font></p>
+			<p><font size=24>&lt;font size=24&gt;</font></p>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;highlight&gt;</xSectionTitle>
+
+<p>
+	Highlights the text.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <highlight>highlighted</highlight> text.<br/>
+	<xCodeInline>This is &lt;highlight&gt;highlighted&lt;/highlight&gt; text.</xCodeInline>
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the highlight. The default color is yellow.
+			<p/>
+			<p>Examples:</p>
+			<p><highlight color=#ff0000>&lt;highlight color=#ff0000&gt;</highlight></p>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt;</xSectionTitle>
+
+<p>
+	I haven't included these because very few people use them in real HTML.
+	You might want to define your own macros for &lt;h1&gt;, etc.
+</p>
+
+
+
+
+<xSectionTitle>&lt;italic&gt; or &lt;em&gt;</xSectionTitle>
+
+<p>
+	Italicisizes the text.
+	&lt;italic&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <italic>italicized</italic> text.<br/>
+	<xCodeInline>This is &lt;italic&gt;italicized&lt;/italic&gt; text.</xCodeInline>
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;keyword&gt;</xSectionTitle>
+
+<p>
+	This is used by CEscSearch::Index() and has no visual effects.
+	The tag either defines some important keywords for the search
+	(kind of like defining an index entry) or it specifies how important
+	the text within the contents of &lt;keyword&gt; are for searching.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>words</xTd2>
+		<xTd3>
+			This is a list of keywords separated by spaces. These words will be
+			included as keywords for the document/section by CEscSearch::Index()
+			even though they may not appear in the text.
+			<p/>
+			For example: If you had a document talking about "Echidnas" and
+			wanted the user to be able to find the document using a
+			search for the words "montreme" or "marsupial", but you didn't mention
+			them in the text, then you'd add:
+			<p/>
+			<xCodeInline>&lt;Keyword words="monotreme marsupial"&gt;</xCodeInline>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>score</xTd2>
+		<xTd3>
+			Sets the word score for any words used in the "words" attribute
+			or within the tag's contents. This value can range from 0 (ignore for search)
+			to 255 (very important). It defaults to 32 for standard text.
+			I use 96 for a section header, and 128 for a page header. You can use
+			whatever values you choose.
+			<p/>
+			If a document/section contains keywords with a higher score than normal then
+			it will have a higher ranking when CEscSearch::Search() is called.
+			<p/>
+			For example: Your headers might look like this:
+			<p/>
+			<xCodeInline>&lt;Keyword score=96&gt;&lt;big&gt;This is a header&lt;/big&gt;&lt;/Keyword&gt;</xCodeInline>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;null&gt;</xSectionTitle>
+
+<p>
+	This doesn't affect the display in any way. You probably won't need it.
+</p>
+
+
+
+<xSectionTitle>&lt;ol&gt; - Ordered list</xSectionTitle>
+
+<p>
+	"Ol" displays a numbered list. &lt;ol&gt; must contain subtags of type &lt;li&gt; (list item.) Each of these
+	subtags is displayed on its own line with a number at the beginning.
+</p>
+
+<p>
+	Eample:
+</p>
+
+<ol>
+	<li>Item one</li>
+	<li>Item two</li>
+	<li>Item three</li>
+</ol>
+
+<xCode>
+	&lt;ol&gt;<br/>
+		&tab;&lt;li&gt;Item one&lt;/li&gt;<br/>
+		&tab;&lt;li&gt;Item two&lt;/li&gt;<br/>
+		&tab;&lt;li&gt;Item three&lt;/li&gt;<br/>
+	&lt;/ol&gt;<br/>
+</xCode>
+<p> </p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the numbers.
+			<p/>
+			Example: <xCodeInline>&lt;ol color=#ff0000&gt;</xCodeInline>
+			<p/>
+			<ol color=#ff0000>
+				<li>Item one</li>
+				<li>Item two</li>
+			</ol>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>textafter</xTd2>
+		<xTd3>
+			Specifies what atext ppears after the number.
+			<p/>
+			Example: <xCodeInline>&lt;ol textafter=")"&gt;</xCodeInline>
+			<p/>
+			<ol textafter=")">
+				<li>Item one</li>
+				<li>Item two</li>
+			</ol>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>textprior</xTd2>
+		<xTd3>
+			Specifies what text appears before the number.
+			<p/>
+			Example: <xCodeInline>&lt;ol textprior="i"&gt;</xCodeInline>
+			<p/>
+			<ol textprior="i">
+				<li>Item one</li>
+				<li>Item two</li>
+			</ol>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>type</xTd2>
+		<xTd3>
+			Lets you use letters or Roman numerals. This can be "1", "a", "A", "i", or "I". "1" is the default
+			and displays a numberical list. "a" and "A" display lettered lists. "i" and "I" display roman-numeral
+			lists.
+			<p/>
+			Example: <xCodeInline>&lt;ol type="A")"&gt;</xCodeInline>
+			<p/>
+			<ol type="A">
+				<li>Item one</li>
+				<li>Item two</li>
+			</ol>
+			<p/>
+			Example: <xCodeInline>&lt;ol type="i")"&gt;</xCodeInline>
+			<p/>
+			<ol type="i">
+				<li>Item one</li>
+				<li>Item two</li>
+			</ol>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;p&gt; - Paragraph</xSectionTitle>
+
+<p>
+	Paragraphs are the primary way the applications display text. The paragraph tag displays it's contents and
+	appends a new-line to the end. Almost all text within this page is displayed using 
+	<xCodeInline>&lt;p&gt;.</xCodeInline>
+</p>
+
+<p>
+	Paragraphs have the same attributes as align.
+</p>
+
+
+
+<xSectionTitle>&lt;pageinfo&gt;</xSectionTitle>
+
+<p>
+	Proivides from display information for the page.This can appear anywhere in the MML text.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>BottomMargin</xTd2>
+		<xTd3>
+			The size of the page's bottom margin in pixels.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBOOL/>
+		<xTd2>Index</xTd2>
+		<xTd3>
+			If FALSE, then automatic indexing done by CEscSearch::Index() will
+			skip this document. Defaults to TRUE.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>LeftMargin</xTd2>
+		<xTd3>
+			The size of the page's left margin in pixels.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>LRMargin</xTd2>
+		<xTd3>
+			The size of the page's left/right margin in pixels.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>RightMargin</xTd2>
+		<xTd3>
+			The size of the page's right margin in pixels.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>TBMargin</xTd2>
+		<xTd3>
+			The size of the page's top/bottom margin in pixels.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>Title</xTd2>
+		<xTd3>
+			Title of the page. This is used to set the CEscWindow title and also for indexing purposes.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>TopMargin</xTd2>
+		<xTd3>
+			The size of the page's top margin in pixels.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;Section&gt;</xSectionTitle>
+
+<p>
+	This defines the start of a section in an MML document. It's similar in concept to
+	a HTML bookmark, but improved. An application can jump to a section by using
+	CEscPage::VScrollToSection(), or by including <xCodeInline>href=#XXX</xCodeInline> where
+	XXX is the section name.
+</p>
+
+<p>
+	The section name is defined by the "name=" attribute if one is specified. If no
+	name is specified then the section name is the text within the &lt;section&gt; tag's
+	contents, including sub-tags.
+</p>
+
+<p>
+	CEscSearch::Index() will index by documents (MML resources and/or files) and
+	the sections defined within the documents. The more sections you specify in
+	a search the more accurate the search.
+</p>
+
+<xTip>
+	Create your own &lt;H1&gt;, &lt;H2&gt;, and &lt;H3&gt; macros for headers. Surround
+	the &lt;?MacroContent?&gt; tag by a &lt;Section&gt; tag. That way all of your
+	headers will automatically have section-links created for them. Also, make sure
+	to use &lt;Keyword&gt; in your headers so that any words appearing in them have
+	a higher search score.
+</xTip>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>name</xTd2>
+		<xTd3>
+			Name of the section. If this is not specified then the section is named
+			after the text within the &lt;Section&gt; tag contents.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<p>
+	Example links:
+</p>
+<xul>
+	<li>
+		<a href="#&lt;small&gt;">&lt;small&gt;</a>
+	</li>
+	<li>
+		<a href="#&lt;comment&gt;">&lt;comment&gt;</a>
+	</li>
+</xul>
+
+
+
+
+<xSectionTitle>&lt;small&gt;</xSectionTitle>
+
+<p>
+	Makes the text about 30% smaller. You can combine several calls to &lt;small&gt; together.
+	&lt;small&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Eamples:
+</p>
+
+<p>
+	<small>&lt;small&gt;Hello world!&lt;/small&gt;</small><br/>
+	<small><small>&lt;small&gt;&lt;small&gt;Hello world!&lt;/small&gt;&lt;/small&gt;</small></small><br/>
+</p>
+
+
+
+
+<xSectionTitle>&lt;stretchstart&gt; and &lt;stretchstop&gt;</xSectionTitle>
+
+<p>
+	If you want your page to vertically elongate/shrink to the height of the window, then use
+	&lt;stretchstart&gt; and &lt;stretchstop&gt;. Put &lt;stretchstart&gt; at the beginning of the section
+	that will be stretched/shrunk to ensure that the page fits. But &lt;stretchend&gt; at the end of the
+	section.
+</p>
+
+<p>
+	Look at the MMLEdit sample in the Escarpment SDK for a sample of this.
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;strikethrough&gt; or &lt;strike&gt;</xSectionTitle>
+
+<p>
+	Draws a line through the text.
+	&lt;strikethrough&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <strike>struckout</strike> text.<br/>
+	<xCodeInline>This is &lt;strike&gt;struckout&lt;/strike&gt; text.</xCodeInline>
+</p>
+
+
+
+
+<xSectionTitle>&lt;sub&gt; - Subscript</xSectionTitle>
+
+<p>
+	Makes the text smaller and lowers it vertically. You can combine several calls to &lt;sub&gt; together.
+	&lt;sub&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <sub>sub</sub>script.<br/>
+	<xCodeInline>This is &lt;sub&gt;sub&lt;/sub&gt;script.</xCodeInline>
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;sup&gt; - Superscript</xSectionTitle>
+
+<p>
+	Makes the text smaller and raises it vertically. You can combine several calls to &lt;sup&gt; together.
+	&lt;sup&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <sup>super</sup>script.<br/>
+	<xCodeInline>This is &lt;sup&gt;super&lt;/sup&gt;script.</xCodeInline>
+</p>
+
+
+
+
+<xSectionTitle>&lt;table&gt;</xSectionTitle>
+
+<p>
+	Creates a table with rows and columns
+</p>
+
+<p>
+	Example:
+</p>
+
+<p>
+	<table>
+		<tr>
+			<td>1,1</td>
+			<td>2,1</td>
+		</tr>
+		<tr>
+			<td>1,2</td>
+			<td>2,2</td>
+		</tr>
+	</table>
+</p>
+
+<xCode>
+	&lt;table&gt;<br/>
+		&tab;&lt;tr&gt;<br/>
+			&tab;&tab;&lt;td&gt;1,1&lt;/td&gt;<br/>
+			&tab;&tab;&lt;td&gt;2,1&lt;/td&gt;<br/>
+		&tab;&lt;/tr&gt;<br/>
+		&tab;&lt;tr&gt;<br/>
+			&tab;&tab;&lt;td&gt;1,2&lt;/td&gt;<br/>
+			&tab;&tab;&lt;td&gt;2,2&lt;/td&gt;<br/>
+		&tab;&lt;/tr&gt;<br/>
+	&lt;/table&gt;<br/>
+</xCode>
+
+<p> </p>
+
+<p>
+	The table tag is one of the most complicated in MML. The main tag &lt;table&gt; must contain subtags.
+	The table &lt;table&gt; tag must contain one or more &lt;tr&gt; tags. Every row tag, &lt;tr&gt; must
+	contain one more more cell tags, &lt;td&gt;. The cell tag, &lt;td&gt; contains the text (or other tags)
+	to display in your table.
+</p>
+
+<p>
+	Both the &lt;table&gt; tag and &lt;td&gt; tag may contain the following attributes. Those attributes in the
+	table tag affect all cell attributes, unless overridden within the cell tag.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>align</xTd2>
+		<xTd3>
+			Align can be "left", "center", or "right". It horizontally aligns the text to the left, center, or right.
+			This may have strange interactions when you have &lt;p align=XXX&gt; or &lt;align align=XXX&gt;
+			anything other than "left" because the text is first aligned according the the paragraph/align
+			tag, and the <bold>entire block</bold> of text is aligned according to the table's/cell's align attribute.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bgcolor</xTd2>
+		<xTd3 bgcolor=#ffffff>
+			Specifies the background color of the table/cell. This cell has <xCodeInline>bgcolor=#ffffff</xCodeInline>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			The width of the table/cell's exterior border, in pixels. If this is set to 0 then no exterior border is drawn.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Specifies the border color of the table/cell.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumberOrPercent/>
+		<xTd2>height</xTd2>
+		<xTd3>
+			Specifies the height of the table/cell in terms of pixels, or percentage of available display width.
+			For a table, a percentage height is the percent of display width (usually the window) that it's
+			drawn in. For a cell, the percentage is based on the table width..
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>innerlines</xTd2>
+		<xTd3>
+			The width of the table/cell's interior border, in pixels. If this is set to 0 then no interior border is drawn.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>lrmargin</xTd2>
+		<xTd3 lrmargin=64>
+			Specifies the left/right margin of the cell in pixels. This cell is displayed with 
+			<xcodeinline>lrmargin=64</xcodeinline>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>tbmargin</xTd2>
+		<xTd3 tbmargin=64>
+			Specifies the top/bottom margin of the cell in pixels. This cell is displayed with 
+			<xcodeinline>tbmargin=64</xcodeinline>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign can be "top", "center", or "bottom". It vertically aligns the text to the top, center, or bottom
+			of the cell. It only has an effect if one of the other cells in the row is taller.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumberOrPercent/>
+		<xTd2>width</xTd2>
+		<xTd3>
+			Specifies the width of the table/cell in terms of pixels, or percentage of available display width.
+			For a table, a percentage width is the percent of display area (usually the window) that it's
+			drawn in. For a cell, the percentage is based on the table width. Note that the if the total width
+			of all cells in a row is less/more than the table width, the cells' width will be proportionally
+			adjusted so they match the table width.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xTip>
+	If you put a <xCodeInline>&lt;image posn=background&gt;</xCodeInline> or 
+	<xCodeInline>&lt;colorblend posn=background&gt;</xCodeinline> tag within the main
+	&lt;table&gt; tag, you can set the background
+	of the table to the image/colorblend.
+</xTip>
+
+
+
+
+
+
+<xSectionTitle>&lt;ul&gt; - Bulleted list</xSectionTitle>
+
+<p>
+	"Ul" displays a bulleted list. &lt;ul&gt; must contain subtags of type &lt;li&gt; (list item.) Each of these
+	subtags is displayed on its own line with a bullet at the beginning.
+</p>
+
+<p>
+	Eample:
+</p>
+
+<ul>
+	<li>Item one</li>
+	<li>Item two</li>
+	<li>Item three</li>
+</ul>
+
+<xCode>
+	&lt;ul&gt;<br/>
+		&tab;&lt;li&gt;Item one&lt;/li&gt;<br/>
+		&tab;&lt;li&gt;Item two&lt;/li&gt;<br/>
+		&tab;&lt;li&gt;Item three&lt;/li&gt;<br/>
+	&lt;/ul&gt;<br/>
+</xCode>
+<p> </p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the bullets.
+			<p/>
+			Example: <xCodeInline>&lt;ul color=#ff0000&gt;</xCodeInline>
+			<p/>
+			<ul color=#ff0000>
+				<li>Item one</li>
+				<li>Item two</li>
+			</ul>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>type</xTd2>
+		<xTd3>
+			Specifies the type of bullet to use. Type can be one of the following:
+			<p/>
+			<ul type="arrow">
+				<li>type=arrow</li>
+			</ul>
+			<ul type="check">
+				<li>type=check</li>
+			</ul>
+			<ul type="checkbox">
+				<li>type=checkbox</li>
+			</ul>
+			<ul type="circle">
+				<li>type=circle</li>
+			</ul>
+			<ul type="default">
+				<li>type=default</li>
+			</ul>
+			<ul type="diamond">
+				<li>type=diamond</li>
+			</ul>
+			<ul type="pointer">
+				<li>type=pointer</li>
+			</ul>
+			<ul type="square">
+				<li>type=square</li>
+			</ul>
+			<ul type="star">
+				<li>type=star</li>
+			</ul>
+			<ul type="star2">
+				<li>type=star2</li>
+			</ul>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;underline&gt; or &lt;u&gt;</xSectionTitle>
+
+<p>
+	Underlines the text.
+	&lt;underline&gt; doesn't take any attributes.
+</p>
+
+<p>
+	Examples:
+</p>
+
+<p>
+	This is <u>underlined</u> text.<br/>
+	<xCodeInline>This is &lt;u&gt;underlined&lt;/u&gt; text.</xCodeInline>
+</p>
+

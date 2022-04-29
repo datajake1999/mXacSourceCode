@@ -1,0 +1,86 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<!xll>
+	<td><big><a color=#8080ff MACROATTRIBUTE=1>
+		<?MacroContent?>
+		<xhoverhelp>
+			Press this to see your address book entry for the letter.
+			Or, press the key on your keyboard.
+		</xhoverhelp>
+	</a></big></td>
+</xll>
+
+<table width=100% align=center innerlines=0>
+	<colorblend posn=background lcolor=#606080 rcolor=#404060/>
+	<tr>
+		<xll href=r:142#A accel=a>A</xll>
+		<xll href=r:142#B accel=b>B</xll>
+		<xll href=r:142#C accel=c>C</xll>
+		<xll href=r:142#D accel=d>D</xll>
+		<xll href=r:142#E accel=e>E</xll>
+		<xll href=r:142#F accel=f>F</xll>
+		<xll href=r:142#G accel=g>G</xll>
+		<xll href=r:142#H accel=h>H</xll>
+		<xll href=r:142#I accel=i>I</xll>
+		<xll href=r:142#J accel=j>J</xll>
+		<xll href=r:142#K accel=k>K</xll>
+		<xll href=r:142#L accel=l>L</xll>
+		<xll href=r:142#M accel=m>M</xll>
+	</tr>
+	<tr>
+		<xll href=r:142#N accel=n>N</xll>
+		<xll href=r:142#O accel=o>O</xll>
+		<xll href=r:142#P accel=p>P</xll>
+		<xll href=r:142#Q accel=q>Q</xll>
+		<xll href=r:142#R accel=r>R</xll>
+		<xll href=r:142#S accel=s>S</xll>
+		<xll href=r:142#T accel=t>T</xll>
+		<xll href=r:142#U accel=u>U</xll>
+		<xll href=r:142#V accel=v>V</xll>
+		<xll href=r:142#W accel=w>W</xll>
+		<xll href=r:142#X accel=x>X</xll>
+		<xll href=r:142#Y accel=y>Y</xll>
+		<xll href=r:142#Z accel=z>Z</xll>
+	</tr>
+</table>
+<p/>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Address book
+</xPageTitle>
+
+<p>
+	This is a list of people in your address book.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<!xTd1Add>
+	<td width=20% valign=top align=center MACROATTRIBUTE=1><big><big><big><section>
+		<?MacroContent?>
+	</section></big></big></big></td>
+</xTd1add>
+
+<!xTd2Add>
+	<td width=80% valign=top MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</td>
+</xTd2add>
+
+<!xLetterTable>
+	<p><table width=100% border=0 innerlines=0>
+		<tr>
+			<?MacroContent?>
+		</tr>
+	</table></p>
+</xLetterTable>
+
+<null>
+	<<<$PEOPLE>>>
+</null>
+

@@ -1,0 +1,28 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Summary"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Summary
+</xPageTitle>
+
+<p>
+	This page shows you a list of the activities you completed over the last week/month.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<p align=right><bold>
+	<combobox name=viewnext width=50% cbheight=75 cursel=0>
+		<elem name=7>Show the last 7 days</elem>
+		<elem name=28>Show the last 28 days</elem>
+	</combobox>
+</bold></p>
+
+<xbr/>
+
+<null>
+	<<<$MONTH>>>
+</null>
+

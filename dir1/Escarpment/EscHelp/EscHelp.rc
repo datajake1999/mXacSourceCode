@@ -1,0 +1,126 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMAIN             MML     DISCARDABLE     "Main.mml"
+IDR_MMLTEMPLATE         MML     DISCARDABLE     "Template.mml"
+IDR_MMLMACROS           MML     DISCARDABLE     "Macros.mml"
+IDR_MMLOVERVIEW         MML     DISCARDABLE     "Overview.mml"
+IDR_MMLHELLOWORLD       MML     DISCARDABLE     "Hello World.mml"
+IDR_MMLDOCUMENTATION    MML     DISCARDABLE     "Documentation.mml"
+IDR_MMLREGISTRATION     MML     DISCARDABLE     "Registration.mml"
+IDR_MMLBUGS             MML     DISCARDABLE     "bugs.mml"
+IDR_MMLVIEWSOURCE       MML     DISCARDABLE     "ViewSource.mml"
+IDR_MMLUIGUIDE          MML     DISCARDABLE     "UIGuide.mml"
+IDR_MMLMMLBASICS        MML     DISCARDABLE     "MMLBasics.mml"
+IDR_MMLADVANCED         MML     DISCARDABLE     "MMLAdvanced.mml"
+IDR_MMLCONTROLS         MML     DISCARDABLE     "Controls.mml"
+IDR_MMLCONTDEFAULT      MML     DISCARDABLE     "ContDefault.mml"
+IDR_MMLCONTBUTTON       MML     DISCARDABLE     "ContButton.mml"
+IDR_MMLCOLORBLEND       MML     DISCARDABLE     "contcolorblend.mml"
+IDR_MMLCONTCOMBOBOX     MML     DISCARDABLE     "ContComboBox.mml"
+IDR_MMLCONTEDIT         MML     DISCARDABLE     "ContEdit.mml"
+IDR_MMLCONTHR           MML     DISCARDABLE     "ContHr.mml"
+IDR_MMLCONTIMAGE        MML     DISCARDABLE     "ContImage.mml"
+IDR_MMLCONTLISTBOX      MML     DISCARDABLE     "ContListBox.mml"
+IDR_MMLCONTMENU         MML     DISCARDABLE     "ContMenu.mml"
+IDR_MMLCONTPROGRESSBAR  MML     DISCARDABLE     "ContProgressBar.mml"
+IDR_MMLCONTSCROLLBAR    MML     DISCARDABLE     "ContScrollBar.mml"
+IDR_MMLCONTSTATUS       MML     DISCARDABLE     "ContStatus.mml"
+IDR_MMLCONTTHREED       MML     DISCARDABLE     "ContThreeD.mml"
+IDR_MMLCESCCONTROL      MML     DISCARDABLE     "CEscControl.mml"
+IDR_MMLCESCPAGE         MML     DISCARDABLE     "CEscPage.mml"
+IDR_MMLCESCWINDOW       MML     DISCARDABLE     "CEscWindow.mml"
+IDR_MMLUTILITYFUNCTIONS MML     DISCARDABLE     "UtilityFunctions.mml"
+IDR_MMLADVANCEDOBJECTS  MML     DISCARDABLE     "AdvancedObjects.mml"
+IDR_MMLOWNCONTROLS      MML     DISCARDABLE     "OwnControls.mml"
+IDR_SEARCH              MML     DISCARDABLE     "Search.mml"
+IDR_MMLCESCSEARCH       MML     DISCARDABLE     "CEscSearch.mml"
+IDR_MMLHISTORY          MML     DISCARDABLE     "History.mml"
+IDR_MMLCONTTIME         MML     DISCARDABLE     "ContTime.mml"
+IDR_MMLCONTDATE         MML     DISCARDABLE     "ContDate.mml"
+IDR_MMLCONTFILTEREDLIST MML     DISCARDABLE     "ContFilteredList.mml"
+IDR_MMLSAMPLES          MML     DISCARDABLE     "Samples.mml"
+IDR_MMLCONTCHART        MML     DISCARDABLE     "ContChart.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_JPGLOGO             JPG     DISCARDABLE     "Logo150.jpg"
+IDR_JPGWATERFALL        JPG     DISCARDABLE     "Waterfall.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON    DISCARDABLE     "icon1.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

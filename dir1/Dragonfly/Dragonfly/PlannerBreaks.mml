@@ -1,0 +1,105 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Scheduled breaks"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Scheduled breaks
+</xPageTitle>
+
+<<<$IFMICROHELP>>>
+<p>
+	<xMoreInfo href=r:289/>Change the start time, lunch times, and dinner times here
+	so your <a href=r:288>Planner</a> page will be able to more accurately predict
+	your schedule.
+</p>
+
+
+<xbr/>
+
+<<<$ENDIFMICROHELP>>>
+
+<!xTimeType>
+	<td width=20% bgcolor=#004000 align=center valign=center>
+		<font color=#ffffff><?MacroContent?></font>
+	</td>
+</xTimeType>
+
+<!xDayOfWeek>
+	<td width=30% bgcolor=#004000 align=center valign=center macroattribute=1>
+		<font color=#ffffff><?MacroContent?></font>
+	</td>
+</xDayOfWeek>
+
+<!xTimeSlot>
+	<td width=20% align=center valign=center>
+		<small><time width=100% macroattribute=1/></small>
+	</td>
+</xTimeSlot>
+
+<xtablecenter>
+	<tr>
+		<xDayOfWeek/>
+		<xTimeType>Start work</xTimeType>
+		<xTimeType>Lunch starts</xTimeType>
+		<xTimeType>Lunch ends</xTimeType>
+		<xTimeType>Dinner starts</xTimeType>
+		<xTimeType>Dinner ends</xTimeType>
+	</tr>
+	<tr>
+		<xDayOfWeek>Monday</xDayOfWeek>
+		<xTimeSlot name=t01/>
+		<xTimeSlot name=t11/>
+		<xTimeSlot name=t21/>
+		<xTimeSlot name=t31/>
+		<xTimeSlot name=t41/>
+	</tr>
+	<tr>
+		<xDayOfWeek>Tuesday</xDayOfWeek>
+		<xTimeSlot name=t02/>
+		<xTimeSlot name=t12/>
+		<xTimeSlot name=t22/>
+		<xTimeSlot name=t32/>
+		<xTimeSlot name=t42/>
+	</tr>
+	<tr>
+		<xDayOfWeek>Wednesday</xDayOfWeek>
+		<xTimeSlot name=t03/>
+		<xTimeSlot name=t13/>
+		<xTimeSlot name=t23/>
+		<xTimeSlot name=t33/>
+		<xTimeSlot name=t43/>
+	</tr>
+	<tr>
+		<xDayOfWeek>Thursday</xDayOfWeek>
+		<xTimeSlot name=t04/>
+		<xTimeSlot name=t14/>
+		<xTimeSlot name=t24/>
+		<xTimeSlot name=t34/>
+		<xTimeSlot name=t44/>
+	</tr>
+	<tr>
+		<xDayOfWeek>Friday</xDayOfWeek>
+		<xTimeSlot name=t05/>
+		<xTimeSlot name=t15/>
+		<xTimeSlot name=t25/>
+		<xTimeSlot name=t35/>
+		<xTimeSlot name=t45/>
+	</tr>
+	<tr>
+		<xDayOfWeek bgcolor=#00c0c0>Saturday</xDayOfWeek>
+		<xTimeSlot name=t06/>
+		<xTimeSlot name=t16/>
+		<xTimeSlot name=t26/>
+		<xTimeSlot name=t36/>
+		<xTimeSlot name=t46/>
+	</tr>
+	<tr>
+		<xDayOfWeek bgcolor=#00c0c0>Sunday</xDayOfWeek>
+		<xTimeSlot name=t00/>
+		<xTimeSlot name=t10/>
+		<xTimeSlot name=t20/>
+		<xTimeSlot name=t30/>
+		<xTimeSlot name=t40/>
+	</tr>
+</xtablecenter>

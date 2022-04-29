@@ -1,0 +1,343 @@
+<pageinfo title="Date Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xDate>
+	<Date width=100% day=22 month=12 year=2000 MACROATTRIBUTE=1/>
+</xDate>
+
+
+<xPageTitle>Date Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The date control displays a drop-down, allowing the user to specify a date.
+	If the user changes the date its display
+	is updated to show the date and the page callback is notified.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>appear</xTd2>
+		<xTd3>
+			If appear is "right" then the pop-up list appears to the control's right. If it's "below" then
+			it appears below.
+			<p/>
+			Example: appear=right
+			<p/>
+			<xdate appear=right/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			Example: color=#008000
+			<p/>
+			<xdate basecolor=#008000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bcolor</xTd2>
+		<xTd3>
+			Bottom-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: bcolor=#00ffff
+			<p/>
+			<xdate bcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>blank</xTd2>
+		<xTd3>
+			The string to display when no date is specified.
+			<p/>
+			Example: blank="No date is specified"
+			<p/>
+			<xdate day=-1 blank="No date is specified"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			Example: buttondepth=32
+			<p/>
+			<xdate buttondepth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonheight=32
+			<p/>
+			<xdate buttonheight=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonwidth=32
+			<p/>
+			<xdate buttonwidth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			Example: color=#00ff00
+				<xdate color=#00ff00/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>day</xTd2>
+		<xTd3>
+			The day to be displayed by the date control, from 1 to 31. If this is less than 1
+			then the control will show "Not Entered".
+			<p/>
+			Example: day=18
+			<p/>
+			<xdate day=18/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>enterday</xTd2>
+		<xTd3>
+			If TRUE, this shows allows the user to enter a day. If FALSE,
+			the user can only specify a month and year.
+			<p/>
+			Example: enterday=true and false
+			<p/>
+			<xdate enterday=true/><br/>
+			<xdate enterday=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down.
+			<p/>
+			Example: lightcolor=#ffffff
+			<p/>
+			<xdate lightcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			Example: marginbuttontext=0 and 16
+			<p/>
+			<xdate marginbuttontext=0/><br/>
+			<xdate marginbuttontext=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the control.
+			<p/>
+			Example: marginleftright=0 and 16
+			<p/>
+			<xdate marginleftright=0/><br/>
+			<xdate marginleftright=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the control.
+			<p/>
+			Example:
+			<p/>
+			<xdate margintopbottom=0/><br/>
+			<xdate margintopbottom=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>month</xTd2>
+		<xTd3>
+			The month to be displayed by the date control, from 1 to 12. If this is less than 1
+			then the control will show "Not Entered".
+			<p/>
+			Example: month=11
+			<p/>
+			<xdate month=11/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the control.
+			<p/>
+			Example: showbutton=true and false
+			<p/>
+			<xdate showbutton=true/><br/>
+			<xdate showbutton=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showdayofweek</xTd2>
+		<xTd3>
+			If TRUE, this shows the day of the week (such as "Friday") in
+			the control's display.
+			<p/>
+			Example: showdayofweek=true and false
+			<p/>
+			<xdate showdayofweek=true/><br/>
+			<xdate showdayofweek=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			style=Beveled<br/>
+			<xdate style=beveled/><br/>
+			style=Box<br/>
+			<xdate style=box/><br/>
+			style=Check<br/>
+			<xdate style=check/><br/>
+			style=cylinder<br/>
+			<xdate style=cylinder/><br/>
+			style=DownTriangle<br/>
+			<xdate style=downtriangle/><br/>
+			style=DownArrow<br/>
+			<xdate style=downarrow/><br/>
+			style=LeftTriangle<br/>
+			<xdate style=lefttriangle/><br/>
+			style=LeftArrow<br/>
+			<xdate style=leftarrow/><br/>
+			style=Light<br/>
+			<xdate style=light/><br/>
+			style=RightTriangle<br/>
+			<xdate style=righttriangle/><br/>
+			style=RightArrow<br/>
+			<xdate style=rightarrow/><br/>
+			style=Sphere<br/>
+			<xdate style=sphere/><br/>
+			style=Teapot<br/>
+			<xdate style=teapot/><br/>
+			style=Toggle<br/>
+			<xdate style=toggle/><br/>
+			style=UpTriangle<br/>
+			<xdate style=uptriangle/><br/>
+			style=UpArrow<br/>
+			<xdate style=uparrow/><br/>
+			style=X<br/>
+			<xdate style=x/><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>tcolor</xTd2>
+		<xTd3>
+			Top-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: tcolor=#00ffff
+			<p/>
+			<xdate tcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the control's text. Use "top", "center", or "bottom".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>year</xTd2>
+		<xTd3>
+			The year to be displayed by the date control. If this is less than 0
+			then the control will show "Not Entered".
+			<p/>
+			Example: year=1985
+			<p/>
+			<xdate year=1985/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the control are ignored.
+</p>
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_DATECHANGE</xSectionTitle>
+
+<p>
+	The control sends an ESCN_DATECHANGE message when the user has changed the date in the control.
+	The ESCNDATECHANGE structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarInt/>
+		<xTd2>iDay</xTd2>
+		<xTd3>
+			New day, from 1 to 31. This is less than 1 if no date is specified.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMonth</xTd2>
+		<xTd3>
+			New month, from 1 to 12. This is less than 1 if no date is specified.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iYear</xTd2>
+		<xTd3>
+			New year. This is less than 0 if no date is specified.
+		</xTd3>
+	</tr>
+</xTableStructure>

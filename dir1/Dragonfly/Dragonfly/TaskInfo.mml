@@ -1,0 +1,76 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Tasks page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=208/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Tasks" page
+</xPageTitle>
+
+<p>
+	The task-list page has the computer to remind you
+	what tasks you have in your queue. Tasks are sorted by a "priority"
+	that you assign so that you only need to pay attention to the most
+	important tasks. You can also postpone tasks until a specific date
+	so that you don't need to worry about them until they actually
+	happen. And, you can set up regularly reoccurring tasks, such as
+	"Do the laundry" that happen on a daily, weekly, monthly, or annual basis.
+</p>
+
+<p>
+	To use the task-list functionality, open up the "<a href=r:115>Tasks</a>" page.
+	Press "Add a new task" and enter all the relevent information. Any tasks
+	you add will show up on the Tasks page, and the "<a href=r:109>Today</a>" page.
+</p>
+
+<p>
+	To have the task list automatically track reoccurring tasks
+	press the "Add a reoccurring task" button.
+</p>
+
+<xsectiontitle>Keeping track of work</xsectiontitle>
+
+<p>
+	If you want to keep track of how much work you do on a specific project, such
+	as how much time you devote to repairing and maintaining your house, then:
+</p>
+
+<ol>
+	<li>
+		Create a <a href=r:121>journal</a> category for the project, such as "Home repair and maintenance."
+	</li>
+	<li>
+		Whenever you add a task (or reoccurring task) pertaining to the project, make
+		sure to set the "Journal category" to the category you created.
+	</li>
+	<li>
+		When you complete the task and press the "Completed" button, Dragonfly will ask
+		you how long the task took to complete. The task, along with this number, will
+		be logged into the journal category.
+	</li>
+	<li>
+		When you're interested in seeing how much time you've spent on the project, or
+		how often, switch to the journal category's page and press "Copy entry durations
+		to the clipboard." Paste the data into your favorite spreadsheet and use its
+		charting functionality to display a graph.
+	</li>
+</ol>
+
+<p>
+	You can use this same functionality to keep track of how much
+	work you contract out for a client. If you sum the number of hours and multiply
+	by your hourly rate, you can easily come up with a bill.
+</p>
+
+
+<xbr/>
+
+<p>
+	<bold>Tip:</bold> The task-list page allows you to add and manage unrelated
+	work items. However, it may not be powerful enough
+	for whatever project you're working on. The <a href=r:145>Projects</a> page
+	may be more suitable for your uses. Conversely, if you want a light-weight
+	means of reminding yourself to do something, try
+	the <a href=r:114>Reminders</a> page.
+</p>
+

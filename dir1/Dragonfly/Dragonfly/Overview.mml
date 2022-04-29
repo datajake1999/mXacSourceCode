@@ -1,0 +1,201 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Overview"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Overview
+</xPageTitle>
+
+<<<$IFPCACTIVE>>>
+	<p align=center><table width=80% border=2><tr><td>
+		<colorblend tcolor=#ffc040 bcolor=#ffff40 posn=background/>
+		<bold><big><big>Special <big>PC Active</big> edition</big></big></bold><p/>
+		This is a special <bold>PC Active</bold> edition of <bold>Dragonfly</bold>.
+		The trial period has been extended to 6 months (during which time all features are enabled),
+		and the registration fee has been reduced from the usual USD $20.00 (approx AUD $40.00)
+		to AUD $33.00 (includes $3.00 GST).
+		See the <a href=r:136>registration page</a> for more details.
+	</td></tr></table></p>
+<<<$ENDIFPCACTIVE>>>
+
+<p>
+	<bold>Dragonfly is a personal information manager</bold> (PIM) with a web-like user-interface that keeps track of
+	contacts, meetings, reminders, tasks, and projects.
+	Unlike other PIMs, Dragonfly acts as "backup" memory for you.
+	It keeps a daily log of what you accomplish,
+	provides a journal, allows you to take notes during meetings and phone calls,
+	remembers the text from web pages and online documents that you read,
+	and even helps you recall memories from your past.
+</p>
+
+<p>
+	Dragonfly is probably the most unique PIM around because
+	it <bold>looks and feels like a web site</bold>, even though it isn't.
+	Web applications are much different than traditional Windows applications,
+	as everyone is well aware. Because Dragonfly is web-like, the application
+	doesn't need to stick to rigid dogma about what kind of "objects" the user
+	experiences. In lay man's terms: If you've ever used Microsoft Outlook or
+	Outlook Express you'd have noticed that information is stored in folders and
+	sub-folders. From my perspective, that's like Greek philosophers saying everything
+	is made up of earth, water, fire, and air, and nothing more. We all know that's
+	untrue, and the fact is, some information doesn't fit well in a folder, or belongs
+	to several folders. Having Dragonfly display a web user-interface allows
+	it to handle information in whatever way people tend to think of it, not
+	how the computer wants to treat it.
+</p>
+
+<p>
+	As you've probably already figured out, you use Dragonfly by clicking on the menu
+	item (at the top and bottom of the page) that you want to use. If you have a task
+	to add you can click on "Tasks". Etc. Each page has a short description on top,
+	with a "More info" button leading to a bit more documentation. (By the way, if you
+	don't want to see this description you can always turn it off
+	in <a href=r:242>Look and feel</a>.) <bold>The best way to learn how to use Dragonfly
+	is to explore.</bold> Look around the main menu and see what pages the menu items bring up. If
+	the page confuses you, just click on "More info". If you're still confused
+	then E-mail me at <xMyEmail/> and I'll try to explain or improve the documentation.
+</p>
+
+<p>
+	Due to user feedback, <bold>Dragonfly has a lot of features.</bold> When you first
+	start using Dragonfly it shows you a menu with
+	the most commonly used modules. Don't less this fool you. I can only squeeze so
+	much onto the menu without having it overwhelm you. Dragonfly has much more
+	hidden under the hood, also known as <bold>The Table of Contents</bold> and
+	the <bold>Search page</bold>.
+</p>
+
+<p>
+	The <a href=r:252>Table of Contents</a> lists all the major sections of Dragonfly. Clicking
+	on any of the items will bring you to a new section of the application. <bold>You can
+	think of the contents page as an extended menu.</bold>
+</p>
+
+<p>
+	The <a href=r:128>Search page</a> not only does keyword searches through information
+	you enter into Dragonfly, but it <bold>searches through the application's pages</bold>. If you suspect a feature
+	exists in Dragonfly but don't know where, just type in some keywords and search.
+	Search has a good chance of finding it for you.
+</p>
+
+<p>
+	Once you find a feature that's not on the menu, but which you use all the time,
+	you can add it by pressing the "Add to menu" button found at the bottom of the page.
+	You can also customize the menu, moving items around, renaming them, or even removing
+	them, in the <a href=r:254>Change the Menu</a> page.
+</p>
+
+<p>
+	And that's about all you need to know to start using Dragonfly.
+</p>
+
+<xsectiontitle>Who will find Dragonfly useful?</xsectiontitle>
+
+<p>
+	Hopefully most people will.
+</p>
+
+<p>
+	But realistically, I designed Dragonfly based upon my own needs, and have been
+	improving it from user feedback. One application cannot do everything.
+	Dragonfly will probably be most useful for:
+</p>
+<xul>
+	<li>
+		<bold>People that carry their notebook computer everywhere</bold> - Dragonfly
+		is designed to act as "backup" memory for its users; if you use Dragonfly
+		on a desktop you leave part of your brain behind when you walk away from your
+		computer. (Hint: Sub-notebook computers, the lighter and smaller the better,
+		work very well with Dragonfly.)
+	</li>
+	<li>
+		<bold>Small businesses</bold> - I am a one person company,
+		so Dragonfly is tailored towards the needs of small businesses.
+		It won't work as well for large corporations; Dragonfly does not have any
+		interoperability, so you cannot use it to see someone else's schedule or
+		schedule meetings for them over the LAN.
+	</li>
+	<li>
+		<bold>Average people</bold> - While designing Dragonfly I downloaded quite
+		a few PIMs. Some of them have amazingly complex features, obviously designed
+		for power users. Personally, I like my software to be as simple as possible
+		so that I don't have to read big thick manuals to understand it.
+	</li>
+	<li>
+		<bold>People that manage other people</bold> - One of the reasons I wrote
+		Dragonfly was because I was building a house. Managing contractors is like
+		herding cats, so I needed an application that would remind me to remind
+		the contractor to show up on time.
+	</li>
+</xul>
+
+<xSectionTitle>Dragonfly's user interface</xSectionTitle>
+
+<p>
+	Dragonfly's user interface (how it looks and behaves) is more similar to a web
+	page than a standard Windows application. While this may take some getting used to,
+	it ultimately makes Dragonfly easier to use than if it were written to look
+	like a typical Windows application.
+</p>
+
+<p>
+	Some notable differences exist:
+</p>
+
+<xul>
+	<li>
+		Dragonfly uses <bold>lots of graphics and color</bold> to convey meaning.
+	</li>
+	<li>
+		Dragonfly really <bold>doesn't have a "center of focus"</bold> like most Windows application.
+		There's no one main window you keep coming back to.
+		While this may be strange at first,
+		you'll quickly get used to it.
+	</li>
+	<li>
+		Most Windows applications have a help system separate from the application.
+		Not so Dragonfly. <bold>The application and help are one.</bold> That
+		means that the explanation for how to accomplish a task is either written
+		in the page, pops up when you hover the mouse over a control, or can be
+		found in the "Search" page. Ultimately this makes the application easier to use.
+		However, if there's something that you can't figure out how to do, please
+		send me E-mail at <xMyEmail/>.
+	</li>
+	<li>
+		<bold>Search is the most important page in Dragonfly.</bold> You can get to
+		it from the "Dragonfly menu" dropdown. If you have anything you wish to accomplish
+		using Dragonfly but can't remember how, just search for some keywords and
+		you should jump right to the functionality.
+	</li>
+</xul>
+
+<xSectionTitle>Why I named it Dragonfly</xSectionTitle>
+
+<p>
+	I live in the "top end" of Australia, near a city called Darwin. People in Darwin
+	have a strange sense of time. Not only is the time zone half an hour out of sync with
+	the rest of the world, but people tend to take their time up here.
+</p>
+
+<p>
+	Darwin is a laid back city, which makes it a nice place to live. However,
+	in Darwin, things get done when they get done.
+</p>
+
+<p>
+	It seems to me that the only thing that uses a clock in Darwin is the wildlife.
+	Some of the creatures come and go with the changing of the seasons and are an
+	excellent predictor of the weather. One such creature is the dragonfly.
+</p>
+
+<p>
+	At the changeover between the wet season (October through April) and the dry
+	season (May through September) dragonfly numbers explode. It's a cue that the
+	rains are over and the sun is here to stay for six months. And it's right on
+	time (or at least as on-time as anything can be in Darwin).
+</p>
+
+<p>
+	Since the Dragonfly application is all about time I thought the name appropriate.
+</p>

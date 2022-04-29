@@ -1,0 +1,73 @@
+<pageinfo title="Welcome to Escarpment"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Welcome to Escarpment</xPageTitle>
+
+<p>
+	Escarpment is a C++ SDK that lets you easily write Windows applications
+	whose dialogs look as good as web pages.
+	It uses a HTML-like page description language to generate good looking pages that replace the traditional
+	gray dialog boxes. Controls and functionality is easily embedding within the page description language
+	(called MML) so you spend as little time programming the user interface as possible, and more time
+	adding useful functionality to your application.
+</p>
+
+<xChoiceButton href=r:106>
+	<bold>Overview of Escarpment</bold><br/>
+	This provides an overview of the Escarpment architecture, along with its goals and limitations.
+</xChoiceButton>
+
+<xChoiceButton href=r:107>
+	<bold>Hello world application</bold><br/>
+	The traditional hello world application, written using Escarpment.
+</xChoiceButton>
+
+<xChoiceButton href=r:108>
+	<bold>Documentation</bold><br/>
+	This contains all the escarpment documentation. You can view it online, search through it, or print it out.
+</xChoiceButton>
+
+<xChoiceButton href=r:112>
+	<bold>User Interface Design Guide</bold><br/>
+	Some useful usert interface design guidelines for your Escarpment application.
+</xChoiceButton>
+
+<xChoiceButton href=r:143>
+	<bold>Sample Escarpment applications</bold><br/>
+	This page tells you a bit about the samples included in the SDK and
+	Escarpment applications you can find on the Internet.
+</xChoiceButton>
+
+<xChoiceButton href=r:109>
+	<bold>Registration and redistribution information</bold><br/>
+	If you're interested in using Escarpment with your application, click here. I'll tell you about registration requirements
+	and redistribution rights.
+</xChoiceButton>
+
+<xChoiceButton href=r:110>
+	<bold>Bugs and feedback</bold><br/>
+	I'm a company of one person. As a result, I can quickly fix bugs and implement features. If you find any bugs
+	or have any good feature suggestions, then check this section out.
+</xChoiceButton>
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xTip>
+	In case you haven't noticed, this help system was written in Escarpment. The source code and help source
+	files are included in the SDK, so you can learn more by looking at the help program's C++ and MML.
+	You can even improve it is the help doesn't do everything you need.
+</xTip>
+
+<xTip>
+	Escarpment will use a SAPI text to speech engine if it's installed.
+	To find out more about
+	SAPI, see <a href="http://www.microsoft.com/iit">http://www.microsoft.com/iit</a>.
+</xTip>
+
+<p>
+	Copyright (c) 2000 by Mike Rozak. All rights reserved.
+	JPEG decompression from the Independent JPEG Group.
+</p>

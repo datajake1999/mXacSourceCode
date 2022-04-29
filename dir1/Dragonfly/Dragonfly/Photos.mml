@@ -1,0 +1,65 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Photos"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Photos
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:284/>The "Photos" page stores your photo album for you.
+	Along with each picture you can write text describing the photo, and
+	links to people in the photo.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=import>
+	<bold>Load photos from disk</bold>
+	<br/>
+	Press this to load one or more pictures into Dragonfly. You'll select the directory
+	where you've saved the photos you scanned in or took with a digital camera, and then
+	the JPEG (.jpg) files from the directory. Dragonfly will copy the photos into its own
+	database and ask you for a short description of each one.
+</xChoiceButton>
+
+<button checkbox=true checked=true style=x valign=top name=wallpaper>
+	<bold>Show the photos on my desktop</bold>
+	<br/>
+	If this is checked then Dragonfly will update your desktop wallpaper once a day
+	to a randomly selected photo from your collection. It's a good way to
+	get your background screen changed.
+</button>
+
+<xbr/>
+
+<p align=right><bold><big>
+	<edit name=date maxchars=5 width=25% text=2001/>
+</big></bold></p>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xTableCenter>
+	<xtheader>Photos</xtheader>
+	<<<$LOG>>>
+</xtablecenter>
+

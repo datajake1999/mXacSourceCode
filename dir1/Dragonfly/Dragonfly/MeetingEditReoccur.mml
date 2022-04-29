@@ -1,0 +1,152 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Edit reoccurring meeting appointment" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Edit reoccurring meeting appointment
+</xPageTitle>
+
+<xdefinition>
+	Because this is a reoccurring meeting,
+	any changes you make to this meeting will also be reflected in instances of the meeting
+	that have already been generated.
+</xdefinition>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			One-line summary of the meeting:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Full description of the meeting:
+			<p/>
+			<small>
+				<bold>Deep thought:</bold> If the meeting isn't planned ahead
+				of time it's unlikely to accomplish anything.
+				You might want to enter:
+				<p/>
+				1. A meeting agenda.
+				<p/>
+				2. What decisions need to get made.
+				<p/>
+				3. What action items you expect from the meeting.
+			</small>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=1024 wordwrap=true multiline=true height=50%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Where is the meeting?
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=meetingloc/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it start?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No start time set" width=100% name=meetingstart/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it end?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=meetingend/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sound an alarm before the meeting?
+		</xtdLeft>
+		<xtdright>
+			<xComboAlarm name=alarm/>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			Who will attend?
+			<p/>
+			<small>
+				<bold>Deep thought:</bold> The more people at the meeting the longer it will take.
+			</small>
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=attend1 width=50%/>
+			<xFilterPersonBusiness name=attend2 width=50%/>
+			<xFilterPersonBusiness name=attend3 width=50%/>
+			<xFilterPersonBusiness name=attend4 width=50%/>
+			<xFilterPersonBusiness name=attend5 width=50%/>
+			<xFilterPersonBusiness name=attend6 width=50%/>
+			<xFilterPersonBusiness name=attend7 width=50%/>
+			<xFilterPersonBusiness name=attend8 width=50%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>(This causes a link to appear in the journal category.
+			If you run a small business, you can use this
+			to bill your time for attending the meeting.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+</xTableClear>
+
+
+
+<xbr/>
+
+<p>
+	How often does the meeting occur?
+</p>
+
+<?Include resource=159?>
+
+
+<xbr/>
+
+<xChoiceButton name=delete>
+	<bold>Delete</bold>
+	<br/>
+	Permenently delete the reoccurring meeting.
+</xChoiceButton>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

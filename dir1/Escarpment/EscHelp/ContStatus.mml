@@ -1,0 +1,165 @@
+<pageinfo title="Status Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xStatus>
+	<p align=center>
+		<status width=80% height=50 MACROATTRIBUTE=1>
+			<?MacroContent?>
+		</status>
+	</p>
+</xStatus>
+
+<xPageTitle>Status Control</xPageTitle>
+
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The status control is able to display real-time updates of text or images. In general,
+	switching to a new page or recompiling it is slow, so the best way to inform the
+	user of rapidly changing information, such as percent-done, is to use the status control.
+</p>
+
+<p>
+	The status control has a display region that displays text.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>align</xTd2>
+		<xTd3>
+			Align can be "left", "center", or "right".
+			<p/>
+			<xStatus align=left>align=left</xStatus>
+			<xStatus align=center>align=center</xStatus>
+			<xStatus align=right>align=right</xStatus>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			The width of the border
+			<p/>
+			<xStatus border=8>border=8</xStatus>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			The border color.
+			<p/>
+			<xStatus bordercolor=#ffff00>bordercolor=#ffff00</xStatus>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>lrmargin</xTd2>
+		<xTd3>
+			The left/right margin of the status. This is only relvent if the text
+			is horizontally aligned to the left/right.
+			<p/>
+			<xStatus lrmargin=0 align=left>lrmargin=0 align=left</xStatus>
+			<xStatus lrmargin=32 align=left>lrmargin=32 align=left</xStatus>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>tbmargin</xTd2>
+		<xTd3>
+			The top/bottom margin of the status. This is only relvent if the text
+			is vertically aligned to the top/bottom.
+			<p/>
+			<xStatus tbmargin=0 valign=top>tbmargin=0 valign=top</xStatus>
+			<xStatus tbmargin=32 valign=top>tbmargin=32 valign=top</xStatus>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign can be "top", "center", or "bottom".
+			<p/>
+			<xStatus valign=top>valign=top</xStatus>
+			<xStatus valign=center>valign=center</xStatus>
+			<xStatus valign=bottom>valign=bottom</xStatus>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The status control initially displays whatever text is in its contents. Example:
+</p>
+
+<p align=center>
+	<status width=50% height=100>Hello there</status>
+</p>
+
+<xCode>
+	&lt;status width=50% height=100&gt;Hello there&lt;/status&gt;<br/>
+</xCode>
+<p> </p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+<xSectionTitle>ESCM_STATUSTEXT</xSectionTitle>
+
+<p>
+	This changes the contents of the status control.
+	Either pNode or pszText or pszMML must be filled in.
+</p>
+
+<p>
+	The ESCMSTATUSTEXT structure is:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPCMMLNode/>
+		<xTd2>pNode</xTd2>
+		<xTd3>
+			If not NULL, the node to use for displaying information in the status control.
+			The status control will NOT delete this.
+			It clones the node and uses the clone.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszText</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode text to use for the new text.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszMML</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode MML text containing the new text/images.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	Status controls don't have any control-specific notifications.
+</p>
+
+

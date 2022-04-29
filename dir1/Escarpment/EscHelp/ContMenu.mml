@@ -1,0 +1,244 @@
+<pageinfo title="Menu Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xMenu>
+	<p align=right>
+		<Menu MACROATTRIBUTE=1>
+			<xMenuText><?MacroContent?></xMenuText>
+			<xMenuContents>
+				<xMenuButton href=[close]>Menu item 1</xMenuButton>
+				<xMenuButton href=[close]>Menu item 2</xMenuButton>
+				<xMenuButton href=[close]>Menu item 3</xMenuButton>
+				<xMenuButton href=[close]>Menu item 4</xMenuButton>
+			</xMenuContents>
+		</Menu>
+	</p>
+</xMenu>
+
+
+<xPageTitle>Menu Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The menu control displays some text (such as "File") with a down-pointer arrow to the
+	right. When the user moves the mouse pointer over the menu control, it opens up a
+	popup containing the menu options. The popup is just another page containing
+	a number of buttons. When the user clicks on a menu item the page receives
+	a ESCM_LINK notification.
+</p>
+<p>
+	The samples in this page use the <a href=viewmacros>macros</a> 
+	built into the help sample to make them look more traditional. You can copy the macros
+	or make your own.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>appear</xTd2>
+		<xTd3>
+			If appear is "right" then the menu appears to the control's right. If it's "below" then
+			it appears below.
+			<p/>
+			<xMenu appear=right>appear=right</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			<xMenu basecolor=#008000>basecolor=#008000</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			<xMenu buttondepth=32>buttondepth=32</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			<xMenu buttonheight=32>buttonheight=32</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			<xMenu buttonwidth=32>buttonwidth=32</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			<xMenu color=#00ff00>color=#00ff00</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down.
+			<p/>
+			<xmenu lightcolor=#ffffff>lightcolor=#ffffff</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			<xmenu marginbuttontext=0>marginbuttontext=0</xMenu>
+			<xMenu marginbuttontext=16>marginbuttontext=16</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the combobox.
+			<p/>
+			<xmenu marginleftright=0>marginleftright=0</xMenu>
+			<xMenu marginleftright=16>marginleftright=16</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the combobox.
+			<p/>
+			<xmenu margintopbottom=0>margintopbottom=0</xMenu>
+			<xMenu margintopbottom=16>margintopbottom=16</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the combobox.
+			<p/>
+			<xmenu showbutton=true>showbutton=true</xmenu>
+			<xmenu showbutton=false>showbutton=false</xmenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			<xmenu style=beveled>style=beveled</xMenu>
+			<xmenu style=box>style=box</xMenu>
+			<xmenu style=check>style=check</xMenu>
+			<xmenu style=cylinder>style=cylinder</xMenu>
+			<xmenu style=downtriangle>style=downtriangle</xMenu>
+			<xmenu style=downarrow>style=downarrow</xMenu>
+			<xmenu style=lefttriangle>style=lefttriangle</xMenu>
+			<xmenu style=leftarrow>style=leftarrow</xMenu>
+			<xmenu style=light>style=light</xMenu>
+			<xmenu style=righttriangle>style=righttriangle</xMenu>
+			<xmenu style=rightarrow>style=rightarrow</xMenu>
+			<xmenu style=sphere>style=sphere</xMenu>
+			<xmenu style=teapot>style=teapot</xMenu>
+			<xmenu style=toggle>style=toggle</xMenu>
+			<xmenu style=uptriangle>style=uptriangle</xMenu>
+			<xmenu style=uparrow>style=uparrow</xMenu>
+			<xmenu style=x>style=x</xMenu>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the menus's text.
+			Use "top", "center", or "bottom". It only really matters if the menu
+			has several lines of text.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the menu must include two sections:
+</p>
+
+<xul>
+	<li>
+		<bold>&lt;MenuText&gt;</bold> - Type in the text (or other tags) that make
+		up the menu display here.
+	</li>
+	<li>
+		<bold>&lt;MenuContents&gt;</bold> - This is the MML for the menu pop-up. It's
+		just a new page, so enter all the tags that you would for a new page.
+	</li>
+</xul>
+
+<p>
+	Below is a sample menu:
+</p>
+
+<p align=right>
+	<Menu>
+		<MenuText>SampleMenu</MenuText>
+		<MenuContents>
+			<Button showbutton=false href=viewsource>View Source</button>
+			<br/>
+			<Button showbutton=false href=viewmacros>View Macros</button>
+		</MenuContents>
+	</Menu>
+</p>
+
+<xCode>
+	&lt;Menu&gt;<br/>
+		&tab;&lt;MenuText&gt;SampleMenu&lt;/MenuText&gt;<br/>
+		&tab;&lt;MenuContents&gt;<br/>
+			&tab;&tab;&lt;Button showbutton=false href=viewsource&gt;View Source&lt;/button&gt;<br/>
+			&tab;&tab;&lt;br/&gt;<br/>
+			&tab;&tab;&lt;Button showbutton=false href=viewmacros&gt;View Macros&lt;/button&gt;<br/>
+		&tab;&lt;/MenuContents&gt;<br/>
+	&lt;/Menu&gt;<br/>
+</xCode>
+<p> </p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	Menus don't have any control-specific messages.
+</p>
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	Menus don't have any control-specific notifications.
+</p>

@@ -1,0 +1,183 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a new person" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add people</font>
+		<xhoverhelp>
+			Press this to add the people from the file to your address book.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Import a comma-separated address book
+</xPageTitle>
+
+<p><font color=#800000>
+	<bold>Warning:</bold> Because importing an address book may cause unintentional damage
+	to existing entries (such as changing phone numbers that you didn't mean to change), you
+	should back up your Dragonfly files before doing this.
+</font></p>
+
+<p>
+	Dragonfly has read in the address-book file you specified and matched the file's
+	fields (such as "First name") to Dragonfly's. Please double check these to make sure
+	they're correct.
+</p>
+
+<!xFilterAddressField>
+	<td>
+		<bold><filteredlist width=100% cbheight=150 blank="Not converted" additem="" listname=addressfield sort=true MACROATTRIBUTE=1/></bold>
+	</td>
+</xFilterAddressField>
+
+
+<xtablecenter>
+	<xtrheader>Field conversions</xtrheader>
+	<tr>
+		<td>Name:</td>
+		<xFilterAddressField name=name/>
+	</tr>
+	<tr>
+		<td>Last name:</td>
+		<xFilterAddressField name=lastname/>
+	</tr>
+	<tr>
+		<td>First name:</td>
+		<xFilterAddressField name=firstname/>
+	</tr>
+	<tr>
+		<td>Nickname:</td>
+		<xFilterAddressField name=nickname/>
+	</tr>
+	<tr>
+		<td>Home phone number:</td>
+		<xFilterAddressField name=homephone/>
+	</tr>
+	<tr>
+		<td>Work phone number:</td>
+		<xFilterAddressField name=workphone/>
+	</tr>
+	<tr>
+		<td>Mobile phone number:</td>
+		<xFilterAddressField name=mobilephone/>
+	</tr>
+	<tr>
+		<td>FAX number:</td>
+		<xFilterAddressField name=faxphone/>
+	</tr>
+	<tr>
+		<td>Personal E-mail:</td>
+		<xFilterAddressField name=personalemail/>
+	</tr>
+	<tr>
+		<td>Business E-mail:</td>
+		<xFilterAddressField name=businessemail/>
+	</tr>
+	<tr>
+		<td>Personal web site:</td>
+		<xFilterAddressField name=personalweb/>
+	</tr>
+	<tr>
+		<td>Home address (Street):</td>
+		<xFilterAddressField name=homestreet/>
+	</tr>
+	<tr>
+		<td>Home address (City):</td>
+		<xFilterAddressField name=homecity/>
+	</tr>
+	<tr>
+		<td>Home address (State):</td>
+		<xFilterAddressField name=homestate/>
+	</tr>
+	<tr>
+		<td>Home address (Postal code):</td>
+		<xFilterAddressField name=homepostal/>
+	</tr>
+	<tr>
+		<td>Home address (Country):</td>
+		<xFilterAddressField name=homecountry/>
+	</tr>
+	<tr>
+		<td>Business address (Street):</td>
+		<xFilterAddressField name=businessstreet/>
+	</tr>
+	<tr>
+		<td>Business address (City):</td>
+		<xFilterAddressField name=businesscity/>
+	</tr>
+	<tr>
+		<td>Business address (State):</td>
+		<xFilterAddressField name=businessstate/>
+	</tr>
+	<tr>
+		<td>Business address (Postal code):</td>
+		<xFilterAddressField name=businesspostal/>
+	</tr>
+	<tr>
+		<td>Business address (Country):</td>
+		<xFilterAddressField name=businesscountry/>
+	</tr>
+	<tr>
+		<td>Company:</td>
+		<xFilterAddressField name=company/>
+	</tr>
+	<tr>
+		<td>Job title:</td>
+		<xFilterAddressField name=jobtitle/>
+	</tr>
+	<tr>
+		<td>Department:</td>
+		<xFilterAddressField name=department/>
+	</tr>
+	<tr>
+		<td>Office:</td>
+		<xFilterAddressField name=office/>
+	</tr>
+	<tr><td>
+		<button style=x checkbox=true checked=true name=restinnotes>
+			Put any fields from the imported file that are not used to fill in Dragonfly
+			address-book fields into the "Notes" section.
+	</button>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	If a person from the imported address book already exists in the Dragonfly
+	address book then:
+	<br/>
+	<align align=right><bold>
+		<combobox width=75% cbheight=100 name=ifexist>
+			<elem name=ignore>Keep the Dragonfly entry</elem>
+			<elem name=ask>Ask you what to do</elem>
+			<elem name=overwrite>Overwrite the Dragonfly entry</elem>
+		</combobox>
+	</bold></align>
+</p>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add people</font>
+		<xhoverhelp>
+			Press this to add the people from the file to your address book.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

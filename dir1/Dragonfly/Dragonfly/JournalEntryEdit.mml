@@ -1,0 +1,91 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Edit a journal entry" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Edit a journal entry
+</xPageTitle>
+
+<xbr/>
+
+<br>
+	Type your journal entry in here:
+</br>
+
+<p align=center>
+	<edit name=summary width=80% height=30% multiline=true wordwrap=true maxchars=10000 vscroll=editscroll defcontrol=true/>
+	<scrollbar orient=vert name=editscroll height=30%/>
+</p>
+
+<p>
+	When you've finished with your journal entry, please fill in the following
+	information (if appropriate):
+</p>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			One-line summary of the entry:
+			<br/>
+			<font color=#c00000>(Required)</font>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name/>
+		</xtdright>
+	</tr>
+	<<<$VALUES>>>
+	<tr>
+		<xtdleft>
+			Category:
+		</xtdLeft>
+		<xtdright>
+			<xFilterJournal name=category width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			People/businesses mentioned in the entry:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person1 width=100%/>
+			<xFilterPersonBusiness name=person2 width=100%/>
+			<xFilterPersonBusiness name=person3 width=100%/>
+			<xFilterPersonBusiness name=person4 width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Entry date:
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Entry start time:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No start time set" width=100% name=meetingstart/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Entry finsh time:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=meetingend/></bold>
+		</xtdright>
+	</tr>
+
+</xTableClear>
+
+<xbr/>
+
+<p>
+	Your changes will automatically be saved; when you're finished editing just
+	switch to another page.
+</p>
+
+

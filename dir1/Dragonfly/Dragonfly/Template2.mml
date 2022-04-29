@@ -1,0 +1,8 @@
+<<<$IFCOLOR>>><colorblend posn=background tcolor=#e0e0c0 bcolor=#c0c0a0/><<<$ENDIFCOLOR>>>
+<table border=0 innerlines=0 width=100%>
+	<tr>
+		<td lrmargin=20 tbmargin=20>
+			<?TemplateSubst?>
+		</td>
+	</tr>
+</table>

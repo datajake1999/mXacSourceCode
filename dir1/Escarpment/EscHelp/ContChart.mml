@@ -1,0 +1,513 @@
+<pageinfo title="Chart Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xDataSet1>
+	<dataset name="Ball" MACROATTRIBUTE=1>
+		<point x=1985 y=1.55/>
+		<point x=1990 y=1.83/>
+		<point x=1995 y=1.95/>
+		<point x=2000 y=2.05/>
+		<?MacroContent?>
+	</dataset>
+</xDataSet1>
+
+<!xDataSet2>
+	<dataset name="RAM" MACROATTRIBUTE=1>
+		<point x=1990 y=3.25/>
+		<point x=1995 y=2.15/>
+		<point x=2000 y=1.10/>
+		<?MacroContent?>
+	</dataset>
+</xDataSet2>
+
+<!xDataSets>
+	<xDataset1/>
+	<xDataSet2/>
+</xDataSets>
+
+<!xAxis>
+	<axis axis=x label=Year units=integer/>
+	<axis axis=y label=Cost units=dollars/>
+</xAxis>
+
+<!xChart>
+	<Chart width=50% height=50% MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Chart>
+</xChart>
+
+
+<xPageTitle>Chart Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The chart control lets you easily display line graphs, bar charts, and pie charts in your
+	application. It takes one or more data sets each conhtaining one
+	or more points and does the rest of the work for you. Charting is included as
+	a standard control because applications often present information to a user
+	that would be best viewed as a chart.
+</p>
+
+<p align=right>
+	<xChart>
+		<xAxis/>
+		<xDataSets/>
+	</xChart>
+</p>
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			Changes the control's border size.
+			<p/>
+			Example: border=8
+			<p/>
+			<xChart border=8>
+				<xAxis/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Changes the control's border color.
+			<p/>
+			Example: bordercolor=#00ffff
+			<p/>
+			<xChart bordercolor=#00ffff>
+				<xAxis/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			Specifies where the link goes to. If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web. Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			You can also specify an "href" in the &lt;dataset&gt; or
+			&lt;point&gt; contents.
+			<p/>
+			Example: href="http://www.mxac.com.au"
+			<p/>
+			<xChart href="http://www.mxac.com.au">
+				<xAxis/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>maxdistance</xTd2>
+		<xTd3>
+			The distance that the object will be from the user when the "scrolldistance="
+			scrollbar position is at its maximum. The default is 50.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>mindistance</xTd2>
+		<xTd3>
+			The distance that the object will be from the user when the "scrolldistance="
+			scrollbar position is at its minimum. The default is 5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrolldistance</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls the distance.
+			<p/>
+			Example: scrolldistance=dist
+			<p/>
+			<p align=right>
+				<xChart style=bar scrolldistance=dist>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+				<scrollbar orient=vert name=dist height=50%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollrotx</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the X axis.
+			<p/>
+			Example: scrollrotx=rotx
+			<p/>
+			<p align=right>
+				<xChart style=bar scrollrotx=rotx>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+				<scrollbar orient=vert name=rotx height=50%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollroty</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the Y axis.
+			<p/>
+			Example: scrollroty=roty
+			<p/>
+			<p align=right>
+				<xChart style=bar scrollroty=roty>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+				<br/>
+				<scrollbar orient=horz name=roty width=50%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollrotz</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the Z axis.
+			<p/>
+			Example: scrollrotz=rotz
+			<p/>
+			<p align=right>
+				<xChart style=bar scrollrotz=rotz>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+				<br/>
+				<scrollbar orient=horz name=rotz width=50%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			Tells the chart control what style to use. This can
+			be <bold>bar</bold>, <bold>line</bold>, or <bold>pie</bold>.
+			<p/>
+			Example: style=line
+			<br/>
+			<align align=right>
+				<xChart style=line>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+			</align>
+			<p/>
+			Example: style=bar
+			<br/>
+			<align align=right>
+				<xChart style=bar>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+			</align>
+			<p/>
+			Example: style=pie
+			<br/>
+			<align align=right>
+				<xChart style=pie>
+					<xAxis/>
+					<xDataSets/>
+				</xChart>
+			</align>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of a chart control affect the axis labels and the data displayed.
+</p>
+
+
+<xSectionTitle>&lt;Axis&gt;</xSectionTitle>
+
+<p>
+	Allows you to set the label, units, minimum, and maximum for the axis. All
+	attributes are optional <bold>except the "axis=" attribute.</bold>
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>axis</xTd2>
+		<xTd3>
+			This specified which axis is being defined. It must be either "X" or "Y".
+			You must fill this in.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>label</xTd2>
+		<xTd3>
+			Label for the axis, which appears on the chart and in the hover-help.
+			<p/>
+			Example: &lt;axis axis=x label="Hello world"/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<axis axis=x label="Hello world"/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>max</xTd2>
+		<xTd3>
+			Maximum value for the axis.
+			<p/>
+			Example: &lt;axis axis=x max=2020/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<axis axis=x label="Year" max=2020/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>min</xTd2>
+		<xTd3>
+			Minimum value for the axis.
+			<p/>
+			Example: &lt;axis axis=x min=1970/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<axis axis=x label="Year" min=1970/>
+				<xDataSets/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>units</xTd2>
+		<xTd3>
+			Specified what units the axis is in. This can be:
+			<p/>
+			<xul>
+				<li>
+					<bold>None</bold> - Just display floating point values.
+				</li>
+				<li>
+					<bold>Integer</bold> - Numbers must be integers. They will
+					not be displayed on the axis if they're fractional.
+				</li>
+				<li>
+					<bold>Dollars</bold> - Units are displayed in dollars.
+				</li>
+				<li>
+					<bold>YearMonth</bold> - The value is displayed as "month-year".
+					Integer values are the year, while 1/12th is used as the month.
+					Mar-2000 = 2000 + 3/12 = 2000.25.
+				</li>
+				<li>
+					<bold>YearMonthDay</bold> - The value is displayed as "day-month-year".
+					Integer values are the year, while 1/12th is used as the month. 1/28th to
+					1/31st (depending upon the days in the month) is the date.
+					11-Sep-2000 = 2000 + 8/12 + 10/30/12 = 2000.6944444444444.
+				</li>
+			</xul>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+<xSectionTitle>&lt;DataSet&gt;</xSectionTitle>
+
+<p>
+	Defines a data-set to be displayed on the graph. A graph must have at least
+	one data set.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Specifies the color of the data set.
+			<p/>
+			Example: &lt;dataset color=#ff0000/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<xDataSet1 color=#ff0000/>
+				<xDataSet2 color=#ff0000/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			ESCM_LINK returned when the user clicks on data from this data set. This
+			overrides the href= in the &lt;chart&gt; node.
+			<p/>
+			Example: &lt;dataset href="http://www.mxac.com.au"/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<xDataSet1 href="http://www.mxac.com.au"/>
+				<xDataSet2 href="http://www.mxac.com.au"/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>linesize</xTd2>
+		<xTd3>
+			Used in the line graph, this specifies the size of the line (relative to default units).
+			The line's default width=1.0. You can use linesize=0 to specify a one-pixel wide line.
+			<p/>
+			Example: &lt;dataset linesize=0/&gt; &lt;dataset linesize=5/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<xDataSet1 linesize=0/>
+				<xDataSet2 linesize=5/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>name</xTd2>
+		<xTd3>
+			Name of the data set. Displayed when the user hovers over the point,
+			and on the pie chart.
+			<p/>
+			Example: &lt;dataset name=Fred/&gt;
+			<p/>
+			<xChart style=pie>
+				<xAxis/>
+				<xDataSet1 name=Fred/>
+				<xDataSet2/>
+			</xChart>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>spheresize</xTd2>
+		<xTd3>
+			Used in the line graph, this specifies the size of the spheres (relative to default units).
+			The spheres' default width=1.0. You can use spheresize=0 to eliminate them.
+			<p/>
+			Example: &lt;dataset spheresize=0/&gt; &lt;dataset spheresize=5/&gt;
+			<p/>
+			<xChart>
+				<xAxis/>
+				<xDataSet1 spheresize=0/>
+				<xDataSet2 spheresize=5/>
+			</xChart>
+		</xTd3>
+	</tr>
+</xtableattributes>
+
+<p>
+	<bold>Within the &lt;DataSet&gt; node are one of more &lt;Point&gt; nodes.</bold> They
+	specify the location of the points, and optionally, a link specific to the point.
+	Point nodes have the following attributes.
+</p>
+
+<p>
+	NOTE: Pie charts only use the first data point of the dataset.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			ESCM_LINK href if the user clicks on the point. This overrides both
+			the dataset's and control's href= settings.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			X (horizontal) value of the point.
+			Units are defined by the axis' unit= attribute.
+			<p/>
+			NOTE: Pie charts ignore the X value.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Y (vertical) value of the point.
+			Units are defined by the axis' unit= attribute.
+		</xTd3>
+	</tr>
+</xtableattributes>
+
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+<xSectionTitle>ESCM_CHARTDATA</xSectionTitle>
+
+<p>
+	This changes the contents of the chart control.
+	Either pNode or pszMML must be filled in.
+</p>
+
+<p>
+	The ESCMCHARTDATA structure is:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPCMMLNode/>
+		<xTd2>pNode</xTd2>
+		<xTd3>
+			If not NULL, the node to use for displaying information in the chart control.
+			The status control will NOT delete this.
+			It clones the node and uses the clone.
+			It must contain &lt;Axis&gt; and &lt;DataSet&gt; sections.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszMML</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode MML text containing the new chart definition.
+			It must contain &lt;Axis&gt; and &lt;DataSet&gt; sections.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	Chart controls don't have any control-specific notifications.
+</p>
+
+

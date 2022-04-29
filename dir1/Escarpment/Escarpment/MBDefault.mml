@@ -1,0 +1,8 @@
+<pageinfo title="<<<Title>>>"/>
+<colorblend lcolor=#808090 rcolor=#c0c0d0 posn=background/>
+<table width=100% border=0 innerlines = 0>
+<tr>
+<td width=70% border=2 innerlines=4><colorblend tcolor=<<<$Top>>> bcolor=<<<$Bottom>>> posn=background/><<<Summary>>><<<$MMLFinePrint>>></td>
+<td width=30%><<<$MMLButtons>>></td>
+</tr>
+</table>

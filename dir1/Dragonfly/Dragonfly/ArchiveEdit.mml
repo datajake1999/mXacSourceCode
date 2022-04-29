@@ -1,0 +1,58 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Archived document" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<p align=right>
+	<big><big><big><bold><edit defcontrol=true width=50% maxchars=128 name=name text="<<<ENTRYNAME>>>"/></bold></big></big></big>
+</p>
+
+<xTableCenter innerlines=0>
+	<xtheader>Document</xtheader>
+	<tr>
+		<td height=50% width=95% lrmargin=0 tbmargin=0>
+			<edit name=summary color=transparent
+				posn=background multiline=true wordwrap=true maxchars=300000 vscroll=editscroll
+				text="<<<JOURNALNOTES>>>"/>
+		</td>
+		<td height=50% width=32 lrmargin=0 tbmargin=0>
+			<scrollbar posn=background orient=vert name=editscroll/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<tr>
+		<xlt>When archived:</xlt>
+		<xrt>
+			<date blank="No date set" width=100% name=date/><br/>
+			<time blank="No time set" width=100% name=start/>
+		</xrt>
+	</tr>
+</xTableCenter>
+<xbr/>
+
+<p>
+	Your changes will automatically be saved; when you're finished editing just
+	switch to another page.
+</p>
+

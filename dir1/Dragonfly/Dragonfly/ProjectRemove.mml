@@ -1,0 +1,31 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Remove a project"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=209/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Remove a project
+</xPageTitle>
+
+<p>
+	You should remove a project when you've completed all the project's tasks.
+	The project will still be kept around in the search database for future
+	reference, but it won't appear on your projects list.
+</p>
+
+
+<p>
+	Select the project you wish to remove and press "Remove project":
+</p>
+<p align=right>
+	<bold><combobox width=75% cbheight=100 name=projecttoremove>
+	</combobox></bold>
+</p>
+
+
+<align align=right>
+	<button name=remove>
+		Remove project
+	</button>
+</align>
+

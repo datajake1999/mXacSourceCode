@@ -1,0 +1,282 @@
+<pageinfo title="Button Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Button Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The button control simulates a mechanical button on the screen. It allows the user to push it, resulting
+	in a message being sent to the page callback and/or a link being run.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			Example:
+				<button basecolor=#008000>color=#008000</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			Example:
+			<p/>
+			<button buttondepth=32>buttondepth=32</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			Example:
+			<p/>
+			<button buttonheight=32>buttonheight=32</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			Example:
+			<p/>
+			<button buttonwidth=32>buttonwidth=32</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>checkbox</xTd2>
+		<xTd3>
+			If true, the button acts like a checkbox and toggles between up and down.
+			<p/>
+			Example:
+			<p/>
+			<button checkbox=true>checkbox=yes</button><br/>
+			<button checkbox=true style=X>checkbox=yes style=X</button><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>checked</xTd2>
+		<xTd3>
+			If true, draws a check in the button or turns the light on. You should use this with "checkbox=yes"
+			or "radiobutton=yes".
+			<p/>
+			Example:
+			<p/>
+			<button checkbox=true checked=true>checked=yes</button><br/>
+			<button checkbox=true checked=false>checked=no</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			Example:
+				<button color=#00ff00>color=#00ff00</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>highlightcolor</xTd2>
+		<xTd3>
+			Affects the control's background when it's checked.
+			<p/>
+			Example:
+			<p/>
+			<button checkbox=true checked=true highlightcolor=#ffff00>highlightcolor=#ffff00</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>group</xTd2>
+		<xTd3>
+			This specifies that a radio button is part of a group, and that if this radio button is checked, the
+			other radio buttons should be un-checked. It also affects tabbing. The group string is a list
+			of control names separated by a comma. Use this with "radiobutton=true".
+			<p/>
+			Example:
+			<p/>
+			<button name=b1 radiobutton=true checked=true group="b1,b2,b3">group="b1,b2,b3"</button><br/>
+			<button name=b2 radiobutton=true group="b1,b2,b3">group="b1,b2,b3"</button><br/>
+			<button name=b3 radiobutton=true group="b1,b2,b3">group="b1,b2,b3"</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			Specifies where the link goes to. If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web. Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			If "href" is not specified the application will still get a ESCN_BUTTONPRESS notification.
+			<p/>
+			Examples:
+			<p/>
+			<button href="http://www.mxac.com.au">href="http://www.mxac.com.au"</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down or when it's checked.
+			<p/>
+			Example:
+			<p/>
+			<button checkbox=true checked=true style=X lightcolor=#00ff00>lightcolor=#00ff00</button><br/>
+			<button checkbox=true checked=true style=X lightcolor=#ff0000>lightcolor=#ff0000</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			Example:
+			<p/>
+			<button marginbuttontext=0>marginbuttontext=0</button><br/>
+			<button marginbuttontext=16>marginbuttontext=16</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the button.
+			<p/>
+			Example:
+			<p/>
+			<button marginleftright=0>marginleftright=0</button><br/>
+			<button marginleftright=16>marginleftright=16</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the button.
+			<p/>
+			Example:
+			<p/>
+			<button margintopbottom=0>margintopbottom=0</button><br/>
+			<button margintopbottom=16>margintopbottom=16</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>radiobutton</xTd2>
+		<xTd3>
+			This specifies that a button is radio button and remembers if it has been pressed. It should
+			be used with "group=".
+			<p/>
+			Example:
+			<p/>
+			<button name=c1 style=check radiobutton=true checked=true group="c1,c2,c3">radiobutton=true</button><br/>
+			<button name=c2 style=check radiobutton=true group="c1,c2,c3">radiobutton=true</button><br/>
+			<button name=c3 style=check radiobutton=true group="c1,c2,c3">radiobutton=true</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the button.
+			<p/>
+			Example:
+			<p/>
+			<button showbutton=true>showbutton=true</button><br/>
+			<button showbutton=false>showbutton=false</button><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			<button>Default</button><br/>
+			<button style=beveled>style=Beveled</button><br/>
+			<button style=box>style=Box</button><br/>
+			<button style=check>style=Check</button><br/>
+			<button style=downtriangle>style=DownTriangle</button><br/>
+			<button style=downarrow>style=DownArrow</button><br/>
+			<button style=lefttriangle>style=LeftTriangle</button><br/>
+			<button style=leftarrow>style=LeftArrow</button><br/>
+			<button style=light>style=Light</button><br/>
+			<button style=righttriangle>style=RightTriangle</button><br/>
+			<button style=rightarrow>style=RightArrow</button><br/>
+			<button style=sphere>style=Sphere</button><br/>
+			<button style=teapot>style=Teapot</button><br/>
+			<button style=toggle>style=Toggle</button><br/>
+			<button style=uptriangle>style=UpTriangle</button><br/>
+			<button style=uparrow>style=UpArrow</button><br/>
+			<button style=x>style=X</button><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the button's text. Use "top", "center", or "bottom".
+			<p/>
+			Example:
+			<p/>
+			<button valign=top>valign=top<br/>Random text on second line<br/>Random text on third line</button><br/>
+			<button valign=center>valign=center<br/>Random text on second line<br/>Random text on third line</button><br/>
+			<button valign=bottom>valign=bottom<br/>Random text on second line<br/>Random text on third line</button>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the button tag are used to generate the button display.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	Edit controls don't have any control-specifc messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_BUTTONPRESS</xSectionTitle>
+
+<p>
+	Edit controls send an ESCN_BUTTONPRESS message when a button has been pressed. The
+	ESCNBUTTONPRESS structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+</xTableStructure>

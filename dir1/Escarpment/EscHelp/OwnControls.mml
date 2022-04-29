@@ -1,0 +1,105 @@
+<pageinfo title="Writing Your Own Controls"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Writing Your Own Controls</xPageTitle>
+
+<p>
+	Escarpment allows you to write your own controls. The control architecture is
+	similar to a Windows control, with a callback providing all/most of the control
+	functionality.
+</p>
+
+<p>
+	The Escarpment SDK includes a sample C++ application that includes the source
+	code for most of the Escarpment controls. This will allow you to learn by
+	example and modify the existing controls to suit your needs.
+</p>
+
+<p>
+	Note: If you're planning to modify an existing Escarpment control, please tell
+	me. I may be interested in doing the work so that all Escarpment users will
+	be able to take advantage of the extra functionality. Send me mail at <xMyEmail/>.
+</p>
+
+<p>
+	The best way to learn how controls are written is to look through the C++ code
+	supplied for the built-in Escarpment controls. However, here is a very brief
+	tutorial.
+</p>
+
+
+<xSectionTitle>Tutorial</xSectionTitle>
+
+<p>
+	The first step is to write a control callback function, PESCCONTROLCALLBACK.
+	The basic functionality is:
+</p>
+
+<xCode>
+	BOOL MyControlCallback (PCEscControl pControl, DWORD dwMessge, PVOID pParam)<br/>
+	{<br/>
+		&tab;return FALSE;<br/>
+	}<br/>
+	<p> </p>
+	Someplace in your initialization code...<br/>
+	EscControlAdd (L"MyControl", MyControlCallback);<br/>
+</xCode>
+
+<p> </p>
+
+<p>
+	This causes the control to just handle the defaults. You create the control in MML
+	by entering <xCodeInline>&lt;MyControl/&gt;</xCodeInline>.
+</p>
+
+<p>
+	Of course, this control doesn't do anything. In order for it to do something, you
+	need to put a <xCodeInline>switch(dwMessage)</xCodeInline> statement into
+	MyControlCallback(). If you handle a message, return TRUE.
+</p>
+
+<p>
+	The first messages to handle are ESCM_CONSTRUCTOR and ESCM_DESCTRUCTOR. These are
+	called first thing when the control is created, and just before the control is
+	destroyed. I suggest that your ESCM_CONSTRUCTOR code uses pControl-&gt;m_mem and
+	allocate enough memory to store control instance data, such the scroll min, max,
+	and position if you're doing a scroll bar. Use ESCM_DESTRUCTOR to destroy any
+	C++ objects and free any memory your control has created on the way. It's just
+	like the constructor and destructor of a C++ object except the memory isn't
+	allocated as conveniently.
+</p>
+
+<p>
+	If your control has any attributes (which it probably does), you should initialize
+	the variables (stored in pControl-&gt;m_mem) and call
+	pControl-&gt;AttribListAddXXX() with all your variable name. This will allow
+	the control initialization routines to look in the root node and fill in all your
+	variables for you.
+</p>
+
+<p>
+	Next, you'll need to write ESCM_INITCONTROL. This is called right after
+	ESCM_CONSTRUCTOR. When ESCM_INITCONTROL is called, most member variables of
+	pControl will have been filled in. Any attributes you specified with
+	pControl-&gt;AttribListAddXXX() will also have been filled in, as specified
+	by the PCMMLNode that created the control.
+</p>
+
+<p>
+	In ESCM_INITCONTROL, your code should add accelerators to pControl-&gt;m_listAccelFocus
+	and pControl-&gt;m_listAccelNoFocus. You may also want to set m_fWantMouse,
+	m_fRedrawOnMove, and m_dwWantFocus.
+</p>
+
+<p>
+	The rest of the work is more control specific. I can't really tell you what to do
+	with any kind of detail.
+</p>
+
+<p>
+	What's left? ESCM_PAINT to paint your control. If users can click on your control
+	you might want ESCM_LBUTTONDOWN. A whole host of messages can be trapped. For
+	a complete list, click <a href=r:129>here</a>. Look at the C++ source code for
+	the built-in Escarpment controls as an aid.
+</p>

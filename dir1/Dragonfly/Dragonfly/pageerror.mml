@@ -1,0 +1,13 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Page Error"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Page Error
+</xPageTitle>
+
+<p>
+	The page you tried to view had an error in it. Please E-mail me at <xMyEMail/> and
+	tell me which page had the error so that I can fix the bug.
+</p>

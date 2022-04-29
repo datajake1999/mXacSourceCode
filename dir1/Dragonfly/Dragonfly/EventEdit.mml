@@ -1,0 +1,158 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Edit a special day" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Edit a special day
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Day name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+
+<p>
+	When does it occur?
+</p>
+
+<!xreoccurbutton>
+	<button style=check radiobutton=true group=dom,weekday,after MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</button>
+</xreoccurbutton>
+
+<!xweekindex>
+	<bold><combobox width=100 MACROATTRIBUTE=1>
+		<elem name=1>first</elem>
+		<elem name=2>second</elem>
+		<elem name=3>third</elem>
+		<elem name=4>fourth</elem>
+		<elem name=5>last</elem>
+	</combobox></bold>
+</xweekindex>
+
+<!xweekindex2>
+	<bold><combobox width=100 MACROATTRIBUTE=1>
+		<elem name=1>first</elem>
+		<elem name=2>second</elem>
+		<elem name=3>third</elem>
+		<elem name=4>fourth</elem>
+	</combobox></bold>
+</xweekindex2>
+
+<!xindexof>
+	<bold><combobox width=150 MACROATTRIBUTE=1>
+		<elem name=2>weekday</elem>
+		<elem name=3>weekend day</elem>
+		<elem name=4>Sunday</elem>
+		<elem name=5>Monday</elem>
+		<elem name=6>Tuesday</elem>
+		<elem name=7>Wednesday</elem>
+		<elem name=8>Thursday</elem>
+		<elem name=9>Friday</elem>
+		<elem name=10>Saturday</elem>
+	</combobox></bold>
+</xindexof>
+
+<!xmonthcombo>
+	<bold><combobox width=130 MACROATTRIBUTE=1>
+		<elem name=1>January</elem>
+		<elem name=2>February</elem>
+		<elem name=3>March</elem>
+		<elem name=4>April</elem>
+		<elem name=5>May</elem>
+		<elem name=6>June</elem>
+		<elem name=7>July</elem>
+		<elem name=8>August</elem>
+		<elem name=9>September</elem>
+		<elem name=10>October</elem>
+		<elem name=11>November</elem>
+		<elem name=12>December</elem>
+	</combobox></bold>
+</xmonthcombo>
+
+<!xlc>
+	<td MACROATTRIBUTE=1 width=56 valign=center align=center>
+		<?Macrocontent?>
+	</td>
+</xlc>
+
+<!xrc>
+	<td MACROATTRIBUTE=1 width=100% valign=center>
+		<?Macrocontent?>
+	</td>
+</xrc>
+
+<xtablecenter>
+<tr>
+<xlc>
+	<xreoccurbutton name=dom checked=true/>
+</xlc>
+<xrc>
+	Every <xmonthcombo name=month1/> <edit name=day1 width=35 text=1 maxchars=16 selall=true/>.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=weekday/>
+</xlc>
+<xrc>
+	The <xweekindex name=ordinal2/> <xindexof name=weekday2/> of <xmonthcombo name=month2/>.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=after/>
+</xlc>
+<xrc>
+	The <xweekindex2 name=ordinal3/> <xindexof name=weekday3/> on/after <xmonthcombo name=month3/> <edit name=day3 width=35 text=1 maxchars=16 selall=true/>.
+</xrc>
+</tr>
+
+
+</xtablecenter>
+
+<xbr/>
+
+<xChoiceButton name=delete>
+	<bold>Delete</bold>
+	<br/>
+	Delete the special day.
+</xChoiceButton>
+
+</td></tr>
+
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

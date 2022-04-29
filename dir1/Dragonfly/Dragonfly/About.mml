@@ -1,0 +1,25 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About Dragonfly"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About Dragonfly
+</xPageTitle>
+
+<p>
+	You are running Dragonfly version <bold><<<DFVERSION>>></bold>.
+	If you wish to download the latest version of Dragonfly, please
+	see <a href="http://www.mxac.com.au">www.mxac.com.au</a>.
+</p>
+
+<p>
+	Dragonfly is copyright (c) 2000-2008 by Mike Rozak. All rights reserved.
+	JPEG decompression is supplied by the Independent JPEG Group.
+</p>
+
+<p>
+	Dragonfly's user interface was written using the Escarpment SDK for C++. If you wish
+	to learn more about Escarpment then
+	see <a href="http://www.mxac.com.au">www.mxac.com.au</a>.
+</p>

@@ -1,0 +1,22 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Daily log" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	<<<LOGDATE>>>
+</xPageTitle>
+
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+
+<xTableCenter>
+	<xtheader>Log</xtheader>
+	<<<$LOG>>>
+</xtablecenter>
+

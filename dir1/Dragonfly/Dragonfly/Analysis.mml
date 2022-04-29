@@ -1,0 +1,24 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Analysis"/>
+
+<xPageTitle>
+	Analysis
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:111/>The "Analysis" page lets you analyze all the data you've
+	collected and stored in Dragonfly.
+</p>
+
+<xbr/>
+
+<xChoiceButton href=r:111>
+	<bold>XYZ Analysis</bold>
+	<br/>
+	Do some sort of cool analysis on the data.
+</xChoiceButton>
+
+<p>
+	BUGBUG - More analysis
+</p>

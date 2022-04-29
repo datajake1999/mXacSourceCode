@@ -1,0 +1,143 @@
+<!xDayButton>
+	<td width=15% bgcolor=#d0d0ff lrmargin=0 tbmargin=0 MACROATTRIBUTE=1>
+		<Button MACROATTRIBUTE=1 showbutton=false width=100% radiobutton=true highlightcolor=#ff8000 margintopbottom=2 marginleftright=2
+		group="d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29,d30,d31">
+			<align align=center><font MACROATTRIBUTE=1><?MacroContent?></font></align>
+		</button>
+	</td>
+</xDayButton>
+
+<!xDayBlank>
+	<td width=15%>
+	</td>
+</xDayBlank>
+
+<!xMonthButton>
+	<td width=33% lrmargin=0 tbmargin=0 MACROATTRIBUTE=1>
+		<Button MACROATTRIBUTE=1 showbutton=false width=100% radiobutton=true highlightcolor=#ff8000 margintopbottom=2 marginleftright=2
+		group="m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12">
+			<align align=center><font MACROATTRIBUTE=1><?MacroContent?></font></align>
+		</button>
+	</td>
+</xMonthButton>
+
+<colorblend posn=background tcolor=#f0fff0 bcolor=#c0cfc0/>
+<small>
+
+<table width=200 lrmargin=2 tbmargin=2 align=center valign=center>
+	<tr>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>S</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>M</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>T</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>W</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>Th</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>F</font>
+		</td>
+		<td width=15% bgcolor=#004000>
+			<font color=#ffffff>S</font>
+		</td>
+	</tr>
+	<tr>
+		<xDayBlank/>
+		<xDayButton name=d1>1</xDayButton>
+		<xDayButton name=d2>2</xDayButton>
+		<xDayButton name=d3>3</xDayButton>
+		<xDayButton name=d4>4</xDayButton>
+		<xDayButton name=d5>5</xDayButton>
+		<xDayButton name=d6 bgcolor=#8080c0>6</xDayButton>
+	</tr>
+	<tr>
+		<xDayButton name=d7 bgcolor=#8080c0>7</xDayButton>
+		<xDayButton name=d8>8</xDayButton>
+		<xDayButton name=d9>9</xDayButton>
+		<xDayButton name=d10>10</xDayButton>
+		<xDayButton name=d11>11</xDayButton>
+		<xDayButton name=d12>12</xDayButton>
+		<xDayButton name=d13 bgcolor=#8080c0>13</xDayButton>
+	</tr>
+	<tr>
+		<xDayButton name=d14 bgcolor=#8080c0>14</xDayButton>
+		<xDayButton name=d15>15</xDayButton>
+		<xDayButton name=d16>16</xDayButton>
+		<xDayButton name=d17>17</xDayButton>
+		<xDayButton name=d18>18</xDayButton>
+		<xDayButton name=d19>19</xDayButton>
+		<xDayButton name=d20 bgcolor=#8080c0>20</xDayButton>
+	</tr>
+	<tr>
+		<xDayButton name=d21 bgcolor=#8080c0>21</xDayButton>
+		<xDayButton name=d22>22</xDayButton>
+		<xDayButton name=d23>23</xDayButton>
+		<xDayButton name=d24>24</xDayButton>
+		<xDayButton name=d25>25</xDayButton>
+		<xDayButton name=d26>26</xDayButton>
+		<xDayButton name=d27 bgcolor=#8080c0>27</xDayButton>
+	</tr>
+	<tr>
+		<xDayButton name=d28 bgcolor=#8080c0>28</xDayButton>
+		<xDayButton name=d29>29</xDayButton>
+		<xDayButton name=d30>30</xDayButton>
+		<xDayButton name=d31>31</xDayButton>
+		<xDayBlank/>
+		<xDayBlank/>
+		<xDayBlank/>
+	</tr>
+</table>
+
+<br/>
+
+<table width=200 lrmargin=2 tbmargin=2 align=center valign=center>
+	<colorblend posn=background color=#d0d0ff rcolor=#8080c0/>
+	<tr>
+		<xMonthButton name=m1>Jan</xMonthButton>
+		<xMonthButton name=m2>Feb</xMonthButton>
+		<xMonthButton name=m3>Mar</xMonthButton>
+	</tr>
+	<tr>
+		<xMonthButton name=m4>Apr</xMonthButton>
+		<xMonthButton name=m5>May</xMonthButton>
+		<xMonthButton name=m6>Jun</xMonthButton>
+	</tr>
+	<tr>
+		<xMonthButton name=m7>Jul</xMonthButton>
+		<xMonthButton name=m8>Aug</xMonthButton>
+		<xMonthButton name=m9>Sep</xMonthButton>
+	</tr>
+	<tr>
+		<xMonthButton name=m10>Oct</xMonthButton>
+		<xMonthButton name=m11>Nov</xMonthButton>
+		<xMonthButton name=m12>Dec</xMonthButton>
+	</tr>
+</table>
+
+<br/>
+
+<table width=200 lrmargin=0 tbmargin=0 align=center valign=center border=0 innerlines=0>
+	<tr>
+		<td width=33%>
+			<Edit name=year width=100% maxchars=5/>
+		</td>
+		<td width=17%>
+		</td>
+		<td width=50% bgcolor=#d0d0ff >
+			<Button name=blank showbutton=false width=100% checkbox=true highlightcolor=#ff8000>
+				<align align=center>
+					Not specified
+				</align>
+			</button>
+		</td>
+	</tr>
+</table>
+
+</small>

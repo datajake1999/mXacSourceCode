@@ -1,0 +1,128 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a new time zone" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add time zone</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Add a new time zone
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Time zone name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name maxchars=63/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Time zone:
+		</xtdLeft>
+		<xtdright>
+			<combobox name=timezone sort=false width=100% cursel=13 cbheight=250>
+				<elem name=-720><bold>GMT - 12:00</bold> (Eniwetok, Kwajalein)</elem>
+				<elem name=-660><bold>GMT - 11:00</bold> (Midway Island, Samoa)</elem>
+				<elem name=-600><bold>GMT - 10:00</bold> (Hawaii)</elem>
+				<elem name=-540><bold>GMT - 9:00</bold> (Alaska)</elem>
+				<elem name=-480><bold>GMT - 8:00</bold> (Pacific time (US and Canada), Tijuana)</elem>
+				<elem name=-420><bold>GMT - 7:00</bold> (Mountain time (US and Canada))</elem>
+				<elem name=-360><bold>GMT - 6:00</bold> (Central time (US and Canada), Mexico City)</elem>
+				<elem name=-300><bold>GMT - 5:00</bold> (Eastern time (US and Canada), Bogota, Lima)</elem>
+				<elem name=-240><bold>GMT - 4:00</bold> (Atlantic time (Canada), Caracas, La Paz)</elem>
+				<elem name=-210><bold>GMT - 3:30</bold> (Newfoundland)</elem>
+				<elem name=-180><bold>GMT - 3:00</bold> (Buenos Aires, Georgetown, Brasilia)</elem>
+				<elem name=-120><bold>GMT - 2:00</bold> (Mid-Atlantic)</elem>
+				<elem name=-60><bold>GMT - 1:00</bold> (Azores, Cape Verde Island)</elem>
+				<elem name=0><bold>GMT + 0:00</bold> (Dublin, Edinburgh, London, Lisbon, Monrovia, Casablanca)</elem>
+				<elem name=60><bold>GMT + 1:00</bold> (Berlin, Stockholm, Rome, Bern, Brussels, Vienna, Amsterdam, Paris, Madrid)</elem>
+				<elem name=120><bold>GMT + 2:00</bold> (Athens, Helsinki, Istanbul, Eastern Europe, Cairo, Harare, Pretoria, Israel)</elem>
+				<elem name=180><bold>GMT + 3:00</bold> (Baghdad, Kuwait, Niarobi, Riyadh, Moscow, St. Petersburg)</elem>
+				<elem name=210><bold>GMT + 3:30</bold> (Tehran)</elem>
+				<elem name=240><bold>GMT + 4:00</bold> (Abu Dhabi, Muscat, Tbilisi, Kazan, Volgograd)</elem>
+				<elem name=270><bold>GMT + 4:30</bold> (Kabul)</elem>
+				<elem name=300><bold>GMT + 5:00</bold> (Islamabad, Karachi, Ekaterinburg, Tashkent)</elem>
+				<elem name=330><bold>GMT + 5:30</bold> (Bombay, Calcutta, Madras, New Delhi, Colombo)</elem>
+				<elem name=360><bold>GMT + 6:00</bold> (Almaty, Dhaka)</elem>
+				<elem name=420><bold>GMT + 7:00</bold> (Bankok, Jakarta, Hanoi)</elem>
+				<elem name=480><bold>GMT + 8:00</bold> (Beijing, Chongqing, Urumqi, Hong Kong, Singapore, Taipei, Perth)</elem>
+				<elem name=540><bold>GMT + 9:00</bold> (Tokyo, Osaka, Sapporo, Seoul, Yakutsk)</elem>
+				<elem name=570><bold>GMT + 9:30</bold> (Adelaide, Darwin)</elem>
+				<elem name=600><bold>GMT + 10:00</bold> (Brisbane, Canberra, Melbourne, Sydney, Guam, Port Moresby, Vladivostok, Hobart)</elem>
+				<elem name=660><bold>GMT + 11:00</bold> (Magadan, Soloman Islands, New Calendonia)</elem>
+				<elem name=720><bold>GMT + 12:00</bold> (Fiji, Kamchatka, Marshall Islands, Wellington, Auckland)</elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Hemisphere:
+		</xtdLeft>
+		<xtdright>
+			<combobox name=hemisphere sort=false width=100% cursel=0 cbheight=100>
+				<elem name=1><bold>Northern</bold></elem>
+				<elem name=0><bold>Southern</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Does the time zone switch to daylight savings time?
+		</xtdLeft>
+		<xtdright>
+			<combobox name=daylight sort=false width=100% cursel=0 cbheight=100>
+				<elem name=1><bold>Daylight savings</bold></elem>
+				<elem name=0><bold>No</bold> daylight savings</elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Region:
+		</xtdLeft>
+		<xtdright>
+			<combobox name=region sort=false width=100% cursel=0 cbheight=100>
+				<elem name=11><bold>Oceania</bold></elem>
+				<elem name=10><bold>Asia</bold></elem>
+				<elem name=9><bold>Indian subcontinent</bold></elem>
+				<elem name=8><bold>Russia</bold></elem>
+				<elem name=7><bold>Middle Esat</bold></elem>
+				<elem name=6><bold>Africa</bold></elem>
+				<elem name=5><bold>Europe</bold></elem>
+				<elem name=4><bold>Mid-Atlantic</bold></elem>
+				<elem name=3><bold>South America</bold></elem>
+				<elem name=2><bold>Central America</bold></elem>
+				<elem name=1><bold>North America</bold></elem>
+				<elem name=0><bold>Pacific Islands</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add time zone</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

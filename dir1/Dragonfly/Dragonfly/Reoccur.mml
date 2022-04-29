@@ -1,0 +1,182 @@
+<!xreoccurbutton>
+	<button style=check radiobutton=true group=everyndays,everyweekday,weekly,nweekly,monthday,monthrelative,yearday,yearrelative MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</button>
+</xreoccurbutton>
+
+<!xweekindex>
+	<bold><combobox width=100 MACROATTRIBUTE=1>
+		<elem name=1>first</elem>
+		<elem name=2>second</elem>
+		<elem name=3>third</elem>
+		<elem name=4>fourth</elem>
+		<elem name=5>last</elem>
+	</combobox></bold>
+</xweekindex>
+
+<!xother>
+	<bold><combobox width=100 MACROATTRIBUTE=1>
+		<elem name=2>other</elem>
+		<elem name=3>third</elem>
+		<elem name=4>fourth</elem>
+		<elem name=5>fifth</elem>
+		<elem name=6>sixth</elem>
+		<elem name=7>seventh</elem>
+		<elem name=8>eigth</elem>
+	</combobox></bold>
+</xother>
+
+<!xindexof>
+	<bold><combobox width=150 MACROATTRIBUTE=1>
+		<elem name=1>day</elem>
+		<elem name=2>weekday</elem>
+		<elem name=3>weekend day</elem>
+		<elem name=4>Sunday</elem>
+		<elem name=5>Monday</elem>
+		<elem name=6>Tuesday</elem>
+		<elem name=7>Wednesday</elem>
+		<elem name=8>Thursday</elem>
+		<elem name=9>Friday</elem>
+		<elem name=10>Saturday</elem>
+	</combobox></bold>
+</xindexof>
+
+<!xdow>
+	<bold><combobox width=100 MACROATTRIBUTE=1>
+		<elem name=0>Sunday</elem>
+		<elem name=1>Monday</elem>
+		<elem name=2>Tuesday</elem>
+		<elem name=3>Wednesday</elem>
+		<elem name=4>Thursday</elem>
+		<elem name=5>Friday</elem>
+		<elem name=6>Saturday</elem>
+	</combobox></bold>
+</xdow>
+
+<!xmonthcombo>
+	<bold><combobox width=130 MACROATTRIBUTE=1>
+		<elem name=1>January</elem>
+		<elem name=2>February</elem>
+		<elem name=3>March</elem>
+		<elem name=4>April</elem>
+		<elem name=5>May</elem>
+		<elem name=6>June</elem>
+		<elem name=7>July</elem>
+		<elem name=8>August</elem>
+		<elem name=9>September</elem>
+		<elem name=10>October</elem>
+		<elem name=11>November</elem>
+		<elem name=12>December</elem>
+	</combobox></bold>
+</xmonthcombo>
+
+<!xlc>
+	<td MACROATTRIBUTE=1 width=56 valign=center align=center>
+		<?Macrocontent?>
+	</td>
+</xlc>
+
+<!xrc>
+	<td MACROATTRIBUTE=1 width=100% valign=center>
+		<?Macrocontent?>
+	</td>
+</xrc>
+
+<xtablecenter>
+<tr>
+<xlc>
+	<xreoccurbutton name=everyndays/>
+</xlc>
+<xrc>
+	Every <edit name=everyndaysedit width=35 text=1 maxchars=16 selall=true/> days.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=everyweekday checked=true/>
+</xlc>
+<xrc>
+	Every weekday.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=weekly/>
+</xlc>
+<xrc>
+	Every week on
+	<br/>
+	<blockquote><italic>
+		<button name=weeklysun checkbox=true style=x>Sunday</button>
+		<button name=weeklymon checkbox=true style=x>Monday</button>
+		<button name=weeklytues checkbox=true style=x>Tueday</button>
+		<button name=weeklywed checkbox=true style=x>Wednesday</button>
+		<button name=weeklythurs checkbox=true style=x>Thursday</button>
+		<button name=weeklyfri checkbox=true style=x>Friday</button>
+		<button name=weeklysat checkbox=true style=x>Saturday</button>
+	</italic></blockquote>
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=nweekly/>
+</xlc>
+<xrc>
+	Every <xother name=nweeklyother/> <xdow name=nweeklydow/>.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=monthday/>
+</xlc>
+<xrc>
+	Day <edit name=monthdayedit width=35 text=1 maxchars=16 selall=true/> of every month.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=monthrelative/>
+</xlc>
+<xrc>
+	The <xweekindex name=monthrelativeweek/> <xindexof name=monthrelativeof/> of every month.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=yearday/>
+</xlc>
+<xrc>
+	Every <xmonthcombo name=yearmonth/> <edit name=yeardayedit width=35 text=1 maxchars=16 selall=true/>.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=yearrelative/>
+</xlc>
+<xrc>
+	The <xweekindex name=yearrelativeweek/> <xindexof name=yearrelativeof/> of every <xmonthcombo name=yearrelativemonth/>.
+</xrc>
+</tr>
+
+</xtablecenter>
+
+<br>
+	What date does the event <bold>start on or after</bold>?
+</br>
+<p align=right>
+	<date name=starton width=50% blank=Immediately/>
+</p>
+
+<br>
+	What date does the reocurring event <bold>stop</bold>?
+</br>
+<p align=right>
+	<date name=endon width=50% blank=Indefinite/>
+</p>

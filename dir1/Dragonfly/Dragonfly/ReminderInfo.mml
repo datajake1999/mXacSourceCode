@@ -1,0 +1,35 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Reminders page"/>
+<<<$IFCOLOR>>><image posn=background scale=50% type=tile jpgresource=207/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Reminders" page
+</xPageTitle>
+
+<p>
+	The reminders page allows you to have the computer to remind you
+	to complete a task on a certain date; it works a bit better than a
+	string around your finger.
+</p>
+
+<p>
+	To use the reminder functionality, open up the "<a href=r:114>Reminders</a>" page.
+	Select the date you want the reminder to go off, type in the text you
+	want reminded to you, and press "Add Reminder." After that you can forget about
+	it until you're reminded in the "<a href=r:109>Today</a>" page. If you want to
+	make sure not to forget then set the alarm so you'll get notified that day.
+</p>
+
+<p>
+	You can use Dragonfly as an alarm clock by setting up a single reminder with an
+	alarm, or even by using reoccurring reminders.
+</p>
+
+<p>
+	<bold>Tip:</bold> The reminders page allows you to quickly and easily add
+	tasks for you to do later on. However, it may not be powerful enough
+	for whatever project you're looking on. The <a href=r:115>Tasks</a> page
+	or the <a href=r:145>Projects</a> page may be more suitable for your uses.
+</p>
+

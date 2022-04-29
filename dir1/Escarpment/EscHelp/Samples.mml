@@ -1,0 +1,41 @@
+<pageinfo title="Sample Escarpment Applications"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Sample Escarpment Applications</xPageTitle>
+
+<p>
+	This page lists the sample applications in the Escarpment SDK (which you're using)
+	and ones available off the Internet.
+</p>
+
+<xsectiontitle>In the SDK</xsectiontitle>
+
+<xul>
+	<li>
+		<bold>EscHelp.exe</bold> - The application you're running now. Not only does
+		it provide documentation for the Escarpment SDK, it's a sample too.
+		The source code is installed by the SDK.
+	</li>
+	<li>
+		<bold>MMLEdit.exe</bold> - Lets you edit MML files. The source code is
+		installed by the SDK.
+	</li>
+	<li>
+		<bold>SampleControls.exe</bold> - While this application doens't do much of
+		anything functionally, it does show you how to write and incorporate your
+		own custom controls. The source also includes code for most of the Escarpment
+		controls.
+	</li>
+</xul>
+
+
+<xsectiontitle>On the Internet</xsectiontitle>
+
+<xul>
+	<li>
+		<bold>Dragonfly</bold> - Dragonfly
+		is a PIM written in Escarpment. You can find it
+		on <a href="http://www.mxac.com.au/Dragonfly.htm">http://www.mxac.com.au/Dragonfly.htm</a>.
+	</li>
+</xul>

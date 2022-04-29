@@ -1,0 +1,57 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Billing"/>
+
+<xPageTitle>
+	Billing
+</xPageTitle>
+
+<xNotFunctional/>
+
+<p>
+	<xMoreInfo href=r:111/>The "Billing" page is useful if you're a small business
+	doing consulting. It lets you assign people and meetings to a billing register
+	so that all meetings, notes, and phone calls to them are recorded and a bill
+	is automatically tallied.
+</p>
+<xbr/>
+
+<xSectionTitle>
+	Current billing accounts
+</xSectionTitle>
+
+<!xBillName>
+	<tr>
+		<td>
+			<?MacroContent?>
+		</td>
+	</tr>
+</xBillName>
+
+<xListTable>
+	<xBillName>
+		<a href=r:111>The Walker Corporation</a>
+		<br/>
+		$50.00/hour. Total billed this month $532.00.
+	</xBillName>
+	<xBillName>
+		<a href=r:111>Fred Smith</a>
+		<br/>
+		$30.00/hour. Total billed this month $122.00.
+	</xBillName>
+</xListTable>
+
+<xbr/>
+
+<xChoiceButton href=r:111>
+	<bold>Add account</bold>
+	<br/>
+	Add a new billing account.
+</xChoiceButton>
+
+<xChoiceButton href=r:111>
+	<bold>Remove account</bold>
+	<br/>
+	Remove a billing account.
+</xChoiceButton>
+

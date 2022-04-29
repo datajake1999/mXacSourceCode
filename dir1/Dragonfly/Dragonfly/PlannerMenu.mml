@@ -1,0 +1,83 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Menu" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button href=OK accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<br/>
+
+<!xreoccurbutton>
+	<button style=check radiobutton=true group=date,time,split MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</button>
+</xreoccurbutton>
+
+<!xlc>
+	<td MACROATTRIBUTE=1 width=56 valign=center align=center>
+		<?Macrocontent?>
+	</td>
+</xlc>
+
+<!xrc>
+	<td MACROATTRIBUTE=1 width=100% valign=center>
+		<?Macrocontent?>
+	</td>
+</xrc>
+
+<small><xtablecenter>
+<tr>
+<xlc>
+	<xreoccurbutton name=date checked=true/>
+</xlc>
+<xrc>
+	Move the task to another day, <bold><big><date width=90% name=dateto/></big></bold>.
+</xrc>
+</tr>
+
+<tr>
+<xlc>
+	<xreoccurbutton name=time/>
+</xlc>
+<xrc>
+	Don't start the task until <bold><big><time width=150 name=starttime blank="Any time"/></big></bold>.
+</xrc>
+</tr>
+
+<<<$IFNOTCALL>>>
+<tr>
+<xlc>
+	<xreoccurbutton name=split/>
+</xlc>
+<xrc>
+	Split the task into two smaller parts. The first one has a duration
+	of <bold><big><edit selall=true maxchars=20 width=100 name=splittime/></big></bold> hours.
+</xrc>
+</tr>
+<<<$ENDIFNOTCALL>>>
+
+</xtablecenter></small>
+</td></tr>
+
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button href=OK accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

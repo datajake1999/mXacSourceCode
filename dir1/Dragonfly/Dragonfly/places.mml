@@ -1,0 +1,59 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Places"/>
+
+<xPageTitle>
+	Places
+</xPageTitle>
+
+<xNotFunctional/>
+
+<p>
+	<xMoreInfo href=r:111/>The "Places" page lets you keep track of different places
+	you've visited or remembered.
+</p>
+<xbr/>
+
+<xSectionTitle>
+	Quickly-added places
+</xSectionTitle>
+
+<p>
+	While you were using other parts of Dragonfly you "quickly added" some places.
+	Their names are stored in Dragonfly but some information about them is
+	incomplete. When you have the chance, please fill in the rest of the place
+	information.
+</p>
+
+<blockquote><p>
+	<xQuickFillButton href=r:111>Meeting room 1123</xQuickFillButton>
+	<xQuickFillButton href=r:111>Uluru</xQuickFillButton>
+</p></blockquote>
+
+
+<xbr/>
+
+<xChoiceButton href=r:111>
+	<bold>Look up</bold>
+	<br/>
+	Look up a place in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:111>
+	<bold>Show me a list</bold>
+	<br/>
+	Displays a list of places in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:111>
+	<bold>Add</bold>
+	<br/>
+	Add a new place to your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:111>
+	<bold>Remove</bold>
+	<br/>
+	Remove a place from your address book.
+</xChoiceButton>
+

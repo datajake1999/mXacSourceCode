@@ -1,0 +1,71 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Daily wrap-up" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=221/><<<$ENDIFCOLOR>>>
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	Daily wrap-up for <<<DATE>>>
+</xPageTitle>
+
+
+<font color=#000000><xTableCenter>
+	<xtrheader>Automatically logged</xtrheader>
+	<<<$LOG>>>
+</xtablecenter></font>
+
+<font color=#000000><xtablecenter>
+	<xtrheader>Details</xtrheader>
+	<tr>
+		<xtdleft>
+			Was it a good day?
+		</xtdleft>
+		<xtdright>
+			<bold><<<GOODDAY>>></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How did you feel today?
+		</xtdleft>
+		<xtdright>
+			<bold><<<HEALTH>>></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			<<<DEEPQUESTION>>>
+		</xtdleft>
+		<xtdright>
+			<bold><<<$DEEPANSWER>>></bold>
+		</xtdright>
+	</tr>
+</xtablecenter></font>
+
+<xtablecenter>
+	<xtrheader>In the morning</xtrheader>
+	<tr><td>
+		<align parlinespacing=0><font color=#000000><<<MORNING>>></font></align>
+	</td></tr>
+	<xtrheader>In the afternoon</xtrheader>
+	<tr><td>
+		<align parlinespacing=0><font color=#000000><<<AFTERNOON>>></font></align>
+	</td></tr>
+	<xtrheader>In the evening</xtrheader>
+	<tr><td>
+		<align parlinespacing=0><font color=#000000><<<EVENING>>></font></align>
+	</td></tr>
+	<<<$REFLECTION>>>
+</xtablecenter>
+
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit this daily wrap-up</bold>
+	<br/>
+	Change some information contained in this daily wrap-up.
+</xChoiceButton>
+
+
+</font>

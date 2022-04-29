@@ -1,0 +1,74 @@
+<<<$TEMPLATE2>>>
+<?Include resource=201?>
+<PageInfo index=false title="Load a user from disk or a backup"/>
+
+<xPageTitle>
+	Load a user from disk or a backup
+</xPageTitle>
+
+<p>
+	This page lets you load Dragonfly data from a backup or disk (such as a Zip-disk)
+	onto the current machine.
+</p>
+
+<xbr/>
+
+<xtablecenter>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#c0ffc0 bcolor=#a0e0a0/><<<$ENDIFCOLOR>>>
+	<xtrheader>Restore from backup</xtrheader>
+	<tr><td>
+<p>
+	To restore a backup, or transfer Dragonfly data from another machine:
+</p>
+
+<ol>
+	<li>
+		If you a restoring a backup, the backup page would have led you through the
+		steps of backing up your Dragonfly files. If you are transferring files from
+		another PC, use the "Backup to disk" button off of the "Documentation" page.
+	</li>
+	<li>
+		<bold>Copy the Dragonfly data directory on your local hard drive.</bold> Use
+		Windows explorer to copy the directory and all its contents.
+	</li>
+	<li>
+		<bold>Type the full directory
+		name</bold> where you copied the files here: <edit width=75% multiline=false selall=true name=dir text="c:\directories\DragonflyDirectory"/>
+	</li>
+	<li>
+		<bold>Type the name you wishto log on
+		as</bold> here: <edit width=75% multiline=false selall=true name=login text="Your name"/>.
+	</li>
+	<li>
+		Press <bold>Load in user</bold> at the bottom of this page.
+	</li>
+</ol>
+
+<p align=right>
+			<button href=next>
+				Load in user
+				<xHoverHelp>
+					Press this to load the user from the specified directory.
+				</xHoverHelp>
+			</button>
+</p>
+
+</td></tr></xtablecenter>
+
+<xbr/>
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<td width=50% align=left>
+			<button style=leftarrow href=back>
+				Back
+				<xHoverHelpShort>
+					Go back to the previous page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+		<td width=50%>
+		</td>
+	</tr>
+</table>
+

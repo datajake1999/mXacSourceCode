@@ -1,0 +1,51 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Time zones"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+
+<xPageTitle>
+	Time zones
+</xPageTitle>
+
+<p>
+	This page shows you the current time around the world. <italic>(I may have the <a>daylight
+	savings time<xHoverHelp>Daylight savings time starts on the first Sunday in April and
+	ends on the last Sunday in October in the northern hemisphere. It's opposite in the southern
+	hemisphere.</xHoverHelp></a> settings wrong for some cities/regions. If you find a problem, please
+	E-mail me at <xMyEmail/>.)</italic>
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<!xTimeZone>
+	<td with=75%>
+		<bold><?MacroContent?></bold>
+	</td>
+</xTimeZone>
+
+<!xTimeInZone>
+	<td width=25%>
+		<italic><?MacroContent?></italic>
+	</td>
+</xTimeInZone>
+
+<xlisttable innerlines=0>
+	<<<$TIMEZONES>>>
+</xlisttable>
+
+<xbr/>
+
+<xChoiceButton href=add>
+	<bold>Add a new time zone</bold>
+	<br/>
+	Add a new time zone to the list.
+</xChoiceButton>
+
+<xChoiceButton href=restore>
+	<bold>Restore time zones to initial settings</bold>
+	<br/>
+	Press this if you want to return the time zone list to the initial settings.
+</xChoiceButton>

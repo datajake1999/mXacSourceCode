@@ -1,0 +1,67 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View phone conversation notes" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	View phone conversation notes
+</xPageTitle>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<tr>
+		<xlt>Incoming/outgoing call:</xlt>
+		<xrt><<<CALLORIGIN>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Call recipient:</xlt>
+		<xrt><<<$PERSON>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Phone number:</xlt>
+		<xrt><<<DESCRIPTION>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Call date/time:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+</xTableCenter>
+
+
+<xTableCenter innerlines=0>
+	<xtheader>Phone conversation notes</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<MEETINGNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the phone conversation log.
+</xChoiceButton>
+
+

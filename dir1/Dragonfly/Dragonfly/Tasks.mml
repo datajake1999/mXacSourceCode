@@ -1,0 +1,34 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Tasks"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=208/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Tasks
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:162/>The "Tasks" page lets you view, add, and remove tasks
+	(work items).
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=addtask>
+	<bold>Add a new task</bold>
+	<br/>
+	Add a new task (work item) to your list.
+</xChoiceButton>
+
+<xChoiceButton name=addreoccur>
+	<bold>Add a new reoccurring task</bold>
+	<br/>
+	Add a task that reoccurs regularly.
+</xChoiceButton>
+
+<null>
+	<<<$TASKS>>>
+</null>
+

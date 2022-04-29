@@ -1,0 +1,26 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a new subproject" index=false/>
+
+<table width=100% border=0 innerlines=0><tr><td>
+<xPageTitle>
+	Add a new subproject
+</xPageTitle>
+
+<p>
+	Type in the name of the subproject you wish to add:
+</p>
+
+<xeditOneline name=subproject defcontrol=true/>
+
+</td></tr>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button href=ok accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+	<button posn=edgeleft href=cancel accel=escape>
+		<font color=#ffffff>Cancel</font>
+	</button>
+</align>
+</td></tr></table>

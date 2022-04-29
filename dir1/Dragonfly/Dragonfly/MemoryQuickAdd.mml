@@ -1,0 +1,57 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a memory" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add memory</font>
+		<xhoverhelp>
+			Press this to quickly add the memory.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Quickly add memory
+</xPageTitle>
+
+<p>
+	Just type in a short one-line description of the memory, enough so
+	that you'll know what memory you were referring to. The description
+	will appear in the Memory Lane page to remind you.
+</p>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			One-line description:
+		</xtdleft>
+		<xtdright><xEditInTable name=name defcontrol=true/></xtdright>
+	</tr>
+</xtableclear>
+
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add memory</font>
+		<xhoverhelp>
+			Press this to quickly add the memory.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

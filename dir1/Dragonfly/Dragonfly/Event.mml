@@ -1,0 +1,50 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Special days"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Special days
+</xPageTitle>
+
+<p>
+	This page lets you tell Dragonfly what holidays, birthdays, anniversaries, etc.
+	you should be reminded of every year. They appear on
+	your <a href=r:112>Calendar</a>, <a href=r:270>Annual calendar</a>, and <a href=r:258>Combo</a> pages.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=addevent>
+	<bold>Add a new special day</bold>
+	<br/>
+	Add a holiday, anniversay, birthday, etc. <italic>Note: The holiday may be added more
+	easily though the Holidays page, and a birthday can automatically be added when you
+	enter someone's birth-date into their personal information.</italic>
+</xChoiceButton>
+
+<null>
+	<<<$EVENTS>>>
+</null>
+
+<xbr/>
+
+<xChoiceButton href=r:237>
+	<bold>Holidays</bold>
+	<br/>
+	Select the holidays appropriate to your country and religion.
+</xChoiceButton>
+
+<xChoiceButton href=r:112>
+	<bold>Monthly calendar</bold>
+	<br/>
+	Shows you a monthly calendar.
+</xChoiceButton>
+
+<xChoiceButton href=r:270>
+	<bold>Annual calendar</bold>
+	<br/>
+	Displays the calendar for the entire year.
+</xChoiceButton>

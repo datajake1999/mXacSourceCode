@@ -1,0 +1,1972 @@
+<pageinfo title="CEscPage"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>CEscPage</xPageTitle>
+
+
+<p>
+	CEscPage is the C++ object behind basic page functionality.
+	You will get access to PCEscPage from your page callback function.
+</p>
+
+
+<xSectionTitle>PCESCPAGECALLBACK callback function</xSectionTitle>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			The callback's page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message for the callback to handle.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pParam</xtd2>
+		<xtd3>
+			Message-specific parameters.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xReturns/>
+		<xtd3>
+			The callback should return TRUE if it completely handles the message.
+			FALSE if the default handler should deal with the message.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<xSectionTitle>CEscControl Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarIFONTINFO/>
+		<xtd2>m_fi</xtd2>
+		<xtd3>
+			Default font for the page. If you need to change you need to call
+			CEscPage::ReInterpret().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCListFixed/>
+		<xtd2>m_listESCACCELERATOR</xtd2>
+		<xtd3>
+			Accelerators trapped and handled by the default page message handler.
+			If you have any accelerators for the page, fill in an ESCACCELERATOR
+			structure and call m_listESCACCLERATOR.Add(&amp;accel).
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCMem/>
+		<xtd2>m_mem</xtd2>
+		<xtd3>
+			Your page callback can use this memory block as it likes.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>m_pCallback</xtd2>
+		<xtd3>
+			Page callback function.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>m_pControlFocus</xtd2>
+		<xtd3>
+			The control that currently has keyboard focus. NULL if nothing has focus. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>m_pNode</xtd2>
+		<xtd3>
+			Root node that was used to create the page.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>m_pUserData</xtd2>
+		<xtd3>
+			A pointer to user data, passed in when the page was created through the window.
+			See CEscWindow::PageDisplay() or CEscWindow::PageDialog().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>m_pWindow</xtd2>
+		<xtd3>
+			CEscWindow control hosting the page.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>m_rTotal</xtd2>
+		<xtd3>
+			Total amount of space used in page coordinates. left and top are always 0.
+			right is the width of the client rectangle of the window.
+			bottom is the height of all text and graphics in the page.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>m_rMargin</xtd2>
+		<xtd3>
+			Left, right, top, bottom margin in pixels. Set by &lt;Pageinfo&gt;.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>m_rVisible</xtd2>
+		<xtd3>
+			The page space that's currently visible in the client are of m_pWindow.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCEscTextBlock/>
+		<xtd2>m_TextBlock</xtd2>
+		<xtd3>
+			The text block object used to display the page. Most applications will not touch this.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCBTree/>
+		<xtd2>m_treeControls</xtd2>
+		<xtd3>
+			A binary tree indexed by control names and containing a PCEscControl for the
+			control. You can use this to determine control ordering. Most applications
+			will not need to touch this.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>CEscPage::CEscPage</xSectionTitle>
+
+<p>
+	CEscPage constructor. Most application will not call <xCodeInline>new CEscPage</xCodeInline>.
+	Instead, the page will be created when they tell a CEscWindow to display
+	a new page.
+</p>
+
+
+
+<xSectionTitle>CEscPage::~CEscPage</xSectionTitle>
+
+<p>
+	CEscPage destructor. Most application will not call <xCodeInline>delete CEscPage</xCodeInline>.
+	Instead, the page will be deleted by CEscWindow.
+</p>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::ControlFind</xSectionTitle>
+
+<p>
+	Given a control's name, finds it in the page.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszName</xtd2>
+		<xtd3>
+			Control name to look for.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the control, or NULL if can't find.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::ControlFromPoint</xSectionTitle>
+
+<p>
+	Given a point (in page coord) return a pointer to the
+	control that's there. Good for hit testing.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Point in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xReturns/>
+		<xtd3>
+			Pointer to the control underneath the point. Returns NULL if cant find.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::CoordPageToScreen</xSectionTitle>
+
+<p>
+	Convert from page coordinates to screen coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::CoordPageToWindow</xSectionTitle>
+
+<p>
+	Convert from page coordinates to PCEscWindow (window) coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::CoordScreenToPage</xSectionTitle>
+
+<p>
+	Convert from screen coordinates to page coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::CoordWindowToPage</xSectionTitle>
+
+<p>
+	Convert from PCEscWindow (window) coordinates to page coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::Exit</xSectionTitle>
+
+<p>
+	Cause the page to close. This will: 1) Post the exit code onto the window.
+	2) Destroy this page object.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszExitCode</xtd2>
+		<xtd3>
+			Exit code to return up to the application.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::FocusGet</xSectionTitle>
+
+<p>
+	Returns the control that currently has focus.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscControl/>
+		<xReturns/>
+		<xtd3>
+			Control that has focus. This may be NULL.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscPage::FocusSet</xSectionTitle>
+
+<p>
+Sets the focus to a specific control. This:
+</p>
+
+<ol>
+	<li>Makes sure the control actually wants focus. Return NULL if not.</li>
+	<li>Tells the old control its no longer in focus, setting its m_fFocus and ESCM_FOCUS.</li>
+	<li>Tells the new control its in focus, setting its m_fFocus and ESCM_FOCUS</li>
+	<li>Remembers this</li>
+</ol>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			Control to set the focus to.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::FocusToNextControl</xSectionTitle>
+
+<p>
+	Does the effect of a tab (or shift tab) and moved the focus
+	forward or backward.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fForward</xtd2>
+		<xtd3>
+			If true move forward, FALSE backward.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::Init</xSectionTitle>
+
+<p>
+	Initializes a page. This needs to be called right after the CEscPage object
+	is created. Because most applications have CEscWindow create their page, this
+	does not need to be called.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			MML text.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window that will be hosting the page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			Page-specific user data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font to use. If NULL then don't set.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarPSTR/>
+		<xtd2>pszPageText</xtd2>
+		<xtd3>
+			ANSI MML text.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window that will be hosting the page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			Page-specific user data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font to use. If NULL then don't set.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+<p>or</p>
+
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwResource</xtd2>
+		<xtd3>
+			"MML" resource ID to load page MML from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window that will be hosting the page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			Page-specific user data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font to use. If NULL then don't set.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			PCMMLNode to create the page from. The node will NOT be deleted by CEscPage.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window that will be hosting the page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			Page-specific user data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font to use. If NULL then don't set.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::InitFile</xSectionTitle>
+
+<p>
+	Initializes a page. This needs to be called right after the CEscPage object
+	is created. Because most applications have CEscWindow create their page, this
+	does not need to be called.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFile</xtd2>
+		<xtd3>
+			MML file (ANSI or Unicode) to load in.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPageCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Page callback. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscWindow/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window that will be hosting the page.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pUserData</xtd2>
+		<xtd3>
+			Page-specific user data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font to use. If NULL then don't set.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::Invalidate</xSectionTitle>
+
+<p>
+	Invalidates a section of the page so we know it needs painting.
+	Basically does some coordinate translations and calls the Windows API
+	InvalidateRect
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pRect</xtd2>
+		<xtd3>
+			Rectangle. If NULL invalidates entire page.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::IsControlValid</xSectionTitle>
+
+<p>
+	Returns TRUE if the control is valid, FALSE if it no longer exists. Sometimes
+	link controls stop existing after the page is resized.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			Control to test.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscPage::Link</xSectionTitle>
+
+<p>
+	Callsd Message (ESCM_LINK). If doesn't handle then the default handler will
+	a) If it's http: https: mailto:, call up the Internet,
+	b) else, do Exit().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszExitLink</xtd2>
+		<xtd3>
+			Link to run.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MBError</xSectionTitle>
+
+<p>
+	Displays an error message using Escarpment.
+</p>
+<p align=right><button href=MBError>Test MBError</button></p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fCancel</xtd2>
+		<xtd3>
+			If set to TRUE the cancel button is displayed along with the OK button.
+			Defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDOK - OK button was selected. </li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MBInformation</xSectionTitle>
+
+<p>
+	Displays an informational message using Escarpment.
+</p>
+<p align=right><button href=MBInformation>Test MBInformation</button></p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fCancel</xtd2>
+		<xtd3>
+			If set to TRUE the cancel button is displayed along with the OK button.
+			Defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDOK - OK button was selected. </li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MBSpeakInformation and MBSpeakWarning</xSectionTitle>
+
+<p>
+	If TTS is installed and turned on, this speaks
+	the message instead of bringing up a message box. If it's not
+	installed it displays a message box containing information that the user should
+	know, but which isn't absoluately required..
+</p>
+<p align=right><button href=MBSpeakInformation>Test MBSpeakInformation</button></p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDOK - OK button was selected. </li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MBWarning</xSectionTitle>
+
+<p>
+	Displays an warning message using Escarpment.
+</p>
+<p align=right><button href=MBWarning>Test MBWarning</button></p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fCancel</xtd2>
+		<xtd3>
+			If set to TRUE the cancel button is displayed along with the OK button.
+			Defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDOK - OK button was selected. </li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MBYesNo</xSectionTitle>
+
+<p>
+	Displays an yes/no question message using Escarpment.
+</p>
+<p align=right><button href=MBYesNo>Test MBYesNo</button></p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fCancel</xtd2>
+		<xtd3>
+			If set to TRUE the cancel button is displayed along with the yes/no button.
+			Defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDYES - Yes button pressed</li>
+				<li>IDNO - No button pressed</li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::Message</xSectionTitle>
+
+<p>
+	Sends a message to the page. This:
+	1) Passes it to m_pCallback if there is one. If this returns FALSE then
+	2) Default message handler
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message, ESCM_XXX.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pParam</xtd2>
+		<xtd3>
+			Pointer to message-specific parameters structure.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscPage::MessageBox</xSectionTitle>
+
+<p>
+	Displays a message using Escarpment.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszTitle</xtd2>
+		<xtd3>
+			Title for the message box.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSummary</xtd2>
+		<xtd3>
+			1 to 2 sentence summary of message.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFinePrint</xtd2>
+		<xtd3>
+			Fine print in the message. May be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwType</xtd2>
+		<xtd3>
+			Type. One or more of the following flags:
+			<p/>
+			<xul>
+				<li>MB_ABORTRETRYIGNORE - The message box contains three push buttons: Abort, Retry, and Ignore. </li>
+				<li>MB_OK - The message box contains one push button: OK. This is the default. </li>
+				<li>MB_OKCANCEL - The message box contains two push buttons: OK and Cancel. </li>
+				<li>MB_RETRYCANCEL - The message box contains two push buttons: Retry and Cancel. </li>
+				<li>MB_YESNO - The message box contains two push buttons: Yes and No. </li>
+				<li>MB_YESNOCANCEL - The message box contains three push buttons: Yes, No, and Cancel. </li>
+			</xul>
+			<p>And...</p>
+			<xul>
+				<li>MB_ICONWARNING - The message box contains a warning.</li>
+				<li>MB_ICONINFORMATION - The message box contains information for the user.</li>
+				<li>MB_ICONQUESTION - The message box is asking the user a question.</li>
+				<li>MB_ICONERROR - The message box is displaying an error.</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xReturns/>
+		<xtd3>
+			One of the following - Will always return IDCANCEL if user presses ESCAPE key.
+			<p/>
+			<xul>
+				<li>IDABORT - Abort button was selected.</li>
+				<li>IDCANCEL - Cancel button was selected. </li>
+				<li>IDIGNORE - Ignore button was selected. </li>
+				<li>IDNO - No button was selected. </li>
+				<li>IDOK - OK button was selected. </li>
+				<li>IDRETRY - Retry button was selected.</li> 
+				<li>IDYES - Yes button was selected.</li>
+			</xul>
+ 		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::MouseCaptureRelease</xSectionTitle>
+
+<p>
+	A control calls this to release its capture on the mouse.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			The control releasing the capture.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscPage::ReInterpret</xSectionTitle>
+
+<p>
+	Cause the page to be reinterpreted - such as if the size of
+	the window has changed and text needs to be rewrapped. Calls m_TextBlock.ReInterpret(),
+	and then invalidates window.
+</p>
+
+<p>
+	Very few applications will need to call ReInterpret().
+</p>
+
+<xTableParam>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::SetCursor</xSectionTitle>
+
+<p>
+	Sets the cursor that the page uses.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHCURSOR/>
+		<xtd2>hCursor</xtd2>
+		<xtd3>
+			Handle to the cursor.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+<p>or</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Cursor ID. Use values from LoadCursor(NULL, dwID). Or, use IDC_HANDCURSOR
+			or IDC_NOCURSOR to use Escarpment-specific cursors.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscPage::Update</xSectionTitle>
+
+<p>
+	Forces an update of any invalidated areas. Basically calls UpdateWindow.
+</p>
+
+<xTableParam>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::VScroll</xSectionTitle>
+
+<p>
+	Causes the page to vertical scroll so pixel (page coord) iY is
+	at the top of the windows client area.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iY</xtd2>
+		<xtd3>
+			Page-coordinate pixel that should be at the top of the window's client.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscPage::VScrollToSection</xSectionTitle>
+
+<p>
+	Scrolls to a section, defined by the &lt;Section&gt; tag.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Name of the section to scroll to. This should <bold>not</bold> begin
+			with "#".
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>Messages</xSectionTitle>
+
+
+
+
+<xSectionTitle>ESCM_ACTIVATE</xSectionTitle>
+<p>
+	Called when the page's window is activated or deactivated. the default
+	message proc does nothing.
+</p>
+
+<p>The ESCMACTIVATE structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarWORD/>
+		<xtd2>fActive</xtd2>
+		<xtd3>
+			See WM_ACTIVATE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWORD/>
+		<xtd2>fMinimized</xtd2>
+		<xtd3>
+			See WM_ACTIVATE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHWND/>
+		<xtd2>hwndPrevious</xtd2>
+		<xtd3>
+			See WM_ACTIVATE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>ESCM_ACTIVATEAPP</xSectionTitle>
+<p>
+	Called when the page's window is activated or deactivated. the default
+	message proc does nothing.
+</p>
+
+<p>The ESCMACTIVATEAPP structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fActive</xtd2>
+		<xtd3>
+			See WM_ACTIVATEAPP.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwThreadID</xtd2>
+		<xtd3>
+			See WM_ACTIVATEAPP.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_CHAR and ESCM_SYSCHAR</xSectionTitle>
+
+<p>
+	Called to indicate a key was pressed.
+</p>
+
+<p>
+	Called if the control with focus doesn't take it. Allows the page to capture
+	it. The default behavior is to look through m_listAccel. If not,
+	go through all the controls and see if it matches
+	an acclerator from m_listAccelNoFocus or m_AccelSwitch.
+</p>
+
+<p>The ESCMCHAR and ESCMSYSCHAR structures are:</p>
+<xTableStructure>
+	<tr>
+		<xVarWCHAR/>
+		<xtd2>wCharCode</xtd2>
+		<xtd3>
+			See WM_CHAR.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>lKeyData</xtd2>
+		<xtd3>
+			See WM_CHAR.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEaten</xtd2>
+		<xtd3>
+			Should set this to TRUE if eat it. Leave as FALSE if not.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>ESCM_CLOSE</xSectionTitle>
+<p>
+	A close request as come in frm alt-f4 or pressing the close box.
+	the default behavious is to call Exit(). If an app doesn't want to
+	close it can trap this.
+</p>
+
+
+
+<xSectionTitle>ESCM_CONSTRUCTOR</xSectionTitle>
+
+<p>
+	Called in the constructor of the control/page. The callback function can
+	set up any parameters in here. Called after the other member variables in
+	the control/page have been set up.
+</p>
+
+
+
+
+<xSectionTitle>ESCM_DESTRUCTOR</xSectionTitle>
+
+<p>
+	Called in the destructor of the control/page before the other member
+	variables have been freed. The callback can do any releases here.
+</p>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_ENDSESSION</xSectionTitle>
+<p>
+	WM_Endsession is called. The default behavior is to call Exit().
+</p>
+
+
+<p>The ESCMENDSESSION structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEndSession</xtd2>
+		<xtd3>
+			See WM_ENDSESSION.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>fLogOff</xtd2>
+		<xtd3>
+			See WM_ENDSESSION.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+<xSectionTitle>ESCM_INITPAGE</xSectionTitle>
+<p>
+	Called after everything in the page has been compiled. Called so the page
+	can initialize itself. The default message proc does nothing.
+</p>
+
+
+
+
+
+<xSectionTitle>ESCM_INTERPRETERROR</xSectionTitle>
+<p>
+	Called when there's an error on interpretation. the application can save
+	the error away to show the user. The default message proc does nothing.
+</p>
+
+<p>The ESCMINTERPETERROR structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPCEscError/>
+		<xtd2>pError</xtd2>
+		<xtd3>
+			Error object.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCM_KEYDOWN, ESCM_KEYUP, ESCM_SYSKEYDOWN, and ESCM_SYSKEYUP</xSectionTitle>
+
+<p>
+	Called to indicate a key was pressed down, or lifted up.
+</p>
+
+<p>
+	Called if the control doesn't eat. The default behaviour is to do nothing.
+</p>
+
+<p>The ESCMKEYDOWN and ESCMKEYUP structures are:</p>
+<xTableStructure>
+	<tr>
+		<xVarInt/>
+		<xtd2>nVirtKey</xtd2>
+		<xtd3>
+			See WM_KEYDOWN/UP.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>lKeyData</xtd2>
+		<xtd3>
+			See WM_KEYDOWN/UP.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEaten</xtd2>
+		<xtd3>
+			Should set this to TRUE if eat it. Leave as FALSE if not.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_LBUTTONDOWN, ESCM_MBUTTONDOWN, and ESCM_RBUTTONDOWN</xSectionTitle>
+
+<p>
+	Passed down to whatever control it's for, and remember what control. For a link,
+	special case.
+</p>
+
+<p>The ESCMLBUTTONDOWN structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_LBUTTONDOWN.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>ESCM_LBUTTONUP, ESCM_MBUTTONUP, and ESCM_RBUTTONUP</xSectionTitle>
+
+<p>
+	Default behavior is to pass down to control.
+</p>
+
+<p>The ESCMLBUTTONUP structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_LBUTTONUP.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_LINK</xSectionTitle>
+<p>
+	CEscPage::Link was called. The default behaviour is to see if the string
+	starts with "http:", "https:", or "mailto:". If so, the link is ShellExecute()-ed.
+	else, Exit(sz) is called. The page may trap this for whatever reason.
+</p>
+
+
+<p>The ESCMLINK structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Link string.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEENTER</xSectionTitle>
+
+<p>
+	Default behaviour is to see if a control has been entered and deal with that
+	by passing onto the control.
+	Also special case for links in the text since they're not official controls.
+</p>
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEHOVER</xSectionTitle>
+
+<p>
+	Default behaviour is to pass down to control.
+</p>
+
+<p>The ESCMMOUSEHOVER structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_MOUSEMOVE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSELEAVE</xSectionTitle>
+
+<p>
+	Default behaviour is to see if a control has been left and deal with that
+	by passing onto the control. Also special case for links in the text since they're
+	not official controls.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEMOVE</xSectionTitle>
+
+<p>
+	Default behavior is to see what control (or link) it's over. Based on that may
+	send ESCM_MOUSELEAVE and ESCM_MOUSENETER messages, along with ESCM_MOUSEMOVE. For links
+	may need to redraw. May also change the cursor.
+</p>
+<p>The ESCMMOUSEMOVE structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_MOUSEMOVE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEWHEEL</xSectionTitle>
+<p>
+	The mouse wheel has moved. Default behavior is to send ESCM_MOUSEWHEEL to the control
+	with focus. If the control ignores the message or there isn't one then scroll the window.
+</p>
+
+
+<p>The ESCMMOUSEWHEEL structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarWORD/>
+		<xtd2>fKeys</xtd2>
+		<xtd3>
+			See WM_MOUSEWHEEL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarSHORT/>
+		<xtd2>zDelta</xtd2>
+		<xtd3>
+			See WM_MOUSEWHEEL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Position in page coordinates.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOVE</xSectionTitle>
+
+<p>
+	Notifies the page that it has been moved. The default behavior is to
+	invalidate the entire page so controls with 3d perspective can be redrawn.
+</p>
+
+
+
+
+<xSectionTitle>ESCM_POWERBROADCAST</xSectionTitle>
+<p>
+	WM_POWERBROADCAST is called. The default behavior is to do nothing.
+</p>
+
+
+<p>The ESCMPOWERBROADCAST structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwPowerEvent</xtd2>
+		<xtd3>
+			See WM_POWERBROADCAST.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwData</xtd2>
+		<xtd3>
+			See WM_POWERBROADCAST.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarINT/>
+		<xtd2>iRet</xtd2>
+		<xtd3>
+			Return value. See WM_POWERBROADCAST.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_QUERYENDSESSION</xSectionTitle>
+<p>
+	WM_QUERYENDSESSION is called. The default behavior is to call ESCM_CLOSE.
+</p>
+
+
+<p>The ESCMQUERYENDSESSION structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>nSource</xtd2>
+		<xtd3>
+			See WM_QUERYENDSESSION.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>fLogOff</xtd2>
+		<xtd3>
+			See WM_QUERYENDSESSION.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fTerminate</xtd2>
+		<xtd3>
+			Fill in with TRUE if can terminate conveniently, FALSE if cant.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_SCROLL</xSectionTitle>
+
+<p>
+	Notify the page that it has been scrolled. the default behaviour is to invalidate
+	the controls that want m_fRedrawOnMove. It's assumed that CEscWindow will bitblt
+	scrolled areas of the image properly. m_rVisible has already been updated.
+</p>
+
+
+
+<xSectionTitle>ESCM_SIZE</xSectionTitle>
+
+<p>
+	Notifies the page that it has been resized. The new size is already in m_Visible.
+	The default is to call ReInterpret().
+</p>
+
+
+
+
+
+<xSectionTitle>ESCM_SUBSTITUTION</xSectionTitle>
+<p>
+	Called when the page is compiling and a substitution appears in the MML
+	text.
+</p>
+
+
+<p>The ESCMSUBSTITUTION structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSubName</xtd2>
+		<xtd3>
+			Substitution name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSubString</xtd2>
+		<xtd3>
+			Fill this in with the string to substitute.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fMustFree</xtd2>
+		<xtd3>
+			Fill this in with TRUE if caller must HeapFreeree(hMemHandle, 0, pszSubString),
+			or FALSE if it's some sort of global that doesn't need
+			freeing.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHANDLE/>
+		<xtd2>hMemHandle</xtd2>
+		<xtd3>
+			Heap handle used to free the memory if fMustFree is TRUE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>ESCM_TIMER</xSectionTitle>
+
+<p>
+	Called if a timer created in the CEscWindow is created. The default behaviour
+	is to do nothing.
+</p>
+
+<p>The ESCMTIMER structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Timer ID
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+

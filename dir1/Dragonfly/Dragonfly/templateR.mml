@@ -1,0 +1,51 @@
+<!xDFMainMenu>
+	<small>
+		<<<$FAVORITEMENU2>>>
+	</small>
+</xDFMainMenu>
+
+<colorblend posn=background color=#000000/>
+<table width=100%>
+	<<<$JOURNALTIMER>>>
+	<<<$PROJECTTIMER>>>
+	<tr>
+		<td width=80% lrmargin=20 tbmargin=20 bgcolor=#ffffff>
+			<?TemplateSubst?>
+		</td>
+		<td width=20% lrmargin=20>
+			<big><bold><font color=#ffffff>Dragonfly</font></bold></big>
+			<p/>
+			<xDFMainMenu/>
+			<br/>
+			<button href=back style=leftarrow accel=alt-b>
+				<font color=#8080ff><bold><u>B</u></bold>ack</font>
+				<xHoverHelp>
+					Goes back to the previous page. You can also type in Alt+B to go back.
+				</xHoverHelp>
+			</button>
+			<br/>
+			<button href=addtofavorites>
+				<font color=#8080ff>Add to menu</font>
+				<xHoverHelpShort>
+					Add this page to the main Dragonfly menu.
+				</xHoverHelpShort>
+			</button>
+			<br/>
+			<button href=print accel=ctrl-p>
+				<font color=#8080ff>Print</font>
+				<xHoverHelp>
+					Print the current page. You can also type Ctrl+P to print the page.
+					<p/>
+					Tip: You can change the printing size and number of columns in the
+					"Look and Feel" section under "Documents".
+				</xHoverHelp>
+			</button>
+			<br/>
+			<image href="http://www.mxac.com.au" jpgresource=200 scale=50%>
+				<xHoverHelpShort>
+					Brings up the mXac web page.
+				</xHoverHelpShort>
+			</image>
+		</td>
+	</tr>
+</table>

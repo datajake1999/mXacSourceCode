@@ -1,0 +1,24 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Remove speed dial"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Remove speed dial
+</xPageTitle>
+
+<p>
+	Please select the person who you wish to remove from the speed dial list and
+	press "Remove speed dial".
+</p>
+
+<p align=center>
+	<combobox name=speedlist width=50% cbheight=150>
+	</combobox>
+</p>
+
+<align align=right>
+	<button name=remove>
+		Remove speed dial
+	</button>
+</align>

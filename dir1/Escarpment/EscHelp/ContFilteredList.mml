@@ -1,0 +1,396 @@
+<pageinfo title="FilteredList Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xFilteredList>
+	<FilteredList listname=people width=100% MACROATTRIBUTE=1/>
+</xFilteredList>
+
+
+<xPageTitle>FilteredList Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The FilteredList control displays a drop-down, allowing the user to select
+	and item from a long list of entries, such as E-mail names. The user doesn't
+	have to scroll through the list searching for the entry, but can instead
+	type in a few keywords to narrow down the list shown in the list box.
+	The FilteredList control is useful for any long list: People names,
+	E-mails, places, country lists, etc.
+</p>
+
+<p>
+	Users also have the option of selecting a "blank" entry, or selecting
+	"Add a new element". These can be turned on/off and renamed programatically.
+</p>
+
+<p>
+	The control must have the <bold>listname=</bold> attribute specified.
+	This string is passed into the page's callback in a ESCN_FILTEREDLISTQUERY
+	message, which is expected to return a PCListVariable C++ list object
+	containing all the possible names.
+</p>
+
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>additem</xTd2>
+		<xTd3>
+			This string is displayed in the filtered list so that users can click on it
+			and add a new item. For example, if the list was displaying E-mail names
+			you might set additem="Add a new E-mail name to the address book".
+			If you set additem to an empty string then the user will not be allowed
+			to add new items.
+			<p/>
+			Example: additem="Add a new E-mail name to the address book"
+			<p/>
+			<xFilteredList additem="Add a new E-mail name to the address book"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>appear</xTd2>
+		<xTd3>
+			If appear is "right" then the pop-up list appears to the control's right. If it's "below" then
+			it appears below.
+			<p/>
+			Example: appear=right
+			<p/>
+			<xFilteredList appear=right/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			Example: color=#008000
+			<p/>
+			<xFilteredList basecolor=#008000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bcolor</xTd2>
+		<xTd3>
+			Bottom-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: bcolor=#00ffff
+			<p/>
+			<xFilteredList bcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>blank</xTd2>
+		<xTd3>
+			The string to display when no CurSel is not valid, meaning
+			that no name has been set.
+			<p/>
+			Example: blank="No name is specified"
+			<p/>
+			<xFilteredList blank="No name is specified"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			Example: buttondepth=32
+			<p/>
+			<xFilteredList buttondepth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonheight=32
+			<p/>
+			<xFilteredList buttonheight=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonwidth=32
+			<p/>
+			<xFilteredList buttonwidth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cbheight</xTd2>
+		<xTd3>
+			Height of the pop-up list in pixels.
+			<p/>
+			Example: cbheight=300
+			<p/>
+			<xFilteredList cbheight=300/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cbwidth</xTd2>
+		<xTd3>
+			Width of the pop-up list in pixels.
+			<p/>
+			Example: cbwidth=100
+			<p/>
+			<xFilteredList cbwidth=100/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			Example: color=#00ff00
+				<xFilteredList color=#00ff00/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cursel</xTd2>
+		<xTd3>
+			The currently selected item, indexed off the CListVariable returned by
+			ESCN_FILTEREDLISTQUERY. If this is -1 then no item is selected.
+			<p/>
+			Example: cursel=2
+			<p/>
+			<xFilteredList cursel=2/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down.
+			<p/>
+			Example: lightcolor=#ffffff
+			<p/>
+			<xFilteredList lightcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>listname</xTd2>
+		<xTd3>
+			The name of the CListVariable to use to populate the FilteredList control
+			with entries. You <bold>must</bold> specify a listname for every control
+			instance. The string is passed to the page callback through a
+			ESCN_FILTEREDLISTQUERY message. The page returns a PCListVariable based
+			on the listname string.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			Example: marginbuttontext=0 and 16
+			<p/>
+			<xFilteredList marginbuttontext=0/><br/>
+			<xFilteredList marginbuttontext=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the control.
+			<p/>
+			Example: marginleftright=0 and 16
+			<p/>
+			<xFilteredList marginleftright=0/><br/>
+			<xFilteredList marginleftright=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the control.
+			<p/>
+			Example:
+			<p/>
+			<xFilteredList margintopbottom=0/><br/>
+			<xFilteredList margintopbottom=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the control.
+			<p/>
+			Example: showbutton=true and false
+			<p/>
+			<xFilteredList showbutton=true/><br/>
+			<xFilteredList showbutton=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBOOL/>
+		<xTd2>sort</xTd2>
+		<xTd3>
+			If set to TRUE, the list will be alphabetically sorted by the the element's
+			visible string.
+			<p/>
+			Example: sort=true
+			<p/>
+			<xFilteredList sort=true/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			style=Beveled<br/>
+			<xFilteredList style=beveled/><br/>
+			style=Box<br/>
+			<xFilteredList style=box/><br/>
+			style=Check<br/>
+			<xFilteredList style=check/><br/>
+			style=cylinder<br/>
+			<xFilteredList style=cylinder/><br/>
+			style=DownTriangle<br/>
+			<xFilteredList style=downtriangle/><br/>
+			style=DownArrow<br/>
+			<xFilteredList style=downarrow/><br/>
+			style=LeftTriangle<br/>
+			<xFilteredList style=lefttriangle/><br/>
+			style=LeftArrow<br/>
+			<xFilteredList style=leftarrow/><br/>
+			style=Light<br/>
+			<xFilteredList style=light/><br/>
+			style=RightTriangle<br/>
+			<xFilteredList style=righttriangle/><br/>
+			style=RightArrow<br/>
+			<xFilteredList style=rightarrow/><br/>
+			style=Sphere<br/>
+			<xFilteredList style=sphere/><br/>
+			style=Teapot<br/>
+			<xFilteredList style=teapot/><br/>
+			style=Toggle<br/>
+			<xFilteredList style=toggle/><br/>
+			style=UpTriangle<br/>
+			<xFilteredList style=uptriangle/><br/>
+			style=UpArrow<br/>
+			<xFilteredList style=uparrow/><br/>
+			style=X<br/>
+			<xFilteredList style=x/><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>tcolor</xTd2>
+		<xTd3>
+			Top-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: tcolor=#00ffff
+			<p/>
+			<xFilteredList tcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the control's text. Use "top", "center", or "bottom".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the control are ignored.
+</p>
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_FILTEREDLISTCHANGE</xSectionTitle>
+
+<p>
+	The control sends an ESCN_FILTEREDLISTCHANGE message when the user has changed the FilteredList in the control.
+	The ESCNFILTEREDLISTCHANGE structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarInt/>
+		<xTd2>iCurSel</xTd2>
+		<xTd3>
+			The new current selection. This is an element index from the CListVariable
+			returned in ESCN_FILTEREDLISTQUERY. If the user selects that no item should
+			be selected, a -1 is returned. If the user selects "Add a new entry", a -2
+			is returned and the application should pull up UI to add a new entry, and then
+			change the control's "cursel=" to the new entry number.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>ESCN_FILTEREDLISTQUERY</xSectionTitle>
+
+<p>
+	Sent by the filtered list when it's painting a new element or when
+	it's displaying the dropdown. Your application needs to fill in pList.
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszListName</xTd2>
+		<xTd3>
+			Name of the list, as specified in "listname=" in the control's attribute.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPCListVariable/>
+		<xTd2>pList</xTd2>
+		<xTd3>
+			Fill this in with a pointer to the list (as specified by pszListName).
+			The element of the list contains two packed strings, the first
+			being the visible text, and the second being a sequence of invisible
+			keywords.
+			<p/>
+			Ex: If this were names, an entry for my name might be "Michael Rozak\0Mike\0"
+			so my name would appear as "Michael Rozak" but a user could find me if they
+			typed "Mike" or "Michael". You can also see the EscHelp.cpp source code for
+			an example.
+		</xTd3>
+	</tr>
+</xTableStructure>

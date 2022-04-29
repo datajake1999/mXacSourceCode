@@ -1,0 +1,55 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Planner page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Planner" page
+</xPageTitle>
+
+<p>
+	The <a href=r:288>Planner</a> page is for <bold>time management freaks.</bold> In general,
+	when you create a task Dragonfly just cares that you're going to do it eventually,
+	and is overjoyed if you enter a day when you plan to work on it. Not the planner view.
+	In the planner view you get to arrange your day down to the minute, deciding what
+	tasks you'll work on when.
+</p>
+
+<p>
+	In the planner page you'll see a timeline for each of the next seven days. In
+	each timeline the planner places meetings and scheduled phone calls, which have
+	set start and end times. Around the meetings and calls are placed your tasks,
+	both normal tasks and those associated with projects. The planner "knows" how long
+	it will take you to complete the tasks based on the estimates you gave when you
+	created it.
+</p>
+
+<p>
+	Clicking on the text in a meeting will let you edit it or indicate that the meeting
+	has started. Clicking on a phone call lets you make the call. Click on a task and you
+	can mark it as being completed (in which case it's cleared from the list and logged),
+	or edit it.
+</p>
+
+<p>
+	You can rearrange the tasks using the up and down arrows, deciding which tasks you'll
+	complete first. Or, if you know that there's no way you'll get the task done today you
+	can reschedule it by pressing the "X" and selecting the move-to-a-new-day option from
+	the menu. To move a meeting or a planned phone call you'll need to click on the
+	item's text and edit it.
+</p>
+
+<p>
+	If you plan on starting a task today and finishing it off another day you can split the
+	task into two and move the second part to another day. Just click on the "X" and select
+	the split option. Click on one of the split pieces' X and tell Dragonfly what date to move
+	it to. <bold>Split tasks can be confusing;</bold> Clicking on the task will let you
+	"complete" part of the task. To complete the entire task you need to "complete" all of
+	the bits you split it into.
+</p>
+
+<p>
+	And for those of you want want to start a task today but know you can't do it until later,
+	you can tell Dragonfly to postpone the task to a later part of the day. This too is
+	in the "X" menu.
+</p>

@@ -1,0 +1,158 @@
+<<<$TEMPLATE2>>>
+<?Include resource=201?>
+<PageInfo index=false title="Welcome to Dragonfly"/>
+<!xDragonfly3d>
+<threed timerinterval=100 border=0 MACROATTRIBUTE=1>
+	<rotatex val=30/>
+	<rotatey val=80/>
+	<rotateytime from=-20 to=20 interval=100 back=yes/>
+	<rotatextime from=-10 to=10 interval=62 back=yes/>
+	<rotateztime from=-10 to=10 interval=42 back=yes/>
+	<colordefault color=#404040/>
+	<meshellipsoid x=1 y=.6 z=.6/>
+	<shapemeshsurface/>
+	
+	<colordefault color=#400000/>
+	<matrixpush>
+		<rotatextime from=0 to=30 interval=40 back=yes/>
+		<shapeline p1=0,0,0 p2=-1,-.5,1 p3=-1.5,-1.5,1.2/>
+		<shapeline p1=0,0,0 p2=0,-.5,1.1 p3=0,-1.5,1.4/>
+		<shapeline p1=0,0,0 p2=1,-.5,1 p3=1.5,-1.5,1.2/>
+	</matrixpush>
+	<matrixpush>
+		<rotatextime from=0 to=-30 interval=40 back=yes/>
+		<shapeline p1=0,0,0 p2=-1,-.5,-1 p3=-1.5,-1.5,-1.2/>
+		<shapeline p1=0,0,0 p2=0,-.5,-1.1 p3=0,-1.5,-1.4/>
+		<shapeline p1=0,0,0 p2=1,-.5,-1 p3=1.5,-1.5,-1.2/>
+	</matrixpush>
+	
+	<backculloff/>
+	<colordefault color=#c0c000/>
+	<matrixpush>
+		<translate point=-.25,.5,0/>
+		<rotatey val=-10/>
+		<rotatextime from=-20 to=20 interval=4 back=yes/>
+		<rotateztime from=-40 to=40 interval=4 back=yes/>
+		<shapepolygon p4=0,0,0 p3=0,0,6.5 p2=1.5,.5,6 p1=1.1,.5,2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=-.25,.5,0/>
+		<rotatey val=10/>
+		<rotatextime from=20 to=-20 interval=4 back=yes/>
+		<rotateztime from=-40 to=40 interval=4 back=yes/>
+		<shapepolygon p1=0,0,0 p2=0,0,-6.5 p3=1.5,0,-6 p4=1.1,0,-2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=.25,.5,0/>
+		<rotatey val=10/>
+		<rotatextime from=15 to=-15 interval=4 back=yes/>
+		<rotateztime from=10 to=-10 interval=4 back=yes/>
+		<shapepolygon p4=0,0,0 p3=0,0,6 p2=2.25,0,5.5 p1=1.75,0,2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=.25,.5,0/>
+		<rotatey val=-10/>
+		<rotatextime from=-15 to=15 interval=4 back=yes/>
+		<rotateztime from=10 to=-10 interval=4 back=yes/>
+		<shapepolygon p1=0,0,0 p2=0,0,-6 p3=2.25,0,-5.5 p4=1.75,0,-2/>
+	</matrixpush>
+	<backcullon/>
+	
+	<matrixpush>
+		<colordefault color=#606060/>
+		<translate point=.5,0,0/>
+		<rotateztime back=yes from=0 to=-10 interval=10/>
+		<rotateytime back=yes from=-10 to=10 interval=17/>
+		<rotatez val=-90/>
+		<meshfunnel base=.4 height=5 top=.25/>
+		<shapemeshsurface/>
+	</matrixpush>
+	
+	<matrixpush>
+		<colordefault color=#606060/>
+		<translate point=-1,0,0/>
+		<meshellipsoid x=.65 y=.65 z=.65/>
+		<shapemeshsurface/>
+		
+		<matrixpush>
+			<colordefault color=#800000/>
+			<translate point=0,.3,-.3/>
+			<meshellipsoid x=.5 y=.5 z=.5/>
+			<shapemeshsurface/>
+		</matrixpush>
+		
+		<matrixpush>
+			<colordefault color=#800000/>
+			<translate point=0,.3,.3/>
+			<meshellipsoid x=.5 y=.5 z=.5/>
+			<shapemeshsurface/>
+		</matrixpush>
+		
+	</matrixpush>
+</threed>
+</xDragonfly3d>
+
+<table width=100% border=0 innerlines=0>
+<tr>
+<td>
+<table width=100%>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#c0ffc0 bcolor=#a0e0a0/><<<$ENDIFCOLOR>>>
+	<xtrheader>First time</xtrheader>
+	<tr><td>
+<p>
+	Because this is the first time you are using Dragonfly on this machine,
+	you must create a new "User Account". This will tell Dragonfly
+	who you are, where you want your Dragonfly information stored, and
+	specify a password.
+</p>
+
+<bold><align align=right><button style=rightarrow href=next>
+	Create a new user
+	<xHoverHelpShort>Press me.</xHoverHelpShort>
+</button></align></bold>
+</td></tr>
+</table>
+</td>
+
+<td>
+<align align=right><big><big><big><big><big>
+	Dragonfly
+</big></big></big></big></big></align>
+
+<p align=right>
+	<br/>
+	by Mike Rozak
+	<br/>
+	<a href="http://www.mxac.com.au">www.mXac.com.au</a>
+	<p/>
+	<small>Copyright (c) 2000-2008 by Mike Rozak. All rights reserved.
+	JPEG decompression from the Independent JPEG Group.</small>
+</p>
+</td>
+</tr>
+
+<tr><td><br/></td></tr>
+
+<tr>
+<td>
+	<xDragonfly3d posn=edgeright width=200 height=125/>
+<<<$IFMICROHELP>>>
+	<small><font color=#404040>
+	Dragonfly is a <bold>unique</bold> personal information manager.
+	It uses a <bold>web-like user-interface</bold> that makes it easier
+	for you to track your contacts, meetings, reminders, tasks, projects,
+	and photos than a normal PIM.
+	<p/>
+	<bold>Dragonfly surpasses other PIMs</bold> in the amount and quality of information
+	it stores, such as keeping a daily log of what you accomplish,
+	providing a journal, allowing you to take notes during meetings and phone calls,
+	and remembering the text from web pages and online documents that you read.
+	</font></small>
+<<<$ENDIFMICROHELP>>>
+</td>
+</tr>
+
+
+</table>
+
+

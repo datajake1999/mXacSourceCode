@@ -1,0 +1,59 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Edit a note" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr>
+	<td align=left bgcolor=#000000>
+		<button href=cancel accel=escape>
+			<font color=#ffffff>Cancel</font>
+		</button>
+	</td>
+	<td align=right bgcolor=#000000>
+		<button name=add accel=enter>
+			<font color=#ffffff>OK</font>
+		</button>
+	</td>
+	</tr>
+<tr><td>
+
+<xPageTitle>
+	Edit task
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Note:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable color=#ffffc0 name=description maxchars=1000 wordwrap=true multiline=true defcontrol=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Category:
+		</xtdLeft>
+		<xtdright>
+			<bold><filteredlist width=100% cbheight=150 blank="No category" additem="Add a new category" listname=notes sort=true name=category/></bold>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+
+
+</td></tr>
+
+<tr>
+	<td align=left bgcolor=#000000>
+		<button href=cancel>
+			<font color=#ffffff>Cancel</font>
+		</button>
+	</td>
+	<td align=right bgcolor=#000000>
+		<button name=add>
+			<font color=#ffffff>OK</font>
+		</button>
+	</td>
+	</tr>
+</table>

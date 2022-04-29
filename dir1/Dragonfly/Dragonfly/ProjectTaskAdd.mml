@@ -1,0 +1,139 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a new task" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add task to project</font>
+		<xhoverhelp>
+			Press this to add the task to the project.
+			Make sure to type in a task name and duration first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Add a new task
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Task name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description of the task:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=512 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How many days of work will the task take? <italic>(You can use decimal numbers, like 0.25.)</italic>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=daysofwork text=1/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Assigned to:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=assignedto blank=Yourself/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sub-project:
+		</xtdLeft>
+		<xtdright>
+			<xFilterSubProject name=subproject/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Insert this task before:
+		</xtdLeft>
+		<xtdright>
+			<xfilterprojecttask width=100% name=insertbefore blank="At the end of the list"/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+
+<xbr/>
+
+<xlisttable>
+	<tr>
+		<td bgcolor=#004000>
+			<font color=#ffffff><big>Constraints</big></font>
+		</td>
+	</tr>
+	<tr>
+		<xtdleft>
+			The task cannot be started until <bold>after</bold>:
+		</xtdleft>
+		<xtdright>
+			<bold><date blank="Not specified" width=100% name=dateafter/></bold>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must cannot be started until <edit width=50 text=1 name=daysafter selall=true/> days <bold>after</bold>:
+		</xtdleft>
+		<xtdright>
+			<xfilterprojecttask width=100% name=taskafter/>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must be completed <bold>before</bold>:
+		</xtdleft>
+		<xtdright>
+			<bold><date blank="Not specified" width=100% name=datebefore/></bold>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must be completed <edit width=50 text=1 name=daysbefore selall=true/> days <bold>before</bold>:
+		</xtdleft>
+		<xtdright>
+			<xfilterprojecttask width=100% name=taskbefore/>
+		</xtdright>
+	</tr>
+</xlisttable>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add task to project</font>
+		<xhoverhelp>
+			Press this to add the task to the project.
+			Make sure to type in a task name and duration first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

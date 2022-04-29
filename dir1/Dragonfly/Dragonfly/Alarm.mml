@@ -1,0 +1,33 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Dragonfly alarm" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000 align=right>
+	<big><font color=#ffffff>Dragonfly alarm</font></big>
+</td></tr>
+<tr><td>
+
+<p><big><big>
+	<<<MAINALERT>>>
+</big></big></p>
+
+<p parlinespacing=0><italic>
+	<<<$SUBALERT>>>
+</italic></p>
+
+</td></tr>
+
+<tr>
+	<td width=20%/>
+	<td width=80%>
+		<button href=shutoff defcontrol=true accel=enter><bold>Shut off</bold> the alarm</button>
+		<br/>
+		<button href=snooze><bold>Snooze</bold></button> Alert me in <edit maxchars=5 width=75 selall=true name=time text=15/> minutes.
+	</td>
+</tr>
+
+<tr><td bgcolor=#000000 align=left>
+	<big><font color=#ffffff>Dragonfly alarm</font></big>
+</td></tr>
+</table>

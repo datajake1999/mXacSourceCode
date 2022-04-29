@@ -1,0 +1,632 @@
+<pageinfo title="ComboBox Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xCombo>
+	<combobox cursel=0 width=100% cbheight=100 MACROATTRIBUTE=1>
+		<elem name=1>Item one</elem>
+		<elem name=2>Item two</elem>
+		<elem name=3>Item three</elem>
+		<elem name=4>Item four</elem>
+		<elem name=5>Item five</elem>
+		<elem name=6>Item six</elem>
+		<elem name=7>Item seven</elem>
+		<elem name=8>Item eight</elem>
+		<elem name=9>Item nine</elem>
+		<elem name=10>Item ten</elem>
+	</combobox>
+</xCombo>
+
+
+<xPageTitle>ComboBox Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The combobox control displays a drop-down list when the user moves the mouse pointer over
+	the combobox control. If the user selects an item the combobox control changes its display
+	to show the new item and the page callback is notified.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>appear</xTd2>
+		<xTd3>
+			If appear is "right" then the pop-up list appears to the combo's right. If it's "below" then
+			it appears below.
+			<p/>
+			Example: appear=right
+			<p/>
+			<xCombo appear=right/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			Example: color=#008000
+			<p/>
+			<xCombo basecolor=#008000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bcolor</xTd2>
+		<xTd3>
+			Bottom-color used for the colorblend in the combobox's pop-up list.
+			<p/>
+			Example: bcolor=#00ffff
+			<p/>
+			<xCombo bcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			Size of the border (in pixels) of the combobox's pop-up list.
+			<p/>
+			Example: border=8
+			<p/>
+			<xCombo border=8/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Color of the border in the combobox's pop-up list.
+			<p/>
+			Example: bordercolor=#00ffff
+			<p/>
+			<xCombo bordercolor=#00ffff border=8/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			Example: buttondepth=32
+			<p/>
+			<xCombo buttondepth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonheight=32
+			<p/>
+			<xcombo buttonheight=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonwidth=32
+			<p/>
+			<xCombo buttonwidth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cbwidth</xTd2>
+		<xTd3>
+			Width of the pop-up list in pixels.
+			<p/>
+			Example: cbwidth=100
+			<p/>
+			<xCombo cbwidth=100/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cbheight</xTd2>
+		<xTd3>
+			Height of the pop-up list in pixels.
+			<p/>
+			Example: cbheight=300
+			<p/>
+			<xCombo cbheight=300/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			Example: color=#00ff00
+				<xCombo color=#00ff00/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>cursel</xTd2>
+		<xTd3>
+			Currently selected combobox item.
+			<p/>
+			Example: cursel=4
+			<p/>
+			<xCombo cursel=4/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down.
+			<p/>
+			Example: lightcolor=#ffffff
+			<p/>
+			<xCombo lightcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>lrmargin</xTd2>
+		<xTd3>
+			Left/right margin of the elements in the popup list-box.
+			<p/>
+			Example: lrmargin=64
+			<p/>
+			<xCombo lrmargin=64/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			Example: marginbuttontext=0 and 16
+			<p/>
+			<xcombo marginbuttontext=0/><br/>
+			<xCombo marginbuttontext=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the combobox.
+			<p/>
+			Example: marginleftright=0 and 16
+			<p/>
+			<xcombo marginleftright=0/><br/>
+			<xcombo marginleftright=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the combobox.
+			<p/>
+			Example:
+			<p/>
+			<xcombo margintopbottom=0/><br/>
+			<xcombo margintopbottom=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>selbordercolor</xTd2>
+		<xTd3>
+			Border-selection color used in the combobox's pop-up list.
+			<p/>
+			Example: selbordercolor=#00ffff
+			<p/>
+			<xCombo selbordercolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>selcolor</xTd2>
+		<xTd3>
+			Selection color used in the combobox's pop-up list.
+			<p/>
+			Example: selcolor=#00ffff
+			<p/>
+			<xCombo selcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the combobox.
+			<p/>
+			Example: showbutton=true and false
+			<p/>
+			<xcombo showbutton=true/><br/>
+			<xcombo showbutton=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>sort</xTd2>
+		<xTd3>
+			If TRUE then the combo box contents are automatically sorted. Items are sorted by the
+			"name=" attributes in each element. Defaults to FALSE.
+			<p/>
+			Example: sort=TRUE
+			<p/>
+			<xCombo sort=TRUE/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			style=Beveled<br/>
+			<xcombo style=beveled/><br/>
+			style=Box<br/>
+			<xcombo style=box/><br/>
+			style=Check<br/>
+			<xcombo style=check/><br/>
+			style=cylinder<br/>
+			<xcombo style=cylinder/><br/>
+			style=DownTriangle<br/>
+			<xcombo style=downtriangle/><br/>
+			style=DownArrow<br/>
+			<xcombo style=downarrow/><br/>
+			style=LeftTriangle<br/>
+			<xcombo style=lefttriangle/><br/>
+			style=LeftArrow<br/>
+			<xcombo style=leftarrow/><br/>
+			style=Light<br/>
+			<xcombo style=light/><br/>
+			style=RightTriangle<br/>
+			<xcombo style=righttriangle/><br/>
+			style=RightArrow<br/>
+			<xcombo style=rightarrow/><br/>
+			style=Sphere<br/>
+			<xcombo style=sphere/><br/>
+			style=Teapot<br/>
+			<xcombo style=teapot/><br/>
+			style=Toggle<br/>
+			<xcombo style=toggle/><br/>
+			style=UpTriangle<br/>
+			<xcombo style=uptriangle/><br/>
+			style=UpArrow<br/>
+			<xcombo style=uparrow/><br/>
+			style=X<br/>
+			<xcombo style=x/><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>tbmargin</xTd2>
+		<xTd3>
+			Top/bottom margin of the elements in the popup list-box.
+			<p/>
+			Example: tbmargin=64
+			<p/>
+			<xCombo tbmargin=64/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>tcolor</xTd2>
+		<xTd3>
+			Top-color used for the colorblend in the combobox's pop-up list.
+			<p/>
+			Example: tcolor=#00ffff
+			<p/>
+			<xCombo tcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the combo's text. Use "top", "center", or "bottom".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the combobox are a list to &lt;elem&gt; tags. Each &lt;elem&gt; tag must contain an
+	attribute, "name" that specified a unique name for the element. If the combobox is set for sorting,
+	the "name" attribute is used to sort by. The element tag may also contain "data" with
+	some sort of data string.
+</p>
+
+<xCode>
+	&lt;combobox&gt;<br/>
+		&tab;&lt;elem name=1&gt;Item one&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=2&gt;Item two&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=3&gt;Item three&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=4&gt;Item four&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=5&gt;Item five&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=6&gt;Item six&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=7&gt;Item seven&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=8&gt;Item eight&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=9&gt;Item nine&lt;/elem&gt;<br/>
+		&tab;&lt;elem name=10&gt;Item ten&lt;/elem&gt;<br/>
+	&lt;/combobox&gt;<br/>
+</xCode>
+<p> </p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<xSectionTitle>ESCM_COMBOBOXADD</xSectionTitle>
+
+<p>
+	This adds or inserts an item to the list box.  Either pNode or pszText or pszMML must be filled in.
+	If it's of pNode it must be of type &lt;elem&gt;; Make sure name= and potentially data= are set.
+	If szMML is set, have one or more &lt;elem&gt;xxx&lt;/elem&gt; in the text. Use this to add multiple elements at once.
+	If pszText is set then the text displayed will be pszText, the name will be pszText, and the data will be pszText
+</p>
+
+<p>
+	The ESCMCOMBOBOXADD structure is:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPCMMLNode/>
+		<xTd2>pNode</xTd2>
+		<xTd3>
+			If not NULL, the node to use for an element. The combobox will NOT delete this.
+			It clones the contents and uses the clone.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszText</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode text to use for the new element.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszMML</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode MML text containing one or more &lt;elem&gt; tags.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwInsertBefore</xTd2>
+		<xTd3>
+			The element number to insert before. If this is -1 it adds it to the end of the list. Note:
+			Inserting in a sorted combobox does no good.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+<xSectionTitle>ESCM_COMBOBOXDELETE</xSectionTitle>
+
+<p>
+	Deletes an element from the combo box.
+</p>
+
+<p>
+	The ESCMCOMBOBOXDELETE structure contains:
+</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwIndex</xTd2>
+		<xTd3>
+			The element number to delete.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_COMBOFBOXFINDSTRING</xSectionTitle>
+
+<p>
+	This searches through the list box looking for an element whose name= attribute matches
+	the string.
+</p>
+
+<p>
+	The ESCMCOMBOBOXFINDSTRING structure is:
+</p>
+<xTableStructure>
+	<tr>
+		<xVarInt/>
+		<xTd2>iStart</xTd2>
+		<xTd3>
+			Zero-based element that occurs before the element to start searching at.
+			Set to -1 to search the entire list box. If the search goes beyond then end it will wrap around until it
+			hits iStart.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>psz</xTd2>
+		<xTd3>
+			The string to search for.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xTd2>fExact</xTd2>
+		<xTd3>
+			If TRUE, need an exact match. If not, accepts any string that contains the given string.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwIndex</xTd2>
+		<xTd3>
+			Filled with the index number of the found element. If an element couldn't be found, this
+			is filled with -1.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+<xSectionTitle>ESCM_COMBOBOXGETCOUNT</xSectionTitle>
+
+<p>
+	Returns the number of elements in the combobox.
+</p>
+
+<p>
+	The ESCMCOMBOBOXGETCOUNT structure is:
+</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwNum</xTd2>
+		<xTd3>
+			Filled with the number of elements in the combobox.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCM_COMBOBOXGETITEM</xSectionTitle>
+<p>
+	Gets the name and data of an element.
+</p>
+
+<p>
+	The ESCMCOMBOBOXGETITEM structure is:
+</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwIndex</xTd2>
+		<xTd3>
+			This should contain the element number to get.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszName</xTd2>
+		<xTd3>
+			Filled with a pointer to the name string. This pointer is valid until the element is deleted or
+			combobox destroyed. Do not modify the contents of this string.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszData</xTd2>
+		<xTd3>
+			Filled with a pointer to the data string. This pointer is valid until the element is deleted or
+			combobox destroyed. Do not modify the contents of this string. If the element doesn't have
+			any data then this is NULL.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_COMBOBOXRESETCONTENT</xSectionTitle>
+
+<p>
+	Clears the contents of the combobox. pParam is NULL.
+</p>
+
+
+<xSectionTitle>ESCM_COMBOBOXSELECTSTRING</xSectionTitle>
+<p>
+	This searches through the list box looking for an element whose name= attribute matches
+	the string. It then selects that element.
+</p>
+
+<p>
+	The ESCMCOMBOBOXSELECTSTRING structure is:
+</p>
+<xTableStructure>
+	<tr>
+		<xVarInt/>
+		<xTd2>iStart</xTd2>
+		<xTd3>
+			Zero-based element that occurs before the element to start searching at.
+			Set to -1 to search the entire list box. If the search goes beyond then end it will wrap around until it
+			hits iStart.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>psz</xTd2>
+		<xTd3>
+			The string to search for.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xTd2>fExact</xTd2>
+		<xTd3>
+			If TRUE, need an exact match. If not, accepts any string that contains the given string.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwIndex</xTd2>
+		<xTd3>
+			Filled with the index number of the found element. If an element couldn't be found, this
+			is filled with -1.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_COMBOBOXSELCHANGE</xSectionTitle>
+
+<p>
+	The combobox send an ESCN_COMBOBOXSELCHANGE message when a the selection has changed.
+	The ESCNCOMBOBOXSELCHANGE structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwCurSel</xTd2>
+		<xTd3>
+			Filled with the current selection.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszName</xTd2>
+		<xTd3>
+			Filled with a pointer to the name string. This pointer is valid until the element is deleted or
+			combobox destroyed. Do not modify the contents of this string.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszData</xTd2>
+		<xTd3>
+			Filled with a pointer to the data string. This pointer is valid until the element is deleted or
+			combobox destroyed. Do not modify the contents of this string. If the element doesn't have
+			any data then this is NULL.
+		</xTd3>
+	</tr>
+</xTableStructure>

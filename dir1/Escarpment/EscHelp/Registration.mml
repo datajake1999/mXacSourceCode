@@ -1,0 +1,90 @@
+<pageinfo title="Registration and Redistribution"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Registration and Redistribution</xPageTitle>
+
+<xSectionTitle>Registration</xSectionTitle>
+
+<p>
+	<bold>I need to pay the bills too.</bold> A
+	license to distribute Escarpment.Dll with your application costs <bold>US$45.00</bold> (price subject to change without notice).
+	The license has limitations, as listed below.
+</p>
+
+<xSectionTitle>License Agreement</xSectionTitle>
+<ul type=pointer>
+	<li>
+		You must pay mXac US$45.00 (price subject to change without notice). Upon payment you will receive a registration key
+		that should be passed to EscInitialize(). You may not redistribute this
+		registration key. See below for payment information.
+	</li>
+	<li>
+		The license to redistribute Escarpment includes <bold>Escarpment.dll only</bold>.
+		You may not redistribute any other component of the Escarpment SDK.
+		However, you may incorporate and/or enhance the sample C++ and MML sample source into
+		your application source.
+	</li>
+	<li>
+		The license grants redistribution rights of Escarpment.dll to applications
+		written by the company or individual that pays. Redistribution rights
+		are <bold>not</bold> transferable to other companies or individuals.
+	</li>
+	<li>
+		No more than 100,000 (ONE HUNDRED THOUSAND) copies of Escarpment.dll may be
+		redistributed with this license. If you expect to redistribute more copies
+		then contact <xMyEmail/> for special arrangements.
+	</li>
+	<li>
+		The API functionality of Escarpment must not be generally accessible to the end user
+		of your product without substantial improvements. In other words, you may not redistribute
+		Escarpment.dll and end up producing your own SDK on top of escarpment.
+	</li>
+	<li>
+		You agree not to reverse engineering Escarpment.
+	</li>
+	<li>
+		You must indicate in your about box or equivalent that your application uses "Escarpment"
+		and the web site for Escarpment, "www.mXac.com.au."
+	</li>
+	<li>
+		You must indicate in your about box or equivalent that
+		"this software is based in part on the work of
+		the Independent JPEG Group".
+	</li>
+	<li>
+		There is no WARRANTY. The SOFTWARE PRODOUCT is provided "AS IS." mXac
+		makes no warranty about its use or performance.  USE IT AT YOUR OWN
+		RISK. mXac makes no guarantees that the SOFTWARE PRODUCT will meet your
+		requirements, or that operation of the SOFTWARE PRODUCT will be
+		error-free or that defects in the software will be corrected.
+	</li>
+</ul>
+
+<xSectionTitle>Paying for Escarpment</xSectionTitle>
+
+<p>
+	Credit Card payment is handled by <bold>RegNow.com</bold>, a US company that has a secure
+	Internet site. Internet Explorer shows a small lock icon in its status
+	bar to indicate that communications with the site are encrypted.
+	Netscape Navigator has similar functionality. To pay, see:
+</p>
+
+<blockquote><p>
+	<a href="https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-7">https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-7</a>
+</p></blockquote>
+
+<p>
+	You may also pay me by personal check in any major currency for the equivalent of
+	US $45.00 (price subject to change without notice). Check out my web page for details.
+</p>
+
+<xSectionTitle>What to redistribute</xSectionTitle>
+
+<p>
+	You should redistribute the <bold>Escarpment.dll</bold> installed by the SDK. Install it into your application's
+	directory. <bold>Do not</bold> install it into the Windows or Windows\System directory. Escaprment.Dll
+	is not guaranteed to be backward or forward compatible, so installing it into those directories may cause
+	other applications using older or newer versions of Escarpment to stop working.
+</p>
+

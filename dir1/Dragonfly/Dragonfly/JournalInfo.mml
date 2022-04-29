@@ -1,0 +1,77 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Journal page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Journal" page
+</xPageTitle>
+
+<p>
+	Dragonfly lets you keep a "journal" of ideas, notes, or other information you
+	come across. Unlike a paper journal which is just a series of uncategorized
+	and unindexed pages, Dragonfly's journal is divided into categories (that
+	you specify) and is indexed.
+</p>
+
+<p>
+	Before adding an entry to your journal, you must first make sure there's
+	a category suitable to it. Categories are a way of organizing your journal
+	entries so they're easy to look through later on.
+	Of course, you could throw all your journal
+	entries into a category named "My journal", but you might be better off
+	devising a few relevant categories such as: "What I did today",
+	"Work done for the James Smith job", "My weight", and "Travels".
+	(Category choice is completely up to you.)
+</p>
+
+<p>
+	To add a category, go to the <a href=r:188>Add a journal category</a> page
+	and fill in the information.
+</p>
+
+<p>
+	Once you've added your categories, you can visit the main <a href=r:121>Journal</a> page
+	to see all the categories. Click on one of the categories to add a new entry
+	(for the category) or to see all the entries already added for the category.
+</p>
+
+<xSectionTitle>Using journal categories for billing</xSectionTitle>
+
+<p>
+	You can use the journal to keep track of work done for clients. Dragonfly then
+	allows you to export the information to your favorite spreadsheet so you
+	can calculate the bill.
+</p>
+
+<ol>
+	<li>
+		Create a journal category for each cleint.
+	</li>
+	<li>
+		If you do any work for the client, add a new journal entry.
+	</li>
+	<li>
+		You can automatically add journal entries whenever you talk to a client or have
+		a meeting with them by editing the person's address book entry; at the bottom of
+		the page is an option to link that person to a journal. Or, you can manually
+		specify a journal entry for a specific meeting or phone call.
+	</li>
+	<li>
+		When you create a task you can specify a journal category to use. That way, when
+		you finish the task the completed task will be logged in your journal, along with
+		how long it took to complete.
+	</li>
+	<li>
+		When you create a project you can also specify a journal category. Any project
+		tasks will be logged under the journal, along with the time it took you to finish them.
+	</li>
+	<li>
+		Alternatively, you can turn on a "timer" so that you know when you started and stopped
+		work for a client. To do so, switch to the journal cateogory,
+		and press the "Start a billing or work timer." Procede with your work. When you take
+		a break or are finished, click the timer link directly underneath the main menu.
+		This will let you stop the timer and "bill" your client for the time by
+		writing the work into the journal category.
+	</li>
+</ol>

@@ -1,0 +1,23 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Add a speed dial"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Add a speed dial
+</xPageTitle>
+
+<p>
+	Please select the person or business who you wish to add to the speed dial list and
+	press "Add speed dial".
+</p>
+
+<p align=center>
+	<xFilterPersonBusiness width=80% name=person/>
+</p>
+
+<align align=right>
+	<button name=add>
+		Add speed dial
+	</button>
+</align>

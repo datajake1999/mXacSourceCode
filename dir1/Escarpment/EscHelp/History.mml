@@ -1,0 +1,270 @@
+<pageinfo title="Revision History"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Revision History</xPageTitle>
+
+<p>
+	This page lists all of the bug fixes, feature tweaks, and new features I've made
+	to Escarpment over time. If you have any more fixes or changes you'd like
+	me to make, please send me E-mail at <xMyEmail/>.
+</p>
+
+<!xVersion>
+	<td width=20% valign=top><section><bold>
+		<?MacroContent?>
+	</bold></section></td>
+</xVersion>
+
+<!xChanges>
+	<td width=80% valign=top><align tab=32>
+		<xul>
+			<?MacroContent?>
+		</xul>
+	</align></td>
+</xChanges>
+
+<!xMisc>
+	<li><font color=#000000>
+		<?MacroContent?>
+	</font></li>
+</xMisc>
+
+<!xBug>
+	<li><font color=#800000>
+		<?MacroContent?>
+	</font></li>
+</xBug>
+
+<!xFeature>
+	<li><font color=#006000>
+		<?MacroContent?>
+	</font></li>
+</xFeature>
+
+<Table width=100% border=0 innerlines=0>
+	<tr>
+		<xVersion>1.1.BUGBUG</xVersion>
+		<xChanges>
+			<xFeature>
+				ThreeD control supports XXXFromBitmap with resources.
+			</xFeature>
+			<xFeature>
+				Control - (shift) - right/left arrow works in edit boxes.
+			</xFeature>
+			<xFeature>
+				Right-clicking on an edit control will bring up a standard edit menu.
+			</xFeature>
+			<xFeature>
+				"hbitmap" attribute supported in image controls.
+			</xFeature>
+			<xFeature>
+				Added ESCM_THREEDCHANGE to the 3D control.
+			</xFeature>
+			<xFeature>
+				Support ESCM_POWERBROADCAST.
+			</xFeature>
+			<xMisc>
+				Did some memory usage optimizations.
+			</xMisc>
+			<xBug>
+				The proportional display of images wasn't working properly if only
+				a width was given.
+			</xBug>
+			<xBug>
+				Fix potential crash when printing.
+			</xBug>
+			<xBug>
+				Wasn't passing down middle and right button mouse clicks.
+			</xBug>
+			<xBug>
+				While January may only be 29 days long in some places, it's 31 days
+				in most parts of the world.
+			</xBug>
+			<xBug>
+				If the last week in a month only had one day it wouldn't be displayed.
+			</xBug>
+			<xBug>
+				Wasn't handling AltGr characters for Hungarian and other languages.
+			</xBug>
+			<xBug>
+				Reversed the scrolling direction on a mouse-wheel so it scrolls correctly.
+				Also, modified some controls so they capture the mouse-wheel.
+			</xBug>
+			<xBug>
+				Fixed Escarpment so it works on dual-monitor systems.
+			</xBug>
+			<xBug>
+				Because of a 3D drawing optimization, sometimes 3D controls wouldn't
+				draw properly on some monitors.
+			</xBug>
+			<xBug>
+				If user pressed a button and an animation was going the page might not
+				close right away. Fixed this.
+			</xBug>
+			<xBug>
+				The background color for the rendering object was added twice. Once fixed this
+				had to fix other rendering in escarpment to double the previous value.
+			</xBug>
+			<xBug>
+				Fix a memory leak in the 3D object.
+			</xBug>
+			<xBug>
+				Fix a crashing bug where Escarpment might crash if a the contents didn't
+				know if a scroll bar was needed or not.
+			</xBug>
+			<xBug>
+				Crashing bug in the edit control.
+			</xBug>
+			<xBug>
+				Fix crash caused in rendering with a 0 aspect ratio.
+			</xBug>
+			<xBug>
+				CMem.Malloc() wasn't DWORD aligning properly.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1231</xVersion>
+		<xChanges>
+			<xBug>
+				Wasn't handling alt being held down followed by several digits, such
+				as alt-66 to type B.
+			</xBug>
+			<xBug>
+				Search didn't deal with non-English characters in words.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1229</xVersion>
+		<xChanges>
+			<xFeature>Put in resource leak detection code.</xFeature>
+			<xBug>
+				Don't create a timer in an edit box until it's needed. If had too many edit
+				boxes then no system resources.
+			</xBug>
+			<xBug>
+				Don't create nearly so many fonts. Better caching of fonts.
+			</xBug>
+			<xBug>
+				Fix a resource leak with fonts.
+			</xBug>
+			<xBug>
+				Make the progress bar movement less jumpy if it's moving slowly.
+			</xBug>
+			<xBug>
+				Fixed so that Ctrl-P (and other control sequences) would work as keyboard accelerators
+				for controls.
+			</xBug>
+			<xBug>
+				Wasn't properly translating some non-English characters when typing into an
+				edit box, such as umlaut.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1026</xVersion>
+		<xChanges>
+			<xFeature>Chart control.</xFeature>
+			<xFeature>Advanced search options so date and category can be used in search.</xFeature>
+			<xMisc>Stop hover-help from speaking when it pops up because it's too annoying.</xMisc>
+			<xBug>
+				Clicking on a 3D control would sometimes cause a hang.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.911</xVersion>
+		<xChanges>
+			<xBug>
+				Make sure comboboxes and ilk don't appear underneath the Windows task bar.
+			</xBug>
+			<xBug>
+				Don't allow users to copy from a password edit control.
+			</xBug>
+			<xBug>
+				If a link had an ampersand in it, such as "Search &amp; help" then the
+				surrounding highlight was the wrong size.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.909</xVersion>
+		<xChanges>
+			<xFeature>
+				Having combo boxes and ilk automatically drop down when the mouse
+				was moved over them was <bold>way</bold> too annoying. Removed the feature.
+			</xFeature>
+			<xFeature>
+				When combo boxes, menus, hover help appear, make sure they're not paritally off the
+				screen.
+			</xFeature>
+			<xFeature>
+				CEscSearch can incorporate documents from the application, saving
+				the application the time of writing its own document search.
+			</xFeature>
+			<xFeature>
+				Make scrolling with keys, scroll-bar, and mouse wheel faster.
+			</xFeature>
+			<xFeature>
+				Edit control supports readonly= and selall=.
+			</xFeature>
+			<xBug>
+				Edit control was crashing if set selstart and selend to 1000000 and then
+				did ESCM_EDITSELREPLACE.
+			</xBug>
+			<xBug>
+				Fixed it so links would show up as bold-faced if set.
+			</xBug>
+			<xBug>
+				In time control, if click on an hour then automatically round the minutes
+				to the nearest 15. Otherwise, users are confused when they see 8:07 on the
+				control, click to edit and see it shown as 8:00, change it to 9:00, and see
+				9:07 on the time.
+			</xBug>
+			<xMisc>
+				Made search indexing faster.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.526</xVersion>
+		<xChanges>
+			<xFeature>
+				Add the date, time, and filtered-list controls.
+			</xFeature>
+			<xFeature>
+				Add m_fDirty, m_pParent, and DirtySet() to CMMLNode.
+			</xFeature>
+			<xBug>
+				Fixed problems with calling new in the EXE and delete in the Escarpment.Dll.
+				Added "operator new" and "operator delete" to all objects.
+			</xBug>
+			<xBug>
+				Fix typos in help text.
+			</xBug>
+			<xBug>
+				Fix crash in edit control when copy/paste text after a select-all.
+			</xBug>
+			<xBug>
+				Edit control thought "Escape" was a printable character.
+			</xBug>
+			<xMisc>
+				Move the button drawing code used in ControlButton.cpp, ControlMenu.cpp,
+				and ControlComboBox.cpp into one function located in ControlButton.cpp.
+			</xMisc>
+			<xMisc>
+				Isolate the drop-down control code into its own section to be used
+				by other drop-downs, such as the Time control, date control, and
+				filtered-list control.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.517</xVersion>
+		<xChanges>
+			<xMisc>The first release version of Escarpment.</xMisc>
+		</xChanges>
+	</tr>
+</Table>

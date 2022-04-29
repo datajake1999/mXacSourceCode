@@ -1,0 +1,41 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Customize quotes"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=211/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Customize quotes
+</xPageTitle>
+
+<p>
+	The "Customize quotes" page lets you change the daily quote. Just add your favorite
+	quotes to the list below. (If you have any quotes in the list they will be used instead
+	of the built-in ones.)
+</p>
+<xbr/>
+
+<p>
+	To add a quote, type it in here and press "Add quote":
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<p align=center><big>
+	<edit width=50% height=30% multiline=true selall=true maxchars=255 defcontrol=true wordwrap=true text="Type your quote in here." name=notetext selall=true/>
+	<br/>
+	<edit width=50% selall=true maxchars=63 text="Author" name=author/>
+	<br/>
+	<button style=uptriangle name=add>Add quote</button>
+</big></p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Custom quotes you've entered</xtrheader>
+	<tr><td>
+		To remove a quote, click on it. If you hold down the control key while clicking on
+		a quote, it will be removed, but the text will be placed in the "Add quote" edit
+		field so you can modify the quote and then press "Add quote" to put it back in
+		the list.
+	</td></tr>
+	<<<$CURRENTQUOTES>>>
+</xtablecenter>

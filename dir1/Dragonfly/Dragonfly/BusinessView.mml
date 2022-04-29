@@ -1,0 +1,53 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View a business" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	<<<PERSONNAME>>>
+</xPageTitle>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<xTableCenter innerlines=0>
+	<xtheader>Contact</xtheader>
+	<<<$CONTACTINFO>>>
+</xTableCenter>
+
+<null>
+	<<<$EMPLOYEES>>>
+</null>
+
+<null>
+	<<<$MISCINFO>>>
+</null>
+
+<xTableCenter>
+	<xtheader>Interaction history</xtheader>
+	<<<$LOG>>>
+</xtablecenter>
+
+<null>
+	<<<$MEMORIES>>>
+</null>
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit this entry</bold>
+	<br/>
+	Change information about this business in its address book entry.
+</xChoiceButton>
+
+<xChoiceButton name=remove>
+	<bold>Remove from address book</bold>
+	<br/>
+	Remove this business from your address book. The entry will still be available
+	in Dragonfly when searching, but you won't see it in your address book.
+</xChoiceButton>
+
+

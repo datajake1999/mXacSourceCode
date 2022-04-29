@@ -1,0 +1,144 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Print out your address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+
+<xPageTitle>
+	Print out your address book
+</xPageTitle>
+
+
+<p>
+	Even though you may have your computer nearby most of the time, there are always
+	occasions where you want to call someone and don't have Dragonfly handy.
+	This page lets you print out your address book so you can keep a copy in your
+	wallet or notebook.
+</p>
+
+
+<xbr/>
+
+<!xPersonType>
+	<td>
+		<button MACROATTRIBUTE=1 style=check checked=true checkbox=true>
+			<?MacroContent?>
+		</button>
+	</td>
+</xPersonType>
+
+<xtablecenter innerlines=0>
+	<xtrheader>
+		Categories
+	</xtrheader>
+	<tr><td>
+		Check (or uncheck) the categories of people you want to include in your
+		address book.
+	</td></tr>
+	<tr>
+		<xPersonType name=Aquaintance>Aquaintance</xPersonType>
+		<xPersonType name=Business>Business</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Coworker>Coworker</xPersonType>
+		<xPersonType name=Family>Family</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Friend>Friend</xPersonType>
+		<xPersonType name=Miscellaneous>Miscellaneous</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Neighbor>Neighbor</xPersonType>
+		<xPersonType name=Relative>Relative</xPersonType>
+	</tr>
+</xtablecenter>
+
+<xtablecenter>
+	<xtrheader>
+		How recent
+	</xtrheader>
+	<tr><td>
+		<p>
+			Because your address book probably contains people you haven't talked to in years,
+			and aren't likely to start talking to, you may not want to print them out. Please
+			select how recently you must have talked to the person in order for them to
+			be included in the printout.
+		</p>
+		<bold><align align=right><combobox name=numyears width=80% cbheight=100 cursel=2>
+			<elem name=1000>Include everyone</elem>
+			<elem name=10>People from the last 10 years</elem>
+			<elem name=5>People from the last 5 years</elem>
+			<elem name=2>People from the last 2 years</elem>
+			<elem name=1>People from the last year</elem>
+		</combobox></align></bold>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter innerlines=0>
+	<xtrheader>
+		What to print
+	</xtrheader>
+	<tr>
+		<xtdleft>
+			Fields:
+		</xtdleft>
+		<xtdright>
+			<combobox name=fields width=100% cbheight=100 cursel=0>
+				<elem name=phone><bold>Name and phone number</bold></elem>
+				<elem name=address><bold>Name, phone, and address</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Width of each "page":
+		</xtdleft>
+		<xtdright>
+			<combobox name=width width=100% cbheight=100 cursel=2>
+				<elem name=2><bold>10cm (4")</bold></elem>
+				<elem name=3><bold>7 cm (3")</bold></elem>
+				<elem name=4><bold>5 cm (2")</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Height of each "page":
+		</xtdleft>
+		<xtdright>
+			<combobox name=height width=100% cbheight=100 cursel=2>
+				<elem name=2><bold>15 cm (6")</bold></elem>
+				<elem name=3><bold>10 cm (4")</bold></elem>
+				<elem name=4><bold>7 cm (3")</bold></elem>
+				<elem name=5><bold>6 cm (2.5")</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Font size:
+		</xtdleft>
+		<xtdright>
+			<combobox name=size width=100% cbheight=100 cursel=1>
+				<elem name=4><bold>4 point</bold></elem>
+				<elem name=5><bold>5 point</bold></elem>
+				<elem name=7><bold>6 point</bold></elem>
+				<elem name=7><bold>7 point</bold></elem>
+				<elem name=8><bold>8 point</bold></elem>
+				<elem name=9><bold>9 point</bold></elem>
+				<elem name=10><bold>10 point</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xChoiceButton href=print>
+	<bold>Print my address book</bold>
+	<br/>
+	Print it out now. Because your printer has fixed sized pieces of paper you'll need
+	to cut the printout up along the lines.
+</xChoiceButton>
+
+

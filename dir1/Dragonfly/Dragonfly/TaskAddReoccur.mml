@@ -1,0 +1,103 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a new reoccurring task" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add task</font>
+		<xhoverhelp>
+			Press this to add the task.
+			Make sure to type in a task name first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Add a new reoccurring task
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Task name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description of the task:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=512 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How many hours of work will the task take? <italic>(You can use decimal numbers, like 0.25.)</italic>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=daysofwork text=1/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What is the task's priority?
+		</xtdLeft>
+		<xtdright>
+			<combobox name=priority sort=false width=100% cursel=2 cbheight=150>
+				<elem name=1><bold>Priority 1</bold><italic> (Very important)</italic></elem>
+				<elem name=2><bold>Priority 2</bold><italic> (Important)</italic></elem>
+				<elem name=3><bold>Priority 3</bold><italic> (Normal)</italic></elem>
+				<elem name=4><bold>Priority 4</bold><italic> (Low)</italic></elem>
+				<elem name=5><bold>Priority 5</bold><italic> (Very low)</italic></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>(This causes a link to appear in the journal category when the task is completed.
+			If you run a small business, you can use this
+			to bill your time to a specific party.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+</xTableClear>
+
+
+<xbr/>
+
+<p>
+	When should the task be added to your list?
+</p>
+
+<?Include resource=159?>
+
+</td></tr>
+
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add task</font>
+		<xhoverhelp>
+			Press this to add the task.
+			Make sure to type in a task name and first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

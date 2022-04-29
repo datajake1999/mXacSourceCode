@@ -1,0 +1,222 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Save your address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+
+<xPageTitle>
+	Save your address book
+</xPageTitle>
+
+
+<p>
+	This saves your address book as a "comma separated variable file" (.csv) so you
+	can transfer it to another application.
+	This file can then be loaded by other personal information managers, database applications,
+	mail merge in word processors, spreadsheets, or label printers (usually in word
+	processors).
+</p>
+
+
+<xbr/>
+
+<xChoiceButton href=save>
+	<bold>Save it</bold>
+	<br/>
+	When you press this button you'll be asked for the file name to save the file as, and
+	then your address book will be saved. (Note: You may want to fill out some of the
+	entries below to save only certain entries to disk.)
+</xChoiceButton>
+
+<xbr/>
+
+<!xPersonType>
+	<td>
+		<button MACROATTRIBUTE=1 style=check checked=true checkbox=true>
+			<?MacroContent?>
+		</button>
+	</td>
+</xPersonType>
+
+<xtablecenter innerlines=0>
+	<xtrheader>
+		Categories
+	</xtrheader>
+	<tr><td>
+		Check (or uncheck) the categories of people you want to save from your
+		address book.
+	</td></tr>
+	<tr>
+		<xPersonType name=Aquaintance>Aquaintance</xPersonType>
+		<xPersonType name=Business>Business</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Coworker>Coworker</xPersonType>
+		<xPersonType name=Family>Family</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Friend>Friend</xPersonType>
+		<xPersonType name=Miscellaneous>Miscellaneous</xPersonType>
+	</tr>
+	<tr>
+		<xPersonType name=Neighbor>Neighbor</xPersonType>
+		<xPersonType name=Relative>Relative</xPersonType>
+	</tr>
+</xtablecenter>
+
+<xtablecenter>
+	<xtrheader>
+		How recent
+	</xtrheader>
+	<tr><td>
+		<p>
+			Because your address book probably contains people you haven't talked to in years,
+			and aren't likely to start talking to, you may not want to tranfer them. Please
+			select how recently you must have talked to the person in order for them to
+			be included in the file.
+		</p>
+		<bold><align align=right><combobox name=numyears width=80% cbheight=100 cursel=2>
+			<elem name=1000>Include everyone</elem>
+			<elem name=10>People from the last 10 years</elem>
+			<elem name=5>People from the last 5 years</elem>
+			<elem name=2>People from the last 2 years</elem>
+			<elem name=1>People from the last year</elem>
+		</combobox></align></bold>
+	</td></tr>
+</xtablecenter>
+
+
+<xsectiontitle>Print mailing labels from the Dragonfly address book</xsectiontitle>
+
+<p>
+	Because virtually every PC has a word processor that prints mailing labels and
+	envelopes infinitely better than I could write it, Dragonfly relies on your
+	word processor to print mailing labels and envelopes. To do so,
+	just <a href=save>save</a> your address book as a comma separated variable file, or
+	as a text file. Open the word processor, do whatever you need to for it to create
+	mailing labels, and tell it that the database for the labels is the file you just
+	saved.
+</p>
+
+<p>
+	The field's you'll probably want to use are:
+</p>
+
+<xul>
+	<li>
+		<bold>Name, First Name, Last Name</bold> - Name to display.
+	</li>
+	<li>
+		<bold>Home Address Line 1 ... Home Address Line 2</bold> - Lines of the person's address.
+	</li>
+	<li>
+		<bold>Business Address Line 1 ... Business Address Line 2</bold> - Lines of the person's address.
+	</li>
+</xul>
+
+<p>
+	Below are some specific steps for Microsoft Word and Microsoft Works.
+</p>
+
+<xSectionTitle>Printing mailing labels in Word 97/2000</xSectionTitle>
+
+<ol>
+	<li>
+		<a href=save>Save</a> your address book.
+	</li>
+	<li>
+		In Microsoft Word 97/2000, select <bold>Tools</bold> followed by <bold>Mail Merge...</bold>
+	</li>
+	<li>
+		The "Mail Merge helper" dialog pops up. Click <bold>Create</bold> under main document
+		and select <bold>Mailing Labels</bold> from the menu.
+	</li>
+	<li>
+		Microsoft Word will ask you if you want to use the active window or a new document.
+		Choose which ever is appropriate for you.
+	</li>
+	<li>
+		Back in the "Mail Merge helper" dialog pops up, click <bold>Get Data</bold> under
+		the Data Source section. Select <bold>Open Data Source</bold> from the menu.
+	</li>
+	<li>
+		The "Open data source" dialog will appear. Use it to find the file you saved (either
+		with extension .csv or .txt) and press <bold>Open</bold>.
+	</li>
+	<li>
+		A small dialog box will appear saying that Word needs to set up the main document.
+		You have to press the <bold>Set up main document</bold> button.
+	</li>
+	<li>
+		Next a "Label options" dialog is shown. Select the type of labels you will use,
+		and press <bold>OK</bold>.
+	</li>
+	<li>
+		Yet another dialog asks you questions; this time its "Create Labels". You need to
+		specify what fields you'll show by clicking on <bold>Insert merge field</bold>,
+		selecting one of the fields, and watching it show up in the edit box below.
+		Repeat, adding fields to display as you like. (You may need to press the Enter key
+		after each field to insert a line break.)
+	</li>
+	<li>
+		Once you've entered all the fields using the "Create Labels" dialog
+		box, press <bold>OK</bold>.
+	</li>
+	<li>
+		Then press <bold>Close</bold> in the "Mail Merge Helper" dialog.
+	</li>
+	<li>
+		And you're done. Just print them off with <bold>File, Print</bold>.
+	</li>
+</ol>
+
+
+<xSectionTitle>Printing mailing labels in Microsoft Works</xSectionTitle>
+
+<ol>
+	<li>
+		<a href=save>Save</a> your address book.
+	</li>
+	<li>
+		In the word processor, select <bold>Tools</bold> followed by <bold>Labels...</bold>
+	</li>
+	<li>
+		The "Labels" dialog appears. Press the <bold>Mailing labels</bold> radio button
+		followed by <bold>OK</bold>.
+	</li>
+	<li>
+		Next a "Label options" dialog is shown. Select the type of labels you will use,
+		and press <bold>New Document</bold>.
+	</li>
+	<li>
+		Works brings up the "Open Data Source" dialog that asks you where you want
+		to get the data from. Press <bold>Merge information from another type of file</bold>.
+	</li>
+	<li>
+		The "Open data source" dialog will appear. Use it to find the file you saved (either
+		with extension .csv or .txt) and press <bold>Open</bold>.
+	</li>
+	<li>
+		When Microsoft Works asks you if you want to use the entries in the first row
+		as your field names, press <bold>Yes</bold>.
+	</li>
+	<li>
+		You will then be asked what kind of character separates the fields.
+		Press <bold>Commas</bold> followed by <bold>OK</bold>.
+	</li>
+	<li>
+		Yet another dialog asks you questions; this time its "Insert Fields". You need to
+		specify what fields you'll show by
+		selecting one of the fields, pressing <bold>Insert</bold>,
+		and watching it show up in the document window.
+		Repeat, adding fields to display as you like. (You may need to press the Enter key
+		after each field to insert a line break.)
+	</li>
+	<li>
+		Once you've entered all the fields using the "Insert Fields" dialog
+		box, close it.
+	</li>
+	<li>
+		And you're done. Just print them off with <bold>File, Print</bold>.
+	</li>
+</ol>

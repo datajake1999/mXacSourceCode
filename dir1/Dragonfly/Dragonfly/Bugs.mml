@@ -1,0 +1,215 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Bugs and features"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Bugs and features
+</xPageTitle>
+
+<xSectionTitle>How I work</xSectionTitle>
+
+<p>
+	<bold>I am a one person operation.</bold> I do all the design, development, testing,
+	documentation, and marketing myself. This has certain implications from your point of view:
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Dragonfly is not your typical PIM</bold> - Most PIMs (and applications) are
+		designed by committee in large corporations. To use some artsy terms,
+		applications designed by committee tend to be less "colorful and exciting" than
+		those by just one person. Committee output is conservative, nondescript, and well-rounded.
+		It's kind of like housing; an off-the-plan house (basically designed by
+		a committee in an effort to offend as few people as possible) is a very
+		different experience than one designed by the owner. I use Dragonfly
+		daily and have built it largely from my own needs. As a result, you'll find
+		that Dragonfly is a completely different experience.
+	</li>
+	<li>
+		<bold>Feature requests</bold> - I like to make changes that people will use. If you send me a
+		feature request that I think will improve the product, I can often get it implemented within a few days.
+		While I have a long list of self-invented features I can implement, I'd rather work on the
+		features that real people need. If there's a feature missing, please tell me.
+		One-person companies have their advantages;
+		With a large corporation, the feature won't get in until at least the next version, or never.
+	</li>
+	<li>
+		<bold>Bugs</bold> - My software will tend to have more bugs in it than one produced by a large company.
+		I don't have an army of testers nor do I have a huge test lab with hundreds of machines.
+		However, if you tell me about a bug and give me a good way to reproduce it on my machine,
+		you have a good chance of getting a fix back to you within a couple of days. With a large corporation,
+		you may never get the fix.
+	</li>
+	<li>
+		<bold>New versions</bold> - Because I am continually improving the code based upon user feedback
+		the version of Dragonfly on the web is always changing. Sometimes fixes I make for
+		one person will cause someone else a problem. Therefore, <bold>before upgrading</bold> to
+		a new version, back up your old copy of Dragonfly and your data,
+		just in case my changes do something horrendous. If I do break something in Dragonfly,
+		please tell me so I can undo the damage.
+	</li>
+</ul>
+
+
+<xSectionTitle>Bugs</xSectionTitle>
+
+<p>
+	Please send any bugs you find to <xMyEmail/>. I will try to get them fixed within a few days. Sometimes, such
+	as when I'm on vacation, this isn't possible.
+</p>
+
+<p>
+	Before I can fix a bug, I must be able to reproduce it on my machine. You can get the bugs fixed a few
+	days quicker if you give me the necessary information up front instead of making me interrogate it from
+	you:
+</p>
+
+<ol>
+	<li>
+		Don't send me bug reports that say, "It doesn't work," or "It crashes." I need much more detail than that.
+	</li>
+	<li>
+		To fix a bug I need to be able to cause it to happen on my machine.
+		As a result I usually need lots of details, such as what you were doing when it
+		crashed. And how reproducible is it? Does it crash every time or just once in a blue moon.
+	</li>
+	<li>
+		Sometimes the version of Windows or web browser makes a difference. Please include this information
+		in your E-mail.
+	</li>
+	<li>
+		Try reproducing the bug on a different machine. Sometimes the bugs reported to me are really bugs
+		in printer drivers, display drivers, sound card drivers, etc. I may be able to modify Dragonfly to
+		work around the bug if you tell me it's specific to a certain piece of hardware.
+	</li>
+</ol>
+
+<xSectionTitle>Documentation Problems</xSectionTitle>
+
+<p>
+	Please send documentation problems <xMyEmail/>. Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		You can send me bugs about spelling errors, poor grammar, and typos. I may fix them, but ultimately,
+		are they really important?
+	</li>
+	<li>
+		If any part of the documentation is unclear, tell me. I designed and wrote this, so everything in
+		Dragonfly is very obvious to me. It may not be to you.
+	</li>
+</ul>
+
+<xSectionTitle>Feature improvements</xSectionTitle>
+
+<p>
+	I'm very interested in improving existing features. Please send me mail at <xMyEmail/>.
+	Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Will you actually use the feature?</bold> While designing the speech API at Microsoft I asked all the
+		speech technology companies what they'd like in the speech API. I got a lot of requests and implemented
+		tons of features in the specification. As it turns out, many of the companies were just giving
+		me their wish list. They had no need for the feature; they only thought it might be useful at some point
+		in the future. I learned my lesson. I don't like adding features that might hypothetically
+		be useful at some unspecified time in the future. I want to add features that are
+		required here and now.
+	</li>
+	<li>
+		<bold>Will other people want to use the feature?</bold> The more people I can envision using the feature, the
+		more eager I am.
+	</li>
+	<li>
+		<bold>How does the feature mesh with Dragonfly's goals?</bold> I want to
+		keep Dragonfly easy to use, and sometimes adding a feature makes the application
+		more complicated.
+	</li>
+	<li>
+		Some people send me feature requests even though they haven't registered and have no intention
+		to register. While I may still implement the feature, <bold>I'm more likely to
+		add/modify features for people that have paid or will pay me.</bold> Note: Just because you paid
+		me doesn't mean I'll implement your requests.
+	</li>
+</ul>
+
+<xSectionTitle>New features/controls</xSectionTitle>
+
+<p>
+	Again, send mail to <xMyEmail/>. The same stipulations as modifying features exist, only I'm
+	more picky about adding totally new features. New features are a lot of work and are more likely to
+	make Dragonfly more difficult to use, or larger.
+</p>
+
+<p>
+	Just to give you some ideas, below are some features I'm thinking about adding to
+	future versions of Dragonfly, but which I haven't gotten around to yet. If you need
+	any of these features, please tell me so I can prioritize them.
+</p>
+
+<!xFeature>
+	<big><bold>
+		<?MacroContent?>
+	</bold></big><p/>
+</xFeature>
+
+<xdefinition>
+	<xFeature>Analysis</xFeature>
+	<xul>
+		<li>
+			Do some statistical anlysis on your habits to learn more about yourself.
+		</li>
+	</xul>
+	<br/><xFeature>Archive</xFeature>
+	<xul>
+		<li>
+			Archive E-mails extracted from Outlook (not Outlook express though).
+		</li>
+		<li>
+			Archive away rich text (fonts and tables), not just the plain text.
+		</li>
+		<li>
+			Keep records of what applications you run, what documents you edit, and when
+			you use your computer.
+		</li>
+	</xul>
+	<br/><xFeature>Journal</xFeature>
+	<xul>
+		<li>
+			Allow rich text (fonts and tables) in journal entries, not just plain text.
+		</li>
+	</xul>
+	<br/><xFeature>Meetings</xFeature>
+	<xul>
+		<li>
+			If you plug in a microphone, you can record a meeting and archive it away for
+			future reference.
+		</li>
+	</xul>
+	<br/><xFeature>PDA's</xFeature>
+	<xul>
+		<li>
+			Palm pilot support.
+		</li>
+	</xul>
+	<br/><xFeature>Phone</xFeature>
+	<xul>
+		<li>
+			Record phone conversations.
+		</li>
+		<li>
+			Use Dragonfly to answer the phone, user caller ID to identify who
+			is calling, and take messages.
+		</li>
+	</xul>
+	<br/><xFeature>To do the next time I'm in XXX</xFeature>
+	<xul>
+		<li>
+			A "to do" for the next time you're at the mall, or so you remember to bring
+			something the next time you visit a friend.
+		</li>
+	</xul>
+</xdefinition>

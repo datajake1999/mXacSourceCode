@@ -1,0 +1,33 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Most important people"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=219/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	Most important people
+</xPageTitle>
+
+<p>
+	<bold>Who are the five most important people in your life?</bold> Take the time to
+	select them from your address book.
+</p>
+
+<p align=center>
+	<xfilterperson width=50% name=person1/>
+</p>
+<p align=center>
+	<xfilterperson width=50% name=person2/>
+</p>
+<p align=center>
+	<xfilterperson width=50% name=person3/>
+</p>
+<p align=center>
+	<xfilterperson width=50% name=person4/>
+</p>
+<p align=center>
+	<xfilterperson width=50% name=person5/>
+</p>
+
+</font>

@@ -1,0 +1,71 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View meeting notes" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=222/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	View meeting notes
+</xPageTitle>
+
+<xTableCenter innerlines=0>
+	<xtheader>Meeting details</xtheader>
+	<tr>
+		<xlt>Summary:</xlt>
+		<xrt><<<MEETINGSUMMARY>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Description:</xlt>
+		<xrt><align parlinespacing=0><<<DESCRIPTION>>></align></xrt>
+	</tr>
+	<tr>
+		<xlt>Meeting location:</xlt>
+		<xrt><<<LOCATION>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Meeting time:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Attendees:</xlt>
+		<xrt><<<$ATTENDEES>>></xrt>
+	</tr>
+</xTableCenter>
+
+
+<xTableCenter innerlines=0>
+	<xtheader>Meeting notes</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<MEETINGNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the meeting.
+</xChoiceButton>
+
+

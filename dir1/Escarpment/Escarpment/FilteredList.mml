@@ -1,0 +1,11 @@
+<colorblend posn=background tcolor=#f0fff0 bcolor=#c0cfc0/>
+<small>
+
+<Edit name=edit width=200 maxchars=80 defcontrol=true/>
+
+<br/>
+
+<listbox name=list vscroll=vscroll height=150 width=200/>
+<scrollbar name=vscroll orient=vert height=150/>
+
+</small>

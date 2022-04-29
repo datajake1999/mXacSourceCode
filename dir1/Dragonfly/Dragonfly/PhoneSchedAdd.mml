@@ -1,0 +1,93 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Schedule a phone call" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add call</font>
+		<xhoverhelp>
+			Press this to schedule the phone call.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Schedule a phone call
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Who is the call with?
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=attend width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description of the call:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=1024 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What day is the call?
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="As soon as possible" width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it start?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="Any time" width=100% name=meetingstart/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it end?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=meetingend/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sound an alarm before the call?
+		</xtdLeft>
+		<xtdright>
+			<xComboAlarm name=alarm/>
+		</xtdright>
+	</tr>
+
+</xTableClear>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add call</font>
+		<xhoverhelp>
+			Press this to schedule the phone call.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

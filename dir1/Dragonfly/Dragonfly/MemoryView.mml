@@ -1,0 +1,84 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View a memory" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=218/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	<<<ENTRYNAME>>>
+</xPageTitle>
+
+<xTableCenter innerlines=0>
+	<xtheader>Memory</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<JOURNALNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<tr>
+		<xlt>When (approximately) the memory occurred:</xlt>
+		<xrt><<<$WHEN>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Where the memory occurred:</xlt>
+		<xrt><<<$WHERE>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Type of memory:</xlt>
+		<xrt><<<$TYPE>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Quality:</xlt>
+		<xrt><<<$GOODMEMORY>>></xrt>
+	</tr>
+	<tr>
+		<xlt>People mentioned:</xlt>
+		<xrt><<<$ATTENDEES>>></xrt>
+	</tr>
+	<tr>
+		<xlt>When you entered the memory:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+</xTableCenter>
+
+
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the memory.
+</xChoiceButton>
+
+
+
+<xChoiceButton name=quickadd>
+	<bold>I just thought of another memory</bold>
+	<br/>
+	I just thought of a memory but I don't have time to fill in all the details.
+	This lets you quickly write down its name so you can get back to it later.
+</xChoiceButton>
+
+

@@ -1,0 +1,43 @@
+# Microsoft Developer Studio Generated Dependency File, included by EscHelp.mak
+
+.\EscHelp.cpp : \
+	"..\..\Include\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\EscHelp.rc : \
+	".\AdvancedObjects.mml"\
+	".\Alpha.mml"\
+	".\bugs.mml"\
+	".\CEscControl.mml"\
+	".\CEscPage.mml"\
+	".\CEscWindow.mml"\
+	".\ContButton.mml"\
+	".\contcolorblend.mml"\
+	".\ContComboBox.mml"\
+	".\ContDefault.mml"\
+	".\ContEdit.mml"\
+	".\ContHr.mml"\
+	".\ContImage.mml"\
+	".\ContListBox.mml"\
+	".\ContMenu.mml"\
+	".\ContProgressBar.mml"\
+	".\Controls.mml"\
+	".\ContScrollBar.mml"\
+	".\ContStatus.mml"\
+	".\ContThreeD.mml"\
+	".\Documentation.mml"\
+	".\Hello World.mml"\
+	".\Logo150.jpg"\
+	".\Macros.mml"\
+	".\Main.mml"\
+	".\MMLAdvanced.mml"\
+	".\MMLBasics.mml"\
+	".\Overview.mml"\
+	".\OwnControls.mml"\
+	".\Registration.mml"\
+	".\Template.mml"\
+	".\UIGuide.mml"\
+	".\UtilityFunctions.mml"\
+	".\ViewSource.mml"\
+	

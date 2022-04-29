@@ -1,0 +1,45 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Jog my memory"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=218/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Jog my memory
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:200/>You can visit this page when your mind goes blank and
+	you can't think of any memories to write down. It randomly comes up
+	with some suggestions for topics to try and remember.
+</p>
+<xbr/>
+
+<p>
+	Does this jog any memories?
+</p>
+
+<xDefinition>
+	<<<$SUGGESTION>>>
+</xDefinition>
+
+<xbr/>
+
+<xChoiceButton name=add>
+	<bold>Yes, add a memory</bold>
+	<br/>
+	I just thought of a memory and want to add it.
+</xChoiceButton>
+
+<xChoiceButton name=quickadd>
+	<bold>Yes, quickly add a memory</bold>
+	<br/>
+	I just thought of a memory but I don't have time to fill in all the details.
+	Just write down its name so you can get back to it later.
+</xChoiceButton>
+
+<xChoiceButton href=r:199>
+	<bold>No, try again</bold>
+	<br/>
+	Try another random free-association.
+</xChoiceButton>
+

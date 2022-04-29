@@ -1,0 +1,39 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="How long did the task take?" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<p/>
+
+<p>
+	How long did it take to complete the task? (In hours, such as 1.5, for 1 1/2 hours.)
+</p>
+
+<xeditoneline defcontrol=true name=howlong/>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

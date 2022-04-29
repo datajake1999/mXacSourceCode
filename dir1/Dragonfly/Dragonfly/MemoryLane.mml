@@ -1,0 +1,49 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Memory Lane"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=218/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Memory Lane
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:200/>"Memory Lane" is a section of Dragonfly that helps you
+	take a walk down memory lane. It lets you write down memories you've had (such
+	as from your childhood) and free-associate those with other memories.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<null>
+	<<<$QUICKLYADDED>>>
+</null>
+
+<<<$IFMICROHELP>>>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=add>
+	<bold>Add a memory</bold>
+	<br/>
+	I just thought of a memory and want to add it.
+</xChoiceButton>
+
+<xChoiceButton name=quickadd>
+	<bold>Quickly add a memory</bold>
+	<br/>
+	I just thought of a memory but I don't have time to fill in all the details.
+	Just write down its name so you can get back to it later.
+</xChoiceButton>
+
+<xChoiceButton href=r:199>
+	<bold>Jog my memory</bold>
+	<br/>
+	Use this if you can't think of any memories.
+	This will use free association to help you think an event from the past.
+</xChoiceButton>
+
+<null>
+	<<<$MEMORIESENTERED>>>
+</null>
+

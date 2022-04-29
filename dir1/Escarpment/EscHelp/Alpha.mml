@@ -1,0 +1,97 @@
+<pageinfo title="This is an alpha!"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>This is an alpha!</xPageTitle>
+
+<p><font color=#ff0000><italic>
+	WARNING: This is an <bold>alpha</bold> version of Escarpment. That means that there are plenty
+	of bugs and only about half of the intendent features are implimented.
+	If you find any bugs or have any feature suggestions
+	please send me mail at <xMyEMail/>.
+</italic></font></p>
+
+<p>
+	I haven't been advertising Escarpment. I've put Escarpment on my web page to see what kind of
+	response I get from it. I don't want a large audience because Escarpment is far from done.
+	When you're looking at Escarpment, pay attention more to the concepts than the implimentation
+	details. Many of the details will change as I work on Escaprment over the next
+	few months. I'd like to know if you think either should be changed though.
+</p>
+
+<xSectionTitle>This is not redistributable</xSectionTitle>
+
+<p>
+	Do not redistribute Escarpment.dll or even the self-extracting Escarpment.exe. It's too early for that.
+	<bold> Do not modify your application to use Escarpment because the Escarpment API will change. </bold> 
+	If you're interested in playing with Escarpment, write some test applications on the side to see if
+	the functionality suits you.
+</p>
+
+<xSectionTitle>Bugs and Typos</xSectionTitle>
+
+<p>
+	There are bugs and typos galore in this release. I don't think any of the bugs will accidentally format
+	your hard drive, but you never know. Please report bugs to me; don't bother with the
+	typos.
+</p>
+
+<xSectionTitle>Feature Requests</xSectionTitle>
+
+<p>
+	If you have any feature requests, please sent them to me. It's easier to add features before shipping the
+	"final" product than after, escpecially if the features require a change in the application architecture.
+</p>
+
+<xSectionTitle>Planned Features</xSectionTitle>
+
+<p>
+	Here are some features I plan on implimenting before a final release. I may not though. And if you send
+	me some feature requests, I may impliment those instead.
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Easy-to-use printing</bold> - It should be so easy that you just pass in the MML or resource ID
+		and it prints.
+	</li>
+	<li>
+		<bold>Search functionality</bold> - The search module will index every MMLresource your application
+		has and generate a keyword index. Your application can then call the search API and let the
+		user search through your application. Your app receives the resource ID that the user chose, and you
+		just have to pull up the page.
+	</li>
+	<li>
+		<bold>Text-to-speech and Agent</bold> - Applications will find it trivial to take advantage of text-to-speech
+		and/or Microsoft Agent.
+	</li>
+	<li>
+		<bold>Hover Help</bold> - Users can hold the mouse pointer over a control and it will tell them
+		what the control does. You provide the text.
+	</li>
+	<li>
+		<bold>Source code for controls</bold> - Include a sample with the C++ source code
+		for the main Escarpment controls.
+	</li>
+	<li>
+		<bold>Links within pages</bold> - Right now links only go to the beginning of a page. I will add the
+		ability to have links within a page.
+	</li>
+	<li>
+		<bold>More controls</bold> - Tabs, word art, algorithmic shapes, graphs.
+	</li>
+	<li>
+		<bold>Wipes and fades</bold> - Eye candy.
+	</li>
+	<li>
+		<bold>Window title bar and scroll bar</bold> - Replaces with good looking ones. More eye candy.
+	</li>
+	<li>
+		<bold>Buttons and scrollbars from bitmaps</bold> - Allow developers to specify the scroll bar arrows and
+		knob from a bitmap. More eye candy.
+	</li>
+	<li>
+		<bold>Bitmap cache</bold> - Optimization to reduce bitmap loads.
+	</li>
+</ul>
+

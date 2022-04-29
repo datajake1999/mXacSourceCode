@@ -1,0 +1,2700 @@
+<pageinfo title="ThreeD Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!x3d>
+	<p align=right>
+	<threed width=20% height=20% MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</threed>
+	</p>
+</x3d>
+
+<!x3dSpin>
+	<x3d timerinterval=125 MACROATTRIBUTE=1>
+		<TranslateTime from=0,0,-2 to=0,0,2 interval=64 back=yes/>
+		<RotateZTime from=0 to=360 interval=85/>
+		<RotateXTime from=0 to=360 interval=35/>
+		<RotateYTime from=0 to=360 interval=20/>
+		<?MacroContent?>
+	</x3d>
+</x3dSpin>
+
+<xPageTitle>ThreeD Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The ThreeD control is intended to reduce the size of downloads you create. It
+	lets you create small 3D animated graphics, saving some JPEGs and animations.
+	However, because the 3D control is so flexible it's fairly difficult to use.
+	The best way to understand the 3D control is to read through the documentation
+	while examining the MML from this page.
+</p>
+
+<x3dSpin>
+	<ShapeDeepArrow x=5 y=5 z=5/>
+</x3dSpin>
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			Changes the control's border size.
+			<p/>
+			Example: border=8
+			<p/>
+			<x3dspin border=8><ShapeTeapot/></x3dspin>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Changes the control's border color.
+			<p/>
+			Example: bordercolor=#00ffff
+			<p/>
+			<x3dspin bordercolor=#00ffff><ShapeTeapot/></x3dspin>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			Specifies where the link goes to. If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web. Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			If "href" is not specified then the user cannot click on the ColorBlend control.
+			<p/>
+			Example: href="http://www.mxac.com.au"
+			<p/>
+			<x3dspin href="http://www.mxac.com.au"><ShapeTeapot/></x3dspin>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>maxdistance</xTd2>
+		<xTd3>
+			The distance that the object will be from the user when the "scrolldistance="
+			scrollbar position is at its maximum. The default is 50.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>mindistance</xTd2>
+		<xTd3>
+			The distance that the object will be from the user when the "scrolldistance="
+			scrollbar position is at its minimum. The default is 5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrolldistance</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls the distance.
+			<p/>
+			Example: scrolldistance=dist
+			<p/>
+			<p align=right>
+				<threed width=40% height=40% scrolldistance=dist>
+					<ShapeTeapot/>
+				</threed>
+				<scrollbar orient=vert name=dist height=40%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollrotx</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the X axis.
+			<p/>
+			Example: scrollrotx=rotx
+			<p/>
+			<p align=right>
+				<threed width=40% height=40% scrollrotx=rotx>
+					<ShapeTeapot/>
+				</threed>
+				<scrollbar orient=vert name=rotx height=40%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollroty</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the Y axis.
+			<p/>
+			Example: scrollroty=roty
+			<p/>
+			<p align=right>
+				<threed width=40% height=40% scrollroty=roty>
+					<ShapeTeapot/>
+				</threed>
+				<br/>
+				<scrollbar orient=horz name=roty width=40%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>scrollrotz</xTd2>
+		<xTd3>
+			The name of the scroll bar that controls rotation around the Z axis.
+			<p/>
+			Example: scrollrotz=rotz
+			<p/>
+			<p align=right>
+				<threed width=40% height=40% scrollrotz=rotz>
+					<ShapeTeapot/>
+				</threed>
+				<br/>
+				<scrollbar orient=horz name=rotz width=40%/>
+			</p>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>timer</xTd2>
+		<xTd3>
+			The time count for animations.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>timerinterval</xTd2>
+		<xTd3>
+			The number of milliseconds between animations.
+			<p/>
+			Example: timerinterval=500<br/>
+			<x3dspin timerinterval=500><ShapeTeapot/></x3dspin>
+			Example: timerinterval=125<br/>
+			<x3dspin timerinterval=125><ShapeTeapot/></x3dspin>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of a threeD control are tags that tell it what to draw. Here are
+	their tags and meanings.
+</p>
+
+
+<xSectionTitle>&lt;AxisMaxLines&gt;</xSectionTitle>
+
+<p>
+	Sets the maximum number of graph lines displayed within an axis object
+	(see ShapeAxis for more info) to num. The default value for num is 8.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Maximum number of grid lines.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;AxisX&gt;, &lt;AxisY&gt;, and &lt;AxisZ&gt;</xSectionTitle>
+
+<p>
+	This sets the label for the XYZ-axis when an axis is drawn with ShapeAxis.
+	(See ShapeAxis for more info.)
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>name</xTd2>
+		<xTd3>
+			Name of the axis.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;BackCullOn&gt; and &lt;BackCullOff&gt;</xSectionTitle>
+
+<p>
+	Turns backfacing culling on/ff. Back-face culling is a speed optimization
+	technique which causes surfaces facing away from the viewer not to be drawn.
+	This is on by default.
+</p>
+
+
+
+
+
+
+<xSectionTitle>&lt;BumpMapApply&gt;</xSectionTitle>
+
+<p>
+	Applies a "bump map" to a mesh. A bump map causes a mesh's (see MeshFromPoints,
+	or other Mesh functions) surface to become bumpy or have other relief features.
+	The elevation of the bumps/relief and the over-all shape is defined by a call to
+	BumpMap (or BumpMapFromBitmap). The bump map is a two dimensional array (like a
+	sheet) of elevation information that is stretched to fit over the entire surface
+	of a mesh. For example, you can use bump maps draw a planet: Add bumps to a sphere
+	and generate mountains. It can also be used to display other data, such as
+	stresses, micro-displacements, or other variations along a surface.
+</p>
+
+<p>
+	To apply a bump map to the surface:
+</p>
+
+<ol>
+	<li>
+		Figure out how large it will be. The dimensions are width (east/west)
+		and height (north/south).
+	</li>
+	<li>
+		Call DefPoint height*width times, assigning sequential numbers to the
+		points. Only the X value of the points will be used. The first (height)
+		numbers define the top of the bump surface, from left to right. The next
+		(height) numbers is the next row, and so on.
+	</li>
+	<li>
+		Call BumpMap x y pStart. (Alternatively, you can call BumpMapFromBitmap.
+	</li>
+	<li>
+		If you're using a color map, call ColorMap, ColorMapFromBitmap.
+	</li>
+	<li>
+		Call a Mesh function to create the mesh. For example, you could call MeshSphere.
+	</li>
+	<li>
+		Call BumpMapApply to add the bumps/relief to the surface.
+	</li>
+	<li>
+		Draw the object by calling ShapeMeshSurface. (The bump map also
+		applies to ShapeMeshVectors.)
+	</li>
+</ol>
+
+<p>
+	Here's an example of a very small bump map (checker-board pattern) applied to a sphere:
+</p>
+
+<x3dSpin>
+	<defpoint num=1 point=1,0,0/>
+	<defpoint num=2 point=0,0,0/>
+	<defpoint num=3 point=1,0,0/>
+	<defpoint num=4 point=0,0,0/>
+	<defpoint num=5 point=0,0,0/>
+	<defpoint num=6 point=1,0,0/>
+	<defpoint num=7 point=0,0,0/>
+	<defpoint num=8 point=1,0,0/>
+	<bumpmap xcount=4 ycount=2 start=1/>
+	<meshsphere radius=3/>
+	<bumpmapapply/>
+	<shapemeshsurface/>
+</x3dSpin>
+
+<p>
+	Note: You should call BumpMap (or BumpMapFromBitmap) before calling a
+	Mesh function. Mesh's will adjust the number of facets (amount of detail)
+	they use based upon the size of the bump map and color map.
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;BumpMap&gt;</xSectionTitle>
+
+<p>
+	Loads a bump map into memory from a set of points. See BumpMapApply for a
+	detailed description of how to use bump maps.
+</p>
+
+<p>
+	XCount and yCount defined the width and height of the bump map's surface. pStart
+	is the starting point number of the upper-left hand corner of the bump map.
+	You must have previously defined points pStart through pStart + (x * y) - 1.
+</p>
+
+<p>
+	Points (x-values) should be about -1.0 to 1.0 in height, although
+	any values are possible.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point for the bump map.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>xcount</xTd2>
+		<xTd3>
+			East/west width of the bump map.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>ycount</xTd2>
+		<xTd3>
+			North/South width of the bump map.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;BumpMapFree&gt;</xSectionTitle>
+
+<p>
+	Frees the bump map loaded by BumpMap, or BumpMapFromBitmap. See BumpMapApply
+	for a detailed description of how to use bump maps. Most scripts won't call
+	this; the only reason to is to free up memory or prevent the bump map from
+	being applied when BumpMapApply is called.
+</p>
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;BumpMapScale&gt;</xSectionTitle>
+
+<p>
+	Sets a universal scaling to elevation information in a bump map.
+	See BumpMapApply for a detailed description of how to use bump maps.
+	You can call this if the relief on an object is too big or small. Val is
+	the new scaling factor. The default value is 1.0.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Value of the scale. Default is 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;BumpMapFromBitmap&gt;</xSectionTitle>
+
+<p>
+	Since a bitmap has red, green, and blue values, you need to specify
+	which "color" to use as a bump map height, mapped from 0 to 1. Set axis
+	to 1 for red, 2 for green, and 3 for blue. If axis is left blank then
+	green will be used as the elevation.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>axis</xTd2>
+		<xTd3>
+			Axis number from 1 to 3.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>bmpresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a bitmap resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>jpgresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a JPEG resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>file</xTd2>
+		<xTd3>
+			Name of a JPEG or BMP file.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;ColorMap&gt;</xSectionTitle>
+
+<p>
+	A color map causes a mesh's (see MeshFromPoints, or other Mesh functions)
+	surface to be colored by an image or other data. The coloration applied to
+	the mesh is defined by a call to ColorMap (or ColorMapFromBitmap). The color
+	map is a two dimensional array (basically a bitmap) of red, green, and
+	blue values. The image is stretched to fit over the entire surface of
+	a mesh. For example, you can use color maps to draw a planet: Call
+	ColorMapEarth (or ColorMap with an awful lot of points) to specify
+	the coloring. The call MeshSphere to generate a mesh for the planet;
+	when ShapeMeshSurface is drawn, its coloring will be determined by the
+	loaded color map. Color maps can also be used to display other data, such
+	as stresses, micro-displacements, or other data that varies along a surface.
+</p>
+
+<p>
+	To apply a color map to the surface:
+</p>
+
+<ol>
+	<li>
+		Figure out how large it will be. The dimensions are width (east/west)
+		and height (north/south).
+	</li>
+	<li>
+		Call DefColor height*width times, assigning sequential numbers to the colors.
+	</li>
+	<li>
+		Call ColorMap x y pStart. (Alternatively, you can call ColorMapFromBitmap.
+	</li>
+	<li>
+		Call a Mesh function to create the mesh. For example, you could call MeshSphere.
+	</li>
+	<li>
+		Draw the object by calling ShapeMeshSurface. (The color map also applies
+		to ShapeMeshVectors.)
+	</li>
+</ol>
+
+<p>
+	Here's an example of a very small color map (checker-board pattern) applied to a sphere:
+</p>
+
+<x3dSpin>
+	<defcolor num=1 color=#ff0000/>
+	<defcolor num=2 color=#000000/>
+	<defcolor num=3 color=#ff0000/>
+	<defcolor num=4 color=#000000/>
+	<defcolor num=5 color=#000000/>
+	<defcolor num=6 color=#ff0000/>
+	<defcolor num=7 color=#000000/>
+	<defcolor num=8 color=#ff0000/>
+	<colormap xcount=4 ycount=2 start=1/>
+	<meshsphere radius=3/>
+	<shapemeshsurface/>
+</x3dSpin>
+
+<p>
+	Xcount and ycount define the width and height of the color map's surface.
+	pStart is the starting point number of the upper-left hand corner of the
+	color map. You must have previously defined colors pStart through pStart + (x * y) - 1.
+</p>
+
+<p>
+	Once a color map has been used by ShapeMeshSurface or ShapeMeshVectors, its erased.
+</p>
+
+<p>
+	Note: You should call ColorMap (or ColorMapFromBitmap) before calling a Mesh
+	function. Mesh's will adjust the number of facets (amount of detail) they
+	use based upon the size of the bump map and color map.
+</p>
+
+<p>
+	Color maps in Escarpment are not treated the same as traditional 3D
+	graphics color maps. One facet is created per pixel, so loading in a
+	large bitmap may slow down rendering substantially.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point for the color map.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>xcount</xTd2>
+		<xTd3>
+			East/west width of the color map.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>ycount</xTd2>
+		<xTd3>
+			North/South width of the color map.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;ColorMapFree&gt;</xSectionTitle>
+
+<p>
+	Frees the color map loaded by ColorMap or ColorMapFromBitmap.
+	See ColorMap for a detailed description of how to use color maps. Most scripts
+	won't call this; the only reason to is to free up memory or prevent the color
+	map from being used when ShapeMeshSurface or ShapeMeshVectors are called.
+</p>
+
+
+
+
+
+
+<xSectionTitle>&lt;ColorMapFromBitmap&gt;</xSectionTitle>
+
+<p>
+	This loads a color map in from a bitmap (.bmp) or JPEG (.jpg) file.
+	See ColorMap for a detailed description of how to use color maps.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>bmpresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a bitmap resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>jpgresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a JPEG resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>file</xTd2>
+		<xTd3>
+			Name of a JPEG or BMP file.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;ColorDefault&gt;</xSectionTitle>
+
+<p>
+	Sets the default color for drawing shapes, which is used if no color
+	is defined for the ShapeXXX call. This example uses 
+	<xCodeInline>&lt;colordefault color=#800000&gt;</xCodeInline>.
+</p>
+
+<x3dspin>
+	<colordefault color=#800000/>
+	<shapeteapot/>
+</x3dspin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Default color.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;DefColor&gt;</xSectionTitle>
+
+<p>
+	Loads a color into color-bin n. You should reuse color numbers after the
+	color has been referenced in generating a color map or drawing a shape. Do
+	not use very high color numbers since they will cause more memory to be allocated
+	- for example, if you use &lt;DefColor num=1000000 color=#ff0000&gt;, even
+	if it's the only color,
+	the system will allocate bins to store one million colors.
+</p>
+
+<p>
+	The color at a point is also affected by the light's location, orientation
+	of the surface, and ambient lighting.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Default color to set.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>num</xTd2>
+		<xTd3>
+			Color number, starting at 0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;DefPoint&gt;</xSectionTitle>
+
+<p>
+	Loads a point into point-bin n. You should reuse point numbers (n)
+	after the point has been referenced in generating a shape. Do not use very
+	high point numbers since they will cause more memory to be allocated -
+	for example, if you use &lt;DefPoint num=1000000 point=3.2 -8.2 1.0&gt;,
+	even if it's the only point, the system will allocate bins
+	to store one million points.
+</p>
+<p>
+	If a coordinate isn't specified it will default to 0. Of course, points
+	are relative, and the location in "real" coordinates is modified by rotation
+	and translation calls.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>point</xTd2>
+		<xTd3>
+			Point to set.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>num</xTd2>
+		<xTd3>
+			Point number, starting at 0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;DrawFacetsOn&gt; and &lt;DrawFacetsOff&gt;</xSectionTitle>
+
+<p>
+	If DrawFacetsOn, meshes are drawn faceted instead of smoothed out
+	(Gouraud shading). Having facets off looks better but is a bit slower.
+	Most scripts will not have to change DrawFacets because the user is
+	given UI to modify if himself/herself. The same uses DrawFacetsOn.
+</p>
+<x3dspin>
+	<DrawFacetsOn/>
+	<ShapeTeapot/>
+</x3dspin>
+
+
+
+
+<xSectionTitle>&lt;DrawNormalsOn&gt; and &lt;DrawNormalsOff&gt;</xSectionTitle>
+
+<p>
+	This is for debugging purposes, so will almost never have to be used.
+	If DrawNormalsOn is called it causes normal-lines (perpendicular to the surface)
+	to be drawn for every mesh and polygon.
+</p>
+
+
+
+
+
+
+<xSectionTitle>&lt;FacetsMax&gt;</xSectionTitle>
+
+<p>
+	This affects the MeshXXX functions. When a mesh is algorithmically generated,
+	such as a sphere or ellipsoid, the system needs to break the object up into hundreds
+	of triangles - also called facets. The more facets, the smoother the object the looks,
+	but the slower it draws. FacetsMax controls the maximum number of facets (per side of
+	the object) that an object will be broken up into. The default value is 32, which
+	means that a sphere with "4 sides" will never be drawn with more than 128 x 64 facets.
+	(This rule isn't strictly followed... a bump map or color map may cause more facets
+	to be drawn.)
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Maximum number of facets.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;FacetsPerPixel&gt;</xSectionTitle>
+
+<p>
+	This affects the MeshXXX functions. When a mesh is algorithmically generated,
+	such as a sphere or ellipsoid, the system needs to break the object up into
+	hundreds of triangles - also called facets. The more facets, the smoother the
+	object the looks, but the slower it draws. FacetsPixelPer is used to estimate
+	how many facets will be used. The default value is 10.
+</p>
+<p>
+	For example, if a sphere drawn on the screen is 100 pixels across, and
+	FacetsPixelsPer is 10, then the sphere will be drawn with 10 facets to a "side",
+	or 40 x 20 facets. If FacetsPixelsPer is set to 20, the sphere will be drawn with
+	20 x 10 facets.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Number of pixels per facet.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;FogOn&gt; and &lt;FogOff&gt;</xSectionTitle>
+
+<p>
+	Turns fogging on or off. Make sure to call FogBeginsHere and FogEndsHere
+	before turning it on. When fogging is on, object drawn between the fog start
+	and end will fade (with distance) into the background. The fog will obscure
+	those drawn beyond the edge of the fog entirely.
+</p>
+<p>
+	You can use this as a way to perceive more depth in a scene,
+	since the fog provides the eye with extra clues about the object's distance.
+</p>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;FogRange&gt;</xSectionTitle>
+
+<p>
+	Specifies the point where the fogging effect begins (start) and completely
+	obscures the objects (end). (See Fog for more details.) zstart and zend
+	are z-axis coordinates relative to the current position (0,0,0),
+	and without the rotation matrix. Zstart should always be greater than zend.
+</p>
+
+<x3dspin>
+	<FogRange start=2 end=-1/>
+	<FogOn/>
+	<ShapeTeapot/>
+</x3dspin>
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>end</xTd2>
+		<xTd3>
+			Ending point of the fog. Negative numbers are further away.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point of the fog. Negative numbers are further away.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;ID&gt;</xSectionTitle>
+
+<p>
+	Sets the major object ID of all subsequent objects drawn. If the user clicks on the
+	object, the page receives a ESCN_THREEDCLICK message with the object number.
+</p>
+
+<p>
+	The same uses &lt;ID&gt; but the page callback doesn't do anything with it.
+</p>
+
+<x3d>
+	<id val=42/>
+	<ShapeTeapot/>
+</x3d>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			ID to use.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			(Optional) If used, then whenever the given ID is clicked, the control will
+			return the href as a link. If there are any hrefs then the control automatically
+			changes the cursor over hotspots.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;IfTime&gt;</xSectionTitle>
+
+<p>
+	This tag acts as an if statement, allowing branching to occur within the
+	rendering tag depending upon the time. If the time constraints are matched
+	then the elements within the &lt;IfTime&gt; tag are run.
+	The sub-elements are run if from &lt; (time modulo interval) &lt; to.
+</p>
+
+<p>
+	The sample uses IfTime to create a blinking teapot.
+</p>
+
+<x3dspin>
+	<colordefault color=#0000ff/>
+	<iftime interval=8 from=0 to=3>
+		<colordefault color=#ff0000/>
+	</iftime>
+	<ShapeTeapot/>
+</x3dspin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>back</xTd2>
+		<xTd3>
+			If TRUE the clock first increments up until it gets to "to" and then increments
+			back down until it hits "from", where it repeat. If it's FALSE then the time
+			increments from "from" to "to" and immediately jumps back to "from".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>from</xTd2>
+		<xTd3>
+			"from" value
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>interval</xTd2>
+		<xTd3>
+			interval for the clock repeating
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>to</xTd2>
+		<xTd3>
+			"to" value
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;LightAmbient&gt;</xSectionTitle>
+
+<p>
+	Sets the ambient light level. The ambient light is light that's coming from
+	every direction; without ambient light, objects would be completely dark on
+	the sides opposite the light (see LightVector). val should be a number between
+	0.0 and 1.0, which higher numbers being brighter ambient light. It defaults
+	to 0.2. If the values used for LightAmbient + LightIntensity sum to more than
+	1.0, the image's colors might saturate because the combined lighting is too bright.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Ambient light level.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;LightIntensity&gt;</xSectionTitle>
+
+<p>
+	Sets the light level of the directional light. (See LightVector) Surfaces
+	facing towards the light will be illuminated, while those facing away will
+	not. val should be a number between 0.0 and 1.0, which higher numbers being
+	brighter light. It defaults to 0.8. If the values used for LightAmbient +
+	LightIntensity sum to more than 1.0, the image's colors might saturate
+	because the combined lighting is too bright.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Intensity of the light.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;LightVector&gt;</xSectionTitle>
+
+<p>
+	Specified the direction from which the light is coming. Point is a vector
+	that points to the light. (Note that the real direction is modified by all
+	the previous rotation and translation calls.) Surfaces facing towards
+	the light will be illuminated, while those facing away will not.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>point</xTd2>
+		<xTd3>
+			Direction of the light.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;MatrixPush&gt;</xSectionTitle>
+
+<p>
+	MatrixPush's contents are more rendering instructions. Any matrix operations
+	(translation, scaling, rotation) done within &lt;MatrixPush&gt; only have effect
+	within the &lt;MatrixPush&gt; tag. You'll want to use this if you're creating
+	a 3D-object macro that draws a 3D object from various simpler object. That way
+	any rotations needed to move the simpler objects into place wont affect the
+	caller of your macro.
+</p>
+
+<p>
+	For example: The following MML:
+</p>
+<xCode>
+	&lt;Translate	point=.5,-.8,1/&gt;<br/>
+	&lt;MatrixPush&gt;<br/>
+		&tab;&lt;RotateY val=-87/&gt;<br/>
+		&tab;&lt;Translate point=	.3,.9,20/&gt;<br/>
+		&tab;&lt;MatrixPush&gt;<br/>
+			&tab;&tab;&lt;RotateZ val=-15/&gt;<br/>
+			&tab;&tab;&lt;ShapeTeapot/&gt;<br/>
+		&tab;&lt;/MatrixPush&gt;<br/>
+	&lt;/MatrixPush&gt;<br/>
+</xCode>
+
+<p>
+	After doing two MatrixPush's, the above script is equivalent to:
+</p>
+<xCode>
+	&lt;Translate point=.5,-.8,1&gt;<br/>
+</xCode>
+<p>
+	Except that the teapot is drawn with all the translations and rotations
+	that came before it.
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;MatrixSet&gt;</xSectionTitle>
+
+<p>
+	Sets the 4x4 rotation, translation, scaling matrix. If you don't know what
+	I'm talking about then you don't need to use this feature.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>column1</xTd2>
+		<xTd3>
+			Column 1 (left-most)
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>column2</xTd2>
+		<xTd3>
+			Column 2
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>column3</xTd2>
+		<xTd3>
+			Column 3
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>column4</xTd2>
+		<xTd3>
+			Column 4 (right-most)
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+<xSectionTitle>Mesh (What is it?)</xSectionTitle>
+
+<p>
+	There actually isn't actually a command called "Mesh", but this is a good
+	place to describe what it is.
+</p>
+
+<p>
+	A mesh is basically a flat sheet of rubber-like stuff that is bent and
+	stretched in space. You can specify how it's stretched and bent by calling
+	one of the MeshXXX functions, along with BumpMapXXX functions. Internally,
+	a mesh is defined by a two dimensional array of points. One dimension in
+	X (east/west) and the other is Y (north/south). (X and Y are misnomers
+	because once the mesh is warped around the X and Y values of the mesh have
+	virtually no correlation to the X and Y values of space.) Each point is
+	connected to every other adjacent point by a surface.
+</p>
+
+<p>
+	The mesh can also be tied together along the east/west sides and/or the
+	north/south sides. Thus, a sphere is tied together on all sides, but a
+	cylinder only on the east-west sides.
+</p>
+
+<p>
+	To use a mesh:
+</p>
+
+<ol>
+	<li>
+		Figure out how large it will be. The dimensions are width (east/west)
+		and height (north/south).
+	</li>
+	<li>
+		Call DefPoint height*width times, assigning sequential numbers to the points.
+	</li>
+	<li>
+		Optional: You may want to call ColorMapXXX or BumpMapXXX functions to define
+		a color pattern or texture on the mesh.
+	</li>
+	<li>
+		Call MeshFromPoints x y pStart. (Alternatively, you can call MeshBezier,
+		MeshEllipsoid, MeshFunnel, MeshPlane, MeshSphere, or MeshTube).
+	</li>
+	<li>
+		Draw the object by calling ShapeMeshSurface. (The color map also applies
+		to ShapeMeshVectors.)
+	</li>
+</ol>
+
+<p>
+	Note: The mesh points must be oriented with (0,0) at the upper left corner,
+	and (x-1,y-1) at the lower right corner. This is necessary because of back-face
+	culling which effectively gives the mesh a "good" side; if you look at the
+	mesh from the other side it may only be partially visible.
+</p>
+
+
+<xSectionTitle>&lt;MeshBezier&gt;</xSectionTitle>
+
+<p>
+	Creates a mesh using one or more Bezier patches. For more information on
+	meshes, see "Mesh (What is it?)" For more information on Bezier patches...
+	It's not terribly easy to explain the intricacies, but basically they're smoothed
+	out meshes. All the curves are rounded off in a Bezier patch.
+</p>
+
+<p>
+	X and y are the size of the mesh. X must be (n*3)+1 points, and Y must be
+	(m*3)+1 points, where n and m are integers. That means that the valid values
+	for x and y are 4, 7, 10, 13, etc. Unless, the mesh, through flags, wraps around
+	and connects upon itself. If the mesh is connected on the X edges (east/west)
+	then x must be n*3 points. Likewise, if y is connected on the Y edges
+	(north/south) then y must be n*3 points.
+</p>
+
+<p>
+	PStart is the point number that starts the mesh. Points pStart ...
+	(pStart + x*y -1) must have been set. The first X points are the top row of
+	the mesh, progressing from west to east. The next x points are the next row, etc.
+</p>
+
+<p>
+	Flags is optional. If the value is 0, the mesh is not connected on either end.
+	If it's 1, it's connected only on the east/west ends. 2 is only the north/south
+	ends. 3 is connected on both east/west and north/south.
+</p>
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>flags</xTd2>
+		<xTd3>
+			See above.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point for the mesh.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>xcount</xTd2>
+		<xTd3>
+			Number of points in the east/west direction.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>ycount</xTd2>
+		<xTd3>
+			Number of points in the north/south direction.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;MeshEllipsoid&gt;</xSectionTitle>
+
+<p>
+	Fills the mesh buffer with an ellipsoid. . For more information on meshes,
+	see "Mesh (What is it?)"
+</p>
+
+<p>
+	X, y, and z are the radius of the ellipsoid in the x, y, and z dimensions.
+	The ellipsoid is centered on 0,0,0.
+</p>
+
+<x3dSpin>
+	<MeshEllipsoid x=2.0 y=3.0 z=4.0/>
+	<ShapeMeshSurface/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			x radius.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			y radius.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			z radius.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;MeshFromPoints&gt;</xSectionTitle>
+
+<p>
+	Creates a mesh using a set of points. For more information on meshes, see
+	"Mesh (What is it?)" The points are connected by flat polygons, so the mesh
+	may look a bit jagged. If you want to ensure smoothness then see MeshBezier.
+</p>
+
+<p>
+	X and y are the size of the mesh.
+</p>
+ 
+<p>
+	pStart is the point number that starts the mesh. Points pStart ...
+	(pStart + x*y -1) must have been set. The first X points are the top row
+	of the mesh, progressing from west to east. The next x points are the next
+	row, etc.
+</p>
+
+<p>
+	Flags is optional. If the value is 0, the mesh is not connected on either
+	end. If it's 1, it's connected only on the east/west ends. 2 is only the
+	north/south ends. 3 is connected on both east/west and north/south.
+</p>
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>flags</xTd2>
+		<xTd3>
+			See above.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point for the mesh.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>xcount</xTd2>
+		<xTd3>
+			Number of points in the east/west direction.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>ycount</xTd2>
+		<xTd3>
+			Number of points in the north/south direction.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+<xSectionTitle>&lt;MeshFunnel&gt;</xSectionTitle>
+
+<p>
+	Fills the mesh buffer with a funnel. For more information on meshes,
+	see "Mesh (What is it?)"
+</p>
+
+<p>
+	The funnel's base is at (0,0,0) and top at (0, height, 0).
+</p>
+
+<p>
+	Default height and base-radius are 1.0. The default top-radius is 0.
+</p>
+
+
+<x3dSpin>
+	<BackCullOff/>
+	<MeshFunnel base=2 top=1 height=4/>
+	<ShapeMeshSurface/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>base</xTd2>
+		<xTd3>
+			Base radius.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>height</xTd2>
+		<xTd3>
+			Height of the funnel.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>top</xTd2>
+		<xTd3>
+			Top radius.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+<xSectionTitle>&lt;MeshPlane&gt;</xSectionTitle>
+
+<p>
+	Fills the mesh buffer with a plane. For more information on meshes,
+	see "Mesh (What is it?)" Why not use a 4-sided polygon instead? You can
+	overlay a color map or bump map on top of a MeshPlane, which you can't on a polygon.
+</p>
+
+<p>
+	The plane goes from 0,0 to x,y. It's assumed by back-face culling that x and
+	y will both be positive.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			X size
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Y size
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;MeshRotation&gt;</xSectionTitle>
+
+<p>
+	Fills the mesh buffer with a rotation of points p1 ... pn about the
+	Y axis. Basically, it creates a "vase" shape. For more information on meshes,
+	see "Mesh (What is it?)"
+</p>
+
+<p>
+	p1 ... pn are point numbers to rotate around the Y axis. They must start
+	at the top (highest Y value) and work down.
+</p>
+
+<x3dSpin>
+	<BackCullOff/>
+	<MeshRotation p1=.6,2 p2=1,1 p3=1,0 p4=.8,-1 p5=2,-2/>
+	<ShapeMeshSurface/>
+</x3dSpin>
+
+<p>
+	Bezier is either 0 or 1. If it's 0, the points are taken directly,
+	creating straight rotations between the points. If it's 1, the points are
+	smoothed out. If Bezier is 1, there must be exactly 4, 7, 10, 13, etc. number of points.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>bezier</xTd2>
+		<xTd3>
+			If TRUE then do bezier interpolation on p0..pN.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p1</xTd2>
+		<xTd3>
+			1st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p2</xTd2>
+		<xTd3>
+			2st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>pN</xTd2>
+		<xTd3>
+			Nth point.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;MeshSphere&gt;</xSectionTitle>
+<p>
+	Fills the mesh buffer with an sphere. For more information on meshes,
+	see "Mesh (What is it?)"
+</p>
+
+<p>
+	The sphere is centered on 0,0,0.
+</p>
+
+<x3d>
+	<MeshSphere Radius=3/>
+	<ShapeMeshSurface/>
+</x3d>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>radius</xTd2>
+		<xTd3>
+			Redius of the sphere. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;MeshTube&gt;</xSectionTitle>
+
+<p>
+	Fills the mesh buffer with a tube. For more information on meshes,
+	see "Mesh (What is it?)"
+</p>
+
+<p>
+	The tube's base is at (0,0,0) and top at (0, height, 0).
+</p>
+
+<p>
+	Default height and radius are one.
+</p>
+
+<x3dSpin>
+	<MeshTube height=4 radius=.5/>
+	<ShapeMeshSurface/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>height</xTd2>
+		<xTd3>
+			Height of the tube. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>radius</xTd2>
+		<xTd3>
+			Redius of the tube. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;RotateX&gt;, &lt;RotateY&gt;, and &lt;RotateZ&gt;</xSectionTitle>
+
+<p>
+	Rotates all subsequent shapes and other rotation/translation by val degrees.
+	Negative values are also acceptable. The rotation occurs around the specified
+	axis, X, Y, or Z.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Degrees to rotate around.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>radius</xTd2>
+		<xTd3>
+			Redius of the tube. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;RotateXTime&gt;, &lt;RotateYTime&gt;, and &lt;RotateZTime&gt;</xSectionTitle>
+
+<p>
+	Rotates all subsequent shapes and other rotation/translation.
+	The rotation amount is based on the control's timer and the attribute settings
+	for RotateXYZTime.
+	The rotation occurs around the specified axis, X, Y, or Z.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>back</xTd2>
+		<xTd3>
+			If TRUE the clock first increments up until it gets to "to" and then increments
+			back down until it hits "from", where it repeat. If it's FALSE then the time
+			increments from "from" to "to" and immediately jumps back to "from".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>from</xTd2>
+		<xTd3>
+			Rotation starts from this value.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>interval</xTd2>
+		<xTd3>
+			Interval for the loop repeating.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>to</xTd2>
+		<xTd3>
+			Rotation works its way up to this value over "interval" clock ticks, and then
+			either works its way back down, or restarts at "from".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;Scale&gt;</xSectionTitle>
+
+<p>
+	Scales all subsequent shapes by different amounts in each dimension, x, y, and z.
+	1.0 is no change, while larger values result in larger objects.
+</p>
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			X scale. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Y scale. Defaults to x's value.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Z scale. Defaults to y's value.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;ScaleTime&gt;</xSectionTitle>
+
+<p>
+	Scales all subsequent shapes and other rotation/translation.
+	The scale amount is based on the control's timer and the attribute settings
+	for ScaleTime.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>back</xTd2>
+		<xTd3>
+			If TRUE the clock first increments up until it gets to "to" and then increments
+			back down until it hits "from", where it repeat. If it's FALSE then the time
+			increments from "from" to "to" and immediately jumps back to "from".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>from</xTd2>
+		<xTd3>
+			X, Y, Z scale from.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>interval</xTd2>
+		<xTd3>
+			Interval for the loop repeating.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>to</xTd2>
+		<xTd3>
+			X, Y, Z scale to.
+			Scaling works its way up to this value over "interval" clock ticks, and then
+			either works its way back down, or restarts at "from".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeArrow&gt;</xSectionTitle>
+
+<p>
+	Given a series of point numbers, p1 ... pn, this draws a thick line starting at
+	p1 and progressing to pn. The line is terminated with an arrow if the flag is set.
+</p>
+
+<x3dSpin>
+	<ShapeArrow p1=-2,-2,0 p2=2,-2,0 p3=2,2,0 c1=#ff0000 c2=#00ff00 c3=#0000ff width=.4 tip=true/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p1</xTd2>
+		<xTd3>
+			1st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p2</xTd2>
+		<xTd3>
+			2st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>pN</xTd2>
+		<xTd3>
+			Nth point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>tip</xTd2>
+		<xTd3>
+			If TRUE, draw an arrow on the end.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>width</xTd2>
+		<xTd3>
+			Width (radius) of the arrow. Defaults to .1.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>width2</xTd2>
+		<xTd3>
+			(Optional) Width (radius) of the arrow at the end. Defaults to the value of width.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeAxis&gt;</xSectionTitle>
+
+<p>
+	Draws a set of 3 graph axis starting at p1. Usually p1 is the lower, left,
+	back corner of the graph area, and p2 is the upper, right, forward area.
+	However, p1 and p2 can represent any corner of the bounding box around the data.
+</p>
+
+<p>
+	u1 and u2 and unit-values at the lower, left, back corner and upper, right,
+	forward corners respectively. They specify what the units range from along the x,
+	y, and z axis. For example:
+</p>
+
+<xCode>
+	&lt;ShapeAxis llb=1,-2,-1 urf=3,4,2 unitllb=0,0,0 uniturf=100,10,20/&gt;
+</xCode>
+
+<p>
+	This draws an axis covering the region (in space) of (-1,-2,-1) to (3,4,2).
+	The X axis will have numbers indicating units ranging from 0 to 100.
+	Y will have 0 to 10. And Z from 0 to 20.
+</p>
+
+<p>
+	You can use AxisX to set the labels for the axis.
+</p>
+
+<p>
+	The flags value is optional, but it can be used to customize the axis.
+	You can pass in a sum of the following values.
+</p>
+
+<p>
+	1 - Turns on fogging and sets the start of the fog to the front of the axis,
+	and the end of the fog to the read of the axis. To take advantage of the fog,
+	you must draw the axis shape first, and then all the shapes necessary to
+	display the data within the axis.
+</p>
+
+<p>
+	2 - The axis displays with 3-dimensional grid lines. Using this value
+	turns them off.
+</p>
+
+<p>
+	4 - This works like 2, except it only turns off the grid lines within
+	the box. It leaves the external ones around for references.
+</p>
+
+<x3dSpin>
+	<ColorDefault color=#000080/>
+	<ShapeAxis llb=1,-2,-1 urf=3,4,2 unitllb=0,0,0 uniturf=100,10,20/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>llb</xTd2>
+		<xTd3>
+			Position of the lower, left, back of axis.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>unitllb</xTd2>
+		<xTd3>
+			Units displayed on the axis at the lower, left, back.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>uniturf</xTd2>
+		<xTd3>
+			Units displayed on the axis at the upper, right, front of axis.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>urf</xTd2>
+		<xTd3>
+			Position of the upper, right, front of axis.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeBox&gt;</xSectionTitle>
+
+<p>
+	Draws a box centered at 0, 0, 0. X, y, and z are the lengths along the box axis.
+	The default values are 1.0 is the dimensions aren't specified.
+</p>
+
+<x3dSpin>
+	<ColorDefault color=#808080/>
+	<ShapeBox x=9 y=4 z=1/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			Width. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Length. Defaults to x's value.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Height. Defaults to y'z value.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeDeepArrow&gt;</xSectionTitle>
+
+<p>
+	Draws an arrow.
+</p>
+
+<x3dSpin>
+	<ShapeDeepArrow x=4 y=3 z=4/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			Width. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Length. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Height. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeDeepFrame&gt;</xSectionTitle>
+
+<p>
+	Draws a beveled picture frame.
+</p>
+
+<x3dSpin>
+	<ShapeDeepFrame x=4 y=5 z=2 framebase=1 frametop=.5/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>framebase</xTd2>
+		<xTd3>
+			Size of the frame edge at the base. Defaults to .2.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>frametop</xTd2>
+		<xTd3>
+			Size of the frame edge at the top. Defaults to .2.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>x</xTd2>
+		<xTd3>
+			Width. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>y</xTd2>
+		<xTd3>
+			Length. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Height. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeDeepTriangle&gt;</xSectionTitle>
+
+<p>
+	Creates a beveled triangle shape.
+</p>
+
+<x3dSpin>
+	<ShapeDeepTriangle basex=4 basey=3 topx=4 topy=3 z=4/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>basex</xTd2>
+		<xTd3>
+			Width at the base. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>basey</xTd2>
+		<xTd3>
+			Length at the base. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>topx</xTd2>
+		<xTd3>
+			Width at the top. Defaults to 0.5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>topy</xTd2>
+		<xTd3>
+			Length at the top. Defaults to 0.5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Height. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;ShapeDot&gt;</xSectionTitle>
+
+<p>
+	Given a point number, this draws a dot. It fills in only one pixel.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>point</xTd2>
+		<xTd3>
+			Position of the pixel.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeFlatPyramid&gt;</xSectionTitle>
+
+<p>
+	Creates a pyramid shape, flattened at the top.
+</p>
+
+<x3dSpin>
+	<ShapeFlatPyramid basex=4 basey=3 topx=2 topy=1 z=4/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>basex</xTd2>
+		<xTd3>
+			Width at the base. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>basey</xTd2>
+		<xTd3>
+			Length at the base. Defaults to 1.0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>topx</xTd2>
+		<xTd3>
+			Width at the top. Defaults to 0.5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>topy</xTd2>
+		<xTd3>
+			Length at the top. Defaults to 0.5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>z</xTd2>
+		<xTd3>
+			Height. Defaults to 1.0.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeLine&gt;</xSectionTitle>
+
+<p>
+	Given a series of point numbers, p1 ... pn, this draws a line starting at
+	p1 and progressing to pn. The line is terminated with an arrow if the flag is set.
+	The line is only one pixel wide.
+</p>
+
+<p>
+	c1 .. cn are the colors at each of the points. This way you can make a multicolored line.
+</p>
+
+<x3dSpin>
+	<ShapeLine p1=-2,-2,0 p2=2,-2,0 p3=2,2,0 c1=#ff0000 c2=#00ff00 c3=#0000ff arrow=true/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>arrow</xTd2>
+		<xTd3>
+			If TRUE, draw an arrow on the end.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>c1</xTd2>
+		<xTd3>
+			1st color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>c2</xTd2>
+		<xTd3>
+			2st color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>cN</xTd2>
+		<xTd3>
+			Nth color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p1</xTd2>
+		<xTd3>
+			1st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p2</xTd2>
+		<xTd3>
+			2st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>pN</xTd2>
+		<xTd3>
+			Nth point.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeMeshSurface&gt;</xSectionTitle>
+
+<p>
+	Draws a surface from a mesh. For more information see "Mesh (What is it?)".
+	You must call an appropriate MeshXXX function before calling ShapeMeshSurface
+	for it to work.
+</p>
+
+
+
+
+
+
+<xSectionTitle>&lt;ShapeMeshVectors&gt;</xSectionTitle>
+
+
+<p>
+	Uses a mesh to define a shape, but rather than drawing a surface,
+	like ShapeMeshSurface, this draws a vector (short line with an arrow) at each point
+	in the mesh. (For more information on meshes see "Mesh (What is it?)".) You'd
+	want to use these to should fluid flows or electromagnetic field. For example,
+	you could draw a sphere with ShapeMeshSurface, and then in a slightly larger
+	sphere around it, use ShapeMeshVectors to show wind patterns.
+</p>
+
+<p>
+	XCount and yCount are the size of the mesh. PntStart is the starting point number.
+	pntStart ... pntStart + (x*y)-1 must be valid points. Ideally, each point should
+	have a length of one (x*x + y*y + z*z) == 1, or less. You can use the length of
+	the vector to portray information.
+</p>
+
+<p>
+	Additionally, if you apply a bump map to the mesh, the bump map will modify
+	the vectors' locations. Color maps affect the coloration of the vectors.
+</p>
+
+<p>
+	You must call an appropriate MeshXXX function before calling ShapeMeshVectors
+	for it to work.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>start</xTd2>
+		<xTd3>
+			Starting point number.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>xcount</xTd2>
+		<xTd3>
+			East/west width.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>ycount</xTd2>
+		<xTd3>
+			North/south width.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;ShapeMeshVectorsFromBitmap&gt;</xSectionTitle>
+
+<p>
+	Like ShapeMeshVectors, except the points come from a bitmap (.bmp) or JPEG (.jpg)
+	file.
+</p>
+
+<p>
+	Red, green, and blue are mapped to x, y, and z values ranging from -1.0 ... 1.0
+	respectively.
+</p>
+<xTableAttributes>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>bmpresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a bitmap resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>jpgresource</xTd2>
+		<xTd3>
+			Specify a resource number to load in a JPEG resource.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>file</xTd2>
+		<xTd3>
+			Filename for .jpg or .bmp file.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>&lt;ShapePolygon&gt;</xSectionTitle>
+
+<p>
+	Draws a polygon with vertices at p1 ... pn. The points should be arranged
+	in a clock-wise direction, or back-face culling might "optimize" and hide
+	the polygon from view.
+</p>
+
+<p>
+	p1 ... pn are point numbers. c1 ... cn are color numbers,
+	allowing multi-colored polygons.
+</p>
+
+
+<x3dSpin>
+	<BackCullOff/>
+	<ShapePolygon p1=-2,-2,0 p2=2,-2,0 p3=2,2,0 p4=-2,2,0 c1=#ff0000 c2=#00ff00 c3=#0000ff c4=#808080/>
+</x3dSpin>
+
+<xTableAttributes>
+	<tr>
+		<xAttribColor/>
+		<xTd2>c1</xTd2>
+		<xTd3>
+			1st color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>c2</xTd2>
+		<xTd3>
+			2st color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>cN</xTd2>
+		<xTd3>
+			Nth color.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p1</xTd2>
+		<xTd3>
+			1st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>p2</xTd2>
+		<xTd3>
+			2st point.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>pN</xTd2>
+		<xTd3>
+			Nth point.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+<xSectionTitle>&lt;ShapeTeapot&gt;</xSectionTitle>
+
+<p>
+	Draws a teapot.
+</p>
+
+
+
+<xSectionTitle>&lt;Text&gt;</xSectionTitle>
+
+<p>
+	Displays a text string. The string is defined by "name". A call might look like:
+</p>
+
+<xCode>
+	&lt;Text name="Hello world" left=0,0,0 right=1,0,0/&gt;<br/>
+</xCode>
+
+<p>
+	Left is the point about which the text is centered. Right is used as a direction
+	vector to determine if the text should be displayed horizontally or vertically.
+	Generally make pRight a value just to the right of pLeft.
+</p>
+
+<p>
+	Align and vAlign are optional. The affect where the text is placed around the point.
+	If horz is "left", then the left edge of the text is "glued" to the point.
+	At "center", the text is centered horizontally on the point.
+	With "right", the right edge is attached to the point.
+	VAlign is similar: "top" means the text is drawn right above the point,
+	"center" centered on it, and "bottom" below it.
+</p>
+<xTableAttributes>
+	<tr>
+		<xAttribString/>
+		<xTd2>align</xTd2>
+		<xTd3>
+			"left", "center", or "right".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>left</xTd2>
+		<xTd3>
+			Left point
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>right</xTd2>
+		<xTd3>
+			Right point
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			"top", "center", or "bottom".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;TextSizePixels&gt;</xSectionTitle>
+
+<p>
+	Sets the size of the text to display. The text will be a fixed size,
+	specified by pixels.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Text is val pixels high.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+<xSectionTitle>&lt;TextSize3D&gt;</xSectionTitle>
+
+<p>
+	Sets the size of the text to display. The size of the text depends upon it's
+	location in 3D space, just like other rendering. Size is the same units as
+	any other rendering.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Text is val units high.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;Translate&gt;</xSectionTitle>
+
+<p>
+	Moves all subsequent objects in space by x, y, z units. (y and z default to 0.0.)
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>point</xTd2>
+		<xTd3>
+			Amount to translate.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+
+
+<xSectionTitle>&lt;TranslateTime&gt;</xSectionTitle>
+
+<p>
+	Translates all subsequent shapes.
+	The translation amount is based on the control's timer and the attribute settings
+	for TranslateTime.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribBool/>
+		<xTd2>back</xTd2>
+		<xTd3>
+			If TRUE the clock first increments up until it gets to "to" and then increments
+			back down until it hits "from", where it repeat. If it's FALSE then the time
+			increments from "from" to "to" and immediately jumps back to "from".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>from</xTd2>
+		<xTd3>
+			X, Y, Z translate from.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>interval</xTd2>
+		<xTd3>
+			Interval for the loop repeating.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribPoint/>
+		<xTd2>to</xTd2>
+		<xTd3>
+			X, Y, Z translate to.
+			Translation works its way up to this value over "interval" clock ticks, and then
+			either works its way back down, or restarts at "from".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+<xSectionTitle>&lt;VectorArrowsOn&gt; and &lt;VectorArrowsOff&gt;</xSectionTitle>
+
+<p>
+	If this is on, vector lines drawn by ShapeMeshVectors will have arrows on the end.
+	If "VectorArrowsOff" is called, the vectors will only be lines.
+</p>
+
+
+
+
+
+<xSectionTitle>&lt;VectorInterpOn&gt; and &lt;VectorInterpOff&gt;</xSectionTitle>
+
+<p>
+	If a ShapeMeshVectors is called with a set of vectors (defined by an x and y size)
+	smaller than the mesh's size, then vectors are usually interpolated to provide
+	the extra data. If "VectorInterpOff" is called, then the vectors aren't interpolated
+	and the closest vector data-point is used instead.
+</p>
+
+
+
+
+<xSectionTitle>&lt;VectorScale&gt;</xSectionTitle>
+
+<p>
+	Controls the scaling of vector lines drawn by ShapeMeshVectors. This defaults to 1.
+</p>
+
+<xTableAttributes>
+	<tr>
+		<xAttribFloat/>
+		<xTd2>val</xTd2>
+		<xTd3>
+			Amount to scale vectors by.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+<xSectionTitle>&lt;WireFrameOn&gt; and &lt;WireFrameOff&gt;</xSectionTitle>
+
+<p>
+	WireFrame defaults to WireFrameOn. If it's turned on, the shapes are drawn with
+	only lines connecting their vertices, instead of as solids. You might want to
+	draw only wire-frames because it's faster, or because it allows you to see
+	through the objects.
+</p>
+
+<x3dSpin>
+	<WireFrameOn/>
+	<ShapeTeapot/>
+</x3dSpin>
+
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+<xSectionTitle>ESCM_THREEDCHANGE</xSectionTitle>
+
+<p>
+	This changes the contents of the 3D control.
+	Either pNode or pszMML must be filled in.
+</p>
+
+<p>
+	The ESCMTHREEDCHANGE structure is:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPCMMLNode/>
+		<xTd2>pNode</xTd2>
+		<xTd3>
+			If not NULL, the node to use for displaying render information for the 3D control.
+			The control will NOT delete this.
+			It clones the node and uses the clone.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszMML</xTd2>
+		<xTd3>
+			If not NULL, this is the Unicode MML text containing the new data.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_THREEDCLICK</xSectionTitle>
+
+<p>
+	If the &lt;ID&gt; tag is used in a ThreeD control and the user clicks on the
+	object after the tag, then the application will be sent a ESCN_THREEDCLICK
+	message.
+	The ESCNTHREEDCLICK structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwMajor</xTd2>
+		<xTd3>
+			Major object ID, as specified by &lt;ID&gt;
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwMinor</xTd2>
+		<xTd3>
+			The portion of the object that was clicked. The meaning depends upon
+			each object rendered.
+		</xTd3>
+	</tr>
+</xTableStructure>

@@ -1,0 +1,55 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Planner"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<<<$IFNOTPRINT>>>
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Planner
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:289/>The "Planner" page lets you do a detailed plan
+	for the next week. You can specify exact times that you will work on tasks, and
+	fit them in between meetings and phone calls.
+</p>
+
+<<<$ENDIFMICROHELP>>>
+
+<Null>
+	<<<$WRAPUP>>>
+</null>
+
+
+
+<<<$IFMICROHELP>>>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<Null>
+	<<<$PLANNER>>>
+</null>
+
+
+<p align=center><table width=80%>
+	<xtrheader>Deeply random thought of the day</xtrheader>
+	<tr>
+		<td>
+			<image posn=background type=tile scale=75% jpgresource=219/>
+			<font color=#ffffff><<<$DEEPTHOUGHT>>></font>
+		</td>
+	</tr>
+</table></p>
+
+<<<$IFNOTPRINT>>>
+<xbr/>
+
+<xChoiceButton href=r:291>
+	<bold>Change your scheduled breaks</bold>
+	<br/>
+	This page lets you change what time you usually start work, when you have lunch
+	and for how long, and when you have dinner.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

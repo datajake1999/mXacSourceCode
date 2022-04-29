@@ -1,0 +1,32 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Remove a journal category"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Remove a journal category
+</xPageTitle>
+
+<p>
+	You should remove a journal category when you're finished adding entries
+	and don't plan to look through the data in the future.
+	The category will still be kept around in the search database for future
+	reference, but it won't appear on your journal list.
+</p>
+
+
+<p>
+	Select the category you wish to remove and press "Remove category":
+</p>
+<p align=right>
+	<bold><combobox width=75% cbheight=100 name=categorytoremove>
+	</combobox></bold>
+</p>
+
+
+<align align=right>
+	<button name=remove>
+		Remove category
+	</button>
+</align>
+

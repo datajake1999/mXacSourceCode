@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EscHelp", "EscHelp.vcproj", "{A5F40A9E-5011-42B5-BFB8-46DA7C5E10E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A5F40A9E-5011-42B5-BFB8-46DA7C5E10E0}.Debug.ActiveCfg = Debug|Win32
+		{A5F40A9E-5011-42B5-BFB8-46DA7C5E10E0}.Debug.Build.0 = Debug|Win32
+		{A5F40A9E-5011-42B5-BFB8-46DA7C5E10E0}.Release.ActiveCfg = Release|Win32
+		{A5F40A9E-5011-42B5-BFB8-46DA7C5E10E0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

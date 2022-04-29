@@ -1,0 +1,196 @@
+# Microsoft Developer Studio Generated Dependency File, included by Escarpment.mak
+
+.\CEscControl.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\MMLInterpret.h"\
+	".\MMLParse.h"\
+	".\Paint.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CEscPage.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\MMLInterpret.h"\
+	".\MMLParse.h"\
+	".\Paint.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CEscWindow.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\JPeg.h"\
+	".\MMLInterpret.h"\
+	".\MMLParse.h"\
+	".\Paint.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Control3D.cpp : \
+	".\Escarpment.h"\
+	".\JPeg.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlButton.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlColorBlend.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlComboBox.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlEdit.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlHorizontalLine.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlImage.cpp : \
+	".\Escarpment.h"\
+	".\JPeg.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlLink.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlListBox.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlMenu.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlProgressBar.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlScrollBar.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ControlStatus.cpp : \
+	".\Escarpment.h"\
+	".\Render.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DLLMain.cpp : \
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\FontCache.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\JPeg.cpp : \
+	"..\..\jpeg\jpeg-6b\cderror.h"\
+	"..\..\jpeg\jpeg-6b\jconfig.h"\
+	"..\..\jpeg\jpeg-6b\jerror.h"\
+	"..\..\jpeg\jpeg-6b\jinclude.h"\
+	"..\..\jpeg\jpeg-6b\jmorecfg.h"\
+	"..\..\jpeg\jpeg-6b\jpeglib.h"\
+	"..\..\jpeg\jpeg-6b\jversion.h"\
+	".\Escarpment.h"\
+	".\JPeg.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MessageBox.cpp : \
+	".\Escarpment.h"\
+	".\MMLParse.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MMLInterpret.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\JPeg.h"\
+	".\MMLInterpret.h"\
+	".\MMLParse.h"\
+	".\Paint.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MMLParse.cpp : \
+	".\Escarpment.h"\
+	".\MMLParse.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Paint.cpp : \
+	".\Escarpment.h"\
+	".\FontCache.h"\
+	".\JPeg.h"\
+	".\MMLInterpret.h"\
+	".\MMLParse.h"\
+	".\Paint.h"\
+	".\TextWrap.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Render.cpp : \
+	".\Render.h"\
+	".\Tools.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Test.rc : \
+	".\cursor1.cur"\
+	".\handc1.cur"\
+	".\icon1.ico"\
+	".\MBDefault.mml"\
+	
+
+.\TextWrap.cpp : \
+	".\Escarpment.h"\
+	".\TextWrap.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Tools.cpp : \
+	".\Escarpment.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

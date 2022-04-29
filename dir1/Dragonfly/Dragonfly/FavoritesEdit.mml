@@ -1,0 +1,64 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Edit a menu item" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Edit menu item
+</xPageTitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Menu item name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name maxchars=64/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=128 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Accelerator:
+			<small><p/>You can type Alt-XXX instead of clicking on the menu item. Leave
+			this blank if you don't want an accelerator.</small>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=accelerator maxchars=2/>
+		</xtdright>
+	</tr>
+</xtableclear>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

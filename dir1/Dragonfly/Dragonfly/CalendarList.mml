@@ -1,0 +1,45 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View your calendar as a list"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<<<$IFNOTPRINT>>>
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	View your calendar as a list
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:183/>Using this page you can view your calendar as a list of
+	events over the next week or month. You can print out the page to save
+	yourself from lugging around your computer.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<Null>
+	<<<$WRAPUP>>>
+</null>
+
+
+<<<$IFMICROHELP>>>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<null>
+	<<<$MONTH>>>
+</null>
+
+<xbr/>
+
+
+<p align=center><table width=80%>
+	<xtrheader>Deeply random thought of the day</xtrheader>
+	<tr>
+		<td>
+			<image posn=background type=tile scale=75% jpgresource=219/>
+			<font color=#ffffff><<<$DEEPTHOUGHT>>></font>
+		</td>
+	</tr>
+</table></p>
+

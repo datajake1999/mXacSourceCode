@@ -1,0 +1,60 @@
+<pageinfo title="Documentation"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Documentation</xPageTitle>
+
+<p>All documentation written in Escarpment.</p>
+
+<xChoiceButton href=r:113>
+	<bold>MML Formatting</bold><br/>
+	This describes how MML if formatted/written. This includes a definition of tags, attributes,
+	macros, includes, templates, and substitutions.
+</xChoiceButton>
+
+<xChoiceButton href=r:114>
+	<bold>MML Tags</bold><br/>
+	A list of MML tags and their attributes.
+</xChoiceButton>
+
+<xChoiceButton href=r:115>
+	<bold>Standard Controls</bold><br/>
+	This tells you all about the built-in controls: What they are, how to use them, and what messages they support.
+</xChoiceButton>
+
+<xChoiceButton href=r:129>
+	<bold>CEscControl</bold><br/>
+	How to use the control C++ object to communicate with controls.
+</xChoiceButton>
+
+<xChoiceButton href=r:130>
+	<bold>CEscPage</bold><br/>
+	Details about the C++ page object.
+</xChoiceButton>
+
+<xChoiceButton href=r:131>
+	<bold>CEscWindow</bold><br/>
+	This covers the window C++ object.
+</xChoiceButton>
+
+<xChoiceButton href=r:138>
+	<bold>CEscSearch</bold><br/>
+	Documentation on the Escarpment search object that lets you easily
+	incorporate a keyword search in your application.
+</xChoiceButton>
+
+<xChoiceButton href=r:132>
+	<bold>Utility Functions</bold><br/>
+	Miscellaneous utility functions exported from Escarpment.dll.
+</xChoiceButton>
+
+<xChoiceButton href=r:133>
+	<bold>Advanced Objects</bold><br/>
+	If you want to learn about all the objects listed in Escarpment.h, this section is for you. It covers objects
+	rarely used by normal development.
+</xChoiceButton>
+
+<xChoiceButton href=r:134>
+	<bold>Writing your own controls</bold><br/>
+	How to write your own controls.
+</xChoiceButton>

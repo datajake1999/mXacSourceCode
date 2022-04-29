@@ -1,0 +1,204 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Projects page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=209/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Projects" page
+</xPageTitle>
+
+<p>
+	Do you ever start long and involved projects with lots of tasks?
+	If so, the "<a href=r:145>Project</a>" page may be for you.
+	Dragonfly's "Project" page provides simple easy-to-use project management
+	that takes some of the timing complexities out of projects.
+</p>
+
+<p>
+	A "project" is basically a list of tasks needed to finish the project.
+	The tasks are a sequence of short (up to one week) work items.
+	For example: If you were using Dragonfly to monitor a deck-building project
+	you might have tasks for:
+</p>
+<align align=center><xlisttable width=60%>
+<tr><td>
+<xul>
+	<li>Design the deck</li>
+	<li>Acquire a permit</li>
+	<li>Order the wood</li>
+	<li>Arrange for a cement truck</li>
+	<li>Build the forms</li>
+	<li>Pour the cement</li>
+	<li>Build the deck</li>
+	<li>Put sealant on</li>
+	<li>Invite people over for a party</li>
+	<li>Have the deck party</li>
+</xul>
+</td></tr>
+</xlisttable></align>
+
+<p/>
+
+<p>
+	Dragonfly lets you write these tasks into the computer and reoder them.
+	("So what?" you say; I can do that on paper.)
+</p>
+
+<p>
+	When you enter the tasks, you also specify how much work they are
+	and how much time a week you plan to spend on the project.
+	Building the forms is about 1 day of work, but if you only spend
+	one day a week on the deck, Dragonfly will calculate that you probably
+	won't start your next task until a week after that's completed.
+	Using Dragonfly, you can estimate when you will finish tasks in your
+	project, and when the project will be finished.
+</p>
+
+<p>
+	And, if that isn't enough, Dragonfly lets you specify how tasks
+	depend upon one another. For example: Even though arranging
+	to have a cement truck come may only take you 15 minutes, you need to
+	arrange the truck a week or two in advance. Same with the permit process.
+	If you don't take this into account your project will take longer
+	to complete than it should. If in the example you need to order
+	the cement two weeks before you pour, you can build the forms after
+	you order. However, if you only need to order two days before, you're
+	better off building the forms and then ordering.
+	Dragonfly will help you iron out these timing issues.
+</p>
+
+<p>
+	When you create a task you can tell Dragonfly that it can't be started
+	until a specific date (no point building the deck until the snow has gone),
+	or that it must be completed before a specific date. (Make sure to finish
+	the deck before it starts snowing.) You can also require that tasks
+	must be finished several days before another begins, or conversely,
+	that a task cannot be started until several days after a task ends.
+</p>
+
+<p>
+	Sound useful?
+</p>
+
+<p>
+	To use Dragonfly for project management, you must:
+</p>
+
+<ol>
+	<li><a href=r:146>Add a new project.</a></li>
+	<li>
+		In the project's page, add all the tasks for the project. When
+		you're adding the tasks make sure to enter the amount of work needed
+		to complete the task and any dependencies with other tasks.
+	</li>
+	<li>
+		Look at the task list after it's all created. Any tasks that have
+		serious conflicts (such as starting the deck construction before the
+		snow has all melted) will be highlighted in red. Tasks that are
+		pushed back because they're waiting on another task to complete
+		(such as permit acceptance) are preceded by an "Idle time" section
+		that lets you know you'll be waiting.
+	</li>
+	<li>
+		Rearrange the tasks using the up and down arrows near the task names.
+		Make sure to arrange them so no tasks are highlighted in red, and
+		so that you have as little "Idle time" as possible.
+	</li>
+	<li>
+		If your project still won't be completed in time, you may need to
+		rearrange your priorities and commit more time to the project.
+		In the project's page you can tell Dragonfly how many days a week you
+		plan to spend on the project. Using that you can see if spending
+		more time will bring in the finish date any.
+	</li>
+</ol>
+
+<xsectiontitle>Managing multiple people</xsectiontitle>
+
+<p>
+	Dragonfly's project management can monitor several people working on a task,
+	although there's no way for the other participants to update your computer
+	automatically. You'll have tell Dragonfly when they complete their tasks.
+</p>
+
+<p>
+	To manage several people, when you create a new task, set the "Assigned to" field
+	to the person who is supposed to do the work. You'll see their name attached to
+	the task under the "Sub-project" column. If it's their first task Dragonfly
+	will assume that they'll start on it immediately and put the task at the top of
+	the list, because theoretically the person can start work right away and doesn't
+	require that any other tasks are completed before they can start. If this isn't
+	the case then make sure to set some dependencies when adding the task, such
+	as requiring one of your tasks to occur first.
+</p>
+
+<p>
+	You can continue to add tasks for that person or new people. Unless you specifically
+	tell Dragonfly that the person's task can't be started until one of your work items
+	is finished (or another person's), then the task will be inserted into the task list
+	assuming that they can start it as soon as they've finished their earlier tasks.
+</p>
+
+<p>
+	You can reorder the person's tasks by clicking on the blue arrow icons next to the task.
+	The task will be moved before (or after) the person's previous (or subsequent) task
+	in the list. Consequently, the up/down arrow may move the task several slots. Such
+	sudden jumps can be a bit confusing.
+</p>
+
+<p>
+	You can make task ordering easier to understand by looking at only those tasks assigned
+	to a specific person. To do this, select their name in the drop-down at the top
+	of the project page. All tasks except ones assigned to the person will be hidden.
+	(Tip: Once you've done this you can scroll to the bottom of the project page and
+	inform Dragonfly how many days a week that person will work on this project.)
+</p>
+
+<xsectiontitle>Keeping track of work</xsectiontitle>
+
+<p>
+	If you want to keep track of how much work you do on a specific project, such
+	as how much time you devote to repairing and maintaining your house, then:
+</p>
+
+<ol>
+	<li>
+		Create a <a href=r:121>journal</a> category for the project, such as "Deck building."
+	</li>
+	<li>
+		When you create a project, or in the project's page, set the "Journal category"
+		to the one you just created.
+	</li>
+	<li>
+		When you complete the task and press the "Completed" button, Dragonfly will ask
+		you how long the task took to complete. The task, along with this number, will
+		be logged into the journal category.
+	</li>
+	<li>
+		When you're interested in seeing how much time you've spent on the project, or
+		how often, switch to the journal category's page and press "Copy entry durations
+		to the clipboard." Paste the data into your favorite spreadsheet and use its
+		charting functionality to display a graph.
+	</li>
+</ol>
+
+<p>
+	You can use this same functionality to keep track of how much
+	work you contract out for a client. If you sum the number of hours and multiply
+	by your hourly rate, you can easily come up with a bill.
+</p>
+
+<xbr/>
+
+<p>
+	<bold>Professional Project Management Software</bold> - For those of you
+	that want to manage a team of people or a very long and intricate
+	project, you'll want something more powerful than Dragonfly. The
+	project management in Dragonfly is designed to handle "personal" projects
+	or small, single-person work projects. That's the only reason it's
+	easy to use. Anyone who has used a professional project management package will
+	know how difficult it is to set up and manage a project using them. So, if you have suggestions
+	for feature improvements, bear in mind that I don't want to turn
+	Dragonfly into a full-featured project manager, just one that ordinary
+	people can use.
+</p>

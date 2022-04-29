@@ -1,0 +1,134 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Look and feel"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Look and feel
+</xPageTitle>
+
+<p>
+	This page allows you to change what Dragonfly looks like.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xSectionTitle>Maximize screen real estate</xSectionTitle>
+
+<xChoiceButton style=light checked=false checkbox=true name=TemplateR>
+	<bold>Menu on the right</bold>
+	<br/>
+	Displays the Dragonfly menu on the right, which allows you to fit more text
+	on the screen. If this is off, the menu is displayed at the top and bottom
+	of the page.
+</xChoiceButton>
+
+<xChoiceButton style=light checked=false checkbox=true name=MicroHelp>
+	<bold>Include short help descriptions in every page</bold>
+	<br/>
+	If on then Dragonfly includes short help tips on every page. These are most useful
+	for new users. More advanced users may want to turn off the help segments
+	to save screen real estate.
+</xChoiceButton>
+
+<xChoiceButton style=light checked=false checkbox=true name=FullColor>
+	<bold>Use background photos and plenty of color</bold>
+	<br/>
+	If the switch is red then the Dragonfly includes background images (wallpaper) and lots of color.
+	If you turn it off then Dragonfly's display will mostly be black and white.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<tr>
+		<td>
+			<bold>Font size</bold> - This will allow you to fit more text on the screen.
+		</td>
+		<td><bold><combobox cbheight=150 width=100% name=SmallFont>
+			<elem name=0>Normal</elem>
+			<elem name=1>Small</elem>
+			<elem name=2>Very small</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+
+<xSectionTitle>Other settings</xSectionTitle>
+
+<xChoiceButton style=light checked=false checkbox=true name=Minimize>
+	<bold>Hide Dragonfly when it's minimized</bold>
+	<br/>
+	When you minimize Dragonfly it will disappear from your list of application on the taskbar
+	and show up as an icon on the taskbar. Clicking on the icon will show Dragonfly.
+</xChoiceButton>
+
+<xChoiceButton style=light checked=true checkbox=true name=PrintTwoColumns>
+	<bold>Print using two columns</bold>
+	<br/>
+	If this is on, whenever you print from Dragonfly it will minimize paper by
+	using smaller text and printing on two columns. If it's off, printed text is larger
+	and uses the page's width as one column.
+</xChoiceButton>
+
+<xSectionTitle>Work around bugs in sound and video drivers</xSectionTitle>
+
+<xChoiceButton style=light checked=false checkbox=true name=DisableSounds>
+	<bold>Disable sounds (beeps and text-to-speech)</bold>
+	<br/>
+	If you turn this on then Dragonfly won't play its usual beeps, chimes,
+	or text-to-speech.
+</xChoiceButton>
+
+
+<xChoiceButton style=light checked=false checkbox=true name=DisableCursor>
+	<bold>Disable colored cursors</bold>
+	<br/>
+	Some video drivers do not support full colored cursors. If the cursors in Dragonfly
+	appear to be green boxes with a hand (or cicle with slash) then click this to
+	use black and white versions.
+</xChoiceButton>
+
+
+<xsectiontitle>Background images</xsectiontitle>
+
+<p>
+	You can change the background images in Dragonfly to your own images. The
+	image <bold>must saved as a JPEG file</bold>. Click the appropriate button
+	to change the image. You can return to the original image by pressing "cancel"
+	in the dialog box that appears.
+</p>
+
+<bold><xtablecenter width=100%>
+	<tr>
+		<td><button style=righttriangle name=ci:0>Archive</button></td>
+		<td><button style=righttriangle name=ci:1>Calendar</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:2>Deep thoughts</button></td>
+		<td><button style=righttriangle name=ci:3>Journal</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:4>Meetings</button></td>
+		<td><button style=righttriangle name=ci:5>Memory lane</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:6>Misc.</button></td>
+		<td><button style=righttriangle name=ci:7>Notes</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:8>People</button></td>
+		<td><button style=righttriangle name=ci:9>Phone</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:10>Projects</button></td>
+		<td><button style=righttriangle name=ci:11>Reminders</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:12>Search</button></td>
+		<td><button style=righttriangle name=ci:13>Tasks</button></td>
+	</tr>
+	<tr>
+		<td><button style=righttriangle name=ci:14>Today</button></td>
+		<td></td>
+	</tr>
+</xtablecenter></bold>

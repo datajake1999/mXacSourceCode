@@ -1,0 +1,47 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Tomorrow"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<<<$IFNOTPRINT>>>
+<xPageTitle>
+	<<<TODAYSDATE>>> <italic>(Tomorrow)</italic>
+</xPageTitle>
+
+<<<$IFMICROHELP>>>
+<p>
+	<xMoreInfo href=r:186/>The "Tomorrow" page works just like the Today page,
+	except that it also includes work items you'll need to do tomorrow.
+	You can look at this to get a peek of tomorrow's schedule and workload.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<Null>
+	<<<$MEETINGSUMMARY>>>
+</null>
+
+<Null>
+	<<<$REMINDERSUMMARY>>>
+</null>
+
+<Null>
+	<<<$WORKSUMMARY>>>
+</null>
+
+<Null>
+	<<<$PROJECTSUMMARY>>>
+</null>
+
+<<<$IFNOTPRINT>>>
+<xbr/>
+
+<xChoiceButton href=r:291>
+	<bold>Change your scheduled breaks</bold>
+	<br/>
+	This page lets you change what time you usually start work, when you have lunch
+	and for how long, and when you have dinner.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

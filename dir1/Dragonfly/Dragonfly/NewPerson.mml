@@ -1,0 +1,19 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Add someone to the address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Add someone to the address book
+</xPageTitle>
+
+<p>
+	To add a new person to your address book, fill in the details below and press
+	the "Add person" at the bottom of the page.
+</p>
+
+<?Include resource=164?>
+
+<align align=right>
+	<button name=add>Add person</button>
+</align>

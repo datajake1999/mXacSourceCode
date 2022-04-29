@@ -1,0 +1,35 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Search page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=216/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Search" page
+</xPageTitle>
+
+<p>
+	<a href=r:128>Search</a> is one of the most important pages in Dragonfly. It lets
+	you easily find information the Dragonfly has remembered, and it lets you search
+	through Dragonfly's documentation.
+</p>
+
+<p>
+	To use the search, just type in important keywords or a search string, like
+	you would if you were using an Internet search. Then, press the "Search" button.
+	All the search documents found will be listed. The search includes all the
+	help text and all text you've entered into Dragonfly.
+</p>
+
+<p>
+	To search for documents from a specific date range, or of a specific category,
+	then use the advanced search options at the bottom of the search page. Just
+	select the date range you want and/or the types of document you want to find,
+	and press the "Search" button.
+</p>
+
+<p>
+	If search doesn't find some text that you know you've added, you might want
+	to update the search index. Recently-added text and documents may not
+	have yet been indexed.
+</p>
+

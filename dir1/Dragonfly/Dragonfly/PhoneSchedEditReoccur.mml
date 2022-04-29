@@ -1,0 +1,103 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Edit reoccurring call" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Edit reoccurring call
+</xPageTitle>
+
+<xdefinition>
+	Because this is a reoccurring call
+	any changes you make to this call will also be reflected in instances of the call
+	that have already been generated.
+</xdefinition>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Who is the call with?
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=attend width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description of the call:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=1024 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it start?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="Any time" width=100% name=meetingstart/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When does it end?
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=meetingend/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sound an alarm before the call?
+		</xtdLeft>
+		<xtdright>
+			<xComboAlarm name=alarm/>
+		</xtdright>
+	</tr>
+
+</xTableClear>
+
+
+
+<xbr/>
+
+<p>
+	How often does the call occur?
+</p>
+
+<?Include resource=159?>
+
+
+<xbr/>
+
+<xChoiceButton name=delete>
+	<bold>Delete</bold>
+	<br/>
+	Permenently delete the reoccurring call.
+</xChoiceButton>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>OK</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

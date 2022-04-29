@@ -1,0 +1,67 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a new business" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add business</font>
+		<xhoverhelp>
+			Press this to add the business to your address book.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Quickly add a new business
+</xPageTitle>
+
+<p>
+	To add a business to your address book, type in their name and press "Add business."
+	You should spend some time later and fill in more information about the business.
+</p>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Business name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=lastname defcontrol=true/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Primary contact:
+			<br/><italic>(The person you usually talk to.)</italic>
+		</xtdleft>
+		<xtdright><xEditInTable name=nickname/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=workphone/></xtdright>
+	</tr>
+</xtableclear>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add business</font>
+		<xhoverhelp>
+			Press this to add the business to your address book.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

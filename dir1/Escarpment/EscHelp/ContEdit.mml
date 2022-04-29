@@ -1,0 +1,670 @@
+<pageinfo title="Edit Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Edit Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The edit control allows users to type in and edit text. It has virtually the same behavior as a standard
+	Windows edit control.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<!xEdit>
+	<Edit width=100% MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Edit>
+	<br/>
+</xEdit>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>border</xTd2>
+		<xTd3>
+			The edit control's border size, in pixels.
+			<p/>
+			Example:
+			<p/>
+			<xEdit border=8 text="border=8"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bordercolor</xTd2>
+		<xTd3>
+			Sets the color of the edit box border.
+			<p/>
+			Example:
+			<p/>
+			<xEdit bordercolor=#00ff00 text="bordercolor=#00ff00"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>capturetab</xTd2>
+		<xTd3>
+			If TRUE, when the control has focus is captures the tab key and enters a tab into the text. If FALSE (default)
+			tab switches to the next control.
+			<p/>
+			Example:
+			<p/>
+			<xEdit capturetab=true text="capturetab=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>caretblinkcolor</xTd2>
+		<xTd3>
+			Specifies the color of the caret when it's not blinking.
+			<p/>
+			Example:
+			<p/>
+			<xEdit caretblinkcolor=#0000ff text="caretblinkcolor=#0000ff"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>caretcolor</xTd2>
+		<xTd3>
+			Specifies the color of the caret when it's blinking.
+			<p/>
+			Example:
+			<p/>
+			<xEdit caretcolor=#00ff00 text="caretcolor=#00ff00"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Sets the edit control's background color. This can be "transparent".
+			<p/>
+			Example:
+			<p/>
+			<xEdit color=#80ff80 text="color=#80ff80"/>
+			<xEdit color=transparent text="color=transparent"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>dirty</xTd2>
+		<xTd3>
+			Whenever the text is modified the dirty variable is set to TRUE. An application can set it to FALSE and then
+			check "dirty" to with PCEscControl-&gt;AttribGet() to see if the user has typed anything in.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>hscroll</xTd2>
+		<xTd3>
+			Specified the name of the horizontal scroll bar for the edit control.
+			<p/>
+			Example:
+			<p/>
+			<xEdit hscroll=hscroll text="hscroll=hscroll. This has lots of text so you can see scrolling working horizontally."/>
+			<scrollbar name=hscroll orient=horz/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>LRMargin</xTd2>
+		<xTd3>
+			The left/right margin between the text in the edit control and it's boundary.
+			<p/>
+			Example:
+			<p/>
+			<xEdit lrmargin=0 text="lrmargin=0"/>
+			<xEdit lrmargin=16 text="lrmargin=16"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>maxchars</xTd2>
+		<xTd3>
+			Sets the maximum number of characters (including the NULL-termination) that the
+			edit box may contain.
+			<p/>
+			Example:
+			<p/>
+			<xEdit maxchars=20 text="maxchars=20"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>multiline</xTd2>
+		<xTd3>
+			If TRUE, the edit control allows multiple lines to be typed in and traps the Enter key. The default, FALSE,
+			allows only one line.
+			<p/>
+			Example:
+			<p/>
+			<xEdit multiline=true text="multiline=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>password</xTd2>
+		<xTd3>
+			If set to TRUE, the text is obscured for passwords.
+			<p/>
+			Example:
+			<p/>
+			<xEdit password=false text="password=false"/>
+			<xEdit password=true text="password=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>prelineindent</xTd2>
+		<xTd3>
+			If TRUE, whenever the user presses "Enter", the new line is indented to the same indentation as the
+			previous line. This is useful for code editors, such as MML or C++. The default is FALSE.
+			<p/>
+			Example:
+			<p/>
+			<xEdit multiline=true prelineindent=true text="&tab;prelineindent=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>readonly</xTd2>
+		<xTd3>
+			If TRUE, the user cannot change the text.
+			<p/>
+			Example:
+			<p/>
+			<xEdit readonly=true text="readonly=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>selall</xTd2>
+		<xTd3>
+			If TRUE, when the user changes focus to the edit box all of the text
+			in the edit box will be selected.
+			<p/>
+			Example:
+			<p/>
+			<xEdit selall=true text="selall=true"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>selbordercolor</xTd2>
+		<xTd3>
+			Specifies the color of the selection border.
+			<p/>
+			Example:
+			<p/>
+			<xEdit selend=5 selbordercolor=#ff0000 text="selbordercolor=#ff0000"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>selcolor</xTd2>
+		<xTd3>
+			Specifies the color of the selection.
+			<p/>
+			Example:
+			<p/>
+			<xEdit selend=5 selcolor=#ffff00 text="selcolor=#ffff00"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>selend</xTd2>
+		<xTd3>
+			Sets the end of the selection
+			<p/>
+			Example:
+			<p/>
+			<xEdit selend=5 text="selend=5"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>selstart</xTd2>
+		<xTd3>
+			Sets the start of the selection
+			<p/>
+			Example:
+			<p/>
+			<xEdit selstart=5 text="selstart=5"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>scrollx</xTd2>
+		<xTd3>
+			Scrolls the contents of the edit control to left scrollx pixels from the start. Use this for horizontal
+			scrolling.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>TBMargin</xTd2>
+		<xTd3>
+			The top/bottom margin between the text in the edit control and it's boundary.
+			<p/>
+			Example:
+			<p/>
+			<xEdit tbmargin=0 text="tbmargin=0"/>
+			<xEdit tbmargin=16 text="tbmargin=16"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>text</xTd2>
+		<xTd3>
+			The text that that's displayed in the edit control.
+			<p/>
+			Example:
+			<p/>
+			<xEdit text="text=text"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>topline</xTd2>
+		<xTd3>
+			Scrolls the edit control so the specified line is at the top.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>vscroll</xTd2>
+		<xTd3>
+			Specified the name of the vertical scroll bar for the edit control.
+			<p/>
+			Example:
+			<p/>
+			<Edit width=50% height=100 multiline=true wordwrap=true vscroll=vscroll text="vscroll=vscroll. This has lots of text so you can see scrolling working vertically. This has lots of text so you can see scrolling working vertically."/>
+			<scrollbar name=vscroll height=100 orient=vert/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>wordwrap</xTd2>
+		<xTd3>
+			If TRUE, the text wraps when it gets to the right hand edge of the edit control. The default, FALSE,
+			allows text to go beyond the right hand edge.
+			<p/>
+			Example:
+			<p/>
+			<xEdit multiline=true wordwrap=true text="wordwrap=true. This is a long sentence so you can see how wordwrap works."/>
+			<xEdit multiline=true wordwrap=false text="wordwrap=false. This is a long sentence so you can see how wordwrap works."/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The edit control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<xSectionTitle>ESCM_EDITCUT</xSectionTitle>
+
+<p>
+	Cuts the current text selection onto the clipboard. pParam is NULL.
+</p>
+
+<xSectionTitle>ESCM_EDITCOPY</xSectionTitle>
+
+<p>
+	Copies the current text selection onto the clipboard. pParam is NULL.
+</p>
+
+<xSectionTitle>ESCM_EDITPASTE</xSectionTitle>
+<p>
+	Pastes the clipboard over the current selection. pParam is NULL.
+</p>
+
+<xSectionTitle>ESCM_EDITUNDO</xSectionTitle>
+<p>
+	Undoes the last text modification action. pParam is NULL.
+</p>
+
+<xSectionTitle>ESCM_EDITREDO</xSectionTitle>
+<p>
+	Re-does the last undo. pParam is NULL.
+</p>
+
+<xSectionTitle>ESCM_EDITCANUNDOREDO</xSectionTitle>
+
+<p>
+	Sets fUndo and fRedo if there's anything in the undo and redo butfers.
+</p>
+
+<p>
+	The ESCMEDITCANUNDOREDO structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xTd2>fUndo</xTd2>
+		<xTd3>
+			Set to TRUE if there are any elements in the undo cache. Otherwise FALSE.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xTd2>fRedo</xTd2>
+		<xTd3>
+			Set to TRUE if there are any elements in the redo cache. Otherwise FALSE.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+<xSectionTitle>ESCM_EDITCHARPROMPOS</xSectionTitle>
+
+<p>
+	Given a point in page coordinates, this fills in information about what character is below it.
+</p>
+
+<p>
+	The ESCMEDITCHARFROMPOS structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xTd2>p</xTd2>
+		<xTd3>
+			This should be filled in with the point in page coordinates to check.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwChar</xTd2>
+		<xTd3>
+			Filled in with the character number (starting at 0) that sits underneath. Set to -1 if
+			there's no character underneath p.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITEMPTYUNDO</xSectionTitle>
+<p>
+	Empties the undo and redo buffers. pParam is NULL.
+</p>
+
+
+
+
+<xSectionTitle>ESCM_EDITFINDTEXT</xSectionTitle>
+
+<p>
+	Searches through the text in the edit control for a match.
+</p>
+
+<p>
+	The ESCMEDITFINDTEXT structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwFlags</xTd2>
+		<xTd3>
+			One or more of the following flags.
+			<p/>
+			<xul>
+				<li>FR_MATCHCASE - Only exact case matches are accepted.</li>
+				<li>FR_WHOLEWORD - The matched string must be a word by itself.</li>
+			</xul>
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwStart</xTd2>
+		<xTd3>
+			Starting character to search from.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwEnd</xTd2>
+		<xTd3>
+			Last character to search to.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>pszFind</xTd2>
+		<xTd3>
+			String to search for.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwFoundStart</xTd2>
+		<xTd3>
+			If found, this is set to the starting character index where the string match occurred.
+			If not found, this is set to -1.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwFoundEnd</xTd2>
+		<xTd3>
+			If found, this is set to the ending character index where the string match occurred.
+			If not found, this is set to -1.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>ESCM_EDITGETLINE</xSectionTitle>
+<p>
+	Given a line number, this copies the line's text into a caller-supplied string buffer.
+</p>
+
+<p>
+	The ESCMEDITGETLINE structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwLine</xTd2>
+		<xTd3>
+			Line number to get, 0 based.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>psz</xTd2>
+		<xTd3>
+			This points to a buffer that should be filled with the string. It may be NULL.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwSize</xTd2>
+		<xTd3>
+			Number of bytes available in psz.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwNeeded</xTd2>
+		<xTd3>
+			Filled in with the number of bytes needed in psz. If dwNeeded &gt; dwSize then the string is not copied.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xTd2>fFilledIn</xTd2>
+		<xTd3>
+			Set to TRUE if psz was filled in. FALSE if the buffer was too small or the line number was invalid.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITLINEFROMCHAR</xSectionTitle>
+<p>
+	Given a character index, this return the line it's on.
+</p>
+
+<p>
+	The ESCMLINEFROMCHAR structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwChar</xTd2>
+		<xTd3>
+			Character number, 0 based.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwLine</xTd2>
+		<xTd3>
+			Filled in with the line number that the character is on, 0 based. -1 if the character index is invalid.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITLINEINDEX</xSectionTitle>
+<p>
+	Given a line number, this returns the character number of the character that begins the line, and the
+	length of the line.
+</p>
+
+<p>
+	The ESCMEDITLINEINDEX structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwLine</xTd2>
+		<xTd3>
+			Line number, 0 based.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwChar</xTd2>
+		<xTd3>
+			Filled in with the character index (0 based) that starts the line. -1 if the line index is invalid.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwLen</xTd2>
+		<xTd3>
+			Filled in with the number of characters in the line. -1 if the line index is invalid.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITPOSFROMCHAR</xSectionTitle>
+<p>
+	Given a character number, returns a rectangle in page coordinates that bounds the character.
+</p>
+
+<p>
+	The ESCMEDITPOSFROMCHAR structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwChar</xTd2>
+		<xTd3>
+			Character number.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xTd2>r</xTd2>
+		<xTd3>
+			Filled with the bounding rectangle for the character. All 0's if the character is invalid.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITREPLACESEL</xSectionTitle>
+<p>
+	Replaces the current selection with the specified text.
+</p>
+
+<p>
+	The ESCMEDITREPLACESEL structure contains:
+</p>
+
+<xTableStructure>
+	<tr>
+		<xVarPWSTR/>
+		<xTd2>psz</xTd2>
+		<xTd3>
+			String to replace the selection with.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xTd2>dwLen</xTd2>
+		<xTd3>
+			Number of characters from psz to use.
+		</xTd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>ESCM_EDITSCROLLCARET</xSectionTitle>
+
+<p>
+	If the caret is not visible within the edit box then the edit box is scrolled horizontally and vertically
+	so that it is visible. pParam is NULL.
+</p>
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_EDITCHANGE</xSectionTitle>
+
+<p>
+	Sent by the edit control whenever its contents have changed.
+</p>
+
+<p>
+	The ESCBEDITCHANGE structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+</xTableStructure>
+
+

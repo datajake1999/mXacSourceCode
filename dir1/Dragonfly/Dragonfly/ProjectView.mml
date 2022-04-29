@@ -1,0 +1,104 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View a project" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=209/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	<<<PROJECTNAME>>>
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:155/>Below you is a list of tasks for the project.
+	Using this page you may add, remove, rearrange, and edit tasks.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<!xuparrow>
+	<image bmpresource=154 border=0 transparent=true MACROATTRIBUTE=1>
+		<xhoverhelpshort>Moves the task up one slot.</xhoverhelpshort>
+	</image>
+</xuparrow>
+
+<!xdownarrow>
+	<image bmpresource=155 border=0 transparent=true MACROATTRIBUTE=1>
+		<xhoverhelpshort>Moves the task down one slot.</xhoverhelpshort>
+	</image>
+</xdownarrow>
+
+<!xspacearrow>
+	<image bmpresource=156 border=0 transparent=true/>
+</xspacearrow>
+
+<null>
+	<<<$TASKLIST>>>
+</null>
+
+<xbr/>
+
+<xChoiceButton name=addnewtask>
+	<bold>Add a new task</bold>
+	<br/>
+	Add a single new task onto the end of the list.
+</xChoiceButton>
+
+<xChoiceButton name=addseveraltasks>
+	<bold>Add several tasks</bold>
+	<br/>
+	Add several tasks at once to the end of the task list.
+</xChoiceButton>
+
+<xChoiceButton name=movetaskfar>
+	<bold>Move a task</bold>
+	<br/>
+	Most of the time moving a task up or down the list is most easily done using the up and
+	down arrows next to the task name. If you need to move a task a long distance
+	in the list, press this button.
+	Then, click on the task you want to move, followed by the task you want to insert it
+	before. The task will be moved.
+</xChoiceButton>
+
+<button checkbox=true style=x valign=top name=disabled>
+	<bold>I've put this project aside for awhile</bold>
+	<br/>
+	Checking this will hide the project from your to-do lists.
+	Check this when you've stopped working on the project for a few weeks or longer will
+	reduce the clutter in your to-do lists.
+</button>
+
+<xbr/>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			How many days a week <bold><<<CURRENTPERSON>>></bold> spend working on the project?
+		</xtdleft>
+		<xtdright>
+		<bold><combobox width=100% cbheight=100 cursel=0 name=daysperweek>
+			<elem name=1>One day a week</elem>
+			<elem name=2>Two days a week</elem>
+			<elem name=3>Three days a week</elem>
+			<elem name=4>Four days a week</elem>
+			<elem name=5>Five days a week</elem>
+			<elem name=6>Six days a week</elem>
+			<elem name=7>Seven days a week</elem>
+		</combobox></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>(This causes a link to appear in the journal category when the task is completed.
+			If you run a small business, you can use this
+			to bill your time to a specific party.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+</xtableclear>
+
+
+
+<null>
+	<<<$TASKLISTCOMPLETED>>>
+</null>

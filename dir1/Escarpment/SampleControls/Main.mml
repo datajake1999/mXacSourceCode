@@ -1,0 +1,174 @@
+<pageinfo title="Sample Controls"/>
+
+<!xMenuButton>
+   <Mybutton showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <?MACROCONTENT?>
+   </Mybutton><br/>
+</xMenuButton>
+
+<!xMenuSeperator>
+   <hr width=15%/><br/>
+</xMenuSeperator>
+
+<!xMenuText>
+   <menutext>
+      <Mycolorblend color=#8080ff posn=background/>
+      <?MACROCONTENT?>
+   </menutext>
+</xMenuText>
+
+<!xMenuContents>
+   <menucontents>
+      <pageinfo lrmargin=0 tbmargin=0/>
+      <Mycolorblend tcolor=#8080ff bcolor=#6060d0 posn=background/>
+      <?MACROCONTENT?>
+   </menucontents>
+</xMenuContents>
+
+
+<p><bold><big>
+	Sample Controls
+</big></bold></p>
+
+<p>
+	This sample shows you how to write your own Escarpment controls.
+	It includes the code for most of the controls included
+	in <bold>Escarpment.dll</bold>. It also includes CEscControl.cpp, which
+	is the code for the CEscControl C++ object. You won't be able to compile
+	it, but you can look through the source to see how the control
+	architecture works.
+</p>
+
+<p>
+	This sample just displays this page containing all the sample controls.
+	That's it. You can look through the source code for the controls, or
+	build a debug version and step through code to see how things work.
+</p>
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<p>
+	MyButton
+</p>
+<p align=right>
+	<Mybutton>Button</Mybutton>
+</p>
+
+<p>
+	MyColorBlend
+</p>
+<p align=right>
+	<Mycolorblend width=30% height=10% lcolor=#00c0c0 rcolor=#0080c0/>
+</p>
+
+<p>
+	MyComboBox
+</p>
+<p align=right>
+	<Mycombobox cursel=0 width=30%>
+		<elem>Item one</elem>
+		<elem>Item two</elem>
+		<elem>Item three</elem>
+		<elem>Item four</elem>
+		<elem>Item five</elem>
+		<elem>Item six</elem>
+		<elem>Item seven</elem>
+		<elem>Item eight</elem>
+		<elem>Item nine</elem>
+		<elem>Item ten</elem>
+	</Mycombobox>
+</p>
+
+<p>
+	MyEdit
+</p>
+<p align=right>
+	<Myedit text="type here"/>
+</p>
+
+<p>
+	MyHR
+</p>
+<p align=right>
+	<Myhr width=30%/>
+</p>
+
+<p>
+	MyImage
+</p>
+<p align=right>
+	<Myimage href="http://www.mxac.com.au" jpgresource=102 scale=50%/>
+</p>
+
+<p>
+	MyListBox
+</p>
+<p align=right>
+	<Mylistbox cursel=0 vscroll=listscroll width=30% height=20%>
+		<elem>Item one</elem>
+		<elem>Item two</elem>
+		<elem>Item three</elem>
+		<elem>Item four</elem>
+		<elem>Item five</elem>
+		<elem>Item six</elem>
+		<elem>Item seven</elem>
+		<elem>Item eight</elem>
+		<elem>Item nine</elem>
+		<elem>Item ten</elem>
+	</Mylistbox>
+	<Myscrollbar name=listscroll height=20% orient=vert/>
+</p>
+
+<p>
+	MyMenu
+</p>
+<p align=right>
+	<Mymenu>
+		<xmenutext>Menu</xmenutext>
+		<xmenucontents>
+			<xMenuButton href=[close]>Menu item 1</xMenuButton>
+			<xMenuButton href=[close]>Menu item 2</xMenuButton>
+			<xMenuButton href=[close]>Menu item 3</xMenuButton>
+			<xMenuButton href=[close]>Menu item 4</xMenuButton>
+		</xmenucontents>
+	</Mymenu>
+</p>
+
+<p>
+	MyProgressBar
+</p>
+<p align=right>
+	<Myprogressbar width=50% pos=75 align=horz/>
+</p>
+
+<p>
+	MyScrollBar
+</p>
+<p align=right>
+	<scrollbar width=30% pos=75 align=horz/>
+</p>
+
+<p>
+	MyStatus
+</p>
+<p align=right>
+	<Mystatus width=30% height=10%>
+		<Mycolorblend posn=background tcolor=#c0c0c0 bcolor=#80c080/>
+		53%
+	</Mystatus>
+</p>
+
+<p>
+	MyThreeD
+</p>
+<p align=right>
+	<MyThreeD width=20% height=20% timerinterval=125 border=0>
+		<Translate point=0,-1,3/>
+		<Rotatex val=45/>
+		<RotateYTime from=0 to=360 interval=20/>
+		<ShapeTeapot/>
+	</MyThreeD>
+</p>
+

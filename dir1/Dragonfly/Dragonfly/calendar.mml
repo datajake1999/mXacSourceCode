@@ -1,0 +1,94 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Calendar"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<<<$IFNOTPRINT>>>
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Calendar
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:183/>The "Calendar" page lets you see what meetings and tasks
+	you have scheduled for the month.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<p align=right><big><big>
+	<date name=date enterday=false year=2000 month=5 day=30 blank="No date specified" width=33%/>
+</big></big></p>
+
+<!xDayOfWeek>
+	<td width=10 bgcolor=#004000 align=center valign=center>
+		<big><font color=#ffffff><?MacroContent?></font></big>
+	</td>
+</xDayOfWeek>
+
+<!xDay>
+	<td width=10 height=15% MACROATTRIBUTE=1 align=left valign=top>
+		<small><?Macrocontent?></small>
+	</td>
+</xDay>
+
+<!xdaynull>
+	<xday bgcolor=#c0c0c0/>
+</xdaynull>
+
+<table width=100%>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#ffffe0 bcolor=#d0d0a0/><<<$ENDIFCOLOR>>>
+	<tr>
+		<xDayOfWeek>Sun</xDayOfWeek>
+		<xDayOfWeek>Mon</xDayOfWeek>
+		<xDayOfWeek>Tues</xDayOfWeek>
+		<xDayOfWeek>Wed</xDayOfWeek>
+		<xDayOfWeek>Thurs</xDayOfWeek>
+		<xDayOfWeek>Fri</xDayOfWeek>
+		<xDayOfWeek>Sat</xDayOfWeek>
+	</tr>
+	<<<$MONTH>>>
+</table>
+<br/>
+<p align=center><small><small>
+	Fine print: The listed holidays may be wrong. Make sure to check with your employer
+	before taking the day off.
+</small></small></p>
+
+
+<<<$IFNOTPRINT>>>
+<xbr/>
+
+<xChoiceButton href=r:237>
+	<bold>Holidays</bold>
+	<br/>
+	Specify what public holidays should appear on the calendar.
+</xChoiceButton>
+
+<xChoiceButton href=r:280>
+	<bold>Special days</bold>
+	<br/>
+	This allows you to mark special days on your calendar such as anniversaries,
+	holidays not automatically provided by Dragonfly, and birthdays.
+</xChoiceButton>
+
+<xChoiceButton href=r:270>
+	<bold>Annual calendar (by months)</bold>
+	<br/>
+	Displays the calendar for the entire year.
+</xChoiceButton>
+
+<xChoiceButton href=r:297>
+	<bold>Annual calendar (by weeks)</bold>
+	<br/>
+	Displays the calendar for the entire year.
+</xChoiceButton>
+
+<xChoiceButton href=r:276>
+	<bold>Phase of the moon</bold>
+	<br/>
+	A monthly calendar that shows you the phase of the moon.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

@@ -1,0 +1,2110 @@
+<pageinfo title="CEscControl"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>CEscControl</xPageTitle>
+
+<p>
+	CEscControl is the C++ object behind basic control functionality. Unless you're
+	writing your own control, you will get access to the PCEscControl of a control
+	by calling PCEscPage-&gt;ControlFind(). With that pointer, you'll probably use only
+	a handful of functions: CEscControl::Message(), CEscControl::AttribSetXXX(), and
+	CEscControl::AttribGetXXX().
+</p>
+
+<p>
+	If you're writing your own control you'll choose from almost all of the CEscControl
+	functions. While the functions are listed here, the click <a href=r:134>here</a> 
+	for details about writing your own controls.
+</p>
+
+<xSectionTitle>PESCCONTROLCALLBACK callback function</xSectionTitle>
+
+
+<xTableParam>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			The callback's control.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message for the callback to handle.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pParam</xtd2>
+		<xtd3>
+			Message-specific parameters.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xReturns/>
+		<xtd3>
+			The callback should return TRUE if it completely handles the message.
+			FALSE if the default handler should deal with the message.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+<xSectionTitle>ESCACCLERATOR Structure</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarWCHAR/>
+		<xtd2>ch</xtd2>
+		<xtd3>
+			The character that looking for. Upper case.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fAlt</xtd2>
+		<xtd3>
+			Set to TRUE if the alt key must be down.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fShift</xtd2>
+		<xtd3>
+			Set to TRUE if the shift key must be down.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fControl</xtd2>
+		<xtd3>
+			Set to TRUE if the control key must be down.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message to sent to the control/page.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+<xSectionTitle>CEscControl Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarESCACCELERATOR/>
+		<xtd2>m_AccelSwitch</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is automatically set based upon the m_pNode-&gt;AttribGet(L"accel").
+			It is the accelerator that the page designer has specified will set focus
+			to the control, and perhaps activate it. You usually don't have to modify
+			this at all.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCFontCache/>
+		<xtd2>m_FontCache</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			The font cache object is used by calls to CEscControl::TextBlock(). The control
+			callback may also use it to create fonts with.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwWantFocus</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			A control should set this during it's ESCM_INITCONTROL message. A value of 0
+			indicates that the control doesn't want any keyboard focus, and the tab key should
+			skip over it. 1 indicates that it wants focus. 2 that it not only wants focus,
+			but when it gets focus it will eat most keystrokes - such as an edit control.
+			Defaults to 0.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fCapture</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			Set to TRUE if the control has captured the mouse, which happens automatically
+			when a button is pressed on the control. Capture is automatically released
+			when the user lets the button up. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fEnabled</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is set to TRUE if the control is enabled, FALSE if it is disabled. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fFocus</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is set to TRUE if the control has the current keyboard focus
+			for the page, FALSE if it doesn't. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fLButtonDown</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			If the mouse is over the control, or if the control has captured the mouse
+			(which happens if any button is clicked on the control) then this
+			indicates the state of the left mouse button. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fMButtonDown</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			If the mouse is over the control, or if the control has captured the mouse
+			(which happens if any button is clicked on the control) then this
+			indicates the state of the middle mouse button. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fMouseOver</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is set to TRUE if the mouse if over the control's area, FALSE if it isn't. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fRButtonDown</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			If the mouse is over the control, or if the control has captured the mouse
+			(which happens if any button is clicked on the control) then this
+			indicates the state of the right mouse button. 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fRedrawOnMove</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			A control should set this during it's ESCM_INITCONTROL message. Set this to TRUE
+			if the control uses 3D perspective that causes the control's image to change
+			even if the page's window is moved.
+			This defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fWantMouse</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			A control should set this during it's ESCM_INITCONTROL message. If set the TRUE
+			the control wants mouse input messages, else it doesn't want any. If
+			this is FALSE the page will not send the control any mouse messages.
+			This defaults to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>m_hInstance</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			The applications HINSTANCE handle. This is sometimes necessary when making
+			Windows calls so it's stored here for convenience.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCListFixed/>
+		<xtd2>m_listAccelFocus</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is a list of keyboard accelerators that the control wants captured and
+			translated into messages when it <bold>has keyboard focus</bold>.
+			(All this work is done by the control's default
+			message handler.) The list contains ESCACCELERATOR structures. To add an element,
+			just will in a ESCACCELERATOR and call m_listAccelFocus.Add(&amp;accel);
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCListFixed/>
+		<xtd2>m_listAccelNoFocus</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is a list of keyboard accelerators that the control wants captured and
+			translated into messages when it <bold>doesn't</bold> have keyboard focus.
+			(All this work is done by the control's page.)
+			The list contains ESCACCELERATOR structures. To add an element,
+			just will in a ESCACCELERATOR and call m_listAccelNoFocus.Add(&amp;accel);
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCMem/>
+		<xtd2>m_mem</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This memory object is to be used by the control's callback function as it sees fit.
+			The sample controls store control-instance data here.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCESCCONTROLCALLBACK/>
+		<xtd2>m_pCallback</xtd2>
+		<xtd3>
+			The pointer to the control's callback function, which is what really differentiates
+			a button control from a scrollbar control, etc. You can replace this to do
+			control subclassing, just like window subclassing in Windows.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>m_pNode</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			This is the node that was used to create the control. You may examine the data within
+			the node, but <bold>don't</bold> change it.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>m_pParentControl</xtd2>
+		<xtd3>
+			Pointer to the parent control. Some controls will send their messages to another
+			control instead of to the parent page, such as scorllbars associated with an
+			edit control. If this is NULL the control has no parent control.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>m_pParentPage</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			The page that control sits on. <bold>Do not</bold> change the pointer.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszName</xtd2>
+		<xtd3>
+			The control's name, coming from m_pNode-&gt;AttribGet(L"name")); 
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>m_rPosn</xtd2>
+		<xtd3>
+			Position of the control within the page's coordinates.
+			<bold>Do not</bold> change.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarCBTree/>
+		<xtd2>m_treeAttrib</xtd2>
+		<xtd3>
+			<italic>Used to write a control.</italic> 
+			A tree keyed by attribute names and with the attribute strings as value.
+			While a control callback can modify this, it should probably rely on
+			CEscControl::AttribListAddXXX() doing the work.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>CEscControl::CEscControl</xSectionTitle>
+
+<p>
+	The constructor. Most applications will not be calling <xCodeInline>new CEscControl</xCodeInline> 
+	so you don't need this.
+</p>
+
+
+<xSectionTitle>CEscControl::~CEscControl</xSectionTitle>
+
+<p>
+	The destructor. Most applications will not be calling <xCodeInline>delete pControl</xCodeInline> 
+	so you don't need this.
+</p>
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribEnum</xSectionTitle>
+
+<p>
+	Enumerates an attribute of a control. Basically calls ESCM_ATTRIBENUM.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xtd2>
+		<xtd3>
+			Index number, starting at 0. If the index number is greater than the number
+			of attributes then an error is returned.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Filled in with the attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size of the pszAttrib buffer in bytes. If the buffer is not large enough
+			an error is returned.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribGet</xSectionTitle>
+
+<p>
+	Gets an attribute from the control. (Basically calls ESCM_ATTRIBGET).
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			To be filled in with the attribute value.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size of the pszValue buffer in bytes. If the buffer is not large enough
+			an error is returned.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwNeeded</xtd2>
+		<xtd3>
+			Filled in with the number of bytes needed for the attribute. 0 if no attribute.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>
+	CEscControl:: AttribListAdd3DPoint, AttribListAddAccelerator, AttribListAddBOOL,
+	AttribListAddCMem, AttribListAddColor,
+	AttribListAddDecimal, AttribListAddDecimalOrPercent,
+	AttribListAddDouble, AttribListAddHex, AttribListAddPercent,
+	AttribListAddString
+</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	Call these during the ESCM_CONSTRUCTOR to
+	tell the default handler what types the attributes are. That way, by the time
+	ESCM_INITCONTROL, all the attributes (numeric values) called will have been
+	filled in if they were specified in the object's attributes session. Furthermore,
+	whenever ESCM_ATTRIBGET or ESCM_ATTRIBSET are called they'll appear there.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pAttrib</xtd2>
+		<xtd3>
+			Pointer to an integer, DWORD, etc. value that is filled in
+			when ESCM_ATTRIBSET is called, or used if ESCM_ATTRIBGET is called.
+			<p/>
+			<xul>
+				<li>AttribListAdd3DPoint - Pointer to array of 4 doubles</li>
+				<li>AttribListAddAccelerator - PCESCACCELERATOR</li>
+				<li>AttribListAddBOOL - PBOOL</li>
+				<li>AttribListAddCMem -PCMem</li>
+				<li>AttribListAddColor - COLORREF*</li>
+				<li>AttribListAddDecimal - int*</li>
+				<li>AttribListAddDecimalOrPercent - int* and BOOL*</li>
+				<li>AttribListAddDouble - double*</li>
+				<li>AttribListAddHex - DWORD*</li>
+				<li>AttribListAddPercent - int*</li>
+				<li>AttribListAddString - PWSTR*</li>
+				<li>AttribListAddString - PWSTR and DWORD dwSize</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPBOOL/>
+		<xtd2>pfDirty</xtd2>
+		<xtd3>
+			 Optional. Set to TRUE if the attribute is changed, so the
+			 user code can quickly know if something was changed. For example have
+			 a BOOL m_fNeedRepaint flag set to TRUE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fRepaint</xtd2>
+		<xtd3>
+			 Optional. If TRUE, invalidates the control rectangle when the attribute
+			 is changed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessae</xtd2>
+		<xtd3>
+			 Optional. Message to send when attribute changes.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribGetBOOL</xSectionTitle>
+
+<p>
+	Gets a boolean attribute.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBool/>
+		<xReturns/>
+		<xtd3>
+			The boolean value. FALSE if no attribute found.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribGetInt</xSectionTitle>
+
+<p>
+	Gets an integer attribute.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xReturns/>
+		<xtd3>
+			The integer value. 0 if no attribute found.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribSet</xSectionTitle>
+
+<p>
+	Sets the attribute for a control. (Basically calls ESCM_ATTRIBSET)
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			Attribute value.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribSetBOOL</xSectionTitle>
+
+<p>
+	Sets the attribute for a control to a BOOL.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fValue</xtd2>
+		<xtd3>
+			Attribute value.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::AttribSetInt</xSectionTitle>
+
+<p>
+	Sets the attribute for a control to an integer value.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iValue</xtd2>
+		<xtd3>
+			Attribute value.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::CoordPageToScreen</xSectionTitle>
+
+<p>
+	Convert from page coordinates to screen coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::CoordPageToWindow</xSectionTitle>
+
+<p>
+	Convert from page coordinates to PCEscWindow (window) coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscControl::CoordScreenToPage</xSectionTitle>
+
+<p>
+	Convert from screen coordinates to page coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pScreen</xtd2>
+		<xtd3>
+			Screen coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscControl::CoordWindowToPage</xSectionTitle>
+
+<p>
+	Convert from PCEscWindow (window) coordinates to page coordinates.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+<p>
+	Overloaded parameters:
+</p>
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pWindow</xtd2>
+		<xtd3>
+			Window coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscControl::Enable</xSectionTitle>
+
+<p>
+	Enables/disables the control.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEnable</xtd2>
+		<xtd3>
+			The new enable/disable state.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+<xSectionTitle>CEscControl::Init</xSectionTitle>
+
+<p>
+	If you create a control using the constructor, you need to call Init() immediately
+	after. Init() sets up some variables and calls ESCM_INITCONTROL.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to use. This pointer is used, but the data it in it not touched.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPIFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Font info to use.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			Used to load in resources.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pParentPage</xtd2>
+		<xtd3>
+			Page which is ultimately parent
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pParentControl</xtd2>
+		<xtd3>
+			Parent control if this has one. Else NULL
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControlCallback/>
+		<xtd2>pCallback</xtd2>
+		<xtd3>
+			Callback for control messages.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::Invalidate</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	Invalidates a region of the page. Use NULL to invalidate the
+	entire control
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			Page coordinates. If NULL invalidates entire control.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscControl::IsVisible</xSectionTitle>
+
+<p>
+	Returns TRUE if the control is visible on the PC screen.
+	Basically converts coordinates to window and sees if it's in the visible
+	client.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarBOOL/>
+		<xReturns/>
+		<xtd3>
+			TRUE if it's visible. FALSE if not.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscControl::TimerKill</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	Kills the single easy-to-use timer.
+</p>
+
+<xTableParam>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::Message</xSectionTitle>
+
+<p>
+	Sends a message to the control. This:
+	1) Passes it to m_pCallback if there is one. If this returns FALSE then
+	2) Default message handler
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message, ESCM_XXX.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pParam</xtd2>
+		<xtd3>
+			Pointer to message-specific parameters structure.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::Paint</xSectionTitle>
+
+<p>
+	<italic>Not usually used.</italic>
+</p>
+
+<p>
+	Causes the control to paint to a HDC.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prPage</xtd2>
+		<xtd3>
+			Rectangle (in page coordinates) that needs drawing.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prDC</xtd2>
+		<xtd3>
+			Rectangle (in HDC coordinates) where to draw to. Has the same dimensions as pPAgeCoord.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prScreen</xtd2>
+		<xtd3>
+			Where this will appear on the screen. Some controls will use this for perspective. Same dimensions as pPageCoord.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prTotalScreen</xtd2>
+		<xtd3>
+			Size of the entire screen. Some controls will use this for perspective. Same dimensions as pPageCoord.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			hDC to draw onto.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size of the pszAttrib buffer in bytes. If the buffer is not large enough
+			an error is returned.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::MessageToParent</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	Sends a message to the control's parent, using m_pParentControl first, and failing that,
+	m_pParentPage.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwMessage</xtd2>
+		<xtd3>
+			Message, ESCM_XXX or ESCN_XXX.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pParam</xtd2>
+		<xtd3>
+			Pointer to message-specific parameters structure.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CEscControl::TextBlock</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	TextBlock - Creates a new text block. Controls can use text blocks to display
+	MML contained within the control's contents. This:
+</p>
+
+<ol>
+	<li>Creates the CEscTextBlock object</li>
+	<li>Initializes it</li>
+	<li>Calls Interpret</li>
+</ol>
+
+<p>
+	It does not call PostInterpret - This must be done after the control decides how
+	it wants stuff centered.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			hDC used for calculation. This can be gotten from CEscWindow::HDCGet().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node used to create the text block.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iWidth</xtd2>
+		<xtd3>
+			Maximum width (in pixels) of the text block.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fDeleteNode</xtd2>
+		<xtd3>
+			If TRUE, delete the node when text block destroyed.
+			If FALSE, don't. NOTE: Set to FALSE when using m_pNode or children.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fRootNodeNull</xtd2>
+		<xtd3>
+			If TRUE, don't use the name of the root node, but treat
+			is as text. If FALSE, look at name. For example, if a
+			&lt;button&gt;Press me!&lt;/button&gt; control, then would pass m_pNode for
+			pNode, and FALSE for fRootNodeNULL because dont want to create
+			a button within a button.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscTextBlock/>
+		<xReturns/>
+		<xtd3>
+			New block, or NULL if cant create.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscControl::TimerSet</xSectionTitle>
+
+<p>
+	<italic>Used when writing a control.</italic>
+</p>
+
+<p>
+	Uses the controls single easy-to-user timer and turns it on (or
+	resets it if its already in use).
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwTime</xtd2>
+		<xtd3>
+			New timer rate, in milliseconds.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>Messages</xSectionTitle>
+
+
+
+
+
+<xSectionTitle>ESCM_ATTRIBENUM</xSectionTitle>
+
+<p>
+	Tells the control to enumerate a specific attribute name. The default behavior
+	is to call m_treeAttrib::Enum.
+</p>
+
+<p>The ESCMATTRIBENUM structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndex</xtd2>
+		<xtd3>
+			Index, 0 based. If more than # of attributes the fill fExist with FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Memory to be filled in with attribute name
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes available in pszAttrib.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNeeded</xtd2>
+		<xtd3>
+			Filled in with the number of bytes needed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fFilledIn</xtd2>
+		<xtd3>
+			Fill in with TRUE if filled in pszAttrib, FALSE if didn't (buffer too small or didn't exsit).
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_ATTRIBGET</xSectionTitle>
+
+<p>
+	Asks the control for the value of an attribute. The default behavior is to use
+	the attributes set by AttribListAddXXX(). If that fails, it looks
+	in m_treeAttrib::Get. A control's message handler may trap this, see what attribute
+	is being requested, update it in m_treeAttrib, and then return FALSE to let the
+	default handler do it.
+</p>
+
+<p>The ESCMATTRIBGET structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute to search for.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			Memory to be filled in with attribute value.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes available in pszValue.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNeeded</xtd2>
+		<xtd3>
+			Filled in with the number of bytes needed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fFilledIn</xtd2>
+		<xtd3>
+			Fill in with TRUE if filled in pszValue, FALSE if didn't (buffer too small or didn't exsit).
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_ATTRIBSET</xSectionTitle>
+
+<p>
+	Sets the controls value of an attribute. The default behavior is to look
+	through the AttribListAddXXX() list and modify the variables directly. Failing that, it looks
+	in m_treeAttrib::Set. A control's message handler may trap this, see what attribute
+	is being changed, modify some internal variables, and then return FALSE to let the
+	default handler do it.
+</p>
+
+<p>The ESCMATTRIBSET structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute to modify.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			New value.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_CHAR and ESCM_SYSCHAR</xSectionTitle>
+
+<p>
+	Called to indicate a key was pressed.
+</p>
+
+<p>
+	The control has the opportunity to capture
+	it. If not, the main page gets it. The default behavior is to look through
+	all the m_listAccelFocus and see if it's there. If it is that's run.
+</p>
+
+<p>The ESCMCHAR and ESCMSYSCHAR structures are:</p>
+<xTableStructure>
+	<tr>
+		<xVarWCHAR/>
+		<xtd2>wCharCode</xtd2>
+		<xtd3>
+			See WM_CHAR.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>lKeyData</xtd2>
+		<xtd3>
+			See WM_CHAR.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEaten</xtd2>
+		<xtd3>
+			Should set this to TRUE if eat it. Leave as FALSE if not.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+<xSectionTitle>ESCM_CONSTRUCTOR</xSectionTitle>
+
+<p>
+	Called in the constructor of the control/page. The callback function can
+	set up any parameters in here. Called after the other member variables in
+	the control/page have been set up.
+</p>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_CONTROLTIMER</xSectionTitle>
+<p>
+	Called if the control's timer goes off. Default message procedure does nothing.
+	Control's timer is CEscControl::TimerSet, TimerKill.
+</p>
+
+
+
+
+
+
+<xSectionTitle>ESCM_DESTRUCTOR</xSectionTitle>
+
+<p>
+	Called in the destructor of the control/page before the other member
+	variables have been freed. The callback can do any releases here.
+</p>
+
+
+
+
+
+
+<xSectionTitle>ESCM_ENABLE</xSectionTitle>
+<p>
+	Called to indicate that the control's enable state has changed. The default
+	handler just invalidates the rectangle.
+</p>
+
+
+
+
+
+<xSectionTitle>ESCM_FOCUS</xSectionTitle>
+<p>
+	Called to indicate that the control's focus state has changed. The default
+	handler just invalidates the rectangle.
+</p>
+
+
+<xSectionTitle>ESCM_INITCONTROL</xSectionTitle>
+
+<p>
+	The next message to be called after the constructor. m_pNode, m_pfi,  m_hInstance
+	m_pParentPage, m_pParentControl, m_pCallback will have been filled in.
+	Also, m_treeAttrib and m_pszName filled in from m_pNode. m_AccelSwitch filled in
+	based on the control's parameters
+	The control should probably fill in accelerator information in m_listAccelFocus,
+	m_listAccelNoFocus, m_dwWantFocus, m_fWantMouse, m_fRedrawOnMove
+</p>
+
+
+
+<xSectionTitle>ESCM_KEYDOWN, ESCM_KEYUP, ESCM_SYSKEYDOWN, and ESCM_SYSKEYUP</xSectionTitle>
+
+<p>
+	Called to indicate a key was pressed down, or lifted up.
+</p>
+
+<p>
+	Control: The control has the opportunity to
+	eat it. If not, the main page gets it. The default behavior is to do nothing.
+</p>
+
+<p>
+	Called if the control doesn't eat. The default behavior is to do nothing.
+</p>
+
+<p>The ESCMKEYDOWN and ESCMKEYUP structures are:</p>
+<xTableStructure>
+	<tr>
+		<xVarInt/>
+		<xtd2>nVirtKey</xtd2>
+		<xtd3>
+			See WM_KEYDOWN/UP.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarLPARAM/>
+		<xtd2>lKeyData</xtd2>
+		<xtd3>
+			See WM_KEYDOWN/UP.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fEaten</xtd2>
+		<xtd3>
+			Should set this to TRUE if eat it. Leave as FALSE if not.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_LBUTTONDOWN, ESCM_MBUTTONDOWN, and ESCM_RBUTTONDOWN</xSectionTitle>
+
+<p>
+	Called to indicate that the XXX button is down. Unlike normal Windows behaviour,
+	if the button is down the mouse is automatically captured, and not released until
+	the button is up. The default message handler does nothing.
+</p>
+
+
+<p>The ESCMLBUTTONDOWN structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_LBUTTONDOWN.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>ESCM_LBUTTONUP, ESCM_MBUTTONUP, and ESCM_RBUTTONUP</xSectionTitle>
+
+<p>
+	Control: called to indicate that the XXX button is up. Capture is released.
+	The default message handler does nothing.
+</p>
+
+<p>
+	Default behavior is to pass down to control.
+</p>
+
+<p>The ESCMLBUTTONUP structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_LBUTTONUP.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEENTER</xSectionTitle>
+
+<p>
+	Called to indicate that the mouse has entered the control's display region.
+	the default handler invalidates the rectangle if m_fWantMouse is TRUE.
+	It also sets the caret if m_fWantMouse.
+</p>
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEHOVER</xSectionTitle>
+
+<p>
+	Called to indicate that the mouse has been hovering over the control for
+	awhile. the default message handler looks in m_pNode for a &lt;hoverhelp&gt; tag. If it
+	finds it, it passes it to the main window to display.
+</p>
+
+<p>The ESCMMOUSEHOVER structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_MOUSEMOVE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSELEAVE</xSectionTitle>
+
+<p>
+	Called to indicate that the mouse has left the control's display region (when
+	it's not captured). The default handler invalidates the rectangle if m_fWantMouse.
+	it doesn't bother with the caret assuming something else will.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOUSEMOVE</xSectionTitle>
+
+<p>
+	Called to indicate that the mouse has moved within the control's display region,
+	or if the mouse is captured, that it's moved at all. The default handler does nothing.
+</p>
+
+<p>The ESCMMOUSEMOVE structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Mouse position - in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarWPARAM/>
+		<xtd2>wKeys</xtd2>
+		<xtd3>
+			Flags from WM_MOUSEMOVE.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>ESCM_MOUSEWHEEL</xSectionTitle>
+<p>
+	The mouse wheel has moved. Default behavior is to return FALSE. A control, like an edit
+	control or scroll-bar, may handle this.
+</p>
+
+
+<p>The ESCMMOUSEWHEEL structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarWORD/>
+		<xtd2>fKeys</xtd2>
+		<xtd3>
+			See WM_MOUSEWHEEL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarSHORT/>
+		<xtd2>zDelta</xtd2>
+		<xtd3>
+			See WM_MOUSEWHEEL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPOINT/>
+		<xtd2>pPosn</xtd2>
+		<xtd3>
+			Position in page coordinates.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_MOVE</xSectionTitle>
+
+<p>
+	Notifies the control that it has been moved. The new size is in m_rPosn already.
+	(The control has no choice.) The default message handler just invalidates the
+	control rectangle
+</p>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_PAINT</xSectionTitle>
+
+<p>
+	Tells the control to paint itself. Note: The control does not have to paint the
+	focus or mouse-over rectangle - this is done by default (although it can be
+	overridden). The control should paint differently if its disabled. The default
+	message proc just paints a dummy.
+</p>
+
+<p>The ESCMPAINT structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC to paint with.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlPage</xtd2>
+		<xtd3>
+			The location of the page. Will be m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlHDC</xtd2>
+		<xtd3>
+			Location of control as displayed in HDC.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlScreen</xtd2>
+		<xtd3>
+			Location of control as displayed on the screen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidPage</xtd2>
+		<xtd3>
+			Invalid rectangle in page coordinates, same coords as m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidHDC</xtd2>
+		<xtd3>
+			Invalid where should paint to in the HDC. width and height of rHDC = width and height rPage.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidScreen</xtd2>
+		<xtd3>
+			Invalid where this will appear on the screen (for perspective reasons.)
+			Width and height of rHDC = width and height of rScreen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rTotalScreen</xtd2>
+		<xtd3>
+			Rectangle giving entire screen, since some controls use for perspective.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_PAINTFOCUS</xSectionTitle>
+
+<p>
+	Only called if m_fEnabled and m_fFocus are set. Tells the control it should draw a dotted-line
+	box (or something) to indicate focus. (Called after ESCM_PAINT). The default
+	message handler draws a dotted-line box
+</p>
+
+<p>The ESCMPAINTFOCUS structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC to paint with.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlPage</xtd2>
+		<xtd3>
+			The location of the page. Will be m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlHDC</xtd2>
+		<xtd3>
+			Location of control as displayed in HDC.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlScreen</xtd2>
+		<xtd3>
+			Location of control as displayed on the screen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidPage</xtd2>
+		<xtd3>
+			Invalid rectangle in page coordinates, same coords as m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidHDC</xtd2>
+		<xtd3>
+			Invalid where should paint to in the HDC. width and height of rHDC = width and height rPage.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidScreen</xtd2>
+		<xtd3>
+			Invalid where this will appear on the screen (for perspective reasons.)
+			Width and height of rHDC = width and height of rScreen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rTotalScreen</xtd2>
+		<xtd3>
+			Rectangle giving entire screen, since some controls use for perspective.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_PAINTMOUSEOVER</xSectionTitle>
+
+<p>
+	Only called if m_fEnabled and m_fMouseOver and m_fWantMouse are set.
+	Tells the control it should draw a red
+	box (or something) to indicate this is clickable.
+	(Called after ESCM_PAINT). The default message handler draws a red box.
+</p>
+
+<p>The ESCMPAINTMOUSEOVER structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC to paint with.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlPage</xtd2>
+		<xtd3>
+			The location of the page. Will be m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlHDC</xtd2>
+		<xtd3>
+			Location of control as displayed in HDC.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rControlScreen</xtd2>
+		<xtd3>
+			Location of control as displayed on the screen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidPage</xtd2>
+		<xtd3>
+			Invalid rectangle in page coordinates, same coords as m_rPosn.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidHDC</xtd2>
+		<xtd3>
+			Invalid where should paint to in the HDC. width and height of rHDC = width and height rPage.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rInvalidScreen</xtd2>
+		<xtd3>
+			Invalid where this will appear on the screen (for perspective reasons.)
+			Width and height of rHDC = width and height of rScreen.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarRECT/>
+		<xtd2>rTotalScreen</xtd2>
+		<xtd3>
+			Rectangle giving entire screen, since some controls use for perspective.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_QUERYSIZE</xSectionTitle>
+
+<p>
+	Called after INITCONTROL, and maybe at later points if the screen changes. The control
+	should figure out what size it wants to be. pParam points to ESCMQUERYSIZE.
+	The default message handler looks in the m_pNode for a width/height and interprets
+	it as pixels or %. The default handler leaves iWidth and/or iHeight blank if
+	no "width" or "height" attributes are set in m_pNode. Control callbacks may want
+	to set the values if any other than width/height indicate the size, and then
+	let the default handler override.
+</p>
+
+<p>The ESCMQUERYSIZE structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarInt/>
+		<xtd2>iDisplayWidth</xtd2>
+		<xtd3>
+			Number of pixels across that can be displayed- start.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC to test with
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarint/>
+		<xtd2>iWidth</xtd2>
+		<xtd3>
+			Fill this in with desired width if control has opinion.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarint/>
+		<xtd2>iHeight</xtd2>
+		<xtd3>
+			Fill this in with desired height if control has opinion.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+
+
+<xSectionTitle>ESCM_SIZE</xSectionTitle>
+
+<p>
+	Notifies the control that it's size has been changed. The new size is in m_rPosn
+	already. (The control has no choice.) The default message handler just invalidates the
+	control rectangle
+</p>
+
+
+
+<xSectionTitle>ESCM_SWITCHACCEL</xSectionTitle>
+<p>
+	Called if the control's m_AccelSwitch is pressed. the default behavior is to
+	call pParentPage-&gt;FocusSet() for the control. Some controls may just want to
+	activate a link or something, such as buttons.
+</p>
+
+
+
+
+<xSectionTitle>ESCM_TIMER</xSectionTitle>
+
+<p>
+	Called if a timer created in the CEscWindow is created. The default behaviour
+	is to do nothing.
+</p>
+
+<p>The ESCMTIMER structure is:</p>
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwID</xtd2>
+		<xtd3>
+			Timer ID
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+

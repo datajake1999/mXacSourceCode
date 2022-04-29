@@ -1,0 +1,292 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Table of Contents"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Table of Contents
+</xPageTitle>
+
+<p>
+	Dragonfly can do more than just what you see on the main menu, which only includes the
+	most commonly used features. The Table of Contents provides you access to the extra
+	functionality, which you can then add to the menu if you wish.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xSectionTitle>Overview pages</xSectionTitle>
+
+<xChoiceButton href=r:270>
+	<bold>Annual calendar (by month)</bold>
+	<br/>
+	This displays the calendar for an entire year.
+</xChoiceButton>
+
+<xChoiceButton href=r:297>
+	<bold>Annual calendar (by week)</bold>
+	<br/>
+	This displays the calendar for an entire year.
+</xChoiceButton>
+
+<xChoiceButton href=r:112>
+	<bold>Calendar</bold>
+	<br/>
+	A traditional monthly calendar showing you what meetings, reminders, and tasks you have
+	for the days.
+</xChoiceButton>
+
+<xChoiceButton href=r:258>
+	<bold>Combo</bold>
+	<br/>
+	For those people that like to see it all on one screen, this shows a monthly calendar,
+	your daily meeting schedule, tasks, reminders, projects, and an overview of what you've
+	accomplished already.
+</xChoiceButton>
+
+<xChoiceButton href=r:239>
+	<bold>List</bold>
+	<br/>
+	Look at the meetings, tasks, and reminders you have scheduled for the next week or month.
+</xChoiceButton>
+
+<xChoiceButton href=r:288>
+	<bold>Planner</bold>
+	<br/>
+	Plan out your daily routine, determining when you'll work on tasks during the day,
+	and fitting them around your meetings and phone calls.
+</xChoiceButton>
+
+<xChoiceButton href=r:265>
+	<bold>Summary</bold>
+	<br/>
+	Shows you a summary of the work you've accomplished over the last week or month.
+</xChoiceButton>
+
+<xChoiceButton href=r:109>
+	<bold>Today</bold>
+	<br/>
+	Look at the meetings, tasks, and reminders you have scheduled for today.
+</xChoiceButton>
+
+<xChoiceButton href=r:185>
+	<bold>Tomorrow</bold>
+	<br/>
+	Look at the meetings, tasks, and reminders you have scheduled for tomorrow.
+</xChoiceButton>
+
+<xbr/>
+<xSectionTitle>Things to do</xSectionTitle>
+
+<xChoiceButton href=r:113>
+	<bold>Meetings</bold>
+	<br/>
+	Set up and view meeting appointments.
+</xChoiceButton>
+
+<xChoiceButton href=r:145>
+	<bold>Projects</bold>
+	<br/>
+	This is a simple project management utility for managing one-person projects.
+</xChoiceButton>
+
+<xChoiceButton href=r:114>
+	<bold>Reminders</bold>
+	<br/>
+	Quickly add reminders about work to do or events that should happen.
+</xChoiceButton>
+
+<xChoiceButton href=r:117>
+	<bold>Schedule calls</bold>
+	<br/>
+	Schedule phonecalls on your calendar, including reoccurring calls.
+</xChoiceButton>
+
+<xChoiceButton href=r:280>
+	<bold>Special days</bold>
+	<br/>
+	This allows you to mark special days on your calendar such as anniversaries,
+	holidays not automatically provided by Dragonfly, and birthdays.
+</xChoiceButton>
+
+<xChoiceButton href=r:115>
+	<bold>Tasks</bold>
+	<br/>
+	Add and view tasks you need to accomplish.
+</xChoiceButton>
+
+
+<xbr/>
+<xSectionTitle>Contacts</xSectionTitle>
+
+<xChoiceButton href=r:142>
+	<bold>Address book</bold>
+	<br/>
+	Displays a list of everyone in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:118>
+	<bold>People</bold>
+	<br/>
+	Add, remove, and view people in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:117>
+	<bold>Phone</bold>
+	<br/>
+	Use Dragonfly to dial phone calls using your computer's modem.
+</xChoiceButton>
+
+
+<xbr/>
+<xSectionTitle>Backup memory</xSectionTitle>
+
+<xChoiceButton href=r:124>
+	<bold>Archive</bold>
+	<br/>
+	Have Dragonfly remember articles and documents you read on the Internet so that
+	you can refer to them later to look up details.
+</xChoiceButton>
+
+<xChoiceButton href=r:116>
+	<bold>Notes</bold>
+	<br/>
+	Quickly jot down notes.
+</xChoiceButton>
+
+<xChoiceButton href=r:121>
+	<bold>Journal</bold>
+	<br/>
+	Write down ideas and thoughts. You can also use this to keep track of work done
+	for clients.
+</xChoiceButton>
+
+<xChoiceButton href=r:271>
+	<bold>Passwords</bold>
+	<br/>
+	Store your Internet passwords in Dragonfly so you don't have to memorize them.
+</xChoiceButton>
+
+<xChoiceButton href=r:123>
+	<bold>Photos</bold>
+	<br/>
+	Store your pictures in Dragonfly, accompanied by a short description and
+	links to people in the photos.
+</xChoiceButton>
+
+<xbr/>
+<xSectionTitle>Thought and reflection</xSectionTitle>
+
+<xChoiceButton href=r:220>
+	<bold>Daily wrap-up</bold>
+	<br/>
+	Review what you accomplished today and write down notes. It's kind of like a daily
+	diary.
+</xChoiceButton>
+
+<xChoiceButton href=r:127>
+	<bold>Deep thoughts</bold>
+	<br/>
+	Make a note about what you intend to accomplish with your life.
+</xChoiceButton>
+
+<xChoiceButton href=r:122>
+	<bold>Memory lane</bold>
+	<br/>
+	Write down memories.
+</xChoiceButton>
+
+
+<xbr/>
+<xSectionTitle>Time</xSectionTitle>
+
+<xChoiceButton href=r:278>
+	<bold>Day and night</bold>
+	<br/>
+	Display a virtual globe with the sunlight positioned as it is right now. You can see
+	what parts of the world are in daylight and what parts are in night.
+</xChoiceButton>
+
+<xChoiceButton href=r:276>
+	<bold>Phase of the moon</bold>
+	<br/>
+	A monthly calendar that shows you the phase of the moon.
+</xChoiceButton>
+
+<xChoiceButton href=r:275>
+	<bold>Time zones</bold>
+	<br/>
+	This tells you the time in different cities and regions around the world.
+</xChoiceButton>
+
+<xbr/>
+<xSectionTitle>Customize</xSectionTitle>
+
+<xChoiceButton href=r:254>
+	<bold>Change the menu</bold>
+	<br/>
+	Add, remove, and move items around in Dragonfly's main menu.
+</xChoiceButton>
+
+<xChoiceButton href=r:303>
+	<bold>Customize quotes</bold>
+	<br/>
+	Change the quotes displayed to your own selection.
+</xChoiceButton>
+
+<xChoiceButton href=r:242>
+	<bold>Look and feel</bold>
+	<br/>
+	Adjust Dragonfly's look and feel, such as whether it uses background images and
+	how much help text is displayed.
+</xChoiceButton>
+
+
+<xbr/>
+<xSectionTitle>Security</xSectionTitle>
+
+<xChoiceButton href=r:241>
+	<bold>Change log-on password</bold>
+	<br/>
+	Change the password required when first running Dragonfly.
+</xChoiceButton>
+
+<xChoiceButton href=r:299>
+	<bold>Change suspend/hibernate password</bold>
+	<br/>
+	Change the password required when running Dragonfly after the computer is suspended.
+</xChoiceButton>
+
+<xChoiceButton href=r:271>
+	<bold>Passwords</bold>
+	<br/>
+	Store your Internet passwords in Dragonfly so you don't have to memorize them.
+</xChoiceButton>
+
+
+
+<xbr/>
+<xSectionTitle>Miscellaneous</xSectionTitle>
+
+
+<xChoiceButton href=r:240>
+	<bold>Backup to disk</bold>
+	<br/>
+	Backup Dragonfly files to disk.
+</xChoiceButton>
+
+<xChoiceButton href=r:129>
+	<bold>Documentation</bold>
+	<br/>
+	Documentation and miscellaneous settings, like user interface preferences.
+</xChoiceButton>
+
+<xChoiceButton href=r:128>
+	<bold>Search</bold>
+	<br/>
+	Search through all the information remembered by Dragonfly, including people, meetings,
+	reminders, journal entries, archived data, and documentation.
+</xChoiceButton>
+

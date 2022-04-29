@@ -1,0 +1,170 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Search"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=216/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Search
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:230/>Use this page to search through Dragonfly's documentation and
+	through any information stored in Dragonfly's database.
+</p>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<br>
+	Type in the text string you want to search for:
+</br>
+
+<p align=right>
+	<edit defcontrol=true selall=true width=80% name=searchstring wordwrap=false multiline=false/>
+</p>
+
+<p>
+	And press <button accel=enter href=searchbutton>Search</button> to begin the search.
+</p>
+
+<p>
+	Search results:
+</p>
+
+<p align=center>
+	<listbox width=80% height=40% vscroll=searchscroll name=searchlist/>
+	<scrollbar orient=vert height=40% name=searchscroll/>
+	<br/>
+	<small>If search can't find information you've recently entered you should try rebuilding the search index.</small>
+</p>
+
+<xbr/>
+
+<!xDateButton>
+	<button style=x radiobutton=true group=alldates,lastmonth,lastyear,last5years,customdates MACROATTRIBUTE=1>
+		<bold><?MacroContent?></bold>
+	</button>
+</xDateButton>
+
+<!xCatButton>
+	<button style=check checkbox=true checked=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</button>
+</xCatButton>
+
+<xtablecenter>
+	<xtrheader>Search specific dates</xtrheader>
+	<tr><td>
+		If you want to search in a specific date range then select one of the following
+		and press "Search".
+		<p/>
+		<xDateButton name=alldates>All documents regardless of their date.</xdatebutton><br/>
+		<xDateButton name=lastmonth>Documents from the last month.</xdatebutton><br/>
+		<xDateButton name=lastyear>Documents from the last year.</xdatebutton><br/>
+		<xDateButton name=last5years>Documents from the last five years.</xdatebutton><br/>
+		<xDateButton name=customdates>Custom dates...</xdatebutton><br/>
+		<align align=right>
+			from <bold><date width=50% name=startdate/></bold><br/>
+			to <bold><date width=50% name=enddate/></bold><br/>
+		</align>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter>
+	<xtrheader>Search specific types of information</xtrheader>
+	<tr><td>
+		If you want to search for specific types of information then select one or more of the following
+		and press "Search".
+		<p/>
+		<table width=100% innerlines=0 border=0>
+			<tr>
+				<td><bold>
+					<xCatButton name=cat:8>
+						Archived documents
+						<xHoverHelpShort>
+							Documents and web pages you've archived.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:0>
+						Documentation
+						<xHoverHelpShort>
+							This searches through Dragonfly documentation.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:6>
+						Journal
+						<xHoverHelpShort>
+							Search through journal entries you've entered.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:3>
+						Meetings
+						<xHoverHelpShort>
+							Any notes you've taking during meetings.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:7>
+						Memories
+						<xHoverHelpShort>
+							Look through memories you've entered in "Memory lane."
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+				</bold></td>
+				<td><bold>
+					<xCatButton name=cat:5>
+						Miscellaneous
+						<xHoverHelpShort>
+							Daily log, daily wrap-up, reminders, tasks, and notes.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:2>
+						People
+						<xHoverHelpShort>
+							Information stored in your address book.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:4>
+						Phone
+						<xHoverHelpShort>
+							Phone conversation notes that you've had.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+					<xCatButton name=cat:9>
+						Photos
+						<xHoverHelp>
+							Search the titles and text descriptions in the photos you've added.
+						</xHoverHelp>
+					</xCatButton><br/>
+
+					<xCatButton name=cat:1>
+						Projects
+						<xHoverHelpShort>
+							Data you've entered specific to the "Projects" section.
+						</xHoverHelpShort>
+					</xCatButton><br/>
+					
+				</bold></td>
+			</tr>
+		</table>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xbr/>
+
+<xChoiceButton name=rebuild>
+	<bold>Rebuild ths search Index</bold>
+	<br/>
+	You should occasionally (once every few months) rebuild the search index to
+	incorporate new data collected by Dragonfly. Building the search index may
+	take a few minutes.
+</xChoiceButton>

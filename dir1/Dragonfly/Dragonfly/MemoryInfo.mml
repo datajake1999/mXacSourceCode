@@ -1,0 +1,101 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Memory Lane page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=218/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Memory Lane" page
+</xPageTitle>
+
+<p>
+	Dragonfly is about time and remembering. Memory Lane is about past memories,
+	from your childhood or later. It's designed to help you take a walk down
+	memory lane.
+</p>
+
+<p>
+	Whenever you think of a memory (such as your first day of school),
+	press the "Add memory" button in
+	the <a href=r:122>Memory Lane</a> page. You'll then be asked to type in
+	the memory, approximately when the event happened, and people in the memory.
+	(Those people's address book entries will be cross-linked with the memory.)
+	Or, if you don't have time to sit and reminisce you can press
+	"Quickly add a memory" and only enter a short one-line description;
+	the rest can be filled in later.
+</p>
+
+<p>
+	If you can't remember anything new
+	visit the <a href=r:199>Jog my memory</a> page. It randomly suggests
+	topics to explore for forgotten memories.
+</p>
+
+<p>
+	Over time you'll write down thousands of memories, most of which you've forgotten
+	you remembered. Plus, you'll recollect hundreds of people that have long since
+	slipped into the past. (Maybe you can use the Internet to get in contact with them?)
+	By examining the past with 20/20 hindsight you may be able to extend your
+	new-found wisdom and get more out of the present.
+</p>
+
+<p>
+	Although Memory Lane sounds like a weird concept it's actually quite
+	fulfilling to use. Try it. You may like it.
+</p>
+
+
+<xsectiontitle>Theory</xsectiontitle>
+
+<p>
+	I decided to write Memory Lane before I ever thought of Dragonfly.
+	(Dragonfly was low hanging fruit.
+	Memory lane requires an address book, search, and calendar, which is not that
+	much different than a PIM.) I've always been curious about how much I really
+	remember. How many memories does my brain really store? And what are
+	all the memories about? Are they clustered around certain years or people?
+</p>
+
+<p>
+	I hadn't heard of anyone attempting such an exploration of the past, so
+	I embarked upon it myself. The result is Dragonfly, with Memory Lane
+	being a feature of Dragonfly.
+	In some ways, Memory Lane is the most important feature of Dragonfly,
+	and everything else is just window dressing. The world already has
+	oodles of PIMs, but I haven't encountered anything equivalent to
+	Memory Lane.
+</p>
+
+<p>
+	Memory Lane is much more than a way to fulfull my curiosity. It is:
+</p>
+
+<xul>
+	<li>
+		<bold>A way to entertain yourself</bold> - Sitting in a dark room
+		with some good music, and wandering through
+		the past is quite enjoyable.
+	</li>
+	<li>
+		<bold>Illuminating</bold> - You can learn a lot about yourself. Those that do not
+		study history (including your own) are doomed to repeat it.
+	</li>
+	<li>
+		<bold>Historical ramifications</bold> - 100 years from now the memories you've entered
+		into memory lane may be very useful to historians, particularly if
+		enough people use it. Your descendants will certainly enjoy reading about
+		their ancestors. <italic>While most people encrypt their data, breaking the
+		encryption 100 years from now will be trivial.</italic>
+	</li>
+	<li>
+		<bold>Improve your memory?</bold> - A while back I read that elderly people in nursing
+		homes improved their memory retention if they spent some time in a group
+		reminiscing to one another. I don't know how true this is, but if it is,
+		Memory Lane will certainly help.
+	</li>
+	<li>
+		<bold>Insurance against Alzheimer's</bold> - One of my deepest fears is
+		that I'll come down with Alzheimer's or some other memory loss when I get
+		older. Although Memory Lane won't be able to prevent the disease, it may
+		be able to save some of what's lost.
+	</li>
+</xul>

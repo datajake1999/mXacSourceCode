@@ -1,0 +1,101 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a new photo" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff><bold>Add</bold> photo</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=cancel>
+	<font color=#ffffff><bold>Don't</bold> add photo</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	<image posn=edgeleft width=50% file="<<<FILE>>>" border=2/>
+	Add a new photo
+</xPageTitle>
+
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			<bold>One-line description</bold> of the photo:
+			<br/>
+			<font color=#c00000>(Required)</font>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name defcontrol=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			<bold>Long description</bold> of the photo:
+		</xtdLeft>
+		<xtdright>
+			<edit name=summary width=100% multiline=true wordwrap=true maxchars=10000/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			<bold>People</bold> shown in the photo:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person1 width=100%/>
+			<xFilterPersonBusiness name=person2 width=100%/>
+			<xFilterPersonBusiness name=person3 width=100%/>
+			<xFilterPersonBusiness name=person4 width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Approximate <bold>date</bold> the photo was taken:
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Include the photo in a <bold>journal</bold> category:
+		</xtdLeft>
+		<xtdright>
+			<xFilterJournal name=category width=100%/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+<button checkbox=true checked=true valign=top style=x name=wallpaper>
+	<bold>Use this for wallpaper</bold>
+	<br/>
+	Dragonfly can change your desktop wallpaper every day based on photos in your album.
+	If this is checked then the photo may be randomly selected for your wallpaper.
+</button>
+
+
+<xbr/>
+
+<xChoiceButton href=quit>
+	<bold>Stop adding photos</bold>
+	<br/>
+	Press this if you selected several photos to add but have decided you don't
+	want to add any right now.
+</xChoiceButton>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff><bold>Add</bold> photo</font>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff><bold>Don't</bold> add photo</font>
+</button>
+</td></tr>
+</table>

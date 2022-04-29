@@ -1,0 +1,199 @@
+<<<$TEMPLATE2>>>
+<?Include resource=201?>
+<PageInfo index=false title="Welcome to Dragonfly"/>
+
+<!xDragonfly3d>
+<threed timerinterval=100 border=0 MACROATTRIBUTE=1>
+	<rotatex val=30/>
+	<rotatey val=80/>
+	<rotateytime from=-20 to=20 interval=100 back=yes/>
+	<rotatextime from=-10 to=10 interval=62 back=yes/>
+	<rotateztime from=-10 to=10 interval=42 back=yes/>
+	<colordefault color=#404040/>
+	<meshellipsoid x=1 y=.6 z=.6/>
+	<shapemeshsurface/>
+	
+	<colordefault color=#400000/>
+	<matrixpush>
+		<rotatextime from=0 to=30 interval=40 back=yes/>
+		<shapeline p1=0,0,0 p2=-1,-.5,1 p3=-1.5,-1.5,1.2/>
+		<shapeline p1=0,0,0 p2=0,-.5,1.1 p3=0,-1.5,1.4/>
+		<shapeline p1=0,0,0 p2=1,-.5,1 p3=1.5,-1.5,1.2/>
+	</matrixpush>
+	<matrixpush>
+		<rotatextime from=0 to=-30 interval=40 back=yes/>
+		<shapeline p1=0,0,0 p2=-1,-.5,-1 p3=-1.5,-1.5,-1.2/>
+		<shapeline p1=0,0,0 p2=0,-.5,-1.1 p3=0,-1.5,-1.4/>
+		<shapeline p1=0,0,0 p2=1,-.5,-1 p3=1.5,-1.5,-1.2/>
+	</matrixpush>
+	
+	<backculloff/>
+	<colordefault color=#c0c000/>
+	<matrixpush>
+		<translate point=-.25,.5,0/>
+		<rotatey val=-10/>
+		<rotatextime from=-20 to=20 interval=4 back=yes/>
+		<rotateztime from=-40 to=40 interval=4 back=yes/>
+		<shapepolygon p4=0,0,0 p3=0,0,6.5 p2=1.5,.5,6 p1=1.1,.5,2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=-.25,.5,0/>
+		<rotatey val=10/>
+		<rotatextime from=20 to=-20 interval=4 back=yes/>
+		<rotateztime from=-40 to=40 interval=4 back=yes/>
+		<shapepolygon p1=0,0,0 p2=0,0,-6.5 p3=1.5,0,-6 p4=1.1,0,-2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=.25,.5,0/>
+		<rotatey val=10/>
+		<rotatextime from=15 to=-15 interval=4 back=yes/>
+		<rotateztime from=10 to=-10 interval=4 back=yes/>
+		<shapepolygon p4=0,0,0 p3=0,0,6 p2=2.25,0,5.5 p1=1.75,0,2/>
+	</matrixpush>
+	<matrixpush>
+		<translate point=.25,.5,0/>
+		<rotatey val=-10/>
+		<rotatextime from=-15 to=15 interval=4 back=yes/>
+		<rotateztime from=10 to=-10 interval=4 back=yes/>
+		<shapepolygon p1=0,0,0 p2=0,0,-6 p3=2.25,0,-5.5 p4=1.75,0,-2/>
+	</matrixpush>
+	<backcullon/>
+	
+	<matrixpush>
+		<colordefault color=#606060/>
+		<translate point=.5,0,0/>
+		<rotateztime back=yes from=0 to=-10 interval=10/>
+		<rotateytime back=yes from=-10 to=10 interval=17/>
+		<rotatez val=-90/>
+		<meshfunnel base=.4 height=5 top=.25/>
+		<shapemeshsurface/>
+	</matrixpush>
+	
+	<matrixpush>
+		<colordefault color=#606060/>
+		<translate point=-1,0,0/>
+		<meshellipsoid x=.65 y=.65 z=.65/>
+		<shapemeshsurface/>
+		
+		<matrixpush>
+			<colordefault color=#800000/>
+			<translate point=0,.3,-.3/>
+			<meshellipsoid x=.5 y=.5 z=.5/>
+			<shapemeshsurface/>
+		</matrixpush>
+		
+		<matrixpush>
+			<colordefault color=#800000/>
+			<translate point=0,.3,.3/>
+			<meshellipsoid x=.5 y=.5 z=.5/>
+			<shapemeshsurface/>
+		</matrixpush>
+		
+	</matrixpush>
+</threed>
+</xDragonfly3d>
+
+<table width=100% border=0 innerlines=0>
+<tr>
+<td width=50%>
+<table width=100%>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#c0ffc0 bcolor=#a0e0a0/><<<$ENDIFCOLOR>>>
+	<xtrheader>Log on</xtrheader>
+	<tr><td>
+<<<$IFMICROHELP>>>
+		<p>
+			<bold>Select your name, type in your password, and press "Log on".</bold>
+		</p>
+<<<$ENDIFMICROHELP>>>
+		
+		<p align=center>
+			<combobox name=user cursel=0 width=50% cbheight=75 sort=false/>
+		</p>
+		
+		<p align=center>
+			Password: <edit name=password defcontrol=true wordwrap=false password=true maxchars=48 selall=true width=45%/>
+		</p>
+
+		<p align=center>
+			<button href=next style=teapot accel=enter name=logonbutton>
+				<bold><big>Log on</big></bold>
+			</button>
+		</p>
+		
+		<xChoiceButton name=autologon style=x checkbox=true>
+			<bold>Automatically log on</bold><br/>
+			If you check this, the next time you run Dragonfly it will automatically
+			log on 5 seconds after this page appears. Your password must be blank
+			to use this feature.
+		</xChoiceButton>
+	</td></tr>
+</table>
+</td>
+<td width=50%>
+<align align=right><big><big><big><big><big>
+	Dragonfly
+</big></big></big></big></big></align>
+
+<p align=right>
+	<br/>
+	by Mike Rozak
+	<br/>
+	<a href="http://www.mxac.com.au">www.mXac.com.au</a>
+	<p/>
+	<small>Copyright (c) 2000-2008 by Mike Rozak. All rights reserved.
+	JPEG decompression from the Independent JPEG Group.</small>
+	<p/>
+	<xDragonfly3d posn=edgeright width=200 height=125/>
+</p>
+</td>
+</tr>
+
+<tr><td><br/></td></tr>
+
+<tr>
+<td>
+<<<$IFMICROHELP>>>
+	<small><font color=#404040>
+	Dragonfly is a <bold>unique</bold> personal information manager.
+	It uses a <bold>web-like user-interface</bold> that makes it easier
+	for you to track your contacts, meetings, reminders, tasks, projects,
+	and photos than a normal PIM.
+	<p/>
+	<bold>Dragonfly surpasses other PIMs</bold> in the amount and quality of information
+	it stores, such as keeping a daily log of what you accomplish,
+	providing a journal, allowing you to take notes during meetings and phone calls,
+	and remembering the text from web pages and online documents that you read.
+	</font></small>
+<<<$ENDIFMICROHELP>>>
+</td>
+</tr>
+
+</table>
+
+
+
+<xbr/>
+
+<p>
+	You may also:
+</p>
+
+<xChoiceButton href=newuser>
+	<bold>Create a new user</bold>
+	<br/>
+	Create a new user account. Select this if you have more than one person working
+	on the computer and they don't yet have a user account.
+</xChoiceButton>
+
+<xChoiceButton href=frombackup>
+	<bold>Load a user from disk or backup</bold>
+	<br/>
+	If you used Dragonfly on a different computer you can save the Dragonfly data
+	to disk and load it onto this machine using this option.
+</xChoiceButton>
+
+<xChoiceButton href=delete>
+	<bold>Delete a user</bold>
+	<br/>
+	Delete Dragonfly files for a user that is no longer on this computer.
+</xChoiceButton>

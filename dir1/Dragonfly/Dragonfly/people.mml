@@ -1,0 +1,117 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="People"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<!xll>
+	<td><big><a color=#8080ff MACROATTRIBUTE=1>
+		<?MacroContent?>
+		<xhoverhelp>
+			Press this to see your address book entry for the letter.
+			Or, press the key on your keyboard.
+		</xhoverhelp>
+	</a></big></td>
+</xll>
+
+<table width=100% align=center innerlines=0>
+	<colorblend posn=background lcolor=#606080 rcolor=#404060/>
+	<tr>
+		<xll href=r:142#A accel=a>A</xll>
+		<xll href=r:142#B accel=b>B</xll>
+		<xll href=r:142#C accel=c>C</xll>
+		<xll href=r:142#D accel=d>D</xll>
+		<xll href=r:142#E accel=e>E</xll>
+		<xll href=r:142#F accel=f>F</xll>
+		<xll href=r:142#G accel=g>G</xll>
+		<xll href=r:142#H accel=h>H</xll>
+		<xll href=r:142#I accel=i>I</xll>
+		<xll href=r:142#J accel=j>J</xll>
+		<xll href=r:142#K accel=k>K</xll>
+		<xll href=r:142#L accel=l>L</xll>
+		<xll href=r:142#M accel=m>M</xll>
+	</tr>
+	<tr>
+		<xll href=r:142#N accel=n>N</xll>
+		<xll href=r:142#O accel=o>O</xll>
+		<xll href=r:142#P accel=p>P</xll>
+		<xll href=r:142#Q accel=q>Q</xll>
+		<xll href=r:142#R accel=r>R</xll>
+		<xll href=r:142#S accel=s>S</xll>
+		<xll href=r:142#T accel=t>T</xll>
+		<xll href=r:142#U accel=u>U</xll>
+		<xll href=r:142#V accel=v>V</xll>
+		<xll href=r:142#W accel=w>W</xll>
+		<xll href=r:142#X accel=x>X</xll>
+		<xll href=r:142#Y accel=y>Y</xll>
+		<xll href=r:142#Z accel=z>Z</xll>
+	</tr>
+</table>
+<p/>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	People
+</xPageTitle>
+
+
+<p>
+	<xMoreInfo href=r:144/>The "People" page lets you keep track of people that you
+	know.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<null>
+	<<<$QUICKADD>>>
+</null>
+
+
+<xbr/>
+
+<xChoiceButton href=r:142>
+	<bold>Show me a list</bold>
+	<br/>
+	Displays a list of everyone in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:141>
+	<bold>Look up</bold>
+	<br/>
+	Look up someone in your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:138>
+	<bold>Add person</bold>
+	<br/>
+	Add a new person to your address book.
+</xChoiceButton>
+
+<xChoiceButton href=r:262>
+	<bold>Add business</bold>
+	<br/>
+	Add a new business, company, or organization to your address book.
+</xChoiceButton>
+
+
+<xChoiceButton href=r:238>
+	<bold>Print out</bold>
+	<br/>
+	Print out your address book; you select what people are included, how large
+	it should be, and what fields are shown.
+</xChoiceButton>
+
+<xChoiceButton name=importaddress>
+	<bold>Read an address book from another application</bold>
+	<br/>
+	This reads a "comma delimited/separated text file" address book saved by another PIM, such
+	as from Outlook Express. The file must be text (.txt or .csv) with one person per line,
+	and fields separated by a comma.
+</xChoiceButton>
+
+<xChoiceButton href=r:295>
+	<bold>Transfer address book to another application</bold>
+	<br/>
+	This saves a "comma delimited/separated text file" address book. You can use this file
+	to load your contacts into another PIM, into a database application, or into a mail
+	merge feature of a word processor.
+</xChoiceButton>
+

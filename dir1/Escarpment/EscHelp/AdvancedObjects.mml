@@ -1,0 +1,2139 @@
+<pageinfo title="Advanced Objects"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Advanced Objects</xPageTitle>
+
+<p>
+	This document describes the following C++ objects:
+</p>
+
+<xul>
+	<li><a href="#CMem Description">CMem</a></li>
+	<li><a href="#CListVariable Description">CListVariable</a></li>
+	<li><a href="#CListFixed Description">CListFixed</a></li>
+	<li><a href="#CBTree Description">CBTree</a></li>
+	<li><a href="#CFontCache Description">CFontCache</a></li>
+	<li><a href="#CMMLNode Description">CMMLNode</a></li>
+	<li><a href="#CEscError Description">CEscError</a></li>
+	<li><a href="#CEscTextBlock Description">CEscTextBlock</a></li>
+</xul>
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CMem Description</xSectionTitle>
+
+<p>
+	CMem is a C++ object that encapsulates memory allocation. It's sometimes more
+	convenient than using malloc(), free(), and realloc().
+</p>
+
+<xSectionTitle>CMem Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwAllocated</xtd2>
+		<xtd3>
+			Number of bytes available in CMem::p.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwCurPosn</xtd2>
+		<xtd3>
+			The byte offset into CMem::p where the next CMem::Malloc(), CMem::StrCat(),
+			or CMem::CharCat() will come from.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>p</xtd2>
+		<xtd3>
+			Memory (allocated by malloc()) for the CMem object. This pointer may change
+			if CMem::Malloc(), CMem::Required(), CMem::StrCat(), or CMem::CharCat()
+			are called because in the process of reallocating the memory may move.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>CMem::Malloc</xSectionTitle>
+
+<p>
+	Makes sure that CMem::p is large enough to handle CMem::m_dwCurPosn + dwSize.
+	It then returns an offset into CMem::p for the memory, and increments the current
+	position.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes needed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Byte offset into CMem::p for the memory.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMem::Required</xSectionTitle>
+
+<p>
+	If CMem::p is not large enough to hold dwSize bytes, it's reallocated. If it's large
+	enough then the function returns.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes needed.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMem::StrCat</xSectionTitle>
+
+<p>
+	Concatenates a string (excluding the NULL termination) onto memory at m_dwCurPosn.
+	If the memory isn't large enough it's extended.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			String to append.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwCount</xtd2>
+		<xtd3>
+			Number of characters to use from psz. If this is -1 then append all except
+			the NULL termination. Defaults to -1.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CMem::CharCat</xSectionTitle>
+
+<p>
+	Appends a single character onto memory at m_dwCurPosn.
+	If the memory isn't large enough it's extended.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarWCHAR/>
+		<xtd2>c</xtd2>
+		<xtd3>
+			Character to add.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CListVariable Description</xSectionTitle>
+
+<p>
+	CListVariable is a C++ object that manages lists of variable-sized data.
+</p>
+
+<xSectionTitle>CListVariable::Add</xSectionTitle>
+
+<p>
+	Add an element onto the end of the list.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			Contents of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size (in bytes) of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			New index of the added element, or -1 if an error occurred
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListVariable::Clear</xSectionTitle>
+
+<p>
+	Clears the entire list back to an empty list, deleting all elements.
+</p>
+
+
+
+
+
+<xSectionTitle>CListVariable::FileRead</xSectionTitle>
+
+<p>
+	Read the contents of the file into the list.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPFILE/>
+		<xtd2>pf</xtd2>
+		<xtd3>
+			Write out to this file.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CListVariable::FileWrite</xSectionTitle>
+
+<p>
+	Write the contents of the list to a file.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPFILE/>
+		<xtd2>pf</xtd2>
+		<xtd3>
+			Write out to this file.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CListVariable::Get</xSectionTitle>
+
+<p>
+	Given an element index number, returns a pointer to the element data. The pointer
+	is valid until the element is removed or ::Set() is called. You may directly
+	modify the data pointed to by the pointer.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index number. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xreturns/>
+		<xtd3>
+			Pointer to the element. NULL if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListVariable::Insert</xSectionTitle>
+
+<p>
+	Add a new element before the specified element number.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to insert before. This is from 0..CListVariable::Num(). (Inclusive).
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			Contents of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Size (in bytes) of the element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListVariable::Merge</xSectionTitle>
+
+<p>
+	Merges the list, pMerge, onto the end of this list. All elements are moved from pMerge
+	to the current list, effectively being deleted from pMerge.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCListVariable/>
+		<xtd2>pMerge</xtd2>
+		<xtd3>
+			List to append onto the current one.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListVariable::Num</xSectionTitle>
+
+<p>
+	Returns the number of elements in the list.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Number of elements.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListVariable::Remove</xSectionTitle>
+
+<p>
+	Removes the specified element index.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to remove. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CListVariable::Set</xSectionTitle>
+
+<p>
+	Changes the contents of an element.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to change. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			New contents of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			New ize (in bytes) of the element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListVariable::Size</xSectionTitle>
+
+<p>
+	Given an element index number, returns the size of the element.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index number. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Size (in bytes) of the element. 0 if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CListFixed Description</xSectionTitle>
+
+<p>
+	CListFixed is a C++ object that manages lists of fixed-sized data. After
+	creating the object you must call CListFixed::Init().
+</p>
+
+<xSectionTitle>CListFixed::Add</xSectionTitle>
+
+<p>
+	Add an element onto the end of the list.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			Contents of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			New index of the added element, or -1 if an error occurred
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListFixed::Clear</xSectionTitle>
+
+<p>
+	Clears the entire list back to an empty list, deleting all elements.
+</p>
+
+
+
+
+
+
+<xSectionTitle>CListFixed::Get</xSectionTitle>
+
+<p>
+	Given an element index number, returns a pointer to the element data. The pointer
+	is valid until any element is removed or added/inserted. You may directly
+	modify the data pointed to by the pointer.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index number. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xreturns/>
+		<xtd3>
+			Pointer to the element. NULL if there's an error.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListFixed::Init</xSectionTitle>
+
+<p>
+	Initializes the list. You must call Init() after creating a CListFixed.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElemSize</xtd2>
+		<xtd3>
+			Number of bytes allocated for each element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListFixed::Init</xSectionTitle>
+
+<p>
+	Initializes the list. You must call Init() after creating a CListFixed.
+	This initialization pre-fills the list with elements.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElemSize</xtd2>
+		<xtd3>
+			Number of bytes allocated for each element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>paElems</xtd2>
+		<xtd3>
+			Pointer to memory containing pre-fill element data.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElems</xtd2>
+		<xtd3>
+			Number of elements pointed to by paElems.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CListFixed::Insert</xSectionTitle>
+
+<p>
+	Add a new element before the specified element number.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to insert before. This is from 0..CListVariable::Num(). (Inclusive).
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			Contents of the element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListFixed::Merge</xSectionTitle>
+
+<p>
+	Merges the list, pMerge, onto the end of this list. All elements are moved from pMerge
+	to the current list, effectively being deleted from pMerge.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCListFixed/>
+		<xtd2>pMerge</xtd2>
+		<xtd3>
+			List to append onto the current one.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListFixed::Num</xSectionTitle>
+
+<p>
+	Returns the number of elements in the list.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Number of elements.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CListFixed::Remove</xSectionTitle>
+
+<p>
+	Removes the specified element index.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to remove. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+<xSectionTitle>CListFixed::Set</xSectionTitle>
+
+<p>
+	Changes the contents of an element.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index to change. This is from 0..CListVariable::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			New contents of the element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CBTree Description</xSectionTitle>
+
+<p>
+	CBTree is a C++ object that encapsulates a binary tree indexed by Unicode
+	strings.
+</p>
+
+<xSectionTitle>CBTree Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fIgnoreCase</xtd2>
+		<xtd3>
+			If set to TRUE (default), the tree's string comparison is case insensitive.
+			If FALSE, it's case sensitive. If you're going to change this you need to
+			do so right after creating the object, before any elements are added.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+<xSectionTitle>CBTree::Clear</xSectionTitle>
+
+<p>
+	Clears the entire tree back to an empty tree, deleting all elements.
+</p>
+
+
+
+
+
+<xSectionTitle>CBTree::Enum</xSectionTitle>
+
+<p>
+	Enumerates the elements in the tree.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwElem</xtd2>
+		<xtd3>
+			Element index. This is from 0..CBTree::Num()-1.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xreturns/>
+		<xtd3>
+			Name/key of the element. This is valid until the element or tree is deleted.
+			Do not change.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+<xSectionTitle>CBTree::FileRead</xSectionTitle>
+
+<p>
+	Read the contents of the file into the tree.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPFILE/>
+		<xtd2>pf</xtd2>
+		<xtd3>
+			Write out to this file.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<xSectionTitle>CBTree::FileWrite</xSectionTitle>
+
+<p>
+	Write the contents of the tree to a file.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPFILE/>
+		<xtd2>pf</xtd2>
+		<xtd3>
+			Write out to this file.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+<xSectionTitle>CBTree::Find</xSectionTitle>
+
+<p>
+	Finds an element in the tree.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszKey</xtd2>
+		<xtd3>
+			Element name to find.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPDWORD/>
+		<xtd2>pdwSize</xtd2>
+		<xtd3>
+			(Defaults to NULL.) If this is not NULL, pdwSize is filled in with the size
+			of the element's memory.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xreturns/>
+		<xtd3>
+			Pointer to the elements memory. This pointer is valid until the element is
+			changed by another call to ::Add() with the same name, or until the tree
+			is deleted. Returns NULL if it can't find an element.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CBTree::Num</xSectionTitle>
+
+<p>
+	Returns the number of elements in the tree.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Number of elements.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CBTree::Remove</xSectionTitle>
+
+<p>
+	Deletes the element.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszKey</xtd2>
+		<xtd3>
+			Element to remove.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CBTree::Set</xSectionTitle>
+
+<p>
+	Adds an element into the tree.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszKey</xtd2>
+		<xtd3>
+			Add the element under what name. If an element with the same name exists then
+			the current data replaces the old.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPVOID/>
+		<xtd2>pMem</xtd2>
+		<xtd3>
+			New contents of the element.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSize</xtd2>
+		<xtd3>
+			Number of bytes in the element.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CFontCache Description</xSectionTitle>
+
+<p>
+	The CFontCache C++ object is designed to make it easy to create fonts. It saves
+	you the work of filling in LOGFONT and calling CreateFontIndirect(). It also
+	caches fonts, so if you ask for the same font twice, it only created one HFONT.
+	And it frees up all the fonts when you're done.
+</p>
+
+
+
+
+<xSectionTitle>CFontCache::Clear</xSectionTitle>
+<p>
+	Clears the font cache of all objects. This means pointers previously
+	returned are invalid, and thant HFONTs are invalid.
+</p>
+
+<xSectionTitle>CFontCache::Need</xSectionTitle>
+
+<p>
+	Call this whenever a new font is needed. It looks through a cache and sees
+	if it's already created. If it is, it doesn't bother recreating it.
+</p>
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC that the font will be displayed in.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPTWFONTINFO/>
+		<xtd2>pfi</xtd2>
+		<xtd3>
+			Fill in everything except hFont, iAbove, and iBelow.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iPointSize</xtd2>
+		<xtd3>
+			Size of the font.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwFlags</xtd2>
+		<xtd3>
+			One or more of FCFLAG_XXX: FCFLAG_BOLD, FCFLAG_UNDERLINE, FCFLAG_STRIKEOUT, FCFLAG_ITALIC.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszFace</xtd2>
+		<xtd3>
+			Font face.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPTWFONTINFO/>
+		<xreturns/>
+		<xtd3>
+			Pointer to a permanently available structure containing the font
+			info. The structure is available until CFontCache::Clear is called. Evertyhing
+			will be identical to pfi, except hFont, iAbove, and iBelow are filled in. You
+			can use PTWFONTINFO-&gt;hFont for Windows calls.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CMMLNode Description</xSectionTitle>
+
+<p>
+	The CMMLNode class stores a MML tag, all its variables, and all its contents. Because
+	the tag may contain other nodes, CMMLNode keeps pointers to its contents' nodes.
+	When CMMLNode is deleted, it deletes all the nodes in its contents, and so forth.
+</p>
+
+<xSectionTitle>CMMLNode Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwType</xtd2>
+		<xtd3>
+			Type of node. This is one of the following:
+			<p/>
+			<xul>
+				<li>MMLCLASS_ELEMENT - The node is a standard display element.</li>
+				<li>MMLCLASS_MACRO - The node is a macro definition.</li>
+				<li>MMLCLASS_PARSEINSTRUCTION - The node is a parse instruction, beginning
+					with a question-mark, like &lt;?Include?&gt;</li>
+			</xul>
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fDirty</xtd2>
+		<xtd3>
+			When you change the data in the node thought ContentAdd(),
+			ContentInsert(), or ContentRemove(), this m_fDirty flag
+			will be set for the <bold>root node</bold> of the tree. Therefore,
+			you can use m_fDirty in the root node to see if any data has been
+			changed. An application can change this value, usually to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>m_pParent</xtd2>
+		<xtd3>
+			Parent node to this one. DirtySet() uses m_pParent to find the
+			root note of a CMMLNode tree and set the dirty flag.
+			An application can change this value, but usually won't need to.
+			It's automatically set when ContentAdd() is called to add the
+			node into an existing tree.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>CMMLNode::AttribDelete</xSectionTitle>
+
+<p>
+	Deletes an attribute.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name, such as "width".
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+<xSectionTitle>CMMLNode::AttribEnum</xSectionTitle>
+
+<p>
+	Deletes an attribute.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xtd2>
+		<xtd3>
+			Attribute number starting at 0 and increasing by 1.
+			If dwNum &gt;= the number of attributes, then the function will return an
+			error.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>*ppszAttrib</xtd2>
+		<xtd3>
+			ppszAttrib is filled with a pointer to the attribute name.
+			It's valid until attribute deleted/changed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>*ppszValue</xtd2>
+		<xtd3>
+			ppszValue is filled with a pointer to the value string.
+			It's valid until attribute deleted/changed.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::AttribGet</xSectionTitle>
+
+<p>
+	Gets an attribute in the node.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name, such as "width".
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xreturns/>
+		<xtd3>
+			Pointer to the string for the value. Do not change this.
+			This pointer is valid until the attribute is changed or
+			deleted. If the attribute is not found, returns NULL
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::AttribNum</xSectionTitle>
+
+<p>
+	Returns the number of attributes.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Number of attributes.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>CMMLNode::AttribSet</xSectionTitle>
+
+<p>
+	Sets an attribute in the node.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			Attribute name, such as "width". If the attribute already exists it it replaced.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			New value for the attribute.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMMLNode::Clone</xSectionTitle>
+
+<p>
+	Clones the current node and all the nodes it contains.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xreturns/>
+		<xtd3>
+			The cloned node. The application must delete this.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMMLNode::ContentAdd</xSectionTitle>
+
+<p>
+	Add a string to the content of the node.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszString</xtd2>
+		<xtd3>
+			String. This already has &amp;amp; etc. preparsed and converted to Unicode.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CMMLNode::ContentAdd</xSectionTitle>
+
+<p>
+	Add another node to the content. Note: When
+	a node is part of the content and the object is deleted, the node
+	will also be deleted.
+</p>
+
+<p>
+	IMPORTANT: There are sometimes problems between calling new
+	in the EXE and delete in the DLL. Therefore, I suggest using
+	ContentAddNewNode() and ContentCloneNode() instead of this.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to add.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::ContentAddCloneNode</xSectionTitle>
+
+<p>
+	Add another node to the content. pNode is cloned so
+	it's up to the caller to free pNode or do what it wished.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to add.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::ContentAddNewNode</xSectionTitle>
+
+<p>
+	Adds a new node to the contents and returns a pointer to it.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCMMLNode/>
+		<xreturns/>
+		<xtd3>
+			Node that's added.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMMLNode::ContentEnum</xSectionTitle>
+
+<p>
+	Enumerates an element in the content.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndex</xtd2>
+		<xtd3>
+			Content index number to enumerate, starting at 0.
+			If &gt;= num of content then returns error.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>*ppsz</xtd2>
+		<xtd3>
+			If the content item is a string, this is filled in.
+			The string is valid until its deleted or changed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>*ppNode</xtd2>
+		<xtd3>
+			If the content item is a node, this is filled in.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::ContentFind</xSectionTitle>
+
+<p>
+	Searches through the contents for a sub-node whose name
+	matches psz.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Node-name to look for.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszAttrib</xtd2>
+		<xtd3>
+			If this is not NULL, the search only looks for nodes with a name
+			matching psz and containing an attribute named pszAttrib.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszValue</xtd2>
+		<xtd3>
+			If this is not NULL, the search only looks for nodes with a name
+			matching psz, containing an attribute named pszAttrib,
+			whose value is pszValue.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			Index (0-based) into the node's contents for the first
+			occurrence of the element. -1 if nothing is found.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+<xSectionTitle>CMMLNode::ContentInsert</xSectionTitle>
+
+<p>
+	Insertes a string to the content of the node.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndex</xtd2>
+		<xtd3>
+			Content index number to insert before, starting at 0.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszString</xtd2>
+		<xtd3>
+			String. This already has &amp;amp; etc. preparsed and converted to Unicode.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CMMLNode::ContentInsert</xSectionTitle>
+
+<p>
+	Inserts another node in the content. Note: When
+	a node is part of the content and the object is deleted, the node
+	will also be deleted
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndex</xtd2>
+		<xtd3>
+			Content index number to insert before, starting at 0.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to add.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMMLNode::ContentNum</xSectionTitle>
+
+<p>
+	Returns the number of content elements.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xreturns/>
+		<xtd3>
+			The number of elements in the node's content.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+<xSectionTitle>CMMLNode::ContentRemove</xSectionTitle>
+
+<p>
+	Removes an element of content.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwIndex</xtd2>
+		<xtd3>
+			Content index number to remove, starting at 0.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fDelete</xtd2>
+		<xtd3>
+			If remove another node and this is TRUE (default)
+			then delete the other node object. Else, don't delete it
+			and assume the caller will deal with it.
+			<p/>
+			NOTE: Sometimes there is a conflict between calling
+			new in an EXE and delete in a DLL, or vice versa.
+			I suggest you not use fDelete=FALSE from an EXE.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CMMLNode::DirtySet</xSectionTitle>
+
+<p>
+	Uses m_pParent to seek out the root node of the CMMLNode tree and sets
+	the root's m_fDirty flag to true. All functions in CMMLNode that
+	change the data automatically call DirtySet(), so  an application
+	won't usually need to call this.
+</p>
+
+<p>
+	No inputs or returns.
+</p>
+
+
+
+<xSectionTitle>CMMLNode::NameGet</xSectionTitle>
+
+<p>
+	Returns a pointer to the element's name, such as "bold". It's
+	valid until the node is renamed or deleted.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xreturns/>
+		<xtd3>
+			Pointer to the attribute name.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CMMLNode::NameSet</xSectionTitle>
+
+<p>
+	Changes the name of the node.
+</p>
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszName</xtd2>
+		<xtd3>
+			New name.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CEscError Description</xSectionTitle>
+
+<p>
+	CEscError is a C++ object that is used by many Escarpment objects as a way
+	of reporting human-readable error strings.
+</p>
+
+<xSectionTitle>CEscError Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwNum</xtd2>
+		<xtd3>
+			Error number reported. This is 0 if there's no error.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>m_dwSurroundChar</xtd2>
+		<xtd3>
+			If there's an error, this is an index (characters) into m_pszSurround
+			indicating which character caused the error.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszDesc</xtd2>
+		<xtd3>
+			If there's an error, this is a pointer to a human-readable error string.
+			This memory is valid until a new error is reported into the object or
+			the object is freed.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszSource</xtd2>
+		<xtd3>
+			If there's an error, this points to the character causing the error in
+			the original source text. Because this memory may have been feed you're
+			likely to get a GP fault if you access this pointer.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>m_pszSurround</xtd2>
+		<xtd3>
+			If there's an error, this is a pointer to the text surrounding the area
+			of MML that caused the error. See m_dwSurroundChar.
+			This memory is valid until a new error is reported into the object or
+			the object is freed.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+<xSectionTitle>CEscError::Set</xSectionTitle>
+
+<p>
+	Sets an error in the object.
+</p>
+<xTableParam>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwNum</xtd2>
+		<xtd3>
+			Error number. set to 0 to clear.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszDesc</xtd2>
+		<xtd3>
+			Text description.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSurround</xtd2>
+		<xtd3>
+			Surrounding text. If this is more than 256 chars it will be
+			truncted down, assuming plenty of space is left around dwSurroundChar.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarDWORD/>
+		<xtd2>dwSurroundChar</xtd2>
+		<xtd3>
+			Index into the surround text where the error occurred.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>pszSource</xtd2>
+		<xtd3>
+			Pointer of error into original source string.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xSectionTitle>CEscTextBlock Description</xSectionTitle>
+
+<p>
+	CEscTextBlock is a C++ object that interprets a PCMMLNode and sub-nodes into
+	text and controls. It fills in internal data structures containing the XY pixel
+	locations of the text and controls, and will paint them to a HDC when told to
+	do so. You must call ::Init() after creating a CEscTextBlock.
+</p>
+
+<xSectionTitle>CEscTextBlock Public Variables</xSectionTitle>
+
+<xTableStructure>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fDeleteCMMLNode</xtd2>
+		<xtd3>
+			If this is set to TRUE, the node passed in by ::Interpret() will be deleted
+			on the next ::Interpret call (not ::ReInterpret though) or if the object is
+			deleted. If FALSE, the node is not deleted by this object.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>m_fFoundStretch</xtd2>
+		<xtd3>
+			After a call to ::Interpret() or ::ReInterpret() this is filled with TRUE
+			if the call found &lt;StretchXXX&gt;. FALSE if no stretch information was found.
+			If stretch information is found, the application may want to call
+			PCEscTextBlock::Stretch() before calling PCEscTextBlock::PostInterpret().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarIFONTINFO/>
+		<xtd2>m_fi</xtd2>
+		<xtd3>
+			The default (starting) font to use for the text block interpretation. If you
+			change this be sure to use fDontClearFont=TRUE in ::Interpret() and ::ReInterpret().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>m_iCalcHeight</xtd2>
+		<xtd3>
+			After a call to ::Interpret() or ::ReInterpret() this is filled with the maximum
+			height of text/images in the node. m_iCalcWidth and m_iCalcHeight form a bounding
+			rectangle for the interpreted (word-wrapped, etc.) text/controls.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>m_iCalcWidth</xtd2>
+		<xtd3>
+			After a call to ::Interpret() or ::ReInterpret() this is filled with the maximum
+			width of text/images in the node. m_iCalcWidth and m_iCalcHeight form a bounding
+			rectangle for the interpreted (word-wrapped, etc.) text/controls.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscError/>
+		<xtd2>m_pError</xtd2>
+		<xtd3>
+			If there are any errors during interpretation, this object will be
+			filled with information about the error.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCFontCache/>
+		<xtd2>m_pFontCache</xtd2>
+		<xtd3>
+			The font cache to use by the CEscTextBlock object. If you want it to use
+			another font cache (such as from CEscControl::m_FontCache) then call
+			::OtherFontCache().
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCListFixed/>
+		<xtd2>m_plistTWOBJECTPOSN</xtd2>
+		<xtd3>
+			Both ::Interpret() and ::ReInterpret() fill this with a list of objects
+			(aka controls and some other stuff).
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCListVariable/>
+		<xtd2>m_plistTWTEXTELEM</xtd2>
+		<xtd3>
+			Both ::Interpret() and ::ReInterpret() fill this with a list of text elements.
+			A text element stores the text string, font information (using m_pFontCache),
+			and location of text in page space.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>m_pNodePageInfo</xtd2>
+		<xtd3>
+			After a call to ::Interpret() or ::ReInterpret() this is filled with a pointer
+			to the &lt;PageInfo&gt; node if one was found. Otherwise it's NULL.
+		</xtd3>
+	</tr>
+</xTableStructure>
+
+
+
+
+
+
+<xSectionTitle>CEscTextBlock::FindBreak</xSectionTitle>
+
+<p>
+	Used for printing.
+	This finds a good breaking point between pages,
+	one that minimizes the number of objects broken in half. It finds the greatest
+	Y value, within the iYMin and iYMax range that breaks the least number
+	of objects in half.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iYMin</xtd2>
+		<xtd3>
+			Minimum Y value (in page coordinates) acceptable for a break.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iYMax</xtd2>
+		<xtd3>
+			Maximum Y value (in page coordinates) acceptable for a break.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xreturns/>
+		<xtd3>
+			Optimum Y value for a break, as close to iYMax as possible while
+			splitting as few objects/lines as possible.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscTextBlock::Init</xSectionTitle>
+
+<p>
+	Initializes the PCEscTextBlock object. It must be called right after
+	the obect is created.
+</p>
+<xTableParam>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscTextBlock::Interpret</xSectionTitle>
+
+<p>
+	Takes a CMMLNode and interprets it, filling in all
+	the relevant info such as font cache, text locations, objects, object locations, etc.
+	It ends up filling in most of the public member variables.
+</p>
+
+<p>
+	After calling ::Interpret or ::ReInterpret you may want to call ::Stretch if
+	m_fFoundStretch. You must call ::PostInterpret().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCEscPage/>
+		<xtd2>pPage</xtd2>
+		<xtd3>
+			CEscPage that this is being interpreted for. Many of the controls need access
+			to PCEscPage for them to be created.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCEscControl/>
+		<xtd2>pControl</xtd2>
+		<xtd3>
+			Normally this is NULL. However, if set to TRUE any controls created will have
+			CEscControl::m_pParentControl set to pControl.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPCMMLNode/>
+		<xtd2>pNode</xtd2>
+		<xtd3>
+			Node to be interpreted. This will ultimately be deleted by the CEscTextBlock object
+			unless m_fDeleteCMMLNode is set to FALSE.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC that will be displaying to.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarHINSTANCE/>
+		<xtd2>hInstance</xtd2>
+		<xtd3>
+			Used to load resources from the application.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iWidth</xtd2>
+		<xtd3>
+			Maximum width of the page/region in pixels,
+			including margins specified by &lt;PageInfo&gt;.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fDontClearFont</xtd2>
+		<xtd3>
+			If set to TRUE, m_fi will be left as is. Otherwise, m_fi will be set to something
+			reasonable. (Defaults to FALSE.)
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fRootNodeNull</xtd2>
+		<xtd3>
+			Usually set to FALSE, If TRUE, it ignores the node
+			type of the root node and just treats it as text. Controls such as
+			&lt;button&gt;Press me!&lt;/button&gt; use this so they can send their own
+			pNode into &lt;button&gt; and get "Press me" as text. (Defaults to FALSE.)
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscTextBlock::OtherFontCache</xSectionTitle>
+
+<p>
+	Use a different font cache to add to. Don't
+	delete the font cache when the interpret object is deleted.
+	Call ::OtherFontCache() before calling ::Interpret() or ::ReInterpret().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPCFontCache/>
+		<xtd2>pFontCache</xtd2>
+		<xtd3>
+			New font cache to use. This will not be deleted by CEscTextBlock.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscTextBlock::Paint</xSectionTitle>
+
+<p>
+	Paints the text block.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			hDC to draw onto.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPPOINT/>
+		<xtd2>pOffset</xtd2>
+		<xtd3>
+			Amount to offset the painting from the coordinates from (as finalized
+			by ::PostInterpret()) to the HDC display.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prClip</xtd2>
+		<xtd3>
+			Clipping rectangle for the HDC. This can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prScreen</xtd2>
+		<xtd3>
+			Location of the clipping rectangle (prClip) on the screen. This has the same
+			width and height as prClip. Can be NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prTotalScreen</xtd2>
+		<xtd3>
+			Size of the entire screen. Some controls will use this for perspective. Same dimensions as pPageCoord.
+		</xtd3>
+	</tr>
+	<xtrreturnserror/>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscTextBlock::PostInterpret</xSectionTitle>
+
+<p>
+	Should be called after Interpret() and after the caller has decided how to
+	center/offset the text. It: 1) moves all the text, and
+	2) Adjusts all the BACKGROUND objects to full size or prFull.
+</p>
+
+<p>
+	After calling ::Interpret or ::ReInterpret you may want to call ::Stretch if
+	m_fFoundStretch. You must call ::PostInterpret().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iDeltaX</xtd2>
+		<xtd3>
+			Number of pixels to move all text and objects generated by ::Interpet() or
+			::ReInterpret(). Use this to center or right-align the text/objects within
+			the page/display.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iDeltaY</xtd2>
+		<xtd3>
+			Number of pixels to move all text and objects generated by ::Interpet() or
+			::ReInterpret(). Use this to center or bottom-align the text/objects within
+			the page/display.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPRECT/>
+		<xtd2>prFull</xtd2>
+		<xtd3>
+			Rectangle describing the full size of the page/region. Any controls marked
+			as "posn=background" are stretched in size so they fill prFull.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscTextBlock::ReInterpret</xSectionTitle>
+
+<p>
+	Call this if your window size has been changed. It realigns the text without
+	destroying and recreating the controls.
+</p>
+
+<p>
+	After calling ::Interpret or ::ReInterpret you may want to call ::Stretch if
+	m_fFoundStretch. You must call ::PostInterpret().
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarHDC/>
+		<xtd2>hDC</xtd2>
+		<xtd3>
+			HDC that will be displaying to.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xtd2>iWidth</xtd2>
+		<xtd3>
+			Maximum width of the page/region in pixels,
+			including margins specified by &lt;PageInfo&gt;.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fDontClearFont</xtd2>
+		<xtd3>
+			If set to TRUE, m_fi will be left as is. Otherwise, m_fi will be set to something
+			reasonable. (Defaults to FALSE.)
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+
+
+
+
+
+
+<xSectionTitle>CEscTextBlock::SectionFind</xSectionTitle>
+
+<p>
+	Searches through the data for a &lt;section&gt;
+	with the specified text. If it finds it, it returns the Y pixel at which the
+	section starts.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarPWSTR/>
+		<xtd2>psz</xtd2>
+		<xtd3>
+			Section string to search for.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xreturns/>
+		<xtd3>
+			Y pixel (in page coordinates) where the section begins.
+			Returns -1 if the section isn't found.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+
+<xSectionTitle>CEscTextBlock::SectionFromY</xSectionTitle>
+
+<p>
+	Given a Y value, returns the section that it's in.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iY</xtd2>
+		<xtd3>
+			Y value, in page coordinates.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarBOOL/>
+		<xtd2>fReturnFirst</xtd2>
+		<xtd3>
+			If a section title isn't declared until after pixel iY, and this is TRUE
+			then the function returns the first section it finds. If FALSE, it reutrns NULL.
+		</xtd3>
+	</tr>
+	<tr>
+		<xVarPWSTR/>
+		<xreturns/>
+		<xtd3>
+			Section string. Valid until page is resized or deleted.
+		</xtd3>
+	</tr>
+</xTableParam>
+
+
+
+
+<xSectionTitle>CEscTextBlock::Stretch</xSectionTitle>
+
+<p>
+	If m_fFoundStretch is TRUE, you should call this after ::Interpret() or
+	::ReInterpret() and before ::PostInterpret. It stretches out (or shrinks)
+	all objects in the stretch region so the height of the text is changed
+	to iStretchTo. m_iCalcHeight will be changed to the new height.
+</p>
+
+<p>
+	Note: Sometimes the page cannot be vertically shrunk as small is iStretchTo,
+	so m_iCalcHeight might be more than iStretchTo.
+</p>
+
+<xTableParam>
+	<tr>
+		<xVarInt/>
+		<xtd2>iStretchTo</xtd2>
+		<xtd3>
+			The number of pixels high that the text/controls should be stretched to.
+		</xtd3>
+	</tr>
+	<xTrReturnsError/>
+</xTableParam>
+

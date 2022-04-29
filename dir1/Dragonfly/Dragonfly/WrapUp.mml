@@ -1,0 +1,45 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Daily wrap-up"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=221/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Daily wrap-up
+</xPageTitle>
+
+<p>
+	Use the daily wrap-up to think about what you accomplished
+	(and didn't accomplish) during the day. Anything you enter will appear
+	in the <a href=r:112 color=#c0c0ff>calendar's</a> daily log.
+</p>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+
+<xChoiceButton name=addtoday>
+	<bold>Write up today</bold>
+	<br/>
+	Write about what you did today.
+</xChoiceButton>
+
+<xChoiceButton name=addyesterday>
+	<bold>Write about yesterday</bold>
+	<br/>
+	In case you forgot to do the daily wrap-up yesterday, this will allow you
+	to write up what you did yesterday.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton style=light checked=false checkbox=true name=BugAboutWrap>
+	<bold>Remind me if I haven't written a daily wrapup</bold>
+	<br/>
+	If you forgot to write a daily wrapup for what you did yesterday, this will remind
+	you in the Today, Combo, and Planner pages.
+</xChoiceButton>
+
+
+</font>

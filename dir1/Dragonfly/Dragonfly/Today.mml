@@ -1,0 +1,61 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Today"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=213/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	<<<TODAYSDATE>>>
+</xPageTitle>
+
+<<<$IFNOTPRINT>>><<<$IFMICROHELP>>>
+<p>
+	<xMoreInfo href=r:186/>The "Today" tab shows you what you what meetings, tasks, and
+	reminders you have for today.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<Null>
+	<<<$WRAPUP>>>
+</null>
+<<<$ENDIFNOTPRINT>>>
+
+<Null>
+	<<<$MEETINGSUMMARY>>>
+</null>
+
+<Null>
+	<<<$REMINDERSUMMARY>>>
+</null>
+
+<Null>
+	<<<$WORKSUMMARY>>>
+</null>
+
+<Null>
+	<<<$PROJECTSUMMARY>>>
+</null>
+
+
+<xbr/>
+
+
+<p align=center><table width=80%>
+	<xtrheader>Deeply random thought of the day</xtrheader>
+	<tr>
+		<td>
+			<image posn=background type=tile scale=75% jpgresource=219/>
+			<font color=#ffffff><<<$DEEPTHOUGHT>>></font>
+		</td>
+	</tr>
+</table></p>
+
+<<<$IFNOTPRINT>>>
+<xChoiceButton href=r:291>
+	<bold>Change your scheduled breaks</bold>
+	<br/>
+	This page lets you change what time you usually start work, when you have lunch
+	and for how long, and when you have dinner.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

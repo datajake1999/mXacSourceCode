@@ -1,0 +1,157 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Split a task tasks" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Split the task</font>
+		<xhoverhelp>
+			Press this to split the task as specified.
+			Make sure to type in the task names and durations first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Split the task
+</xPageTitle>
+
+<p>
+	This page lets you split one task into several sub tasks. Just fill in as many task names
+	as you wish to split it into. The sub-project setting is common to all the tasks.
+</p>
+
+<xListTable innerlines=0>
+	<tr>
+		<td width=75% bgcolor=#004000>
+			<bold><font color=#ffffff>Task</font></bold>
+		</td>
+		<td width=25% bgcolor=#004000>
+			<bold><font color=#ffffff>Days of work</font></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable defcontrol=true name=task1/>
+		</td>
+		<td width=25%>
+			<xEditInTable name=time1 text=1/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task2/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time2/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task3/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time3/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task4/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time4/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task5/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time5/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task6/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time6/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task7/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time7/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task8/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time8/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task9/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time9/>
+		</td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<xEditInTable name=task10/>
+		</td>
+		<td width=25%>
+			<xEditInTable text=1 name=time10/>
+		</td>
+	</tr>
+</xListTable>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Assigned to:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=assignedto blank=Yourself/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sub-project:
+		</xtdLeft>
+		<xtdright>
+			<xFilterSubProject name=subproject/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Split the task</font>
+		<xhoverhelp>
+			Press this to split the task as specified.
+			Make sure to type in the task names and durations first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

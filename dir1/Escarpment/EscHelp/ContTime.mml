@@ -1,0 +1,298 @@
+<pageinfo title="Time Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xTime>
+	<Time width=100% hour=13 minute=30 MACROATTRIBUTE=1/>
+</xTime>
+
+
+<xPageTitle>Time Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The time control displays a drop-down, allowing the user to specify a time.
+	If the user changes the time its display
+	is updated to show the time and the page callback is notified.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>appear</xTd2>
+		<xTd3>
+			If appear is "right" then the pop-up list appears to the control's right. If it's "below" then
+			it appears below.
+			<p/>
+			Example: appear=right
+			<p/>
+			<xTime appear=right/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>basecolor</xTd2>
+		<xTd3>
+			Changes the color of the button's base.
+			<p/>
+			Example: color=#008000
+			<p/>
+			<xTime basecolor=#008000/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bcolor</xTd2>
+		<xTd3>
+			Bottom-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: bcolor=#00ffff
+			<p/>
+			<xTime bcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>blank</xTd2>
+		<xTd3>
+			The string to display when no time is specified.
+			<p/>
+			Example: blank="No time is specified"
+			<p/>
+			<xTime hour=-1 blank="No time is specified"/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttondepth</xTd2>
+		<xTd3>
+			Depth of the 3D rendered button in pixels. It affects how much the button appears to pop
+			out of the screen.
+			<p/>
+			Example: buttondepth=32
+			<p/>
+			<xTime buttondepth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonheight</xTd2>
+		<xTd3>
+			Height of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonheight=32
+			<p/>
+			<xTime buttonheight=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>buttonwidth</xTd2>
+		<xTd3>
+			Width of the 3D rendered button in pixels.
+			<p/>
+			Example: buttonwidth=32
+			<p/>
+			<xTime buttonwidth=32/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			Changes the color of the button.
+			<p/>
+			Example: color=#00ff00
+				<xTime color=#00ff00/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>hour</xTd2>
+		<xTd3>
+			The hour to be displayed by the time control, from 0 to 23. If this is less than 0
+			then the control will show "Not Entered".
+			<p/>
+			Example: hour=18
+			<p/>
+			<xTime hour=18/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lightcolor</xTd2>
+		<xTd3>
+			Affects the color that the button changes to when it's pressed down.
+			<p/>
+			Example: lightcolor=#ffffff
+			<p/>
+			<xTime lightcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginbuttontext</xTd2>
+		<xTd3>
+			Number of pixels margin between the text and the button.
+			<p/>
+			Example: marginbuttontext=0 and 16
+			<p/>
+			<xTime marginbuttontext=0/><br/>
+			<xTime marginbuttontext=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>marginleftright</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the left/right edge of the control.
+			<p/>
+			Example: marginleftright=0 and 16
+			<p/>
+			<xTime marginleftright=0/><br/>
+			<xTime marginleftright=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margintopbottom</xTd2>
+		<xTd3>
+			Number of pixels margin between the text/button and the top/bottom of the control.
+			<p/>
+			Example:
+			<p/>
+			<xTime margintopbottom=0/><br/>
+			<xTime margintopbottom=16/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>minute</xTd2>
+		<xTd3>
+			The minute to be displayed by the time control, from 0 to 59. If this is less than 0
+			then the control will show "Not Entered".
+			<p/>
+			Example: minute=48
+			<p/>
+			<xTime minute=48/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>showbutton</xTd2>
+		<xTd3>
+			Shows or hides the 3D-rendered portion of the control.
+			<p/>
+			Example: showbutton=true and false
+			<p/>
+			<xTime showbutton=true/><br/>
+			<xTime showbutton=false/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>style</xTd2>
+		<xTd3>
+			The button's style affects how it looks. The following styles are available.
+			<p/>
+			style=Beveled<br/>
+			<xTime style=beveled/><br/>
+			style=Box<br/>
+			<xTime style=box/><br/>
+			style=Check<br/>
+			<xTime style=check/><br/>
+			style=cylinder<br/>
+			<xTime style=cylinder/><br/>
+			style=DownTriangle<br/>
+			<xTime style=downtriangle/><br/>
+			style=DownArrow<br/>
+			<xTime style=downarrow/><br/>
+			style=LeftTriangle<br/>
+			<xTime style=lefttriangle/><br/>
+			style=LeftArrow<br/>
+			<xTime style=leftarrow/><br/>
+			style=Light<br/>
+			<xTime style=light/><br/>
+			style=RightTriangle<br/>
+			<xTime style=righttriangle/><br/>
+			style=RightArrow<br/>
+			<xTime style=rightarrow/><br/>
+			style=Sphere<br/>
+			<xTime style=sphere/><br/>
+			style=Teapot<br/>
+			<xTime style=teapot/><br/>
+			style=Toggle<br/>
+			<xTime style=toggle/><br/>
+			style=UpTriangle<br/>
+			<xTime style=uptriangle/><br/>
+			style=UpArrow<br/>
+			<xTime style=uparrow/><br/>
+			style=X<br/>
+			<xTime style=x/><br/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>tcolor</xTd2>
+		<xTd3>
+			Top-color used for the colorblend in the control's pop-up.
+			<p/>
+			Example: tcolor=#00ffff
+			<p/>
+			<xTime tcolor=#00ffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>valign</xTd2>
+		<xTd3>
+			VAlign is the alignment of the button image with respect to the control's text. Use "top", "center", or "bottom".
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The contents of the control are ignored.
+</p>
+
+
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<xSectionTitle>ESCN_TIMECHANGE</xSectionTitle>
+
+<p>
+	The control sends an ESCN_TIMECHANGE message when the user has changed the time in the control.
+	The ESCNTIMECHANGE structure contains:
+</p>
+
+<xTableStructure>
+	<xTrControl/>
+	<tr>
+		<xVarInt/>
+		<xTd2>iHour</xTd2>
+		<xTd3>
+			New hour, from 0 to 23. This is less than 0 if no time is specified.
+		</xTd3>
+	</tr>
+	<tr>
+		<xVarInt/>
+		<xTd2>iMinute</xTd2>
+		<xTd3>
+			New minutes value, from 0 to 59. This is less than 0 if no time is specified.
+		</xTd3>
+	</tr>
+</xTableStructure>

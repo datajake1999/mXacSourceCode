@@ -1,0 +1,380 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Revision History"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Revision History
+</xPageTitle>
+
+<p>
+	This page lists all of the bug fixes, feature tweaks, and new features I've made
+	to Dragonfly over time. If you have any more fixes or changes you'd like
+	me to make, please send me E-mail at <xMyEmail/>.
+</p>
+
+<!xVersion>
+	<td width=20% valign=top><section><bold>
+		<?MacroContent?>
+	</bold></section></td>
+</xVersion>
+
+<!xChanges>
+	<td width=80% valign=top><align tab=32>
+		<xul>
+			<?MacroContent?>
+		</xul>
+	</align></td>
+</xChanges>
+
+<!xMisc>
+	<li><font color=#000000>
+		<?MacroContent?>
+	</font></li>
+</xMisc>
+
+<!xBug>
+	<li><font color=#800000>
+		<?MacroContent?>
+	</font></li>
+</xBug>
+
+<!xFeature>
+	<li><font color=#006000>
+		<?MacroContent?>
+	</font></li>
+</xFeature>
+
+<Table width=100% border=0 innerlines=0>
+	<tr>
+		<xVersion>2.1.6317</xVersion>
+		<xChanges>
+			<xBug>
+				Fix potential hang problem with super-long meetings.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.6217</xVersion>
+		<xChanges>
+			<xBug>
+				Potentially fix hanging problem on startup.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.6014</xVersion>
+		<xChanges>
+			<xMisc>
+				Feature so reoccurring tasks, meetings, reminders, and phone calls can automatically
+				stop after a certain date.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.5819</xVersion>
+		<xChanges>
+			<xMisc>
+				Alphabetically sort journal list.
+			</xMisc>
+			<xBug>
+				Changing a memory's year now causes the cross-reference from the previous year to
+				be (eventually) removed.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.3122</xVersion>
+		<xChanges>
+			<xBug>
+				Fixed data-loss occurring when there are more than 100 database
+				files in the dragonfly directory.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.1726</xVersion>
+		<xChanges>
+			<xBug>
+				Fixed the hibernate password.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.1128</xVersion>
+		<xChanges>
+			<xMisc>
+				Extended the number of children from 4 to 8.
+			</xMisc>
+			<xMisc>
+				Sort journal entries (and others) so the most recent entries are at the
+				top of the list.
+			</xMisc>
+			<xMisc>
+				Can edit quotes previously added.
+			</xMisc>
+			<xBug>
+				Wasn't saving customized quotes properly.
+			</xBug>
+			<xBug>
+				Wasn't always archiving text from Internet Explorer.
+			</xBug>
+			<xBug>
+				Instead of showing "Week 53" in the calendar it now shows "Week 1 (next year)".
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.802</xVersion>
+		<xChanges>
+			<xFeature>
+				Customize quotes.
+			</xFeature>
+			<xFeature>
+				Customize the background images for the pages.
+			</xFeature>
+			<xFeature>
+				Ability to turn off the daily wrapup reminder.
+			</xFeature>
+			<xFeature>
+				Several different font sizes available.
+			</xFeature>
+			<xBug>
+				Fixed potential crash.
+			</xBug>
+			<xBug>
+				Fixed misspelling.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.1.307</xVersion>
+		<xChanges>
+			<xFeature>
+				Option to use black-and-white cursors instead of colored ones to work
+				around bugs in video drivers.
+			</xFeature>
+			<xFeature>
+				Automatic log-on feature.
+			</xFeature>
+			<xMisc>
+				Only allow one copy of Dragonfly to be run at once in order to avoid the
+				the user file from being opened twice.
+			</xMisc>
+			<xMisc>
+				Moved the "Show another 7 days" in Planner and List to the end since it
+				consumes too much screen real estate if it's on top.
+			</xMisc>
+			<xBug>
+				Links to speech API were incorrect.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.1408</xVersion>
+		<xChanges>
+			<xFeature>
+				Option to turn off all beeps and text-to-speech in Dragonfly.
+			</xFeature>
+		</xChanges>
+	</tr>
+<<<$IFPCACTIVE>>>
+	<tr>
+		<xVersion>2.0.1218</xVersion>
+		<xChanges>
+			<xMisc>
+				Special edition for PC Active.
+			</xMisc>
+		</xChanges>
+	</tr>
+<<<$ENDIFPCACTIVE>>>
+	<tr>
+		<xVersion>2.0.1113</xVersion>
+		<xChanges>
+			<xFeature>
+				Option in the annual calendar (by week or month) to show only from now
+				until the end of the year.
+			</xFeature>
+			<xFeature>
+				Option to put the menu either on the top of the screen or the right.
+				This also invloved rearranging the menu.
+			</xFeature>
+			<xFeature>
+				After the user has run Dragonfly for awhile, ask the user is he/she
+				wants to turn off the micro-help at the top of each screen.
+			</xFeature>
+			<xFeature>
+				Project tasks can be split into smaller sub-tasks through the task
+				editing dialog.
+			</xFeature>
+			<xFeature>
+				Feature in the project view to move tasks long distances within the
+				list.
+			</xFeature>
+			<xMisc>
+				Improved printing from the today, list, tomorrow, planner, combo,
+				monthly calendar, and annual calendar pages.
+			</xMisc>
+			<xMisc>
+				Changed the text-to-speech page to point to my own page for a download since
+				Microsoft took off SAPI 4.
+			</xMisc>
+			<xMisc>
+				The daily wrap-up doesn't ask users to review past events quite so often.
+			</xMisc>
+			<xMisc>
+				Changed the time-display in planner and combo-box slightly so it uses
+				less space.
+			</xMisc>
+			<xMisc>
+				Re-arranged the combo-page so the meetings are on the right, and the tasks
+				on the left.
+			</xMisc>
+			<xMisc>
+				Smaller top/bottom margins when printing.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0828</xVersion>
+		<xChanges>
+			<xFeature>
+				You can have Dragonfly require that you enter a password when using it after a power-down.
+			</xFeature>
+			<xMisc>
+				Added a "Security" section to the table of contents.
+			</xMisc>
+			<xMisc>
+				Put the rotating key in Change Log-on Password.
+			</xMisc>
+			<xMisc>
+				Rearrange the edit meetings page.
+			</xMisc>
+			<xMisc>
+				Shrunk the edit control in the journal-entry editing/add page.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0826</xVersion>
+		<xChanges>
+			<xBug>
+				Fixed a problem where some non-typical characters would cause the projects
+				page, or pages showing project information, not to display.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0823</xVersion>
+		<xChanges>
+			<xBug>
+				Put better error checking in case there's a problem with a page so that it
+				won't crash on the page.
+			</xBug>
+			<xBug>
+				In a meeting, if added an action item for someone else, the dialog window
+				wasn't sized correctly.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0810</xVersion>
+		<xChanges>
+			<xBug>
+				The today, tomorrow, and combo pages weren't showing meetings properly.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0808</xVersion>
+		<xChanges>
+			<xFeature>
+				Show the day of the year in hover-help in the calendar, annual calendar, and combo view.
+			</xFeature>
+			<xFeature>
+				Added a weekly annual calendar.
+			</xFeature>
+			<xFeature>
+				Clicking on a day in the calendar page takes you to the combo page.
+			</xFeature>
+			<xMisc>
+				In the task editing and adding dialog boxes moved the task duration directly under the description.
+			</xMisc>
+			<xMisc>
+				Added the button for changing your scheduled breaks into the today, tomorrow, meeting, and combo pages.
+			</xMisc>
+			<xBug>
+				Fixed a crashing bug that might manifest itself once in awhile during use
+				or during printing. It had to do with an undefined initial aspect radio for
+				3D controls.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0803</xVersion>
+		<xChanges>
+			<xMisc>
+				Updated the links to the Dragonfly review pages.
+			</xMisc>
+			<xMisc>
+				Did some memory usage optimizations.
+			</xMisc>
+			<xBug>
+				Assigned-to in projects wouldn't always work properly, and didn't
+				allow you to specify a business.
+			</xBug>
+			<xBug>
+				In the planner view, if a task was split by lunch, dinner, or meetings,
+				and then the user specified that he wanted to divide the task into two,
+				the time estimates were wrong.
+			</xBug>
+			<xBug>
+				Crashing bug in the edit control.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>2.0.0727</xVersion>
+		<xChanges>
+			<xFeature>
+				In the lunar calendar, show today's date with a bright yellow background.
+			</xFeature>
+			<xMisc>
+				Moved history of changes for 1.x versions into another page.
+			</xMisc>
+			<xMisc>
+				Changes to the daily wrapup that I had previously made slowed things down too
+				much so I did some optimizations.
+			</xMisc>
+			<xMisc>
+				Interaction between the planner view and the projects: If a project task was
+				close enough away (1 week) it was added to the planner. However, if this was
+				then moved out, then it stayed on the planner. Changed to it disappears if
+				project predicts tasks will be more than 2 weeks out.
+			</xMisc>
+			<xMisc>
+				Interaction between the planner view and the projects: If a user moves a project
+				task out more than 2 weeks in the planner then reset the date. Do this because
+				of the dynamic nature of projects.
+			</xMisc>
+			<xMisc>
+				Changed the color used to indicate "today" in the combo and calendar pages to
+				a bright yellow so it's more visible.
+			</xMisc>
+			<xBug>
+				It was possible to change the month viewed in "Combo" to "No date."
+			</xBug>
+			<xBug>
+				Resolving a task in the planner view didn't always get rid of it.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.x</xVersion>
+		<xChanges>
+			<xMisc>
+				<a href=r:296>Changes in earlier versions.</a>
+			</xMisc>
+		</xChanges>
+	</tr>
+</Table>

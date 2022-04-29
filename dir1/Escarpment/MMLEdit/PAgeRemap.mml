@@ -1,0 +1,84 @@
+<pageinfo title="<<<DATATYPE>>> Resource Mapping"/>
+
+<p>
+	Use this dialog if your page includes references to <<<DATATYPE>>> resources (such as from
+	the image control). Add the resource IDs and corresponding files of any JPEG
+	resources referenced in your MML document.
+</p>
+<p>
+	Normally you would load most images and MML documents from resources in your application, but since
+	you can't modify the resources for MMLEdit, you can tell MMLEdit to load JPEG, bitmap,
+	and MML resources from disk, "pretending" that the resources really came from the
+	application's resource data.
+</p>
+
+<p align=center><table width=80%>
+	<tr>
+		<td width=100%><p align=left parlinespacing=0><font color=#ffffff>
+			<colorblend posn=background color=#0000e0/>
+			Add a new resource mapping
+		</font></p></td>
+	</tr>
+	<tr>
+		<td width=100%>
+			<colorblend posn=background tcolor=#e0ffe0 bcolor=#80e080/>
+			<p align=left parlinespacing=0>
+				<table width=100% innerlines=0 border=0>
+					<tr>
+						<td width=50% valign=top>
+							<bold>Resource number:</bold><br/>
+							<small>
+								This is the resource number for the <<<DATATYPE>>> resource that appears in the MML document.
+							</small>
+						</td>
+						<td width=50% valign=top>
+							<edit name=resnum width=100% multiline=no wordwrap=no/>
+						</td>
+					</tr>
+					<tr>
+						<td width=50% valign=top>
+							<bold>File:</bold><br/>
+							<small>
+								This is the <<<DATATYPE>>> file to load if the resource ID is used in your MML document.
+							</small>
+						</td>
+						<td width=50% valign=top>
+							<edit name=file width=100% multiline=no wordwrap=no/>
+						</td>
+					</tr>
+					<tr>
+						<td width=100% align=right>
+							<button name=add href=add>Add Map</button>
+						</td>
+					</tr>
+				</table>
+			</p>
+			</td>
+	</tr>
+</table></p>
+
+<p align=center><table width=80%>
+	<colorblend posn=background tcolor=#e0ffe0 bcolor=#80e080/>
+	<tr>
+		<td width=100%><p align=left parlinespacing=0><font color=#ffffff>
+			<colorblend posn=background color=#0000e0/>
+			List of current resource maps
+		</font></p></td>
+	</tr>
+	<tr>
+		<td width=90% lrmargin=0 tbmargin=0 innerlines=0><p align=right parlinespacing=0>
+			<listbox name=list vscroll=vlist height=200 width=100% color=transparent border=0>
+			</listbox>
+		</p></td>
+		<td width=36 lrmargin=0 tbmargin=0 innerlines=0>
+			<scrollbar name=vlist width=100% height=200 orient=vert/>
+		</td>
+	</tr>
+	<tr>
+		<td width=100%><p align=right parlinespacing=0>
+			<button name=delete href=delete>Delete selected map</button>
+		</p></td>
+	</tr>
+</table></p>
+
+<p align=right><button name=close href=close>Close</button></p>

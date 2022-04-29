@@ -1,0 +1,79 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Edit a photo" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Edit a photo
+</xPageTitle>
+
+<xbr/>
+
+<p align=center>
+	<image width=90% border=2 file="<<<FILE>>>" href="!<<<FILE>>>"/>
+</p>
+
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			<bold>One-line description</bold> of the photo:
+			<br/>
+			<font color=#c00000>(Required)</font>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name defcontrol=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			<bold>Long description</bold> of the photo:
+		</xtdLeft>
+		<xtdright>
+			<edit name=summary width=100% multiline=true wordwrap=true maxchars=10000/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			<bold>People</bold> shown in the photo:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person1 width=100%/>
+			<xFilterPersonBusiness name=person2 width=100%/>
+			<xFilterPersonBusiness name=person3 width=100%/>
+			<xFilterPersonBusiness name=person4 width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Approximate <bold>date</bold> the photo was taken:
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Include the photo in a <bold>journal</bold> category:
+		</xtdLeft>
+		<xtdright>
+			<xFilterJournal name=category width=100%/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+<button checkbox=true checked=true valign=top style=x name=wallpaper>
+	<bold>Use this for wallpaper</bold>
+	<br/>
+	Dragonfly can change your desktop wallpaper every day based on photos in your album.
+	If this is checked then the photo may be randomly selected for your wallpaper.
+</button>
+
+<xbr/>
+
+<p>
+	Your changes will automatically be saved; when you're finished editing just
+	switch to another page.
+</p>
+
+

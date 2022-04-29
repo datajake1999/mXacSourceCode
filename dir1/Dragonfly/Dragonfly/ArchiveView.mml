@@ -1,0 +1,52 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Archived document" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	<<<ENTRYNAME>>>
+</xPageTitle>
+
+<xTableCenter innerlines=0>
+	<xtheader>Document</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<JOURNALNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<tr>
+		<xlt>When archived:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+</xTableCenter>
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the archived document. You can also use this if you want to copy text from
+	the archived document.
+</xChoiceButton>

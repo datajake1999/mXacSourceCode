@@ -1,0 +1,80 @@
+<pageinfo title="Text Substitutions"/>
+
+<p>
+	Use this dialog if your page includes substitutions denoted by 
+	<bold><italic>&lt;&lt;&lt;SUBSTITUTION&gt;&gt;&gt;</italic></bold> 
+	or <bold><italic>&lt;&lt;&lt;$SUBSTITUTION&gt;&gt;&gt;</italic></bold>. Entering values into the table will cause the test page
+	to use them as substitutions.
+</p>
+
+<p align=center><table width=80%>
+	<tr>
+		<td width=100%><p align=left parlinespacing=0><font color=#ffffff>
+			<colorblend posn=background color=#0000e0/>
+			Add a new substitution
+		</font></p></td>
+	</tr>
+	<tr>
+		<td width=100%>
+			<colorblend posn=background tcolor=#e0ffe0 bcolor=#80e080/>
+			<p align=left parlinespacing=0>
+				<table width=100% innerlines=0 border=0>
+					<tr>
+						<td width=50% valign=top>
+							<bold>Substitution key:</bold><br/>
+							<small>
+								This is the string that appears in your original text and which is passed to ESCM_SUBSTITUTION.
+								You should not include the left/right brackets or ampersand.
+							</small>
+						</td>
+						<td width=50% valign=top>
+							<edit name=subkey width=100% multiline=no wordwrap=no/>
+						</td>
+					</tr>
+					<tr>
+						<td width=50% valign=top>
+							<bold>Substitution string:</bold><br/>
+							<small>
+								This is the string that replaces the substitution key.
+							</small>
+						</td>
+						<td width=50% valign=top>
+							<edit name=substring width=100% multiline=yes wordwrap=yes/>
+						</td>
+					</tr>
+					<tr>
+						<td width=100% align=right>
+							<button name=add href=add>Add substitution</button>
+						</td>
+					</tr>
+				</table>
+			</p>
+			</td>
+	</tr>
+</table></p>
+
+<p align=center><table width=80%>
+	<colorblend posn=background tcolor=#e0ffe0 bcolor=#80e080/>
+	<tr>
+		<td width=100%><p align=left parlinespacing=0><font color=#ffffff>
+			<colorblend posn=background color=#0000e0/>
+			List of current substutitions
+		</font></p></td>
+	</tr>
+	<tr>
+		<td width=90% lrmargin=0 tbmargin=0 innerlines=0><p align=right parlinespacing=0>
+			<listbox name=list vscroll=vlist height=200 width=100% color=transparent border=0>
+			</listbox>
+		</p></td>
+		<td width=36 lrmargin=0 tbmargin=0 innerlines=0>
+			<scrollbar name=vlist width=100% height=200 orient=vert/>
+		</td>
+	</tr>
+	<tr>
+		<td width=100%><p align=right parlinespacing=0>
+			<button name=delete href=delete>Delete selected substitution</button>
+		</p></td>
+	</tr>
+</table></p>
+
+<p align=right><button name=close href=close>Close</button></p>

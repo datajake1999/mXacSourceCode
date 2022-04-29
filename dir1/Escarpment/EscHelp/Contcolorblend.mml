@@ -1,0 +1,164 @@
+<pageinfo title="ColorBlend Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>ColorBlend Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The colorblend control is mostly used for filling the backgrounds of pages, tables, and cells. It accepts different
+	colors for its four corners and blends them together.
+	It can also be used to generate horizontal line separators
+	with a color fade from one end to the other.
+</p>
+
+<colorblend width=100% height=12 lcolor=#ff0000 rcolor=#0000ff/>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>bcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff bcolor=#80ffff/>
+			Changes the color of the two bottom corners.
+			<p/>
+			Example: This ColorBlend has bcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>color</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff/>
+			Changes the color of all four corners at once.
+			<p/>
+			Example: This ColorBlend has color=#8080ff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>href</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff href="http://www.mxac.com.au"/>
+			Specifies where the link goes to. If this begins with "http:", "https:", or "email:" the link will
+			connect to the word wide web. Otherwise, the link will send an ESCM_LINK message
+			to the current page.
+			<p/>
+			If "href" is not specified then the user cannot click on the ColorBlend control.
+			<p/>
+			Example: This ColorBlend background has href="http://www.mxac.com.au".
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff lcolor=#80ffff/>
+			Changes the color of the two left corners.
+			<p/>
+			Example: This ColorBlend has lcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>llcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff llcolor=#80ffff/>
+			Changes the color of the lower-left corner.
+			<p/>
+			Example: This ColorBlend has llcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>lrcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff lrcolor=#80ffff/>
+			Changes the color of the lower-right corner.
+			<p/>
+			Example: This ColorBlend has lrcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>rcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff rcolor=#80ffff/>
+			Changes the color of the two right corners.
+			<p/>
+			Example: This ColorBlend has rcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>tcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff tcolor=#80ffff/>
+			Changes the color of the two top corners.
+			<p/>
+			Example: This ColorBlend has tcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>transparent</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff transparent=0.5/>
+			Blend the color with the background, from 0.0 (opaque and default) to
+			1.0 (transparent).
+			<p/>
+			Example: This ColorBlend has transparent=0.5.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>ulcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff ulcolor=#80ffff/>
+			Changes the color of the upper-left corner.
+			<p/>
+			Example: This ColorBlend has ulcolor=#80ffff.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>urcolor</xTd2>
+		<xTd3>
+			<colorblend posn=background color=#8080ff urcolor=#80ffff/>
+			Changes the color of the upper-right corner.
+			<p/>
+			Example: This ColorBlend has urcolor=#80ffff.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The colorblend control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	ColorBlend controls don't have any control-specific messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	ColorBlend controls don't have any control-specific notifications.
+</p>
+
+

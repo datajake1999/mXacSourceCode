@@ -1,0 +1,115 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Change the menu"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<!xuparrow>
+	<image bmpresource=154 border=0 transparent=true MACROATTRIBUTE=1>
+		<xhoverhelpshort>Moves the menut item up one slot.</xhoverhelpshort>
+	</image>
+</xuparrow>
+
+<!xdownarrow>
+	<image bmpresource=155 border=0 transparent=true MACROATTRIBUTE=1>
+		<xhoverhelpshort>Moves the menu item down one slot.</xhoverhelpshort>
+	</image>
+</xdownarrow>
+
+<!xXBitmap>
+	<image bmpresource=237 border=0 transparent=true MACROATTRIBUTE=1>
+		<xhoverhelpshort>Deletes the menu item.</xhoverhelpshort>
+	</image>
+</xXBitmap>
+
+<!xspacearrow>
+	<image bmpresource=156 border=0 transparent=true/>
+</xspacearrow>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Change the menu
+</xPageTitle>
+
+<p>
+	Use this page to rearrange the Dragonfly menu. Click on a menu item to change its name
+	or accelerator, or use the up/down arrows to move it in the menu, or press the X to delete
+	the menu item. (The first menu item is also the first displayed when Dragonfly starts up.)
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+
+<null>
+	<<<$MENULIST>>>
+</null>
+
+<xSectionTitle>Add menu items</xSectionTitle>
+
+<p>
+	To add a menu item that pulls up a specific page: Switch to the page now and press the "Add
+	to menu" button at the bottom of the page.
+</p>
+
+
+<xChoiceButton name=addnewmeeting>
+	<bold>Add an "Add meeting" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for information about a meeting and add
+	it to your list.
+</xChoiceButton>
+
+<xChoiceButton name=addnewcall>
+	<bold>Add an "Schedule call" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for information about a scheduled call and add
+	it to your list.
+</xChoiceButton>
+
+<xChoiceButton name=addnewnote>
+	<bold>Add an "Add note" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for a new note to add.
+</xChoiceButton>
+
+<xChoiceButton name=addnewperson>
+	<bold>Add an "Add person" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for information about a new person or business and add
+	them to your address book.
+</xChoiceButton>
+
+<xChoiceButton name=addnewreminder>
+	<bold>Add an "Add reminder" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for information about a reminder and
+	add it to your list.
+</xChoiceButton>
+
+<xChoiceButton name=addnewtask>
+	<bold>Add an "Add task" menu item</bold>
+	<br/>
+	Selecting this menu item will ask you for information about a task and add
+	it to your list.
+</xChoiceButton>
+
+<xChoiceButton name=addblank>
+	<bold>Add a "blank" menu item</bold>
+	<br/>
+	Provides an empty spacer so you can arrange your menus.
+</xChoiceButton>
+
+<xChoiceButton name=addincomingcall>
+	<bold>Add an "Incoming call" menu item</bold>
+	<br/>
+	This menu item allows you to quickly take notes on an incoming phone call.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton name=defaultmenu>
+	<bold>Restore the original menu</bold>
+	<br/>
+	Change the menu back to the default arrangement for new Dragonfly users.
+</xChoiceButton>
+

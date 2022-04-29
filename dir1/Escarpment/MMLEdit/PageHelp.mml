@@ -1,0 +1,175 @@
+<pageinfo title="Help"/>
+
+<!xHeader>
+	<p align=center><hr width=80% style=wave color=#808080/></p>
+	<p MACROATTRIBUTE=1><big><bold>
+		<?MacroContent?>
+	</bold></big></p>
+</xHeader>
+
+
+<xHeader>
+	Getting Started
+</xHeader>
+<p>
+	<bold>MMLEdit.exe</bold> is a sample application provided in the Escarpment SDK.
+	It allows you to edit <bold>MML Documents</bold> and test them out before you include them in your
+	application. It also provides a sample for the SDK.
+</p>
+
+<p><italic>
+	Note: If you don't know what a <bold>MML Document</bold> is you should read the documentation
+	provided in the Escarpment SDK. You can find this in the Escarpment.Exe application.
+</italic></p>
+
+<p>
+	To use MMLEdit.exe, you should:
+</p>
+<ol color=#000080>
+	<li>
+		Open an existing MML document... (You can always start with a new one if you want.)
+	</li>
+	<li>
+		Move the mouse over the "File" menu and select "Open".
+	</li>
+	<li>
+		Find the .mml file you're looking for and press OK. There are plenty of MML files in the SDK
+		samples for you to look at.
+	</li>
+	<li>
+		The MML Document will appear in the main window's edit control. You can edit it there if you wish.
+	</li>
+	<li>
+		To see what the MML Document looks like, select the "MML" menu and under that, choose "Test".
+		You should see the rendered MML. When you close the window MMLEdit will tell you what
+		the MML Document returned.
+	</li>
+	<p>
+		If you get an error when you choose "Test" then you may either need to correct a typo in the
+		document, or you may need to specify resource maps for images and other MML documents
+		that are included by the current MML Document. See below.
+	</p>
+</ol>
+
+
+<xHeader>
+	Window Appearance
+</xHeader>
+<p>
+	When you create an Escarpment window in C++ with "CEscWindow.Init()" you have the options of
+	specifying display flags that affect the appearance of the window. You can choose to show or hide the
+	title bar scroll bar, and turn on/off other features. (For a complete list of flags please see the Escarpment
+	documentation in Escarpment.exe.)
+</p>
+<p>
+	The "Window Appearance" menu item under "MML" lets you specify these flags for MMLEdit, so that when
+	you select "Test", you will see the page just like your application will display it.
+</p>
+
+<xHeader>
+	Resource Mapping
+</xHeader>
+<p>
+	Many MML files refer to data outside of the MML document. This data is usually one of the following:
+</p>
+<ul type=pointer color=#000080>
+	<li>
+		<bold>JPEG images</bold> - Normally these are included in your application's resource data, but they may
+		also be loaded from disk when the MML Document is parsed.
+	</li>
+	<li>
+		<bold>Bitmap images</bold> - Normally these are included in your application's resource data, but they may
+		also be loaded from disk when the MML Document is parsed.
+	</li>
+	<li>
+		<bold>Other MML Documents</bold> - Many MML documents "include" other documents to provide a
+		consistent look and feel throughout the entire application. Files are included through the &lt;?Include?&gt;
+		tag or the &lt;?Template?&gt; tag. For more details, please see the MML Documentation.
+	</li>
+</ul>
+
+<p>
+	Much of the referred data is supposed to appear in the application's resource data. Because MMLEdit.exe
+	doesn't have those resources, MML pages that include resource data will fail to load unless you specifically
+	tell MMLEdit to "fake out" the system and pretend that it owns those resources.
+</p>
+
+<p>
+	To tell MMLEdit to simulate resources:
+</p>
+<ol color=#000080>
+	<li>
+		Select either the "MML Resources", "JPEG Resources", or "Bitmap Resources" menu items under "MML".
+		A dialog box will appear.
+	</li>
+	<li>
+		Type the resource ID under "Resource Number".
+	</li>
+	<li>
+		Type the file to load the data from under "File". This must either be a .mml, .jpg, or .bmp file.
+	</li>
+	<li>
+		Press "Add Map".
+	</li>
+	<li>
+		Verify that your mapping has been added to the list and close the dialog. When you next text your MML Document that
+		includes the resource, it should work.
+	</li>
+</ol>
+
+<p><italic><font color=#004000>
+	Note: Resource maps are saved to disk so that the same list will be available the next time you
+	run MMLEdit.
+</font></italic></p>
+
+
+
+<xHeader>
+	Substitutions
+</xHeader>
+<p>
+	Many MML files include text substitutions within the MML. These appear as <bold>&lt;&lt;&lt;SUBSTITUTION&gt;&gt;&gt;</bold>
+	or <bold>&lt;&lt;&lt;$SUBSTITUTION&gt;&gt;&gt;</bold>. These substitutions are designed to be changed
+	at run-time.
+</p>
+
+<p>
+	For example: You might have a substition <bold>Hello &lt;&lt;&lt;USERNAME&gt;&gt;&gt;, how are you?</bold> so that you can
+	replace the user's name in the page.
+</p>
+<p>
+	To tell MMLEdit what strings should be substituted during a substitution:
+</p>
+<ol color=#000080>
+	<li>
+		Select either the "Substitutions" menu item under "MML".
+		A dialog box will appear.
+	</li>
+	<li>
+		Type in the substitution key under "Substitution Key." In this example, it would be "USERNAME".
+	</li>
+	<li>
+		Type in the test string under "Substitution String." In this example, it might be "Fred Smith".
+	</li>
+	<li>
+		Press "Add Substitution".
+	</li>
+	<li>
+		Verify that your substitution has been added to the list and close the dialog. Test your MML with the new
+		substitution.
+	</li>
+</ol>
+
+<p><italic><font color=#004000>
+	Note: Substitutions are saved to disk so that the same list will be available the next time you
+	run MMLEdit.
+</font></italic></p>
+
+
+<xHeader>
+	Questions
+</xHeader>
+<p>
+	If you have any other questions please refer to the Escarpment documentation in Escarpment.exe. Or, if it's
+	not covered there, send me E-mail at <a href=mailto:MikeRozak@bigpond.com>MikeRozak@bigpond.com</a>.
+</p>

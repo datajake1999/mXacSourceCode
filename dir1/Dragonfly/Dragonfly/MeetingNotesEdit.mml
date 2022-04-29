@@ -1,0 +1,167 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Take notes on a meeting" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=222/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Take notes on a meeting
+</xPageTitle>
+
+<xbr/>
+
+<br>
+	Type you meeting notes in here:
+</br>
+
+<p align=center>
+	<edit name=summary defcontrol=true width=80% height=30% multiline=true wordwrap=true maxchars=10000 vscroll=editscroll/>
+	<scrollbar orient=vert name=editscroll height=30%/>
+</p>
+
+<xtableclear valign=top>
+<tr>
+<td>
+<Button style=righttriangle name=actionself>
+	<bold>Add an action item for yourself</bold>
+	<xhoverhelp>
+		Press this if you accept an action item.
+		After answering a few questions about the action item, the
+		information will be pasted into the meeting notes, and task created for you so that
+		you'll remember to do the action item.
+	</xhoverhelp>
+</Button>
+</td>
+<td>
+<Button style=righttriangle name=actionother>
+	<bold>Add an action item for someone else</bold>
+	<xhoverhelp>
+		Press this if an action item gets accepted by someone (other than yourself).
+		After answering a few questions about the action item, the
+		information will be pasted into the meeting notes, and a reminder created for you so that
+		you'll remember to follow up on the action item.
+	</xhoverhelp>
+</Button>
+</td>
+</tr>
+<tr>
+	<td>
+		<Button style=righttriangle name=addmeeting>
+			<bold>Add another meeting</bold>
+			<xhoverhelp>
+				Unfortunately, sometimes meetings spawn other meetings.
+				Click this to add a new meeting to your schedule.
+			</xhoverhelp>
+		</Button>
+	</td>
+	<td>
+		<Button style=righttriangle name=schedulecall>
+			<bold>Schedule a call</bold>
+			<xhoverhelp>
+				Click this to schedule a call with this person or someone else.
+			</xhoverhelp>
+		</Button>
+	</td>
+</tr>
+</xtableclear>
+
+<xbr/>
+
+<xChoiceButton name=completed>
+	<bold>The meeting is finished</bold>
+	<br/>
+	Click this when the meeting is all done. It will note the completion time
+	and exit the page.
+</xChoiceButton>
+
+<xChoiceButton href=r:109>
+	<bold>It's not done yet</bold>
+	<br/>
+	If you want to look something up in Dragonfly you can click this. The meeting
+	completion time won't be set. You can return the the page by using "Back".
+</xChoiceButton>
+
+
+<xbr/>
+<xsectiontitle>Meeting information</xsectiontitle>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			One-line summary of the meeting:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Full description of the meeting:
+			<p/>
+			<small>
+				Enter notes about the meeting futher down the page.
+			</small>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=1024 wordwrap=true multiline=true height=50%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Meeting location:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=meetingloc/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Date of the meeting:
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Meeting started:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No start time set" width=100% name=meetingstart/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Meeting finished:
+		</xtdLeft>
+		<xtdright>
+			<bold><time blank="No end time set" width=100% name=meetingend/></bold>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			Attendees:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=attend1 width=50%/>
+			<xFilterPersonBusiness name=attend2 width=50%/>
+			<xFilterPersonBusiness name=attend3 width=50%/>
+			<xFilterPersonBusiness name=attend4 width=50%/>
+			<xFilterPersonBusiness name=attend5 width=50%/>
+			<xFilterPersonBusiness name=attend6 width=50%/>
+			<xFilterPersonBusiness name=attend7 width=50%/>
+			<xFilterPersonBusiness name=attend8 width=50%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>(This causes a link to appear in the journal category.
+			If you run a small business, you can use this
+			to bill your time for attending the meeting.)</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+</xTableClear>
+

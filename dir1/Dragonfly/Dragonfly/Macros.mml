@@ -1,0 +1,355 @@
+<!xNotFunctional>
+	<p><table width=100% bgcolor=#ffff00>
+		<tr>
+			<td>
+				<align align=center><bold><big>Under Construction</big></bold><br/>
+				This page is not functional. It shows a place-holder sample UI at the moment.</align>
+			</td>
+		</tr>
+	</table></p>
+</xNotFunctional>
+
+<!xListTable>
+	<table width=100% MACROATTRIBUTE=1>
+		<<<$IFCOLOR>>><colorblend posn=background tcolor=#c0ffc0 bcolor=#a0e0a0/><<<$ENDIFCOLOR>>>
+		<?MacroContent?>
+	</table>
+	<p/>
+</xListTable>
+
+<!xTaskProject>
+	<tr>
+		<td>
+			<bold>Project: <?MACROCONTENT?>
+			</bold>
+		</td>
+	</tr>
+</xTaskProject>
+
+<!xTask>
+	<tr>
+		<td width=10%></td>
+		<td width=90%>
+			<a MACROATTRIBUTE=1><?MACROCONTENT?></a>
+		</td>
+	</tr>
+</xTask>
+
+
+<!xMeetingTime>
+	<td width=30%>
+		<small><?MACROCONTENT?></small>
+	</td>
+</xMeetingTime>
+
+<!xMeetingInfo>
+	<td width=70%><a MACROATTRIBUTE=1>
+		<?MACROCONTENT?>
+	</a></td>
+</xMeetingInfo>
+
+<!xChoiceButton>
+	<Button valign=top MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Button><br/>
+</xChoiceButton>
+
+
+<!xQuickFillButton>
+	<button MACROATTRIBUTE=1 style=righttriangle>
+		<?MacroContent?>
+	</button>
+	<br/>
+</xQuickFillButton>
+
+
+<!xHoverHelp>
+	<HoverHelp MACROATTRIBUTE=1><small>
+		<<<$IFCOLOR>>><colorblend posn=background lcolor=#f0ffe0 rcolor=#e0f0c0/><<<$ENDIFCOLOR>>>
+		<?MacroContent?>
+	</small></HoverHelp>
+</xHoverHelp>
+
+<!xHoverHelpShort>
+	<xHoverHelp hresize=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</xHoverHelp>
+</xHoverHelpShort>
+
+<!xMyEmail>
+	<a href="mailto:Mike@mXac.com.au">
+		Mike@mXac.com.au<keyword score=128 words="mike rozak"/>
+		<xHoverHelp>
+			Click this to send me E-mail.
+			Please try to be specific in E-mail so I don't have to E-mail
+			back asking for more information. Thanks.
+			</xHoverHelp>
+	</a>
+</xMyEmail>
+
+<!xMoreInfo>
+	<button style=rightarrow posn=edgeright MACROATTRIBUTE=1>
+		More info
+	</button>
+</xMoreInfo>
+
+<!xPageTitle>
+	<p align=right><big><big><big><bold><keyword score=128>
+		<?MacroContent?>
+	</keyword></bold></big></big></big></p>
+</xPageTitle>
+
+<!xSectionTitle>
+	<p> </p>
+	<p MACROATTRIBUTE=1><big><bold><section><keyword score=96>
+		<?MacroContent?>
+	</keyword></section></bold></big></p>
+</xSectionTitle>
+
+<!xTip>
+	<p><blockquote><font color=#004000>
+		<bold>Tip:</bold> <?MacroContent?>
+	</font></blockquote></p>
+</xTip>
+
+<!xUl>
+	<ul type=pointer>
+		<?MacroContent?>
+	</ul>
+</xUl>
+
+<!xMainMenuButton>
+   <button showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <font color=#8080ff><big><?MACROCONTENT?></big></font>
+   </button>
+</xMainMenuButton>
+
+<!xMainMenuText>
+	<MenuText>
+		<big><big><font color=#c080ff><?MACROCONTENT?></font></big></big>
+	</MenuText>
+</xMainMenuText>
+
+<!xMainMenuContents>
+	<MenuContents>
+		<pageinfo lrmargin=0 tbmargin=0/>
+		<colorblend tcolor=#000000 bcolor=#404080 posn=background/>
+		<?MACROCONTENT?>
+	</MenuContents>
+</xMainMenuContents>
+
+<!xPopupMenu>
+	<menu appear=right buttonheight=24 buttonwidth=24 width=200>
+		<?MACROCONTENT?>
+	</menu>
+</xPopupMenu>
+
+<!xMenuButton>
+   <button showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <?MACROCONTENT?>
+   </button><br/>
+</xMenuButton>
+
+<!xMenuSeperator>
+   <hr width=15%/><br/>
+</xMenuSeperator>
+
+<!xMenuText>
+   <menutext>
+      <colorblend color=#8080ff posn=background/>
+      <?MACROCONTENT?>
+   </menutext>
+</xMenuText>
+
+<!xMenuContents>
+   <menucontents>
+      <pageinfo lrmargin=0 tbmargin=0/>
+      <colorblend tcolor=#8080ff bcolor=#6060d0 posn=background/>
+      <?MACROCONTENT?>
+   </menucontents>
+</xMenuContents>
+
+
+<!xTableCenter>
+	<p align=center> <table width=90% MACROATTRIBUTE=1>
+		<<<$IFCOLOR>>><colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/><<<$ENDIFCOLOR>>>
+		<?MacroContent?>
+	</table></p>
+</xTableCenter>
+<!xDefinition>
+	<xTableCenter macroattribute=1><tr><td>
+		<<<$IFCOLOR>>><colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/><<<$ENDIFCOLOR>>>
+		<align align=left><?MacroContent?></align>
+	</td></tr></xTableCenter>
+</xDefinition>
+
+<!xTip>
+	<p><blockquote><font color=#004000>
+		<bold>Tip:</bold> <?MacroContent?>
+	</font></blockquote></p>
+</xTip>
+
+<!xbr>
+	<p align=center>
+		<colorblend width=80% height=8 lcolor=#80ff80 rcolor=#8080ff/>
+	</p>
+</xbr>
+
+<!xhr2>
+	<p/>
+	<align align=center>
+		<hr style=star1 width=50%/>
+	</align>
+	<p/>
+</xhr2>
+
+<!xEditOneLine>
+	<p align=right>
+		<edit MACROATTRIBUTE=1 maxchars=128 selall=true width=75% wordwrap=false>
+      <?MACROCONTENT?>
+		</edit>
+	</p>
+</xEditOneLine>
+
+<!xEditMultiLine>
+	<p align=right>
+		<edit MACROATTRIBUTE=1 width=75% wordwrap=true multiline=true>
+      <?MACROCONTENT?>
+		</edit>
+	</p>
+</xEditMultiLine>
+
+<!xTableClear>
+	<table width=100% border=0 innerlines=0 valign=center MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</table>
+	<p/>
+</xTableClear>
+
+<!xTDLeft>
+	<td width=33% MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</td>
+</xTDLeft>
+
+<!xTDRight>
+	<td width=66% MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</td>
+</xTDRight>
+
+<!xEditInTable>
+	<edit MACROATTRIBUTE=1 maxchars=64 selall=true width=100% wordwrap=false>
+     <?MACROCONTENT?>
+	</edit>
+</xEditInTable>
+
+<!xEditPhoneNumber>
+	<xEditInTable MACROATTRIBUTE=1>
+		<?Macrocontent?>
+		<xHoverHelp>
+			Type in the phone number as you would dial it from your phone.
+			You can also type in the "international format" in the form,
+			<bold>+CC (AC) NUMBER</bold> where CC is the country code,
+			AC is the area/city code, and NUMBER is the local number.
+		</xHoverHelp>
+	</xEditInTable>
+</xEditPhoneNumber>
+
+<!xFilterPerson>
+	<bold><filteredlist width=100% cbheight=150 blank="No one specified" additem="Add someone" listname=person sort=true MACROATTRIBUTE=1/></bold>
+</xFilterPerson>
+
+<!xFilterBusiness>
+	<bold><filteredlist width=100% cbheight=150 blank="No business specified" additem="Add a business" listname=business sort=true MACROATTRIBUTE=1>
+		<?Macrocontent?>
+	</filteredlist></bold>
+</xFilterBusiness>
+
+<!xFilterPersonBusiness>
+	<bold><filteredlist width=100% cbheight=150 blank="No one specified" additem="Add a person or business" listname=personbusiness sort=true MACROATTRIBUTE=1/></bold>
+</xFilterPersonBusiness>
+
+<!xFilterJournal>
+	<bold><filteredlist width=100% cbheight=150 blank="Not linked to a journal category" additem="Add category" listname=journal sort=true MACROATTRIBUTE=1>
+		<?Macrocontent?>
+	</filteredlist></bold>
+</xFilterJournal>
+
+<!xFilterBill>
+	<bold><filteredlist width=100% cbheight=150 blank="Not billed" additem="Add a new billing account" listname=bill sort=true MACROATTRIBUTE=1/></bold>
+</xFilterBill>
+
+<!xFilterProjectTask>
+	<bold><filteredlist width=100% cbheight=150 blank="No task" additem="" listname=projecttask sort=false MACROATTRIBUTE=1/></bold>
+</xFilterProjectTask>
+
+<!xFilterSubProject>
+	<bold><filteredlist width=100% cbheight=150 blank="No subproject" additem="Add a new subproject" listname=subproject sort=true MACROATTRIBUTE=1/></bold>
+</xFilterSubProject>
+
+<!xtrmonth>
+	<tr>
+		<td width=100% lrmargin=0 tbmargin=0>
+			<table width=100% border=0 innerlines=0 tbmargin=1>
+				<?MacroContent?>
+			</table>
+		</td>
+	</tr>
+</xtrmonth>
+
+
+<!xtdTaskNoLink>
+	<td width=50%>
+		<small>
+			<?MacroContent?>
+		</small>
+	</td>
+</xtdTaskNoLink>
+
+<!xtdTask>
+	<xtdtasknolink>
+		<a MACROATTRIBUTE=1>
+			<?MacroContent?>
+		</a>
+	</xtdtasknolink>
+</xtdTask>
+
+<!xtdCompleted>
+	<td width=25%>
+		<small><?MacroContent?></small>
+	</td>
+</xtdCompleted>
+
+<!xtdSubproject>
+	<td width=25%>
+		<small><?MacroContent?></small>
+	</td>
+</xtdSubproject>
+
+<!xMeetingDate>
+	<tr><td align=right><big>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#20a020 bcolor=#60d060/><<<$ENDIFCOLOR>>>
+	<bold>
+		<?MacroContent?>
+	</bold></big></td></tr>
+</xMeetingDate>
+
+<!xtrHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtrheader>
+
+<!xComboAlarm>
+	<bold><combobox cbheight=150 width=100% MACROATTRIBUTE=1>
+		<elem name=0>No alarm</elem>
+		<elem name=5>5 minutes before</elem>
+		<elem name=10>10 minutes before</elem>
+		<elem name=15>15 minutes before</elem>
+		<elem name=30>30 minutes before</elem>
+		<elem name=60>1 hour before</elem>
+		<elem name=1440>1 day before</elem>
+		<elem name=10080>1 week before</elem>
+	</combobox></bold>
+</xComboAlarm>

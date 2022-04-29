@@ -1,0 +1,9 @@
+appname=Dragonfly
+selfexe=z:\mxacweb\dragonfly.exe
+icon=dragonfly.exe,Dragonfly
+file=z:\dragonfly\dragonfly\release\dragonfly.exe
+file=z:\escarpment\escarpment\release\escarpment.dll
+file=z:\bin\msvcr80.dll
+file=z:\bin\msvcp80.dll
+file=z:\bin\msvcm80.dll
+file=z:\bin\Microsoft.VC80.CRT.manifest

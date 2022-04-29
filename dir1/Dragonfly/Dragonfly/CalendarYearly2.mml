@@ -1,0 +1,110 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Annual calendar (by weeks)"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<<<$IFNOTPRINT>>>
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Annual calendar (by weeks)
+</xPageTitle>
+
+<p>
+	This page shows you the calendar for an entire year. Clicking on a date will take
+	you to the <a href=r:258>Combo view</a> so you can see what tasks, meetings, etc.
+	you have for the day.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<!xDayOfWeek>
+	<td width=10 bgcolor=#004000>
+		<small><font color=#ffffff><?MacroContent?></font></small>
+	</td>
+</xDayOfWeek>
+
+<!xDayOfWeek2>
+	<td width=10 bgcolor=#004000 align=center valign=center>
+		<big><font color=#ffffff><?MacroContent?></font></big>
+	</td>
+</xDayOfWeek2>
+
+<!xWeekNum>
+	<td width=10 bgcolor=#004000 MACROATTRIBUTE=1 align=center valign=center>
+		<font color=#c0c0c0><italic><?Macrocontent?></italic></font>
+	</td>
+</xWeekNum>
+
+<!xDay>
+	<td width=10 height=15% MACROATTRIBUTE=1>
+		<small><?Macrocontent?></small>
+	</td>
+</xDay>
+
+<!xDay2>
+	<td width=10 height=10% MACROATTRIBUTE=1>
+		<small><?Macrocontent?></small>
+	</td>
+</xDay2>
+<!xdaynull>
+	<xday bgcolor=#c0c0c0/>
+</xdaynull>
+
+<!xdaynull2>
+	<xday2 bgcolor=#c0c0c0/>
+</xdaynull2>
+
+<p align=right><bold><big>
+	<edit name=date maxchars=5 width=25% text=2001/>
+</big></bold></p>
+
+
+<null>
+	<<<$MONTH2>>>
+</null>
+<p/>
+<p align=center><small><small>
+	Fine print: The listed holidays may be wrong. Make sure to check with your employer
+	before taking the day off.
+</small></small></p>
+
+
+<<<$IFNOTPRINT>>>
+<xbr/>
+
+<xChoiceButton checkbox=true style=x name=restofyear>
+	<bold>Only show the rest of the year</bold>
+	<br/>
+	If this is checked, the calendar will display the current month onwards,
+	skipping months that have already gone by.
+</xChoiceButton>
+
+<xChoiceButton href=r:237>
+	<bold>Holidays</bold>
+	<br/>
+	Specify what public holidays should appear on the calendar.
+</xChoiceButton>
+
+<xChoiceButton href=r:280>
+	<bold>Special days</bold>
+	<br/>
+	This allows you to mark special days on your calendar such as anniversaries,
+	holidays not automatically provided by Dragonfly, and birthdays.
+</xChoiceButton>
+
+<xChoiceButton name=daysfromtoday>
+	<bold>How many days from now</bold>
+	<br/>
+	Press this button and then click on a day in the calendar. Dragonfly will tell you
+	how many days from now the date is.
+</xChoiceButton>
+
+<xChoiceButton name=daysfromdate>
+	<bold>How many days between two dates</bold>
+	<br/>
+	Press this button, click on the first day in the calendar, and then the second.
+	Dragonfly will tell you how many days between the two days.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

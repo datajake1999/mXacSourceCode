@@ -1,0 +1,104 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Backup Dragonfly files"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Backup Dragonfly files
+</xPageTitle>
+
+<p>
+	<<<$BACKUPWARNING>>> You should backup your Dragonfly files regularly. I typically back up once a month.
+	The reasons for this are:
+</p>
+
+<ol>
+	<li>
+		Your computer might get lost or stolen.
+	</li>
+	<li>
+		The data on your hard disk might get damaged.
+	</li>
+	<li>
+		There might be a bug in Dragonfly that accidentally destroys your
+		data. Just as a precaution, backup your Dragonfly
+		file <bold>before upgrading to a new version</bold>.
+	</li>
+</ol>
+
+<p>
+	Because Dragonfly files are so large, you probably won't be able to back them
+	up to a floppy disk. You can back up your files <bold>to your hard disk</bold> if
+	you're just worried about case 3. Or, you can <bold>burn a CD-ROM</bold> or copy
+	the files to a <bold>Zip disk</bold> (or other large storage device).
+</p>
+
+<p>
+	To backup your Dragonfly files to your local <bold>hard drive</bold> or a <bold>ZIP disk</bold>, type
+	in the directory below, and press the Backup button.
+</p>
+
+<p>
+	<button href=backup>Backup to</button> <edit maxchars=128 name=backupdir width=60%/>
+</p>
+
+<xSectionTitle>
+	To backup Dragonfly files to a CD-ROM:
+</xSectionTitle>
+
+<ol>
+	<li>
+		Click <a href=showdir>this</a> to bring up the directory containing the 
+		Dragonfly directory, <bold><<<DRAGONFLYDIRSUB>>></bold>.
+	</li>
+	<li>
+		<bold>Close Dragonfly</bold> just to make sure everything is saved and that the data is not
+		changed during the backup process.
+	</li>
+	<li>
+		Burn <bold><<<DRAGONFLYDIR>>></bold> and all its subdirectories using your CD-ROM
+		burner software.
+	</li>
+</ol>
+
+<p>
+	When you want to restore a backup, choose the <bold>"Load a user from disk or backup"</bold> option
+	at the bottom of the log-on page.
+</p>
+
+<xbr/>
+
+<p>
+	<bold>Tip:</bold> If you want to move your files to a different directory, backup your
+	files to the new directory, use the <bold>"Load a user from disk or backup"</bold> option
+	at the bottom of the log-on page, and then delete the data in the old directory.
+</p>
+
+<xDefinition>
+	<bold>FYI</bold> - Dragonfly writes several files to disk, not just one. A typical
+	Dragonfly user directory will contain:
+	<p/>
+	<xul>
+		<li>
+			<bold>Dragonfly.dfd</bold> - <italic>Basic user information.</italic>
+		</li>
+		<li>
+			<bold>Search.xsr</bold> - <italic>Search index.</italic>
+		</li>
+		<li>
+			<bold>Dragonfly0</bold> - <italic>Sub-directory</italic>
+		</li>
+		<xul>
+			<li><bold>Dragonfly0.df2</bold> - <italic>Database entries</italic></li>
+			<li><bold>Dragonfly1.df2</bold> - <italic>Database entries</italic></li>
+			<li><bold>Dragonfly2.df2</bold> - <italic>Database entries</italic></li>
+			<li><bold>Dragonfly</bold><italic>XXX</italic><bold>.df2</bold> - <italic>Database entries</italic></li>
+		</xul>
+		<li>
+			<bold>Dragonfly1</bold> - <italic>Sub-directory containing more DragonlyXXX.df2 files.</italic>
+		</li>
+		<li>
+			<bold>Dragonfly</bold><italic>XXX</italic> - <italic>Sub-directories containing more DragonlyXXX.df2 files.</italic>
+		</li>
+	</xul>
+</xDefinition>

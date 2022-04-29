@@ -1,0 +1,82 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Quickly add a new person" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add person</font>
+		<xhoverhelp>
+			Press this to add the person to your address book.
+			Make sure to type in their name first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Quickly add a new person
+</xPageTitle>
+
+<p>
+	To add a new person to your address book, type in their name and press "Add person."
+	You should spend some time later and fill in more information about the person.
+</p>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Last name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=lastname defcontrol=true/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			First name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=firstname/></xtdright>
+	</tr>
+</xtableclear>
+
+
+<xtableclear>
+	<tr>
+		<xtdleft>Home phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=homephone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Work phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=workphone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Mobile phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=mobilephone/></xtdright>
+	</tr>
+</xtableclear>
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add person</font>
+		<xhoverhelp>
+			Press this to add the person to your address book.
+			Make sure to type in their name first.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

@@ -1,0 +1,53 @@
+<<<$TEMPLATE2>>>
+<?Include resource=201?>
+<PageInfo index=false title="Delete a user"/>
+
+<xPageTitle>
+	Delete a user
+</xPageTitle>
+
+<p>
+	Using this page you can delete one of the user accounts you've created.
+</p>
+
+<xbr/>
+
+<xtablecenter>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#c0ffc0 bcolor=#a0e0a0/><<<$ENDIFCOLOR>>>
+	<xtrheader>Delete</xtrheader>
+	<tr><td>
+<p>
+	Select the user you wish to delete and press <bold>Delete</bold>.
+</p>
+
+<p align=center>
+	<combobox name=user cursel=0 width=33% cbheight=75 sort=false/>
+</p>
+
+<p align=right>
+			<button href=next>
+				Delete
+				<xHoverHelp>
+					Press this to delete the selected user.
+				</xHoverHelp>
+			</button>
+</p>
+
+</td></tr></xtablecenter>
+<xbr/>
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<td width=50% align=left>
+			<button style=leftarrow href=back>
+				Back
+				<xHoverHelpShort>
+					Go back to the previous page.
+				</xHoverHelpShort>
+			</button>
+		</td>
+		<td width=50%>
+		</td>
+	</tr>
+</table>
+

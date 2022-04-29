@@ -1,0 +1,83 @@
+
+<xbr/>
+
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Business name:
+			<br/>
+			<font color=#800000>(required)</font>
+		</xtdleft>
+		<xtdright><xEditInTable name=lastname defcontrol=true/></xtdright>
+	</tr>
+</xtableclear>
+
+<xbr/>
+
+<xSectionTitle>Contact Information</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Primary contact:
+			<br/><italic>(The person you usually talk to.)</italic>
+		</xtdleft>
+		<xtdright><xEditInTable name=nickname/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Phone number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=workphone/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>FAX number:</xtdleft>
+		<xtdright><xEditPhoneNumber name=faxphone/></xtdright>
+	</tr>
+</xtableclear>
+
+<xtableclear>
+	<tr>
+		<xtdleft>E-mail:</xtdleft>
+		<xtdright><xEditInTable name=businessemail/></xtdright>
+	</tr>
+	<tr>
+		<xtdleft>Web site:</xtdleft>
+		<xtdright><xEditInTable name=personalweb/></xtdright>
+	</tr>
+</xtableclear>
+
+<xtableclear>
+	<tr>
+		<xtdleft>Address:</xtdleft>
+		<xtdright><edit width=100% maxchars=256 multiline=true wordwrap=false name=workaddress/></xtdright>
+	</tr>
+</xtableclear>
+
+<xbr/>
+
+<xSectionTitle>Miscellaneous</xSectionTitle>
+
+<xtableclear>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<br/>
+			<small><italic>(If you link to a journal category then every time
+			you have a phone conversation or meeting with the business a record will be kept
+			in the specified category. If you run a small business, you can use this
+			to bill your time to the business.)</italic></small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+</xtableclear>
+
+<p>
+	Type any notes you may have about the business here:
+</p>
+
+<p>
+	<edit width=100% height=50% multiline=true wordwrap=true name=miscnotes/>
+</p>
+
+<xbr/>
+

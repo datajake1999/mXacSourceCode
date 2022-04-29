@@ -1,0 +1,35 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the People page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "People" page
+</xPageTitle>
+
+<p>
+	Dragonfly keeps a record of people that you come in contact with, accessible
+	through the "<a href=r:118>People</a>" page.
+</p>
+
+<p>
+	Ostensibly this is an <a href=r:142>address book</a> where you can store a list of all your contacts,
+	their phone numbers, E-mail names, and addresses. Dragonfly does this just
+	like any other PIM.
+</p>
+
+<p>
+	However, Dragonfly remembers every time you have any kind of contact with the person,
+	such as a <a href=r:117>phone call</a>, <a href=r:113>meeting</a>, or <a href=r:121>journal entry</a>. Then, at a later time, you
+	can <a href=r:141>look up</a> the person and see when, where, and how you've last interacted with them.
+	Personally, I often forget when I last talked to someone, so this feature comes
+	in very handy.
+</p>
+
+<p>
+	The address book is also connected to <a href=r:122>Memory Lane</a>, letting
+	you cross index memories you've had of the person.
+	As a result, some of the people in your address book may be old friends that you haven't
+	talked to in decades because you don't know where they live now. But you can still
+	keep a record just in case you manage to find them again.
+</p>

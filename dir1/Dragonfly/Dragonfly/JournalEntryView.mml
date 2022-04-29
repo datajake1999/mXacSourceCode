@@ -1,0 +1,62 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View a journal entry" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	<<<ENTRYNAME>>>
+	<br/>
+	<<<$CATEGORY>>>
+</xPageTitle>
+
+<xTableCenter innerlines=0>
+	<xtheader>Journal entry</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<JOURNALNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<<<$VALUES>>>
+	<tr>
+		<xlt>People mentioned:</xlt>
+		<xrt><<<$ATTENDEES>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Entry date/time:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+</xTableCenter>
+
+
+
+<xbr/>
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the journal entry.
+</xChoiceButton>
+
+

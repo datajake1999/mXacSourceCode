@@ -1,0 +1,41 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Phonecall log"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Phonecall log
+</xPageTitle>
+
+<p>
+	This shows you a list of all the phone calls you made
+	and received in the specified month.
+</p>
+
+<xbr/>
+
+<p align=right><big><big>
+	<date name=date enterday=false blank="No month specified" width=33%/>
+</big></big></p>
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xTableCenter>
+	<xtheader>Logged phone calls</xtheader>
+	<<<$LOG>>>
+</xtablecenter>

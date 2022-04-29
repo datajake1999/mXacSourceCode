@@ -1,0 +1,868 @@
+<!xChoiceButton>
+	<Button valign=top MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Button><br/>
+</xChoiceButton>
+
+<!xHoverHelp>
+	<HoverHelp MACROATTRIBUTE=1><small>
+		<colorblend posn=background lcolor=#f0ffe0 rcolor=#e0f0c0/>
+		<?MacroContent?>
+	</small></HoverHelp>
+</xHoverHelp>
+
+<!xHoverHelpShort>
+	<xHoverHelp hresize=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</xHoverHelp>
+</xHoverHelpShort>
+
+<!xMyEmail>
+	<a href="mailto:MikeRozak@bigpond.com">
+		MikeRozak@bigpond.com<keyword score=128 words="mike rozak"/>
+		<xHoverHelp>
+			Click this to send me E-mail.
+			Please try to be specific in E-mail so I don't have to E-mail
+			back asking for more information. Thanks.
+			</xHoverHelp>
+	</a>
+</xMyEmail>
+
+<!xPageTitle>
+	<p align=right><big><big><bold><keyword score=128>
+		<?MacroContent?>
+	</keyword></bold></big></big></p>
+</xPageTitle>
+
+<!xSectionTitle>
+	<p> </p>
+	<p MACROATTRIBUTE=1><big><bold><section><keyword score=96>
+		<?MacroContent?>
+	</keyword></section></bold></big></p>
+</xSectionTitle>
+
+<!xCodeInline>
+	<font face="courier new" color=#006000><small>
+		<?MacroContent?>
+	</small></font>
+</xCodeInline>
+
+<!xCode2>
+	<align parlinespacing=0 tab=16><xCodeInline>
+		<?MacroContent?>
+	</xCodeInline></align>
+</xCode2>
+
+<!xCode>
+	<blockquote><xcode2>
+		<?MacroContent?>
+	</xCode2></blockquote>
+	<br/>
+</xCode>
+
+<!xTableCenter>
+	<p align=center> <table width=90% MACROATTRIBUTE=1>
+		<colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/>
+		<?MacroContent?>
+	</table></p>
+</xTableCenter>
+
+<!xTd1>
+	<td width=20% MACROATTRIBUTE=1>
+		<align align=center><bold><small><?MacroContent?></small></bold></align>
+	</td>
+</xTd1>
+
+<!xTd2>
+	<td width=20% MACROATTRIBUTE=1>
+		<align align=center><bold><small><?MacroContent?></small></bold></align>
+	</td>
+</xTd2>
+
+<!xTd3>
+	<td width=60% MACROATTRIBUTE=1 valign=center>
+		<align align=left><?MacroContent?></align>
+	</td>
+</xTd3>
+
+<!xTableTitle1>
+	<xTd1 bgcolor=#004000 MACROATTRIBUTE=1 valign=center>
+		<align align=center><font color=#ffffff>
+			<?MacroContent?>
+		</font></align>
+	</xTd1>
+</xTableTitle1>
+
+<!xTableTitle2>
+	<xTd2 bgcolor=#004000 MACROATTRIBUTE=1 valign=center>
+		<align align=center><font color=#ffffff>
+			<?MacroContent?>
+		</font></align>
+	</xTd2>
+</xTableTitle2>
+
+<!xTableTitle3>
+	<xTd3 bgcolor=#004000 MACROATTRIBUTE=1>
+		<align align=center><font color=#ffffff><bold><small>
+			<?MacroContent?>
+		</small></bold></font></align>
+	</xTd3>
+</xTableTitle3>
+
+<!xTableAttributes>
+	<p>
+		Attributes:
+	</p>
+	<xTableCenter>
+		<tr>
+			<xTableTitle1>Type</xTableTitle1>
+			<xTableTitle2>Attribute</xTableTitle2>
+			<xTableTitle3>Description</xTableTitle3>
+		</tr>
+		<?MacroContent?>
+	</xTableCenter>
+</xTableAttributes>
+
+<!xTableStructure>
+	<xTableCenter>
+		<tr>
+			<xTableTitle1>Type</xTableTitle1>
+			<xTableTitle2>Element</xTableTitle2>
+			<xTableTitle3>Description</xTableTitle3>
+		</tr>
+		<?MacroContent?>
+	</xTableCenter>
+</xTableStructure>
+
+<!xTableParam>
+	<xTableCenter>
+		<tr>
+			<xTableTitle1>Type</xTableTitle1>
+			<xTableTitle2>Parameter</xTableTitle2>
+			<xTableTitle3>Description</xTableTitle3>
+		</tr>
+		<?MacroContent?>
+	</xTableCenter>
+</xTableParam>
+
+<!xVarPCEscControl>
+	<xTd1><a href=r:129>
+		PCEscControl
+		<xHoverHelpShort>
+			Pointer to an Escarpment control object, CEscControl.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPCEscControl>
+
+<!xVarPCEscPage>
+	<xTd1><a href=r:130>
+		PCEscPage
+		<xHoverHelpShort>
+			Pointer to an Escarpment page object, CEscPage.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPCEscPage>
+
+<!xVarPCEscWindow>
+	<xTd1><a href=r:131>
+		PCEscWindow
+		<xHoverHelpShort>
+			Pointer to an Escarpment window object, CEscWindow.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPCEscWindow>
+
+<!xVarESCPRINTINFO>
+	<xTd1><a href=r:131>
+		ESCPRINTINFO
+		<xHoverHelp>
+			Structure that contains details about how a MML page should be printed.
+			This includes the number of columns and tows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarESCPRINTINFO>
+
+<!xVarPCEscError>
+	<xTd1><a href=r:133>
+		PCEscError
+		<xHoverHelpShort>
+			Pointer to an Escarpment error-reporting object, CEscError.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPCEscError>
+
+<!xVarCMem>
+	<xTd1><a href=r:133>
+		CMem
+		<xHoverHelpShort>
+			An Escarpment utility C++ object used for memory storage.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarCMem>
+
+<!xVarCFontCache>
+	<xTd1><a href=r:133>
+		CFontCache
+		<xHoverHelp>
+			An Escarpment utility C++ object used for convenient font
+			creation and maintenence.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCFontCache>
+
+<!xVarPCFontCache>
+	<xTd1><a href=r:133>
+		PCFontCache
+		<xHoverHelp>
+			Pointer to an Escarpment utility C++ object used for convenient font
+			creation and maintenence.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCFontCache>
+
+<!xVarPCEscSearch>
+	<xTd1><a href=r:138>
+		PCEscSearch
+		<xHoverHelp>
+			Pointer to an Escarpment CEscSearch object.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCEscSearch>
+
+<!xVarPEscIndex>
+	<xTd1><a href=r:138>
+		PEscIndex
+		<xHoverHelp>
+			Pointer to a ESCINDEX structure containing indirect parameters for indexing.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPEscIndex>
+
+<!xVarPEscAdvancedSearch>
+	<xTd1><a href=r:138>
+		PEscAdvancedSearch
+		<xHoverHelp>
+			Pointer to a ESCADVANCEDSEARCH structure containing advanced search parameters.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPEscAdvancedSearch>
+
+<!xVarWCHAR>
+	<xTd1><a>
+		WCHAR
+		<xHoverHelpShort>
+			Unicode character. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarWCHAR>
+
+<!xVarBYTE>
+	<xTd1><a>
+		BYTE
+		<xHoverHelpShort>
+			Value from 0 to 255. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarBYTE>
+
+<!xVarPCOLORREF>
+	<xTd1><a>
+		PCOLORREF
+		<xHoverHelp>
+			Pointer to a 4-byte value storing the red, green, blue color. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCOLORREF>
+
+<!xVarCOLORREF>
+	<xTd1><a>
+		COLORREF
+		<xHoverHelp>
+			A 4-byte value storing the red, green, blue color. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCOLORREF>
+
+<!xVarLPARAM>
+	<xTd1><a>
+		LPARAM
+		<xHoverHelpShort>
+			4-byte unsigned value. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarLPARAM>
+
+<!xVarWPARAM>
+	<xTd1><a>
+		WPARAM
+		<xHoverHelpShort>
+			4-byte unsigned value. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarWPARAM>
+
+<!xVarPWSTR>
+	<xTd1><a>
+		PWSTR
+		<xHoverHelp>
+			Pointer to a NULL-terminated Unicode string. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPWSTR>
+
+<!xVarPSTR>
+	<xTd1><a>
+		PSTR
+		<xHoverHelp>
+			Pointer to a NULL-terminated ANSI string. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPSTR>
+
+<!xVarWORD>
+	<xTd1><a>
+		WORD
+		<xHoverHelpShort>
+			2-byte unsigned. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarWORD>
+
+<!xVarSHORT>
+	<xTd1><a>
+		SHORT
+		<xHoverHelpShort>
+			2-byte signed. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarSHORT>
+
+<!xVarHWND>
+	<xTd1><a>
+		HWND
+		<xHoverHelpShort>
+			Window handle. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarHWND>
+
+<!xVarHICON>
+	<xTd1><a>
+		HICON
+		<xHoverHelpShort>
+			Icon handle. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarHICON>
+
+<!xVarDWORD>
+	<xTd1><a>
+		DWORD
+		<xHoverHelpShort>
+			4-byte unsigned. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarDWORD>
+
+<!xVarPDWORD>
+	<xTd1><a>
+		PDWORD
+		<xHoverHelpShort>
+			Pointer to a 4-byte unsigned. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPDWORD>
+
+<!xVarBOOL>
+	<xTd1><a>
+		BOOL
+		<xHoverHelpShort>
+			Boolean, TRUE or FALSE. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarBOOL>
+
+<!xVarPBOOL>
+	<xTd1><a>
+		PBOOL
+		<xHoverHelpShort>
+			Pointer to a boolean. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPBOOL>
+
+<!xVarPOINT>
+	<xTd1><a>
+		POINT
+		<xHoverHelp>
+			POINT structure containing x and y. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPOINT>
+
+<!xVarPPOINT>
+	<xTd1><a>
+		PPOINT
+		<xHoverHelp>
+			Pointer to a POINT structure containing x and y. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPPOINT>
+
+<!xVarPESCMIDIEVENT>
+	<xTd1><a>
+		PESCMIDIEVENT
+		<xHoverHelp>
+			A pointer to the ESCMIDIEVENT structure, used to tell MIDI
+			what notes to play.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPESCMIDIEVENT>
+
+
+<!xVarCEscTextBlock>
+	<xTd1><a href=r:133>
+		CEscTextBlock
+		<xHoverHelp>
+			Escarpment CEscTextBlock object.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCEscTextBlock>
+
+<!xVarPCEscTextBlock>
+	<xTd1><a href=r:133>
+		PCEscTextBlock
+		<xHoverHelp>
+			Pointer to an Escarpment CEscTextBlock object.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCEscTextBlock>
+
+<!xVarRECT>
+	<xTd1><a>
+		RECT
+		<xHoverHelp>
+			Rectangle structure. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarRECT>
+
+<!xVarPRECT>
+	<xTd1><a>
+		PRECT
+		<xHoverHelp>
+			Pointer to a rectangle structure. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPRECT>
+
+<!xVarPDOUBLE>
+	<xTd1><a>
+		double*
+		<xHoverHelp>
+			Pointer to a double. Defined in c++.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPDOUBLE>
+
+<!xVarInt>
+	<xTd1><a>
+		int
+		<xHoverHelpShort>
+			4-byte integer. Defined in c++.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarInt>
+
+<!xVarPInt>
+	<xTd1><a>
+		int*
+		<xHoverHelpShort>
+			Pointer to a 4-byte integer. Defined in c++.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPInt>
+
+<!xVarPCMMLNode>
+	<xTd1><a href=r:133>
+		PCMMLNode
+		<xHoverHelp>
+			Pointer to an Escarpment C++ CMMLNode object that can be used to obtain
+			information about the contents and attributes of a tag.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCMMLNode>
+
+<!xVarPCEscPage>
+	<xTd1><a href=r:130>
+		PCEscPage
+		<xHoverHelp>
+			Pointer to an Escarpment C++ CEscPage object.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCEscPage>
+
+<!xVarIFONTINFO>
+	<xTd1><a>
+		IFONTINFO
+		<xHoverHelp>
+			Font information structure that defines the size, color, face, etc.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarIFONTINFO>
+
+<!xVarPIFONTINFO>
+	<xTd1><a>
+		PIFONTINFO
+		<xHoverHelp>
+			Pointer to a font information structure that defines the size, color, face, etc.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPIFONTINFO>
+
+<!xVarPTWFONTINFO>
+	<xTd1><a>
+		PTWFONTINFO
+		<xHoverHelp>
+			Pointer to a font information structure containing the HFONT.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPTWFONTINFO>
+
+<!xVarHINSTANCE>
+	<xTd1><a>
+		HINSTANCE
+		<xHoverHelpShort>
+			Instance handle. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarHINSTANCE>
+
+<!xVarPFILE>
+	<xTd1><a>
+		FILE*
+		<xHoverHelpShort>
+			File from fopen(). Defined in C++.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPFILE>
+
+<!xVarHBITMAP>
+	<xTd1><a>
+		HBITMAP
+		<xHoverHelpShort>
+			Bitmap handle. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarHBITMAP>
+
+<!xVarHANDLE>
+	<xTd1><a>
+		HANDLE
+		<xHoverHelpShort>
+			Handle. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarHANDLE>
+
+<!xVarCBTree>
+	<xTd1><a href=r:133>
+		CBTree
+		<xHoverHelp>
+			Escarpment utility C++ object for managing a binary tree.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCBTree>
+
+<!xVarCListFixed>
+	<xTd1><a href=r:133>
+		CListFixed
+		<xHoverHelp>
+			Escarpment utility C++ object for managing a list with fixed-sized elements.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCListFixed>
+
+<!xVarPCListFixed>
+	<xTd1><a href=r:133>
+		PCListFixed
+		<xHoverHelp>
+			Pointer to an Escarpment utility C++ object for managing a list with fixed-sized elements.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCListFixed>
+
+<!xVarPCListVariable>
+	<xTd1><a href=r:133>
+		PCListVariable
+		<xHoverHelp>
+			Pointer to an Escarpment utility C++ object for managing a list with variable-sized elements.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCListVariable>
+
+<!xVarCListVariable>
+	<xTd1><a href=r:133>
+		CListVariable
+		<xHoverHelp>
+			Escarpment utility C++ object for managing a list with variable-sized elements.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarCListVariable>
+
+<!xVarESCACCELERATOR>
+	<xTd1><a>
+		ESCACCELERATOR
+		<xHoverHelp>
+			Escarpment structure that lets you specify an accelerator and the
+			message sent when the accelerator key is pressed.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarESCACCELERATOR>
+
+<!xVarPESCACCELERATOR>
+	<xTd1><a>
+		PESCACCELERATOR
+		<xHoverHelp>
+			Pointer to an Escarpment structure that lets you specify an accelerator and the
+			message sent when the accelerator key is pressed.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPESCACCELERATOR>
+
+<!xVarPCESCCONTROLCALLBACK>
+	<xTd1><a href=r:129>
+		PESCCONTROLCALLBACK
+		<xHoverHelp>
+			Pointer to a callback function used to customize controls.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCESCCONTROLCALLBACK>
+
+<!xVarPESCINDEXCALLBACK>
+	<xTd1><a href=r:138>
+		PESCINDEXCALLBACK
+		<xHoverHelp>
+			Pointer to a callback function used during the search indexation.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPESCINDEXCALLBACK>
+
+<!xVarPCESCPAGECALLBACK>
+	<xTd1><a href=r:130>
+		PESCPAGECALLBACK
+		<xHoverHelp>
+			Pointer to a callback function used to provide code for pages.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarPCESCPAGECALLBACK>
+
+<!xVarPVOID>
+	<xTd1><a>
+		PVOID
+		<xHoverHelpShort>
+			Pointer to a VOID. Defined in Windows.
+		</xHoverHelpShort>
+	</a></xTd1>
+</xVarPVOID>
+
+<!xVarHDC>
+	<xTd1><a>
+		HDC
+		<xHoverHelp>
+			Handle to a device context. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarHDC>
+
+<!xVarHCURSOR>
+	<xTd1><a>
+		HCURSOR
+		<xHoverHelp>
+			Handle to a cursor. Defined in Windows.
+		</xHoverHelp>
+	</a></xTd1>
+</xVarHCURSOR>
+
+<!xReturns>
+	<xTd2>
+		<font color=#004000><italic>returns</italic></font>
+	</xTd2>
+</xReturns>
+
+<!xTrReturnsError>
+	<tr>
+		<xVarBOOL/>
+		<xReturns/>
+		<xtd3>
+			TRUE if success. FALSE if error.
+		</xtd3>
+	</tr>
+</xTrReturnsError>
+
+<!xTrControl>
+	<tr>
+		<xVarPCEscControl/>
+		<xTd2>pControl</xTd2>
+		<xTd3>
+			Pointer to the control sending the message.
+		</xTd3>
+	</tr>
+</xTrControl>
+
+<!xAttribString>
+	<xTd1><a>
+		String
+		<xHoverHelp>
+			A string. If there are no spaces, tabs, or carriage returns
+			within the string this can be the straight string. Otherwise it
+			needs to be encapsulated in quotes and must use &amp;quot; to
+			include a quote within the string.
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribString>
+
+<!xAttribFloat>
+	<xTd1><a>
+		Floating Point
+		<xHoverHelp>
+			A floating point number, which may contain a decimal point.
+			You can also use "e" to indicate exponents, such as "1.3e5".
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribFloat>
+
+<!xAttribPoint>
+	<xTd1><a>
+		Point
+		<xHoverHelp>
+			A three dimensional point, which is a sequence of floating
+			point numbers (containing decimal points) separated by commas.
+			Example: "point=5.3,35.3,6.343"
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribPoint>
+
+<!xAttribAccel>
+	<xTd1><a>
+		Accelerator
+		<xHoverHelp>
+			An accelerator string. It can start with "ctrl-", "alt-", and "shift-"
+			to indicate that a control, alt, and/or shift key must be pressed.
+			It must end with a letter, or "escape" or "enter".
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribAccel>
+
+<!xAttribNumber>
+	<xTd1><a>
+		Number
+		<xHoverHelp>
+			A number without a decimal point. It can be positive or negative.
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribNumber>
+
+<!xAttribBool>
+	<xTd1><a>
+		Yes or No
+		<xHoverHelp>
+			A boolean value. You can also use "true" or "false".
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribBool>
+
+<!xAttribNumberOrPercent>
+	<xTd1><a>
+		Number or Percent
+		<xHoverHelp>
+			The value is either a number or a percentage
+			ranging from "0%" to "100%" and beyond.
+			Decimal points are not allowed in either the number or percentage.
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribNumberOrPercent>
+
+<!xAttribPercent>
+	<xTd1><a>
+		Percent
+		<xHoverHelp>
+			The value ranges from "0%" to "100%" and beyond.
+			Decimal points are not allowed.
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribPercent>
+
+<!xAttribHex>
+	<xTd1><a>
+		Hex
+		<xHoverHelp>
+			Hex number from "00000000" to "ffffffff".
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribHex>
+
+<!xAttribColor>
+	<xTd1><a>
+		Color
+		<xHoverHelp>
+			Color values. This must either be:
+			<p/>
+			<xul>
+				<li>
+					"#rrggbb" - Where rr, gg, bb are replaced by hexadecimal values
+					for red, green, and blue, randing from 00 to ff.
+				</li>
+				<li>
+					"Transparent" - Specified that the color is transparent. Transparency
+					only works for some color attributes.
+				</li>
+			</xul>
+		</xHoverHelp>
+	</a></xTd1>
+</xAttribColor>
+
+<!xDefinition>
+	<xTableCenter><tr><td>
+		<colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/>
+		<align align=left><?MacroContent?></align>
+	</td></tr></xTableCenter>
+</xDefinition>
+
+<!xTip>
+	<p><blockquote><font color=#004000>
+		<bold>Tip:</bold> <?MacroContent?>
+	</font></blockquote></p>
+</xTip>
+
+<!xUl>
+	<ul type=pointer>
+		<?MacroContent?>
+	</ul>
+</xUl>
+
+<!xMenuButton>
+   <button showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <?MACROCONTENT?>
+   </button><br/>
+</xMenuButton>
+
+<!xMenuSeperator>
+   <hr width=15%/><br/>
+</xMenuSeperator>
+
+<!xMenuText>
+   <menutext>
+      <colorblend color=#8080ff posn=background/>
+      <?MACROCONTENT?>
+   </menutext>
+</xMenuText>
+
+<!xMenuContents>
+   <menucontents>
+      <pageinfo lrmargin=0 tbmargin=0/>
+      <colorblend tcolor=#8080ff bcolor=#6060d0 posn=background/>
+      <?MACROCONTENT?>
+   </menucontents>
+</xMenuContents>
+

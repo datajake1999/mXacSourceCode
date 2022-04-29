@@ -1,0 +1,27 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Remove someone from your address book"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Remove someone from your address book
+</xPageTitle>
+
+<xNotFunctional/>
+
+<p>
+	Select the person or business you wish to remove and press "Remove person". The person's name
+	will be deleted from the address book but information about the person will
+	be left in Dragonfly's database just in case you wish to reference it
+	later using Dragonfly's search functionality.
+</p>
+
+<p align=center>
+	<xFilterPersonBusiness width=80% additem="" name=person/>
+</p>
+
+<align align=right>
+	<button name=remove>
+		Remove person
+	</button>
+</align>

@@ -1,0 +1,214 @@
+<pageinfo title="Standard Controls"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Standard Controls</xPageTitle>
+
+<p>
+	Escarpment includes many built-in controls. You can use them in your MML document by including
+	a tag whose name is the control's name, such as <xCodeInline>&lt;Button&gt;</xCodeInline>.
+</p>
+
+<xChoiceButton href=r:116>
+	<bold>Default control behaviour</bold><br/>
+	Attributes and messages supported by all controls.
+</xChoiceButton>
+
+
+<p align=center>
+	<hr width=80% style=star1/>
+</p>
+
+<xChoiceButton href=r:117>
+	<bold>Button Control</bold><br/>
+	A push buttion, radio button, or checkbox.
+</xChoiceButton>
+<p align=right>
+	<button>Button</button>
+</p>
+
+<xChoiceButton href=r:144>
+	<bold>Chart Control</bold><br/>
+	Display line graphs, bar charts, and pie charts.
+</xChoiceButton>
+<p align=right>
+	<Chart width=50% height=50% border=0>
+		<axis axis=x label=Year units=integer/>
+		<axis axis=y label=Cost units=dollars/>
+		<dataset name="Cost of a ball" href=r:144>
+			<point x=1985 y=1.55/>
+			<point x=1986 y=1.62/>
+			<point x=1990 y=1.83/>
+			<point x=1995 y=1.95/>
+			<point x=2000 y=2.05/>
+		</dataset>
+		<dataset name="Cost of RAM" href=r:144>
+			<point x=1990 y=3.25/>
+			<point x=1995 y=2.15/>
+			<point x=2000 y=1.10/>
+		</dataset>
+	</Chart>
+</p>
+
+<xChoiceButton href=r:118>
+	<bold>ColorBlend Control</bold><br/>
+	Mostly used as a background, this does a color fade over the background of a page, table, or cell.
+</xChoiceButton>
+<p align=right>
+	<colorblend width=30% height=10% lcolor=#00c0c0 rcolor=#0080c0/>
+</p>
+
+<xChoiceButton href=r:119>
+	<bold>ComboBox Control</bold><br/>
+	When the user moves his/her mouse pointer over the combo box region, it displays a listbox
+	and lets the user select an item.
+</xChoiceButton>
+<p align=right>
+	<combobox cursel=0 width=30%>
+		<elem>Item one</elem>
+		<elem>Item two</elem>
+		<elem>Item three</elem>
+		<elem>Item four</elem>
+		<elem>Item five</elem>
+		<elem>Item six</elem>
+		<elem>Item seven</elem>
+		<elem>Item eight</elem>
+		<elem>Item nine</elem>
+		<elem>Item ten</elem>
+	</combobox>
+</p>
+
+
+<xChoiceButton href=r:141>
+	<bold>Date Control</bold><br/>
+	When the user moves his/her mouse pointer over the date control, it displays a
+	drop-down dialog that lets them specify a date.
+</xChoiceButton>
+<p align=right>
+	<date width=50% day=28 month=5 year=2000/>
+</p>
+
+
+
+<xChoiceButton href=r:120>
+	<bold>Edit Control</bold><br/>
+	Allows users to enter and edit text.
+</xChoiceButton>
+<p align=right>
+	<edit text="type here"/>
+</p>
+
+
+
+<xChoiceButton href=r:142>
+	<bold>FilteredList Control</bold><br/>
+	The filtered list control lets users select a name out of a long list without
+	having to scroll through the list in a combobox or a listbox.
+</xChoiceButton>
+<p align=right>
+	<filteredlist listname=people width=50%/>
+</p>
+
+
+<xChoiceButton href=r:121>
+	<bold>HR - Horizontal Line Control</bold><br/>
+	Draws a horizontal line to separate text.
+</xChoiceButton>
+<p align=right>
+	<hr width=30%/>
+</p>
+
+<xChoiceButton href=r:122>
+	<bold>Image Control</bold><br/>
+	Displays a .BMP or JPEG image within text or as a background.
+</xChoiceButton>
+<p align=right>
+	<image href="http://www.mxac.com.au" jpgresource=104 scale=50%/>
+</p>
+
+<xChoiceButton href=r:123>
+	<bold>ListBox Control</bold><br/>
+	Provide users with a list of choices, such as selecting a file.
+</xChoiceButton>
+<p align=right>
+	<listbox cursel=0 vscroll=listscroll width=30% height=20%>
+		<elem>Item one</elem>
+		<elem>Item two</elem>
+		<elem>Item three</elem>
+		<elem>Item four</elem>
+		<elem>Item five</elem>
+		<elem>Item six</elem>
+		<elem>Item seven</elem>
+		<elem>Item eight</elem>
+		<elem>Item nine</elem>
+		<elem>Item ten</elem>
+	</listbox>
+	<scrollbar name=listscroll height=20% orient=vert/>
+</p>
+
+<xChoiceButton href=r:124>
+	<bold>Menu</bold><br/>
+	Display a drop-down menu when the user moves his/her mouse pointer over it.
+</xChoiceButton>
+<p align=right>
+	<menu>
+		<xmenutext>Menu</xmenutext>
+		<xmenucontents>
+			<xMenuButton href=[close]>Menu item 1</xMenuButton>
+			<xMenuButton href=[close]>Menu item 2</xMenuButton>
+			<xMenuButton href=[close]>Menu item 3</xMenuButton>
+			<xMenuButton href=[close]>Menu item 4</xMenuButton>
+		</xmenucontents>
+	</menu>
+</p>
+
+<xChoiceButton href=r:125>
+	<bold>ProgressBar Control</bold><br/>
+	A vertical or horizontal progress bar that lets user know how much of a calculation or process is completed.
+</xChoiceButton>
+<p align=right>
+	<progressbar width=50% pos=75 align=horz/>
+</p>
+
+<xChoiceButton href=r:126>
+	<bold>ScrollBar Control</bold><br/>
+	Draws a vertical or horizontal scrollbar.
+</xChoiceButton>
+<p align=right>
+	<scrollbar width=30% pos=75 align=horz/>
+</p>
+
+<xChoiceButton href=r:127>
+	<bold>Status Control</bold><br/>
+	Displays text or an image that can be updated with real-time status information, such as percent done.
+</xChoiceButton>
+<p align=right>
+	<status width=30% height=10%>
+		<colorblend posn=background tcolor=#c0c0c0 bcolor=#80c080/>
+		53%
+	</status>
+</p>
+
+<xChoiceButton href=r:128>
+	<bold>ThreeD Control</bold><br/>
+	Displays simple 3D rendered images to add eye-candy to your document.
+</xChoiceButton>
+<p align=right>
+	<ThreeD width=20% height=20% timerinterval=125 border=0>
+		<Translate point=0,-1,3/>
+		<Rotatex val=45/>
+		<RotateYTime from=0 to=360 interval=20/>
+		<ShapeTeapot/>
+	</ThreeD>
+</p>
+
+
+<xChoiceButton href=r:140>
+	<bold>Time Control</bold><br/>
+	When the user moves his/her mouse pointer over the time control, it displays a
+	drop-down dialog that lets them specify a time.
+</xChoiceButton>
+<p align=right>
+	<time width=30% hour=13 minute=0/>
+</p>
+

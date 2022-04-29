@@ -1,0 +1,73 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Projects"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=209/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Projects
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:155/>The "Projects" section allows you to track long-term
+	projects that you're working on. You specify individual tasks necessary to
+	complete the project, along with interdependencies between the tasks.
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<!xProjectButton>
+	<td width=50%>
+		<button style=rightarrow MACROATTRIBUTE=1>
+			<bold><?MacroContent?></bold>
+		</button>
+	</td>
+</xProjectButton>
+
+<!xProjectBlank>
+	<td width=50%>
+	</td>
+</xProjectBlank>
+
+<null><<<$PROJECTLIST>>></null>
+
+<Comment>
+<xbr/>
+
+<p>
+	Click the type of journal entry to wish to create:
+</p>
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<xProjectButton href=r:148>
+			House building
+		</xProjectButton>
+		<xProjectButton href=r:148>
+			Dragonfly
+		</xProjectButton>
+	</tr>
+	<tr>
+		<xProjectButton href=r:148>
+			Project 3
+		</xProjectButton>
+		<xProjectButton href=r:148>
+			Project 4
+		</xProjectButton>
+	</tr>
+</table>
+<p/>
+</comment>
+
+<xbr/>
+
+<xChoiceButton href=r:146>
+	<bold>Add a new project</bold>
+	<br/>
+	Create a new project.
+</xChoiceButton>
+
+<xChoiceButton href=r:147>
+	<bold>Remove a project</bold>
+	<br/>
+	When you're finished with a project you can remove it from your list.
+</xChoiceButton>

@@ -1,0 +1,161 @@
+<pageinfo title="Bugs and feedback"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Bugs and Feedback</xPageTitle>
+
+<xSectionTitle>How I work</xSectionTitle>
+
+<p>
+	<bold>I am a one person operation.</bold> I do all the design, development, testing,
+	documentation, and marketing myself. This has certain implications from your point of view, as
+	a developer:
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Feature requests</bold> - I like to make changes that developers will use. If you send me a
+		feature request that I think will improve the product, I can often get it implemented within a few days.
+		While I have a long list of self-invented features I can implement, I'd rather work on the
+		features that real developers need. If there's a feature missing, please tell me.
+		One-person companies have their advantages;
+		With a large corporation, the feature won't get in until at least the next version, or never.
+	</li>
+	<li>
+		<bold>Bugs</bold> - My software will tend to have more bugs in it than one produced by a large company.
+		I don't have an army of testers nor do I have a huge test lab with hundreds of machines.
+		However, if you tell me about a bug and give me a good way to reproduce it on my machine,
+		you have a good chance of getting a fix back to you within a couple of days. With a large corporation,
+		you may never get the fix.
+	</li>
+	<li>
+		<bold>New versions</bold> - Because I am continually improving the code based upon user feedback
+		the version of Escarpment on the web is always changing. This may cause problems for you:
+		There's a chance one of my changes will cause your application not to compile or work properly.
+		I may introduce new bugs in the process of fixing old bugs or adding new features. Therefore:
+	</li>
+	<p>
+		<bold>Do not upgrade to a new version of Escarpment shortly before your ship date.</bold>
+	</p>
+	<p>
+		<bold>Before you install a new version of Escarpment, back up your old version (DLL, header files,
+		samples, and library) before upgrading.</bold> That way, if my new changes break your application
+		you're not twiddling your thumbs until I can get you a fix.
+	</p>
+</ul>
+
+<p>
+	To see a list of bug fixes, feature improvements, and new features that I've
+	added since your last install of Escarpment,
+	click <a href="r:139">here</a>.
+</p>
+
+<xSectionTitle>Bugs</xSectionTitle>
+
+<p>
+	Please send any bugs you find to <xMyEmail/>. I will try to get them fixed within a few days. Sometimes, such
+	as when I'm on vacation, this isn't possible.
+</p>
+
+<p>
+	Before I can fix a bug, I must be able to reproduce it on my machine. You can get the bugs fixed a few
+	days quicker if you give me the necessary information up front instead of making me interrogate it from
+	you:
+</p>
+
+<ol>
+	<li>
+		Don't send me bug reports that say, "It doesn't work," or "It crashes." I need much more detail than that.
+	</li>
+	<li>
+		You're a developer. What would you want for a bug report: The details of what you were doing when it
+		crashed. And how reproducible is it? Does it crash every time or just once in a blue moon.
+	</li>
+	<li>
+		Sometimes the version of Windows or web browser makes a difference. Please include this information
+		in your E-mail.
+	</li>
+	<li>
+		Try reproducing the bug on a different machine. Sometimes the bugs reported to me are really bugs
+		in printer drivers, display drivers, sound card drivers, etc. I may be able to modify Escarpment to
+		work around the bug if you tell me it's specific to a certain piece of hardware.
+	</li>
+	<li>
+		If I can't reproduce the bug from your description I'll ask you to send me a small C++ program (with
+		source code) that reproduces the problem every time.
+	</li>
+</ol>
+
+<xSectionTitle>Documentation Problems</xSectionTitle>
+
+<p>
+	Please send documentation problems <xMyEmail/>. Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		You can send me bugs about spelling errors, poor grammar, and typos. I may fix them, but ultimately,
+		are they really important?
+	</li>
+	<li>
+		If any part of the documentation is unclear, tell me. I designed and wrote this, so everything in
+		Escarpment is very obvious to me. It may not be to you.
+	</li>
+	<li>
+		I left some parts of Escarpment undocumented because I don't think anyone will really use those
+		features. (Most of the undocumented features are implemented for internal use.) However, I could
+		be wrong. If you need them documented, please tell me.
+	</li>
+</ul>
+
+<xSectionTitle>Feature/control improvements</xSectionTitle>
+
+<p>
+	I'm very interested in improving existing features and controls. Please send me mail at <xMyEmail/>.
+	Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Will you actually use the feature?</bold> While designing the speech API at Microsoft I asked all the
+		speech technology companies what they'd like in the speech API. I got a lot of requests and implemented
+		tons of features in the specification. As it turns out, many of the companies were just giving
+		me their wish list. They had no need for the feature; they only thought it might be useful at some point
+		in the future. I learned my lesson. I don't like adding features that might hypothetically
+		be useful at some unspecified time in the future. I want to add features that are
+		required here and now.
+	</li>
+	<li>
+		<bold>Will other developers want to use the feature?</bold> The more people I can envision using the feature, the
+		more eager I am.
+	</li>
+	<li>
+		<bold>How does the feature mesh with the <a href="r:106#Escarpment's Goals">goals</a> I've set out for Escarpment?</bold> I want to
+		keep escarpment simple to develop for, simple for end users, and small.
+	</li>
+	<li>
+		<bold>Before modifying/improving one of the built-in controls</bold>, please tell me. I may be interested in
+		doing the modification so that other developers can take advantage of the improvements.
+	</li>
+	<li>
+		I am very interested in features that make it <bold>easier to write an Escarpment application</bold>.
+	</li>
+	<li>
+		I am very interested in features that make Escarpment applications <bold>easier for end-users</bold>.
+	</li>
+	<li>
+		Some people send me feature requests even though they haven't registered and have no intention
+		to register. While I may still implement the feature, <bold>I'm more likely to
+		add/modify features for people that have paid or will pay me.</bold> Note: Just because you paid
+		me doesn't mean I'll implement your requests.
+	</li>
+</ul>
+
+<xSectionTitle>New features</xSectionTitle>
+
+<p>
+	Again, send mail to <xMyEmail/>. The same stipulations as modifying features/controls exist, only I'm
+	more picky about adding totally new features. New features are a lot of work and are more likely to
+	make Escarpment more difficult to use, or larger.
+</p>
+

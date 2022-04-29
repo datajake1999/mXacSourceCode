@@ -1,0 +1,621 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Revision History for version 1.x"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Revision History for version 1.x
+</xPageTitle>
+
+<p>
+	This page lists all of the bug fixes, feature tweaks, and new features I've made
+	to Dragonfly over time. If you have any more fixes or changes you'd like
+	me to make, please send me E-mail at <xMyEmail/>.
+</p>
+
+<!xVersion>
+	<td width=20% valign=top><section><bold>
+		<?MacroContent?>
+	</bold></section></td>
+</xVersion>
+
+<!xChanges>
+	<td width=80% valign=top><align tab=32>
+		<xul>
+			<?MacroContent?>
+		</xul>
+	</align></td>
+</xChanges>
+
+<!xMisc>
+	<li><font color=#000000>
+		<?MacroContent?>
+	</font></li>
+</xMisc>
+
+<!xBug>
+	<li><font color=#800000>
+		<?MacroContent?>
+	</font></li>
+</xBug>
+
+<!xFeature>
+	<li><font color=#006000>
+		<?MacroContent?>
+	</font></li>
+</xFeature>
+
+<Table width=100% border=0 innerlines=0>
+	<tr>
+		<xVersion>2.x</xVersion>
+		<xChanges>
+			<xMisc>
+				<a href=r:135>Changes in later versions.</a>
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0717</xVersion>
+		<xChanges>
+			<xFeature>
+				Added reflections to the dialy wrapup.
+			</xFeature>
+			<xFeature>
+				Added an option so you can save the Dragonfly address book as a comma
+				separated file.
+			</xFeature>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0715</xVersion>
+		<xChanges>
+			<xFeature>
+				Alarms for reminders, scheduled phone calls, and meetings.
+			</xFeature>
+			<xFeature>
+				Reoccurring reminders.
+			</xFeature>
+			<xFeature>
+				In the planner view, if a task splits itself around a
+				meeting or phone call then provide some text indicating this.
+			</xFeature>
+			<xFeature>
+				In the planner view, if the user has split the task across several days then
+				show "continued from...".
+			</xFeature>
+			<xFeature>
+				Use the planner view, exluding tasks and reminders, for the combo, today,
+				and tomorrow views.
+			</xFeature>
+			<xFeature>
+				Customization of time zones.
+			</xFeature>
+			<xFeature>
+				Dragonfly automatically reminds you to back up if you haven't for a month, or
+				if you install a new version of Dragonfly.
+			</xFeature>
+			<xFeature>
+				Dragonfly copies the files to your backup site for you.
+			</xFeature>
+			<xMisc>
+				Moved the backup option (and a few others) from documentation to Table of Contents.
+			</xMisc>
+			<xMisc>
+				If a split task is resolved in the planner, and it's to be logged into
+				a journal, then default to the time asked based on the split's predicted duration.
+			</xMisc>
+			<xMisc>
+				Remove the title bar from the pop-up menu used by planner.
+			</xMisc>
+			<xMisc>
+				Made the log-in screen more symmetrical.
+			</xMisc>
+			<xMisc>
+				Reversed the time-zone ordering so that those cities which get sunlight first
+				in the new day are shown first.
+			</xMisc>
+			<xBug>
+				In planner, changed "Empty" at the end of the day to "Nothing scheduled".
+			</xBug>
+			<xBug>
+				In planner, if logged onto Dragonfly early then the start-of-day schedule
+				was ignored.
+			</xBug>
+			<xBug>
+				In planner, if completed a project task it wasn't always removed
+				from the project task list.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0713</xVersion>
+		<xChanges>
+			<xFeature>
+				Added the "Planner" view.
+			</xFeature>
+			<xFeature>
+				Clicking on a project's task link in the today, combo list and planner
+				pages edits the project task directly.
+			</xFeature>
+			<xFeature>
+				Moved the check for yesterday's daily wrapup and the quote of the
+				day into the list and planner views.
+			</xFeature>
+			<xFeature>
+				If you add a meeting, task, reminder, or planned phone call from the
+				today, tomorrow, list, combo, or planner page then the date defaults to the day displaying
+				the buttons you clicked on.
+			</xFeature>
+			<xMisc>
+				The buttons in task editing nd meeting editing have been moved to the top of
+				the page.
+			</xMisc>
+			<xMisc>
+				If you click on a task anywhere except the tasks page Dragonfly asks you
+				if you completed the task instead of brining up the edit page.
+			</xMisc>
+			<xMisc>
+				For new users the Planner view replaces the Tomorrow page.
+			</xMisc>
+			<xMisc>
+				In projects, when a task is marked as completed Dragonfly used to verify
+				that the user really want to complete the task. Don't do this now.
+			</xMisc>
+			<xBug>
+				Fixed memory leak due to photos.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0708</xVersion>
+		<xChanges>
+			<xFeature>
+				Dragonfly can now archive your personal photos away.
+			</xFeature>
+			<xMisc>
+				Revised the overview page to be more up-to-date with the new features.
+			</xMisc>
+			<xBug>
+				In "Day and night" earth had some rotation problems.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0705</xVersion>
+		<xChanges>
+			<xFeature>
+				Project management can track multiple people working on a project.
+			</xFeature>
+			<xFeature>
+				Show both the start and finish date of a project task, not just the finish date.
+			</xFeature>
+			<xFeature>
+				Project tasks now have "wok timers" which lets the computer keep more accurate
+				track of how much time you spend working on a task.
+			</xFeature>
+			<xFeature>
+				You can "disable" a project so it doesn't appear on your to-do lists and
+				clutter up your screen.
+			</xFeature>
+			<xMisc>
+				Show the project's title in the window's title instead of
+				"View a project".
+			</xMisc>
+			<xMisc>
+				In project task editing, move the buttons for marking a task completed and deleting a task
+				to the top of the page.
+			</xMisc>
+			<xBug>
+				When logging project work to a journal the entries weren't always written.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0704</xVersion>
+		<xChanges>
+			<xFeature>
+				You can now add custom holidays, anniversaries, and birthdays that appear
+				in your calendar.
+			</xFeature>
+			<xFeature>
+				When a reoccurring task, meeting, or phone call is created the user has the
+				option of not having it occur until after a specified date.
+			</xFeature>
+			<xFeature>
+				French holidays.
+			</xFeature>
+			<xMisc>
+				Renamed "Yearly calendar" to "Annual calendar".
+			</xMisc>
+			<xMisc>
+				Changed the "Phase of the moon" display so the moon appears as in the
+				Southern Hemisphere, not the Northern Hemisphere. Basically, swap along left/right.
+			</xMisc>
+			<xMisc>
+				Changed the Earth in Day and Night to a map so it's easier to see.
+			</xMisc>
+			<xMisc>
+				Small Dragonfly animation on the opening page.
+			</xMisc>
+			<xBug>
+				If a task was assigned to the future and it's date was changed to "immediately" then
+				it would no longer apper on the "List" view.
+			</xBug>
+			<xBug>
+				If a task was added to a day already listing tasks, the entire list order
+				would be changed. Fixed it so the list retains the same order.
+			</xBug>
+			<xBug>
+				May Day in the Northern Territory, Australia is on the first Monday day of the month.
+			</xBug>
+			<xBug>
+				Daylight savings time was calculated incorrectly in the Time Zones page.
+			</xBug>
+			<xBug>
+				The Earth's procession adjustment in the "Day and night" page was wrong.
+			</xBug>
+			<xBug>
+				If two holidays occurred on the same day only one was shown.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0331</xVersion>
+		<xChanges>
+			<xMisc>
+				In the "Day and night" display made the night-time shadow darker.
+			</xMisc>
+			<xBug>
+				Fixed potential crash when printing.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0323</xVersion>
+		<xChanges>
+			<xFeature>
+				Added a page so users can store passwords away.
+			</xFeature>
+			<xFeature>
+				Added "Primary contact" to business entries.
+			</xFeature>
+			<xFeature>
+				Add "Job title", "Department", and "Office" to person's address book entry.
+			</xFeature>
+			<xFeature>
+				"Time zones" page that shows you the time all around the world.
+			</xFeature>
+			<xFeature>
+				"Phases of the moon" monthly calendar.
+			</xFeature>
+			<xFeature>
+				"Day and night" page that shows a globe so you can see what
+				parts of the planet have daylight and what parts are dark.
+			</xFeature>
+			<xMisc>
+				In the Projects main page, changed the project buttons so they're bold.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0318</xVersion>
+		<xChanges>
+			<xFeature>
+				Yearly calendar view so you can see the entire year at once.
+			</xFeature>
+			<xFeature>
+				Show the holiday name in the combo view tooltip for the day.
+			</xFeature>
+			<xFeature>
+				There's a new user interface setting so that you can turn on which
+				will hide Dragonfly (from the task bar) when it's minimized, reducing
+				clutter on your screen.
+			</xFeature>
+			<xMisc>
+				Fix some spelling mistakes and typos.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0311</xVersion>
+		<xChanges>
+			<xFeature>
+				New Zealand holidays.
+			</xFeature>
+			<xFeature>
+				In the Calendar view, if there are more than one meetings on a day it
+				shows "Meetings (x)" instead of "Meetings".
+			</xFeature>
+			<xFeature>
+				Right-clicking on an edit control brings up a pop-up menu for cut, copy,
+				and paste.
+			</xFeature>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0304</xVersion>
+		<xChanges>
+			<xFeature>
+				"Schedule calls" which allow you to schedule phone calls for future
+				dates and times. You can even schedule reoccurring calls.
+			</xFeature>
+			<xFeature>
+				Added a "Summary" page that shows you what work you completed over the
+				last week or month. See "Table of contenhts" to get to it.
+			</xFeature>
+			<xMisc>
+				Clarify the registration page.
+			</xMisc>
+			<xMisc>
+				Provide some information about Dragonfly files in the backup page.
+			</xMisc>
+			<xBug>
+				In the Combo view, the tooltips for the small calendar were wrong if a different
+				month than the current month was selected.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0218</xVersion>
+		<xChanges>
+			<xFeature>
+				Added "Companies" as a separate entity from people. You can have people belong
+				to companies and use their phone numbers, address, and E-mail for work entries.
+				Also, companies list what people are employees.
+			</xFeature>
+			<xBug>
+				In the Combo view, if the user didn't enter yesterday's daily wrap-up, they'd
+				be bothered about it and shown a button. The button wouldn't do anything.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0204</xVersion>
+		<xChanges>
+			<xFeature>
+				New "Combo" view that combines the calendar, today, and list views.
+			</xFeature>
+			<xFeature>
+				Changed the "View calendar as list" page so users can click on meetings, tasks,
+				etc. and bring up the appropriate page.
+			</xFeature>
+			<xFeature>
+				Buttons in Today, Tomorrow, and Calendar List allowing tasks, meetings, and reminders
+				to be added from the pages.
+			</xFeature>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0202</xVersion>
+		<xChanges>
+			<xFeature>
+				Added a table of contents page.
+			</xFeature>
+			<xFeature>
+				Users can customize the main Dragonfly menu. Add, remove, move pages.
+			</xFeature>
+			<xFeature>
+				Users can specify what page Dragonfly will start up showing by making
+				that the first page in the Dragonfly menu.
+			</xFeature>
+			<xFeature>
+				Users can add other fast-action items to the Dragonfly menu. Before it
+				only had "Incoming call". It can now include menu items for adding meetings,
+				tasks, reminders, notes, and people.
+			</xFeature>
+			<xBug>
+				Fixed the Melbourne Cup Day (Melbourne, Australia), so it's on the 1st Tuesday of
+				November, not the 7th of November.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0120</xVersion>
+		<xChanges>
+			<xFeature>
+				Journal entries can be moved from one journal category to another by editing them.
+			</xFeature>
+			<xMisc>
+				When you call someone with more than one phone number (such as a home and office
+				number), a new dialog box shows all the person's numbers and asks which one.
+			</xMisc>
+			<xBug>
+				Fixed a bug so Dragonfly now works on dual-monitor systems.
+			</xBug>
+			<xBug>
+				Because of a 3D drawing optimization, sometimes 3D controls wouldn't
+				draw properly on some monitors.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0114</xVersion>
+		<xChanges>
+			<xFeature>
+				New user interface to edit notes.
+			</xFeature>
+			<xFeature>
+				Can edit archived documents.
+			</xFeature>
+			<xFeature>
+				Control - (shift) - right/left arrow works in edit boxes.
+			</xFeature>
+			<xBug>
+				Mouse-wheel was not scrolling list boxes, combo-boxes, and filtered list controls properly.
+			</xBug>
+			<xMisc>
+				Modified more pages so the focus defaults to the first edit control.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.1.0107</xVersion>
+		<xChanges>
+			<xBug>
+				While January may only be 29 days long in some places, it's 31 days
+				in most parts of the world.
+			</xBug>
+			<xBug>
+				If the last week in a month only had one day it wouldn't be displayed.
+			</xBug>
+			<xBug>
+				Wasn't handling AltGr characters for Hungarian and other languages.
+			</xBug>
+			<xBug>
+				Reversed the scrolling direction on a mouse-wheel so it scrolls correctly.
+				Also, modified some controls so they capture the mouse-wheel.
+			</xBug>
+			<xMisc>
+				Changed the link for download.com to link directly to the Dragonfly entry.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1231</xVersion>
+		<xChanges>
+			<xFeature>
+				Allow users to start a timer so they can automatically log when work on a
+				task ends.
+			</xfeature>
+			<xBug>
+				Wasn't handling alt being held down followed by several digits, such
+				as alt-66 to type B.
+			</xBug>
+			<xBug>
+				Search didn't deal with non-English characters in words.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1229</xVersion>
+		<xChanges>
+			<xFeature>Accelerators for the options from the main menu, and for OK/Cancel.</xfeature>
+			<xFeature>
+				You can also press the first letter of a name under the people and phone
+				pages to jump to the address book.
+			</xFeature>
+			<xFeature>Notes can be categorized.</xFeature>
+			<xBug>
+				Wasn't properly translating some non-English characters when typing into an
+				edit box, such as umlaut.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1201</xVersion>
+		<xChanges>
+			<xFeature>The ability to delete archive entries.</xFeature>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1124</xVersion>
+		<xChanges>
+			<xFeature>Provide a drop-down box under the "Remember" button on the "Archive"
+				page so that people can archive to a journal category from the page.</xFeature>
+			<xFeature>The ability to remove journal entries from a category.</xFeature>
+			<xBug>Fixed a resource leak that would eventually cause Dragonfly to
+				crash after it was used for awhile.</xBug>
+			<xMisc>Ammended the documentation to talk more about journal categories.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1116</xVersion>
+		<xChanges>
+			<xFeature>Most data-types (phone calls, meetings, people, tasks, projects,
+				and memories) can be linked to a journal entry. This lets you organize your
+				data. If you're a small business, you can keep track of how much work you
+				do for a client, phone calls, and meetings.</xFeature>
+			<xFeature>A new button in the journal category page that lets you copy
+				the duration of tasks onto the clipboard for easy billing.</xFeature>
+			<xFeature>You can see journal entries from a specific month.</xFeature>
+			<xFeature>If you right-click the archive task-bar icon you can archive it
+				into a journal category.</xFeature>
+			<xMisc>Sped up saving information to disk by delaying writing about 1 second and
+				collecting all the changes into one large chunk.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1031</xVersion>
+		<xChanges>
+			<xFeature>Added the ability to import a comma delimited address book
+				from other PIMs.</xFeature>
+			<xBug>When the address book displayed a list it differentiated between
+				capital and lower case letters.</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1028</xVersion>
+		<xChanges>
+			<xFeature>Option in Look and Feel so people can change the number of columns
+				printed out.</xFeature>
+			<xFeature>In the Today and Tomorrow pages, if you have meetings scheduled
+				they are displayed on a time chart.</xFeature>
+			<xMisc>Changed the menu so it doesn't occupy as much space and includes two
+				new items: "List" and "Incoming call".</xMisc>
+			<xMisc>Changed the "Take notes on a phone call" so that the "Notes" section
+				is on top and immediately available to type in.</xMisc>
+			<xBug>Registration wouldn't work if your passcode was greater than 2 billion.</xBug>
+			<xBug>The daily wrapup questinaire about whether or not you accomplished one
+				of your goals didn't randomly select the goals.</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1015</xVersion>
+		<xChanges>
+			<xFeature>Advanced search capabilities added, included search by date and category.</xFeature>
+			<xFeature>When entering or editing the daily wrap-up display a list of activities logged for the day.</xFeature>
+			<xFeature>Allow meetings and tasks to be scheduled every other week, or on every N Day-of-Week.</xFeature>
+			<xMisc>When users click on a reminder it verifies that the user wants to delete it.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1014</xVersion>
+		<xChanges>
+			<xFeature>Option in archive so the title is derived from the first line of archived text.</xFeature>
+			<xFeature>If edit/delete reoccurring task or meeting all the instances of the
+				reoccurring task or meeting are also affected.</xFeature>
+			<xBug>Tweaked the random number generator so the numbers would be more random.</xBug>
+			<xMisc>Added some quotes.</xMisc>
+			<xMisc>Changed registration so it warns sooner.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.1007</xVersion>
+		<xChanges>
+			<xFeature>Allow users to turn off explanatory text once they've used Dragonfly for awhile.</xFeature>
+			<xFeature>Switch so you can use a smaller font and fit more text onto the screen.</xfeature>
+			<xFeature>Change the archived document viewing to an edit box so people can
+				copy archived text to the clipboard.</xFeature>
+			<xMisc>Added "wallpaper" keyword to switch for turning off background images.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.0930</xVersion>
+		<xChanges>
+			<xBug>Was crashing if an ampersand appeared in a meeting name.</xBug>
+			<xMisc>"Completed" button on top of the project edit-tasks page.</xMisc>
+			<xMisc>Added more quotes.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.0923</xVersion>
+		<xChanges>
+			<xfeature>Ability to turn off the background images.</xfeature>
+			<xfeature>Allow access to the week/month-long calendar view from today/tomorrow.</xfeature>
+			<xfeature>Meetings-page option for "I had the meeting and am taking notes."</xfeature>
+			<xBug>Fixed a crash that would happen if an ampersand was used in a task name.</xBug>
+			<xBug>Meeting conflict detection didn't work properly with all-day meetings.</xbug>
+			<xMisc>Move buttons for "Add task" to the top of the tasks page.</xmisc>
+			<xMisc>Move buttons for "Add meeting" to the top of the meetings page.</xmisc>
+			<xMisc>"Completed" button on top of the edit-tasks page.</xMisc>
+			<xMisc>Added more quotes.</xMisc>
+			<xMisc>Don't use text-to-speech for hoverhelp prompts.</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>1.0.0910</xVersion>
+		<xChanges>
+			<xMisc>The first release version of Dragonfly.</xMisc>
+		</xChanges>
+	</tr>
+</Table>

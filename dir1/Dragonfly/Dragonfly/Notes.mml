@@ -1,0 +1,60 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Notes"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=211/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Notes
+</xPageTitle>
+
+<p>
+	The "Notes" page lets you quickly write a note to yourself, just as if you
+	were writing on a small scrap of paper.
+</p>
+<xbr/>
+
+<p>
+	To add a note, type it in here and press "Add note":
+</p>
+<<<$ENDIFMICROHELP>>>
+
+<p align=center><big>
+	<edit color=#ffffc0 width=50% height=30% multiline=true selall=true maxchars=1024 defcontrol=true wordwrap=true text="Type your note in here." name=notetext selall=true/>
+	<br/>
+	<bold><small><filteredlist width=50% cbheight=150 blank="No category" additem="Add a new category" listname=notes sort=true name=category/></small></bold>
+	<br/>
+	<button style=uptriangle name=add>Add note</button>
+</big></p>
+
+<!xNote>
+	<table width=100% innerlines=0 border=0>
+		<tr>
+			<td bgcolor=#ffffc0 innerlines=4 border=2>
+				<align parlinespacing=0><?MACROCONTENT?></align>
+			</td>
+		</tr>
+		<tr>
+			<td align=left>
+				<button style=uparrow>Edit</button>
+			</td>
+			<td align=right>
+				<button style=uparrow MACROATTRIBUTE=1>Delete this</button>
+			</td>
+		</tr>
+	</table>
+</xNote>
+
+<null>
+	<<<$CURRENTNOTES>>>
+</null>
+
+<xbr/>
+
+<xchoicebutton name=remove>
+	<bold>Remove a category name from the list</bold>
+	<br/>
+	Press this button to remove the category currently listed just above the "Add note" button
+	from the list of categories. It won't delete any existing notes using that
+	category.
+</xchoicebutton>

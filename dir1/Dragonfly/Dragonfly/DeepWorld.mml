@@ -1,0 +1,33 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="World's biggest problems"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=219/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	World's biggest problems
+</xPageTitle>
+
+<p>
+	<bold>Write down the five largest challenges that the world
+	faces.</bold> For example: "Overpopulation", or "Poverty."
+</p>
+
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal1 defcontrol=true/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal2/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal3/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal4/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal5/></font>
+</p>
+
+</font>

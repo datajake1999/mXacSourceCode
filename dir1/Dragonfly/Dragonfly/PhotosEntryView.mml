@@ -1,0 +1,78 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="View a photo" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xPageTitle>
+	<<<ENTRYNAME>>>
+</xPageTitle>
+
+<p align=center>
+	<image width=90% border=2 file="<<<FILE>>>" href="!<<<FILE>>>"/>
+</p>
+
+<xTableCenter innerlines=0>
+	<xtheader>Description</xtheader>
+	<tr>
+		<td>
+			<align parlinespacing=0><<<JOURNALNOTES>>></align>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter innerlines=0>
+	<xtheader>Details</xtheader>
+	<tr>
+		<xlt>People mentioned:</xlt>
+		<xrt><<<$ATTENDEES>>></xrt>
+	</tr>
+	<tr>
+		<xlt>Date:</xlt>
+		<xrt><<<$TIME>>></xrt>
+	</tr>
+</xTableCenter>
+
+
+
+<xbr/>
+
+<xChoiceButton name="save:<<<FILE>>>">
+	<bold>Save the image to a file on disk</bold>
+	<br/>
+	Press this if you want to save the photo to disk so you can load it into
+	another application.
+</xChoiceButton>
+
+<xChoiceButton name=wallpaper>
+	<bold>Change your desktop wallpaper to this</bold>
+	<br/>
+	Changes the background image on your desktop to this picture. This won't work
+	if you have the "Active" desktop set. You may need to change your tiling and
+	image stretch for the desktop to in the "Display properties" control panel.
+</xChoiceButton>
+
+
+<xChoiceButton name=edit>
+	<bold>Edit</bold>
+	<br/>
+	Edit the photo entry.
+</xChoiceButton>
+

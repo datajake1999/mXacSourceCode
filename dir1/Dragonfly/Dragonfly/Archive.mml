@@ -1,0 +1,55 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Archive"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Archive
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:234/>The "Archive" page can remember online documents that
+	you view, so you may search through them later. Several years from now,
+	when you remember that you read something on the Internet about a subject,
+	you can look through your archive.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xChoiceButton name=remember>
+	<bold>Remember a document</bold>
+	<br/>
+	To remember a document, copy the text to the clipboard and press this button.
+	The text on the clipboard will be added to the Dragonfly
+	archive. <italic>Tip: If you archive a lot of documents, use Options to
+	turn on the task-bar archive icon and just
+	click on that.</italic> To archive into a specific journal category, select
+	the category below first:
+</xChoiceButton>
+
+<p align=right>
+	<xFilterJournal name=journal width=50%/>
+</p>
+
+<xChoiceButton href=r:232>
+	<bold>View archived documents</bold>
+	<br/>
+	Show a list of archived documents for the month.
+</xChoiceButton>
+
+<xChoiceButton href=r:231>
+	<bold>Options</bold>
+	<br/>
+	Turn on/off the task-bar archive icon so you can easily archive documents.
+</xChoiceButton>
+
+<xChoiceButton name=import>
+	<bold>Import from Possum</bold>
+	<br/>
+	Before putting out Dragonfly, I had an application called Possum that archived documents.
+	If you used Possum, press this button to transfer all your archived documents
+	from Possum to Dragonfly.
+</xChoiceButton>
+

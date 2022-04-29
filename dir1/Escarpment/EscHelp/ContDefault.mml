@@ -1,0 +1,215 @@
+<pageinfo title="Default Control Behavior"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>Default Control Behavior</xPageTitle>
+
+<xSectionTitle>Attributes</xSectionTitle>
+
+<p>
+	All controls understand the following attributes. Just enter them into the tag beginning like any other
+	attribute. You can also set the attributes through CEscControl.
+</p>
+
+<!xSampleImage>
+	<colorblend MACROATTRIBUTE=1 width=20% height=20% tcolor=#80ff80 bcolor=#c0c080/>
+</xSampleImage>
+
+<xTableAttributes>
+	<tr>
+		<xAttribAccel/>
+		<xTd2>accel</xTd2>
+		<xTd3>
+			Specifies an accelerator key sequence, such as "alt-a", that causes control to get focus.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>defcontrol</xTd2>
+		<xTd3>
+			If set to TRUE, this control will have focus when the page first appears.
+			The control must have a name.
+			Only one control can have defcontrol=true set.
+			<p/>
+			Example: This edit control as defcontrol=true
+			<p/>
+			<edit name=editcontrol defcontrol=true>Type text here</edit>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribBool/>
+		<xTd2>enabled</xTd2>
+		<xTd3>
+			Enables or disabled the controls. A disabled control is usually grayed and cannot be clicked.
+			Controls default to enabled.
+			<p/>
+			Example:
+			<p/>
+			<button enabled=true>Enabled button</button>
+			<p/>
+			<button enabled=false>Disabled button</button>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>height</xTd2>
+		<xTd3>
+			Specifies the height of the control either in pixels, or as a percentage of the display regions's width
+			(page width, table width, or cell width.)
+			The height cannot be changed through CEscControl-&gt;AttributeSet().
+			<p/>
+			Controls have defaults for the height in case it's not specified, but the defaults are not always
+			what you want.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>Name</xTd2>
+		<xTd3>
+			Specifies the name of the control. In order for a control to be accessed by your C++ code it must
+			have a unique name.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>Posn</xTd2>
+		<xTd3>
+			Posn tells the text formatting where the control is placed in relation to the neighboring text and controls.
+			It affects how text wrapping behaves around the control.
+			Posn cannot be changed by calling PCEscControl-&gt;AttribSet().
+			<p/>
+			Posn can be one of the following values. The default value for posn is "inlinecenter". The following
+			samples only use a ColorBlend control, but positioning is valid for any control.
+			<p/>
+			<align tab=24><xUl>
+				<li>
+					<colorblend posn=background tcolor=#ffffff bcolor=#c0c0c0/>
+					<bold>background</bold> -
+					The control sits behind the text and it is automatically resized so it fills the entire page, table,
+					or cell. Usually, only use images or colorblends for background controls. The background of
+					this cell is a background object.
+				</li>
+				<li>
+					<bold>edgeleft</bold> - <xSampleImage posn=edgeleft/>
+					Text wraps around the control.
+					The control is placed on the left hand side of the display area.
+				</li>
+				<p/>
+				<li>
+					<bold>edgeleft-</bold> - <xSampleImage posn=edgeleft-/>
+					The control sits behind the text.
+					The control is placed on the left hand side of the display area.
+				</li>
+				<p/>
+				<li>
+					<bold>edgeright</bold> - <xSampleImage posn=edgeright/>
+					Text wraps around the control.
+					The control is placed on the right hand side of the display area.
+				</li>
+				<p/>
+				<li>
+					<bold>edgeright-</bold> - <xSampleImage posn=edgeright-/>
+					The control sits behind the text.
+					The control is placed on the right hand side of the display area.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinebottom</bold> - <xSampleImage posn=inlinebottom/>
+					Text wraps around the control.
+					The control is extends the line's height so it's completely within.
+					The control's bottom is aligned with the bottom of the text.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinebottom-</bold> - <xSampleImage posn=inlinebottom-/>
+					The control sits behind the text.
+					The control is extends the line's height so it's completely within.
+					The control's bottom is aligned with the bottom of the text.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinecenter</bold> - <xSampleImage posn=inlinecenter/>
+					Text wraps around the control.
+					The control is extends the line's height so it's completely within.
+					The control is centered with the text.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinecenter-</bold> - <xSampleImage posn=inlinecenter-/>
+					The control sits behind the text.
+					The control is extends the line's height so it's completely within.
+					The control is centered with the text.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinetop</bold> - <xSampleImage posn=inlinetop/>
+					Text wraps around the control.
+					The control is extends the line's height so it's completely within.
+					The top of the control is made level with the top of the text.
+				</li>
+				<p/>
+				<li>
+					<bold>inlinetop-</bold> - <xSampleImage posn=inlinetop-/>
+					The control sits behind the text.
+					The control is extends the line's height so it's completely within.
+					The top of the control is made level with the top of the text.
+				</li>
+			</xul></align>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>width</xTd2>
+		<xTd3>
+			Specifies the width of the control either in pixels, or as a percentage of the display regions's width
+			(page width, table width, or cell width.)
+			The width cannot be changed through CEscControl-&gt;AttributeSet().
+			<p/>
+			Controls have defaults for the width in case it's not specified, but the defaults are not always
+			what you want.
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+
+
+<xSectionTitle>Contents</xSectionTitle>
+<p>
+	Most controls may have a "HoverHelp" content tag that specifies some sort
+	or help text or definition that's to be displayed when the mouse hovers over the control
+	or when the user presses F1.
+</p>
+
+<p>
+	The &lt;HoverHelp&gt; tag may contain other formatting tags.
+	If you use "hresize=true" in the attributes then the horizontal width
+	is set to the text with; only use this if your text is short.
+</p>
+
+<p>
+	Example: <button>Hover over me<HoverHelp hresize=true>This is help.</hoverhelp></button>
+</p>
+
+<xCode>
+	&lt;button&gt;<br/>
+		&tab;Hover over me<br/>
+		&tab;&lt;HoverHelp hresize=true&gt;This is help.&lt;/HoverHelp&gt;<br/>
+	&lt;/button&gt;<br/>
+</xCode>
+
+
+
+
+<xSectionTitle>Messages</xSectionTitle>
+
+<p>
+	You can send a message to a control by calling PCEscControl-&gt;Message(). To get a hold of the
+	PCEscControl, your page callback needs to call PCEscPage-&gt;ControlFind () with the control's
+	name.
+</p>
+
+<p>
+	Although controls have messages common amongst them, none of the messages are needed
+	by users of the controls. The messages are useful when writing your own control, and are documented
+	under <a href="r:129#messages">CEscControl</a>.
+</p>

@@ -1,0 +1,111 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Combo"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+
+<!xDayOfWeek>
+	<td width=10 bgcolor=#004000>
+		<small><font color=#ffffff><?MacroContent?></font></small>
+	</td>
+</xDayOfWeek>
+
+<!xDay>
+	<td width=10 height=15% MACROATTRIBUTE=1>
+		<small><?Macrocontent?></small>
+	</td>
+</xDay>
+
+<!xdaynull>
+	<xday bgcolor=#c0c0c0/>
+</xdaynull>
+
+<table width=100% innerlines=0 border=0>
+<tr><td width=50%>
+
+<p align=center><bold>
+	<date name=date enterday=false year=2000 month=5 day=30 blank="No date specified" width=66%/>
+	<br/>
+</bold>
+
+<table width=66% lrmargin=1 tbmargin=3 align=center valign=center>
+	<<<$IFCOLOR>>><colorblend posn=background tcolor=#ffffe0 bcolor=#d0d0a0/><<<$ENDIFCOLOR>>>
+	<tr>
+		<xDayOfWeek>S</xDayOfWeek>
+		<xDayOfWeek>M</xDayOfWeek>
+		<xDayOfWeek>T</xDayOfWeek>
+		<xDayOfWeek>W</xDayOfWeek>
+		<xDayOfWeek>Th</xDayOfWeek>
+		<xDayOfWeek>F</xDayOfWeek>
+		<xDayOfWeek>S</xDayOfWeek>
+	</tr>
+	<<<$MONTH>>>
+</table>
+</p>
+
+<small>
+	<<<$REMINDERSUMMARY>>>
+</small>
+
+<small>
+	<<<$WORKSUMMARY>>>
+</small>
+
+<small>
+	<<<$PROJECTSUMMARY>>>
+</small>
+
+<small>
+	<<<$CALENDARLOG>>>
+</small>
+
+<small><p align=center><table width=80%>
+	<xtrheader>Deeply random thought of the day</xtrheader>
+	<tr>
+		<td>
+			<image posn=background type=tile scale=75% jpgresource=219/>
+			<font color=#ffffff><<<$DEEPTHOUGHT>>></font>
+		</td>
+	</tr>
+</table></p></small>
+
+
+</td><td width=50%>
+
+<<<$IFNOTPRINT>>>
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Combo
+</xPageTitle>
+
+<p>
+	This page is a combination of the <a href=r:112>Calendar</a> and <a href=r:239>List</a>, and <a href=r:109>Today</a> pages.
+</p>
+<<<$ENDIFMICROHELP>>>
+<<<$ENDIFNOTPRINT>>>
+
+<p align=right>
+	<big><bold><<<$TODAYSDATE>>></bold></big>
+</p>
+
+<Null>
+	<<<$WRAPUP>>>
+</null>
+
+<small>
+	<<<$MEETINGSUMMARY>>>
+</small>
+
+</td></tr>
+</table>
+
+<<<$IFNOTPRINT>>>
+<xbr/>
+
+<xChoiceButton href=r:291>
+	<bold>Change your scheduled breaks</bold>
+	<br/>
+	This page lets you change what time you usually start work, when you have lunch
+	and for how long, and when you have dinner.
+</xChoiceButton>
+<<<$ENDIFNOTPRINT>>>

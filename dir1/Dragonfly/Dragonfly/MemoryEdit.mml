@@ -1,0 +1,118 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Edit a memory" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=218/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Edit a memory
+</xPageTitle>
+
+<xbr/>
+
+<br>
+	Type in your memory here:
+</br>
+
+<p align=center>
+	<edit name=summary width=80% height=50% multiline=true wordwrap=true maxchars=10000 vscroll=editscroll defcontrol=true/>
+	<scrollbar orient=vert name=editscroll height=50%/>
+</p>
+
+<p>
+	When you've finished with your memory, please fill in the following
+	information (if appropriate):
+</p>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			One-line summary of the memory:
+			<br/>
+			<font color=#c00000>(Required)</font>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What month and year did the event happen (approximately):
+			<br/>
+			<font color=#c00000>(Required)</font>
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No date set" enterday=false width=100% name=meetingdate/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Where did the memory occur?
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=place/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			People in the memory:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person1 width=100%/>
+			<xFilterPersonBusiness name=person2 width=100%/>
+			<xFilterPersonBusiness name=person3 width=100%/>
+			<xFilterPersonBusiness name=person4 width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What kind of memory?
+		</xtdleft>
+		<xtdright>
+			<combobox name=memorytype width=100% cbheight=100 cursel=0>
+				<elem name="Real memory of actual events"><bold>Real memory of actual events</bold></elem>
+				<elem name=Dream><bold>Dream</bold></elem>
+				<elem name="Thought or impression"><bold>Thought or impression</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What it a good memory?
+		</xtdleft>
+		<xtdright>
+			<combobox name=goodmemory width=100% cbheight=100 cursel=2>
+				<elem name="Very good memory"><bold>Very good memory</bold></elem>
+				<elem name="Good memory"><bold>Good memory</bold></elem>
+				<elem name="Typical memory"><bold>Typical memory</bold></elem>
+				<elem name="Bad memory"><bold>Bad memory</bold></elem>
+				<elem name="Very bad memory"><bold>Very bad memory</bold></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Link to journal category:
+			<p/>
+			<small>Select a journal category if you want to cross-link the memory to
+			a project you're working on.</small>
+		</xtdleft>
+		<xtdright><xFilterJournal name=journal/></xtdright>
+	</tr>
+
+</xTableClear>
+
+<xbr/>
+
+<p>
+	Your changes will automatically be saved; when you're finished editing just
+	switch to another page.
+</p>
+
+<xChoiceButton name=quickadd>
+	<bold>I just thought of another memory</bold>
+	<br/>
+	I just thought of a memory but I don't have time to fill in all the details.
+	This lets you quickly write down its name so you can get back to it later.
+</xChoiceButton>
+
+

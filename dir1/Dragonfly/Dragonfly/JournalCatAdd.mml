@@ -1,0 +1,93 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Add a new journal category"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Add a new journal category
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:194/>This lets you add a new journal category to your
+	list. Journal categories allow you to index your journal entries according
+	to their subject, making them easier to browse later on. For example, you
+	might have one journal category for "My weight", another for
+	"Good ideas" and a third for "Dreams and nightmares."
+</p>
+
+<p>
+	This page lets you add a category. To do so, type in the name of the
+	category, such as "My weight". Then, if the category always applies to
+	certain people, enter their names below. And, if there are any commonly
+	written numbers, such as a weight, make sure to type them in too.
+	Dragonfly can copy the numerical history to the clipboard so your
+	favorite spreadsheet can graph them.
+</p>
+
+<xbr/>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Name of the category:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name defcontrol=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Who should be linked to journal entries from this category?
+			<p/>
+			<small>
+				If you specify names any journal entries from this category will
+				be automatically linked to them. For example, if you were
+				creating a category for "Billy's weight and height" then you would
+				select "Billy" so that when you look in his address book entries
+				you would find links to his weight and height.
+				Alternatively, you can leave this
+				blank.
+			</small>
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=person1 width=100%/>
+			<xFilterPersonBusiness name=person2 width=100%/>
+			<xFilterPersonBusiness name=person3 width=100%/>
+			<xFilterPersonBusiness name=person4 width=100%/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What are the names of the numerical values to remember with the entry?
+			<p/>
+			<small>
+				You can enter up to four value names.
+				For example, if you were
+				creating a category for "Billy's weight and height" then you would
+				type "Weight (kg)" into one edit box, and "Height (cm)" into another.
+				Alternatively, you can leave this blank.
+			</small>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=value1/><br/>
+			<xEditInTable name=value2/><br/>
+			<xEditInTable name=value3/><br/>
+			<xEditInTable name=value4/>
+		</xtdright>
+	</tr>
+</xtableclear>
+
+<xbr/>
+
+<p>
+	When you've entered the category's name, and optionally, the people to
+	link to and numerical measurements,
+	press "Add category" to add it.
+</p>
+
+<align align=right>
+	<button name=add>
+		Add category
+	</button>
+</align>
+

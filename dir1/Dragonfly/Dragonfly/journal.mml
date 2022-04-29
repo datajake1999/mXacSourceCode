@@ -1,0 +1,46 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Journal"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=212/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Journal
+</xPageTitle>
+
+<p>
+	<xMoreInfo href=r:194/>The "Journal" page lets you take notes down that you
+	may want to retrieve later. All the entries are cross-indexed with the people and
+	dates mentioned in the journal.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<!xJournalBlank>
+	<td width=50%/>
+</xJournalBlank>
+
+<!xJournalButton>
+	<td width=50%>
+		<bold><button style=rightarrow MACROATTRIBUTE=1>
+			<?MacroContent?>
+		</button></bold>
+	</td>
+</xJournalButton>
+<null>
+	<<<$CATEGORIES>>>
+</null>
+
+<xChoiceButton href=r:188>
+	<bold>Add a journal category</bold>
+	<br/>
+	Adds a new journal category to the list, such as "Billy's height and weight" or
+	"My great ideas."
+</xChoiceButton>
+
+<xChoiceButton href=r:189>
+	<bold>Remove journal category</bold>
+	<br/>
+	Remove a journal category from the list.
+</xChoiceButton>

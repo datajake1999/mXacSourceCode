@@ -1,0 +1,103 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Documentation"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Documentation
+</xPageTitle>
+
+<p>
+	This page gives you access to documentation and miscellaneous
+	functionality.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<xChoiceButton href=r:131>
+	<bold>Overview</bold>
+	<br/>
+	Provides an overview of Dragonfly, including its functionality.
+</xChoiceButton>
+
+<xChoiceButton href=r:133>
+	<bold>Theory</bold>
+	<br/>
+	This tells you what I'm trying to accomplish with Dragonfly and the theory
+	behind its design.
+</xChoiceButton>
+
+<xbr/>
+
+
+<xSectionTitle>Registration</xSectionTitle>
+
+<xChoiceButton href=r:136>
+	<bold>Register your copy of Dragonfly</bold>
+	<br/>
+	Register your copy of Dragonfly so that you get full functionality.
+	Unless you pay for it, Dragonfly will slowly stop working over time.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Bugs, feature requests, and feedback</xSectionTitle>
+
+<xChoiceButton href=r:187>
+	<bold>If you like Dragonfly...</bold>
+	<br/>
+	I can use all the word-of-mouth advertising I can get.
+</xChoiceButton>
+
+<xChoiceButton href=r:134>
+	<bold>Bugs and features</bold>
+	<br/>
+	If you find any bugs or have any feature requests, this will tell you how
+	to contact me.
+</xChoiceButton>
+
+<xChoiceButton href=r:135>
+	<bold>Revision history</bold>
+	<br/>
+	A list of bug fixes and feature additions/improvements that have been made
+	to Dragonfly over time.
+</xChoiceButton>
+
+<xChoiceButton href=r:130>
+	<bold>About box</bold>
+	<br/>
+	Tells you the version of Dragonfly that you're using.
+</xChoiceButton>
+
+<xbr/>
+
+
+
+
+<xSectionTitle>Options</xSectionTitle>
+
+<xChoiceButton href=r:242>
+	<bold>Look and feel</bold>
+	<br/>
+	Adjust Dragonfly's look and feel, such as whether it uses background images and
+	how much help text is displayed.
+</xChoiceButton>
+
+<xChoiceButton href=r:231>
+	<bold>Archiving</bold>
+	<br/>
+	Turn on/off the task-bar archive icon so you can easily archive documents.
+</xChoiceButton>
+
+<xChoiceButton href=r:137>
+	<bold>Text-to-speech</bold>
+	<br/>
+	If Dragonfly isn't already talking to you, you can download a
+	SAPI speech synthesizer and it will speak important prompts.
+</xChoiceButton>
+

@@ -1,0 +1,46 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="If you like Dragonfly..."/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=215/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	If you like Dragonfly...
+</xPageTitle>
+
+<p>
+	I am a one person operation; I do all the design, development, testing, documentation,
+	and <bold>marketing</bold> myself. I suck at marketing. Therefore, I need
+	as much word-of-mouth advertising as possible.
+</p>
+
+<p>
+	If you like Dragonfly...
+</p>
+
+<xul>
+	<li>
+		<bold>Tell your friends.</bold>
+	</li>
+	<li>
+		<bold>Please fill in a "User feedback/rating" form</bold> on the
+		download web-site (such
+		as <a href="http://download.cnet.com/downloads/0-10021-100-4798496.html?tag=st.dl.10001-103-1.lst-7-2.4798496">Download.com</a>, 
+		<a href="http://www.bpsoftware.com/asp/PrdRate.asp?idn=2489">BPSoftware.com</a>, 
+		<a href="http://www.supershareware.com/ASP/Buildframe.asp?URL=PostReview&amp;ID=12481&amp;S=Personal+Info+Managers&amp;O=&amp;License=&amp;P=1">SuperShareWare.com</a>, 
+		<a href="http://itprodownloads.com/filedownload?fileid=220117">File Mine/IT Pro</a>, 
+		<a href="http://www.download32.com/proghtml/174/17497.htm">Download32.com</a>, 
+		<a href="http://www.winsite.com/bin/Info?5918">WinSite</a>, 
+		<a href="http://www.yippee.net/html/win/business/title8912.htm">Yippee.net</a>, 
+		<a href="http://www.zdnet.com/downloads/stories/info/0,10615,69321,00.html">ZDNet</a>) where
+		you found Dragonfly. That way other users will hear about Dragonfly.
+	</li>
+	<li>
+		<a href=r:136>Register</a> and pay for your copy of Dragonfly. I need to pay
+		the bills too.
+	</li>
+</xul>
+
+<p>
+	If you don't like Dragonfly, please tell me. I may be able to fix the problem.
+	Send E-mail to <xMyEmail/>. See <a href=r:134>Bugs and Features</a> for more details.
+</p>

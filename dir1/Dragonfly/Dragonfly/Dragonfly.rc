@@ -1,0 +1,312 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_APP
+#define VER_FILE_DESC "Dragonfly"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "Dragonfly.exe\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_APP\r\n"
+    "#define VER_FILE_DESC ""Dragonfly""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""Dragonfly.exe\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+IDI_ARCHIVE             ICON                    "icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_LOGO                JPG                     "Logo150.jpg"
+IDR_LOGIN               JPG                     "LogIn.jpg"
+IDR_ARCHIVE             JPG                     "Archive.jpg"
+IDR_JPGREMINDERS        JPG                     "Reminders.jpg"
+IDR_JPGTASKS            JPG                     "Tasks.jpg"
+IDR_JPGPROJECTS         JPG                     "Projects.jpg"
+IDR_JPGPHONE            JPG                     "Phone.jpg"
+IDR_JPGNOTES            JPG                     "Notes.jpg"
+IDR_JPGJOURNAL          JPG                     "Journal.jpg"
+IDR_JPGTODAY            JPG                     "Today.jpg"
+IDR_JPGCALENDAR         JPG                     "Calendar.jpg"
+IDR_JPGMISC             JPG                     "Misc.jpg"
+IDR_JPGSEARCH           JPG                     "Search.jpg"
+IDR_JPGPEOPLE           JPG                     "People.jpg"
+IDR_JPGMEMORYLANE       JPG                     "MemoryLane.jpg"
+IDR_JPGDEEPTHOUGHTS     JPG                     "DeepThoughts.jpg"
+IDR_JPGWRAPUP           JPG                     "WrapUp.jpg"
+IDR_JPGMEETING          JPG                     "Meeting.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "Macros.mml"
+IDR_MMLTEMPLATE         MML                     "Template.mml"
+IDR_MMLTEMPLATE2        MML                     "Template2.mml"
+IDR_MMLLOGONFIRSTTIME   MML                     "LogOnFirstTime.mml"
+IDR_MMLLOGONNEWUSER     MML                     "LogOnNewUser.mml"
+IDR_MMLLOGONASKUSER     MML                     "LogOnAskUser.mml"
+IDR_MMLTODAY            MML                     "Today.mml"
+IDR_MMLNYI              MML                     "nyi.mml"
+IDR_MMLCALENDAR         MML                     "calendar.mml"
+IDR_MMLMEETINGS         MML                     "meetings.mml"
+IDR_MMLREMINDERS        MML                     "Reminders.mml"
+IDR_MMLTASKS            MML                     "Tasks.mml"
+IDR_MMLNOTES            MML                     "Notes.mml"
+IDR_MMLPHONE            MML                     "Phone.mml"
+IDR_MMLPEOPLE           MML                     "people.mml"
+IDR_MMLJOURNAL          MML                     "journal.mml"
+IDR_MMLMEMORYLANE       MML                     "MemoryLane.mml"
+IDR_MMLARCHIVE          MML                     "Archive.mml"
+IDR_MMLDEEPTHOUGHTS     MML                     "DeepThoughts.mml"
+IDR_MMLSEARCH           MML                     "Search.mml"
+IDR_MMLMISC             MML                     "Misc.mml"
+IDR_MMLABOUT            MML                     "About.mml"
+IDR_MMLOVERVIEW         MML                     "Overview.mml"
+IDR_MMLTHEORY           MML                     "Theory.mml"
+IDR_MMLBUGS             MML                     "Bugs.mml"
+IDR_MMLHISTORY          MML                     "History.mml"
+IDR_MMLREGISTER         MML                     "Register.mml"
+IDR_MMLTTS              MML                     "tts.mml"
+IDR_MMLNEWPERSON        MML                     "NewPerson.mml"
+IDR_MMLLOGONFROMBACKUP  MML                     "LogOnFromBackup.mml"
+IDR_MMLLOGONDELETE      MML                     "LogOnDelete.mml"
+IDR_MMLPEOPLELOOKUP     MML                     "PeopleLookUp.mml"
+IDR_MMLPEOPLELIST       MML                     "PeopleList.mml"
+IDR_MMLPEOPLEINFO       MML                     "PeopleInfo.mml"
+IDR_MMLPROJECT          MML                     "Project.mml"
+IDR_MMLPROJECTADD       MML                     "ProjectAdd.mml"
+IDR_MMLPROJECTREMOVE    MML                     "ProjectRemove.mml"
+IDR_MMLPROJECTVIEW      MML                     "ProjectView.mml"
+IDR_MMLPROJECTTASKADD   MML                     "ProjectTaskAdd.mml"
+IDR_MMLPROJECTTASKADDMULTILE MML                     "ProjectTaskAddMultiple.mml"
+IDR_MMLPROJECTNEWSUBPROJECT MML                     "ProjectNewSubProject.mml"
+IDR_MMLPROJECTTASKEDIT  MML                     "ProjectTaskEdit.mml"
+IDR_MMLTEMPLATE3        MML                     "Template3.mml"
+IDR_MMLPROJECTINFO      MML                     "ProjectInfo.mml"
+IDR_MMLREMINDERINFO     MML                     "ReminderInfo.mml"
+IDR_MMLTASKADD          MML                     "TaskAdd.mml"
+IDR_MMLTASKEDIT         MML                     "TaskEdit.mml"
+IDR_MMLREOCCUR          MML                     "Reoccur.mml"
+IDR_MMLTASKADDREOCCUR   MML                     "TaskAddReoccur.mml"
+IDR_MMLTASKEDITREOCCUR  MML                     "TaskEditReoccur.mml"
+IDR_MMLTASKINFO         MML                     "TaskInfo.mml"
+IDR_MMLPERSONVIEW       MML                     "PersonView.mml"
+IDR_MMLPERSONADDEDITINCLUDE MML                     "PersonAddEditInclude.mml"
+IDR_MMLPERSONEDIT       MML                     "PersonEdit.mml"
+IDR_MMLPERSONQUICKADD   MML                     "PersonQuickAdd.mml"
+IDR_MMLMEETINGADD       MML                     "MeetingAdd.mml"
+IDR_MMLMEETINGADDREOCCUR MML                     "MeetingAddReoccur.mml"
+IDR_MMLMEETINGEDIT      MML                     "MeetingEdit.mml"
+IDR_MMLMEETINGEDITREOCCUR MML                     "MeetingEditReoccur.mml"
+IDR_MMLMEETINGNOTESEDIT MML                     "MeetingNotesEdit.mml"
+IDR_MMLMEETINGNOTESVIEW MML                     "MeetingNotesView.mml"
+IDR_MMLMEETINGACTIONOTHER MML                     "MeetingActionOther.mml"
+IDR_MMLMEETINGACTIONSELF MML                     "MeetingActionSelf.mml"
+IDR_MMLMEETINGINFO      MML                     "MeetingInfo.mml"
+IDR_MMLPHONEMAKECALL    MML                     "PhoneMakeCall.mml"
+IDR_MMLPHONENOTESEDIT   MML                     "PhoneNotesEdit.mml"
+IDR_MMLPHONENOTESVIEW   MML                     "PhoneNotesView.mml"
+IDR_MMLPHONECALLLOG     MML                     "PhoneCallLog.mml"
+IDR_MMLPHONESPEEDNEW    MML                     "PhoneSpeedNew.mml"
+IDR_MMLPHONESPEEDREMOVE MML                     "PhoneSpeedRemove.mml"
+IDR_MMLPHONEINFO        MML                     "PhoneInfo.mml"
+IDR_MMLCALENDARINFO     MML                     "CalendarInfo.mml"
+IDR_MMLCALENDARLOG      MML                     "CalendarLog.mml"
+IDR_MMLTOMORROW         MML                     "Tomorrow.mml"
+IDR_MMLTODAYINFO        MML                     "TodayInfo.mml"
+IDR_MMLIFYOULIKE        MML                     "IfYouLike.mml"
+IDR_MMLJOURNALCATADD    MML                     "JournalCatAdd.mml"
+IDR_MMLJOURNALCATREMOVE MML                     "JournalCatRemove.mml"
+IDR_MMLJOURNALCAT       MML                     "JournalCat.mml"
+IDR_MMLJOURNALENTRYEDIT MML                     "JournalEntryEdit.mml"
+IDR_MMLJOURNALENTRYVIEW MML                     "JournalEntryView.mml"
+IDR_MMLJOURNALINFO      MML                     "JournalInfo.mml"
+IDR_MMLMEMORYEDIT       MML                     "MemoryEdit.mml"
+IDR_MMLMEMORYVIEW       MML                     "MemoryView.mml"
+IDR_MMLMEMORYQUICKADD   MML                     "MemoryQuickAdd.mml"
+IDR_MMLMEMORYLIST       MML                     "MemoryList.mml"
+IDR_MMLMEMORYSUGGEST    MML                     "MemorySuggest.mml"
+IDR_MMLMEMORYINFO       MML                     "MemoryInfo.mml"
+IDR_MMLWRAPUP           MML                     "WrapUp.mml"
+IDR_MMLDEEPPEOPLE       MML                     "DeepPeople.mml"
+IDR_MMLDEEPSHORT        MML                     "DeepShort.mml"
+IDR_MMLDEEPLONG         MML                     "DeepLong.mml"
+IDR_MMLDEEPCHANGE       MML                     "DeepChange.mml"
+IDR_MMLDEEPWORLD        MML                     "DeepWorld.mml"
+IDR_MMLWRAPUPEDIT       MML                     "WrapUpEdit.mml"
+IDR_MMLWRAPUPVIEW       MML                     "WrapUpView.mml"
+IDR_MMLSEARCHINFO       MML                     "SearchInfo.mml"
+IDR_MMLARCHIVEOPTIONS   MML                     "ArchiveOptions.mml"
+IDR_MMLARCHIVELIST      MML                     "ArchiveList.mml"
+IDR_MMLARCHIVEVIEW      MML                     "ArchiveView.mml"
+IDR_MMLARCHIVEINFO      MML                     "ArchiveInfo.mml"
+IDR_MMLCALENDARHOLIDAYS MML                     "CalendarHolidays.mml"
+IDR_MMLPEOPLEPRINT      MML                     "PeoplePrint.mml"
+IDR_MMLCALENDARLIST     MML                     "CalendarList.mml"
+IDR_MMLBACKUP           MML                     "Backup.mml"
+IDR_MMLCHANGEPASSWORD   MML                     "ChangePassword.mml"
+IDR_MMLMISCUI           MML                     "MiscUI.mml"
+IDR_MMLPEOPLEIMPORT     MML                     "PeopleImport.mml"
+IDR_MMLJOURNALQUICKADD  MML                     "JournalQuickAdd.mml"
+IDR_MMLHOWLONG          MML                     "HowLong.mml"
+IDR_MMLNOTESADDCATEGORY MML                     "NotesAddCategory.mml"
+IDR_MMLJOURNALTIMEREND  MML                     "JournalTimerEnd.mml"
+IDR_MMLNOTESEDIT        MML                     "NotesEdit.mml"
+IDR_MMLARCHIVEEDIT      MML                     "ArchiveEdit.mml"
+IDR_MMLPHONEWHICHNUMBER MML                     "PhoneWhichNumber.mml"
+IDR_MMLTOC              MML                     "TOC.mml"
+IDR_MMLFAVORITESADD     MML                     "FavoritesAdd.mml"
+IDR_MMLFAVORITES        MML                     "Favorites.mml"
+IDR_MMLFAVORITESEDIT    MML                     "FavoritesEdit.mml"
+IDR_MMLNOTESQUICKADD    MML                     "NotesQuickAdd.mml"
+IDR_MMLREMINDERQUICKADD MML                     "ReminderQuickAdd.mml"
+IDR_MMLCALENDARCOMBO    MML                     "CalenderCombo.mml"
+IDR_MMLBUSINESSQUICKADD MML                     "BusinessQuickAdd.mml"
+IDR_MMLPERSONBUSINESSQUICKADD MML                     "PersonBusinessQuickAdd.mml"
+IDR_MMLBUSINESSADDEDITINCLUDE MML                     "BusinessAddEditInclude.mml"
+IDR_MMLNEWBUSINESS      MML                     "NewBusiness.mml"
+IDR_MMLBUSINESSEDIT     MML                     "BusinessEdit.mml"
+IDR_MMLBUSINESSVIEW     MML                     "BusinessView.mml"
+IDR_MMLCALENDARSUMMARY  MML                     "CalendarSummary.mml"
+IDR_MMLPHONESCHEDADD    MML                     "PhoneSchedAdd.mml"
+IDR_MMLPHONESCHEDEDIT   MML                     "PhoneSchedEdit.mml"
+IDR_MMLPHONESCHEDADDREOCCUR MML                     "PhoneSchedAddReoccur.mml"
+IDR_MMLPHONESCHEDEDITREOCCUR MML                     "PhoneSchedEditReoccur.mml"
+IDR_MMLCALENDARYEARLY   MML                     "CalendarYearly.mml"
+IDR_MMLPASSWORD         MML                     "Password.mml"
+IDR_MMLPASSWORDEDIT     MML                     "PasswordEdit.mml"
+IDR_MMLPASSWORDADD      MML                     "PasswordAdd.mml"
+IDR_MMLPASSWORDVERIFY   MML                     "PasswordVerify.mml"
+IDR_MMLTIMEZONES        MML                     "TimeZones.mml"
+IDR_MMLTIMEMOON         MML                     "TimeMoon.mml"
+IDR_MMLTIMESUNLIGHT     MML                     "TimeSunlight.mml"
+IDR_MMLEVENT            MML                     "Event.mml"
+IDR_MMLEVENTADD         MML                     "EventAdd.mml"
+IDR_MMLEVENTEDIT        MML                     "EventEdit.mml"
+IDR_MMLPHOTOS           MML                     "Photos.mml"
+IDR_MMLPHOTOSINFO       MML                     "PhotosInfo.mml"
+IDR_MMLPHOTOSADD        MML                     "PhotosAdd.mml"
+IDR_MMLPHOTOSENTRYVIEW  MML                     "PhotosEntryView.mml"
+IDR_MMLPHOTOSENTRYEDIT  MML                     "PhotosEntryEdit.mml"
+IDR_MMLPLANNER          MML                     "Planner.mml"
+IDR_MMLPLANNERINFO      MML                     "PlannerInfo.mml"
+IDR_MMLPLANNERMENU      MML                     "PlannerMenu.mml"
+IDR_MMLPLANNERBREAKS    MML                     "PlannerBreaks.mml"
+IDR_MMLALARM            MML                     "Alarm.mml"
+IDR_MMLREMINDERADDREOCCUR MML                     "ReminderAddReoccur.mml"
+IDR_MMLTIMEZONEADD      MML                     "TimeZoneAdd.mml"
+IDR_MMLPEOPLEEXPORT     MML                     "PeopleExport.mml"
+IDR_MMLHISTORY1         MML                     "History1.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_UPARROW             BITMAP                  "bitmap1.bmp"
+IDB_DOWNARROW           BITMAP                  "uparrow1.bmp"
+IDB_SPACEARROW          BITMAP                  "spacearr.bmp"
+IDB_ARCHIVE             BITMAP                  "archive.bmp"
+IDB_X                   BITMAP                  "bmp00001.bmp"
+IDB_EARTH               BITMAP                  "world1.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLCALENDARYEARLY2  MML                     "CalendarYearly2.mml"
+IDR_MMLPAGEERROR        MML                     "pageerror.mml"
+IDR_MMLPASSWORDSUSPEND  MML                     "PasswordSusped.mml"
+IDR_MMLPASSWORDSUSPENDVERIFY MML                     "PasswordSuspendVerify.mml"
+IDR_MMLTEMPLATER        MML                     "templateR.mml"
+IDR_MMLPROJECTTASKSPLIT MML                     "ProjectTaskSplit.mml"
+IDR_MMLQUOTES           MML                     "Quotes.mml"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,32 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Calendar page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=214/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Calendar" page
+</xPageTitle>
+
+<p>
+	The <a href=r:112>Calendar</a> page, would you guess it, shows you a
+	monthly calendar. You can use this page to see how many days in a particular
+	month or what day of the week a day is, just like a normal paper calendar.
+</p>
+
+<p>
+	The calendar also shows you any upcoming meetings, tasks, reminders, or
+	project tasks. Just move the mouse over the word "Meeting", "Task", "Reminder",
+	or "Project" to see the specifics. <italic>(I'd really like to show all the text in
+	the date box, but unfortunately, that would require some pretty tiny text or
+	very short abbreviations.)</italic>
+</p>
+
+<p>
+	Plus, if you click on a date gone-by you can see a log of everything you did
+	that day, including meetings, tasks, phone calls, and journal entries.
+</p>
+
+<p>
+	You can also see a <a href=r:270>annual calendar by months</a>, or the <a href=r:297>annual calendar by weeks</a>, or a <a href=r:258>combination</a> of
+	the calendar and task lists.
+</p>

@@ -1,0 +1,49 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Archive log"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=206/><<<$ENDIFCOLOR>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Archive log
+</xPageTitle>
+
+<p>
+	This shows you what documents were archived in the specified month.
+	You can also access archived documents through <a href=r:128>Search</a>.
+</p>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+<p align=right><big><big>
+	<date name=date enterday=false blank="No month specified" width=33%/>
+</big></big></p>
+<!xTHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtheader>
+
+<!xlt>
+	<xtdleft valign=top>
+		<?MacroContent?>
+	</xtdleft>
+</xlt>
+
+<!xrt>
+	<xtdright valign=top><bold>
+		<?MacroContent?>
+	</bold></xtdright>
+</xrt>
+
+<xTableCenter>
+	<xtheader>Archived documents</xtheader>
+	<<<$LOG>>>
+</xtablecenter>
+
+<xChoiceButton name=remove>
+	<bold>Delete an entry</bold>
+	<br/>
+	Delete an archived document from Dragonfly.
+</xChoiceButton>

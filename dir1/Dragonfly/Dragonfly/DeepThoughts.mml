@@ -1,0 +1,52 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Randomly Deep Thoughts"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=219/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Randomly Deep Thoughts
+</xPageTitle>
+
+<p>
+	Use the "Deep thoughts" section to think about and write down what really matters
+	to you. Enter the most important people in your life, goals, things to improve
+	about yourself, and the world's largest problems.
+</p>
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+
+<xChoiceButton href=r:223>
+	<bold>Most important people</bold>
+	<br/>
+	Write down who the most important people in the world are to you.
+</xChoiceButton>
+
+<xChoiceButton href=r:224>
+	<bold>Short term goals</bold>
+	<br/>
+	Write down your short term goals, such as "Take a vacation in Australia."
+</xChoiceButton>
+
+<xChoiceButton href=r:225>
+	<bold>Long term goals</bold>
+	<br/>
+	Write down your long term goals, such as "Buy a house."
+</xChoiceButton>
+
+<xChoiceButton href=r:226>
+	<bold>Things to change</bold>
+	<br/>
+	Write down the five aspects of your life that you'd most like to change and improve.
+</xChoiceButton>
+
+<xChoiceButton href=r:227>
+	<bold>World's biggest problems</bold>
+	<br/>
+	Write down the top five problems that the world faces, such as "Overpopulation."
+</xChoiceButton>
+
+</font>

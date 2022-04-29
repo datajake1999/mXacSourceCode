@@ -1,0 +1,17 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Call someone"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Call someone
+</xPageTitle>
+
+<p>
+	Please select the person or business you wish to call. The computer will dial the
+	number as soon as you select:
+</p>
+
+<p align=center>
+	<xFilterPersonBusiness width=80% name=person/>
+</p>

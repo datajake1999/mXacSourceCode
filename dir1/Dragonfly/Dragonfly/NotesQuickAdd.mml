@@ -1,0 +1,53 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add a note" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button href=ok accel=enter>
+		<font color=#ffffff>Add note</font>
+		<xhoverhelp>
+			Press this to add the note.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=escape>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Add a note
+</xPageTitle>
+
+
+<p>
+	To add a note, type it in here and press "Add note":
+</p>
+
+<p align=center><big>
+	<edit color=#ffffc0 width=50% height=30% multiline=true selall=true maxchars=1024 defcontrol=true wordwrap=true text="Type your note in here." name=notetext selall=true/>
+	<br/>
+	<bold><small><filteredlist width=50% cbheight=150 blank="No category" additem="Add a new category" listname=notes sort=true name=category/></small></bold>
+</big></p>
+
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button href=ok>
+		<font color=#ffffff>Add note</font>
+		<xhoverhelp>
+			Press this to add the note.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

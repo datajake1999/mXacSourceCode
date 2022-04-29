@@ -1,0 +1,19 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Edit address book entry" index=false/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=217/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	Edit address book entry
+</xPageTitle>
+
+<p>
+	Make any changes you wish to make an then press
+	the "OK" button at the bottom of the page.
+</p>
+
+<?Include resource=261?>
+
+<align align=right>
+	<button name=add>OK</button>
+</align>

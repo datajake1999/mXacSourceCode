@@ -1,0 +1,157 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Modify a task" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr>
+<td bgcolor=#000000 align=left>
+	<button href=cancel accel=cancel>
+		<font color=#ffffff>Cancel</font>
+	</button>
+</td>
+<td bgcolor=#000000 align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>OK</font>
+	</button>
+</td>
+</tr>
+<tr><td>
+
+<xPageTitle>
+	Modify a task
+</xPageTitle>
+
+<xChoiceButton name=markcompleted>
+	<bold>Mark the task as completed</bold>
+	<br/>
+	Press this when you've completed the task so it's removed from the list.
+</xChoiceButton>
+
+<xChoiceButton name=timer>
+	<bold>Start a work timer</bold>
+	<br/>
+	This starts a timer so you can keep track of how much time you're spending
+	on the task. When you stop working on the task press the Work Timer link
+	in the menu bar.
+</xChoiceButton>
+
+<xChoiceButton href=split>
+	<bold>Split this task</bold>
+	<br/>
+	Splits the task into several sub-tasks. Use this if your task is too large to
+	work with (such as several days in length) and you need it in terms of
+	smaller tasks.
+</xChoiceButton>
+
+<xChoiceButton name=deletetask>
+	<bold>Delete this task</bold>
+	<br/>
+	Press this if the task is no longer relevent to the project.
+</xChoiceButton>
+
+<xbr/>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Task name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=name defcontrol=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Description of the task:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=512 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How many days of work will the task take? <italic>(You can use decimal numbers, like 0.25.)</italic>
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=daysofwork text=1/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Assigned to:
+		</xtdLeft>
+		<xtdright>
+			<xFilterPersonBusiness name=assignedto blank=Yourself/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Sub-project:
+		</xtdLeft>
+		<xtdright>
+			<xFilterSubProject name=subproject/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+<xbr/>
+<xlisttable>
+	<tr>
+		<td bgcolor=#004000>
+			<font color=#ffffff><big>Constraints</big></font>
+		</td>
+	</tr>
+	<tr>
+		<xtdleft>
+			The task cannot be started until <bold>after</bold>:
+		</xtdleft>
+		<xtdright>
+			<bold><date blank="Not specified" width=100% name=dateafter/></bold>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must cannot be started until <edit width=50 text=1 name=daysafter selall=true/> days <bold>after</bold>:
+		</xtdleft>
+		<xtdright>
+			<xfilterprojecttask width=100% name=taskafter/>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must be completed <bold>before</bold>:
+		</xtdleft>
+		<xtdright>
+			<bold><date blank="Not specified" width=100% name=datebefore/></bold>
+		</xtdright>
+	</tr>
+
+	<tr>
+		<xtdleft>
+			The task must be completed <edit width=50 text=1 name=daysbefore selall=true/> days <bold>before</bold>:
+		</xtdleft>
+		<xtdright>
+			<xfilterprojecttask width=100% name=taskbefore/>
+		</xtdright>
+	</tr>
+</xlisttable>
+
+
+
+</td></tr>
+
+<tr>
+<td bgcolor=#000000 align=left>
+	<button href=cancel>
+		<font color=#ffffff>Cancel</font>
+	</button>
+</td>
+<td bgcolor=#000000 align=right>
+	<button name=add>
+		<font color=#ffffff>OK</font>
+	</button>
+</td>
+</tr>
+</table>

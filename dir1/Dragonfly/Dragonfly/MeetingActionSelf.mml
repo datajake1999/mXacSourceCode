@@ -1,0 +1,103 @@
+<<<$TEMPLATE3>>>
+<?Include resource=201?>
+<PageInfo title="Add an action item for yourself" index=false/>
+
+<table width=100% border=0 innerlines=0>
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add accel=enter>
+		<font color=#ffffff>Add action item</font>
+		<xhoverhelp>
+			Press this to add the action item.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel accel=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+<tr><td>
+
+<xPageTitle>
+	Add an action item for youself
+</xPageTitle>
+
+<p>
+	This information will be pasted into your meeting notes <bold>and</bold> used
+	to create a task work-item for yourself.
+</p>
+
+<xTableClear>
+	<tr>
+		<xtdleft>
+			Action-item name:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable defcontrol=true name=name/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			Work committed to in the action item:
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=description maxchars=512 wordwrap=true multiline=true/>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			What is the item's priority?
+		</xtdLeft>
+		<xtdright>
+			<combobox name=priority sort=false width=100% cursel=2 cbheight=150>
+				<elem name=1><bold>Priority 1</bold><italic> (Very important)</italic></elem>
+				<elem name=2><bold>Priority 2</bold><italic> (Important)</italic></elem>
+				<elem name=3><bold>Priority 3</bold><italic> (Normal)</italic></elem>
+				<elem name=4><bold>Priority 4</bold><italic> (Low)</italic></elem>
+				<elem name=5><bold>Priority 5</bold><italic> (Very low)</italic></elem>
+			</combobox>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			The earliest that you can start working the item?
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="Immediately" width=100% name=date/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			When must the action item's work be completed?
+		</xtdLeft>
+		<xtdright>
+			<bold><date blank="No completion date" width=100% name=completeby/></bold>
+		</xtdright>
+	</tr>
+	<tr>
+		<xtdleft>
+			How many hours of work will the item take?
+		</xtdLeft>
+		<xtdright>
+			<xEditInTable name=daysofwork text=1/>
+		</xtdright>
+	</tr>
+</xTableClear>
+
+
+</td></tr>
+
+<tr><td bgcolor=#000000>
+<align align=right>
+	<button name=add>
+		<font color=#ffffff>Add action item</font>
+		<xhoverhelp>
+			Press this to add the action item.
+		</xhoverhelp>
+	</button>
+</align>
+<button posn=edgeleft href=cancel>
+	<font color=#ffffff>Cancel</font>
+</button>
+</td></tr>
+</table>

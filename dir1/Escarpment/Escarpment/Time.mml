@@ -1,0 +1,109 @@
+<!xTimeButton>
+	<td MACROATTRIBUTE=1>
+		<Button MACROATTRIBUTE=1 showbutton=false width=100% radiobutton=true highlightcolor=#ff8000 margintopbottom=2
+		group="h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23,h0,h1,h2,h3,h4,h5">
+			<align align=center><font MACROATTRIBUTE=1><?MacroContent?></font></align>
+		</button>
+	</td>
+</xTimeButton>
+
+<!xMinuteButton>
+	<td MACROATTRIBUTE=1>
+		<Button MACROATTRIBUTE=1 showbutton=false width=100% radiobutton=true highlightcolor=#ff8000
+		group="m00,m15,m30,m45">
+			<align align=center><font MACROATTRIBUTE=1><?MacroContent?></font></align>
+		</button>
+	</td>
+</xMinuteButton>
+
+<colorblend posn=background tcolor=#f0fff0 bcolor=#c0cfc0/>
+<small>
+<table width=200 border=0 innerlines=0>
+<tr>
+<td width=60%>
+
+<table width=100% lrmargin=0 tbmargin=0 innerlines=0>
+	<tr>
+		<xTimeButton name=h7 bgcolor=#9090ff>7 am</xTimeButton>
+		<xTimeButton name=h19 bgcolor=#4040c0 color=#ffffff>7 pm</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h8 bgcolor=#a0a0ff>8 am</xTimeButton>
+		<xTimeButton name=h20 bgcolor=#400080 color=#ffffff>8 pm</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h9 bgcolor=#b0b0ff>9 am</xTimeButton>
+		<xTimeButton name=h21 bgcolor=#000040 color=#ffffff>9 pm</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h10 bgcolor=#c0c0ff>10 am</xTimeButton>
+		<xTimeButton name=h22 bgcolor=#000000 color=#ffffff>10 pm</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h11 bgcolor=#d0d0ff>11 am</xTimeButton>
+		<xTimeButton name=h23 bgcolor=#000000 color=#ffffff>11 pm</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h12 bgcolor=#e0e0ff>12 pm</xTimeButton>
+		<xTimeButton name=h0 bgcolor=#000000 color=#ffffff>12 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h13 bgcolor=#e0e0ff>1 pm</xTimeButton>
+		<xTimeButton name=h1 bgcolor=#000000 color=#ffffff>1 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h14 bgcolor=#d0d0ff>2 pm</xTimeButton>
+		<xTimeButton name=h2 bgcolor=#000000 color=#ffffff>2 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h15 bgcolor=#c0c0ff>3 pm</xTimeButton>
+		<xTimeButton name=h3 bgcolor=#000040 color=#ffffff>3 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h16 bgcolor=#b0b0ff>4 pm</xTimeButton>
+		<xTimeButton name=h4 bgcolor=#400080 color=#ffffff>4 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h17 bgcolor=#a0a0ff>5 pm</xTimeButton>
+		<xTimeButton name=h5 bgcolor=#4040c0 color=#ffffff>5 am</xTimeButton>
+	</tr>
+	<tr>
+		<xTimeButton name=h18 bgcolor=#9090ff>6 pm</xTimeButton>
+		<xTimeButton name=h6 bgcolor=#6060d0 color=#ffffff>6 am</xTimeButton>
+	</tr>
+</table>
+</td>
+
+<td width=10%></td>
+
+<td width=30% valign=center>
+<table bgcolor=#d0d0ff width=100% lrmargin=0 tbmargin=0 innerlines=0>
+	<tr>
+		<xMinuteButton name=m00>:00</xMinuteButton>
+	</tr>
+	<tr>
+		<xMinuteButton name=m15>:15</xMinuteButton>
+	</tr>
+	<tr>
+		<xMinuteButton name=m30>:30</xMinuteButton>
+	</tr>
+	<tr>
+		<xMinuteButton name=m45>:45</xMinuteButton>
+	</tr>
+</table>
+</td>
+
+</tr>
+
+<tr>
+	<td bgcolor=#d0d0ff lrmargin=0 tbmargin=0 >
+		<Button name=blank showbutton=false width=100% checkbox=true highlightcolor=#ff8000>
+			<align align=center>
+				Not specified
+			</align>
+		</button>
+	</td>
+</tr>
+
+</table>
+</small>

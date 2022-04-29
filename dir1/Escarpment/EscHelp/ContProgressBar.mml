@@ -1,0 +1,163 @@
+<pageinfo title="ProgressBar Control"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<!xBar>
+	<ProgressBar pos=90 width=100% MACROATTRIBUTE=1/>
+	<p> </p>
+</xBar>
+
+<xPageTitle>ProgressBar Control</xPageTitle>
+
+<xSectionTitle>Behavior</xSectionTitle>
+
+<p>
+	The progress bar is designed to inform users how far they are into a long-term
+	process, such as printing or a very long calculation. It's user-interface
+	makes it easy to tell if progress if being made, by changes in distance along the
+	track, color, and the rotation.
+</p>
+
+
+<xSectionTitle>Control-Specific Attributes</xSectionTitle>
+
+<xTableAttributes>
+	<tr>
+		<xTd1></xTd1>
+		<xTd2></xTd2>
+		<xTd3>
+			See also <a href=r:116>Default Control Behavior</a>.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>endcolor</xTd2>
+		<xTd3>
+			The color used at the end (pos=max) of the progress bar.
+			<p/>
+			Example: endcolor=#ffffff
+			<p/>
+			<xBar endcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>margin</xTd2>
+		<xTd3>
+			Margin, in pixels, around the progress bar.
+			<p/>
+			Example: margin=0
+			<p/>
+			<xBar margin=0/>
+			Example: margin=8
+			<p/>
+			<xBar margin=8/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>max</xTd2>
+		<xTd3>
+			Ending point for the progress bar. Defaults to 100.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>middlecolor</xTd2>
+		<xTd3>
+			The color used at the middle (pos=(min+max)/2) of the progress bar.
+			<p/>
+			Example: middlecolor=#ffffff
+			<p/>
+			<xBar middlecolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>min</xTd2>
+		<xTd3>
+			Starting point for the progress bar. Defaults to 0.
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribString/>
+		<xTd2>orient</xTd2>
+		<xTd3>
+			Control's the progress bar's orientation, "vert" or "horz".
+			<p/>
+			Example: orient=vert and orient=horz
+			<p/>
+			<progressbar pos=75 width=50% orient=horz/>
+			<progressbar pos=75 height=50% orient=vert/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>pos</xTd2>
+		<xTd3>
+			Progress bar position, from "min" to "max".
+			<p/>
+			<xBar pos=0/>
+			<xBar pos=25/>
+			<xBar pos=50/>
+			<xBar pos=75/>
+			<xBar pos=100/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribNumber/>
+		<xTd2>rotations</xTd2>
+		<xTd3>
+			The number of rotations that the progress bar will make.
+			<p/>
+			Example: rotations=2
+			<p/>
+			<xBar rotations=2/>
+			Example: rotations=8
+			<p/>
+			<xBar rotations=8/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>startcolor</xTd2>
+		<xTd3>
+			The color used at the start (pos=0) of the progress bar.
+			<p/>
+			Example: startcolor=#ffffff
+			<p/>
+			<xBar startcolor=#ffffff/>
+		</xTd3>
+	</tr>
+	<tr>
+		<xAttribColor/>
+		<xTd2>trackcolor</xTd2>
+		<xTd3>
+			The color of the track.
+			<p/>
+			Example: trackcolor=#80ffff
+			<p/>
+			<xBar trackcolor=#80ffff/>
+		</xTd3>
+	</tr>
+</xTableAttributes>
+
+<xSectionTitle>Contents</xSectionTitle>
+
+<p>
+	The progressbar control ignores its contents.
+</p>
+
+<xSectionTitle>Control-Specific Messages</xSectionTitle>
+
+<p>
+	Progressbar controls don't have any control-specific messages.
+</p>
+
+<xSectionTitle>Control-Specific Notifications</xSectionTitle>
+
+<p>
+	Progressbar controls don't have any control-specific notifications.
+</p>
+
+

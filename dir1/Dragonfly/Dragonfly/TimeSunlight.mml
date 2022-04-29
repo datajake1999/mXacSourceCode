@@ -1,0 +1,44 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Day and night"/>
+<<<$IFCOLOR>>><colorblend posn=background tcolor=#000060 bcolor=#000040/><<<$ENDIFCOLOR>>>
+<font <<<$WHITECOLOR>>>>
+
+<<<$IFMICROHELP>>>
+<xPageTitle>
+	Day and night
+</xPageTitle>
+
+<xbr/>
+<<<$ENDIFMICROHELP>>>
+
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<td>
+			To your right is an image of the Earth with the sunlight simulated as it currently
+			exists. You can look at the globe to see what parts of the world are in daylight
+			and what parts are night. Use the scroll bars to rotate around the image of the Earth.
+		</td>
+		<td align=center valign=center>
+			<threeD width=80% height=80% border=0 scrollrotx=rotx scrollroty=roty>
+				<<<$TIMEZONEROT>>>
+				<matrixpush>
+					<<<$LIGHTROT>>>
+					<LightVector point=1,0,0/>
+					<lightintensity val=1.2/>
+					<lightambient val=.05/>
+				</matrixpush>
+				<colormapfrombitmap bmpresource=277/>
+				<meshsphere radius=5/>
+				<shapemeshsurface/>
+			</threed>
+			<scrollbar orient=vert name=rotx height=80%/>
+			<br/>
+			<scrollbar orient=horz name=roty width=80%/>
+		</td>
+	</tr>
+</table>
+
+
+</font>

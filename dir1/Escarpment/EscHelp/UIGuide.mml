@@ -1,0 +1,358 @@
+<pageinfo title="User Interface Design Guide"/>
+<?include resource=103?>
+<<<$TEMPLATE>>>
+
+<xPageTitle>User Interface Design Guide</xPageTitle>
+
+<p>
+	What follows are some suggestions from designing the user interface of applications using Escarpment.
+	<bold>They're only suggestions.</bold> You can take them or leave them.
+</p>
+
+<xSectionTitle>You spend much of your waking life working on your software</xSectionTitle>
+
+<p>
+	How many months/years have you been working on this application? How many hours? How much of
+	your life do you devote to your computer? Don't answer those questions; you probably don't want
+	to know the real number. Suffice it to say the number is very large.
+</p> 
+
+<p>
+	How many months/years do you expect your end-user to spend using your application? How many
+	hours will they spend learning how to use it? How many hours do they want to spend learning how
+	to use it? Probably not many.
+</p>
+
+
+<p>
+	Remember: You spend most of your waking hours thinking about your application. Your end users want
+	to spend as little time as possible thinking about it. The moral of the story? 
+	<bold>Keep it simple!</bold> Make your application as easy to use as possible, even at the expense
+	of features. Every feature makes the application that much more complicated.
+</p>
+
+
+<xSectionTitle>Clear out the clutter</xSectionTitle>
+
+<p>
+	Escarpment has basically the same capabilities as HTML web pages, and can be abused in many of
+	the same ways. I've noticed that many web pages try to cram as much information and as many
+	links on a page as possible. Just look at <a href="http://www.cnn.com">cnn.com</a>.
+</p>
+
+<p>
+	The more links, ads, and graphics you have on a page, the more confusing it is to a user. As a general
+	rule, you shouldn't give the user more than about ten choices on any given page. (Ignoring standard
+	options like "Back".) And for those choices, make them very clear.
+</p>
+
+<p>
+	Also, avoid lots of animated things on your page. To many animations, sparkles, and spurious sounds
+	distract the user.
+</p>
+
+<xSectionTitle>Clickable elements should be obvious</xSectionTitle>
+
+<p>
+	Many web page designers have decided that everything should be clickable. No matter what word a
+	user clicks on, they should be popped to some sort of relevant web page about that word. However,
+	if everything is clickable then having every word underlined and blue makes little sense. As a result,
+	when I visit many web pages I can't tell what's a link and what's text unless I move my mouse over
+	it. Although the results are aesthetically pleasing, it makes me work harder.
+</p>
+
+<p>
+	Make sure your users know what they can click on.
+</p>
+
+<p>
+	Escaprment tries to make it obvious if something can be clicked on through a number of methods:
+</p>
+
+<ul type=pointer>
+	<li>
+		Text that can be clicked is underlined and blue.
+	</li>
+	<li>
+		Controls that can be clicked either have something blue in them (such as a blue button) or
+		have a blue outline.
+	</li>
+	<li>
+		Controls have a 3D look.
+	</li>
+	<li>
+		If the mouse pointer is moved over an object that can be clicked the cursor changes and
+		the control is outlined in red.
+	</li>
+	<li>
+		If a control (such as a radio button) is on, it contains an element of red.
+	</li>
+	<li>
+		When the user clicks on a control they hear a quiet beep. The beep is slightly different for each
+		control, and the nature of the beep is different if the click represents a drag options.
+	</li>
+	<li>
+		As with Windows UI, if a control can be activated by an accelerator, underline the accelerator
+		letter in the control's text. The Windows design guide stipulates that every control must
+		have an accelerator. I tend to only put accelerators on commonly used controls.
+	</li>
+</ul>
+
+<xSectionTitle>No main window</xSectionTitle>
+
+<p>
+	A traditional Windows application consists of a main window that displays the document the user
+	is working on. Generally anything on the main window can be clicked on.
+	The main window is resizable and contains a menu. From the menu the user can get
+	to dialog boxes that affect the document.
+</p>
+
+<p>
+	You can design an Escarpment application in the same vein. Many applications such as word
+	processors and spreadsheets work very well this way. However, some applications would work
+	better using a task-oriented framework.
+</p>
+
+<xDefinition>
+	<bold>Task Oriented User Interface</bold> - Instead of thinking of an application as a way of
+	displaying and editing data, "Editing a text file," think of an application as a way of accomplishing a task, such as
+	"Sending a letter to someone."
+	<p/>
+	A task-oriented user interface is designed by figuring out what the user really wishes to accomplish
+	by using the application. In the case of a word processor, the user wants to communicates their
+	thoughts to someone, as a letter, memo, white paper, short story, book, etc. Try to codify the goals
+	of users into something you can actually accomplish, such as "Write a letter."
+	<p/>
+	Once you have a list of tasks, write your application so that when the user runs it he's asked what task
+	he wishes to accomplish. Once your application knows the task, it can tailor the user interface to
+	the task.
+	<p/>
+	<bold>Example (Data oriented):</bold> In a data-oriented (old style) word processor, if a user wishes to write a letter they run the
+	word processor. It pops up with a blank window. The user then types in the header, making sure to
+	indent the their return address to half way across the page. They type a greeting, followed by the main body,
+	and concluded by "Sincerely" and their name.
+	<p/>
+	<bold>Example (Task oriented):</bold> The user runs your application. The first page asks them what
+	kind of document they wish to write, a letter being one of them. The user selects the letter option and is then
+	asked: Who is the letter to? The word processor may connect with the user's address book and supply
+	a list-box of name, automatically filling in the address. Next, the application might ask for the type of letter,
+	producing a pre-written body to start with. Only after all that information has been gathered is the user
+	actually shown the traditional word-processor GUI, allowing them to fine-tune the letter.
+</xDefinition>
+
+<p>
+	Escarpment is well suited to a task oriented UI. One window (CEscWindow) is created, starting with the intro
+	page. From there the user makes choices and enters information, moving from page to page. You should
+	keep pages within the window as much as possible, only rarely creating pop-up dialog boxes in a new
+	CEscWindow.
+</p>
+
+<xSectionTitle>Be one with help</xSectionTitle>
+
+<p>
+	Traditional Windows applications have the program and a help file. Both are separate entities, and the user
+	is very aware of this. In fact, many users think that if they pull up help they are somehow admitting weakness,
+	so they don't consult help.
+</p>
+
+<p>
+	The reason traditional Windows applications have help as a separate component is historical. In the
+	days when 100K was a lot of memory,  application help was printed in an accompanying manual
+	and the PC had very little help text in it at all. Then came the invention of the CD-ROM and all the text from
+	the manuals was placed on the CD-ROM, accessible by a special application called WinHelp.
+	Applications never incorporated the help into their own code because WinHelp had lots of pretty
+	text formatting and useful search features. Why duplicate the effort?
+</p>
+
+<p>
+	Recently, applications like Microsoft Office have tried to integrate help better by providing "?" buttons on
+	the application's title bar and the answer wizard. It's still pretty clear that
+	help is a different sub-system.
+</p>
+
+<p>
+	But now, with MML, you can provide all the same spiffy text formatting capabilities from WinHelp directly
+	into your application. Or, thinking of it differently, you can incorporate your application into the spiffy text
+	formatting capabilities of MML. There's no difference.
+</p>
+
+<p>
+	Here are some suggestions:
+</p>
+
+<ol>
+	<li>
+		Include descriptive text (aka help) within your pages. Provide more in-page help for less frequently
+		used pages since users won't remember what all the controls do. Also, if a page is looking kind of
+		empty you might consider adding some help. Notice how most of the buttons in this sample include
+		a bit of descriptive help.
+	</li>
+	<li>
+		Provide hover-help text for your controls. That way if the user lets the mouse pointer sit over the
+		control for a few seconds they get some more information about what the control does.
+	</li>
+	<li>
+		You might want to have a "verbose" mode where the pages maintain the same functionality
+		but suddenly display a lot more descriptive text. <italic>This is one of the features I've
+		been thinking about adding. I would provide a &lt;ifverbose&gt; tag that would only be
+		accessed if the user had turned on verbose mode. If  the feature interests you, please tell me.</italic>
+	</li>
+	<li>
+		Use the search functionality provided by escarpment, or provide your own. Allow users to search through
+		your application's pages and jump to the one they select. <bold>Some pages in your application
+		may end up only being accessible when the user searches.</bold>
+	</li>
+	<li>
+		Part of help's role in a traditional application is to answer questions like "How do I change the font?".
+		Basically, the help topic ends up describing a sequence of actions (mouse clicks, things to type)
+		that the user needs to do to accomplish the task. Rather than telling the user what to do, just do it.
+		If the user searches for changing the font, provide a page that leads them through changing the font
+		step by step. Have it actually change the font. Then, if there's a faster way to change the font, tell
+		users about that.
+	</li>
+	<li>
+		If there's still a need for a few help topics, then write the help in MML and include it in your application.
+		Don't point the user to WinHelp. (I have nothing against WinHelp, just pushing the user off onto
+		another program.)
+	</li>
+</ol>
+
+<xSectionTitle>Make your application visually consistent</xSectionTitle>
+
+<p>
+	HTML (and MML) provides application designers with an infinite variety of styles for fonts, controls, background
+	images, and formatting. Perhaps too many. Have you ever visited a company's web page where the main
+	page (written by one department) looks completely different than one of the pages it links to (written by a different
+	department)? Make sure this doesn't happen to your application.
+</p>
+
+<p>
+	<bold>Use lots of  macros.</bold> Specify macros that are meaning oriented, such
+	as <xCodeInline>&lt;xSectionTitle&gt;</xCodeInline> to
+	indicate a section title. Then, every time a page has a title,
+	use <xCodeInline>&lt;xSectionTitle&gt;The History of Aardvarks&lt;xSectionTitle&gt;</xCodeInline> instead of
+	using <xCodeInline>&lt;big&gt;&lt;bold&gt;The History of Aardvarks&lt;/bold&gt;&lt;/big&gt;</xCodeInline>.
+	That way, when you decide later on to change your application's look-and-feel, all you do is chang the macros.
+	It also ensures that all information with the same meaning looks the same. I've seen too many web pages
+	where top-level headers subtly change size or font-face from one page to the next because they
+	developer hand-entered the changes for every header.
+</p>
+
+<p>
+	For an example, just check out the macros used within this help application:
+</p>
+<p align=right><button href=viewmacros>View Macros</button></p>
+
+<xSectionTitle>Fonts and Colors</xSectionTitle>
+
+<p>
+	Instill meanings to your choice of fonts and colors. Users don't consciously notice them, but they
+	learn Pavlovian-style nonetheless.
+</p>
+
+<p>
+	Font meanings:	
+</p>
+
+<ul type=pointer>
+	<li>
+		Use <bold>Arial</bold> or some other easy-to-read font for most of your text. Only use a different
+		font when you want to really emphasize the text means something different. For example, I use
+		I use <font face="courier new">Courier New</font> for code samples.
+	</li>
+	<li>
+		Use as <font face="times new roman">few</font> <font face="courier new">fonts</font> 
+		<font face="bookman old style">as</font> <font face="lucida handwriting">possible</font> in your 
+		<font face="stencil">application</font>. Some web pages go font crazy.
+	</li>
+	<li>
+		Larger text represents <big>more important</big> information, smaller text <small>less important</small>.
+	</li>
+	<li>
+		<bold>Bold</bold> represents important information. <bold>Don't bold more than a few words in a row becaue although
+		bold text stands out in the crowd, it's more difficult to read.</bold>
+	</li>
+	<li>
+		<italic>Italic text</italic> represents less important information, or an aside. <small><small><italic>Don't italicize small text because it's
+		impossible to read on a monitor.</italic></small></small>
+	</li>
+	<li>
+		Underline links. (This is done automatically by the <xCodeInline>&lt;a&gt;</xCodeInline> tag.) If a button
+		has a keyboard accelerator, underline the appropriate letter in the button text. Otherwise, avoid underlining
+		because you'll confuse the user.
+	</li>
+</ul>
+
+<p> </p>
+
+<p>
+	Font color meanings:
+</p>
+
+<ul type=pointer>
+	<li>
+		Most text should be black, unless it's against a dark background.
+	</li>
+	<li>
+		<font color=#ff0000>Whatever</font> <font color=#00ff00>color</font> <font color=#0000ff>you</font> 
+		<font color=#ffff00>use</font>, <font color=#00ffff>stick</font> <font color=#ff00ff>with</font> it. Don't use colors whilly nilly.
+	</li>
+	<li>
+		Use a different color font to emphasize text, or indicate that it's somehow different. For example, when
+		I'm displaying code samples in help, 
+		<xCodeInline>I not only change the font size and color, but I make it green.</xCodeInline>
+	</li>
+	<li>
+		Use a color in-between the normal font color and the background to <font color=#808080>de-emphasize</font> text, such as when
+		side information is presented.
+	</li>
+	<li>
+		Red means <font color=#ff0000>bad</font> or <font color=#ff0000>selected</font>.
+	</li>
+	<li>
+		Green means <font color=#008000>good</font>.
+	</li>
+	<li>
+		Blue is a <font color=#0000ff>link</font>. Don't use blue unless it's a link.
+	</li>
+	<li>
+		<font color=#ffff00>Don't ever use yellow unless you want to annoy your users.</font>
+	</li>
+</ul>
+
+<p> </p>
+
+<p>
+	Background color meanings:
+</p>
+
+<ul type=pointer>
+	<li>
+		Most backgrounds should be a light color, preferably not with any intense colors. Think pastels,
+		not dayglow.
+	</li>
+	<li>
+		If you use an image for a background, make sure the image is faded out. You may also need
+		to use larger text on the page so that it's readable.
+	</li>
+	<li>
+		Be consistent. Again, use lots of macros.
+	</li>
+	<li>
+		Greenish backgrounds mean information.
+	</li>
+	<li>
+		Yellowish backgrounds are warnings.
+	</li>
+	<li>
+		Red backgrounds are errors and are bad.
+	</li>
+	<li>
+		Avoid blue-ish backgrounds since blue typically represents links.
+	</li>
+	<li>
+		I like to have backgrounds get slightly darker near the bottom of a page. It's a subtle queue
+		so that users know when they're getting near the end of the text. <bold>By the way, have you noticed
+		that the page background has gotten darker? You're at the end of the UI guide.</bold>
+	</li>
+</ul>

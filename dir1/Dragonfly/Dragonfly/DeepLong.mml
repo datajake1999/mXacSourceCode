@@ -1,0 +1,34 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="Long term goals"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=219/><<<$ENDIFCOLOR>>>
+
+<font <<<$WHITECOLOR>>>>
+
+<xPageTitle>
+	Long term goals
+</xPageTitle>
+
+<p>
+	<bold>Write down five long term goals that you wish to accomplish over
+	the next few years (or decades).</bold> For example: "Buy a house", or
+	"Climb the tallest mountain on every continent."
+</p>
+
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal1 defcontrol=true/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal2/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal3/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal4/></font>
+</p>
+<p align=center>
+	<font color=#000000><edit maxchars=128 width=80% wordwrap=false name=goal5/></font>
+</p>
+
+</font>

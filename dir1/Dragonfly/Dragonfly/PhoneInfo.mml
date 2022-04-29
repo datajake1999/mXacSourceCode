@@ -1,0 +1,38 @@
+<<<$TEMPLATE1>>>
+<?Include resource=201?>
+<PageInfo title="About the Phone page"/>
+<<<$IFCOLOR>>><image posn=background type=tile jpgresource=210/><<<$ENDIFCOLOR>>>
+
+<xPageTitle>
+	About the "Phone" page
+</xPageTitle>
+
+<p>
+	Dragonfly's "<a href=r:117>Phone</a>" page lets you make phone calls using your modem's
+	dialing capability, keep track of the numbers you've called, and
+	write notes about phone conversations you've had.
+</p>
+
+<p>
+	To make a phone call, open the "<a href=r:176>Call someone</a>" page and select
+	the person you wish to call; the person must be in the address book already.
+	If they're not you can add them on the spot by choosing "Add someone" from
+	the list. The computer will dial the person's phone number. If more than one
+	number for the person is stored in the address book then you'll be given
+	a choice about which one to call.
+</p>
+
+<p>
+	If you call someone a lot then you should add their name to
+	the <a href=r:180>speed dial list</a>. Again, you can only speed dial people
+	already in your address book. You are able to add them to your address book
+	by selecting "Add someone". All of the speed dial buttons you add show up
+	in the "<a href=r:117>Phone</a>" page.
+</p>
+
+<p>
+	Whenever you call someone a record of the call is stored in
+	the <a href=r:179>call log</a>, the <a href=r:112>calendar</a>, and
+	the call recipient's <a href=r:118>address book</a> entry.
+</p>
+
