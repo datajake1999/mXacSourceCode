@@ -1,0 +1,8 @@
+appname=Circumreality
+title=Large female voices
+selfexe=z:\mxacNetweb\CircumrealityVoicesFemale.exe
+file=z:\voices\large\mXacFemaleRN.tts
+file=z:\voices\large\CMUFemaleSLT.tts
+file=z:\voices\large\CMUFemaleCLB.tts
+license=z:\MIF\license.txt
+

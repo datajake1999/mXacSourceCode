@@ -1,0 +1,36 @@
+<colorblend posn=background tcolor=#e0ffff bcolor=#b0e0e0/>
+<small><table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=33% valign=center align=left>
+		<font color=#8080ff><button style=leftarrow href=back accel=escape>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=66% valign=center align=right lrmargin=16>
+		<font color=#c0c0c0><big><big><italic>
+			<<<PAGETITLE>>>
+		</italic></big></big></font>
+	</td>
+</tr>
+</table>
+<br/>
+<?TemplateSubst?>
+<br/>
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=33% valign=center align=left>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=66% valign=center align=center>
+	</td>
+</tr>
+<tr><td align=center>
+<font color=#808080><italic><small>Copyright 2002-2006 Mike Rozak (<font face=symbol>m</font>Xac). All rights reserved.</small></italic></font>
+</td></tr>
+</table></small>

@@ -1,0 +1,217 @@
+<?Include resource=400?>
+<PageInfo title="Color space"/>
+<colorblend posn=background color=#000000/>
+
+<font color=#ffffff>
+
+<xPageTitle>
+	Color space
+</xPageTitle>
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<td>
+			To your right is an image of the painting's "<bold>color space</bold>" in three dimensions.
+			You can rotate it around using the scroll bars.
+			By turning on and off options (below) you can use this page to determine
+			if you need more paints to accurately match the colors in the image, or if
+			you can remove some paints from your palette.
+			<p/>
+			For those of you not familiar with <bold>color theory,</bold> what you see is a graph
+			representing all the possible colors that you can see. The top-shaped
+			outline represents the colors that your computer monitor can display.
+			The central ring is basically the colors of the spectrum (<bold>hue</bold>), with the two
+			end points being white and black. The lines from the ring to the end points
+			are the spectral colors as they are brightened or
+			dimmed. (<bold>intensity</bold>)  Because the computer
+			monitor has limits to how bright it can display colors, all spectral colors
+			whiten as they are brightened.
+			The lines from the ring
+			to the center of the top are the color as it becomes more
+			washed out. (<bold>saturation</bold>)
+		</td>
+		<td align=center valign=center>
+			<threeD width=80% height=80% border=0 scrollrotx=rotx scrollroty=roty name=space3d>
+				<<<$COLORSPACE>>>
+			</threed>
+			<scrollbar orient=vert name=rotx height=80%/>
+			<br/>
+			<scrollbar orient=horz name=roty width=80%/>
+		</td>
+	</tr>
+</table>
+
+<button valign=top checkbox=true style=x name=showpaints>
+	<bold>Show paints</bold>
+	<br/>
+	If checked, the color space graph will show small spheres representing the each
+	of the paints in your palette.
+</button>
+<br/>
+<p><blockquote><small>
+	<button valign=top checkbox=true style=x name=showpaintssolid>
+		<bold>Use a false color (blue)</bold>
+		<br/>
+		Color the paint spheres in a false color so it's easier to see them.
+	</button>
+	<br/>
+	<button valign=top checkbox=true style=x name=showpaintsshading>
+		<bold>Apply shading</bold>
+		<br/>
+		Apply shading to the paint spheres.
+	</button>
+</small></blockquote></p>
+
+
+<button valign=top checkbox=true style=x name=showcoverage>
+	<bold>Show paint coverage</bold>
+	<br/>
+	If checked, the color space graph will display a complex-looking volume showing
+	you how what colors you can produce by mixing two or more of your paints along
+	with white and black.
+</button>
+<br/>
+<p><blockquote><small>
+	<button valign=top checkbox=true style=x name=showcoveragesolid>
+		<bold>Use a false color (green)</bold>
+		<br/>
+		Color the coverage in a false color so it's easier to see the difference
+		between coverage and colors in the image.
+	</button>
+	<br/>
+	<button valign=top checkbox=true style=x name=showcoverageshading>
+		<bold>Apply shading</bold>
+		<br/>
+		Apply shading to the coverage.
+	</button>
+	<button valign=top checkbox=true style=x width=80% name=showcoveragethird>
+		<bold>Use a third color from the palette instead of black and white</bold>
+		<br/>
+		Normally the color space includes mixes between all existing colors <bold>and</bold> black
+		and white. If you check this, it will show what a mixture of all
+		colors <bold>excluding</bold> black and white are. Because (oddly enough) this
+		requires more calculations, you may want to de-select some of the colors in your
+		palette first, and then add them a couple at a time, just to make sure you
+		don't wait several minutes for the image to draw.
+	</button>
+</small></blockquote></p>
+
+
+<button valign=top checkbox=true style=x name=showimage>
+	<bold>Show colors used in the image</bold>
+	<br/>
+	If checked, the color space graph will display a complex-looking volume showing
+	you how what colors are used in the image.
+</button>
+<br/>
+<p><blockquote><small>
+	<button valign=top checkbox=true style=x name=showimagesolid>
+		<bold>Use a false color (red)</bold>
+		<br/>
+		Color the image colors in a false color so it's easier to see the difference
+		between coverage and colors in the image.
+	</button>
+	<br/>
+	<button valign=top checkbox=true style=x name=showimageshading>
+		<bold>Apply shading</bold>
+		<br/>
+		Apply shading to the image colors.
+	</button>
+</small></blockquote></p>
+
+<p align=center><table width=90% innerlines=0 bordercolor=#808080>
+	<xtrheader>Paints</xtrheader>
+	<tr><td>Use the check-boxes to show or hide the paints in the color-space graph.</td></tr>
+	<<<$PAINTSWITCH>>>
+</table></p>
+
+<xbr/>
+
+<p align=center><table width=90% bordercolor=#808080>
+	<tr>
+		<td>
+			How to find out <bold>if the colors in your palette are sufficient
+			to reproduce the colors in the image.
+		</bold></td>
+		<td>
+			<ol>
+				<li>Turn <bold>on</bold> "Show paint coverage".</li>
+				<li>Turn <bold>on</bold> "Use false color" under "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use a third color from the palette" under
+					"Show paint coverage".</li>
+				<li>Turn <bold>on</bold> "Show colors used in the image".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show colors used in the image".</li>
+				<li>The colored sections that you see are the colors in the image
+					that cannot be reproduced by using any combination of your paints.
+					You should experiment by adding different colors to your palette to
+					minimize the un-covered sections, and then buy the paints as necessary.</li>
+			</ol>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			How to find <bold>colors in your palette that aren't needed to reproduce the
+			image's colors.
+		</bold></td>
+		<td>
+			<ol>
+				<li>Turn <bold>on</bold> "Show paints".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paints".</li>
+				<li>Turn <bold>on</bold> "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use a third color from the palette" under
+					"Show paint coverage".</li>
+				<li>Turn <bold>on</bold> "Show colors used in the image".</li>
+				<li>Turn <bold>on</bold> "Use false color" under "Show colors used in the image".</li>
+				<li>The colored sections that you see are the colors that your palette
+					can produce through mixing but which aren't needed for the painting.
+					Using the check-boxes next to each of the color names, try turning
+					paints off and see if they expose more of the colors used in the image.
+					If they do expose more then you need the paint. If not, you don't
+					need to use it for this painting.</li>
+			</ol>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			How to see what colors you can produce by <bold>mixing two or more paints together,
+			along with black and white.
+		</bold></td>
+		<td>
+			<ol>
+				<li>Turn <bold>on</bold> "Show paints".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paints".</li>
+				<li>Turn <bold>on</bold> "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use a third color from the palette" under
+					"Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Show colors used in the image".</li>
+				<li>Turn <bold>off</bold> all but the two paints you want to try mixing.
+					The graph will show you the colors you get when you mix the two paints
+					with each other and black or white.</li>
+			</ol>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			How to see what colors are made by <bold>mixing three colors together, excluding
+			black and white.
+		</bold></td>
+		<td>
+			<ol>
+				<li>Turn <bold>off</bold> all but the three paints you want to try mixing.
+					The graph will show you the colors you get when you mix the three paints
+					with each other.</li>
+				<li>Turn <bold>on</bold> "Show paints".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paints".</li>
+				<li>Turn <bold>on</bold> "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use false color" under "Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Use a third color from the palette" under
+					"Show paint coverage".</li>
+				<li>Turn <bold>off</bold> "Show colors used in the image".</li>
+			</ol>
+		</td>
+	</tr>
+</table></p>
+
+</font>

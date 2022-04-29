@@ -1,0 +1,153 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_APP
+#define VER_FILE_DESC "Oil Painting Assistant"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "OilPaint.exe\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_APP\r\n"
+    "#define VER_FILE_DESC ""Oil Painting Assistant""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""OilPaint.exe\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "&Zoom"
+    BEGIN
+        MENUITEM "&In",                         ID_ZOOM_IN
+        MENUITEM "&Out",                        ID_ZOOM_OUT
+    END
+    MENUITEM "&Back!",                      ID_BACK
+    MENUITEM "&Next!",                      ID_NEXT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "Macros.mml"
+IDR_MMLTEMPLATENEXT     MML                     "TemplateNext.mml"
+IDR_MMLTEMPLATEEND      MML                     "TemplateEnd.mml"
+IDR_MMLFIRSTPAGE        MML                     "FirstPage.mml"
+IDR_MMLHISTORY          MML                     "History.mml"
+IDR_MMLREGISTER         MML                     "Register.mml"
+IDR_MMLCANVASSIZE       MML                     "CanvasSize.mml"
+IDR_MMLPAINTS           MML                     "Paints.mml"
+IDR_MMLCATALOGPAINT     MML                     "CatalogPaint.mml"
+IDR_MMLPAINTNAME        MML                     "PaintName.mml"
+IDR_MMLPRINT            MML                     "Print.mml"
+IDR_MMLSIGN             MML                     "Sign.mml"
+IDR_MMLCOLORIZE         MML                     "Colorize.mml"
+IDR_MMLGRID             MML                     "Grid.mml"
+IDR_MMLSKETCH           MML                     "Sketch.mml"
+IDR_MMLPAINTBASE        MML                     "PaintBase.mml"
+IDR_MMLPAINTDETAILS     MML                     "PaintDetails.mml"
+IDR_MMLCOLORSPACE       MML                     "ColorSpace.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_BACK                JPG                     "Back.jpg"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MYHAND              CURSOR                  "cursor1.cur"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

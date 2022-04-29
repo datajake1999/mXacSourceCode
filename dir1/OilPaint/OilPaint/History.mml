@@ -1,0 +1,264 @@
+<<<$OPTEMPLATEEND>>>
+<?Include resource=400?>
+<PageInfo title="Revision History"/>
+
+<xPageTitle>
+	Revision History
+</xPageTitle>
+
+<p>
+	This page lists all of the bug fixes, feature tweaks, and new features I've made
+	to Oil Painting Assistant over time. If you have any more fixes or changes you'd like
+	me to make, please send me E-mail at <xMyEmail/>.
+</p>
+
+<!xVersion>
+	<td width=20% valign=top><section><bold>
+		<?MacroContent?>
+	</bold></section></td>
+</xVersion>
+
+<!xChanges>
+	<td width=80% valign=top><align tab=32>
+		<xul>
+			<?MacroContent?>
+		</xul>
+	</align></td>
+</xChanges>
+
+<!xMisc>
+	<li><font color=#000000>
+		<?MacroContent?>
+	</font></li>
+</xMisc>
+
+<!xBug>
+	<li><font color=#800000>
+		<?MacroContent?>
+	</font></li>
+</xBug>
+
+<!xFeature>
+	<li><font color=#006000>
+		<?MacroContent?>
+	</font></li>
+</xFeature>
+
+<Table width=100% border=0 innerlines=0>
+	<tr>
+		<xVersion>3.0.6930</xVersion>
+		<xChanges>
+			<xFeature>
+				Ability to outline the colors.
+			</xFeature>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.5203</xVersion>
+		<xChanges>
+			<xBug>
+				Can save base colors as .jpg image.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.5117</xVersion>
+		<xChanges>
+			<xBug>
+				Default image visible to select is as large as possible.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.3811</xVersion>
+		<xChanges>
+			<xBug>
+				Allow to open ".jpeg" files as well as ".jpg" files.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.3127</xVersion>
+		<xChanges>
+			<xBug>
+				Another attempt to fix crashing bug after printing.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.3101</xVersion>
+		<xChanges>
+			<xBug>
+				Attempt to fix crashing bug after printing.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.3021</xVersion>
+		<xChanges>
+			<xBug>
+				Option to invert the colors printed since they're printed as negative
+				on some printers.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.2007</xVersion>
+		<xChanges>
+			<xFeature>
+				Include Paint-by-Grids canvases.
+			</xFeature>
+			<xBug>
+				Fix crashing bug from sound card.
+			</xBug>
+			<xBug>
+				Fix crashing bug on page change.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.1507</xVersion>
+		<xChanges>
+			<xFeature>
+				Add the "Save" button to the last page.
+			</xFeature>
+			<xMisc>
+				Print out thicker grid lines so they're easier to see.
+			</xMisc>
+			<xBug>
+				Wasn't loading files with an ampersand in their name.
+			</xBug>
+			<xBug>
+				When they key was printed some names would overrun their column
+				and overlap with the color name to the right.
+			</xBug>
+			<xBug>
+				Fixed the cropping page so the entire image is shown at the first pass.
+			</xBug>
+			<xBug>
+				Corrected some spelling mistakes.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.1423</xVersion>
+		<xChanges>
+			<xBug>
+				Fix a crashing bug if the mouse hovers over the image in the grid display when
+				the color calculations were skipped.
+			</xBug>
+			<xMisc>
+				Display an error if a .jpg or .bmp file can't be opened.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.1419</xVersion>
+		<xChanges>
+			<xBug>
+				(Potentially) fixed a hanging bug when calculating the base colors.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.1127</xVersion>
+		<xChanges>
+			<xBug>
+				(Potentially) fixed a crashing bug when printing.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.0810</xVersion>
+		<xChanges>
+			<xFeature>
+				An option for the base coat mixing any three colors.
+			</xFeature>
+			<xMisc>
+				Changed the sample image.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.0808</xVersion>
+		<xChanges>
+			<xBug>
+				Fixed a potential crashing bug in the 3D rendering, which could
+				cause a crash on startup.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.0803</xVersion>
+		<xChanges>
+			<xMisc>
+				Updated the links for the download-site review pages.
+			</xMisc>
+			<xBug>
+				Potentially fixed crashing bug on startup.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>3.0.0727</xVersion>
+		<xChanges>
+			<xFeature>
+				Changed Oil Painting Assistant's look and feel.
+			</xFeature>
+			<xFeature>
+				Added a color-space viewing tool for analyzing the image and paints.
+			</xFeature>
+			<xFeature>
+				Sped up and improved the base color selection mechanism.
+			</xFeature>
+			<xFeature>
+				Base color selection allows you to mix and two colors, plus black or white.
+			</xFeature>
+			<xFeature>
+				When mix with black or white, can now mix with 1/2 part black.
+			</xFeature>
+			<xFeature>
+				Moving the mouse over the image not only tells you what color should
+				be painted for the base coat, but it's location on the canvas.
+			</xFeature>
+			<xFeature>
+				Oil Painting Assistant remembers the directory where you load/save images
+				and .opa files.
+			</xFeature>
+			<xFeature>
+				Can load and save palettes.
+			</xFeature>
+			<xFeature>
+				Users can change the definition of "black" when generating base colors.
+			</xFeature>
+			<xFeature>
+				Users can control how much detail is generated for the base colors.
+			</xFeature>
+			<xFeature>
+				Canvas measurements can be fractional.
+			</xFeature>
+			<xFeature>
+				Canvas measurements can be in centimeters.
+			</xFeature>
+			<xFeature>
+				Canvas measurements can be proportional to the original image size.
+			</xFeature>
+			<xFeature>
+				The grid can be specified in fractions of an inch/cm.
+			</xFeature>
+			<xFeature>
+				Printing displays the file name and date on the bottom of each page.
+			</xFeature>
+			<xFeature>
+				An image can be printed full size, over multiple sheets.
+			</xFeature>
+			<xMisc>
+				Load in images up to 2048 x 2048 before it starts scaling down the number
+				of pixels.
+			</xMisc>
+			<xMisc>
+				Changed the sample image.
+			</xMisc>
+		</xChanges>
+	</tr>
+</Table>

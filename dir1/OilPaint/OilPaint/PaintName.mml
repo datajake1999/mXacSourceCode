@@ -1,0 +1,52 @@
+<?Include resource=400?>
+<PageInfo title="What is the name of the paint?"/>
+<colorblend posn=background color=#000000/>
+<p align=center>
+<table width=95% innerlines=0 border=0 lrmargin=32 tbmargin=32>
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=cancel accel=escape>
+			Cancel
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=OK accel=enter>
+			OK
+		</button></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<colorblend posn=background tcolor=#e0e0e0 bcolor=#a0a0c0/>
+
+<xPageTitle>
+	What is the name of the paint?
+</xPageTitle>
+
+<p>
+	Please type in a name for the paint and press "OK".
+	When you press OK, you will be presented with a dialog
+	that allows you to select the color of the paint
+</p>
+
+<xEditOneLine name=text defcontrol=true maxchars=63/>
+
+	</td>
+</tr>
+
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=cancel>
+			Cancel
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=OK>
+			OK
+		</button></font>
+	</td>
+</tr>
+
+</table>
+</p>

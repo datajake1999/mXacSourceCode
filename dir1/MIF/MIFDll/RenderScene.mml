@@ -1,0 +1,461 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="3D scene resource"/>
+
+<!xComboCursor>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Arrow (do)</elem>
+		<elem name=1>Eye (examine)</elem>
+		<elem name=2>Hand (pick up)</elem>
+		<elem name=3>Mouth (talk to)</elem>
+		<elem name=4>Walking figure (go)</elem>
+		<elem name=7>Walking figure with cross (don't go)</elem>
+		<elem name=5>Key (lock/unlock)</elem>
+		<elem name=6>Door (open/close)</elem>
+		<elem name=8>Rotate counter-clockwise</elem>
+		<elem name=9>Rotate clockwise</elem>
+		<elem name=10>Menu</elem>
+	</combobox></bold>
+</xComboCursor>
+
+<!xComboObjects>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=-1><italic>Not attached</italic></elem>
+		<<<$COMBOOBJECTS>>>
+	</combobox></bold>
+</xComboObjects>
+
+<xtablecenter width=100%>
+	<xtrheader>Image</xtrheader>
+	<tr>
+		<td><align align=center>
+			<<<$IMAGEDRAG>>>
+			<br/>
+			<button name=refresh>
+				<bold>Refresh</bold>
+				<xHoverHelp>
+					Press this to redraw the image. If you change an image's
+					attributes or poses, the image will be drawn using some of the old
+					settings, even though they won't be displayed on the user's computer.
+					This will ensure those changes are discarded.
+				</xHoverHelp>
+			</button>
+			<button name=finalquality>
+				<bold>Final quality</bold>
+				<xHoverHelp>
+					Press this to redraw the image in full quality,
+					as it will look on the user's computer.
+				</xHoverHelp>
+			</button>
+		</align></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr>
+		<td>
+			<bold>File</bold> - This is the 3D file to use. Press "Open" to
+			select a new <xSN/> file. (You cannot type in the edit field.)
+		</td>
+		<td>
+			<edit readonly=true maxchars=256 width=100% name=file/><br/>
+			<button <<<$LIBENABLE>>> name=open><bold>Open</bold></button>
+		</td>
+	</tr>
+<<<$ENDIFTAB0>>>
+
+<<<$IFTAB1>>>
+	<tr>
+		<td>
+			<bold>Aspect ratio</bold> - This controls how wide (or narrow) the image is drawn.
+		</td>
+		<td><bold><combobox cbheight=150 width=100% <<<$LIBENABLE>>> name=aspect>
+			<elem name=0>2:1 (movies)</elem>
+			<elem name=1>16:9 (widescreen)</elem>
+			<elem name=2>3:2 (computer screen)</elem>
+			<elem name=3>1:1 (square)</elem>
+			<elem name=4>2:3 (narrow)</elem>
+			<elem name=5>9:16 (narrower)</elem>
+			<elem name=6>1:2 (narrowest)</elem>
+			<elem name=10>360 degree view</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Image quality</bold> - For speed
+			reasons, the image displayed above is usually one step lower
+			quality than the one selected. To view the image as it
+			will be shown, press the "Final quality" button.
+		</td>
+		<td><xComboImageQuality width=100% <<<$LIBENABLE>>> name=quality/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shadows distance</bold> - Controls how far outdoor shadows
+			will be generated (in meters), as well as how far shadows for
+			lights (like torches) reach. This will also be modified by the
+			player's render quality settings.
+			<p/>
+			Set this to 0.0 for no limit, and slower drawing times.
+			<p/>
+			This is only used for scenes (with associated files) and
+			is ignored for individual objects.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=shadowslimit/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Anti-aliasing</bold> - The better the anti-aliasing the fewer
+			"jaggies" you'll see on the image. For speed reasons, the
+			image displayed above usually contains no anti-aliasing. To view
+			the image as it will be shown, press the "Final quality" button.
+		</td>
+		<td>
+			<bold><combobox width=100% cbheight=150 <<<$LIBENABLE>>> name=anti>
+				<elem name=1><bold>None</bold> (fastest)</elem>
+				<elem name=2><bold>2x2</bold></elem>
+				<elem name=3><bold>3x3</bold></elem>
+				<elem name=4><bold>4x4</bold> (slowest)</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeeffect>
+				<bold>Change effect</bold><br/>
+				Press this to change the effect used, such as fog, outlines, or make it
+				look like a painting. (Effects are only drawn for the "Final quality" image.)
+			</xChoiceButton>
+		</td>
+		<td align=center>
+			<image border=2 name=effectbit hbitmap=<<<EFFECTBITMAP>>>/>
+		</td>
+	</tr>
+<<<$ENDIFTAB1>>>
+
+
+
+<<<$IFTAB2>>>
+	<tr>
+		<td>
+			<bold>Scene</bold> - Select the scene to draw from.
+		</td>
+		<td align=center>
+			<listbox width=85% height=40% vscroll=scenescroll <<<$LIBENABLE>>> name=scene/>
+			<scrollbar orient=vert height=40% name=scenescroll/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bookmark</bold> - Select the bookmark to use.
+		</td>
+		<td align=center>
+			<listbox width=85% height=40% vscroll=bmrangescroll name=bookmarkrange/>
+			<scrollbar orient=vert height=40% name=bmrangescroll/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Time</bold> - The number of seconds into the scene to draw.
+			If you have selected a bookmark to use then the time is ignored.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=scenetime/></bold>
+		</td>
+	</tr>
+<<<$ENDIFTAB2>>>
+
+
+<<<$IFTAB3>>>
+	<tr>
+		<td>
+			<bold>Custom camera</bold> - Use these controls to customize the camera location.
+			<p/>
+			
+			<xtablecenter innerlines=0>
+				<tr>
+					<td/>
+					<td align=center><button style=uptriangle name=moveforward>
+						<xHoverHelpShort>Move forward by the movement distance.</xHoverHelpShort>
+					</button></td>
+					<td/>
+				</tr>
+				<tr>
+					<td align=center><button style=lefttriangle name=rotleft>
+						<xHoverHelpShort>Rotate left</xHoverHelpShort>
+					</button></td>
+					<td/>
+					<td align=center><button style=righttriangle name=rotright>
+						<xHoverHelpShort>Rotate right</xHoverHelpShort>
+					</button></td>
+				</tr>
+				<tr>
+					<td/>
+					<td align=center><button style=downtriangle name=moveback>
+						<xHoverHelpShort>Move backwards by the movement distance.</xHoverHelpShort>
+					</button></td>
+					<td/>
+				</tr>
+				<tr>
+					<td>
+						<bold>Movement distance</bold>
+					</td>
+					<td><edit width=100% maxchars=64 name=movedist/></td>
+				</tr>
+			</xtablecenter>
+		</td>
+		<td>
+			<align align=right><bold>
+				X: <edit width=80% maxchars=64 name=pos0/><br/>
+				Y: <edit width=80% maxchars=64 name=pos1/><br/>
+				Z: <edit width=80% maxchars=64 name=pos2/>
+				<p/>
+				Azmth: <scrollbar width=80% min=-180 max=180 orient=horz name=rot2/><br/>
+				Alt: <scrollbar width=80% min=-90 max=90 orient=horz name=rot0/><br/>
+				Bank: <scrollbar width=80% min=-180 max=180 orient=horz name=rot1/>
+				<p/>
+				<a>FOV<xHoverHelpShort>Field of view, in degrees</xHoverHelpShort></a>: <edit width=80% maxchars=64 name=fov/><br/>
+				<a>Exp<xHoverHelpShort>Exposure, from 0 to 6</xHoverHelpShort></a>: <edit width=80% maxchars=64 name=exposure/>
+			</bold></align>
+		</td>
+	</tr>
+<<<$IFEXISTINGCAMERA>>>
+	<tr>
+		<td>
+			<bold>Existing camera</bold> - Select the camera to use. The "View camera" item
+			will use the default camera, and "Custom camera" will allow you to
+			customize the camera here.
+		</td>
+		<td align=center>
+			<listbox width=85% height=40% vscroll=camerascroll <<<$LIBENABLE>>> name=camera/>
+			<scrollbar orient=vert height=40% name=camerascroll/>
+		</td>
+	</tr>
+<<<$ENDIFEXISTINGCAMERA>>>
+	<tr>
+		<td>
+			<bold>Automatic camera height adjust</bold> - If this is turned on, the camera will
+			be vertically moved up/down so it's height relative to the ground or the building
+			it's in, will be appropriate to the viewer's height. (This only works with
+			a first person perspective camera.)
+			<p/>
+			The <bold>floor</bold> level is 0 for the ground floor (1st floor in the US) or the
+			ground. -1 for the basement. 1 for the 1st floor (2nd floor in the US). Etc.
+			<p/>
+			<bold>Height</bold> is the height (in meters) above the floor that the camera will be placed.
+			Basically, this is eye height.
+			<p/>
+			<bold>Water height</bold> is the height above water that the camera will be placed.
+			Use this to simulate swimming.
+		</td>
+		<td><align align=right><bold>
+			<button checkbox=true style=x name=cameraautoheight3>On</button><br/>
+			Floor: <edit width=50% name=cameraautoheight0/><br/>
+			Height: <edit width=50% name=cameraautoheight1/><br/>
+			Water height: <edit width=50% name=cameraautoheight2/>
+		</bold></align></td>
+	</tr>
+<<<$ENDIFTAB3>>>
+
+
+
+<<<$IFTAB4>>>
+	<tr><td>
+		This tabs let you change the attributes of objects in your scene, such as turning on/off
+		lights and changing poses. Click on the image to select an object, and then select the
+		attribute and value below.
+	</td></tr>
+	<tr>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Object
+		</bold></big></font></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Attribute
+		</bold></big></font></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Value
+		</bold></big></font></td>
+	</tr>
+	<<<$RSATTRIB>>>
+<<<$ENDIFTAB4>>>
+
+
+<<<$IFTAB5>>>
+	<tr><td>
+		Click and drag on the image to select a region for a "hot spot".
+		Users can click on a hot spot to send a command through ConnectionMessage() to
+		the server.
+	</td></tr>
+	<<<$HOTSPOTS>>>
+	<tr>
+		<td>
+			<bold>Language</bold> - This is the language used for the hot-spot commands.
+			For example: If you have typed "north" for a hot-spot command
+			then you'd select English, but would use Spanish if you had "norte".
+		</td>
+		<td><bold><combobox width=100% cbheight=150 <<<$LIBENABLE>>> name=langid/></bold></td>
+	</tr>
+<<<$ENDIFTAB5>>>
+
+<<<$IFTAB6>>>
+	<tr><td>
+		Use this tab to add 3D objects to your scene.
+		<p/>
+		<xChoiceButton <<<$LIBENABLE>>> name=objnew>
+			<bold>Add new object</bold><br/>
+			Press this to add a new object to your scene.
+		</xChoiceButton>
+	</td></tr>
+	<<<$OBJECTS>>>
+<<<$ENDIFTAB6>>>
+
+<<<$IFTAB7>>>
+	<tr><td>
+		This tabs let you change the color or texture of objects in your scene.
+		Click on an object in the image to display a dialog that lets you change
+		its color or texture.
+	</td></tr>
+	<tr>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Object
+		</bold></big></font></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Surface Num.
+		</bold></big></font></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><big><bold>
+			Color/Texture
+		</bold></big></font></td>
+	</tr>
+	<<<$RSCOLOR>>>
+<<<$ENDIFTAB7>>>
+
+<<<$IFTAB8>>>
+	<tr>
+		<td>
+			<bold>Light 1</bold> - Control the primary light's azimuth, altitude, brightness,
+			and color.
+		</td>
+		<td>
+			<align align=right><bold>
+				Azmth: <scrollbar width=80% min=-180 max=180 orient=horz <<<$LIBENABLE>>> name=lightrot00/><br/>
+				Alt: <scrollbar width=80% min=-90 max=90 orient=horz <<<$LIBENABLE>>> name=lightrot10/><br/>
+				Bright: <scrollbar width=80% min=0 max=1000 orient=horz <<<$LIBENABLE>>> name=lightrot20/>
+				<p/>
+				<button <<<$LIBENABLE>>> name=changelightcolor0>Color</button><xStatusColor width=50% name=lightcolor0/>
+			</bold></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Light 2</bold> - Secondary light. This casts no shadows.
+		</td>
+		<td>
+			<align align=right><bold>
+				Azmth: <scrollbar width=80% min=-180 max=180 orient=horz <<<$LIBENABLE>>> name=lightrot01/><br/>
+				Alt: <scrollbar width=80% min=-90 max=90 orient=horz <<<$LIBENABLE>>> name=lightrot11/><br/>
+				Bright: <scrollbar width=80% min=0 max=1000 orient=horz <<<$LIBENABLE>>> name=lightrot21/>
+				<p/>
+				<button <<<$LIBENABLE>>> name=changelightcolor1>Color</button><xStatusColor width=50% name=lightcolor1/>
+			</bold></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Light 3</bold> - Tertiary light. This casts no shadows.
+		</td>
+		<td>
+			<align align=right><bold>
+				Azmth: <scrollbar width=80% min=-180 max=180 orient=horz <<<$LIBENABLE>>> name=lightrot02/><br/>
+				Alt: <scrollbar width=80% min=-90 max=90 orient=horz <<<$LIBENABLE>>> name=lightrot12/><br/>
+				Bright: <scrollbar width=80% min=0 max=1000 orient=horz <<<$LIBENABLE>>> name=lightrot22/>
+				<p/>
+				<button <<<$LIBENABLE>>> name=changelightcolor2>Color</button><xStatusColor width=50% name=lightcolor2/>
+			</bold></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ambient</bold> - Ambient light.
+		</td>
+		<td>
+			<align align=right><bold>
+				Bright: <scrollbar width=80% min=0 max=1000 orient=horz <<<$LIBENABLE>>> name=lightrot23/>
+				<p/>
+				<button <<<$LIBENABLE>>> name=changelightcolor3>Color</button><xStatusColor width=50% name=lightcolor3/>
+			</bold></align>
+		</td>
+	</tr>
+<<<$ENDIFTAB8>>>
+
+<<<$IFTAB9>>>
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode0>
+				<bold>Color</bold><br/>
+				The background is a blend of colors.
+			</xChoiceButton>
+		</td>
+		<td>
+			<p align=right><bold>
+				<button <<<$LIBENABLE>>> name=changebackcolor0>Top/lft</button><xStatusColor width=50% name=backcolor0/><br/>
+				<button <<<$LIBENABLE>>> name=changebackcolor1>Btm/rght</button><xStatusColor width=50% name=backcolor1/>
+			</bold></p>
+			<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=backblendlr>
+				<bold>Blend left to right</bold><br/>
+				If checked the colors will be blended from left to right. If unchecked
+				they're blended from top to bottom.
+			</xChoiceButton>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode1>
+				<bold>Image file</bold><br/>
+				The background is an image file (either .jpg or .bmp).
+			</xChoiceButton>
+		</td>
+		<td>
+			<bold><edit width=100% readonly=true <<<$LIBENABLE>>> maxchars=250 name=backfile/></bold><br/>
+			<xChoiceButton <<<$LIBENABLE>>> name=backfiledialog>
+				<bold>Open...</bold><br/>
+				Press this to select a file for the background image.
+			</xChoiceButton>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode2>
+				<bold>3D file</bold><br/>
+				The background is a 3D scene from <xSN/>.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xChoiceButton name=backrenddialog>
+				<bold>Modify...</bold><br/>
+				Press this modify the background image. (The dialog looks just like this one
+				except you select a <xSN/> file.)
+			</xChoiceButton>
+		</td>
+	</tr>
+<<<$ENDIFTAB9>>>
+
+<<<$IFTAB20>>>
+	<tr>
+		<td>
+			<xChoiceButton href=transitionui>
+				<bold>Transition...</bold><br/>
+				Press this to modify the transition (fades and zooms) when the image is drawn.
+			</xChoiceButton>
+		</td>
+	</tr>
+<<<$ENDIFTAB20>>>
+
+</xtablecenter>
+

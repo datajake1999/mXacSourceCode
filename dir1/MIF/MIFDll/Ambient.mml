@@ -1,0 +1,94 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Ambient sounds resource"/>
+
+<p>
+	Use the ambient sounds resource to play background sounds when a player
+	enters a room. The background sounds take two forms, either random
+	sounds (good for birds) or looped sounds (such as waves).
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Info</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - This must be a unique name. Whenever a new ambient sound
+			resource is loaded, if another one with the same name already exists then that
+			one will be kept. This ensures that there won't be a break in the audio
+			when moving from room to room where the ambient
+			sounds are the same.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=name/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Random sounds</xtrheader>
+	<tr><td>
+		"Random sounds" are good for bird chirps or other sounds that occur occasionally
+		and are short in duration.
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% vscroll=randomlistscroll name=randomlist/>
+			<scrollbar orient=vert height=20% name=randomlistscroll/>
+		</p>
+		<xChoiceButton name=newrandom>
+			<bold>New random sounds</bold><br/>
+			Add a new random-sounds set to the list.
+		</xChoiceButton>
+		<xChoiceButton name=editrandom>
+			<bold>Modify the selected set</bold><br/>
+			Select a sound and press this to modify it.
+		</xChoiceButton>
+		<xChoiceButton name=removerandom>
+			<bold>Delete random sounds</bold><br/>
+			Delete the selected random-sounds set from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Looped sounds</xtrheader>
+	<tr><td>
+		"Looped sounds" repeat a sound or sequence of sounds. They are especially useful
+		for continuous sounds, like ocean waves or machinery.
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% vscroll=looplistscroll name=looplist/>
+			<scrollbar orient=vert height=20% name=looplistscroll/>
+		</p>
+		<xChoiceButton name=newloop>
+			<bold>New looped sounds</bold><br/>
+			Add a new looped-sounds set to the list.
+		</xChoiceButton>
+		<xChoiceButton name=editloop>
+			<bold>Modify the selected set</bold><br/>
+			Select a sound and press this to modify it.
+		</xChoiceButton>
+		<xChoiceButton name=copyloop>
+			<bold>Copy the selected set</bold><br/>
+			Select a sound and press this to duplicate it.
+		</xChoiceButton>
+		<xChoiceButton name=removeloop>
+			<bold>Delete looped sounds</bold><br/>
+			Delete the selected looped-sounds set from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>3D sound offset</bold> - If you set this, then all 3D sounds
+			will be offset by this distance. You
+			typically <bold>won't set this</bold>.
+		</td>
+		<td><bold><align align=right>
+			EW: <edit width=50% maxchars=64 name=offset0/><br/>
+			NS: <edit width=50% maxchars=64 name=offset1/><br/>
+			US: <edit width=50% maxchars=64 name=offset2/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+

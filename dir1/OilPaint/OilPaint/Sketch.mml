@@ -1,0 +1,62 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Sketch on your canvas"/>
+
+<xPageTitle>
+	Sketch on your canvas
+</xPageTitle>
+
+<p>
+	It's time to draw!
+</p>
+
+<p>
+	Please take the time to:
+</p>
+
+<ol>
+	<li>
+		<bold>Lightly pencil the grid</bold> onto your canvas. You may need a ruler and straight edge.
+		If you're using <a href="http://www.PaintByGrids.com/canvas">Paint-by-Grids</a> canvases, then you don't
+		need to sketch the lines.
+	</li>
+	<li>
+		<bold>Sketch</bold> the image on the canvas.
+	</li>
+	<li>
+		Once you've finished your sketch:
+		If you're using <a href="http://www.PaintByGrids.com/canvas">Paint-by-Grids</a> canvases, then <bold>wipe
+		off</bold> the grids. If you penciled in the grids then leave them, or erase them if
+		they're too dark.
+	</li>
+</ol>
+
+<p>
+	You can use this image (and grid) to help you, or you can use the printout.
+	If you hold the mouse over a portion of the image, a tooltip will appear telling
+	you how many <<<INCHESCM>>> in from the upper left-hand corner of the canvas that
+	portion of the image is.
+</p>
+
+<p>
+	When done, press "Next!"
+</p>
+
+<p align=center>
+	<combobox sort=false width=50% cbheight=100 name=scale>
+		<elem name="100">Show <bold>100%</bold> of screen width</elem>
+		<elem name="90">Show <bold>90%</bold> of screen width</elem>
+		<elem name="80">Show <bold>80%</bold> of screen width</elem>
+		<elem name="70">Show <bold>70%</bold> of screen width</elem>
+		<elem name="60">Show <bold>60%</bold> of screen width</elem>
+		<elem name="50">Show <bold>50%</bold> of screen width</elem>
+		<elem name="40">Show <bold>40%</bold> of screen width</elem>
+		<elem name="30">Show <bold>30%</bold> of screen width</elem>
+		<elem name="20">Show <bold>20%</bold> of screen width</elem>
+		<elem name="10">Show <bold>10%</bold> of screen width</elem>
+	</combobox>
+	<br/>
+	<imagegrid width=<<<SCALE>>>% hbitmap=<<<HBITMAP>>> border=2 name=image/>
+</p>
+
+

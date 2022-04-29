@@ -1,0 +1,27 @@
+<pageinfo index=false title="You have left the world"/>
+<?Include resource=500?>
+<xClientPage jpgresource=327>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>You have left the world</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	<p>
+		The CirumReality world server has disconnected you. Do you wish to connect to
+		this or another server again?
+	</p>
+	
+	<xChoiceButton style=righttriangle accel=enter href=yes>
+		<bold>Yes</bold><br/>
+		I want to continue using CircumReality.
+	</xChoiceButton>
+	<xChoiceButton style=box accel=escape href=cancel>
+		<bold>No</bold><br/>
+		Exit this application.
+	</xChoiceButton>
+</td></tr>
+</table></p>
+
+</xClientPage>

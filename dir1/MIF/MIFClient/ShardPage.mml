@@ -1,0 +1,27 @@
+<pageinfo index=false title="Shard selection"/>
+<?Include resource=500?>
+<xClientPage jpgresource=319>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>What shard do you wish to play in?</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	<p>
+		This Circumreality world supports more than one "shard".
+		Virtual worlds with shards have several copies (parallel world)
+		running at once. Often the shards are customized for specific
+		play styles. Please <bold>select</bold> the shard you wish to
+		use.
+	</p>
+	<<<$SHARDS>>>
+	<p/><xbr/>
+	<xChoiceButton style=lefttriangle href=back>
+		<bold>Back</bold><br/>
+		Go back to the IF selection page.
+	</xChoiceButton>
+</td></tr>
+</table></p>
+
+</xClientPage>

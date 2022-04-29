@@ -1,0 +1,221 @@
+<pageinfo index=false title="Read me..."/>
+<?Include resource=500?>
+<xClientPage jpgresource=317>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>What is CircumReality?</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	CircumReality is a program that lets you play <bold>(multiplayer) interactive
+	fiction</bold> titles, much like a DVD-player lets you play DVDs.
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>What is (multiplayer) interactive fiction?</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	Multiplayer interactive fiction is an
+	online computer "game" which:
+	<p/>
+	
+	<ol>
+		<li>
+			Lets you <bold>play a character in a virtual world</bold>. The
+			world isn't limited a standard fantasy or science fiction setting,
+			and might take place in Victorian England, modern-day New York City,
+			or even a dream world.
+		</li>
+		<li>
+			The world is centered around a <bold>story that your character
+			participates in</bold>, such as a detective solving crimes
+			in Victorian England, a romance in New York City, or the more
+			familiar "save the world" fantasy and science fiction stories.
+		</li>
+		<p>
+			<bold>Your actions affect the story's direction</bold>, although this is
+			limited by current technology and how much time the author had to
+			write in narrative choices. You can even forgo
+			the story altogether and follow your own muses, although the
+			game experience may not be as rich.
+		</p>
+		<li>
+			The world is filled with <bold>sub-games</bold>. IF
+			titles aren't limited to the standard <bold>combat</bold> sub-game
+			(common to computer role-playing games)
+			and <bold>puzzle</bold> sub-game (common to adventure games).
+			Sub-games, which are customized to the story,
+			might involve <bold>interrogating non-player characters,
+			romancing them, or trying to run a property-rental
+			empire.</bold>
+		</li>
+		<p>
+			In (multiplayer) interactive fiction, <bold>sub-games are
+			used to enhance the story,</bold> much as music and special effects
+			are used to enhance a movie's story... instead of the movie's
+			story merely being a vehicle to show off music and special effects.
+		</p>
+		<li>
+			<bold>Much of an IF title's experience comes from the "scenery".</bold> You
+			might find yourself spending much of your time in activities that
+			have nothing to do with the sub-games, such as listening non-player
+			characters' anecdotes, exploring the world, or chatting with
+			other players, much like you'd do on a real-life <bold>vacation</bold>.
+		</li>
+		<li>
+			<bold>Many (but not all) IF titles are multiplayer.</bold> You can team
+			up with other players, just sit around and chat, or stick to yourself.
+			Sometimes you'll even compete against them.
+		</li>
+		<li>
+			<bold>(Multiplayer) interactive fiction titles tend to be short</bold>,
+			requiring between <bold>two to ten hours to complete</bold>. When you finish one,
+			visit the <a href="http://www.CircumReality.com">CircumReality</a> web page
+			and download a link to another. (Or for those who like a challenge,
+			write your own.)
+		</li>
+		<li>
+			<bold>Most IF titles are created by hobbyists,</bold> who author
+			the titles for the fun of it, just like people write blogs. If
+			you enjoy a title, or even if you find some problems with it, make sure
+			to tell the author what you thought; They like to hear that players
+			are enjoying their works of art, and are always interested
+			in improving their creations. Also, <bold>if you enjoy playing
+			an IF title, make sure to tell your friends.</bold> Being hobbyists,
+			authors don't have an advertising budget!
+		</li>
+		<li>
+			IF titles that use CircumReality (this program) will tend to
+			be <bold>slow-paced and intellectual</bold> due to the way CircumReality
+			uses still scenes and spoken narration.
+		</li>
+	</ol>
+	
+	
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Interactive fiction titles vs. CircumReality</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	CircumReality is the application that displays the interactive fiction <bold>titles</bold>,
+	just like a DVD-player players DVD titles. CircumReality is a program though, not a
+	piece of machinery like a DVD-player. You may not be familiar with this
+	differentiation: Some text adventure games and MUDs differentiate
+	between the "client software" (such as CircumReality) and the "title". Most commercial adventure games,
+	CRPGs, and MMORPGs do not.
+	
+	<p/>
+	
+	Since CircumReality (the "client software") is separate from the title:
+	
+	<p/>
+	
+	<xul>
+		<li>
+			You will need to <bold>download the titles/games</bold> you wish to play, in addition
+			to CircumReality (which you have obviously downloaded already).
+		</li>
+		<p>
+			The CircumReality download already includes some downloads for titles that I have written.
+			These will get you started, but undoubtedly you'll want more. For
+			a list of titles, see <a href="http://www.CircumReality.com">http://www.CircumReality.com</a>.
+		</p>
+		<li>
+			Because CircumReality was a huge amount of work to write (I started writing it in late
+			2001), <bold>I require users to register their copy and pay $BUGBUG for full functionality</bold>. You
+			can try it out for 5 hours, but after that some non-essential features
+			won't work (unless you <bold>steal</bold> a copy and <bold>illegally</bold> use someone else's password).
+		</li>
+		<p>
+			Since the titles you play are probably written by other authors, they may
+			also ask you to <bold>pay for the title</bold>. This is up to the author,
+			of course.
+		</p>
+	</xul>
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Online multiplayer titles vs. offline single-player titles</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+
+	Authors have a choice of making their titles single-player (and work <bold>without</bold> an
+	Internet connection), or of making them muliplayer and <bold>require</bold> an internet connection.
+	
+	<p/>
+	
+	Titles that are multiplayer and require an internet connection have
+	a <bold>.crk</bold> extension, and are labelled <bold>CircumReality
+	link files</bold>. They are small files (about 50 KB) because they
+	only contain information about the Internet server where the game is stored.
+	
+	<p/>
+	
+	Single-player (and offline) titles have a <bold>.crf</bold> extension,
+	and are labelled <bold>CircumReality files</bold>. They are large
+	files (100-1000 MB) because they contain all the information to run the title
+	on your computer.
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>System requirements</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	
+	I recommend a <bold>dual-core</bold>,
+	Windows XP (or better) machine
+	with <bold>1 gigabyte</bold> of RAM.
+	There is no graphics accelerator requirement. If you are using CircumReality to
+	play over the Internet, it will run on
+	a 56 KBaud modem, but a <bold>broadband connection</bold> is recommended.
+	
+	<p/>
+	
+	In other words, <bold>if your PC was produced after 2006 it should
+	be fast enough.</bold> PCs made before 2004 are probably too slow.
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Authoring your own titles</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	
+	CircumReality lets you create your own titles. For more information
+	see my website, at <a href="http://www.CirumReality.com">http://www.CirumReality.com</a>. Creating
+	your own title is a <bold>lot</bold> of work, requiring computer graphics, audio,
+	and C/Java/Flash-style programming skills.
+</td></tr>
+</table></p>
+	
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Copyright information</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+
+	CircumReality (version <<<VERSIONNUM>>>) is copyright 2004-2009 by Mike Rozak.
+	JPEG routines are from the Independent JPEG Group.
+	The text-to-speech lexicon was originally from Carnegie Mellon University.
+	Some text-to-speech voices are from the CMU Blizzard challenge.
+</td></tr>
+</table></p>
+	
+<p/><p/>
+<p align=center><font color=#ffffff>
+	<xChoiceButton style=lefttriangle accel=escape href=back>
+		<bold>Back</bold><br/>
+		Return to the previous page.
+	</xChoiceButton>
+</font></p>
+
+</xClientPage>

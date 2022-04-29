@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MakeBuild", "MakeBuild.vcproj", "{71E5D3DA-0F55-4160-8894-805C792A9FAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{71E5D3DA-0F55-4160-8894-805C792A9FAB}.Debug.ActiveCfg = Debug|Win32
+		{71E5D3DA-0F55-4160-8894-805C792A9FAB}.Debug.Build.0 = Debug|Win32
+		{71E5D3DA-0F55-4160-8894-805C792A9FAB}.Release.ActiveCfg = Release|Win32
+		{71E5D3DA-0F55-4160-8894-805C792A9FAB}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

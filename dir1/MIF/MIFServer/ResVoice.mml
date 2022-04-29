@@ -1,0 +1,61 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Voice</xtrheader>
+	<tr>
+		<td>
+			<bold>Text-to-speech file</bold> - This is the file that contains the
+			text-to-speech voice. Press "Open" to select the file to use.
+		</td>
+		<td>
+			<edit width=100% maxchars=250 readonly=true name=file/><br/>
+			<bold><button name=open/>Open</bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sub-voice</bold> - To specify a subvoice, either type
+			in number for "SubVoice" from 1 through 9, or enter numbers
+			in "MixVoice", "MixPros(osody)", and "MixPron(unciation)". The
+			digits of each control what sub-voices are mixed together.
+			Leave them blank if you don't wish to set them.
+		</td>
+		<td><align align=right><bold>
+			SubVoice: <edit width=50% maxchars=32 name=subvoice/><br/>
+			MixVoice: <edit width=50% maxchars=32 name=mixvoice/><br/>
+			MixPros: <edit width=50% maxchars=32 name=mixpros/><br/>
+			MixPron: <edit width=50% maxchars=32 name=mixpron/>
+		</bold></align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Name</bold> - The name of the speaker (which will be displayed in
+			the player's logs or subtitles.) You can leave this blank most of the
+			time because the object's name will be used.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=name/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume, left</bold> - This is the amount of volume to apply to the
+			left speaker. 1.0 is normal volume, 2.0 twice as loud, 0.5 half as loud,
+			etc.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=voll/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume, right</bold> - Volume for the right speaker.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=volr/>
+		</td>
+	</tr>
+</xtablecenter>
+

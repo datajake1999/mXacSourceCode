@@ -1,0 +1,116 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Verb window resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Verbs</xtrheader>
+	<tr><td>
+		The verb window provides a set of buttons for the user that save the user
+		from typing the verb, such as "Inventory" or "Get &lt;Click&gt;".
+		<p/>
+		<p align=center>
+			<listbox width=80% height=40% vscroll=listscroll name=verblist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton style=uptriangle name=moveup>
+			<bold>Move up</bold><br/>
+			Move the selected verb up in the list.
+		</xChoiceButton>
+		<xChoiceButton style=downtriangle name=movedown>
+			<bold>Move down</bold><br/>
+			Move the selected verb down in the list.
+		</xChoiceButton>
+		<xChoiceButton name=delverb>
+			<bold>Delete selected verb</bold><br/>
+			Press this to delete the selected verb from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Add a new verb</xtrheader>
+	<tr>
+		<td>
+			<bold>Icon</bold> - The icon displayed in the verb button.
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=icon>
+			<elem name=0><image bmpresource=106 transparent=true transparentdistance=1/></elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Command</bold> - The command to be sent when the verb's button
+			is pressed. If this contains an <bold>"&lt;Click&gt;"</bold> string
+			then the user will need to click on an object (or person) to indicate
+			what object to use.
+		</td>
+		<td>
+			<edit width=100% maxchars=128 name=command/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tooltip</bold> - Tooltip displayed when the mouse is hovered over
+			the verb button. If this is left blank the command's text will be displayed.
+		</td>
+		<td>
+			<edit width=100% maxchars=128 name=tooltip/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Language</bold> - This is the language used for the menu command.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=langid/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=addverb>
+			<bold>Add this verb</bold><br/>
+			Add this verb to the list, using the given command and icon.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Version</bold> - The user can modify the verbs. Normally, subsequent
+			&lt;VerbWindow&gt; messages are ignored. However, if the version string
+			is different, then the user's changes will be discarded. Use this
+			when the verbs have been updated.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=version/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Window location</bold> - If the verb window hasn't been shown before
+			(or if there's a new version), this is the default window location. Coordinates
+			range from 0..1, where 0 is the left/top, and 1 is the right/bottom.
+			If all the values are set to 0 then no window location will be set.
+		</td>
+		<td>
+			<align align=right>Left: <edit width=66% maxchars=32 name=windowloc0/><br/>
+			Right: <edit width=66% maxchars=32 name=windowloc1/><br/>
+			Top: <edit width=66% maxchars=32 name=windowloc2/><br/>
+			Bottom: <edit width=66% maxchars=32 name=windowloc3/></align>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=hidden style=x checkbox=true>
+			<bold>Hidden</bold><br/>
+			If checked, then the verb window will start out hidden from the user.
+			(The user's changes to this setting will override it.)
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=delete style=x checkbox=true>
+			<bold>Hide now</bold><br/>
+			If checked, then the verb window will be hidden from user view until
+			a &lt;VerbWindow&gt; message is called without this flag set. The user
+			will not be able to view the window once a "Hide now" has been sent.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

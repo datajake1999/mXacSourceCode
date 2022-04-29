@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Music resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Music</xtrheader>
+	<tr>
+		<td>
+			<bold>File</bold> - Press "Open" to select the file to use.
+			This should be a MIDI (.mid) file.
+		</td>
+		<td>
+			<edit width=100% maxchars=250 readonly=true name=file/><br/>
+			<bold><button name=open/>Open</bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume, left</bold> - This is the amount of volume to apply to the
+			left speaker. 1.0 is normal volume, 2.0 twice as loud, 0.5 half as loud,
+			etc.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=voll/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume, right</bold> - Volume for the right speaker.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=volr/>
+		</td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,53 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Contrast, Brightness, Colorize"/>
+
+<table width=100% border=0 innerlines=0><tr><td>
+<image posn=edgeright width=50% hbitmap=<<<HBITMAP>>> border=2 name=image/>
+<xPageTitle>
+	Contrast, Brightness, Colorize
+</xPageTitle>
+
+<p>
+	This pane allows you to change the contrast, brightness, and color
+	intensity of image. For example, you can set the "Colorize" menu option to
+	"Very Colorful" so that when your painting will be more colorful than reality.
+	If you want more image controls than these you should you a paint package like
+	Microsoft PhotoDraw or Adobe Photoshop.
+</p>
+
+<p>
+	When you're satisfied, press "Next!"
+</p>
+
+</td></tr></table>
+
+<p align=center>
+	<bold><combobox sort=false width=40% cbheight=100 name=contrast>
+		<elem name="0">Very low contrast</elem>
+		<elem name="1">Low contrast</elem>
+		<elem name="2">Normal contrast</elem>
+		<elem name="3">High contrast</elem>
+		<elem name="4">Very high contrast</elem>
+	</combobox></bold>
+</p>
+
+<p align=center>
+	<bold><combobox sort=false width=40% cbheight=100 name=brightness>
+		<elem name="0">Very low brightness</elem>
+		<elem name="1">Low brightness</elem>
+		<elem name="2">Normal brightness</elem>
+		<elem name="3">High brightness</elem>
+		<elem name="4">Very high brightness</elem>
+	</combobox></bold>
+</p>
+
+<p align=center>
+	<bold><combobox sort=false width=40% cbheight=100 name=colorize>
+		<elem name="0">No color</elem>
+		<elem name="1">Low color</elem>
+		<elem name="2">Normal color</elem>
+		<elem name="3">Colorful</elem>
+		<elem name="4">Very colorful</elem>
+	</combobox></bold>
+</p>

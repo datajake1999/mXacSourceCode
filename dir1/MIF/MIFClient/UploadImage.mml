@@ -1,0 +1,70 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Upload an image of your character"/>
+
+<p/>
+
+<xtablecenter width=80%>
+	<xtrheader>Image quality</xtrheader>
+	<tr><td>
+	
+<p>
+	You can use this dialog box to <bold>upload an image of your character</bold>. You
+	can upload up to <bold><<<NUM>>></bold> images
+	of <bold><<<MAXWIDTH>>></bold> by <bold><<<MAXHEIGHT>>></bold> pixels. The image
+	can be one of your character's emotes (such as smiling, frowning, etc.), or the
+	image displayed when post a message on the message boards.
+</p>
+
+<p>
+	To upload an image:
+</p>
+
+<ol>
+	<li>
+		Enter the image slot number to upload
+		into, <bold><edit name=num width=10% maxchars=16 text=1/></bold> from <bold>1
+		through <<<NUM>>></bold>. For example: You might upload your "happy" image into slot 5,
+		while your "wink" image would be in slot 7.
+	</li>
+	<li>
+		Make sure that your image is <bold>not violating</bold> your end-user license agreement.
+		Unless stated otherwise, uploading the following types of images could result
+		in your account's <bold>termination</bold>:
+	</li>
+	<ul>
+		<li>
+			Without express permission of the author, <bold>copyrighted images cannot be uploaded.</bold>
+		</li>
+		<li>
+			<bold>Offensive images cannot be uploaded,</bold> such as sexually explicit images, or
+			those deemed offensive by different religions or races.
+		</li>
+		<li>
+			The image should be of <bold>reasonable quality (not necessarily professional)</bold> and
+			in a <bold>style appropriate to the world</bold>. If you're not capable of drawing a good
+			image of your character, then ask your artistically-inclined friends, or other
+			players in the world.
+		</li>
+		<li>
+			The image should be <bold>representative</bold> of your character's appearance;
+			no pictures of pets when your character is a human.
+		</li>
+	</ul>
+	
+	<li>
+		Press <bold><button name=selectfile>Select file</button></bold> to bring up the file selection dialog box,
+		and select either a JPEG (.jpg) or bitmap (.bmp) image. If your image is stored using
+		a different format (such as a Photoshop file), then you'll need to convert it to a .JPG or .BMP
+		image using another program.
+	</li>
+	
+	<li>
+		Once the image has been uploaded (which may take a few seconds), you will be <bold>told
+		how to assign the image to an emote.</bold>
+	</li>
+</ol>
+
+
+	</td></tr>
+</xtablecenter>

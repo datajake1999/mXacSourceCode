@@ -1,0 +1,182 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Random sounds"/>
+
+<p>
+	The "random" ambient sounds plays one sound (out of a set) with a random
+	amount of time between sounds. You can use this to create bird sounds,
+	or other effects where short sounds occasionally play.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sound location and volume</xtrheader>
+	<tr><td>
+		You can either have the sounds occur someplace in 3D space
+		or independent of the user's facing. If the sounds are placed in 3D space
+		then their position can be located by the user as he/she rotates the
+		camera around... this is good for sounds coming from specific objects, like clocks.
+		If the sound is independent of the user's facing they will always use
+		the same left/right speaker volume, no matter what direction the player's
+		camera is facing.
+		<p/>
+		<xChoiceButton checkbox=true style=x name=use3d>
+			<bold>Use 3D sound</bold><br/>
+			If checked, the 3D sound settings will be used. If unchecked, the stereo
+			sound settings will be used.
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>3D sound</xtrheader>
+	<tr>
+		<td>
+			<bold>East/west location</bold> - The east/west location of the sound in meters.
+			Positive numbers are east of the player, negative are west.
+			Set the min(imum) and max(imum) location of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=min0/><br/>
+			Max: <edit width=66% maxchars=64 name=max0/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>North/south location</bold> - The north/south location of the sound in meters.
+			Positive numbers are north of the player, negative are south.
+			Set the min(imum) and max(imum) location of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=min1/><br/>
+			Max: <edit width=66% maxchars=64 name=max1/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Up/down location</bold> - The vertical location of the sound in meters.
+			Positive numbers are above the player, negative are below.
+			Set the min(imum) and max(imum) location of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=min2/><br/>
+			Max: <edit width=66% maxchars=64 name=max2/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Loudness of the sound</bold> - This is how loud the sound is, in decibels.
+			In the likely event you don't know what decibels are, here are some
+			value to use:
+			<p/>
+			<ul>
+				<li>10 - Normal breathing</li>
+				<li>20 - Rustling leaves</li>
+				<li>30 - Whispering</li>
+				<li>60 - Normal speech</li>
+				<li>80 - Hair dryer</li>
+				<li>90 - Lawnmower</li>
+				<li>110 - Chainsaw</li>
+				<li>140 - Gunshot</li>
+			</ul>
+			Set the min(imum) and max(imum) volume of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=min3/><br/>
+			Max: <edit width=66% maxchars=64 name=max3/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum distance</bold> - If a sound occurs closer to the user than
+			this amount then it will be pushed away so it's no closer than this.
+			Use this to make sure a random sound is not too loud.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=mindist/></bold></td>
+	</tr>
+	
+	<xtrheader>Stereo sound</xtrheader>
+	<tr>
+		<td>
+			<bold>Left volume</bold> - The volume of the left speaker. 1.0 is normal, 2.0 is
+			twice as loud, 0.5 half as loud, etc.
+			Set the min(imum) and max(imum) volume of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=vol0/><br/>
+			Max: <edit width=66% maxchars=64 name=vol1/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right volume</bold> - The volume of the right speaker. 1.0 is normal, 2.0 is
+			twice as loud, 0.5 half as loud, etc.
+			Set the min(imum) and max(imum) volume of the sound.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=vol2/><br/>
+			Max: <edit width=66% maxchars=64 name=vol3/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Timing</xtrheader>
+	<tr><td>
+		This section controls how often a sound is played.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Time between sounds</bold> - This is the time (in seconds)
+			between the beginnings of the sound.
+			Set the min(imum) and max(imum) time between a sound.
+			<p/>
+			Example: To make a clock tick once a second, set both values to 1.
+			To have a bird cheap once in awhile, set the minimum to 2 seconds,
+			and the maximum to 60 seconds.
+		</td>
+		<td><bold><align align=right>
+			Min: <edit width=66% maxchars=64 name=time0/><br/>
+			Max: <edit width=66% maxchars=64 name=time1/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Jitter</bold> - This causes the time to be played slightly
+			before or after it's supposed to. Jitter is in seconds. Use 0
+			if the sound plays right on time.
+			<p/>
+			Example: To make a clock that's guaranteed to tick once a second,
+			but isn't always on the beat, set the min/max time to 1, but
+			the jitter to 0.5.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=time2/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Sounds</xtrheader>
+	<tr><td>
+		These are the sounds that will be played. One sound will be randomly picked
+		from the list. (If you want one sound to be more likely than the rest then
+		add several copies of it.)
+		<p/>
+		<p align=center>
+			<listbox width=80% height=40% vscroll=randomlistscroll name=randomlist/>
+			<scrollbar orient=vert height=40% name=randomlistscroll/>
+		</p>
+		<xChoiceButton name=newwave>
+			<bold>Add a new sound (.wav file)</bold><br/>
+			This adds a new sound to be played. Provides a dialog for the .wave file name
+			unless you type in a name below:
+		</xChoiceButton>
+		<p align=right>
+			<edit width=66% maxchars=250 name=newwavefile/>
+		</p>
+		<xChoiceButton name=newmusic>
+			<bold>Add a new sound (.mid file)</bold><br/>
+			This adds a new sound to be played.
+		</xChoiceButton>
+		<xChoiceButton name=remove>
+			<bold>Delete the selected sound</bold><br/>
+			This deletes the selected sound from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

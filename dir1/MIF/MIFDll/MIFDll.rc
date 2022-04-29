@@ -1,0 +1,174 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "CircumrealityDll"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "CircumrealityDll.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""CircumrealityDll""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""CircumrealityDll.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLRENDERSCENE      MML                     "RenderScene.mml"
+IDR_MMLTEMPLATEBACK     MML                     "TemplateBack.mml"
+IDR_MMLMACROS           MML                     "Macros.mml"
+IDR_MMLRENDERTITLE      MML                     "RenderTitle.mml"
+IDR_MMLRESVERB          MML                     "ResVerb.mml"
+IDR_MMLRESVERBCLIENT    MML                     "ResVerbClient.mml"
+IDR_MMLAMBIENT          MML                     "Ambient.mml"
+IDR_MMLAMBIENTRANDOM    MML                     "AmbientRandom.mml"
+IDR_MMLAMBIENTLOOP      MML                     "AmbientLoop.mml"
+IDR_MMLTRANSITION       MML                     "Transition.mml"
+IDR_MMLRESTITLEINFO     MML                     "ResTitleInfo.mml"
+IDR_MMLRESVOICECHATINFO MML                     "ResVoiceChatInfo.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_VERB0               BITMAP                  "bitmap1.bmp"
+IDB_VERB1               BITMAP                  "verb1.bmp"
+IDB_VERB2               BITMAP                  "verb2.bmp"
+IDB_VERB3               BITMAP                  "verb3.bmp"
+IDB_VERB4               BITMAP                  "verb4.bmp"
+IDB_VERBSMILE           BITMAP                  "VerbSmile.bmp"
+IDB_VERBFROWN           BITMAP                  "verbFrown.bmp"
+IDB_VERBWAVE            BITMAP                  "verbWave.bmp"
+IDB_VERBNEUTRAL         BITMAP                  "verbNoSmile.bmp"
+IDB_VERBSAD             BITMAP                  "verbSad.bmp"
+IDB_VERBWINK            BITMAP                  "verbWink.bmp"
+IDB_VERBSURPRISED       BITMAP                  "verbSurprised.bmp"
+IDB_VERBANGRY           BITMAP                  "verbAngry.bmp"
+IDB_VERBWORRIED         BITMAP                  "verbWorried.bmp"
+IDB_VERBCRY             BITMAP                  "verbCry.bmp"
+IDB_VERBLAUGH           BITMAP                  "verbLaugh.bmp"
+IDB_VERBHELP            BITMAP                  "verbHelp.bmp"
+IDB_VERBIDENTIFYSELF    BITMAP                  "verbIdentifySelf.bmp"
+IDB_VERBMAIL            BITMAP                  "mail.bmp"
+IDB_VERBWORLD           BITMAP                  "World.bmp"
+IDB_VERBREPORTBUG       BITMAP                  "verbbug.bmp"
+IDB_VERBSHIFTYLOOKLEFT  BITMAP                  "verbShiftyLookLeft.bmp"
+IDB_VERBSHIFTYLOOKRIGHT BITMAP                  "verbShiftyLookRight.bmp"
+IDB_VERBPURSELIPS       BITMAP                  "verbPurseLips.bmp"
+IDB_VERBSMILEMILD       BITMAP                  "verbSmileMild.bmp"
+IDB_VERBAFRAID          BITMAP                  "verbAfraid.bmp"
+IDB_VERBSADMILD         BITMAP                  "verbSadMild.bmp"
+IDB_VERBMAGNIFYINGGLASS BITMAP                  "MagnifyingGlass.bmp"
+IDB_VERBMAGNIFYINGGLASSCROSS BITMAP                  "MagnifyingGlassCross.bmp"
+IDB_VERBFRIENDS         BITMAP                  "verbFriends.bmp"
+IDB_VERBPARTY           BITMAP                  "verbParty.bmp"
+IDB_VERBMESSAGEBOARD    BITMAP                  "verbMessageBoard.bmp"
+IDB_VERBWHISTLE         BITMAP                  "Whistle.bmp"
+IDB_VERBCROSSEYED       BITMAP                  "VerbCrosseyed.bmp"
+IDB_VERBFUNNYFACE       BITMAP                  "VerbFunnyFce.bmp"
+IDB_VERBDEAD            BITMAP                  "faceDead.bmp"
+IDB_VERBUNCONSCIOUS     BITMAP                  "faceUnc.bmp"
+IDB_VERBDAZED           BITMAP                  "facehDazed.bmp"
+IDB_VERBSTICKOUTTONGUE  BITMAP                  "StickOutTongue.bmp"
+IDB_VERBNODYES          BITMAP                  "VerbNodYes.bmp"
+IDB_VERBNODNO           BITMAP                  "verbnodNo.bmp"
+IDB_VERBABUSE           BITMAP                  "verbAbuse.bmp"
+IDB_VERBEXIT            BITMAP                  "verbExit.bmp"
+IDB_VERBJOURNAL         BITMAP                  "VerbJournal.bmp"
+IDB_VERBQUESTS          BITMAP                  "VerbQuests.bmp"
+IDB_VERBINVENTORY       BITMAP                  "inventory.bmp"
+IDB_VERBTUTORIALOFF     BITMAP                  "TutorialOff.bmp"
+IDB_VERBEXIT2           BITMAP                  "Exit2.bmp"
+IDB_VERBPLAYERHELP      BITMAP                  "PlayerHelp.bmp"
+IDB_VERBSKILLS          BITMAP                  "VerbSkills.bmp"
+IDB_VERBVOTERANK        BITMAP                  "Vote.bmp"
+IDB_VERBMAP             BITMAP                  "verbMap.bmp"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

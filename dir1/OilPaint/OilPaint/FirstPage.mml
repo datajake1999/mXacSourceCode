@@ -1,0 +1,94 @@
+<?Include resource=400?>
+<PageInfo title="Welcome to Oil Painting Assistant"/>
+
+<colorblend posn=background color=#000000/>
+<p align=center>
+<table width=95% innerlines=0 border=0 lrmargin=32 tbmargin=32>
+<tr>
+	<td width=80% valign=center><font color=#ffffff>
+		Welcome to
+		<br/>
+		<big><big><big><big>Oil Painting Assistant</big></big></big></big>
+		<italic>   Version <<<VERSION>>></italic>
+		<br/>
+		by Mike Rozak
+		<br/>
+		<a href="http://www.mxac.com.au">www.mXac.com.au</a>
+		<br/>
+		<small>Copyright (c) 1999-2009 by Mike Rozak. All rights reserved.</small>
+		<br/>
+		<small>JPEG decompression from the Independent JPEG Group.</small>
+	</font></td>
+</tr>
+
+<tr>
+	<td bgcolor=#ffffff>
+		<image posn=background jpgresource=116 type=tile scale=200%/>
+		<bold>Oil Painting Assistant</bold> helps you produce oil paintings of images from a scanner,
+		digital camera, or the web. With Oil Painting Assistant, you load in a digital image,
+		crop it to fit your canvas, and adjust coloration to suit your tastes. It also applies
+		a grid to the image so you can more accurately sketch on your canvas.
+		The assistant then displays an analysis of the image showing what paints would be
+		useful for the painting's base coat. The analysis and grid-overlaid image can be
+		displayed on your monitor while you paint, or printed on a color
+		printer. <bold>The creative work (actually painting) is left up to you.</bold>
+		
+		<p/>
+		
+		Please select where you want to get your digital image from:
+		<p/>
+		
+		<xChoiceButton name=image>
+			<bold>From an image file</bold>
+			<br/>
+			This loads in either a JPEG (.jpg) or bitmap (.bmp) file to use for your
+			painting.
+		</xChoiceButton>
+		
+		<xChoiceButton name=session>
+			<bold>From an existing Oil Painting Assistant session</bold>
+			<br/>
+			If you saved your session when you were last using Oil Painting Assistant, you
+			can use this to reload it and continue from where you left off.
+		</xChoiceButton>
+		
+		<xChoiceButton name=sample>
+			<bold>Use a sample image</bold>
+			<br/>
+			If you just installed and don't have any images to test with, click this to
+			try a sample image.
+		</xChoiceButton>
+		
+		
+		<xbr/>
+		
+		You can also:
+		<p/>
+		
+		<xChoiceButton href=register>
+			<bold>Register your copy of Oil Painting Assistant</bold>
+			<br/>
+			I need to pay the bills too. This release is fully featured so
+			you can experiment with the application and see if it's useful to you.
+			If Oil Painting Assistant ends up being an application you use, I'd appreciate
+			it if you'd register and pay the small US$25.00 registration fee.
+		</xChoiceButton>
+		
+		<xChoiceButton href="mailto:Mike@mXac.com.au">
+			<bold>Send me feedback</bold>
+			<br/>
+			Click this to E-mail any bugs or feature suggestions to <bold>Mike@mXac.com.au</bold>.
+		</xChoiceButton>
+		
+		<xChoiceButton href=history>
+			<bold>Revision history</bold>
+			<br/>
+			See what features have been added to Oil Painting Assistant since your last upgrade.
+		</xChoiceButton>
+		
+	</td>
+</tr>
+
+
+</table>
+</p>

@@ -1,0 +1,26 @@
+<pageinfo index=false title="What IP address does the world use?"/>
+<?Include resource=500?>
+<xClientPage jpgresource=323>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>What IP address does the world use?</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	<p>
+		The virtual world doesn't have a listed Internet address because it changes.
+		You should look on <a color=#8080ff href="<<<WEBSITE>>>"><<<WEBSITE>>></a> for the "IP
+		address" and type it in below and press "OK". (The IP address is a series of numbers
+		separated by periods, like "12.34.567.89".)
+	</p>
+	<p align=center><bold><font color=#000000><edit width=66% maxchars=64 defcontrol=true name=ipaddr/></font></bold></p>
+	<p align=right>
+		<button style=lefttriangle accel=escape href=cancel>Cancel</button>&tab;
+		<button style=righttriangle accel=enter name=ok>OK</button>
+	</p>
+</td></tr>
+</table></p>
+
+
+</xClientPage>

@@ -1,0 +1,10 @@
+appname=Circumreality
+title=Large male voices
+selfexe=z:\mxacNetweb\CircumrealityVoicesMale.exe
+file=z:\voices\large\MikeRozak.tts
+file=z:\voices\large\CMUMaleAWB.tts
+file=z:\voices\large\CMUMaleBDL.tts
+file=z:\voices\large\CMUMaleJMK.tts
+file=z:\voices\large\CMUMaleRMS.tts
+license=z:\MIF\license.txt
+

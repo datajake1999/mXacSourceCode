@@ -1,0 +1,42 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Text resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Text</xtrheader>
+	<tr><td>
+		The text resource lets you enter "MML" text, which virutally the same as HTML.
+		(If you don't know HTML then you should search on the web for information, or
+		look through some of the included samples.)
+	</td></tr>
+	<tr><td align=center>
+		<font face=courier><align tab=16>
+			<edit width=90% height=40% maxchars=100000 prelineindent=true multiline=true capturetab=true vscroll=desclongscroll name=desclong/>
+		</align></font>
+		<scrollbar orient=vert height=40% name=desclongscroll/>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=testmml>
+			<bold>Test MML</bold><br/>
+			This checks for errors in the MML and then displays the help topic as if it were in help.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Advanced tips:
+</p>
+
+<xul>
+	<li>
+		If you include a <bold>control name in the link</bold>, such as "say &amp;lt;myedit&amp;gt;", where "myedit"
+		is a control in the MML (such as &lt;edit name=myedit/&gt;) then the text from
+		the edit control will be read and replace the &lt;myedit&gt; value.
+		This works for edit controls, scrollbars, list boxes, combo boxes, date, and time controls.
+	</li>
+</xul>
+

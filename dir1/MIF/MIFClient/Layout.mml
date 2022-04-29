@@ -1,0 +1,66 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Layout settings"/>
+
+<p/>
+
+<xtablecenter width=80%>
+	<xtrheader>Layout settings (tab independent)</xtrheader>
+	
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=showtitle>
+			<bold>Display the window's title bar</bold><br/>
+			Normally, the Circumreality window occupies the entire screen. If you wish it to be smaller,
+			check this button so that the title bar becomes visible, allowing you to resize the
+			window.
+		</xChoiceButton>
+	</td></tr>
+
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=minimizeifswitch>
+			<bold>Minimize CircumReality if you switch away to another application</bold><br/>
+			If checked, then switching to another application will automatically
+			minimize the CircumReality window.
+		</xChoiceButton>
+	</td></tr>
+
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=secondmonitor>
+			<bold>Use your second monitor</bold><br/>
+			If checked, Circumreality will use both of your monitors for gameplay.
+			<<<$SECONDMONITOR>>>
+		</xChoiceButton>
+	</td></tr>
+
+	<tr><td>
+		<xChoiceButton style=righttriangle name=customizetoolbar>
+			<bold>Customize the toolbar...</bold><br/>
+			This lets you customize the toolbar at the top-left corner of the screen.
+		</xChoiceButton>
+	</td></tr>
+
+
+</xtablecenter>
+
+<xtablecenter width=80%>
+	<xtrheader>Layout settings (tab specific)</xtrheader>
+	<tr><td>
+		These settings a remembered for each of the four tabs (explore, chat, combat, and misc).
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=hidetabs>
+			<bold>Hide tabs (top) and toolbar (bottom)</bold><br/>
+			If checked, the tabs (on top) and the toolbar (on bottom) will hide themselves until
+			you move the mouse over them. This option frees up more of the screen for the
+			game's images.
+		</xChoiceButton>
+	</td></tr>
+	
+	<tr><td>
+		<xChoiceButton name=resetwindowlocs>
+			<bold>Restore window locations</bold><br/>
+			Pressing this will restore Circumreality's windows/panes to the original locations, for the current
+			tab.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

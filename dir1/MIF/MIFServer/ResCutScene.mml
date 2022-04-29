@@ -1,0 +1,303 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="CutScene resource"/>
+
+<null>
+	<<<$COMBODEFINE>>>
+</null>
+
+<!xComboTextOrTransPros>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Text</elem>
+		<elem name=1>Transplanted prosody</elem>
+	</combobox></bold>
+</xComboTextOrTransPros>
+
+
+<!xComboLookDir>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Look left</elem>
+		<elem name=1>Look straight ahead</elem>
+		<elem name=2>Look right</elem>
+	</combobox></bold>
+</xComboLookDir>
+
+
+<p>
+	The CutScene resource lets you create a cut scene with dialogue, sounds,
+	and images.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Actions</xtrheader>
+	<tr>
+		<td width=20% bgcolor=#004000><bold><font color=#ffffff>
+			Action
+		</font></bold></td>
+		<td width=65% bgcolor=#004000><bold><font color=#ffffff>
+			Details
+		</font></bold></td>
+		<td width=15% bgcolor=#004000><bold><font color=#ffffff>
+			Order
+		</font></bold></td>
+	</tr>
+	<<<$ACTIONS>>>
+	<tr><td>
+		<xChoiceButton href=add>
+			<bold>Add new action</bold><br/>
+			Press this to add a new action.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=newttsfile>
+	<bold>Change text-to-speech voice</bold><br/>
+	Press this to change the text-to-speech voice used for hearing the sentence
+	and spell checking.
+	You can usually find some text-to-speech voices in "c:\program files\mXac\CircumReality".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=ttsfile/>
+
+<p/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Cut scene resources can be used to diplay a cut scene, which is a sequence of speech (either
+	from NPCs or the narraor), sounds, and images. The resource can then be passed to
+	MMLCutScene() or CutScene().
+</p>
+
+<p>
+	To create a cut scene:
+</p>
+
+<ol>
+	<li>
+		Press <bold>Add new action</bold> to add an action in the
+		cut thene.
+	</li>
+	<li>
+		<bold>Select</bold> the type of action to use from the left column, such
+		as "speak", "sound", "image", etc.
+	</li>
+	<li>
+		<bold>Fill in</bold> the settings specific to the type of action. For
+		more information, see below.
+	</li>
+</ol>
+
+<xtablecenter width=100%>
+	<xtrheader>Action types</xtrheader>
+
+	<tr>
+		<td width=20% bgcolor=#c0ff00><bold>
+			Speak
+		</bold></td>
+		<td width=80% bgcolor=#c0ff00>
+			This action causes a NPC or narrator to speak. You should fill in the following
+			information:
+			<p/>
+			<xul>
+				<li>
+					<bold>Text or Transplanted prosody</bold> - Select whether the speech is
+					raw text, or it's a transplanted prosody resource. Transplanted prosody
+					will sound better, but requires more work.
+				</li>
+				<li>
+					<bold>Text</bold> - If you decide to speak just text, you'll need to type
+					the text to speak to the right of the "Text" combo-box.
+				</li>
+				<li>
+					<bold>Transplanted prosody resource</bold> - If the speech is transplanted
+					prosody, you should select the transplanted prosody resource to the right
+					of the "Transplanted prosody" combo-box.
+				</li>
+				<li>
+					<bold>Voice</bold> - Specify the voice to use. This is can be "Narrator" to
+					use the default narrator, or "NPCAsNarrator" to use the voice of the NPC who is narrating
+					the cut-scene. It can also be an NPC object, or a voice resource.
+				</li>
+				<li>
+					<bold>Speaking style</bold> - This controls the type of emotion that the
+					voice uses.
+				</li>
+				<li>
+					<bold>Lang(uage):</bold> - If you leave this blank then the speech will be understood
+					by every character, not matter what fictional languages the character knows.
+					If it's "default" (all lower case) then the NPC will speak in whatever language it
+					was last using. Otherwise, this is a lower-case language-independent language
+					string, like "common" or "elvish".
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width=20% bgcolor=#c0c0ff><bold>
+			Sound
+		</bold></td>
+		<td width=80% bgcolor=#c0c0ff>
+			Plays a sound, either a &lt;Wave&gt; or &lt;Music&gt; resource.
+			<p/>
+			<xul>
+				<li>
+					<bold>Resource</bold> - Select the sound resource to play.
+				</li>
+				<li>
+					<bold>Wait until sound completed</bold> - If checked, the cut scene
+					will wait until the sound has finished playing. If unchecked, the
+					sound while play while the cut scene progresses.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#c0c0c0><bold>
+			Pause
+		</bold></td>
+		<td width=80% bgcolor=#c0c0c0>
+			Pauses the story for a few seconds.
+			<p/>
+			<xul>
+				<li>
+					<bold>Time</bold> - Number of seconds to pause.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#80c080><bold>
+			Ambient
+		</bold></td>
+		<td width=80% bgcolor=#80c080>
+			Turns on specific ambient sound effects, like birds in the background.
+			<p/>
+			<xul>
+				<li>
+					<bold>Resource</bold> - Select the ambient resource to play. This can be "none" to turn off
+					any existing ambient sounds.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#ffc0c0><bold>
+			NPCEmote
+		</bold></td>
+		<td width=80% bgcolor=#ffc0c0>
+			Displays a NPC's visual emote.
+			<p/>
+			<xul>
+				<li>
+					<bold>Object</bold> - Select the object whose image will be displayed.
+					This can also be "NPCAsNarrator", which will show the object that's acting
+					as the current narrator (if there is one).
+				</li>
+				<li>
+					<bold>Emote</bold> - This can be a blank string, or a lower-case visual emote string
+					from VisualEmoteEnum(). Since the visual emotes depend upon the type of NPC,
+					no exact list can be given. (Dragons, for example, might include an emote
+					where their ears are perked up.)
+				</li>
+				<p>
+					Some standard visual emotes are:
+					
+					afraid, angry, angrybrief, bow, burp, closeeeyes, cough, crosseyed, cry, dead, eyebrowsup, frown, funnyface,
+					growl, hmmm, kiss, laugh, lookdown, lookleft, lookright, lookup,
+					neutral, nodno, nodyes, purselips, sad, sadmild,
+					shiftylookleft, shiftylookright, sigh, slidejawl, slidejawr,
+					sneer, smile, smilebrief, smilemild, sniff, sob, surprised,
+					tear, tiltheadl, tiltheadr, unconscious, wave, whistle,
+					wink, worried, yawn.
+				</p>
+				<li>
+					<bold>Look direction</bold> - Use this to have the NPC look left or right
+					while producing the emote. This is a good way to simlate two NPCs talking to
+					one another.
+				</li>
+				<li>
+					<bold>Fade</bold> - If you leave this blank then the image will appear
+					right away. If you type in a number, then this is the number of seconds
+					it takes for the image to fade in, over the previous image.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width=20% bgcolor=#ffff80><bold>
+			Image
+		</bold></td>
+		<td width=80% bgcolor=#ffff80>
+			This displays an image resource, based on &lt;Image&gt;,
+			&lt;Text&gt;, &lt;3DScene&gt;, &lt;3DObjects&gt;, and &lt;Title&gt;.
+			<p/>
+			<xul>
+				<li>
+					<bold>Resource</bold> - Select the image resource to display.
+				</li>
+				<li>
+					<bold>Disable NPR</bold> - If checked, then automatic non-photorealistic
+					rendering using MMLVisualEffectInsert() will be disabled.
+				</li>
+				<li>
+					<bold>Fade</bold> - If you leave this blank then the image will appear
+					right away. If you type in a number, then this is the number of seconds
+					it takes for the image to fade in, over the previous image.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width=20% bgcolor=#8080ff><bold>
+			Room
+		</bold></td>
+		<td width=80% bgcolor=#8080ff>
+			This displays a 360-degree room image.
+			<p/>
+			<xul>
+				<li>
+					<bold>Room</bold> - Room object, based on cRoom.
+				</li>
+				<li>
+					<bold>Date/time</bold> - Day number with time after the decimal point. Since the day
+					number usually doesn't affect the visual, the easiest is to use use day "0", and the
+					time. "0.0" is midnight, "0.25" is 6 AM, "0.5" is noon, "0.75" is 6 PM.
+					If left blank, noon (0.5) will be used.
+				</li>
+				<li>
+					<bold>Viewer height</bold> - Height of the viewer in meters. If left blank, 1.8 will be used.
+				</li>
+				<li>
+					<bold>LR Angle</bold> - Angle that the camera is looking. 0 for north, 90 for east, 180 for south,
+					260 for west. If left blank, this defaults to 0.
+				</li>
+				<li>
+					<bold>UD Angle</bold> - Angle that the camera is looking up/down. 0 for straight ahead, 90
+					for straight up, -90 for straight down. If left blank, this defaults to 0.
+				</li>
+				<li>
+					<bold>FOV</bold> - Field of view, from 1 to 180. If left blank, the player's current field-of-view
+					will be used.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<p>
+	You can use the up and down arrows (
+	<button style=uptriangle/> and <button style=downtriangle/>) to reorder the
+	action. The delete button (<button style=box color=#ff0000/>) will delete the specific
+	action.
+</p>

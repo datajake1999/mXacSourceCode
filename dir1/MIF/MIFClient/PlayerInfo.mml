@@ -1,0 +1,216 @@
+<pageinfo index=false title="Personal information"/>
+<?Include resource=500?>
+<xClientPage jpgresource=322>
+
+<p/>
+
+<font color=#ffffff><p align=center><table width=50% border=0>
+<tr><td>
+	Most worlds have a standard set of personal information that they ask for,
+	such as your E-mail address, character name, etc. To save you time,
+	you can just enter the information here and any new world that you
+	play in won't need to ask you the information.
+</td></tr>
+</table></p></font>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Internet access</xtrheader>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<xChoiceButton style=x checkbox=true name=rendercache>
+				<bold>Speed up CircumReality by downloading images while you play</bold><br/>
+				If checked, CircumReality will be faster when you play over a broadband
+				Internet connection. However, this might cause CircumReality to
+				download hundreds of megabytes while you're playing. <bold>Don't check this
+				if you're paying for Internet by the megabyte, or have a small monthly bandwidth
+				limit.</bold><<<$RENDERCACHE>>>
+			</xChoiceButton>
+		</td>
+	</tr>
+</table></p>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Contact information</xtrheader>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>E-mail</bold> - Many worlds will send you E-mail when your character
+			receives in-game mail. They also use E-mail (MyName@Someplace.com) to ensure that you're
+			not creating several user accounts; since most worlds only let you have
+			one user account.
+			
+			<p/>
+			Leave this blank if you don't with to automatically send your E-mail
+			to every world you play.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% maxchars=64 defcontrol=true name=email/></font></bold>
+		</td>
+	</tr>
+</table></p>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Character information</xtrheader>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Preferred character name</bold> - If you would like to use the same character
+			name in every world, then type it in here. (If someone else is already
+			using the character name in a specific world then you'll be asked for a different name
+			when you create a new character in the world.)
+			
+			<p/>
+			Leave this blank if you don't want an automatic character name.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% maxchars=64 name=prefname/></font></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Preferred gender</bold> - If you always play a male character, or you always
+			play a female character, then select the gender here and you won't be
+			asked when creating the character.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><combobox width=100% cbheight=150 name=prefgender>
+				<elem name=0>Female</elem>
+				<elem name=1><italic>I play different genders</italic></elem>
+				<elem name=2>Male</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+</table></p>
+
+<<<$IFSIMPLEUI>>>
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Grouping information</xtrheader>
+	<tr><td>
+		<colorblend color=#ffffff posn=background transparent=0.25/>
+		Many worlds encourage you to group up with other players (also called
+		"joining a party"). In order to group like-minded people with one another,
+		a few pieces of personal information are used.
+		<p/>
+		<bold>You don't have to enter any of these fields.</bold> If you do, be aware that
+		while the information is kept private, <bold>other players may be able to guestimate
+		what you have entered.</bold> Therefore, if you really don't want anyone
+		knowing your age, don't enter it.
+	</td></tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Age</bold> - How old you are in years. Worlds try to group
+			similarly-aged people up.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% maxchars=64 name=age/></font></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Hours played per week</bold> - On average, how many hours a week do you
+			expect to play Circumreality? Worlds try to group hardcore players (lots of hours)
+			with hardcore players, and casual players (a few hours) with casual players.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% maxchars=64 name=hoursplayed/></font></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Time zone</bold> - If you check this box then the world will try to group
+			you with other players in your same time zone. This makes arranging play times
+			easier, as well as increasing the chance of being able to meet up in real life (if
+			you so choose).
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><button checkbox=true style=x name=exposetimezone>Use time zone</button></bold>
+		</td>
+	</tr>
+</table></p>
+
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Public personal information</xtrheader>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Personal profile description</bold> - In most worlds, you can write
+			a few paragraphs about your own interests. Other players may read this bio
+			and use it to decide it they have anything in common and
+			want to team up with you in game.
+			<p/>
+			You don't have to type anything in. If you do, <bold>don't provide
+			any information that could reveal who you really are or where
+			you live</bold>; not all players are trustworthy.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% height=50% maxchars=1024 multiline=true wordwrap=true name=prefdesc/></font></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Blog or web-page link</bold> - You can also provide a link to
+			your personal blog/web-page that other players will be able to see.
+			<p/>
+			You don't have to type anything in. If you do, <bold>don't provide
+			any information that could reveal who you really are or where
+			you live</bold>; not all players are trustworthy.
+			Make sure to <bold>begin the link with "http://"</bold>,
+			like "http://www.mxac.com.au/drt".
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><font color=#000000><edit width=100% maxchars=128 name=desclink/></font></bold>
+		</td>
+	</tr>
+</table></p>
+
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Disable the tutorial</bold> - All words start with the tutorial turned on.
+			After you've gone through one tutorial you probably don't need to see
+			it a second time. Once you know your way
+			around Circumreality, you can check this box to turn off the tutorial.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold><button checkbox=true style=x name=disabletutorial>Disable the tutorial</button></bold>
+		</td>
+	</tr>
+</table></p>
+
+<<<$ENDIFSIMPLEUI>>>
+
+<font color=#ffffff><p align=center><table width=50% border=0 innerlines=0>
+<tr>
+	<td align=left>
+		<button style=lefttriangle href=back>
+			<bold>Back</bold>
+		</button>
+	</td>
+	<td align=right>
+		<button style=righttriangle href=next>
+			<bold>Next</bold>
+		</button>
+	</td>
+</tr>
+</table></p></font>
+
+</xClientPage>

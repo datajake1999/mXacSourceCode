@@ -1,0 +1,511 @@
+<!xSN><bold>3DOB</bold></xSN>
+<!xLN><bold>3D Outside the Box</bold></xLN>
+
+<!xClientPageWhite>
+	<image posn=background type=vtilescale MACROATTRIBUTE=1/>
+	<image transparent=true posn=edgeright- transparentdistance=2 jpgresource=297 addcolor=true/>
+	<font color=#ffffff>
+		<?MacroContent?>
+	</font>
+</xClientPageWhite>
+
+<!xClientPage>
+	<image posn=background type=vtilescale MACROATTRIBUTE=1/>
+	<image transparent=true posn=edgeright- transparentdistance=2 jpgresource=297 addcolor=true/>
+	<?MacroContent?>
+</xClientPage>
+
+<!xNotFunctional>
+	<p><table width=100% bgcolor=#ffff00>
+		<tr>
+			<td>
+				<align align=center><bold><big>Under Construction</big></bold><br/>
+				This page is not functional. It shows a place-holder sample UI at the moment.</align>
+			</td>
+		</tr>
+	</table></p>
+</xNotFunctional>
+
+<!xChoiceButton>
+	<Button valign=top MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Button><br/>
+</xChoiceButton>
+
+<!xHoverHelp>
+	<HoverHelp MACROATTRIBUTE=1><small>
+		<<<$IFCOLOR>>><colorblend posn=background lcolor=#f0ffe0 rcolor=#e0f0c0/><<<$ENDIFCOLOR>>>
+		<?MacroContent?>
+	</small></HoverHelp>
+</xHoverHelp>
+
+<!xHoverHelpShort>
+	<xHoverHelp hresize=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</xHoverHelp>
+</xHoverHelpShort>
+
+<!xMyEmail>
+	<a MACROATTRIBUTE=1 href="mailto:Mike@mXac.com.au">
+		Mike@mXac.com.au<keyword score=128 words="mike rozak"/>
+		<xHoverHelp>
+			Click this to send me E-mail.
+			Please try to be specific in E-mail so I don't have to E-mail
+			back asking for more information. Thanks.
+			</xHoverHelp>
+	</a>
+</xMyEmail>
+
+<!xPageTitle>
+	<p align=right><big><big><big><bold><keyword score=128>
+		<?MacroContent?>
+	</keyword></bold></big></big></big></p>
+</xPageTitle>
+
+<!xSectionTitle>
+	<p> </p>
+	<p MACROATTRIBUTE=1><big><bold><section><keyword score=96>
+		<?MacroContent?>
+	</keyword></section></bold></big></p>
+</xSectionTitle>
+
+<!xUl>
+	<ul type=pointer>
+		<?MacroContent?>
+	</ul>
+</xUl>
+
+<!xEditOneLine>
+	<p align=right>
+		<edit MACROATTRIBUTE=1 maxchars=128 selall=true width=75% wordwrap=false>
+      <?MACROCONTENT?>
+		</edit>
+	</p>
+</xEditOneLine>
+
+<!xTableCenter>
+	<p align=center> <table width=90% MACROATTRIBUTE=1>
+		<colorblend posn=background rcolor=#d0d0ff lcolor=#e0e0ff/>
+		<?MacroContent?>
+	</table></p>
+</xTableCenter>
+<!xDefinition>
+	<xTableCenter><tr><td>
+		<colorblend posn=background rcolor=#d0d0ff lcolor=#e0e0ff/>
+		<align align=left><?MacroContent?></align>
+	</td></tr></xTableCenter>
+</xDefinition>
+
+<!xtrHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtrheader>
+
+<!xbr>
+	<p align=center>
+		<colorblend width=80% height=8 lcolor=#80ff80 rcolor=#8080ff/>
+	</p>
+</xbr>
+
+<!xFilterSuburb>
+	<p align=right>
+		<bold><filteredlist width=75% cbheight=150 blank="No suburb specified" additem="" listname=suburb sort=true MACROATTRIBUTE=1/></bold>
+	</p>
+</xFilterSuburb>
+
+<!xStatusColor>
+	<status width=100 height=50 align=center border=4 valign=center MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</status>
+</xStatusColor>
+
+<!xButtonName>
+	<bold><?MacroContent?></bold> <image MACROATTRIBUTE=1 scale=50% transparent=true/>
+</xButtonName>
+
+<!xButtonNew><xButtonName bmpresource=110>New</xButtonName></xButtonNew>
+<!xButtonOpen><xButtonName bmpresource=111>Open</xButtonName></xButtonOpen>
+<!xButtonSave><xButtonName bmpresource=108>Save</xButtonName></xButtonSave>
+<!xButtonSaveAs><xButtonName bmpresource=109>Save as</xButtonName></xButtonSaveAs>
+<!xButtonLocale><xButtonName bmpresource=222>Location settings</xButtonName></xButtonLocale>
+<!xButtonObjEditor><xButtonName bmpresource=240>Object settings</xButtonName></xButtonObjEditor>
+
+<!xButtonHelp><xButtonName bmpresource=112>Help</xButtonName></xButtonHelp>
+<!xButtonPrinter><xButtonName bmpresource=103>Print or save image</xButtonName></xButtonPrinter>
+
+<!xButtonClose><xButtonName bmpresource=104>Close</xButtonName></xButtonClose>
+<!xButtonMinimize><xButtonName bmpresource=105>Minimize</xButtonName></xButtonMinimize>
+<!xButtonSmallWindow><xButtonName bmpresource=224>Shrink/expand window</xButtonName></xButtonSmallWindow>
+<!xButtonNextMonitor><xButtonName bmpresource=106>Next monitor</xButtonName></xButtonNextMonitor>
+<!xButtonCloneView><xButtonName bmpresource=107>New view</xButtonName></xButtonCloneView>
+
+<!xButtonRedo><xButtonName bmpresource=117>Redo</xButtonName></xButtonRedo>
+<!xButtonUndo><xButtonName bmpresource=116>Undo</xButtonName></xButtonUndo>
+<!xButtonDelete><xButtonName bmpresource=118>Delete</xButtonName></xButtonDelete>
+<!xButtonPaste><xButtonName bmpresource=115>Paste</xButtonName></xButtonPaste>
+<!xButtonCopy><xButtonName bmpresource=114>Copy</xButtonName></xButtonCopy>
+<!xButtonCut><xButtonName bmpresource=113>Cut</xButtonName></xButtonCut>
+<!xButtonLibrary><xButtonName bmpresource=234>Library</xButtonName></xButtonLibrary>
+
+<!xButtonViewFlat><xButtonName bmpresource=120>Flattened view</xButtonName></xButtonViewFlat>
+<!xButtonView3D><xButtonName bmpresource=121>Model view</xButtonName></xButtonView3D>
+<!xButtonViewWalkthrough><xButtonName bmpresource=122>Walkthrough view</xButtonName></xButtonViewWalkthrough>
+<!xButtonViewQuality><xButtonName bmpresource=223>Image quality</xButtonName></xButtonViewQuality>
+<!xButtonViewSettings><xButtonName bmpresource=126>View settings</xButtonName></xButtonViewSettings>
+<!xButtonThumbnail><xButtonName bmpresource=237>Thumbnail</xButtonName></xButtonThumbnail>
+
+<!xButtonClipSet><xButtonName bmpresource=152>Clipping settings</xButtonName></xButtonClipSet>
+<!xButtonClipPoint><xButtonName bmpresource=151>Clip based on a point</xButtonName></xButtonClipPoint>
+<!xButtonClipLine><xButtonName bmpresource=150>Clip to a line</xButtonName></xButtonClipLine>
+<!xButtonClipLevel><xButtonName bmpresource=171>View a level</xButtonName></xButtonClipLevel>
+<!xButtonTrace><xButtonName bmpresource=242>Tracing paper</xButtonName></xButtonTrace>
+
+<!xButtonGridSelect><xButtonName bmpresource=230>Grid size</xButtonName></xButtonGridSelect>
+<!xButtonGridFromPoint><xButtonName bmpresource=231>Grid from a point</xButtonName></xButtonGridFromPoint>
+<!xButtonGridSettings><xButtonName bmpresource=126>Grid settings</xButtonName></xButtonGridSettings>
+
+<!xButtonSelIndividual><xButtonName bmpresource=153>Select individual objects</xButtonName></xButtonSelIndividual>
+<!xButtonSelRegion><xButtonName bmpresource=154>Select multiple objects</xButtonName></xButtonSelRegion>
+<!xButtonSelAll><xButtonName bmpresource=155>Select all objects</xButtonName></xButtonSelAll>
+<!xButtonSelNone><xButtonName bmpresource=169>Clear selection</xButtonName></xButtonSelNone>
+<!xButtonSelSet><xButtonName bmpresource=126>Selection settings</xButtonName></xButtonSelSet>
+
+<!xButtonMoveNSEWUD><xButtonName bmpresource=239>Move object in any direction</xButtonName></xButtonMoveNSEWUD>
+<!xButtonMoveNSEW><xButtonName bmpresource=158>Move object NSEW</xButtonName></xButtonMoveNSEW>
+<!xButtonMoveUD><xButtonName bmpresource=156>Move object up/down</xButtonName></xButtonMoveUD>
+<!xButtonMoveEmbed><xButtonName bmpresource=233>Move embedded object</xButtonName></xButtonMoveEmbed>
+<!xButtonMoveRotZ><xButtonName bmpresource=159>Rotate object around vertical</xButtonName></xButtonMoveRotZ>
+<!xButtonMoveRotY><xButtonName bmpresource=161>Rotate object around horizontal</xButtonName></xButtonMoveRotY>
+<!xButtonMoveReference><xButtonName bmpresource=157>Change movement reference</xButtonName></xButtonMoveReference>
+<!xButtonMoveSettings><xButtonName bmpresource=126>Movement settings</xButtonName></xButtonMoveSettings>
+
+<!xButtonObjNew><xButtonName bmpresource=164>New object</xButtonName></xButtonObjNew>
+
+<!xButtonObjectList><xButtonName bmpresource=244>Object list</xButtonName></xButtonObjectList>
+<!xButtonObjDialog><xButtonName bmpresource=166>Object settings</xButtonName></xButtonObjDialog>
+<!xButtonObjShowEditor><xButtonName bmpresource=608>Object editor</xButtonName></xButtonObjShowEditor>
+<!xButtonObjAttrib><xButtonName bmpresource=493>Attributes</xButtonName></xButtonObjAttrib>
+<!xButtonObjAttach><xButtonName bmpresource=495>Attach objects</xButtonName></xButtonObjAttach>
+<!xButtonObjOnOff><xButtonName bmpresource=228>On/off</xButtonName></xButtonObjOnOff>
+<!xButtonObjOpenClose><xButtonName bmpresource=229>Open/close</xButtonName></xButtonObjOpenClose>
+<!xButtonObjDeconstruct><xButtonName bmpresource=170>Deconstruct</xButtonName></xButtonObjDeconstruct>
+<!xButtonObjIntelAdjust><xButtonName bmpresource=168>Intelligent adjust</xButtonName></xButtonObjIntelAdjust>
+<!xButtonObjPaint><xButtonName bmpresource=163>Change object's color or texture</xButtonName></xButtonObjPaint>
+<!xButtonObjControlUD><xButtonName bmpresource=232>Drag object's control points up/down</xButtonName></xButtonObjControlUD>
+<!xButtonObjControlNSEW><xButtonName bmpresource=162>Drag object's control points NSEW</xButtonName></xButtonObjControlNSEW>
+<!xButtonObjControlNSEWUD><xButtonName bmpresource=238>Drag object's control points in any direction</xButtonName></xButtonObjControlNSEWUD>
+<!xButtonObjControlInOut><xButtonName bmpresource=243>Drag object's control points fowards/backwards</xButtonName></xButtonObjControlInOut>
+<!xButtonObjControlDialog><xButtonName bmpresource=236>Which control points are displayed</xButtonName></xButtonObjControlDialog>
+<!xButtonObjMerge><xButtonName bmpresource=241>Merge objects</xButtonName></xButtonObjMerge>
+
+<!xButtonViewFlatQuick><xButtonName bmpresource=167>Quick view</xButtonName></xButtonViewFlatQuick>
+<!xButtonZoomIn><xButtonName bmpresource=225>Zoom in</xButtonName></xButtonZoomIn>
+<!xButtonZoomOut><xButtonName bmpresource=227>Zoom out</xButtonName></xButtonZoomOut>
+<!xButtonZoomAt><xButtonName bmpresource=235>Look from a different angle</xButtonName></xButtonZoomAt>
+
+<!xButtonZoomInDrag><xButtonName bmpresource=226>Zoom in by dragging</xButtonName></xButtonZoomInDrag>
+<!xButtonViewFlatLRUD><xButtonName bmpresource=127>Flat view LRUD</xButtonName></xButtonViewFlatLRUD>
+<!xButtonViewFlatScale><xButtonName bmpresource=128>Flat view scale</xButtonName></xButtonViewFlatScale>
+<!xButtonViewFlatRotZ><xButtonName bmpresource=129>Flat view rotate around up/down</xButtonName></xButtonViewFlatRotZ>
+<!xButtonViewFlatRotX><xButtonName bmpresource=130>Flat view rotate around east/west</xButtonName></xButtonViewFlatRotX>
+<!xButtonViewFlatRotY><xButtonName bmpresource=132>Flat view rotate around north/south</xButtonName></xButtonViewFlatRotY>
+<!xButtonViewSetCenterFlat><xButtonName bmpresource=138>Flat view change rotation point</xButtonName></xButtonViewSetCenterFlat>
+<!xButtonViewFlatLookAt><xButtonName bmpresource=149>Move walkthrough position</xButtonName></xButtonViewFlatLookAt>
+<!xButtonViewFlatSettings><xButtonName bmpresource=126>Flat view position and rotation settings</xButtonName></xButtonViewFlatSettings>
+
+<!xButtonViewWalkFBRotZ><xButtonName bmpresource=133>Walkthrough view look LR and move FB</xButtonName></xButtonViewWalkFBRotZ>
+<!xButtonViewWalkROtZX><xButtonName bmpresource=134>Walkthrough view look LRUD</xButtonName></xButtonViewWalkRotZX>
+<!xButtonViewWalkRotY><xButtonName bmpresource=135>Walkthrough view tilt head</xButtonName></xButtonViewWalkRotY>
+<!xButtonViewWalkLRFB><xButtonName bmpresource=137>Walkthrough view move LRFB</xButtonName></xButtonViewWalkLRFB>
+<!xButtonViewWalkLRUD><xButtonName bmpresource=127>Walkthrough view move LRUD</xButtonName></xButtonViewWalkLRUD>
+<!xButtonViewWalkSettings><xButtonName bmpresource=126>Walkthrough view position and rotation settings</xButtonName></xButtonViewWalkSettings>
+
+<!xButtonView3DLRUD><xButtonName bmpresource=127>Model view move LRUD</xButtonName></xButtonView3DLRUD>
+<!xButtonView3DLRFB><xButtonName bmpresource=131>Model view move LRFB</xButtonName></xButtonView3DLRFB>
+<!xButtonView3DROTZ><xButtonName bmpresource=129>Model view rotate around up/down</xButtonName></xButtonView3DROTZ>
+<!xButtonView3DROTX><xButtonName bmpresource=130>Model view rotate around east/west</xButtonName></xButtonView3DROTX>
+<!xButtonView3DROTY><xButtonName bmpresource=132>Model view rotation around north/south</xButtonName></xButtonView3DROTY>
+<!xButtonViewSetCenter3D><xButtonName bmpresource=138>Model view change rotation point</xButtonName></xButtonViewSetCenter3D>
+<!xButtonView3DSettings><xButtonName bmpresource=126>Model view position and rotation settings</xButtonName></xButtonView3DSettings>
+
+<!xButtonAnim><xButtonName bmpresource=496>Anim</xButtonName></xButtonAnim>
+<!xButtonNewAnimKeyframe><xButtonName bmpresource=497>New general keyframe</xButtonName></xButtonNewAnimKeyframe>
+<!xButtonNewAnimKeyframeLoc><xButtonName bmpresource=548>New location keyframe</xButtonName></xButtonNewAnimKeyframeLoc>
+<!xButtonNewAnimKeyframeRot><xButtonName bmpresource=549>New rotation keyframe</xButtonName></xButtonNewAnimKeyframeRot>
+<!xButtonNewAnimWave><xButtonName bmpresource=606>New audio object</xButtonName></xButtonNewAnimWave>
+<!xButtonNewAnimBookmark1><xButtonName bmpresource=566>New 0-duration bookmark</xButtonName></xButtonNewAnimBookmark1>
+<!xButtonNewAnimBookmark2><xButtonName bmpresource=567>New durational bookmark</xButtonName></xButtonNewAnimBookmark2>
+<!xButtonNewAnimCamera><xButtonName bmpresource=570>Synchronize camera</xButtonName></xButtonNewAnimCamera>
+<!xButtonAnimJumpStart><xButtonName bmpresource=557>Jump to the start</xButtonName></xButtonAnimJumpStart>
+<!xButtonAnimJumpPrev><xButtonName bmpresource=560>Jump to the previous keyframe</xButtonName></xButtonAnimJumpPrev>
+<!xButtonAnimStop><xButtonName bmpresource=555>Stop</xButtonName></xButtonAnimStop>
+<!xButtonAnimPlay><xButtonName bmpresource=554>Play</xButtonName></xButtonAnimPlay>
+<!xButtonAnimPlayAudio><xButtonName bmpresource=607>Play audio</xButtonName></xButtonAnimPlayAudio>
+<!xButtonAnimPlayLoop><xButtonName bmpresource=556>Play (looped)</xButtonName></xButtonAnimPlayLoop>
+<!xButtonAnimJumpNext><xButtonName bmpresource=559>Jump to the next keyframe</xButtonName></xButtonAnimJumpNext>
+<!xButtonAnimJumpEnd><xButtonName bmpresource=558>Jump to the end</xButtonName></xButtonAnimJumpEnd>
+<!xButtonZoom><xButtonName bmpresource=225>Zoom</xButtonName></xButtonZoom>
+<!xButtonSceneBookmark><xButtonName bmpresource=568>Jump to bookmark</xButtonName></xButtonSceneBookmark>
+<!xButtonSceneCamera><xButtonName bmpresource=569>Select viewing camera</xButtonName></xButtonSceneCamera>
+<!xButtonSceneMenu><xButtonName bmpresource=561>Switch scenes</xButtonName></xButtonSceneMenu>
+<!xButtonSceneFPS><xButtonName bmpresource=552>Framerate</xButtonName></xButtonSceneFPS>
+<!xButtonSceneBays><xButtonName bmpresource=553>Objects displayed in timeline</xButtonName></xButtonSceneBays>
+<!xButtonAnimDefault><xButtonName bmpresource=564>Change starting attributes</xButtonName></xButtonAnimDefault>
+<!xButtonAnimTimeInsert><xButtonName bmpresource=562>Insert time</xButtonName></xButtonAnimTimeInsert>
+<!xButtonAnimTimeRemove><xButtonName bmpresource=563>Remove time</xButtonName></xButtonAnimTimeRemove>
+<!xButtonAnimSelActive><xButtonName bmpresource=565>Select changing objects</xButtonName></xButtonAnimSelActive>
+<!xButtonAnimMoveLR><xButtonName bmpresource=499>Move objects left/right</xButtonName></xButtonAnimMoveLR>
+<!xButtonAnimMoveUD><xButtonName bmpresource=500>Move objects up/down</xButtonName></xButtonAnimMoveUD>
+<!xButtonAnimResize><xButtonName bmpresource=502>Resize objects</xButtonName></xButtonAnimResize>
+<!xButtonGraphPointMove><xButtonName bmpresource=550>Move a graph point</xButtonName></xButtonGraphPointMove>
+<!xButtonGraphPointMoveUD><xButtonName bmpresource=232>Move a graph point UD only</xButtonName></xButtonGraphPointMoveUD>
+<!xButtonGraphPointDelete><xButtonName bmpresource=551>Delete a graph point</xButtonName></xButtonGraphPointDelete>
+
+<!xButtonGroundWater><xButtonName bmpresource=583>Water</xButtonName></xButtonGroundWater>
+<!xButtonGroundSet><xButtonName bmpresource=126>General settings</xButtonName></xButtonGroundSet>
+<!xButtonGroundGenMtn><xButtonName bmpresource=573>Generate a mountain</xButtonName></xButtonGroundGenMtn>
+<!xButtonGroundGenVolcano><xButtonName bmpresource=584>Generate a volcanic mountain</xButtonName></xButtonGroundGenVolcano>
+<!xButtonGroundGenHill><xButtonName bmpresource=585>Generate an aged mountain</xButtonName></xButtonGroundGenHill>
+<!xButtonGroundGenHillRoll><xButtonName bmpresource=586>Generate rolling hills</xButtonName></xButtonGroundGenHillRoll>
+<!xButtonGroundGenCrater><xButtonName bmpresource=589>Generate a crater</xButtonName></xButtonGroundGenCrater>
+<!xButtonGroundGenPlat><xButtonName bmpresource=587>Generate a plateau</xButtonName></xButtonGroundGenPlat>
+<!xButtonGroundGenRavine><xButtonName bmpresource=588>Generate a canyon</xButtonName></xButtonGroundGenRavine>
+<!xButtonGroundGenRaise><xButtonName bmpresource=590>Raise the ground level</xButtonName></xButtonGroundGenRaise>
+<!xButtonGroundGenLower><xButtonName bmpresource=591>Lower the ground level</xButtonName></xButtonGroundGenLower>
+<!xButtonGroundGenFlat><xButtonName bmpresource=592>Flatten the ground</xButtonName></xButtonGroundGenFlat>
+<!xButtonGroundApplyWind><xButtonName bmpresource=593>Wind erosion</xButtonName></xButtonGroundApplyWind>
+<!xButtonGroundApplyRain><xButtonName bmpresource=594>Rain erosion</xButtonName></xButtonGroundApplyRain>
+<!xButtonGroundPaint><xButtonName bmpresource=596>Paint based on elevation and slope</xButtonName></xButtonGroundPaint>
+<!xButtonBrushShape><xButtonName bmpresource=574>Brush shape</xButtonName></xButtonBrushShape>
+<!xButtonBrushEffect><xButtonName bmpresource=576>Brush effect</xButtonName></xButtonBrushEffect>
+<!xButtonBrushStrength><xButtonName bmpresource=575>Brush strength</xButtonName></xButtonBrushStrength>
+<!xButtonBrush4><xButtonName bmpresource=581>Brush size (extra small)</xButtonName></xButtonBrush4>
+<!xButtonBrush8><xButtonName bmpresource=580>Brush size (small)</xButtonName></xButtonBrush8>
+<!xButtonBrush16><xButtonName bmpresource=579>Brush size (medium)</xButtonName></xButtonBrush16>
+<!xButtonBrush32><xButtonName bmpresource=578>Brush size (large)</xButtonName></xButtonBrush32>
+<!xButtonBrush64><xButtonName bmpresource=582>Brush size (extra large)</xButtonName></xButtonBrush64>
+<!xButtonGridTopo><xButtonName bmpresource=571>Topography lines</xButtonName></xButtonGridTopo>
+<!xButtonGroundSun><xButtonName bmpresource=572>Move the sun</xButtonName></xButtonGroundSun>
+<!xButtonViewTopo><xButtonName bmpresource=573>Topography view</xButtonName></xButtonViewTopo>
+<!xButtonViewText><xButtonName bmpresource=163>Texture view</xButtonName></xButtonViewText>
+<!xButtonViewForest><xButtonName bmpresource=595>Forest view</xButtonName></xButtonViewForest>
+
+<!xButtonPaintView><xButtonName bmpresource=597>Painting view</xButtonName></xButtonPaintView>
+<!xButtonPVAll><xButtonName bmpresource=598>View all</xButtonName></xButtonPVAll>
+<!xButtonPVColor><xButtonName bmpresource=600>Colors only</xButtonName></xButtonPVColor>
+<!xButtonPVGlow><xButtonName bmpresource=601>Glow only</xButtonName></xButtonPVGlow>
+<!xButtonPVTrans><xButtonName bmpresource=604>Transparency only</xButtonName></xButtonPVTrans>
+<!xButtonPVSpec><xButtonName bmpresource=602>Specular only</xButtonName></xButtonPVSpec>
+<!xButtonPVBump><xButtonName bmpresource=603>Bumps only</xButtonName></xButtonPVBump>
+<!xButtonPVMono><xButtonName bmpresource=599>Mono view</xButtonName></xButtonPVMono>
+<!xButtonPVMirror><xButtonName bmpresource=605>Flip the tracing paper</xButtonName></xButtonPVMirror>
+
+<!xButtonTraceMove><xButtonName bmpresource=156>Move the tracing paper</xButtonName></xButtonTraceMove>
+<!xButtonTraceRot><xButtonName bmpresource=233>Rotate the tracing paper</xButtonName></xButtonTraceRot>
+<!xButtonTraceScale><xButtonName bmpresource=159>Scale the tracing paper</xButtonName></xButtonTraceScale>
+<!xButtonPVLimit><xButtonName bmpresource=163>Limit painting to only one texture</xButtonName></xButtonPVLimit>
+<!xButtonPVDialog><xButtonName bmpresource=166>Texture settings</xButtonName></xButtonPVDialog>
+<!xButtonPVCopy><xButtonName bmpresource=114>Copy selection</xButtonName></xButtonPVCopy>
+
+<!xButtonPMTextMoveDialog><xButtonName bmpresource=236>Type in a vertex's texture location</xButtonName></xButtonPMTextMoveDialog>
+<!xButtonPMMirror><xButtonName bmpresource=619>Automatic mirroring</xButtonName></xButtonPMMirror>
+<!xButtonPMShowBackground><xButtonName bmpresource=609>Show/hide other objects</xButtonName></xButtonPMShowBackground>
+<!xButtonPMModePoly><xButtonName bmpresource=613>Polygon editing</xButtonName></xButtonPMModePoly>
+<!xButtonPMModeClay><xButtonName bmpresource=614>Organic editing</xButtonName></xButtonPMModeClay>
+<!xButtonPMModeMorph><xButtonName bmpresource=616>Morph editing</xButtonName></xButtonPMModeMorph>
+<!xButtonPMModeTexture><xButtonName bmpresource=617>Texture editing</xButtonName></xButtonPMModeTexture>
+<!xButtonPMModeBone><xButtonName bmpresource=615>Bone association</xButtonName></xButtonPMModeBone>
+<!xButtonPMModeTailor><xButtonName bmpresource=618>Cut out clothes</xButtonName></xButtonPMModeTailor>
+<!xButtonPMEditVert><xButtonName bmpresource=610>Vertex manipulation</xButtonName></xButtonPMEditVert>
+<!xButtonPMEditEdge><xButtonName bmpresource=612>Edge manipulation</xButtonName></xButtonPMEditEdge>
+<!xButtonPMEditSide><xButtonName bmpresource=611>Side manipulation</xButtonName></xButtonPMEditSide>
+<!xButtonPMMirror><xButtonName bmpresource=619>Automatic mirroring</xButtonName></xButtonPMMirror>
+
+<!xButtonPMMoveAnyDir><xButtonName bmpresource=238>Move the selection in any direction</xButtonName></xButtonPMMoveAnyDir>
+<!xButtonPMMoveInOut><xButtonName bmpresource=243>Move the selection forwards/backwards</xButtonName></xButtonPMMoveInOut>
+<!xButtonPMMovePerp><xButtonName bmpresource=621>Move the selection along normal</xButtonName></xButtonPMMovePerp>
+<!xButtonPMMovePerpInd><xButtonName bmpresource=622>Move the selection along normals</xButtonName></xButtonPMMovePerpInd>
+<!xButtonPMMoveScale><xButtonName bmpresource=623>Scale the selection</xButtonName></xButtonPMMoveScale>
+<!xButtonPMMoveRotPerp><xButtonName bmpresource=624>Twist the selection</xButtonName></xButtonPMMoveRotPerp>
+<!xButtonPMMoveRotNotPerp><xButtonName bmpresource=625>Rotate the selection</xButtonName></xButtonPMMoveRotNotPerp>
+<!xButtonPMBevel><xButtonName bmpresource=635>Bevel the selection</xButtonName></xButtonPMBevel>
+<!xButtonPMMoveDialog><xButtonName bmpresource=236>Type in a vertex's location</xButtonName></xButtonPMMoveDialog>
+<!xButtonPMDelete><xButtonName bmpresource=551>Delete the selection</xButtonName></xButtonPMDelete>
+<!xButtonPMCollapse><xButtonName bmpresource=627>Collapse the selection</xButtonName></xButtonPMCollapse>
+<!xButtonPMNewSide><xButtonName bmpresource=631>Create a new side</xButtonName></xButtonPMNewSide>
+<!xButtonPMSideSplit><xButtonName bmpresource=630>Split the side</xButtonName></xButtonPMSideSplit>
+<!xButtonPMEdgeSplit><xButtonName bmpresource=629>Split the selected edge(s)</xButtonName></xButtonPMEdgeSplit>
+<!xButtonPMSideExtrude><xButtonName bmpresource=632>Extrude selected sides</xButtonName></xButtonPMSideExtrude>
+<!xButtonPMSideInset><xButtonName bmpresource=633>Inset selected sides</xButtonName></xButtonPMSideInset>
+<!xButtonPMSideDisconnect><xButtonName bmpresource=634>Disconnect the selection</xButtonName></xButtonPMSideDisconnect>
+<!xButtonPMSideTesselate><xButtonName bmpresource=628>Split sides into smaller parts</xButtonName></xButtonPMSideTesselate>
+<!xButtonPMSideExtra><xButtonName bmpresource=626>Extra effects</xButtonName></xButtonPMSideExtra>
+
+<!xButtonPMStencil><xButtonName bmpresource=636>Stenciling</xButtonName></xButtonPMStencil>
+<!xButtonPMMagAny><xButtonName bmpresource=638>Magnetic move in any direction</xButtonName></xButtonPMMagAny>
+<!xButtonPMMagViewer><xButtonName bmpresource=640>Magnetic move forwards/backwards</xButtonName></xButtonPMMagViewer>
+<!xButtonPMMagNorm><xButtonName bmpresource=639>Magnetic move along normal</xButtonName></xButtonPMMagNorm>
+<!xButtonPMMagPinch><xButtonName bmpresource=641>Magnetic pinch</xButtonName></xButtonPMMagPinch>
+<!xButtonPMMagSize><xButtonName bmpresource=637>Magnetic size and shape</xButtonName></xButtonPMMagSize>
+<!xButtonPMOrgScale><xButtonName bmpresource=623>Scale the entire object</xButtonName></xButtonPMOrgScale>
+<!xButtonPMMorphScale><xButtonName bmpresource=623>Scale the entire morph</xButtonName></xButtonPMMorphScale>
+<!xButtonPMTextToggle><xButtonName bmpresource=642>Show/hide flattened texture mapping</xButtonName></xButtonPMTextToggle>
+<!xButtonPMTextSphere><xButtonName bmpresource=645>Rebuild texture map using spherical coordinates</xButtonName></xButtonPMTextSphere>
+<!xButtonPMTextCylinder><xButtonName bmpresource=644>Rebuild texture map using cylindrical coordinates</xButtonName></xButtonPMTextCylinder>
+<!xButtonPMTextPlane><xButtonName bmpresource=643>Rebuild texture map using planar coordinates</xButtonName></xButtonPMTextPlane>
+
+<!xButtonPMTextMove><xButtonName bmpresource=646>Move the texture selection</xButtonName></xButtonPMTextMove>
+<!xButtonPMTextRot><xButtonName bmpresource=647>Rotate the texture selection</xButtonName></xButtonPMTextRot>
+<!xButtonPMTextScale><xButtonName bmpresource=623>Scale the texture selection</xButtonName></xButtonPMTextScale>
+<!xButtonPMTextCollapse><xButtonName bmpresource=627>Collapse the selection</xButtonName></xButtonPMTextCollapse>
+<!xButtonPMTextMoveDialog><xButtonName bmpresource=236>Type in a vertex's texture location</xButtonName></xButtonPMTextMoveDialog>
+<!xButtonPMTextDisconnect><xButtonName bmpresource=634>Disconnect the selection</xButtonName></xButtonPMTextDisconnect>
+<!xButtonPMTextMirror><xButtonName bmpresource=648>Mirror texture map...</xButtonName></xButtonPMTextMirror>
+<!xButtonPMTailorNew><xButtonName bmpresource=649>Create a new article of clothing</xButtonName></xButtonPMTailorNew>
+
+<!xButtonBoneNew><xButtonName bmpresource=652>Create a new bone</xButtonName></xButtonBoneNew>
+<!xButtonBoneEdit><xButtonName bmpresource=236>Edit bone</xButtonName></xButtonBoneEdit>
+<!xButtonBoneRotate><xButtonName bmpresource=651>Rotate the bone</xButtonName></xButtonBoneRotate>
+<!xButtonBoneDefault><xButtonName bmpresource=650>Return all bones to default position</xButtonName></xButtonBoneDefault>
+<!xButtonBoneDisconnect><xButtonName bmpresource=170>Disconnect</xButtonName></xButtonBoneDisconnect>
+<!xButtonBoneScale><xButtonName bmpresource=623>Scale the bone</xButtonName></xButtonBoneScale>
+<!xButtonBoneSplit><xButtonName bmpresource=629>Split the bone</xButtonName></xButtonBoneSplit>
+<!xButtonBoneDelete><xButtonName bmpresource=551>Delete the bone</xButtonName></xButtonBoneDelete>
+
+<!xComboPolyMeshSub>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Faceted</elem>
+		<elem name=1>None</elem>
+		<elem name=2>1 division</elem>
+		<elem name=3>2 divisions</elem>
+		<elem name=4>3 divisions</elem>
+		<elem name=5>4 divisions</elem>
+	</combobox></bold>
+</xComboPolyMeshSub>
+
+<!xComboShape>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="16">Circle</elem>
+		<elem name="2">Circle<small>, fast-to-draw</small></elem>
+		<elem name="4">C-beam<small>, open on back</small></elem>
+		<elem name="3">C-beam<small>, open on front</small></elem>
+		<elem name="6">C-beam<small>, open on left</small></elem>
+		<elem name="5">C-beam<small>, open on right</small></elem>
+		<elem name="15">Hexagon</elem>
+		<elem name="12">I-beam<small>, open on front/back</small></elem>
+		<elem name="11">I-beam<small>, open on left/right</small></elem>
+		<elem name="14">Pentagon</elem>
+		<elem name="1">Rectangle</elem>
+		<elem name="13">Triangle</elem>
+		<elem name="8">Z-beam<small>, open on back</small></elem>
+		<elem name="7">Z-beam<small>, open on front</small></elem>
+		<elem name="10">Z-beam<small>, open on left</small></elem>
+		<elem name="9">Z-beam<small>, open on right</small></elem>
+	</combobox></bold>
+</xComboShape>
+
+<!xComboShape2>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><italic><font color=#800000>Custom</font></italic></elem>
+		<elem name="16">Circle</elem>
+		<elem name="2">Circle<small>, fast-to-draw</small></elem>
+		<elem name="4">C-beam<small>, open on back</small></elem>
+		<elem name="3">C-beam<small>, open on front</small></elem>
+		<elem name="6">C-beam<small>, open on left</small></elem>
+		<elem name="5">C-beam<small>, open on right</small></elem>
+		<elem name="15">Hexagon</elem>
+		<elem name="12">I-beam<small>, open on front/back</small></elem>
+		<elem name="11">I-beam<small>, open on left/right</small></elem>
+		<elem name="14">Pentagon</elem>
+		<elem name="1">Rectangle</elem>
+		<elem name="13">Triangle</elem>
+		<elem name="8">Z-beam<small>, open on back</small></elem>
+		<elem name="7">Z-beam<small>, open on front</small></elem>
+		<elem name="10">Z-beam<small>, open on left</small></elem>
+		<elem name="9">Z-beam<small>, open on right</small></elem>
+	</combobox></bold>
+</xComboShape2>
+
+<!xComboTaper>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="6">Capped</elem>
+		<elem name="4">Curved</elem>
+		<elem name="5">Diamond</elem>
+		<elem name="0">Straight</elem>
+		<elem name="7">Spike</elem>
+		<elem name="8">Spike 2</elem>
+		<elem name="1">Taper, full</elem>
+		<elem name="2">Taper, half</elem>
+		<elem name="3">Taper on end</elem>
+	</combobox></bold>
+</xComboTaper>
+
+<!xComboMaterial>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold><font color=#800000><italic>Custom</italic></font></bold></elem>
+		<elem name="73"><bold>Cloth, rough</bold></elem>
+		<elem name="75"><bold>Cloth, silky</bold></elem>
+		<elem name="74"><bold>Cloth, smooth</bold></elem>
+		<elem name="71"><bold>Flyscreen</bold></elem>
+		<elem name="31"><bold>Glass, clear (flat)</bold></elem>
+		<elem name="32"><bold>Glass, frosted (flat)</bold></elem>
+		<elem name="37"><bold>Glass, clear (solid)</bold></elem>
+		<elem name="36"><bold>Invisible</bold></elem>
+		<elem name="51"><bold>Matte</bold></elem>
+		<elem name="21"><bold>Metal, rough</bold></elem>
+		<elem name="22"><bold>Metal, smooth</bold></elem>
+		<elem name="38"><bold>Mirror</bold></elem>
+		<elem name="13"><bold>Paint, gloss</bold></elem>
+		<elem name="11"><bold>Paint, matte</bold></elem>
+		<elem name="12"><bold>Paint, semi-gloss</bold></elem>
+		<elem name="41"><bold>Plastic</bold></elem>
+		<elem name="72"><bold>Tarp or thick cloth</bold></elem>
+		<elem name="62"><bold>Tiles, matte</bold></elem>
+		<elem name="61"><bold>Tiles, glazed</bold></elem>
+		<elem name="35"><bold>Water, deep</bold></elem>
+		<elem name="34"><bold>Water, pool-depth</bold></elem>
+		<elem name="33"><bold>Water, shallow</bold></elem>
+	</combobox></bold>
+</xComboMaterial>
+
+<!xComboMaterial2>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="73"><bold>Cloth, rough</bold></elem>
+		<elem name="75"><bold>Cloth, silky</bold></elem>
+		<elem name="74"><bold>Cloth, smooth</bold></elem>
+		<elem name="71"><bold>Flyscreen</bold></elem>
+		<elem name="31"><bold>Glass, clear</bold></elem>
+		<elem name="32"><bold>Glass, frosted</bold></elem>
+		<elem name="37"><bold>Glass, clear (solid)</bold></elem>
+		<elem name="36"><bold>Invisible</bold></elem>
+		<elem name="51"><bold>Matte</bold></elem>
+		<elem name="21"><bold>Metal, rough</bold></elem>
+		<elem name="22"><bold>Metal, smooth</bold></elem>
+		<elem name="38"><bold>Mirror</bold></elem>
+		<elem name="13"><bold>Paint, gloss</bold></elem>
+		<elem name="11"><bold>Paint, matte</bold></elem>
+		<elem name="12"><bold>Paint, semi-gloss</bold></elem>
+		<elem name="41"><bold>Plastic</bold></elem>
+		<elem name="72"><bold>Tarp or thick cloth</bold></elem>
+		<elem name="62"><bold>Tiles, matte</bold></elem>
+		<elem name="61"><bold>Tiles, glazed</bold></elem>
+		<elem name="35"><bold>Water, deep</bold></elem>
+		<elem name="34"><bold>Water, pool-depth</bold></elem>
+		<elem name="33"><bold>Water, shallow</bold></elem>
+	</combobox></bold>
+</xComboMaterial2>
+
+
+<!xComboImageQuality>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold>Wireframe</bold> (fastest)</elem>
+		<elem name="1"><bold>Monochromatic</bold></elem>
+		<elem name="2"><bold>Solid colors</bold></elem>
+		<elem name="3"><bold>Solid with shading</bold></elem>
+		<elem name="4"><bold>Textures</bold></elem>
+		<elem name="5"><bold>Shadows</bold></elem>
+		<elem name="6"><bold>Ray tracing</bold></elem>
+	</combobox></bold>
+</xComboImageQuality>
+

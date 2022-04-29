@@ -1,0 +1,42 @@
+<colorblend posn=background color=#000000/>
+<p align=center>
+<table width=95% innerlines=0 border=0 lrmargin=32 tbmargin=32>
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button style=rightarrow href=next>
+			Next
+			<xHoverHelpShort>Proceed to the next page.</xHoverHelpShort>
+		</button></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<image posn=background jpgresource=116 type=tile scale=200%/>
+			<?TemplateSubst?>
+	</td>
+</tr>
+
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button style=rightarrow href=next>
+			Next
+			<xHoverHelpShort>Proceed to the next page.</xHoverHelpShort>
+		</button></font>
+	</td>
+</tr>
+
+</table>
+</p>

@@ -1,0 +1,74 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice chat info resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Voice disguise wave files</xtrheader>
+	<tr><td>
+		These are short wave files that are looped and used as the based
+		for disguised voices. They can be used to make someone's voice sound
+		like a growl or a talking instrument. If you need more info, see
+		the wave editor and experiment.
+		<p/>
+		<p align=center>
+			<listbox width=80% height=40% vscroll=listscroll name=verblist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton name=delverb>
+			<bold>Delete selected wave file</bold><br/>
+			Press this to delete the selected wave file from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Add a new wave file</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - This is the name that the user sees.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=name/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pitch</bold> - If the wave-file is to be pitch-bent with
+			the voice, type in the pitch of the file in Hz. If the wave
+			file doesn't change with the voice's pitch then enter 0.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=pitch/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=addverb>
+			<bold>Add this file</bold><br/>
+			After you press this button you'll be asked to <bold>select the
+			wave file</bold> to use. It'll then be added.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Quality</bold> - Control the quality of voice chat.
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=quality>
+			<elem name=1>Very best (about 32 kpbs)</elem>
+			<elem name=2>Best (about 21 kpbs)</elem>
+			<elem name=3>Medium (about 15 kpbs)</elem>
+			<elem name=4>Low (about 10 kpbs)</elem>
+			<elem name=5>Very (about 5 kpbs)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=allowvoicechat style=x checkbox=true>
+			<bold>Allow voice chat</bold><br/>
+			If checked, then the player will be able to use voice chat.
+			If unchecked they won't.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

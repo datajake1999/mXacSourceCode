@@ -1,0 +1,116 @@
+<null><<<$TRANSCRIPTCOLORBLEND>>></null>
+
+<!xHoverHelp>
+	<HoverHelp MACROATTRIBUTE=1><small>
+		<colorblend posn=background lcolor=#f0ffe0 rcolor=#e0f0c0/>
+		<?MacroContent?>
+	</small></HoverHelp>
+</xHoverHelp>
+
+<!xHoverHelpShort>
+	<xHoverHelp hresize=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</xHoverHelp>
+</xHoverHelpShort>
+
+<!xRadioButton>
+	<bold><button style=check radiobutton=true buttonwidth=16 buttonheight=16 MACROATTRIBUTE=1><?MacroContent?></button></bold>
+</xRadioButton>
+
+<!xSmallThis>
+	<small><small><?MacroContent?></small></small>
+</xSmallThis>
+
+
+<align parlinespacing=50%><<<$FONTCOLORSTART>>>
+
+<<<$IFSMALLFONT>>>
+
+<table width=100% bordercolor=#404040>
+	<tr>
+		<td valign=top>
+			<xSmallThis><align align=center><bold>Image quality:</bold><br/>
+			Fastest <<<$IMAGEQUALITY>>> Best
+		</align></xSmallThis></td>
+		<td valign=top>
+			<xSmallThis><align align=center><bold>Text vs. speech:</bold><br/>
+			Text-only 
+			<xradiobutton group=rtext0,rtext1,rtext2 name=rtext0/>
+			<xradiobutton group=rtext0,rtext1,rtext2 name=rtext1/>
+			<xradiobutton group=rtext0,rtext1,rtext2 name=rtext2/> Spoken
+		</align></xSmallThis></td>
+	</tr>
+</table>
+
+<p/>
+
+<<<$IFTRANSSHOW1>>>
+<<<$SPOKENSUB>>>
+<<<$ENDIFTRANSSHOW1>>>
+
+<null>
+	<<<$TUTORIAL>>>
+</null>
+
+<null>
+	<<<$MENUSUB>>>
+</null>
+
+
+<comment><small><table width=100% border=0 innerlines=0><tr>
+	<td>
+		<a href="imagesettings" color=#c0c0ff>Change the image quality (and/or image drawing speed)</a>
+	</td>
+	<td>
+		<a href="speechsettings" color=#c0c0ff>Change the speech settings</a>
+	</td>
+</tr></table></small></comment>
+
+<comment><table width=100% bordercolor=#e0e0e0>
+	<<<$IFTRANSSHOW0>>>
+	<tr>
+		<td width=25% valign=center><xSmallThis><bold>Image sharpness</bold></xSmallThis></td>
+		<td width=75% valign=cetner align=center><xSmallThis>Fast (but jaggies) <<<$IMAGERES>>> Sharp (but slow)</xSmallThis></td>
+	</tr>
+	<tr>
+		<td width=25% valign=center><xSmallThis><bold>Image quality</bold></xSmallThis></td>
+		<td width=75% valign=cetner align=center><xSmallThis>Fast (but unrealistic) <<<$IMAGEQUALITY>>> Realistic (but slow)</xSmallThis></td>
+	</tr>
+	<tr>
+		<td width=25% valign=center><xSmallThis><bold>Dynamic images</bold></xSmallThis></td>
+		<td width=75% valign=cetner align=center><xSmallThis>Fast (but static) <<<$DYNAMICQUALITY>>> Dynamic (but slow)</xSmallThis></td>
+	</tr>
+	<tr>
+		<td width=25% valign=center><xSmallThis><bold>Artistic style</bold></xSmallThis></td>
+		<td width=75% align=center><xSmallThis>
+			Fast <xRadioButton group=art0,art1,art2,art3 name=art0/>
+			<xRadioButton group=art0,art1,art2,art3 name=art1/>
+			<xRadioButton group=art0,art1,art2,art3 name=art2/>
+			<xRadioButton group=art0,art1,art2,art3 name=art3/> Slow
+		</xSmallThis></td>
+	</tr>
+	<tr>
+		<td width=25% valign=center><xSmallThis><bold>Speaking speed</bold></xSmallThis></td>
+		<td width=25% align=center><xSmallThis><xRadioButton group=speed2,speed3,speed4 name=speed2>Normal</xRadioButton></xSmallThis></td>
+		<td width=25% align=center><xSmallThis><xRadioButton group=speed2,speed3,speed4 name=speed3>Fast</xRadioButton></xSmallThis></td>
+		<td width=25% align=center><xSmallThis><xRadioButton group=speed2,speed3,speed4 name=speed4>Very fast</xRadioButton></xSmallThis></td>
+	</tr>
+	<tr><td><xSmallThis>
+		<big><button valign=top style=x checkbox=true name=powersaver>
+			<bold>Power saver</bold> (check when running on batteries)<br/>
+			"Power saver" mode doesn't draw images until they're needed. You can also save power
+			by turning down the image sharpness and quality.
+		</button></big>
+		<big><button valign=top style=x checkbox=true name=muteall>
+			<bold>Mute all voices</bold><br/>
+			If checked, then all text-to-speech will be turned off. If you wish to mute
+			an individual voice, then click the "(mute)" text next to a line
+			that the character spoke.
+		</button></big></xSmallThis>
+	</td></tr>
+	<<<$ENDIFTRANSSHOW0>>>
+</table></comment>
+
+<<<$ENDIFSMALLFONT>>>
+
+<<<$FONTCOLOREND>>></align>

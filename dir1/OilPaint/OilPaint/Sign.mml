@@ -1,0 +1,25 @@
+<<<$OPTEMPLATEEND>>>
+<?Include resource=400?>
+<PageInfo title="You're finished"/>
+
+<xPageTitle>
+	You're finished
+</xPageTitle>
+
+<p>
+	That's it, you're finished.
+</p>
+
+<p>
+	You can sign your painting and let it dry.
+	Or at the very least, you've come to the end of the application's wizard.
+</p>
+
+
+<xbr/>
+
+<xChoiceButton href=save>
+	<bold>Save your work</bold><br/>
+	Press this if you want to save the cropping and color mixing information for the
+	painting so you can reload it later.
+</xChoiceButton>

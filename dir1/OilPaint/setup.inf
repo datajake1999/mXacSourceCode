@@ -1,0 +1,13 @@
+appname=Oil Painting Assistant
+selfexe=z:\mxacweb\oilpaint.exe
+icon=oilpaint.exe,Oil Painting Assistant
+file=z:\oilpaint\oilpaint\release\oilpaint.exe
+file=z:\oilpaint\oilpaint\sample.jpg
+file=z:\escarpment\escarpment\release\escarpment.dll
+file=z:\bin\msvcr80.dll
+file=z:\bin\msvcp80.dll
+file=z:\bin\msvcm80.dll
+file=z:\bin\Microsoft.VC80.CRT.manifest
+del=oilpaint.gid
+del=oilpaint.hlp
+del=oilpaint.cnt

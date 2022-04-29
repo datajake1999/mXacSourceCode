@@ -1,0 +1,77 @@
+<?Include resource=500?>
+<PageInfo index=false title="Circumreality file open"/>
+
+<xClientPageWhite jpgresource=316>
+
+<p/>
+
+<p align=center><table width=50% border=0 innerlines=0>
+	<tr><td>
+		<bold>Select</bold> the Circumreality world you wish to play in (from the left), and
+		then press <bold>"Play"</bold>. If you click on the
+		world, a description of the Circumreality world will be displayed to your right.
+	</td></tr>
+	<tr>
+		<td>
+			<button accel=escape style=lefttriangle href=cancel>
+				<bold>Cancel / Back</bold>
+			</button>
+		</td>
+		<td align=right>
+			<button accel=enter style=righttriangle name=ok>
+				<bold><big><<<$OPENSAVE>>></big></bold>
+			</button>
+		</td>
+	</tr>
+</table></p>
+
+
+<p align=center><table width=80% bordercolor=#c0c0c0>
+	<tr>
+		<td bgcolor=#000000 valign=center>
+			<table width=100% bordercolor=#c0c0c0>
+				<tr><td align=center>
+					<image transparent=true bmpresource=782/>
+					<combobox width=80% sort=false cbheight=150 name=dir>
+						<elem name=test>Test</elem>
+					</combobox>
+				</td></tr>
+				<tr><td align=center>
+					<font color=#000000><listbox width=80% height=80% vscroll=listscroll sort=false name=list>
+					</listbox></font>
+					<scrollbar height=80% orient=vert name=listscroll/>
+				</td></tr>
+				<tr><td align=center>
+					File name: <font color=#000000><bold>
+						<edit maxchars=128 width=50% defcontrol=true selall=true name=edit/>
+					</bold></font>
+				</td></tr>
+			</table>
+		</td>
+		<td bgcolor=#000000 align=center valign=center>
+			<bold><edit color=transparent readonly=true width=80% height=80% wordwrap=true vscroll=editscroll name=description/></bold>
+			<scrollbar height=80% orient=vert name=editscroll/>
+			<p/>
+			<xChoiceButton enabled=false name=serverload>
+				<bold>How many people are playing this?</bold><br/>
+				Press this button to see how many people are playing in this world.
+				This only world for <bold>multiplayer</bold> worlds.
+			</xChoiceButton>
+		</td>
+	</tr>
+</table></p>
+
+<p/>
+
+<p align=center><table width=50% border=0 innerlines=0>
+	<tr><td>
+		<xChoiceButton enabled=false name=serverloadall>
+			<bold>How many people are playing in each of the listed worlds?</bold><br/>
+			This will find out how many players are in each of the <bold>multiplayer</bold> worlds listed in the current
+			directory, and display the numbers for each world in the
+			list. <italic>(This may take a long time.)</italic>
+		</xChoiceButton>
+	</td></tr>
+</table></p>
+
+</xClientPageWhite>

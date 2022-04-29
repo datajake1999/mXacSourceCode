@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Generated Dependency File, included by Setup.mak
+
+..\BuildSetup\Common.cpp : \
+	"..\BuildSetup\Common.h"\
+	
+
+.\Main.cpp : \
+	"..\BuildSetup\Common.h"\
+	
+
+.\Setup.rc : \
+	".\data.dat"\
+	".\icon1.ico"\
+	

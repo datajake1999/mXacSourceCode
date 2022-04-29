@@ -1,0 +1,30 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Incorporate differences into a .CRF file"/>
+
+<p>
+	This tool incorporates the differences stored in a .DIF file, into
+	a .CRF file. See the "Difference between two .CRF files" tool for
+	more information.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Difference</xtrheader>
+	<tr>
+		<td><bold>.CRF file</bold> - The file path .CRF file that is to be updated.</td>
+		<td>
+			<bold><edit width=100% maxchars=256 name=old/><br/>
+			<align align=right><button name=oldbrowse>Browse...</button></align></bold>
+		</td>
+	</tr>
+
+	<tr><td>
+		<xChoiceButton name=convert>
+			<bold>Incroprate a .DIF file</bold><br/>
+			After you have entered the .CRF filename, press this button to
+			incorporate a .DIF file.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

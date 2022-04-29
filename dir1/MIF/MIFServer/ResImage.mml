@@ -1,0 +1,67 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Image resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Image</xtrheader>
+	<<<$IMAGEVIEW>>>
+	<<<$OPENBUTTON>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Scaling</xtrheader>
+	<tr><td>
+		<xChoiceButton style=check radiobutton=true group=s0,s1,s2,s3 name=s0>
+			<bold>None</bold><br/>
+			The image is displayed using the same size and proportion's on the user's computer.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=s0,s1,s2,s3 name=s1>
+			<bold>Stretch to fit</bold><br/>
+			The image is stretched (and squashed) to fit the user's screen size.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=s0,s1,s2,s3 name=s2>
+			<bold>Scale to fit</bold><br/>
+			The image is scaled as large as possible without having any of it disappear
+			off the user's screen.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=s0,s1,s2,s3 name=s3>
+			<bold>Scale to cover</bold><br/>
+			The image is scaled as large enough to the user's screen is entirely
+			covered.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<!xComboCursor>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Arrow (go)</elem>
+		<elem name=1>Eye (examine)</elem>
+		<elem name=2>Hand (pick up)</elem>
+		<elem name=3>Mouth (talk to)</elem>
+		<elem name=10>Menu</elem>
+	</combobox></bold>
+</xComboCursor>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Hot spots</xtrheader>
+	<tr><td>
+		Click and drag on the image to select a region for a "hot spot".
+		Users can click on a hot spot to send a command through ConnectionMessage() to
+		the server.
+	</td></tr>
+	<<<$HOTSPOTS>>>
+	<tr>
+		<td>
+			<bold>Language</bold> - This is the language used for the hot-spot commands.
+			For example: If you have typed "north" for a hot-spot command
+			then you'd select English, but would use Spanish if you had "norte".
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=langid/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xChoiceButton href=transitionui>
+	<bold>Transition...</bold><br/>
+	Press this to modify the transition (fades and zooms) when the image is drawn.
+</xChoiceButton>

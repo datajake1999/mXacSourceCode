@@ -1,0 +1,67 @@
+<pageinfo index=false title="Account view/edit"/>
+<?Include resource=500?>
+<xClientPage jpgresource=323>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader><<<ACCOUNTNAME>>></xtrheader>
+	<tr><td>
+		<colorblend color=#ffffff posn=background transparent=0.25/>
+		<<<DESCSHORT>>>
+		<p/><small>
+		<<<DESCLONG>>>
+		</small>
+	</td></tr>
+	
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Name</bold> - The name that appears on your list of accounts. You may wish
+			to change this if you have several user accounts with one world.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<font color=#000000><bold><edit width=100% defcontrol=true maxchars=128 name=name/></bold></font>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>User name</bold> - This is the user name that you log onto the
+			account with.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<font color=#000000><bold><edit width=100% maxchars=64 name=user/></bold></font>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<bold>Password</bold> - This is the password that you log onto the
+			account with.
+		</td>
+		<td>
+			<colorblend color=#ffffff posn=background transparent=0.25/>
+			<font color=#000000><bold><edit width=100% maxchars=64 name=password/></bold></font>
+		</td>
+	</tr>
+	
+	<tr><td>
+		<colorblend color=#ffffff posn=background transparent=0.25/>
+		<xChoiceButton name=delete>
+			<bold>Delete this password</bold><br/>
+			This will delete the password from your password list. The user account for the world
+			won't actually be affected, but you won't be able to accesss it without the password.
+		</xChoiceButton>
+	</td></tr>
+</table></p>
+
+<p align=center>
+	<button style=lefttriangle href=back><bold>
+		Back
+	</bold></button>
+</p>
+
+</xClientPage>

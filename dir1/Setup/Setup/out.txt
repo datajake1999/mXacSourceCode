@@ -1,0 +1,17 @@
+TMP=C:\WINDOWS\TEMP
+TEMP=C:\WINDOWS\TEMP
+PROMPT=$p$g
+winbootdir=C:\WINDOWS
+COMSPEC=C:\WINDOWS\COMMAND.COM
+MSINPUT=C:\MSINPUT
+TEC75HOME=C:\TEC75
+windir=C:\WINDOWS
+SNDSCAPE=C:\WINDOWS
+BLASTER=A220 I7 D1 T2 
+VSCOMMONDIR=C:\Program Files\Microsoft Visual Studio\Common
+MSDEVDIR=C:\Program Files\Microsoft Visual Studio\Common\msdev98
+MSVCDIR=C:\Program Files\Microsoft Visual Studio\VC98
+VCOSDIR=WIN95
+INCLUDE=C:\Program Files\Microsoft Visual Studio\VC98\ATL\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE;
+LIB=C:\Program Files\Microsoft Visual Studio\VC98\LIB;C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB;
+PATH=C:\Program Files\Microsoft Visual Studio\COMMON\MSDEV98\BIN;C:\Program Files\Microsoft Visual Studio\VC98\BIN;C:\Program Files\Microsoft Visual Studio\COMMON\TOOLS\WIN95;C:\Program Files\Microsoft Visual Studio\COMMON\TOOLS;C:\WINDOWS\SYSTEM;C:\WINDOWS;C:\WINDOWS\COMMAND;C:\TEC75\BIN

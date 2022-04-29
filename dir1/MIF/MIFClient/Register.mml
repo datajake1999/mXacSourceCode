@@ -1,0 +1,200 @@
+<pageinfo index=false title="Pay for CircumReality"/>
+<?Include resource=500?>
+<xClientPage jpgresource=318>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Free to play, but...</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+
+<p>
+	<bold>CircumReality is free to play.</bold> However,
+	since I am a one-person operation and need to pay the bills too, a few features
+	are only available to players who pay for the full version of CircumReality.
+	Below is a list of features available to players who pay, and whether
+	or not they're enabled.
+</p>
+
+<p>
+	<<<$SHOWIFHASPAID>>>
+</p>
+
+
+<p align=center><table width=90% bordercolor=#808080>
+	<tr>
+		<td width=75%>
+			<bold>Ability to play the game to the end</bold> - Whether you pay or not, you
+			can still pay the game to completion.
+		</td>
+		<td width=25% align=center><<<$ENABLEDALWAYS>>></td>
+	</tr>
+	
+	<tr>
+		<td width=75%>
+			<bold>Change your character's appearance and voice</bold> - The full version
+			of CircumReality lets you customize your character's appearance and voice.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Download images from the server</bold> - This will speed up image drawing
+			since images of rooms and characters will be downloaded from the server.
+			They'll only be drawn on your computer (slow) if the server doesn't have
+			the image stored.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Dual-monitor support</bold> - If you have two monitors attached to a
+			dual-monitor compatible video card, CircumReality will use both monitors to
+			display game information.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>High-quality graphics</bold> - The full version of CircumReality produces higher-quality
+			images of scenes, characters, and objects than the free version.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Mouth animations (lip sync)</bold> - Characters' mouths move when they speak.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Personal information</bold> - One of the reasons to play an online game is
+			to meet other people. The full version of CircumReality lets you to
+			write your own personalized "character information", allowing you to make
+			a good impression before you open your mouth. :-)
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Voice chat</bold> - Talk to other players using your computer's microphone.
+		</td>
+		<td width=25% align=center><<<$ENABLEDTRIAL>>></td>
+	</tr>
+	
+	<tr>
+		<td width=75%>
+			<bold>Additional content</bold> - Even though you can still complete the game
+			with the free version of CircumReality, many worlds include additional content for
+			full-version players.
+		</td>
+		<td width=25% align=center><<<$ENABLEDFULL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>High-quality text-to-speech voices</bold> - The full version lets you
+			install <a href=playhq>high-quality</a> text to speech voices. They sound better than
+			the <a href=playlq>standard voices</a>.
+			Visit <a href="http://www.CircumReality.com/Download.htm">http://www.CircumReality.com/Download.htm</a> to
+			download the high-quality voices.
+			<p/>
+			To use the high-quality voices, you need to have paid for the full version of
+			CircumReality (<<<$TTSREGISTERED>>>). The high-quality voices are only recommended if you are running
+			the 64-bit version of CircumReality (<<<$TTSCIRC64>>>) with
+			Windows 64 (<<<$TTSWIN64>>>) on a quad-core computer (<<<$TTSDUALCORE>>>) with 4 gigbytes of RAM (<<<$TTSRAM>>>).
+		</td>
+		<td width=25% align=center><<<$ENABLEDFULL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Multiple characters</bold> - You are only allowed one character when using
+			the trial or free versions of CircumReality.
+		</td>
+		<td width=25% align=center><<<$ENABLEDFULL>>></td>
+	</tr>
+	<tr>
+		<td width=75%>
+			<bold>Upload images</bold> - Lets you replace the computer-drawn images of your character
+			with ones that you draw yourself.
+		</td>
+		<td width=25% align=center><<<$ENABLEDFULL>>></td>
+	</tr>
+</table></p>
+
+<p align=center>
+	<button style=righttriangle defcontrol=true href=next><bold>
+		<<<$NEXTBUTTON>>>
+	</bold></button>
+</p>
+</td></tr>
+</table></p>
+
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Paying for CircumReality</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+
+<p/>
+
+<p align=center><big>
+	<status name=top width=80% height=75/>
+</big></p>
+
+<blockquote><p>
+	<bold>Since this is a pre-release, no payment is necessary. Just
+	E-mail me at <xMyEmail color=#8080ff/> for the registration key. </bold>
+	<comment>
+	<a href="https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-8">https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-8</a>
+	</comment>
+</p></blockquote>
+
+<comment>
+<p>
+	The full version of CircumReality costs <bold>US$20.00</bold> <italic>(Prices subject to change.)</italic>.
+</p>
+
+<p>
+	Credit Card payment is handled by <bold>RegNow.com</bold>, a US company
+	that has a <bold>secure
+	Internet site</bold>. Internet Explorer shows a small lock icon in its status
+	bar to indicate that communications with the site are encrypted.
+	Netscape Navigator has similar functionality. To pay, see:
+</p>
+
+
+<p>
+	You may also pay me by personal check in any major currency for the equivalent
+	of <bold>US $20.00</bold>. Check out my web page for details.
+</p>
+</comment>
+
+<xSectionTitle>Registration Key</xSectionTitle>
+
+<p>
+	Type in the <bold>E-mail</bold> name you registered with:
+</p>
+
+<font color=#000000><xEditOneLine name=email maxchars=128/></font>
+
+<p>
+	Once you have paid, you will be shown a registration number on the RegNow.com
+	web site. You will also receive the <bold>registration number in E-mail</bold>. Please type the
+	number below.
+</p>
+
+<font color=#000000><xEditOneLine name=regkey maxchars=32/></font>
+
+<p align=center><big>
+	<status name=bottom width=80% height=75/>
+</big></p>
+
+
+</td></tr>
+</table></p>
+
+
+
+</xClientPage>

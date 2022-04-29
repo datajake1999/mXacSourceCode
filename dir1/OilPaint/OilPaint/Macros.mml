@@ -1,0 +1,154 @@
+<!xNotFunctional>
+	<p><table width=100% bgcolor=#ffff00>
+		<tr>
+			<td>
+				<align align=center><bold><big>Under Construction</big></bold><br/>
+				This page is not functional. It shows a place-holder sample UI at the moment.</align>
+			</td>
+		</tr>
+	</table></p>
+</xNotFunctional>
+
+<!xChoiceButton>
+	<Button valign=top MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</Button><br/>
+</xChoiceButton>
+
+<!xHoverHelp>
+	<HoverHelp MACROATTRIBUTE=1><small>
+		<<<$IFCOLOR>>><colorblend posn=background lcolor=#f0ffe0 rcolor=#e0f0c0/><<<$ENDIFCOLOR>>>
+		<?MacroContent?>
+	</small></HoverHelp>
+</xHoverHelp>
+
+<!xHoverHelpShort>
+	<xHoverHelp hresize=true MACROATTRIBUTE=1>
+		<?MacroContent?>
+	</xHoverHelp>
+</xHoverHelpShort>
+
+<!xMyEmail>
+	<a href="mailto:Mike@mXac.com.au">
+		Mike@mXac.com.au<keyword score=128 words="mike rozak"/>
+		<xHoverHelp>
+			Click this to send me E-mail.
+			Please try to be specific in E-mail so I don't have to E-mail
+			back asking for more information. Thanks.
+			</xHoverHelp>
+	</a>
+</xMyEmail>
+
+<!xPageTitle>
+	<p align=right><big><big><big><bold><keyword score=128>
+		<?MacroContent?>
+	</keyword></bold></big></big></big></p>
+</xPageTitle>
+
+<!xSectionTitle>
+	<p> </p>
+	<p MACROATTRIBUTE=1><big><bold><section><keyword score=96>
+		<?MacroContent?>
+	</keyword></section></bold></big></p>
+</xSectionTitle>
+
+<!xUl>
+	<ul type=pointer>
+		<?MacroContent?>
+	</ul>
+</xUl>
+
+<!xEditOneLine>
+	<p align=right>
+		<edit MACROATTRIBUTE=1 maxchars=128 selall=true width=75% wordwrap=false>
+      <?MACROCONTENT?>
+		</edit>
+	</p>
+</xEditOneLine>
+
+<!xTableCenter>
+	<p align=center> <table width=90% MACROATTRIBUTE=1>
+		<colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/>
+		<?MacroContent?>
+	</table></p>
+</xTableCenter>
+<!xDefinition>
+	<xTableCenter><tr><td>
+		<colorblend posn=background lcolor=#e0ffe0 rcolor=#c0e0c0/>
+		<align align=left><?MacroContent?></align>
+	</td></tr></xTableCenter>
+</xDefinition>
+
+<!xtrHeader>
+	<tr><td bgcolor=#004000 align=right><font color=#ffffff><big><bold>
+		<?MacroContent?>
+	</bold></big></font></td></tr>
+</xtrheader>
+
+<!xbr>
+	<p align=center>
+		<colorblend width=80% height=8 lcolor=#80ff80 rcolor=#8080ff/>
+	</p>
+</xbr>
+
+<!xFilterSuburb>
+	<p align=right>
+		<bold><filteredlist width=75% cbheight=150 blank="No suburb specified" additem="" listname=suburb sort=true MACROATTRIBUTE=1/></bold>
+	</p>
+</xFilterSuburb>
+
+<!xComboQuality>
+	<bold><combobox width=100% cbheight=100 cursel=1 MACROATTRIBUTE=1>
+		<elem name=0>High quality (expensive)</elem>
+		<elem name=1>Normal quality</elem>
+		<elem name=2>Low quality (cheap)</elem>
+	</combobox></bold>
+</xComboQuality>
+
+<!xComboCondition>
+	<bold><combobox width=100% cbheight=100 cursel=1 MACROATTRIBUTE=1>
+		<elem name=0>New</elem>
+		<elem name=1>Good</elem>
+		<elem name=2>Poor</elem>
+		<elem name=3>Needs replacing</elem>
+	</combobox></bold>
+</xComboCondition>
+
+<!xFilterMaterial>
+	<bold>
+		<filteredlist width=100% cbheight=150 blank="No material specified" additem="Add material" listname=material sort=true MACROATTRIBUTE=1/>
+	</bold>
+</xFilterMaterial>
+
+
+<!xTableMaterial>
+	<xtablecenter innerlines=0>
+		<tr>
+			<td width=10%><italic>Quantity</italic></td>
+			<td width=40%><italic>Material</italic></td>
+			<td width=25%><italic>Quality</italic></td>
+			<td width=25%><italic>Condition</italic></td>
+		</tr>
+		<?MacroContent?>
+	</xtablecenter>
+</xtableMaterial>
+
+<!xTableMaterialTR>
+	<xTableMaterial><tr><?MacroContent?></tr></xtablematerial>
+</xTableMaterialTR>
+
+<!xTDQuantity>
+	<td width=10%><bold><edit selall=true width=100% maxchars=16 MACROATTRIBUTE=1/></bold></td>
+</xTDQuantity>
+
+<!xTDMaterial>
+	<td width=40% valign=center><xFilterMaterial MACROATTRIBUTE=1/></td>
+</xTDMaterial>
+
+<!xTDQuality>
+	<td width=25% valign=center><xComboQuality MACROATTRIBUTE=1/></td>
+</xTDQuality>
+
+<!xTDCondition>
+	<td width=25% valign=center><xComboCondition MACROATTRIBUTE=1/></td>
+</xTDCondition>

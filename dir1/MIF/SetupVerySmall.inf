@@ -1,0 +1,7 @@
+appname=CircumReality
+selfexe=z:\mXacNetWeb\CircumrealityVerySmall.exe
+;selfexeauto=1
+icon=Circumreality.exe,Circumreality
+file=z:\MIF\MIFDLL\release\CircumrealityDLL.dll
+license=z:\MIF\license.txt
+

@@ -1,0 +1,99 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lots-of-Text resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Lots-Of-Text</xtrheader>
+	<tr><td>
+		This resource stores a lot of plain text, such as an E-book. Some objects, like cBook,
+		use it.
+	</td></tr>
+	<tr><td align=center>
+		<align tab=16>
+			<edit width=90% height=40% maxchars=10000000 multiline=true wordwrap=true capturetab=true vscroll=desclongscroll name=desclong/>
+		</align>
+		<scrollbar orient=vert height=40% name=desclongscroll/>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Advanced tips:
+</p>
+
+<xul>
+	<li>
+		If you're using this for a cBook's text, then you can include HTML-like tags.
+		The tags must begin with a "&lt;" and end with a "/&gt;". The tags are:
+	</li>
+	<li>
+		<bold>&lt;PageBreak/&gt;</bold> - Skips to the next page.
+	</li>
+	<li>
+		<bold>&lt;Voice voice=OBJECT SpeakStyle=SPEAKSTYLE Lang=LANG/&gt;</bold> - This
+		is the voice used for text in quotes. SpeakStyle and Lang are optional.
+		OBJECT is the object(character) speaking, like "oNPCFred".
+		OBJECT can also be a resource for the voice, like "rVoiceMale1".
+		SpeakStyle is a lower-case string: "afraid", "drunk", "halfwhisper",
+		"happy", "loud", "normal" (the default), "quiet", "sad", "whisper",
+		or "yell". LANG is a lower-case language string, like "elvish".
+	</li>
+	<li>
+		<bold>&lt;NarratorVoice voice=OBJECT SpeakStyle=SPEAKSTYLE Lang=LANG/&gt;</bold> - This
+		is the voice used for text outside of quotes. It's just like &lt;Voice ... /&gt;,
+		except that OBJECT can be "Narrator" to indicate that the official narrator voice
+		should be used, or voice=OBJECT can be left out to use the default narrator for the book.
+	</li>
+	<li>
+		<bold>&lt;Image object=OBJECT emote=EMOTE look=LOOK fade=FADE/&gt;</bold> - Displays
+		an image of an object. Only object=OBJECT is required. OBJECT is the object name,
+		like "oNPCFred", or "NPCAsNarrator" to show the book's narrator. EMOTE is an
+		emote string, like "smile" (the same as all VisualEmoteGet() values).
+		LOOK is the direction for the character to look, either "left", "right",
+		or "straight" (default). FADE is the number of seconds it takes for an
+		image to fade in, defaulting to 2.
+	</li>
+	<li>
+		<bold>&lt;Room Room=ROOM LRAngle=LRANGLE UDAngle=UDAngle fov=FOV datetime=DATETIME Height=HEIGHT/&gt;</bold> - Displays
+		the image of a room. Room is the room object, like "oRoomThePub".
+		LRAngle is the number of degrees to rotate the camera to the right;
+		0 = north, 90 = east, 180 = south, 270 = west. UDAngle, fov, and height
+		are optional. UDANGLE is the number of degrees to rotate the camera up/down,
+		0=straight ahead (default), 90=up, -90=down. FOV is the field of view for the
+		camera, defaulting to the current field-of-view if left blank. HEIGHT is the
+		height of the camera in meters, defaulting to 1.8 meters if unspecified.
+	</li>
+	<li>
+		<bold>&lt;Sound Resource=RESOURCE WaitSound=WAITSOUND/&gt;</bold> - Plays
+		a sound. RESOURCE is the resource name, like "rWaveWhistle1". WaitSound=WAITSOUND
+		is optional; Use WaitSound=1 to wait until the sound has finished playing.
+		If not specified, the sound will play asynchronous to what follows.
+	</li>
+	<li>
+		<bold>&lt;Pause Time=TIME/&gt;</bold> - Pauses.
+		TIME is the number of seconds to pause. Time=TIME is optional,
+		and if left out, the pause will be 2 seconds.
+	</li>
+	<li>
+		<bold>&lt;Ambient Resource=RESOURCE/&gt;</bold> - Changes
+		the ambient sound to the given resource. RESOURCE is an ambient resource name,
+		like "rAmbientThunderHeavy". Resource=RESOURCE is optional, and if
+		left out will cause the ambient sounds to stop.
+	</li>
+	<li>
+		<bold>&lt;ImageResource Resource=RESOURCE Fade=FADE DisableNPR=DISABLENPR/&gt;</bold> - Shows
+		an image from a resource. RESOURCE is the resource name, like "rObjectArmorHelmet".
+		Fade= and DisableNPR= are optional. FADE is the number of seconds to fade in,
+		and if not defined will be set to 2. DisableNPR=1 causes non-photorealistic
+		effects to be disabled for the image, and if left undefined NPR effects will be enabled.
+	</li>
+	<li>
+		You can <bold>include "%1"</bold> in the text and it will be replaced with the player character's
+		name, letting you include the PC in the action. This only works if you
+		write your own BookPagesLotsOfTextName() method for the book.
+	</li>
+</xul>
+

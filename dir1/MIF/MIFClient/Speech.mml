@@ -1,0 +1,164 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Speech settings"/>
+
+<p/>
+
+<xtablecenter width=80%>
+	<xtrheader>Quick speech settings</xtrheader>
+
+	<tr><td>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2 name=qual0>
+			<bold>Text only, no text-to-speech</bold> (Fastest)<br/>
+			Show only text. Turn off the text-to-speech voices.
+		</xchoicebutton>
+
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2 name=qual1>
+			<bold>Text-to-speech voices, but display text</bold><br/>
+			Speak using the text-to-speech voices, but also display a text transcript
+			of what's spoken.
+		</xchoicebutton>
+
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2 name=qual2>
+			<bold>Text-to-speech voices, minimize text</bold><br/>
+			Speak using the text-to-speech voices, but <bold>don't</bold> display a
+			transcript of the text.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=80%>
+	<xtrheader>Transcript history and subtitles</xtrheader>
+	
+	<tr><td>
+		<button valign=top style=x checkbox=true name=transcripthistory>
+			<bold>Show a history of what's been spoken</bold><br/>
+			Checking this shows a history of what's been spoken in the transcript window.
+		</button>
+	</td></tr>
+	
+	<tr>
+		<td>
+			<bold>Transcript text size</bold> - Changes the size of the text in
+			the transcript window.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=transcriptsize>
+			<elem name=1>Small</elem>
+			<elem name=2>Medium</elem>
+			<elem name=3>Large</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr><td>
+		<button valign=top style=x checkbox=true name=subtitlespeech>
+			<bold>Subtitles for speech</bold><br/>
+			Show subtitles for text that would normally be spoken (unless specfically muted).
+		</button>
+	</td></tr>
+
+	<tr><td>
+		<button valign=top style=x checkbox=true name=subtitletext>
+			<bold>Subtitles for text-only</bold><br/>
+			Show subtitles for text that would normally be display as only text.
+		</button>
+	</td></tr>
+
+	<tr>
+		<td>
+			<bold>Subtitle text size</bold> - Changes the size of the subtitle text
+			that's displayed whenever the narrator or a character speaks.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=subtitlesize>
+			<elem name=1>Small</elem>
+			<elem name=2>Medium</elem>
+			<elem name=3>Large</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+	
+<xtablecenter width=80%>
+	<xtrheader>Speech settings</xtrheader>
+	<tr><td>
+		<button valign=top style=x checkbox=true name=muteall>
+			<bold>I don't want to hear the voices; I'd rather read.</bold><br/>
+			Checking this will turn off all the voices, and swap things around so you can easily
+			read what's happening.<<<$LOWQUALITYVOICES>>>
+		</button>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Speaking speed</bold> - This controls how quickly the computer-generated
+			voice will speeek for the <bold>current tab</bold>. Speaking rate is
+			specific to a tab since in some tabs, such as combat, you may wish the computer
+			to speak more quickly.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=speakrate>
+			<elem name=0>Very slow</elem>
+			<elem name=1>Slow</elem>
+			<elem name=2>Medium</elem>
+			<elem name=3>Fast</elem>
+			<elem name=4>Very fast</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr><td>
+		<button valign=top style=x checkbox=true name=ttsautomute>
+			<bold>Stop speaking when you do something</bold><br/>
+			If checked, anything that's being spoken will stop as soon as you take an action
+			or say something to a NPC. That way you don't have to listen to the rest of the
+			speech before seeing the results of your action.
+		</button>
+	</td></tr>
+
+	<<<$IFRECORDDIR>>>
+	<tr>
+		<td>
+			<bold>Record-wave-to directory</bold> - If you enter a directory, such as "c:\MyDirectory", then a "record"
+			option will appear next to every sentence in the transcript page. Pressing "record" will
+			bring up a dialog that lets you record the sentence and automatically write
+			it into the directory under an automatically-generated name based on TTSRecNNNNN.wav.
+			(NNNNN is replaced by a number.) You can use this tool to record sentence for
+			text-to-speech, a prosody model, or automatic transplanted prosody.
+		</td>
+		<td><bold><edit width=100% maxchars=127 name=recorddir/>
+		</bold></td>
+	</tr>
+	<<<$ENDIFRECORDDIR>>>
+
+</xtablecenter>
+
+
+<xtablecenter width=80%>
+	<xtrheader>Speech quality</xtrheader>
+	<tr><td>
+		If you haven't already, you can <bold>improve the quality of CircumReality's synthesized speech</bold> by
+		downloading the large text-to-speech voices
+		from <a href="http://www.CircumReality.com/Download.htm">http://www.CircumReality.com/Download.htm</a>. (You'll need to
+		restart CircumReality after installing the new voices.)
+		<p/>
+			To use the high-quality voices, you need to have paid for the full version of
+			CircumReality (<<<$TTSREGISTERED>>>). The high-quality voices are only recommended if you are running
+			the 64-bit version of CircumReality (<<<$TTSCIRC64>>>) with
+			Windows 64 (<<<$TTSWIN64>>>) on a dual-core computer (<<<$TTSDUALCORE>>>) with 2 gigbytes of RAM (<<<$TTSRAM>>>).
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Quality vs. speed</bold> - You can use this setting to control the quality of text to speech.
+			Higher quality will require the computer to "think" a bit harder, creating a slight delay
+			between when it knows what to speak and when speech actually starts.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=ttsquality>
+			<elem name=0>Low quality, but fast</elem>
+			<elem name=1>Normal quality</elem>
+			<elem name=2>High quality, but slow</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=ttsenablepcm>
+			<bold>Use higher quality, but less unique voices.</bold> If this is checked, CircumReality
+			will try to produce the best quality voice it can, but characters' voices will sound
+			similar to one another. If unchecked, characters' voices will be more unique, but of
+			lower quality.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

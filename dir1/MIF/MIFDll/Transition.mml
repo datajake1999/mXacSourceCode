@@ -1,0 +1,190 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Transition"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Image</xtrheader>
+	<tr><td align=center>
+		<<<$IMAGEDRAG>>>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr><td>
+		This causes the image to fade from an initially solid color into the image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Duration</bold> - The number of seconds it takes to fade from the
+			solid color to the image. If this is 0 then no fade will be done.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=fadefromdur/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle <<<$LIBENABLE>>> name=changefadefromcolor>
+				<bold>Solid color</bold><br/>
+				This is the color used for the fade.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=fadefromcolor/>
+		</td>
+	</tr>
+<<<$ENDIFTAB0>>>
+
+<<<$IFTAB1>>>
+	<tr><td>
+		This causes the image to fade to a solid color after a set period of time.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Start time</bold> - After the image has bee shown for this many seconds,
+			it will start to fade to a solid color.
+			If this is 0 then no fade will be done.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=fadetostart/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stop time</bold> - The fade will complete this many seconds after the
+			image was shown.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=fadetostop/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle <<<$LIBENABLE>>> name=changefadetocolor>
+				<bold>Solid color</bold><br/>
+				This is the color used for the fade.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=fadetocolor/>
+		</td>
+	</tr>
+<<<$ENDIFTAB1>>>
+
+<<<$IFTAB2>>>
+	<tr><td>
+		This causes the image to fade from the previous image to this one.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Duration</bold> - The number of seconds it takes to fade from the
+			previous image to this one. If this is 0 then no fade will be done.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=fadeindur/></bold>
+		</td>
+	</tr>
+<<<$ENDIFTAB2>>>
+
+<<<$IFTAB3>>>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=usetransparent>
+			<bold>Use transparency</bold><br/>
+			If checked then the color specified below will become transparent. The
+			user will be able to see through to the layer below in the transparent sections.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle <<<$LIBENABLE>>> name=changetransparent>
+				<bold>Transparency color</bold><br/>
+				Portions of the image using this color will be transparent.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=transparent/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency strictness</bold> - If you wish the color to be transparent
+			only when the exact color is matched then type in 0. If you wish close colors,
+			use a number between 20-50. Larger numbers allow for more color variation.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=transparentdist/></bold>
+		</td>
+	</tr>
+<<<$ENDIFTAB3>>>
+
+
+<<<$IFTAB4>>>
+	<tr><td>
+		You can use the pan/zoom settings to have the camera scroll across the image,
+		or zoom in/out of the image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Start time</bold> - This is the time (in seconds) when the zooming or
+			panning starts. <bold>If this is 0 then no panning or zooming will be performed.</bold>
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=panstarttime/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stop time</bold> - This is the time (in seconds) when the zooming or
+			panning stops.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=panstoptime/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor=#00ff00>
+			<bold>Start location</bold> - The location where the camera is when panning
+			or zooming starts. X and Y are the coordinates for the center of the
+			camera. They range from 0 (left or top) to 1 (right or bottom).
+			Z is the amount of zoom; 1 shows the normal image size, while 0.5 zooms into
+			half the image, etc.
+		</td>
+		<td align=right bgcolor=#00ff00>
+			<bold>X: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstart0/></bold><br/>
+			<bold>Y: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstart1/></bold><br/>
+			<bold>Z: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstart2/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor=#ff0000>
+			<bold>Stop location</bold> - The location where the camera is when panning
+			or zooming stops.
+		</td>
+		<td align=right bgcolor=#ff0000>
+			<bold>X: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstop0/></bold><br/>
+			<bold>Y: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstop1/></bold><br/>
+			<bold>Z: <edit width=80% maxchars=64 <<<$LIBENABLE>>> name=panstop2/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Resolution</bold> - Because a zoomed-in image requires higher resolution,
+			you can use this setting to increase the resolution of the generated image
+			so zooming won't create pixelation.
+		</td>
+		<td>
+			<bold><combobox width=100% cbheight=150 <<<$LIBENABLE>>> name=resextra>
+				<elem name=0>Normal detail</elem>
+				<elem name=1>2x normal detail</elem>
+				<elem name=2>4x normal detail</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+<<<$ENDIFTAB4>>>
+
+
+</xtablecenter>
+

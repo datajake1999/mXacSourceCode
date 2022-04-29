@@ -1,0 +1,107 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Automatic transplanted prosody"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Directory</bold> - Type in the directory where all the .wav files
+			are stored. For example: "c:\MyProject\TransPros".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=wavedir/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Numbers start at</bold> - The automatic transplanted prosody
+			resources are named "rTransProsAutoXXXXX", where XXXXX is replaced
+			by a number. This setting controls what number the transplanted prosody
+			recordings start at. Use other numbers if you have several different
+			automatic transplanted-prosody libraries or wave-file directories.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=32 name=numbers/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Quality</bold> - Controls the quality of the transplanted prosody.
+			The higher the number, the better that transplanted prosody will follow
+			the pitch contour (prosody) of the original recording, but the
+			more data is used.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=quality>
+			<elem name=1>1 point per phoneme</elem>
+			<elem name=2>2 points per phoneme</elem>
+			<elem name=3>3 points per phoneme</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Speech recognition training</bold> -
+			If you haven't already done so, you need to select the speech recognition training to use.
+			It will identify where
+			the phonemes begin an end, a necessary step for transplanted prosody.
+			The speech recognition
+			training file should use the <bold>same language and lexicon</bold> as the text-to-speech voice
+			you wish to transplant onto.
+		</td>
+		<td>
+			<bold><edit width=100% enabled=false name=srfile/><br/></bold>
+			<align align=right><button name=newsrfile><bold>Change</bold></button></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Text-to-speech voice</bold> -
+			If you haven't already done so, you need to select the text-to-speech voice to
+			transplant onto.
+			The text-to-speech voice
+			should use the <bold>same language and lexicon</bold> as the
+			speech recognition training file. Select the <bold>most commonly used</bold> voice.
+		</td>
+		<td>
+			<bold><edit width=100% enabled=false name=ttsfile/><br/></bold>
+			<align align=right><button name=newttsfile><bold>Change</bold></button></align>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=autoclean>
+			<bold>Automatically delete ALL rTransProsXXXXX resources</bold><br/>
+			If this is checked, then <bold>all</bold> rTransProsXXXXX resources will be deleted
+			whenever the transplanted prosody directory is scanned. If unchecked, then
+			only those resources will be removed where the sentence text matches one of the .wav files.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=scan>
+	<bold>Create transplanted prosody resources from the .wav files</bold><br/>
+	Press this to scan the specified directory and convert all .wav files into
+	automatic transplanted prosody resources. Make sure to fill in the
+	above fields before pressing this button.
+</xChoiceButton>
+
+
+
+<p/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	<bold>Automatic transplanted prosody</bold> lets you automatically scan
+	a directory with recorded wave files, and create &lt;TransPros&gt; resources
+	mimicking the prosody from the wave files. The resources are
+	saved as <bold>rTransProsAutoXXXXX</bold> where XXXXX is replaced
+	by a unique number.
+</p>
+
+<p>
+	Once you have these resources included in your IF project, any call
+	to Speak() where the text passed into Speak() matches one of
+	the transplanted prosody resources will cause the transplanted prosody
+	resource to be spoken. Thus, the sentence will be spoken with the
+	same prosody as was in the original .wav file.
+</p>

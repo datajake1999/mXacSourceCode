@@ -1,0 +1,140 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Title information"/>
+
+<p>
+	The "Title information" resource is used by the Circumreality client to show the user
+	which server he/she can log onto and what port to use. A Circumreality title must
+	have one and only one title information resource.
+</p>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr>
+		<td>
+			<bold>Name</bold> - Name of the Circumreality title.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Short description</bold> - One or two sentence short description
+			of the title, such as its genre and a quick plot overview.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=256 wordwrap=true multiline=true <<<$LIBREADONLY>>> name=descshort/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Web site</bold> - Web site the user can visit for more information on the
+			title. This should be of the form: "<bold>http://www.mXac.com.au</bold>".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=256 <<<$LIBREADONLY>>> name=website/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Long description</bold> - Multiple-paragraph description of the title.
+			<p/>
+			<p align=center>
+				<bold><edit width=80% height=50% maxchars=32000 wordwrap=true multiline=true <<<$LIBREADONLY>>> vscroll=desclongscroll name=desclong/></bold>
+				<scrollbar orient=vert height=50% name=desclongscroll/>
+			</p>
+		</td>
+	</tr>
+<<<$ENDIFTAB0>>>
+
+<<<$IFTAB1>>>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=playoffline>
+			<bold>Can be played offline</bold><br/>
+			If this is checked, the Circumreality title can be played offline without having to
+			go online. Use this if you wish to distribute the title as a single-player
+			title.
+		</xChoiceButton>
+	</td></tr>
+<<<$ENDIFTAB1>>>
+
+<<<$IFTAB2>>>
+	<tr><td>
+		This page displays a list of shards that you will supply. Each shard is
+		a separate instance of your IF, often running on different computers.
+		Sometimes shards have different settings to provide a slightly-different
+		experience, such as player-vs-player version.
+		<p/>
+		<xChoiceButton style=righttriangle <<<$LIBENABLE>>> name=newshard>
+			<bold>Add a new shard</bold><br/>
+			Press this to add a new shard. If you wish your IF to run over the Internet
+			you must have at least one shard.
+		</xChoiceButton>
+	</td></tr>
+	<<<$SHARDLIST>>>
+<<<$ENDIFTAB2>>>
+
+<<<$IFTAB4>>>
+	<tr>
+		<td>
+			<bold>End-user license agreement</bold>
+			<p/>
+			<p align=center>
+				<bold><edit width=80% height=80% maxchars=32000 wordwrap=true multiline=true <<<$LIBREADONLY>>> vscroll=eulascroll name=eula/></bold>
+				<scrollbar orient=vert height=80% name=eulascroll/>
+			</p>
+		</td>
+	</tr>
+<<<$ENDIFTAB4>>>
+
+
+<<<$IFTAB3>>>
+	<tr>
+		<td>
+			<bold>File name</bold> - If the title info is download from a world to link it to
+			another world, this is the filename to use, <bold>without</bold> a directory or
+			file extension. For example, use "My resource" <bold>not</bold> "c:\My resource.crk".
+			If your title resource supports several languages, all the languages
+			should include the <bold>same file name</bold>.
+			<p/>
+			This file name should be <bold>unique</bold> amongst all the Circumreality titles.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=filename/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Delete unused users</bold> - Most online titles will delete unused user
+			accounts after N days. Set this to the (approximate) number of days before
+			unused user accounts are deleted so that players will be aware that their
+			old account(s) may have been deleted. This value does <bold>not</bold> affect
+			the actual number of days though; change the gUserDeleteAfter (28 days default) and
+			gUserDeleteAfterReminder (8 days default) MIFL code for that.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=16 <<<$LIBREADONLY>>> name=delunusedusers/></bold>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton <<<$LIBENABLE>>> name=loadjpegback>
+			<bold>Load a .jpg file to use as a background</bold><br/>
+			Press this to read in a .jpg file that will be used as a "desktop" background.
+			Try to keep the file small, less than 100K.
+		</xChoiceButton>
+		
+		<xChoiceButton <<<$LIBENABLE>>> name=loadfromfile>
+			<bold>Load this information from a .crf or .crk file</bold><br/>
+			If you are creating a link to another online Circumreality title, use this option to
+			load in all the link information from the other title... saving you LOTS of time
+			typing, and ensuring that all the information is accurate.
+		</xChoiceButton>
+	</td></tr>
+<<<$ENDIFTAB3>>>
+
+
+</xtablecenter>
+

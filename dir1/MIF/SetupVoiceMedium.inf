@@ -1,0 +1,13 @@
+appname=Circumreality
+title=Medium voices
+selfexe=z:\mxacNetweb\CircumrealityVoicesMedium.exe
+file=z:\voices\medium\mXacFemaleRN.tts
+file=z:\voices\medium\CMUFemaleSLT.tts
+file=z:\voices\medium\CMUFemaleCLB.tts
+file=z:\voices\medium\MikeRozak.tts
+file=z:\voices\medium\CMUMaleAWB.tts
+file=z:\voices\medium\CMUMaleBDL.tts
+file=z:\voices\medium\CMUMaleJMK.tts
+file=z:\voices\medium\CMUMaleRMS.tts
+license=z:\MIF\license.txt
+

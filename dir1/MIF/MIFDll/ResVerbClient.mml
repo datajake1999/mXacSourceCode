@@ -1,0 +1,97 @@
+<?Include resource=500?>
+<PageInfo index=false title="Toolbar customization"/>
+
+<colorblend posn=background tcolor=#e0ffff bcolor=#b0e0e0/>
+<small><table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=66% valign=center align=right lrmargin=16>
+		<font color=#c0c0c0><big><big><italic>
+			<<<PAGETITLE>>>
+		</italic></big></big></font>
+	</td>
+</tr>
+</table>
+<br/>
+
+<p>
+	The toolbar palette displays a set of buttons that saves you typing in
+	commonly used commands,
+	such as "Inventory" or "Go north". You can customize the toolbar in this dialog,
+	either by rearranging the buttons, removing some, or adding them.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Toolbar buttons</xtrheader>
+	<tr><td>
+		<p align=center>
+			<listbox width=80% height=40% vscroll=listscroll name=verblist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton style=uptriangle name=moveup>
+			<bold>Move up</bold><br/>
+			Move the selected button up in the list.
+		</xChoiceButton>
+		<xChoiceButton style=downtriangle name=movedown>
+			<bold>Move down</bold><br/>
+			Move the selected button down in the list.
+		</xChoiceButton>
+		<xChoiceButton name=delverb>
+			<bold>Delete selected button</bold><br/>
+			Press this to delete the selected button from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Add a new button</xtrheader>
+	<tr>
+		<td>
+			<bold>Icon</bold> - The icon displayed in the button.
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=icon>
+			<elem name=0><image bmpresource=106 transparent=true transparentdistance=1/></elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Command</bold> - The command to be sent when the button
+			is pressed, such as "Inventory" or "Go north".
+			If this contains a the text <bold>"&lt;Click&gt;"</bold> then
+			the user will need to click on an object (or person) to indicate
+			what object to use. For example: "Pick up &lt;Click&gt;" will require
+			a user to click on the object they wish to pick up.
+		</td>
+		<td>
+			<edit width=100% maxchars=128 name=command/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tooltip</bold> - Tooltip displayed when the mouse is hovered over
+			the button. If this is left blank the command's text will be displayed.
+		</td>
+		<td>
+			<edit width=100% maxchars=128 name=tooltip/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=addverb>
+			<bold>Add new button</bold><br/>
+			Add a new button to the list, using the given command and icon.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=revert>
+	<bold>Restore original settings</bold><br/>
+	Pressing this will remove any customizations you made to the toolbar.
+</xChoiceButton>
+
+<br/>
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr><td align=center>
+<font color=#808080><italic><small>Copyright 2002-2006 Mike Rozak (<font face=symbol>m</font>Xac). All rights reserved.</small></italic></font>
+</td></tr>
+</table></small>

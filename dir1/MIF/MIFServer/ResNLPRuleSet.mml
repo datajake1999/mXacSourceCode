@@ -1,0 +1,372 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="NLP rule set"/>
+
+<!xComboSort>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Sort by "from"</elem>
+		<elem name=1>Sort by "to"</elem>
+		<elem name=2>Sort by score</elem>
+	</combobox></bold>
+</xComboSort>
+
+
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr><td>
+		<p align=center>
+			<align align=center><xComboSort width=50% name=sortby/></align><br/>
+			<listbox width=80% height=40% vscroll=listscroll name=rulelist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton <<<$LIBENABLE>>> name=delrule>
+			<bold>Delete the selected rule</bold>
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Add a new synonym</xtrheader>
+	<tr>
+		<td>
+			<bold>From word/phrase</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=from/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To word/phrase</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Probability</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=64 name=prob/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton <<<$LIBENABLE>>> name=addrule>
+			<bold>Add synonym</bold>
+			Type in the "from" and "to" entries above and press this button to add the synonym.
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Documentation</xtrheader>
+	<tr><td>
+		The NLP rules produce alternate phrasings for a command or sentence spoken to
+		a NPC, so it's easier for the command parser or NPC to understand. In general,
+		a NLP rule will simplify a sentence down. (Example: "Can you tell me who Jack is?"
+		is simplified to "Who is Jack")
+		<p/>
+		The synonyms tab makes it easy to replace synonyms. Some obvious examples are
+		"Michael" to "Mike" (and vice versa), or "colour" to "color".
+		<p/>
+		To add a synonym:
+		<p/>
+		<ol>
+			<li>
+				Type in the original text, as typed by the user, into the <bold>"From"</bold> line.
+				Example: "Michael". (If the synonym consists of more than one word you can
+				separate the words with a space, such as "Michael Smith", or even use
+				the "grammar format" - see below.)
+			</li>
+			<li>
+				Type the text it will be changed to in the <bold>"To"</bold> line, such as "Mike".
+			</li>
+			<li>
+				Type in a probability, from 0.01 to 99 in the <bold>probability</bold> line. This is
+				the chance that making the conversion from the original word to the
+				new one won't change the meaning of the sentence. In the case of "Michael"
+				to "Mike" use 99, since 99% of the time there's no change in meaning.
+				If you were converting "Mike" to "Mikey" you might use 20 since it's only
+				a reasonable substitution about 20% of the time. Don't worry about getting
+				the exact probability; just use something close to what you think.
+			</li>
+			<li>
+				Press the <bold>Add synonym</bold> button.
+			</li>
+			<li>
+				If you want, switch to the <bold>"Test"</bold> tab and try out your new rule.
+			</li>
+		</ol>
+	</td></tr>
+<<<$ENDIFTAB0>>>
+
+
+
+<<<$IFTAB1>>>
+	<tr><td>
+		<p align=center>
+			<align align=center><xComboSort width=50% name=sortby/></align><br/>
+			<listbox width=80% height=40% vscroll=listscroll name=rulelist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton <<<$LIBENABLE>>> name=delrule>
+			<bold>Delete the selected rule</bold>
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Add a new rewording</xtrheader>
+	<tr>
+		<td>
+			<bold>From phrase</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=from/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To phrase</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Probability</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=64 name=prob/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton <<<$LIBENABLE>>> name=addrule>
+			<bold>Add rule</bold>
+			Type in the "from" and "to" entries above and press this button to add the rule.
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Documentation</xtrheader>
+	<tr><td>
+		The NLP rules produce alternate phrasings for a command or sentence spoken to
+		a NPC, so it's easier for the command parser or NPC to understand. In general,
+		a NLP rule will simplify a sentence down. (Example: "Can you tell me who Jack is?"
+		is simplified to "Who is Jack")
+		<p/>
+		The "reword" tab makes it easy to reword a sentence, such as the example above.
+		<p/>
+		To add a rewording rule:
+		<p/>
+		<ol>
+			<li>
+				Type in the original text, as typed by the user, into the <bold>"From"</bold> line.
+				Example: "Can you tell me who *1 is?". See the "Grammar format" below for
+				more information.
+			</li>
+			<li>
+				Type the text it will be changed to in the <bold>"To"</bold> line, such as
+				"Who is *1". See the "Grammar format" below for more information.
+			</li>
+			<li>
+				Type in a probability, from 0.01 to 99 in the <bold>probability</bold> line. This is
+				the chance that making the conversion from the original phrase to the
+				new one won't change the meaning of the sentence. In the case of "Can you tell me who *1 is?"
+				to "Who is *1" use 90, since 90% of the time there's no change in meaning.
+				If your rule isn't right as often, use a lower number.
+				Don't worry about getting
+				the exact probability; just use something close to what you think.
+			</li>
+			<li>
+				Press the <bold>Add rule</bold> button.
+			</li>
+			<li>
+				If you want, switch to the <bold>"Test"</bold> tab and try out your new rule.
+			</li>
+		</ol>
+	</td></tr>
+<<<$ENDIFTAB1>>>
+
+
+
+<<<$IFTAB2>>>
+	<tr><td>
+		<p align=center>
+			<align align=center><xComboSort width=50% name=sortby/></align><br/>
+			<listbox width=80% height=40% vscroll=listscroll name=rulelist/>
+			<scrollbar orient=vert height=40% name=listscroll/>
+		</p>
+		<xChoiceButton <<<$LIBENABLE>>> name=delrule>
+			<bold>Delete the selected rule</bold>
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Add a new sentence split</xtrheader>
+	<tr>
+		<td>
+			<bold>From phrase</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=from/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To sentence 1</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To sentence 2</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To sentence 3</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>To sentence 4</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=250 name=to3/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Probability</bold> - See below.
+		</td>
+		<td><bold><edit width=100% <<<$LIBREADONLY>>> maxchars=64 name=prob/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton <<<$LIBENABLE>>> name=addrule>
+			<bold>Add rule</bold>
+			Type in the "from" and "to" entries above and press this button to add the rule.
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Documentation</xtrheader>
+	<tr><td>
+		The NLP rules produce alternate phrasings for a command or sentence spoken to
+		a NPC, so it's easier for the command parser or NPC to understand. In general,
+		a NLP rule will simplify a sentence down. (Example: "Can you tell me who Jack is?"
+		is simplified to "Who is Jack")
+		<p/>
+		The "split" tab makes it easy to split a sentence into two to four sub-sentences.
+		For example, you might wish to split "Walk down the stairs and then turn right",
+		into "Walk down the stairs" followed by "Turn right".
+		<p/>
+		To add a split rule:
+		<p/>
+		<ol>
+			<li>
+				Type in the original text, as typed by the user, into the <bold>"From"</bold> line.
+				Example: "*1 and then *2". See the "Grammar format" below for
+				more information.
+			</li>
+			<li>
+				Type the text it will be changed to in the <bold>"To"</bold> lines.
+				Fill in as many sentences as you need. For this example, type "*1" into the 1st
+				to-sentence, and "*2" into the 2nd to-sentence.
+				See the "Grammar format" below for more information.
+			</li>
+			<li>
+				Type in a probability, from 0.01 to 99 in the <bold>probability</bold> line. This is
+				the chance that making the conversion from the original phrase to the
+				new one won't change the meaning of the sentence. In the case of "*1 and then *2"
+				to "*1" and "*2" use 80, since 80% of the time there's no change in meaning.
+				If your rule isn't right as often, such as "*1 and *2", use a lower number.
+				("*1 and *2" isn't correct too often because if someone types "Mike and Mary walked home."
+				it would be incorrectly converted to one sentence "Mike" and another "Mark walked home".)
+				Don't worry about getting
+				the exact probability; just use something close to what you think.
+			</li>
+			<li>
+				Press the <bold>Add rule</bold> button.
+			</li>
+			<li>
+				If you want, switch to the <bold>"Test"</bold> tab and try out your new rule.
+			</li>
+		</ol>
+	</td></tr>
+<<<$ENDIFTAB2>>>
+
+<<<$IFTAB3>>>
+	<tr>
+		<td>
+			<bold>Sentence</bold> - Type in a sentence to test and then press "Test".
+		</td>
+		<td>
+			<bold><edit defcontrol=true width=100% maxchars=256 name=testtext/></bold><br/>
+			<button accel=enter name=test><bold>Test</bold></button>
+		</td>
+	</tr>
+	<xtrheader>Results</xtrheader>
+	<tr><td align=center>
+		<listbox width=80% height=40% vscroll=tlistscroll name=testresults/>
+		<scrollbar orient=vert height=40% name=tlistscroll/>
+	</td></tr>
+	<xtrheader>Turn other rule sets on (or off)</xtrheader>
+	<tr><td>
+		You may use several rule sets together to do the parsing. For example: One rule
+		set may convert from British spelling to American spelling. Another might do the
+		main chatterbot rules. Etc.
+		<p/>
+		To test with multiple rule sets, just check the rule set you wish to turn on.
+		You will need to press the "Test" button to re-test with the new rules on/off.
+		NOTE: <bold>Do not</bold> turn on the ruleset you're editing, since it's
+		already on all the time.
+		<p/>
+		<<<$RULESONOFF>>>
+	</td></tr>
+	<xtrheader>Documentation</xtrheader>
+	<tr><td>
+		To see how well your rules are working, type in a sentence above and press "Test".
+		<p/>
+		The results list-box will be filled with all the possible rewordings of the original
+		sentence by applying your rules. Some rewordings will have multiple rules
+		applied to them. Each rewording will include a "probability", which it the likelihood
+		that the rewording is still valid. (This is calculated by multiplying the probabilities
+		- that you typed in -
+		of the individual rules used.)
+		<p/>
+		The command-line and NPC conversation system will use the rewording that has
+		the highest probability <bold>and</bold> which can be understood; usually this
+		ends up being the simplest sentence with the highest probability.
+		For example: "What can you tell me about my long knife?" could be reworded as
+		"`TELLME my long knife" and then to "`TELLME `KNIFE". (The all-caps words
+		prefixed with a ` are "words" that the command-line or NPC conversation
+		systems might understand, which your rules could simplify down to.)
+		Even though "`TELLME `KNIFE" would have a lower probability than
+		"What can you tell me about my long knife?", it would be the first rewording
+		that the NPC conversation system could understand, it would be used.
+	</td></tr>
+<<<$ENDIFTAB3>>>
+
+	<xtrheader>Grammar format</xtrheader>
+	<tr><td>
+		Sometimes you will need to convert a group of very similar phrases, such as
+		"the nasty knife", "the sharp knife", or "my sharp knife" to just "knife".
+		You may also need to copy a section of text from the original text to the
+		new one, such as "Say Hi there to Mike" or "Yell Hi there to Mike" getting converted
+		to "Tell Mike Hi there". (Notice that "Hi there" is copied over.)
+		To do either of these you need to use some special symbols in your "from" and
+		"to" lines to indicate optional words or fill-in-the-blanks.
+		<p/>
+		<xul>
+			<li>
+				To allow for <bold>alternative wording</bold>, separate the words with a vertical
+				bar character '|'. Surround the alternatives with parenthesis.
+				For example: To allow for "my knife" or "the knife", type
+				in the line "(my|the) knife". You can only use alternative wording on the
+				"from" line.
+			</li>
+			<li>
+				To have <bold>optional words/phrases</bold>, put square brackets around the
+				phrase. For example: To allow for "my knife" or "my sharp knife", type
+				in "my [sharp] knife". You can combine this with the other rules, with a
+				phrase like "[my|the|a] [sharp|long] knife", allowing for phrases
+				like "knife", "a long knife", and "the knife".
+				You can only use the optional wording in the "from" line.
+			</li>
+			<li>
+				To provide a <bold>fill in the blank</bold>, include the characeter '*' followed
+				by a digit between '0' and '9'. This lets users type in one or more words
+				and stores them in the given bin number. When the sentence is reconstructed, the
+				words from the bin will be inserted in place. For example: A "from" line of
+				"Say *1 to Mike" and a "to" line of "Tell Mike *1" will convert "Say Hi there to Mike"
+				to "Tell Mike Hi there". You can use multiple fill-in-the-blanks (with their own
+				unique bin number). You can also surround the fill-in-the-blanks with an
+				optional word/phrase (square brackets).
+			</li>
+			<li>
+				For a <bold>single-word</bold> fill-in-the-blank, use the character '%'
+				followed by a digit between '0' and '9'. This only allows for one word to
+				be placed in the bin. Example: A from line of "Say *1 to %2" and a to
+				line of "Tell %2 *1" will convert "Say Hi there to Fred" to "Tell Fred Hi there".
+			</li>
+		</xul>
+	</td></tr>
+</xtablecenter>
+

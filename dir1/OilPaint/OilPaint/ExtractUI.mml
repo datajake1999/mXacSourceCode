@@ -1,0 +1,58 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Extract rental/property information from a web site"/>
+
+
+<xPageTitle>
+	Extract rental/property information from a web site
+</xPageTitle>
+
+<p>
+	<button style=rightarrow posn=edgeright href=moreinfo>More info</button>
+	Use this page to extract rental or property information from a real-estate web
+	site. In the web site, search for all the properties for rent/sale, and then
+	for each page displayed click on the house icon in the taskbar.
+</p>
+
+<xChoiceButton href=modifyregion>
+	<bold>View or modify region information</bold>
+	<br/>
+	This lets you view or modify all the information you typed in about the local region.
+	You can add/remove suburbs/neighborhoods.
+</xChoiceButton>
+
+<xChoiceButton href=modifyextractsite>
+	<bold>Inform The House App what web-site you're extracting from</bold>
+	<br/>
+	If you haven't already done so, you must tell The House App what web site (such as
+	www.realtor.com) you're extracting from so that it knows how the information is
+	displayed.
+</xChoiceButton>
+
+<xChoiceButton href=modifyaliases>
+	<bold>Alternative names for suburbs</bold>
+	<br/>
+	Type in some alternative names for suburbs as they appear in the web site page
+</xChoiceButton>
+
+<xbr/>
+
+<xtablecenter>
+	<xtrheader>
+		<<<RENTNUM>>> rentals/properties extracted so far
+	</xtrheader>
+	<<<$PROP>>>
+	<tr><td>
+		<button style=beveled name=add valign=top>
+			<bold>Add a property manually</bold>
+			<br/>
+			Use this to add a rental or property by hand.
+		</button>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	Switch to the web page listing the properties and click on the
+	house icon in the task-bar to extract them. If you're all done extracting then
+	press "Next".
+</p>

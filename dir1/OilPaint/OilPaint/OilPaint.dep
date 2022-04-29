@@ -1,0 +1,38 @@
+# Microsoft Developer Studio Generated Dependency File, included by OilPaint.mak
+
+.\Image.cpp : \
+	".\OilPaint.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\JPeg.cpp : \
+	"..\..\jpeg\jpeg-6b\cderror.h"\
+	"..\..\jpeg\jpeg-6b\jconfig.h"\
+	"..\..\jpeg\jpeg-6b\jerror.h"\
+	"..\..\jpeg\jpeg-6b\jinclude.h"\
+	"..\..\jpeg\jpeg-6b\jmorecfg.h"\
+	"..\..\jpeg\jpeg-6b\jpeglib.h"\
+	"..\..\jpeg\jpeg-6b\jversion.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Main.cpp : \
+	".\buildnum.h"\
+	".\OilPaint.h"\
+	".\Register.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\OilPaint.rc : \
+	".\buildnum.h"\
+	".\icon1.ico"\
+	".\Macros.mml"\
+	".\photo.bmp"\
+	".\TemplateEnd.mml"\
+	".\TemplateNext.mml"\
+	{$(INCLUDE)}"buildnum.rc"\
+	
+
+.\Register.cpp : \
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

@@ -1,0 +1,56 @@
+OIL PAINTING ASSISTANT
+
+END-USER LICENSE AGREEMENT
+
+Please read this license agreement (called the "EULA") carefully.
+By using the software or any related documentation (called the "SOFTWARE
+PRODUCT"), you agree to be bound by the terms of the EULA. If you do not
+accept this EULA, do not install or use this product.
+
+
+
+SOFTWARE PRODUCT LICENSE
+
+The SOFTWARE PRODUCT is owned by Mike Rozak. It is copyrighted by copyright
+laws and international copyright treaties. The SOFTWARE PRODUCT is
+licensed, not sold.
+
+1. GRANT OF LICENSE
+Mike Rozak grants you a non-exclusive, non-transferable license to download
+the SOFTWARE PRODUCT and install, use, access, display, run, or
+otherwise interact with ("RUN") the SOFTWARE PRODUCT on up to five (5)
+computers.
+
+The SOFTWARE PRODUCT will terminate after thirty (30) days unless the
+user registers his/her copy with the specified registration agency.
+The SOFTWARE PRODUCT verifies the registration through a password
+provided by the registration agency. The user may NOT distribute the
+password, and may only use password on machines he/she personally owns.
+
+Without prejudice to any other rights, Mike Rozak may terminate this
+EULA if you fail to comply with the terms and conditions of this EULA.
+In such event, you must destroy all copies of the SOFTWARE PRODUCT and
+all of its component parts.
+
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+There is no WARRANTY. The SOFTWARE PRODOUCT is provided "AS IS." Mike Rozak
+makes no warranty about its use or performance.  USE IT AT YOUR OWN
+RISK. Mike Rozak makes no guarantees that the SOFTWARE PRODUCT will meet your
+requirements, or that operation of the SOFTWARE PRODUCT will be
+error-free or that defects in the software will be corrected.
+
+Mike Rozak will not be liable for any direct, consequential, incidental, or
+special damages, including lost profits or lost savings, even if Mike Rozak
+has been advised of the possibility of such damages. Mike Rozak will not be
+liable for the loss of, or damage to, your records or data, or any
+claims by any third parties.
+
+Mike Rozak will not provide technical support for the SOFTWARE PRODUCT.
+
+
+
+
+PRESS THE "YES" BUTTON TO ACCEPT ALL THE TERMS OF THIS AGREEMENT
+AND TO PROCEED WITH THE INSTALLATION OF THE SOFTWARE.  PRESS THE
+"NO" BUTTON IF  YOU WISH TO EXIT THE PROGRAM.

@@ -1,0 +1,77 @@
+Do the following to get a build of flying fox:
+
+1) Run d:\oilpaint\makebuild\debug\makebuild.exe d:\oilpaint\oilpaint\buildnum.h
+	Sets up build number
+
+2) Build the help file in d:\oilpaint\help
+
+3) Copy the .hlp and .cnt file to d:\oilpaint\oilpaint
+
+4) Build d:\oilpaint\oilpaint retail
+
+5) Copy d:\oilpaint\oilpaint\release\oilpaint.exe to d:\flyfox\web
+
+9) Test on Win95, Win98, WinNT.
+
+
+
+To release to the web:
+1) Modify local web site to list version number.
+
+2) FTP to big pond. (More details?)
+	ftp ftp.users.bigpond.com
+	name = MikeRozak
+	pw = big pnd password
+
+3) Make sure mode is set to binary
+	binary
+	lcd d:\flyfox\web
+
+4) Upload new EXE
+	mput *.exe
+
+5) Make sure mode is set to ascii
+	ascii
+
+5) Change web site to show new version number.
+	mput *.htm
+	mput *.html
+	mput *.jpg
+	mput *.dat
+
+6) Modify download counter?
+
+7) Inform shareware sites?
+
+
+--------------------------
+
+
+Download count records (Each reading falsely increments count)
+
+--------------------------
+Shareware sites:
+
+http://www.download.com/
+http://www.davecentral.com/
+http://www.filemine.com/
+http://www.winfiles.com/
+http://www.zdnet.com/swlib/ - not submitted because server wasn't working
+
+
+Stochastic
+
+1.0.1002
+
+Oil Painting Assistant helps you produce oil paintings of images from a scanner, digital camera, or the web. With Oil Painting Assistant, you load in a digital image, crop it to fit your canvas, and adjust coloration to suit your tastes. It also applies a grid to the image so you can more accurately sketch on your canvas. The assistant then displays an analysis of the image showing what paints would be useful for the painting’s base coat. The analysis and grid-overlaid image can be displayed on your monitor while you paint, or printed on a color printer.
+
+It requires a Windows (95, 98, NT 4.0, NT 2000) PC. Minimum requirements are a Pentium 100 with 16 megs RAM.
+
+The OilPaint.Exe file that you are about to download is the application itself. Therefore, you should download it into the directory which you wish to run Stochastic from.
+
+art,education,painting
+
+MikeRozak@BigPond.Com.Au
+http://www.users.bigpond.com/MikeRozak/
+http://www.users.bigpond.com/MikeRozak/OilPaint.exe
+

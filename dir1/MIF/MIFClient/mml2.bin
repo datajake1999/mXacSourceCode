@@ -1,0 +1,23 @@
+<pageinfo index=false title="IP address page"/>
+<?Include resource=500?>
+<colorblend posn=background tcolor=#202060 bcolor=#000020/>
+<font color=#ffffff>
+
+<p align=center><table width=50% height=65% border=0>
+<tr><td valign=center>
+	<p>
+		The virtual world doesn't have a listed Internet address because it changes.
+		You should look on <a href="<<<WEBSITE>>>"><<<WEBSITE>>></a> for the "IP
+		address" and type it in below and press "OK". (The IP address is a series of numbers
+		separated by periods, like "12.34.567.89".)
+	</p>
+	<bold><font color=#000000><edit width=100% maxchars=64 defcontrol=true name=ipaddr/></font></bold><br/>
+	<p align=right>
+		<button accel=escape name=cancel>Cancel</button>
+		<button accel=enter name=ok>OK</button>
+	</p>
+</td></tr>
+</table></p>
+
+
+</font>

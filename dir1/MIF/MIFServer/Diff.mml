@@ -1,0 +1,66 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Difference between two .CRF files"/>
+
+<p>
+	Rather than upload a 500 MB .CRF file (or whatever) to the server
+	every time you change a couple of objects, the difference tool
+	lets you upload only the changes.
+</p>
+
+<p>
+	To use the tool you need to:
+</p>
+
+<ol>
+	<li>
+		Keep a backup of the <bold>old</bold> .CRF file, as it exists
+		on the server's hard drive.
+	</li>
+	<li>
+		Create a <bold>new</bold> .CRF file using the usuall compile-and-test
+		method.
+	</li>
+	<li>
+		Run <bold>this difference tool</bold> to produce a .DIF file.
+	</li>
+	<li>
+		<bold>Upload</bold> the much-smaller .DIF file to the server.
+	</li>
+	<li>
+		On the server, run the <bold>incorporate differences tool</bold> to merge
+		the changes into the server's .CRF file.
+	</li>
+	<li>
+		<bold>Backup</bold> the new .CRF file so it'll be used as the old .CRF
+		file next time.
+	</li>
+</ol>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Difference</xtrheader>
+	<tr>
+		<td><bold>Old .CRF file</bold> - The file path for the old .CRF file.</td>
+		<td>
+			<bold><edit width=100% maxchars=256 name=old/><br/>
+			<align align=right><button name=oldbrowse>Browse...</button></align></bold>
+		</td>
+	</tr>
+	<tr>
+		<td><bold>New .CRF file</bold> - The file path for the new .CRF file.</td>
+		<td>
+			<bold><edit width=100% maxchars=256 name=new/><br/>
+			<align align=right><button name=newbrowse>Browse...</button></align></bold>
+		</td>
+	</tr>
+
+	<tr><td>
+		<xChoiceButton name=convert>
+			<bold>Create a .DIF file</bold><br/>
+			After you have entered the old and new .CRF files, press this button to
+			create a .DIF file.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

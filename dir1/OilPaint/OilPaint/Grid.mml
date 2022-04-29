@@ -1,0 +1,82 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Contrast, Brightness, Colorize"/>
+
+<table width=100% innerlines=0 border=0><tr><td>
+<imagegrid posn=edgeright width=50% hbitmap=<<<HBITMAP>>> border=2 name=image/>
+<xPageTitle>
+	Choose a grid
+</xPageTitle>
+
+<p>
+	The image you see is the recommended base colors. If you don't like the
+	recommendations you can ignore them (as I sometimes do), or go
+	back and adjust some of the paint options.
+</p>
+
+<p>
+	If you move your mouse pointer over a region in the image, a tooltip
+	will tell you what colors the application recommends painting there.
+</p>
+
+<p>
+	You can control how dark the outline around colors is by moving this slider to the right:
+</p>
+
+<p align=center>
+	<scrollbar width=25% orient=horz min=0 max=100 name=outline/>
+</p>
+
+<p>
+	The image also has an overlaid grid. You can pencil this grid onto your
+	canvas so that when you sketch the image it will come out correctly proportioned.
+	This is especially useful with large canvases. The grid will be displayed on
+	images from now on, including printouts.
+</p>
+
+<p>
+	You can control the grid spacing using the control below. The grid spacing can
+	a fixed width and height, or a fraction of the image's width and height.
+	Choose a smaller grid if you're less certain about
+	your sketching accuracy.
+</p>
+
+</td></tr></table>
+<xtablecenter>
+	<tr>
+		<td width=20%>
+			<button style=x radiobutton=true group=fraction,fixed,none name=fraction/>
+		</td>
+		<td width=80%>
+			<bold>Equally divide</bold> the canvas into <edit name=fractionval text=8 selall=true maxchars=4 width=100/> parts.
+		</td>
+	</tr>
+	<tr>
+		<td width=20%>
+			<button style=x radiobutton=true group=fraction,fixed,none name=fixed/>
+		</td>
+		<td width=80%>
+			The grid is <edit name=fixedval text=2 selall=true maxchars=4 width=100/> <bold><<<INCHESCM>>> square</bold>.
+		</td>
+	</tr>
+	<tr>
+		<td width=20%>
+			<button style=x radiobutton=true group=fraction,fixed,none name=none/>
+		</td>
+		<td width=80%>
+			<bold>No grid.</bold>
+		</td>
+	</tr>
+</xtablecenter>
+<p>
+	When satisfied, press "Next!"
+</p>
+
+<xbr/>
+
+<xChoiceButton name=savebase>
+	<bold>Save base colors as file</bold><br/>
+	Press this buton
+	if you wish to save the image with base colors as a .jpg file so you can load
+	it into another paint package.
+</xChoiceButton>

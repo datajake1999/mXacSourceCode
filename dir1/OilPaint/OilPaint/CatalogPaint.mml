@@ -1,0 +1,65 @@
+<?Include resource=400?>
+<PageInfo title="Add a color to your palette"/>
+<colorblend posn=background color=#000000/>
+<p align=center>
+<table width=95% innerlines=0 border=0 lrmargin=32 tbmargin=32>
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=cancel accel=escape>
+			Cancel
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=OK accel=enter>
+			OK
+		</button></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<colorblend posn=background tcolor=#e0e0e0 bcolor=#a0a0c0/>
+
+<xPageTitle>
+	Add a color to your palette
+</xPageTitle>
+
+<p>
+	Select the color you want to add and press "OK".
+</p>
+
+<p align=center>
+	<listbox name=pallette width=80% height=100% sort=true vscroll=lbscroll/>
+	<scrollbar name=lbscroll height=100% orient=vert/>
+</p>
+
+<xchoicebutton href=custom>
+	<bold>Add a custom color</bold>
+	<br/>
+	Click this if the color you want to add doesn't appear in the list.
+</xchoicebutton>
+
+<p>
+	The paints list was produced using a variety of paint catalogs from different companies
+	for your convenience. If you are using paints from a different company then select
+	the closest match. Even if your paint appears in the list, you may need to modify it
+	since paint colors will vary during production.
+</p>
+	</td>
+</tr>
+
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=cancel>
+			Cancel
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=0 tbmargin=16>
+		<font color=#8080ff><button href=OK>
+			OK
+		</button></font>
+	</td>
+</tr>
+
+</table>
+</p>

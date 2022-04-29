@@ -1,0 +1,197 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Looped sounds"/>
+
+<!xComboCompare>
+	<bold><combobox width=33% cbheight=150 macroattribute=1>
+		<elem name=-2>less than</elem>
+		<elem name=-1>less than or equal to</elem>
+		<elem name=0>equal to</elem>
+		<elem name=1>greater than or equal to</elem>
+		<elem name=2>greater than</elem>
+	</combobox></bold>
+</xComboCompare>
+
+<p>
+	The "looped" ambiend sounds plays one or more sounds continuously in a
+	loop. The loop can vary randomly, or based upon special &lt;AmbientLoopVar&gt;
+	messages sent from the server; the special messages allow looped background
+	music to change depending upon what actions the player is taking.
+</p>
+
+<p>
+	Each loop is composed of one or more "states". A state has a list of wave
+	or music files to play, followed by a one or more branches to other states.
+	When all of the audio has been played from the state, one of the branches
+	is selected at random and a new state is entered. This repeats until
+	the ambient background is no longer used.
+</p>
+
+<null><<<$STATESUB>>></null>
+
+<comment><xtablecenter width=100%>
+	<xtrheader>State #1 (Starting state)</xtrheader>
+
+	<xtrheader>Sounds played</xtrheader>
+	<tr><td>
+		<p align=center>
+			<listbox width=80% height=20% vscroll=soundlistscroll0 name=soundlist0/>
+			<scrollbar orient=vert height=20% name=soundlistscroll0/>
+		</p>
+		<xChoiceButton name=newwave0>
+			<bold>Add a new sound (.wav file)</bold><br/>
+			This adds a new sound to be played.
+		</xChoiceButton>
+		<xChoiceButton name=newmusic0>
+			<bold>Add a new sound (.mid file)</bold><br/>
+			This adds a new sound to be played.
+		</xChoiceButton>
+		<xChoiceButton style=uptriangle name=moveup0>
+			<bold>Move sound up</bold><br/>
+			Moves the sound up in the list.
+		</xChoiceButton>
+		<xChoiceButton style=downtriangle name=movedown0>
+			<bold>Move sound down</bold><br/>
+			Moves the sound down in the list.
+		</xChoiceButton>
+		<xChoiceButton name=remove0>
+			<bold>Delete the selected sound</bold><br/>
+			This deletes the selected sound from the list.
+		</xChoiceButton>
+	</td></tr>
+	
+	<xtrheader>Branches</xtrheader>
+	<tr><td>
+		<p align=center>
+			<listbox width=80% height=20% vscroll=branchlistscroll0 name=branchlist0/>
+			<scrollbar orient=vert height=20% name=branchlistscroll0/>
+		</p>
+		<xChoiceButton name=newbranch0>
+			<bold>Add a new branch</bold><br/>
+			This adds a new branch to the state. Make sure to fill in the information below:
+		</xChoiceButton>
+		<p align=right>
+			<bold>State number to branch to: <edit width=33% maxchars=32 name=branchstate0/></bold>
+			<br/>
+			(Optional) Only if <bold>variable: <edit width=33% maxchars=60 name=branchvar0/></bold>
+			<br/>
+			(Optional) <bold>is: <xComboCompare name=branchcomp0/></bold>
+			<br/>
+			(Optional) <bold>value: <edit width=33% maxchars=64 name=branchval0/></bold>
+		</p>
+		
+		<xChoiceButton name=rembranch0>
+			<bold>Delete the selected branch</bold><br/>
+			This deletes the selected branch from the list.
+		</xChoiceButton>
+	</td></tr>
+	
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton name=firststate0>
+			<bold>Make this the starting state</bold><br/>
+			Moves this to the top of the state list so it's the starting state.
+		</xChoiceButton>
+		<xChoiceButton name=remstate0>
+			<bold>Delete this state</bold><br/>
+			Deletes the current state from loop.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter></comment>
+
+<xChoiceButton name=newstate>
+	<bold>Create a new state</bold><br/>
+	Press this to create a new state for the loop.
+</xChoiceButton>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sound location and volume</xtrheader>
+	<tr><td>
+		You can either have the sounds occur someplace in 3D space
+		or independent of the user's facing. If the sounds are placed in 3D space
+		then their position can be located by the user as he/she rotates the
+		camera around... this is good for sounds coming from specific objects, like clocks.
+		If the sound is independent of the user's facing they will always use
+		the same left/right speaker volume, no matter what direction the player's
+		camera is facing.
+		<p/>
+		<xChoiceButton checkbox=true style=x name=use3d>
+			<bold>Use 3D sound</bold><br/>
+			If checked, the 3D sound settings will be used. If unchecked, the stereo
+			sound settings will be used.
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>3D sound</xtrheader>
+	<tr>
+		<td>
+			<bold>East/west location</bold> - The east/west location of the sound in meters.
+			Positive numbers are east of the player, negative are west.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=vol3d0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>North/south location</bold> - The north/south location of the sound in meters.
+			Positive numbers are north of the player, negative are south.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=vol3d1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Up/down location</bold> - The vertical location of the sound in meters.
+			Positive numbers are above the player, negative are below.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=vol3d2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Loudness of the sound</bold> - This is how loud the sound is, in decibels.
+			In the likely event you don't know what decibels are, here are some
+			value to use:
+			<p/>
+			<ul>
+				<li>10 - Normal breathing</li>
+				<li>20 - Rustling leaves</li>
+				<li>30 - Whispering</li>
+				<li>60 - Normal speech</li>
+				<li>80 - Hair dryer</li>
+				<li>90 - Lawnmower</li>
+				<li>110 - Chainsaw</li>
+				<li>140 - Gunshot</li>
+			</ul>
+			Set the min(imum) and max(imum) volume of the sound.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=vol3d3/></bold></td>
+	</tr>
+	
+	<xtrheader>Stereo sound</xtrheader>
+	<tr>
+		<td>
+			<bold>Left volume</bold> - The volume of the left speaker. 1.0 is normal, 2.0 is
+			twice as loud, 0.5 half as loud, etc.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=voll/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right volume</bold> - The volume of the right speaker. 1.0 is normal, 2.0 is
+			twice as loud, 0.5 half as loud, etc.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=volr/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Fade time</xtrheader>
+	<tr>
+		<td>
+			<bold>Fade time</bold> - Number of seconds overlap and blend between wave files
+			on the start/end of a state.
+			This is useful for blending continuous sounds together, like wind and waves.
+			The same time is also used for a fade-in for the first and last .wav.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=overlap/></bold></td>
+	</tr>
+</xtablecenter>

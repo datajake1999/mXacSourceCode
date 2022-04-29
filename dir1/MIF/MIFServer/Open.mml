@@ -1,0 +1,103 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Circumreality Wold Simulator"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Select a Circumreality project</xtrheader>
+	<tr><td>
+		<p>
+			Type in the name of the Circumreality project to open (.crk or .crf), and press "Open".
+		</p>
+		<p align=right>
+			<bold><edit width=66% maxchars=128 defcontrol=true name=filename/></bold>
+			<button name=dialog>
+				<bold>Dialog</bold>
+				<xHoverHelpShort>This displays an open-file dialog for you.</xHoverHelpShort>
+			</button>
+		</p>
+		
+		<xChoiceButton name=openmodify>
+			<bold>Open (and modify)</bold><br/>
+			Opens the given project for modification. Use this to create your IF.
+		</xChoiceButton>
+		
+		<xChoiceButton name=openrun>
+			<bold>Open (and run)</bold><br/>
+			Opens the given project, and run the server without modifying the project.
+			Use this to run the IF directly.
+		</xChoiceButton>
+		
+		<xbr/>
+		
+		<xChoiceButton name=new>
+			<bold>New</bold><br/>
+			Create a new project and modify it. When you press this you will be asked
+			the name of the project.
+		</xChoiceButton>
+		
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Debugging shard</xtrheader>
+	<tr>
+		<td>
+			<bold>Shard number</bold> - When you debug your IF title, this is the shard
+			number that will be used. (See the TitleInfo info that you create for a
+			list of shards). If this is 0 then the IF title will be run on the local
+			computer only, without any Internet connections.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=cmdlineparam/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Documentation</xtrheader>
+	<tr><td>
+		Select the Circumreality project file you wish to modify or test above and press one
+		of the "Open" buttons.
+		<p/>
+		If you wish to run the server using the <bold>command line</bold> then
+		run "CircumrealityWorldSim.exe YourProject.mpj" to automatically run the project (and
+		compile it). Or, if you have already generated a .CRF file,
+		run "CircumrealityWorldSim.exe -X YourProject.CRF". The "X" value should be replace with
+		0 if you want the server to run as a local (no Internet) server, or
+		1+ to run as an Internet server; "X" is then the shard number from your
+		"TitleInfo" resource.
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Additional tools</xtrheader>
+	<tr><td>
+		<xChoiceButton href=monitor>
+			<bold>Set up the monitoring-mode parameters</bold><br/>
+			You can have a system timer run "CircumRealityWorldSim.exe -monitor" once an hour
+			and make sure the main server process is still running. Before doing this,
+			you need to set up the monitoring info with this button.
+		</xChoiceButton>
+
+		<xChoiceButton href=diff>
+			<bold>Create a file containing the "difference" between two .CRF files</bold><br/>
+			Instead of uploading a new 500 MB (or whatever) CRF file to your sever every time
+			you change a few objects, this tool (and the "incorporate differences" tool)
+			lets you upload much smaller files containing only the changes.
+			<p/>
+			This tool finds out what has changed between the older and newer .CRF files and
+			writes out a .DIF file with the difference. You can then upload the much-smaller
+			.DIF file to your server and use "Incorporate differences" to merge the changes in.
+		</xChoiceButton>
+		
+		<xChoiceButton href=diffinc>
+			<bold>Incorporate differences into a .CRF file</bold><br/>
+			This takes a .DIF file (produced in the previous tool) and merges it into an
+			existing .CRF file. See above for more details.
+		</xChoiceButton>
+		
+		<xChoiceButton style=x checkbox=true name=enableclient>
+			<bold>Enable tools in the client</bold><br/>
+			Check this to enable some authoring tools in the client, such as the ability to
+			easily record audio of speech that was just spoken by text-to-speech.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

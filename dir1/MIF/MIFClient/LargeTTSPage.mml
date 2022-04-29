@@ -1,0 +1,39 @@
+<pageinfo index=false title="Large text-to-speech voices"/>
+<?Include resource=500?>
+<xClientPage jpgresource=324>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Large text-to-speech voices</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+	
+	In order to make installation of Circumreality as fast as possible,
+	the default Circumreality install only installs <a href=playlq>small</a> text-to-speech voices.
+	These don't sound as good as the <a href=playhq>high-quality</a> text-to-speech voices.
+	<p/>
+	Since you have already used CircumReality several times, you might wish to
+	download and install the <a href=playhq>high-quality</a> text-to-speech voices to
+	get better quality.
+	<p/>
+			To use the high-quality voices, you need to have paid for the full version of
+			CircumReality (<<<$TTSREGISTERED>>>). The high-quality voices are only recommended if you are running
+			the 64-bit version of CircumReality (<<<$TTSCIRC64>>>) with
+			Windows 64 (<<<$TTSWIN64>>>) on a quad-core computer (<<<$TTSDUALCORE>>>) with 4 gigbytes of RAM (<<<$TTSRAM>>>).
+	<p/>
+	For more information, see: <a href="http://www.CircumReality.com/Download.htm">http://www.CircumReality.com/Download.htm</a>.
+
+	<p/>
+	<xChoiceButton style=righttriangle accel=enter href=next>
+		<bold>Next</bold><br/>
+		Continue playing Circumreality.
+	</xChoiceButton>
+	<xChoiceButton style=box accel=escape href=back>
+		<bold>Exit</bold><br/>
+		Stop playing Circumreality.
+	</xChoiceButton>
+</td></tr>
+</table></p>
+
+</xClientPage>

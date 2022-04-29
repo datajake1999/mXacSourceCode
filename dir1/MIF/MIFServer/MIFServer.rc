@@ -1,0 +1,159 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "MIF Server"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "MIFServe.exe\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""MIF Server""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""MIFServe.exe\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLTEMPLATEBACK     MML                     "TemplateBack.mml"
+IDR_MMLMACROS           MML                     "Macros.mml"
+IDR_MMLOPEN             MML                     "Open.mml"
+IDR_MMLRESIMAGE         MML                     "ResImage.mml"
+IDR_MMLRESWAVE          MML                     "ResWave.mml"
+IDR_MMLRESVOICE         MML                     "ResVoice.mml"
+IDR_MMLRESTEXT          MML                     "ResText.mml"
+IDR_MMLRESMENU          MML                     "ResMenu.mml"
+IDR_MMLRESNLPRULESET    MML                     "ResNLPRuleSet.mml"
+IDR_MMLRESMUSIC         MML                     "ResMusic.mml"
+IDR_MMLRESHELP          MML                     "ResHelp.mml"
+IDR_MMLDIFF             MML                     "Diff.mml"
+IDR_MMLDIFFINC          MML                     "DiffInc.mml"
+IDR_MMLRESCUTSCENE      MML                     "ResCutScene.mml"
+IDR_MMLRESSPEAKSCRIPT   MML                     "ResSpeakScript.mml"
+IDR_MMLRESCONVSCRIPT    MML                     "ResConvScript.mml"
+IDR_MMLAUTOTRANSPROS    MML                     "AutoTransPros.mml"
+IDR_MMLMONITOR          MML                     "Monitor.mml"
+IDR_MMLRESLOTSOFTEXT    MML                     "ResLotsOfText.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MIFL
+//
+
+IDR_MIFLSERVLIB         MIFL                    "ServerLib.mfl"
+IDR_MIFLBASICIF         MIFL                    "BasicIF.mfl"
+IDR_MIFLBASICRPG        MIFL                    "BasicRPG.mfl"
+IDR_MIFLBASICFANTASY    MIFL                    "BasicFantasy.mfl"
+IDR_MIFLBASICCOM        MIFL                    "BasicCom.mfl"
+IDR_MIFLBASICAI         MIFL                    "BasicAI.mfl"
+IDR_MIFLBASICADMIN      MIFL                    "BasicAdmin.mfl"
+IDR_MIFLTESTWORLD       MIFL                    "TestWorld.mfl"
+IDR_MIFLEXTRAOBJECTS    MIFL                    "ExtraObjects.mfl"
+IDR_MIFLBASICMONSTERS   MIFL                    "BasicMonsters.mfl"
+IDR_MIFLREADINGROOM     MIFL                    "ReadingRoom.mfl"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUMAINWINDOW MENU 
+BEGIN
+    POPUP "&Shutdown"
+    BEGIN
+        MENUITEM "&Immediately",                ID_SHUTDOWN_IMMEDIATELY
+        MENUITEM "In &30 seconds",              ID_SHUTDOWN_IN30SECONDS
+        MENUITEM "In &60 seconds",              ID_SHUTDOWN_IN60SECONDS
+        MENUITEM "In &2 minutes",               ID_SHUTDOWN_IN2MINUTES
+        MENUITEM "In &5 minutes",               ID_SHUTDOWN_IN5MINUTES
+        MENUITEM "&Abort shutdown",             ID_SHUTDOWN_ABOUTSHUTDOWN
+    END
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

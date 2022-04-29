@@ -1,0 +1,47 @@
+<pageinfo index=false title="End-user license agreement"/>
+<?Include resource=500?>
+<colorblend posn=background tcolor=#202060 bcolor=#000020/>
+<font color=#ffffff>
+
+<table width=100% border=0 innerlines=0>
+<tr><td>
+
+<p align=center><table width=90% bordercolor=#c0c0c0>
+<tr><td>
+	<big><bold>End-user license agreement</bold></big>
+	<p/>
+	<<<EULA>>>
+	<p/><xbr/>
+	<xChoiceButton style=righttriangle href=yes>
+		<bold>Yes, I accept the license conditions</bold>
+	</xChoiceButton>
+	<xChoiceButton style=righttriangle href=no>
+		<bold>No, I do not accept the license conditions</bold><br/>
+		You will not be able to enter the Circumreality world if you
+		press "No".
+	</xChoiceButton>
+</td></tr>
+</table></p>
+
+
+</td>
+
+<td>
+<p align=center><table width=90% border=0 innerlines=0>
+<tr><td>
+	<big><bold><<<NAME>>></bold></big>
+	<p/>
+	<<<DESCLONG>>>
+	<p/>
+	<p align=right><<<$WEBSITE>>></p>
+	<p/><xbr/>
+	<bold><combobox width=100% cbheight=150 name=langid/></bold>
+</td></tr>
+</table></p>
+
+</td>
+</tr>
+</table>
+
+
+</font>

@@ -1,0 +1,7 @@
+appname=Oil Painting Assistant
+selfexe=z:\mxacweb\oilpainthack.exe
+icon=oilpaint.exe,Oil Painting Assistant
+file=z:\voices\small\cmufemaleslt.tts
+del=oilpaint.gid
+del=oilpaint.hlp
+del=oilpaint.cnt

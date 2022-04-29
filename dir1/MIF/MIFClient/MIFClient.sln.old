@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MIFClient", "MIFClient.vcproj", "{F2510D58-2F63-40DA-918B-924209A55ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F2510D58-2F63-40DA-918B-924209A55ACE}.Debug.ActiveCfg = Debug|Win32
+		{F2510D58-2F63-40DA-918B-924209A55ACE}.Debug.Build.0 = Debug|Win32
+		{F2510D58-2F63-40DA-918B-924209A55ACE}.Release.ActiveCfg = Release|Win32
+		{F2510D58-2F63-40DA-918B-924209A55ACE}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

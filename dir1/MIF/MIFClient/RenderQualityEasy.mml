@@ -1,0 +1,82 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Image quality"/>
+
+<p/>
+
+<xtablecenter width=80%>
+	<xtrheader>Image quality</xtrheader>
+	<tr><td>
+		Please <bold>check</bold> one of the following quality settings.
+		The higher the quality, the better the images will look, but, the longer
+		they will take to draw.
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual0>
+			<bold>Lowest quality</bold> (Fastest)
+			<<<$QUALTOOSLOW0>>>
+		</xchoicebutton>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual1>
+			<bold>Recommended for single-core computers</bold>
+			<<<$QUALTOOSLOW1>>>
+		</xchoicebutton>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual2>
+			<bold>Recommended for single or dual-core computers</bold>
+			<<<$QUALTOOSLOW2>>>
+		</xchoicebutton>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual3>
+			<bold>Recommended for dual or quad-core computers</bold>
+			<<<$QUALTOOSLOW3>>>
+		</xchoicebutton>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual4>
+			<bold>Recommended for quad or eight-core computers</bold>
+			<<<$QUALTOOSLOW4>>>
+		</xchoicebutton>
+		<xchoicebutton style=light radiobutton=true group=qual0,qual1,qual2,qual3,qual4,qual5 name=qual5>
+			<bold>Recommended for eight or sixteen-core computers</bold> (Slowest)
+			<<<$QUALTOOSLOW5>>>
+		</xchoicebutton>
+	</td></tr>
+	
+	<tr>
+		<td>
+			<bold>Artistic style</bold> - Use this to change the artistic style
+			in which the images are drawn, from realistic to impressionist.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=artstyle>
+			<elem name=0>Style A (fastest)</elem>
+			<elem name=1>Style B</elem>
+			<elem name=2>Style C</elem>
+			<elem name=3>Style D (slowest)</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=rendercache>
+			<bold>Speed up CircumReality by downloading images while you play</bold><br/>
+			If checked, CircumReality will be faster when you play over a broadband
+			Internet connection. However, this might cause CircumReality to
+			download hundreds of megabytes while you're playing. <bold>Don't check this
+			if you're paying for Internet by the megabyte, or have a small monthly bandwidth
+			limit.</bold><<<$RENDERCACHE>>><<<$DISABLEDOFFLINE>>>
+		</xChoiceButton>
+	</td></tr>
+
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=powersaver>
+			<bold>Power saver</bold> (check when running on batteries)<br/>
+			"Power saver" mode doesn't draw images until they're needed. You can also save power
+			by turning down the image sharpness and quality.
+		</xchoicebutton>
+	</td></tr>
+	
+	<tr><td>
+		<xChoiceButton style=righttriangle name=advanced href=advanced>
+			<bold>Advanced settings...</bold><br/>
+			If you're technically minded and want better control of the rendering quality,
+			visit the advanced settings.
+			<<<$ENABLETRIAL>>>
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

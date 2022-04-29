@@ -1,0 +1,163 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Image quality (Advanced)"/>
+
+<p/>
+
+<xtablecenter width=80%>
+	<xtrheader>Manually modified</xtrheader>
+	<tr><td>
+		These settings are <bold>not</bold> modified when you change "Image sharpness",
+		"Image quality", and "Dynamic images" in the transcript window.
+		Any changes you make <bold>will be maintained</bold> even if you change the
+		"Image sharpness" and "Image quality" settings.
+	</td></tr>
+
+	<tr>
+		<td>
+			<bold>Artistic style</bold> - Use this to change the artistic style
+			in which the images are drawn, from realistic to impressionist.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=artstyle>
+			<elem name=0>Style A (fastest)</elem>
+			<elem name=1>Style B</elem>
+			<elem name=2>Style C</elem>
+			<elem name=3>Style D (slowest)</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=twopass>
+			<bold>Draw a low-resolution pass first, followed by a detailed pass</bold><br/>
+			Although drawing a low-resolution pass first makes scene drawing slower, it
+			appears to draw more quickly because you can quickly see what the room looks like.
+		</xChoiceButton>
+		
+		<xChoiceButton checkbox=true style=x name=nosupersample>
+			<bold>Don't eliminate jaggies</bold><br/>
+			Edges of objects will have jaggies.
+		</xChoiceButton>
+		
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=80%>
+	<xtrheader>Automatically modified</xtrheader>
+	<tr><td>
+		These settings are <bold>automatically</bold> modified when you change "Image sharpness",
+		"Image quality", and "Dynamic images" in the transcript window.
+		As soon as you change the "Image sharpness" or "Image quality" settings, your
+		custom settings will be lost.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Image detail (resolution)</bold> - This controls the number of pixels
+			in the image.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=resolution>
+			<elem name=0>256 x 192 (lowest)</elem>
+			<elem name=1>362 x 271</elem>
+			<elem name=2>512 x 384</elem>
+			<elem name=3>724 x 543</elem>
+			<elem name=4>1024 x 768</elem>
+			<elem name=5>1448 x 1086</elem>
+			<elem name=6>2048 x 1536 (highest)</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Texture detail (resolution)</bold> - Many textures are procedurally generated.
+			Increasing their detail will create crisper textures when you're
+			up close, allowing you to see more detail in the wood grain, for example.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=texturedetail>
+			<elem name=0>Very low</elem>
+			<elem name=1>Low</elem>
+			<elem name=2>Medium</elem>
+			<elem name=3>High</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Speed-value sent to the server</bold> - This graphics speed setting
+			will be sent to the world server, which will then make some server-specific
+			adjustments.
+			<p/>
+			For example: Throughout the day, the game world will display different
+			images of the same location so that the sun can be seen moving across the
+			sky. Each different image takes time to draw. If you tell the server
+			your graphics display is slow, it may only request noon and midnight
+			images. A higher quality might cause extra images to be displayed,
+			including sunrise, early morning, late afternoon, and sunset.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=serverspeed>
+			<elem name=0>Very low</elem>
+			<elem name=1>Low</elem>
+			<elem name=2>Medium</elem>
+			<elem name=3>High</elem>
+			<elem name=4>Very high</elem>
+		</combobox></bold></td>
+	</tr>
+
+
+	<tr>
+		<td>
+			<bold>Movement transitions</bold> - If you have movement transitions
+			turned on then a short animation will be played when your character
+			moves from room to room.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=movementtransition>
+			<elem name=0>None (fastest)</elem>
+			<elem name=1>Medium</elem>
+			<elem name=2>Best (slowest)</elem>
+		</combobox></bold></td>
+	</tr>
+
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=noshadows>
+			<bold>Don't draw shadows</bold><br/>
+			Objects won't cast shadows. This speeds up drawing significantly.
+		</xChoiceButton>
+		
+		<xChoiceButton checkbox=true style=x name=nospecularity>
+			<bold>Don't draw specularities</bold><br/>
+			Shiny highlights won't be drawn.
+		</xChoiceButton>
+		
+		
+		<xChoiceButton checkbox=true style=x name=lowtransparency>
+			<bold>Don't draw transparency</bold><br/>
+			Transparent objects won't be drawn as accurately.
+		</xChoiceButton>
+		
+		
+		<xChoiceButton checkbox=true style=x name=nobump>
+			<bold>Don't draw surface roughness</bold><br/>
+			Rough surfaces, such as rocks, won't look as good.
+		</xChoiceButton>
+		
+		<xChoiceButton checkbox=true style=x name=lowdetail>
+			<bold>Low detail</bold><br/>
+			If possible, objects will be drawn with fewer polygons. Some objects
+			will appear chunkier.
+		</xChoiceButton>
+		
+		
+		<xChoiceButton checkbox=true style=x name=nolipsync>
+			<bold>No mouth animation (lip sync)</bold><br/>
+			Normally, the mouths of non-player characters move in step with what they're saying.
+			However, this makes CircumReality run slightly slower.
+		</xChoiceButton>
+		
+		<xChoiceButton checkbox=true style=x name=texturesonly>
+			<bold>Low-quality lighting model (Last resort)</bold><br/>
+			If drawing still isn't fast enough for you, then as a last resort, check
+			all of the options, including this one,
+			except <bold>Draw a low-resolution pass first</bold>. Also,
+			make sure the "Very low" resolution
+			option is checked.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

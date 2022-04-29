@@ -1,0 +1,123 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Help resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Table-of-contents</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - This is the name of the help topic. This <bold>must</bold> be
+			unique.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 name=name/></bold>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Category</bold> -
+			Type in the help category that this method should be placed under.
+			Leave this blank if you do not wish the method placed in a help category.
+			To place it in a sub-cateogy, use a slash "/" to separate categories,
+			like in a directory. For example: "Food/Fruit/Apples".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=helpcat0/></bold>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Category (alternate)</bold> - Same as above except it's an alternate.
+			Leave it blank if it's unnecessary.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=helpcat1/></bold>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Help</xtrheader>
+	<tr>
+		<td>
+			<bold>Short description</bold> -
+			Type in a short (one-line) description of the topic.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=descshort/></bold>
+		</td>
+	</tr>
+	<tr><td align=center>
+		<font face=courier><align tab=16>
+			<edit width=90% height=40% maxchars=100000 prelineindent=true multiline=true capturetab=true vscroll=desclongscroll name=desclong/>
+		</align></font>
+		<scrollbar orient=vert height=40% name=desclongscroll/>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=testmml>
+			<bold>Test MML</bold><br/>
+			This checks for errors in the MML and then displays the help topic as if it were in help.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Function</bold> - If this is <bold>not</bold> blank, then this function
+			will be called to make sure that the player should be able to see this topic.
+			(For example: Help for administration commands should not be available to
+			most players.) The function will be passed in the Actor object for its first
+			parameter, followed by the function parameter (below). If it returns TRUE then
+			the help topic is visible.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 name=function/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Function parameter</bold> - Passed into the function, above, as a string.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 name=functionparam/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Book</bold> - Typically leave this blank. However, if you wish to use the
+			help system for role-playing knowledge bases, then type in a specific book name.
+			For example: To store information only known to characters with "Elvish Lore" skill,
+			you would enter "Elvish Lore" as a book name (and write code to search through it).
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 name=book/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	The help resource lets you enter "MML" text, which virutally the same as HTML.
+	(If you don't know HTML then you should search on the web for information, or
+	look through some of the included samples.)
+</p>
+
+<p>
+	Advanced tips:
+</p>
+
+<xul>
+	<li>
+		If you include a <bold>link</bold>, such as "help contents", then when the
+		link is pressed by the user the command will be run.
+	</li>
+</xul>
+

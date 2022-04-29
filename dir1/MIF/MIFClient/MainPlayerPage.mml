@@ -1,0 +1,83 @@
+<pageinfo index=false title="Select a world to enter"/>
+<?Include resource=500?>
+<xClientPage jpgresource=314>
+
+<p/>
+
+<null>
+	<<<$WIN64WARNING>>>
+</null>
+
+<null>
+	<<<$ACCOUNTS>>>
+</null>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Explore a new world...</xtrheader>
+	<tr><td>
+		<colorblend color=#ffffff posn=background transparent=0.25/>
+		<xChoiceButton style=righttriangle href=newworld>
+			<bold>Try playing in a new world...</bold><br/>
+			Press this to see a list of worlds, whose links are
+			stored on your hard drive, that you can play in.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle href=newworldmanual>
+			<bold>I have an existing user account in a world...</bold><br/>
+			Select this if you already have an existing user account in a world, but
+			the user name and password are stored in a different password file.
+			You will be asked for the world to use, and then allowed to type
+			in your own user name and password.
+		</xChoiceButton>
+		<xChoiceButton href="http://www.circumreality.com">
+			<bold>Look for worlds on Circumreality.com...</bold><br/>
+			If you're looking for even more worlds, this option will show
+			you an online library of worlds.
+		</xChoiceButton>
+	</td></tr>
+</table></p>
+
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<colorblend color=#ffffff posn=background transparent=0.25/>
+		<xChoiceButton href=readme>
+			<bold>Read me...</bold><br/>
+			In case you haven't played Circumreality before, this provides
+			a brief overview of the game.
+		</xChoiceButton>
+		<xChoiceButton href=register>
+			<bold>Pay for Circumreality...</bold><br/>
+			While Circumreality is free to play, paying for a copy provides
+			extra benefits. Press this to learn how to purchase a
+			copy of Circumreality.
+		</xChoiceButton>
+		<xChoiceButton href=playerinfo>
+			<bold>Change my personal information...</bold><br/>
+			This option lets you change your personal information, such as your
+			E-mail address or whether you want the tutorial turned on
+			in every world you explore.
+		</xChoiceButton>
+		<xChoiceButton href=changepassword>
+			<bold>Change my password...</bold><br/>
+			Select this option to change the password for the password file.
+		</xChoiceButton>
+		<xChoiceButton href=delete>
+			<bold>Delete my password file...</bold><br/>
+			Use this to delete this password file (and all the passwords
+			stored within).
+		</xChoiceButton>
+		<xChoiceButton name=recordtts>
+			<bold>Create your own text-to-speech voice...</bold><br/>
+			Would you like your voice to be used for a CircumReality character?
+			Press this button to create your own text-to-speech voice.
+		</xChoiceButton>
+	</td></tr>
+</table></p>
+
+<p align=center><font color=#ffffff><xChoiceButton style=box href=[close]>
+	<bold>Close</bold><br/>
+	Stop playing Circumreality.
+</xChoiceButton></font></p>
+
+</xClientPage>

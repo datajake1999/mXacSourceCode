@@ -1,0 +1,162 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Palette"/>
+
+<xPageTitle>
+	Palette
+</xPageTitle>
+
+<p>
+	When many artists begin a painting they first paint a light
+	(as in not very much paint) base coat of colors. This allows them to make
+	sure they have roughly the right colors, lighting, and proportions for the
+	painting. The assistant analyzes the image and recommends the paints to
+	use for a base coat.
+</p>
+
+<p>
+	This pane allows you to inform the application which colors you have
+	in your palette. The program then analyzes the image and recommends a
+	roughly painted base coat based upon the colors you have.
+</p>
+
+<p>
+	First, check the palette below and make sure it's the same as the paints you plan
+	on using. You can add or remove any paints.
+</p>
+
+<xtablecenter>
+	<tr>
+		<td>
+			<listbox name=pallette width=80% height=100% sort=true vscroll=lbscroll/>
+			<scrollbar name=lbscroll height=100% orient=vert/>
+		</td>
+		<td>
+			<xChoiceButton name=add>
+				<bold>Add a new color</bold>
+				<br/>
+				If you have a paint not shown on the palette the press this to add it.
+			</xChoiceButton>
+			<xChoiceButton name=remove>
+				<bold>Remove the selected color</bold>
+				<br/>
+				If one of the paints on the list is not in your palette then this
+				option will remove it.
+			</xChoiceButton>
+			<xChoiceButton name=edit>
+				<bold>Modify the selected color</bold>
+				<br/>
+				You can change the appearance of the color.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+<p>
+	After checking your palette, make sure to select the algorithm used to generate
+	the base colors. This can be one of the following:
+</p>
+
+<xtablecenter>
+	<tr><td>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=existing>
+			<bold>Use existing colors without mixing</bold>
+			<br/>
+			The base colors are only pure colors from your palette. The algorithm
+			does not recommend any mixing for the base coat.
+		</xChoiceButton>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=mix>
+			<bold>Mix two different colors together</bold>
+			<br/>
+			The algorithm may suggest mixing two different paints together in equal proportion.
+		</xChoiceButton>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=threemix>
+			<bold>Mix three different colors together</bold>
+			<br/>
+			The algorithm may suggest mixing either two or three different paints together in equal proportion.
+		</xChoiceButton>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=blackwhite checked=true>
+			<bold>Mix existing paints with black or white</bold>
+			<br/>
+			The algorithm relies on your basic colors but may recommend adding various
+			amounts of black or white
+			to them. Paints of different colors are not mixed together.
+		</xChoiceButton>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=mixblackwhite>
+			<bold>Mix any two paints with black or white</bold>
+			<br/>
+			The algorithm relies on a combination of your basic paints mixed with various
+			amounts of black or white
+			to them. Up to two paints of different colors are mixed together.
+		</xChoiceButton>
+		<xchoicebutton style=check radiobutton=true group=existing,mix,threemix,blackwhite,mixblackwhite,bypass name=bypass>
+			<bold>Bypass calculating base colors</bold>
+			<br/>
+			Oil Painting Assistant won't calculate the base colors if you don't need them.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	Press "Next" to see what base colors are chosen by Oil Painting Assistant. If
+	you don't like the results you can always come back and try some different
+	combinations.
+</p>
+
+<p align=right>
+		<button style=rightarrow href=next>
+			Next
+			<xHoverHelpShort>Proceed to the next page.</xHoverHelpShort>
+		</button>
+</p>
+
+<xbr/>
+<xsectiontitle>Options</xsectiontitle>
+
+<xChoiceButton name=colorspace>
+	<bold>View the painting's color space</bold>
+	<br/>
+	This shows you a three-dimensional representation of the painting's color space
+	overlaid by the colors that you can generate by combining your paints.
+	You can use it to see if you have the right types of paints to paint the image accurately.
+</xChoiceButton>
+
+<xChoiceButton name=palletteload>
+	<bold>Load a palette</bold>
+	<br/>
+	Opens a palette file (.opp), which is a collection of paints, over your current palette.
+</xChoiceButton>
+
+<xChoiceButton name=pallettesave>
+	<bold>Save the palette</bold>
+	<br/>
+	Saves your current selection of paints into a palette file (.opp).
+	You can use this to group paints into collections that are used for
+	specific types of paintings.
+</xChoiceButton>
+
+<xChoiceButton name=changeblack>
+	<bold>Change the definition of "black"</bold>
+	<br/>
+	Some of the options for generating the base coat involve mixing the paints with white
+	or black. Some artists don't use raw black because it's too harsh. To change the
+	definition of what "black" will be for this painting, click this button.
+</xChoiceButton>
+
+<p align=right>
+	Current black: <status width=32 height=32 name=currentblack><colorblend posn=background color=#ff0000/></status>
+</p>
+
+<p>
+	Oil Painting Assistant simplifies the detail of the image when generating
+	the base coat so that it's easier to paint. To control the amount of detail
+	in the base coat image, choose below:
+</p>
+
+<p align=right><bold><combobox name=detail cbheight=150 width=33%>
+	<elem name=1>Full detail</elem>
+	<elem name=2>High detail</elem>
+	<elem name=3>Medium detail</elem>
+	<elem name=4>Low detail</elem>
+	<elem name=5>Very low detail</elem>
+</combobox></bold></p>

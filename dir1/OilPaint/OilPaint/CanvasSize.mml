@@ -1,0 +1,108 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="How large is your canvas?"/>
+
+<table width=100% innerlines=0 border=0><tr><td>
+<image posn=edgeright width=33% file="<<<IMAGE>>>" border=2/>
+<xPageTitle>
+	How large is your canvas?
+</xPageTitle>
+
+<p>
+	Type in the width and height (in inches or centimeters) of the canvas you intend to paint on.
+	You'll be able to select the region of the image you wish to paint onto the canvas
+	after pressing "Next".
+</p>
+
+</td></tr></table>
+
+<xtablecenter>
+	<xtrheader>Custom canvas size</xtrheader>
+	<tr>
+		<td>Canvas <bold>width</bold> (in in/cm)</td>
+		<td><edit width=100% name=width maxchars=15 selall=true defcontrol=true/></td>
+	</tr>
+	<tr>
+		<td>Canvas <bold>height</bold> (in in/cm)</td>
+		<td><edit width=100% name=height maxchars=15 selall=true/></td>
+	</tr>
+	<tr>
+		<td>Measurement <bold>units</bold></td>
+		<td align=center><bold>
+			<button radiobutton=true style=x group=inches,cm name=inches>inches</button>
+			<button radiobutton=true style=x group=inches,cm name=cm>cm</button>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<button valign=top style=x checkbox=true name=keepaspect>
+				<bold>Keep the aspect ratio of the original image</bold>
+				<br/>
+				If checked then you can only enter a number for the width. The height is
+				automatically calculated so the proportions of the painting canvas stay
+				the same as the original image.
+			</button>
+		</td>
+	</tr></xtablecenter>
+	
+<xtablecenter>
+	<xtrheader>Paint-by-Grids canvas</xtrheader>
+	<tr><td>
+		If you're using canvases from <a href="http://www.PaintByGrids.com/canvas">Paint-By-Grids</a> then
+		then please click on the canvas below. Paint-by-Grids canvas come with pre-printed grids
+		that can be washed off with water, ensuring that the grid lines don't show
+		through your paints.
+	</td></tr>
+	<tr>
+		<td>
+			<p align=center>
+				<bold><a href=4x5>Portrait (16"x20")</a></bold>
+				<br/>
+				<italic><small>(Also 8"x10")</small></italic>
+				<br/>
+				<colorblend color=#ffffff href=4x5 width=160 height=200/>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<bold><a href=5x4>Landscape (16"x20")</a></bold>
+				<br/>
+				<italic><small>(Also 8"x10")</small></italic>
+				<br/>
+				<colorblend color=#ffffff href=5x4 width=200 height=160/>
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+				<bold><a href=3x4>Portrait (12"x16")</a></bold>
+				<br/>
+				<colorblend color=#ffffff href=3x4 width=120 height=160/>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<bold><a href=4x3>Landscape (12"x16")</a></bold>
+				<br/>
+				<colorblend color=#ffffff href=4x3 width=160 height=120/>
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+				<bold><a href=5x6>Portrait (20"x24")</a></bold>
+				<br/>
+				<colorblend color=#ffffff href=5x6 width=200 height=240/>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<bold><a href=6x5>Landscape (24"x20")</a></bold>
+				<br/>
+				<colorblend color=#ffffff href=6x5 width=240 height=200/>
+			</p>
+		</td>
+	</tr>
+</xtablecenter>

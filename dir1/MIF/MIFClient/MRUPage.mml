@@ -1,0 +1,66 @@
+<pageinfo index=false title="Welcome to Circumreality"/>
+<?Include resource=500?>
+
+<xClientPage>
+
+<table width=100% height=65% border=0 innerlines=0>
+<tr><td width=60% valign=center>
+
+<p align=center><table width=90% bordercolor=#c0c0c0>
+<tr><td valign=center><small>
+	<<<$MRULIST>>>
+	<xChoiceButton style=righttriangle href=open>
+		<bold>Open a Circumreality file</bold><br/>
+		Press this to open a Circumreality file (.crf or .crk extensions) that's not on this list.
+	</xChoiceButton>
+	<xChoiceButton style=box href=quit>
+		<bold>Quit</bold><br/>
+		Stop using Circumreality.
+	</xChoiceButton>
+</small></td></tr>
+
+<tr><td lrmargin=24 tbmargin=24>
+	<<<$QUOTE>>>
+</td></tr>
+</table></p>
+
+
+</td>
+
+<td valign=center width=35%>
+
+<p align=center>
+	<a color=#8080ff href="http://www.mXac.com.au">www.mXac.com.au</a>
+</p>
+<p align=center>
+	<p/>
+	<font color=#c0c0c0>
+		<italic>"Software for the human endeavor"</italic>
+	</font>
+</p>
+
+<p align=center><small><small>
+	Copyright (c) 2002-2009 by Mike Rozak (<font face=symbol>m</font>Xac). All rights reseved.<br/>
+	JPEG decompression is supplied by the Independent JPEG Group.<br/>
+	Pronunciation dictionary and some text-to-speech voices from Carnegie Mellon University.<br/>
+	<p/>
+	Version: <<<VERSIONNUM>>>
+</small></small></p>
+
+<xChoiceButton href=readme>
+	<bold>Read me...</bold><br/>
+	Important information you should read at least once.
+</xChoiceButton>
+
+<xChoiceButton href=register>
+	<bold>Pay...</bold><br/>
+	This page tells you how to pay for a full version of Circumreality.
+</xChoiceButton>
+</td>
+<td width=5%/>
+</tr>
+
+
+</table>
+
+</xClientPage>

@@ -1,0 +1,480 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "MIF Client"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "MIFClient.exe\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""MIF Client""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""MIFClient.exe\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+IDI_SPEAKERICON         ICON                    "menuicon.ico"
+IDI_ICONTALKTO          ICON                    "speakeri.ico"
+IDI_ICONWHISPERTO       ICON                    "icontalk.ico"
+IDI_ICONYELL            ICON                    "ico00002.ico"
+IDI_MINIMENUICON        ICON                    "ico00003.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOREYE           CURSOR                  "cursor1.cur"
+IDC_CURSORHAND          CURSOR                  "Hand.cur"
+IDC_CURSORROTLEFT       CURSOR                  "cur00001.cur"
+IDC_CURSORROTRIGHT      CURSOR                  "cursorro.cur"
+IDC_CURSORROTUP         CURSOR                  "cur00002.cur"
+IDC_CURSORROTDOWN       CURSOR                  "cur00003.cur"
+IDC_CURSORMOUTH         CURSOR                  "cursorey.cur"
+IDC_CURSORMENU          CURSOR                  "cur00004.cur"
+IDC_CURSORWALK          CURSOR                  "Walk.cur"
+IDC_CURSORTALK          CURSOR                  "cur00005.cur"
+IDC_CURSORZOOM          CURSOR                  "ZoomCursor.cur"
+IDC_CURSORNO            CURSOR                  "CursorNo.cur"
+IDC_CURSORNOMENU        CURSOR                  "NoMenu.cur"
+IDC_CURSORDOOR          CURSOR                  "CursorDoor.cur"
+IDC_CURSORKEY           CURSOR                  "CursorKey.cur"
+IDC_CURSORWALKDONT      CURSOR                  "cursorWalkDont.cur"
+IDC_CURSORPOINTRIGHT    CURSOR                  "PointRight.cur"
+IDC_CURSORPOINTLEFT     CURSOR                  "CursorPointLeft.cur"
+IDC_CURSOR360SCROLL     CURSOR                  "cur360scroll.cur"
+IDC_CURSOR360SCROLLON   CURSOR                  "cur360scrollon.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUMAINMENU MENU 
+BEGIN
+    POPUP "MainMenu"
+    BEGIN
+        MENUITEM "&Settings and options...",    ID_MAINMENU_SETTINGSANDOPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit (Stop playing)",        ID_MAINMENU_EXIT
+    END
+END
+
+IDR_MENU360CONTEXT MENU 
+BEGIN
+    POPUP "Context360"
+    BEGIN
+        MENUITEM "Zoom &in",                    ID_CONTEXT360_ZOOMIN
+        MENUITEM "Zoom &out",                   ID_CONTEXT360_ZOOMOUT
+    END
+END
+
+IDR_MENUTASKBAR MENU 
+BEGIN
+    POPUP "TaskBar"
+    BEGIN
+        MENUITEM "Show/hide window",            ID_TASKBAR_SHOW
+        MENUITEM "Show/hide the window's title bar", ID_TASKBAR_SHOWTITLE
+        MENUITEM "Move window to other monitor", ID_TASKBAR_DISPLAYONSECONDMONITOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLTRANSCRIPT       MML                     "Transcript.mml"
+IDR_MMLMACROS           MML                     "Macros.mml"
+IDR_MMLMRUPAGE          MML                     "MRUPage.mml"
+IDR_MMLEULAPAGE         MML                     "EULAPage.mml"
+IDR_MMLSHARDPAGE        MML                     "ShardPage.mml"
+IDR_MMLIPADDRPAGE       MML                     "IPAddrPage.mml"
+IDR_MMLLOGONPAGE        MML                     "LogonPage.mml"
+IDR_MMLPASSWORD2PAGE    MML                     "Password2Page.mml"
+IDR_MMLRELOGONPAGE      MML                     "ReLogonPage.mml"
+IDR_MMLREADME           MML                     "ReadMe.mml"
+IDR_MMLTEMPLATEBACK     MML                     "TemplateBack.mml"
+IDR_MMLRENDERQUALITY    MML                     "RenderQuality.mml"
+IDR_MMLUPLOADIMAGE      MML                     "UploadImage.mml"
+IDR_MMLRENDERQUALITYEASY MML                     "RenderQualityEasy.mml"
+IDR_MMLMIFOPEN          MML                     "MIFOpen.mml"
+IDR_MMLLARGETTSPAGE     MML                     "LargeTTSPage.mml"
+IDR_MMLSETTINGS         MML                     "Settings.mml"
+IDR_MMLLAYOUT           MML                     "Layout.mml"
+IDR_MMLSPEECH           MML                     "Speech.mml"
+IDR_MMLREGISTER         MML                     "Register.mml"
+IDR_MMLUSERPASSWORDFILE MML                     "UserPasswordFile.mml"
+IDR_MMLNEWPASSWORDFILE  MML                     "NewPasswordFile.mml"
+IDR_MMLNEWPASSWORDASK   MML                     "NewPasswordAsk.mml"
+IDR_MMLUSERPASSWORDASK  MML                     "UserPasswordAsk.mml"
+IDR_MMLPLAYERINFO       MML                     "PlayerInfo.mml"
+IDR_MMLMAINPLAYERPAGE   MML                     "MainPlayerPage.mml"
+IDR_MMLCHANGEPASSWORD   MML                     "ChangePassword.mml"
+IDR_MMLDELETEPASSWORDFILE MML                     "DeletePasswordFile.mml"
+IDR_MMLACCOUNTEDIT      MML                     "AccountEdit.mml"
+IDR_MMLLINKWORLDPAGE    MML                     "LinkWorldPage.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BLOODLARGE          BITMAP                  "BloodLarge.bmp"
+IDB_BLOODMED            BITMAP                  "bloodMed.bmp"
+IDB_BLOODSMALL          BITMAP                  "bloodSmall.bmp"
+IDB_STUNLARGE           BITMAP                  "StunLarge.bmp"
+IDB_STUNMED             BITMAP                  "stunMed.bmp"
+IDB_STUNSMALL           BITMAP                  "stunSmall.bmp"
+IDB_TISSUELARGE         BITMAP                  "TissueLarge.bmp"
+IDB_TISSUEMED           BITMAP                  "tissueMed.bmp"
+IDB_TISSUESMALL         BITMAP                  "tissueSmall.bmp"
+IDB_BONEBROKEN          BITMAP                  "BoneBroken.bmp"
+IDB_SEVERED             BITMAP                  "Severed.bmp"
+IDB_FACEHAPPY           BITMAP                  "FaceHappy.bmp"
+IDB_FACEDAZED           BITMAP                  "facehDazed.bmp"
+IDB_FACEUNC             BITMAP                  "faceUnc.bmp"
+IDB_FACEDEAD            BITMAP                  "faceDead.bmp"
+IDB_ATTACKSTYPESWING    BITMAP                  "attackswing.bmp"
+IDB_ATTACKSTYPESTAB     BITMAP                  "attackstab.bmp"
+IDB_ATTACKSTYPESHOOT    BITMAP                  "attackshoot.bmp"
+IDB_ATTACKSTYPEPUNCH    BITMAP                  "attackPunch.bmp"
+IDB_ATTACKSTYPEGORE     BITMAP                  "attackGore.bmp"
+IDB_ATTACKSTYPEBITE     BITMAP                  "attackBite.bmp"
+IDB_ATTACKSTYPETAILSLAP BITMAP                  "attackTailSlap.bmp"
+IDB_ATTACKSTYPECLAW     BITMAP                  "attackClaw.bmp"
+IDB_ATTACKSTYPEPUSH     BITMAP                  "attackPush.bmp"
+IDB_ATTACKSTYPEKICK     BITMAP                  "attackKick.bmp"
+IDB_ATTACKSTYPETHROW    BITMAP                  "attackThrow.bmp"
+IDB_ACTIONGOOD1         BITMAP                  "ActionGood1.bmp"
+IDB_ACTIONGOOD2         BITMAP                  "actionGood2.bmp"
+IDB_ACTIONGOOD3         BITMAP                  "actionGood3.bmp"
+IDB_ACTIONBAD1          BITMAP                  "actionBad1.bmp"
+IDB_ACTIONBAD2          BITMAP                  "actionBad2.bmp"
+IDB_ACTIONBAD3          BITMAP                  "actionBad3.bmp"
+IDB_ATTACKLOCHEAD       BITMAP                  "attackHead.bmp"
+IDB_ATTACKLOCCHEST      BITMAP                  "attackChest.bmp"
+IDB_ATTACKLOCARM        BITMAP                  "attackArm.bmp"
+IDB_ATTACKLOCLEG        BITMAP                  "attackLeg.bmp"
+IDB_ATTACKLOCTAIL       BITMAP                  "attackTail.bmp"
+IDB_ATTACKLOCWING       BITMAP                  "attackWing.bmp"
+IDB_DEFENDPARRY         BITMAP                  "DefendParry.bmp"
+IDB_DEFENDPARRYNOT      BITMAP                  "defendParryNot.bmp"
+IDB_DEFENDDODGE         BITMAP                  "defendDodge.bmp"
+IDB_DEFENDDODGENOT      BITMAP                  "defendDodgeNot.bmp"
+IDB_DEFENDARMOR         BITMAP                  "defendArmor.bmp"
+IDB_DEFENDARMORNOT      BITMAP                  "defendArmorNot.bmp"
+IDB_DEFENDKNOCKDOWN     BITMAP                  "DefendKnockDown.bmp"
+IDB_DEFENDDROPITEM      BITMAP                  "defendDropItem.bmp"
+IDB_DEFENDUL            BITMAP                  "DefendUL.bmp"
+IDB_DEFENDUC            BITMAP                  "DefendUC.bmp"
+IDB_DEFENDUR            BITMAP                  "DefendUR.bmp"
+IDB_DEFENDML            BITMAP                  "DefendML.bmp"
+IDB_DEFENDMC            BITMAP                  "DefendMC.bmp"
+IDB_DEFENDMR            BITMAP                  "DefendMR.bmp"
+IDB_DEFENDLL            BITMAP                  "DefendLL.bmp"
+IDB_DEFENDLC            BITMAP                  "DefendLC.bmp"
+IDB_DEFENDLR            BITMAP                  "DefendLR.bmp"
+IDB_BBSREAD             BITMAP                  "BBSRead.bmp"
+IDB_BBSUNREAD           BITMAP                  "bbsUnread.bmp"
+IDB_BBSLOCKED           BITMAP                  "bbsLocked.bmp"
+IDB_BBSPOLL             BITMAP                  "bbsPoll.bmp"
+IDB_SPEAKER             BITMAP                  "speaker.bmp"
+IDB_FOLDER              BITMAP                  "Folder.bmp"
+IDB_VERBEXIT            BITMAP                  "verbExit.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS 
+BEGIN
+    VK_F1,          ID_ACCELERATORF1,       VIRTKEY, NOINVERT
+    VK_F2,          ID_ACCELERATORF2,       VIRTKEY, NOINVERT
+    VK_F3,          ID_ACCELERATORF3,       VIRTKEY, NOINVERT
+    VK_F4,          ID_ACCELERATORF4,       VIRTKEY, NOINVERT
+    VK_F6,          ID_ACCELERATOREDITFOCUS, VIRTKEY, NOINVERT
+    VK_F7,          ID_ACCELERATORCHATFOCUS, VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_WAVETORCH3          WAVE                    "Torch3.wav"
+IDR_WAVETORCH1          WAVE                    "Torch1.wav"
+IDR_WAVETORCH2          WAVE                    "Torch2.wav"
+IDR_WAVERAINHEAVY1      WAVE                    "RainHeavy1.wav"
+IDR_WAVERAINHEAVY2      WAVE                    "RainHeavy2.wav"
+IDR_WAVERAINHEAVY3      WAVE                    "RainHeavy3.wav"
+IDR_WAVERAINLIGHT1      WAVE                    "RainLight1.wav"
+IDR_WAVERAINLIGHT2      WAVE                    "RainLight2.wav"
+IDR_WAVERAINLIGHT3      WAVE                    "RainLight3.wav"
+IDR_WAVETHUNDER1        WAVE                    "Thunder 1.wav"
+IDR_WAVETHUNDER2        WAVE                    "Thunder 2.wav"
+IDR_WAVETHUNDER3        WAVE                    "Thunder 3.wav"
+IDR_WAVETHUNDER4        WAVE                    "Thunder 4.wav"
+IDR_WAVETHUNDER5        WAVE                    "Thunder 5.wav"
+IDR_WAVEWINDHEAVY1      WAVE                    "WindHeavy1.wav"
+IDR_WAVEWINDHEAVY2      WAVE                    "WindHeavy2.wav"
+IDR_WAVEWINDHEAVY3      WAVE                    "WindHeavy3.wav"
+IDR_WAVEWINDLIGHT1      WAVE                    "WindLight1.wav"
+IDR_WAVEWINDLIGHT2      WAVE                    "WindLight2.wav"
+IDR_WAVEWINDLIGHT3      WAVE                    "WindLight3.wav"
+IDR_WAVEWINDMED1        WAVE                    "WindMed1.wav"
+IDR_WAVEWINDMED2        WAVE                    "WindMed2.wav"
+IDR_WAVEWINDMED3        WAVE                    "WindMed3.wav"
+IDR_WAVEWINDLIGHT5      WAVE                    "WindLight5.wav"
+IDR_WAVEWINDLIGHT4      WAVE                    "WindLight4.wav"
+IDR_WAVEKOOKABURRA1     WAVE                    "Kookaburra 1.wav"
+IDR_WAVEAVIARYBIRD4     WAVE                    "Aviary bird 4.wav"
+IDR_WAVEAVIARYBIRD7     WAVE                    "Aviary bird 7.wav"
+IDR_WAVEBARKINGOWL2     WAVE                    "Barking owl 2.wav"
+IDR_WAVEHMMM            WAVE                    "Hmmm.wav"
+IDR_WAVEYAWN            WAVE                    "Yawn.wav"
+IDR_WAVEWHISTLE3        WAVE                    "Whistle3.wav"
+IDR_WAVEWHISTLE2        WAVE                    "Whistle2.wav"
+IDR_WAVEWHISTLE1        WAVE                    "Whistle1.wav"
+IDR_WAVEBURP            WAVE                    "Burp.wav"
+IDR_WAVEKISS            WAVE                    "Kiss.wav"
+IDR_WAVECOMBATSWORDSWORDSTABM WAVE                    "CombatSwordSwordStabM.wav"
+IDR_WAVECOMBATBOWFIRE   WAVE                    "CombatBowFire.wav"
+IDR_WAVECOMBATCHAINBOWH WAVE                    "CombatChainBowH.wav"
+IDR_WAVECOMBATCHAINBOWL WAVE                    "CombatChainBowL.wav"
+IDR_WAVECOMBATCHAINBOWM WAVE                    "CombatChainBowM.wav"
+IDR_WAVECOMBATCHAINCLUBH WAVE                    "CombatChainClubH.wav"
+IDR_WAVECOMBATCHAINCLUBL WAVE                    "CombatChainClubL.wav"
+IDR_WAVECOMBATCHAINCLUBM WAVE                    "CombatChainClubM.wav"
+IDR_WAVECOMBATCHAINFISTH WAVE                    "CombatChainFistH.wav"
+IDR_WAVECOMBATCHAINFISTL WAVE                    "CombatChainFistL.wav"
+IDR_WAVECOMBATCHAINFISTM WAVE                    "CombatChainFistM.wav"
+IDR_WAVECOMBATCHAINSWORDSLASHH WAVE                    "CombatChainSwordSlashH.wav"
+IDR_WAVECOMBATCHAINSWORDSLASHL WAVE                    "CombatChainSwordSlashL.wav"
+IDR_WAVECOMBATCHAINSWORDSLASHM WAVE                    "CombatChainSwordSlashM.wav"
+IDR_WAVECOMBATCHAINSWORDSTABH WAVE                    "CombatChainSwordStabH.wav"
+IDR_WAVECOMBATCHAINSWORDSTABL WAVE                    "CombatChainSwordStabL.wav"
+IDR_WAVECOMBATCHAINSWORDSTABM WAVE                    "CombatChainSwordStabM.wav"
+IDR_WAVECOMBATCLUBCLUBH WAVE                    "CombatClubClubH.wav"
+IDR_WAVECOMBATCLUBCLUBL WAVE                    "CombatClubClubL.wav"
+IDR_WAVECOMBATCLUBCLUBM WAVE                    "CombatClubClubM.wav"
+IDR_WAVECOMBATCLUBSWORDH WAVE                    "CombatClubSwordH.wav"
+IDR_WAVECOMBATCLUBSWORDL WAVE                    "CombatClubSwordL.wav"
+IDR_WAVECOMBATCLUBSWORDM WAVE                    "CombatClubSwordM.wav"
+IDR_WAVECOMBATMISSBOWH  WAVE                    "CombatMissBowH.wav"
+IDR_WAVECOMBATMISSBOWL  WAVE                    "CombatMissBowL.wav"
+IDR_WAVECOMBATMISSBOWM  WAVE                    "CombatMissBowM.wav"
+IDR_WAVECOMBATMISSSWINGH WAVE                    "CombatMissSwingH.wav"
+IDR_WAVECOMBATMISSSWINGL WAVE                    "CombatMissSwingL.wav"
+IDR_WAVECOMBATMISSSWINGM WAVE                    "CombatMissSwingM.wav"
+IDR_WAVECOMBATPAINHIGHFEMALE WAVE                    "CombatPainHighFemale.wav"
+IDR_WAVECOMBATPAINHIGHMALE WAVE                    "CombatPainHighMale.wav"
+IDR_WAVECOMBATPAINLOWFEMALE WAVE                    "CombatPainLowFemale.wav"
+IDR_WAVECOMBATPAINLOWMALE WAVE                    "CombatPainLowMale.wav"
+IDR_WAVECOMBATPAINMEDFEMALE WAVE                    "CombatPainMedFemale.wav"
+IDR_WAVECOMBATPAINMEDMALE WAVE                    "CombatPainMedMale.wav"
+IDR_WAVECOMBATSHIELDBOWH WAVE                    "CombatShieldBowH.wav"
+IDR_WAVECOMBATSHIELDBOWL WAVE                    "CombatShieldBowL.wav"
+IDR_WAVECOMBATSHIELDBOWM WAVE                    "CombatShieldBowM.wav"
+IDR_WAVECOMBATSHIELDCLUBH WAVE                    "CombatShieldClubH.wav"
+IDR_WAVECOMBATSHIELDCLUBL WAVE                    "CombatShieldClubL.wav"
+IDR_WAVECOMBATSHIELDCLUBM WAVE                    "CombatShieldClubM.wav"
+IDR_WAVECOMBATSHIELDFISTH WAVE                    "CombatShieldFistH.wav"
+IDR_WAVECOMBATSHIELDFISTL WAVE                    "CombatShieldFistL.wav"
+IDR_WAVECOMBATSHIELDFISTM WAVE                    "CombatShieldFistM.wav"
+IDR_WAVECOMBATSHIELDSWORDSLASHH WAVE                    "CombatShieldSwordSlashH.wav"
+IDR_WAVECOMBATSHIELDSWORDSLASHL WAVE                    "CombatShieldSwordSlashL.wav"
+IDR_WAVECOMBATSHIELDSWORDSLASHM WAVE                    "CombatShieldSwordSlashM.wav"
+IDR_WAVECOMBATSHIELDSWORDSTABH WAVE                    "CombatShieldSwordStabH.wav"
+IDR_WAVECOMBATSHIELDSWORDSTABL WAVE                    "CombatShieldSwordStabL.wav"
+IDR_WAVECOMBATSHIELDSWORDSTABM WAVE                    "CombatShieldSwordStabM.wav"
+IDR_WAVECOMBATSKINBOWH  WAVE                    "CombatSkinBowH.wav"
+IDR_WAVECOMBATSKINBOWL  WAVE                    "CombatSkinBowL.wav"
+IDR_WAVECOMBATSKINBOWM  WAVE                    "CombatSkinBowM.wav"
+IDR_WAVECOMBATSKINCLUBH WAVE                    "CombatSkinClubH.wav"
+IDR_WAVECOMBATSKINCLUBL WAVE                    "CombatSkinClubL.wav"
+IDR_WAVECOMBATSKINCLUBM WAVE                    "CombatSkinClubM.wav"
+IDR_WAVECOMBATSKINFISTH WAVE                    "CombatSkinFistH.wav"
+IDR_WAVECOMBATSKINFISTL WAVE                    "CombatSkinFistL.wav"
+IDR_WAVECOMBATSKINFISTM WAVE                    "CombatSkinFistM.wav"
+IDR_WAVECOMBATSKINSWORDSLASHH WAVE                    "CombatSkinSwordSlashH.wav"
+IDR_WAVECOMBATSKINSWORDSLASHL WAVE                    "CombatSkinSwordSlashL.wav"
+IDR_WAVECOMBATSKINSWORDSLASHM WAVE                    "CombatSkinSwordSlashM.wav"
+IDR_WAVECOMBATSKINSWORDSTABH WAVE                    "CombatSkinSwordStabH.wav"
+IDR_WAVECOMBATSKINSWORDSTABL WAVE                    "CombatSkinSwordStabL.wav"
+IDR_WAVECOMBATSKINSWORDSTABM WAVE                    "CombatSkinSwordStabM.wav"
+IDR_WAVECOMBATSTEELBOWH WAVE                    "CombatSteelBowH.wav"
+IDR_WAVECOMBATSTEELBOWL WAVE                    "CombatSteelBowL.wav"
+IDR_WAVECOMBATSTEELBOWM WAVE                    "CombatSteelBowM.wav"
+IDR_WAVECOMBATSTEELCLUBH WAVE                    "CombatSteelClubH.wav"
+IDR_WAVECOMBATSTEELCLUBL WAVE                    "CombatSteelClubL.wav"
+IDR_WAVECOMBATSTEELCLUBM WAVE                    "CombatSteelClubM.wav"
+IDR_WAVECOMBATSTEELFISTH WAVE                    "CombatSteelFistH.wav"
+IDR_WAVECOMBATSTEELFISTL WAVE                    "CombatSteelFistL.wav"
+IDR_WAVECOMBATSTEELFISTM WAVE                    "CombatSteelFistM.wav"
+IDR_WAVECOMBATSTEELSWORDSLASHH WAVE                    "CombatSteelSwordSlashH.wav"
+IDR_WAVECOMBATSTEELSWORDSLASHL WAVE                    "CombatSteelSwordSlashL.wav"
+IDR_WAVECOMBATSTEELSWORDSLASHM WAVE                    "CombatSteelSwordSlashM.wav"
+IDR_WAVECOMBATSTEELSWORDSTABH WAVE                    "CombatSteelSwordStabH.wav"
+IDR_WAVECOMBATSTEELSWORDSTABL WAVE                    "CombatSteelSwordStabL.wav"
+IDR_WAVECOMBATSTEELSWORDSTABM WAVE                    "CombatSteelSwordStabM.wav"
+IDR_WAVECOMBATSWORDSWORDSLASHH WAVE                    "CombatSwordSwordSlashH.wav"
+IDR_WAVECOMBATSWORDSWORDSLASHL WAVE                    "CombatSwordSwordSlashL.wav"
+IDR_WAVECOMBATSWORDSWORDSLASHM WAVE                    "CombatSwordSwordSlashM.wav"
+IDR_WAVECOMBATSWORDSWORDSTABH WAVE                    "CombatSwordSwordStabH.wav"
+IDR_WAVECOMBATSWORDSWORDSTABL WAVE                    "CombatSwordSwordStabL.wav"
+IDR_WAVEVOICESAMPLESMALL WAVE                    "VoiceSampleSmall.wav"
+IDR_WAVEVOICESAMPLELARGE WAVE                    "VoiceSampleLarge.wav"
+IDR_WAVEBOOKOPEN        WAVE                    "BookOpen.wav"
+IDR_WAVEBOOKPAGEFLIP    WAVE                    "BookPageFlip.wav"
+IDR_WAVEBOOKCLOSE       WAVE                    "BookClose.wav"
+IDR_WAVECOUGH           WAVE                    "Cough.wav"
+IDR_WAVEWATERWAVE       WAVE                    "WaterWave.wav"
+IDR_WAVEWATERWAVE2      WAVE                    "WaterWave2.wav"
+IDR_WAVEWATERWAVE3      WAVE                    "WaterWave3.wav"
+IDR_WAVEFIRE3           WAVE                    "Fire3.wav"
+IDR_WAVEFIRE1           WAVE                    "Fire1.wav"
+IDR_WAVEFIRE2           WAVE                    "Fire2.wav"
+IDR_WAVEWHISTLINGKITE2  WAVE                    "Whistling kite 2.wav"
+IDR_WAVEAVIARYBIRD1     WAVE                    "Aviary bird 1.wav"
+IDR_WAVEAVIARYBIRD2     WAVE                    "Aviary bird 2.wav"
+IDR_WAVEAVIARYBIRD3     WAVE                    "Aviary bird 3.wav"
+IDR_WAVEAVIARYBIRD5     WAVE                    "Aviary bird 5.wav"
+IDR_WAVEAVIARYBIRD6     WAVE                    "Aviary bird 6.wav"
+IDR_WAVEAVIARYBIRD8     WAVE                    "Aviary bird 8.wav"
+IDR_WAVEAVIARYBIRD9     WAVE                    "Aviary bird 9.wav"
+IDR_WAVEREDTAILEDBLACKCOCKATOO1 WAVE                    "Red tailed black cockatoo 1.wav"
+IDR_WAVEWHISTLINGKITE1  WAVE                    "Whistling kite 1.wav"
+IDR_WAVEROWING2         WAVE                    "Rowing 2.wav"
+IDR_WAVECRICKETS1       WAVE                    "Crickets 1.wav"
+IDR_WAVECRICKETS2       WAVE                    "Crickets 2.wav"
+IDR_WAVECRICKETS3       WAVE                    "Crickets 3.wav"
+IDR_WAVECURLEWSYOUNG7   WAVE                    "Curlews, young 7.wav"
+IDR_WAVEROWING1         WAVE                    "Rowing 1.wav"
+IDR_WAVEBEEPINFO        WAVE                    "BeepInfo.wav"
+IDR_WAVESWITCHCLICK1    WAVE                    "SwitchClick1.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_JPGLOGO300          JPG                     "CircumrealityLogo300.jpg"
+IDR_JPGUSERPASSWORDFILE JPG                     "UserPasswordFile.jpg"
+IDR_JPGMAINPLAYERPAGE   JPG                     "MainPlayerPage.jpg"
+IDR_JPGUSERPASSWORDASK  JPG                     "UserPasswordAsk.JPG"
+IDR_JPGMIFOPEN          JPG                     "MIFOpen.jpg"
+IDR_JPGREADME           JPG                     "ReadMe.jpg"
+IDR_JPGREGISTER         JPG                     "Register.JPG"
+IDR_JPGSHARDPAGE        JPG                     "ShardPage.jpg"
+IDR_JPGNEWPASSWORDFILE  JPG                     "NewPasswordFile.JPG"
+IDR_JPGNEWPASSWORDASK   JPG                     "NewPasswordAsk.JPG"
+IDR_JPGPLAYERINFO       JPG                     "PlayerInfo.jpg"
+IDR_JPGACCOUNTEDIT      JPG                     "AccountEdit.JPG"
+IDR_JPGLARGETTSPAGE     JPG                     "LargeTTSPage.jpg"
+IDR_JPGLINKWORLD        JPG                     "LinkWorldPage.jpg"
+IDR_JPGRELOGONPAGE      JPG                     "ReLogonPage.jpg"
+IDR_JPGTEXTURE17        JPG                     "Texture17.jpg"
+IDR_JPGTEXTURE1         JPG                     "Texture1.jpg"
+IDR_JPGTEXTURE2         JPG                     "Texture2.jpg"
+IDR_JPGTEXTURE3         JPG                     "Texture3.jpg"
+IDR_JPGTEXTURE4         JPG                     "Texture4.jpg"
+IDR_JPGTEXTURE5         JPG                     "Texture5.jpg"
+IDR_JPGTEXTURE6         JPG                     "Texture6.jpg"
+IDR_JPGTEXTURE7         JPG                     "Texture7.jpg"
+IDR_JPGTEXTURE8         JPG                     "Texture8.jpg"
+IDR_JPGTEXTURE9         JPG                     "Texture9.jpg"
+IDR_JPGTEXTURE10        JPG                     "Texture10.jpg"
+IDR_JPGTEXTURE11        JPG                     "Texture11.jpg"
+IDR_JPGTEXTURE12        JPG                     "Texture12.jpg"
+IDR_JPGTEXTURE13        JPG                     "Texture13.jpg"
+IDR_JPGTEXTURE14        JPG                     "Texture14.jpg"
+IDR_JPGTEXTURE15        JPG                     "Texture15.jpg"
+IDR_JPGTEXTURE16        JPG                     "Texture16.jpg"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

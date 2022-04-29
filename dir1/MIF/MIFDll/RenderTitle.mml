@@ -1,0 +1,183 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Title resource"/>
+
+<!xComboCursor>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Arrow (do)</elem>
+		<elem name=1>Eye (examine)</elem>
+		<elem name=2>Hand (pick up)</elem>
+		<elem name=3>Mouth (talk to)</elem>
+		<elem name=4>Walking figure (go)</elem>
+		<elem name=7>Walking figure with cross (don't go)</elem>
+		<elem name=5>Key (lock/unlock)</elem>
+		<elem name=6>Door (open/close)</elem>
+		<elem name=8>Rotate counter-clockwise</elem>
+		<elem name=9>Rotate clockwise</elem>
+		<elem name=10>Menu</elem>
+	</combobox></bold>
+</xComboCursor>
+
+<!xComboLRAlign>
+	<bold><combobox width=50% cbheight=100 macroattribute=1>
+		<elem name=0>Left</elem>
+		<elem name=1>Center</elem>
+		<elem name=2>Right</elem>
+	</combobox></bold>
+</xComboLRAlign>
+
+<!xComboStretchToFit>
+	<bold><combobox width=50% cbheight=100 macroattribute=1>
+		<elem name=0>Scale to fit</elem>
+		<elem name=1>Stretch to fit</elem>
+	</combobox></bold>
+</xComboStretchToFit>
+
+<!xComboTBAlign>
+	<bold><combobox width=50% cbheight=100 macroattribute=1>
+		<elem name=0>Top</elem>
+		<elem name=1>Center</elem>
+		<elem name=2>Bottom</elem>
+	</combobox></bold>
+</xComboTBAlign>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Image</xtrheader>
+	<tr>
+		<td><align align=center>
+			<<<$IMAGEDRAG>>>
+			<br/>
+			<button name=refresh>
+				<bold>Refresh</bold>
+				<xHoverHelp>
+					Press this to redraw the image.
+				</xHoverHelp>
+			</button>
+			<button name=finalquality>
+				<bold>Final quality</bold>
+				<xHoverHelp>
+					Press this to redraw the image in full quality,
+					as it will look on the user's computer.
+				</xHoverHelp>
+			</button>
+		</align></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr><td>
+		Click and drag on the image to select a region for a text to be drawn.
+	</td></tr>
+	<<<$TITLEITEMS>>>
+<<<$ENDIFTAB0>>>
+
+<<<$IFTAB1>>>
+	<tr>
+		<td>
+			<bold>Aspect ratio</bold> - This controls how wide (or narrow) the image is drawn.
+		</td>
+		<td><bold><combobox cbheight=150 width=100% <<<$LIBENABLE>>> name=aspect>
+			<elem name=0>2:1 (movies)</elem>
+			<elem name=1>16:9 (widescreen)</elem>
+			<elem name=2>3:2 (computer screen)</elem>
+			<elem name=3>1:1 (square)</elem>
+			<elem name=4>2:3 (narrow)</elem>
+			<elem name=5>9:16 (narrower)</elem>
+			<elem name=6>1:2 (narrowest)</elem>
+			<elem name=10>360 degree view</elem>
+		</combobox></bold></td>
+	</tr>
+<<<$ENDIFTAB1>>>
+
+
+
+
+
+<<<$IFTAB5>>>
+	<tr><td>
+		Click and drag on the image to select a region for a "hot spot".
+		Users can click on a hot spot to send a command through ConnectionMessage() to
+		the server.
+	</td></tr>
+	<<<$HOTSPOTS>>>
+	<tr>
+		<td>
+			<bold>Language</bold> - This is the language used for the hot-spot commands.
+			For example: If you have typed "north" for a hot-spot command
+			then you'd select English, but would use Spanish if you had "norte".
+		</td>
+		<td><bold><combobox width=100% cbheight=150 <<<$LIBENABLE>>> name=langid/></bold></td>
+	</tr>
+<<<$ENDIFTAB5>>>
+
+<<<$IFTAB9>>>
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode0>
+				<bold>Color</bold><br/>
+				The background is a blend of colors.
+			</xChoiceButton>
+		</td>
+		<td>
+			<p align=right><bold>
+				<button <<<$LIBENABLE>>> name=changebackcolor0>Top/lft</button><xStatusColor width=50% name=backcolor0/><br/>
+				<button <<<$LIBENABLE>>> name=changebackcolor1>Btm/rght</button><xStatusColor width=50% name=backcolor1/>
+			</bold></p>
+			<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=backblendlr>
+				<bold>Blend left to right</bold><br/>
+				If checked the colors will be blended from left to right. If unchecked
+				they're blended from top to bottom.
+			</xChoiceButton>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode1>
+				<bold>Image file</bold><br/>
+				The background is an image file (either .jpg or .bmp).
+			</xChoiceButton>
+		</td>
+		<td>
+			<bold><edit width=100% readonly=true <<<$LIBENABLE>>> maxchars=250 name=backfile/></bold><br/>
+			<xChoiceButton <<<$LIBENABLE>>> name=backfiledialog>
+				<bold>Open...</bold><br/>
+				Press this to select a file for the background image.
+			</xChoiceButton>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<xChoiceButton <<<$LIBENABLE>>> style=check radiobutton=true group=backmode0,backmode1,backmode2 name=backmode2>
+				<bold>3D file</bold><br/>
+				The background is a 3D scene from <xSN/>.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xChoiceButton name=backrenddialog>
+				<bold>Modify...</bold><br/>
+				Press this modify the background image. (The dialog looks just like this one
+				except you select a <xSN/> file.)
+			</xChoiceButton>
+		</td>
+	</tr>
+<<<$ENDIFTAB9>>>
+
+<<<$IFTAB20>>>
+	<tr>
+		<td>
+			<xChoiceButton href=transitionui>
+				<bold>Transition...</bold><br/>
+				Press this to modify the transition (fades and zooms) when the image is drawn.
+			</xChoiceButton>
+		</td>
+	</tr>
+<<<$ENDIFTAB20>>>
+
+</xtablecenter>
+

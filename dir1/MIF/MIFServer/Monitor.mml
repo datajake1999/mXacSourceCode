@@ -1,0 +1,184 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Monitoring settings"/>
+
+<p>
+	You can have windows automatic timer automaticall run
+	"PATH\CircumRealityWorldSim.exe -monitor" once an hour to
+	check that the main server process is still working.
+</p>
+
+<p>
+	The monitoring application will:
+</p>
+
+<ol>
+	<li>
+		Test that the process is responding. If it fails to respond
+		then go to the next step.
+	</li>
+	<li>
+		Test the the process exists. If it doesn't, the process is run.
+		If it fails to run then an error message is E-mailed.
+	</li>
+	<li>
+		Optionally, send out an E-mail indicating that the process
+		is running properly.
+	</li>
+	<li>
+		Shut down. It will be restarted again in an hour by the Windows
+		timer you set.
+	</li>
+</ol>
+
+<p>
+	Important: For the monitoring application to work, you must fill
+	in all the information below, and set up a Windows timer to
+	run it once every hour (or every few hours). If any of the E-mail
+	information is wrong, then the mail may fail to send.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Select the CircumReality .crf files that should be running on this server</xtrheader>
+	<tr>
+		<td>
+			<bold>World #1</bold> - Select the CircumReality .crf file.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 readonly=true name=filename0/></bold><br/>
+			<align align=right><button name=dialog0>
+				<bold>Dialog</bold>
+				<xHoverHelpShort>This displays an open-file dialog for you.</xHoverHelpShort>
+			</button></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shard number for world #1</bold> - The shard number that you use.
+			(See the TitleInfo info that you create for a
+			list of shards). If this is 0 then the IF title will be run on the local
+			computer only, without any Internet connections.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=shardnum0/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>World #2</bold> - Select the CircumReality .crf file.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 readonly=true name=filename1/></bold><br/>
+			<align align=right><button name=dialog1>
+				<bold>Dialog</bold>
+				<xHoverHelpShort>This displays an open-file dialog for you.</xHoverHelpShort>
+			</button></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shard number for world #2</bold> - The shard number that you use.
+			(See the TitleInfo info that you create for a
+			list of shards). If this is 0 then the IF title will be run on the local
+			computer only, without any Internet connections.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=shardnum1/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>World #3</bold> - Select the CircumReality .crf file.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 readonly=true name=filename2/></bold><br/>
+			<align align=right><button name=dialog2>
+				<bold>Dialog</bold>
+				<xHoverHelpShort>This displays an open-file dialog for you.</xHoverHelpShort>
+			</button></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shard number for world #3</bold> - The shard number that you use.
+			(See the TitleInfo info that you create for a
+			list of shards). If this is 0 then the IF title will be run on the local
+			computer only, without any Internet connections.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=shardnum2/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>E-mail information</xtrheader>
+	<tr>
+		<td>
+			<bold>Domain name</bold> - Domain name, such as "bigpond.com".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=domain/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>SMTP server</bold> - SMTP server, such as "mail.bigpond.com".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=SMTPServer/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>EmailTo</bold> - Email address of the person sending to,
+			such as "Mike@mXac.com.au". This MUST be a valid E-mail address without extra spaces.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=EMailTo/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>EmailFrom</bold> - Email address of the sender, such as "AutoSend@mXac.com.au".
+			This MUST be a valid E-maill address without extra spaces.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=EMailFrom/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Authentication user</bold> - Some E-mail systems requires user authentication before
+			they send E-mail. If your system need this, make sure to fill in AuthUser and AuthPassword.
+			Otherwise, leave them as empty strings, "".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 name=AuthUser/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Authentication password</bold> - Some E-mail systems requires user authentication before
+			they send E-mail. If your system need this, make sure to fill in AuthUser and AuthPassword.
+			Otherwise, leave them as empty strings, "".
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=128 password=true name=AuthPassword/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=emailonsuccess>
+			<bold>Email even when it's all running properly</bold><br/>
+			Check this is you want to receive E-mails even when the world server
+			is running properly.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

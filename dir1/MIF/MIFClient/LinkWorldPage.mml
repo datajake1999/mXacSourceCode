@@ -1,0 +1,28 @@
+<pageinfo index=false title="Link to a world"/>
+<?Include resource=500?>
+<xClientPage jpgresource=326>
+
+<p/>
+
+<p align=center><table width=50% bordercolor=#c0c0c0>
+<xtrheader>Link to a world</xtrheader>
+<tr><td>
+	<colorblend color=#ffffff posn=background transparent=0.25/>
+
+	<p>
+		The CirumReality world server linked your to another world, <bold><<<LINKWORLD>>></bold>. Do you wish
+		to connect to this new world?
+	</p>
+	
+	<xChoiceButton style=righttriangle accel=enter href=yes>
+		<bold>Yes</bold><br/>
+		I want to play in the <bold>new world</bold>.
+	</xChoiceButton>
+	<xChoiceButton style=box accel=escape href=cancel>
+		<bold>No</bold><br/>
+		Exit this application.
+	</xChoiceButton>
+</td></tr>
+</table></p>
+
+</xClientPage>

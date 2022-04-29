@@ -1,0 +1,94 @@
+<<<$OPTEMPLATENEXT>>>
+<?Include resource=400?>
+<PageInfo title="Print images"/>
+
+<xPageTitle>
+	Print images
+</xPageTitle>
+
+<p>
+	Now that Oil Painting Assistant has learned what type of grid you want to display
+	and generated the base coat, it can print out hardcopies for you to paint off of.
+	(You can also paint off the screen.) Please select what images you want to print:
+</p>
+
+<button style=x checkbox=true valign=top name=entire>
+	<bold>Entire original image</bold>
+	<br/>
+	Print the entire original image, even the portion that you decided to crop out.
+</button>
+
+<p/>
+
+<button style=x checkbox=true valign=top name=canvas>
+	<bold>Portion of the image to be painted</bold>
+	<br/>
+	Print just the portion of the image that you cut out for painting.
+</button>
+<br/>
+<blockquote>
+	<small><button style=x checkbox=true valign=top name=canvasgrid>
+		<bold>Print with a grid overlaid</bold>
+		<br/>
+		Print the image with the grid you selected.
+	</button></small>
+	<br/>
+	<small><button style=x width=80% checkbox=true valign=top name=canvasbig>
+		<bold>Print the image as large as your canvas (LOTS of paper)</bold>
+		<br/>
+		Uses several sheets of paper to print an image as large as what you said your
+		canvas was. You can then trace the image onto your canvas using tracing
+		paper.
+	</button></small>
+</blockquote>
+
+<p/>
+
+<button style=x checkbox=true valign=top name=base>
+	<bold>Base color analysis</bold>
+	<br/>
+	This is the color analysis version of the image.
+	You should make sure "Key to the colors used" is checked so you can identify
+	what colors are recommended for the base.
+</button>
+<br/>
+
+<blockquote>
+	<small><button style=x checkbox=true valign=top name=basegrid>
+		<bold>Print with a grid overlaid</bold>
+		<br/>
+		Print the base color analysis with the grid you selected.
+	</button></small>
+	<br/>
+	<small><button style=x width=80% checkbox=true valign=top name=basebig>
+		<bold>Print the image as large as your canvas (LOTS of paper)</bold>
+		<br/>
+		Uses several sheets of paper to print an image as large as what you said your
+		canvas was. You can then trace the image onto your canvas using tracing
+		paper.
+	</button></small>
+</blockquote>
+
+<p/>
+
+<button style=x checkbox=true valign=top name=key>
+	<bold>Key to the colors used</bold>
+	<br/>
+	A key showing the base color and the combination of paints used to generate
+	it.
+</button>
+
+<p/>
+
+<p>
+	Press "Next" to print out the selected pages on your default printer.
+</p>
+
+<xbr/>
+
+<button style=x checkbox=true valign=top name=invert>
+	<bold>"Invert" the image colors</bold>
+	<br/>
+	Some printers will print the images in negative, so black and white are switched, along
+	with the colors. If this is happening, check this box to print the colors properly.
+</button>

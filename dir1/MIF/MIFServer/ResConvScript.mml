@@ -1,0 +1,257 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="ConvScript resource"/>
+
+<null>
+	<<<$COMBODEFINE>>>
+</null>
+
+<!xComboTextOrTransPros>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Text</elem>
+		<elem name=1>Transplanted prosody</elem>
+	</combobox></bold>
+</xComboTextOrTransPros>
+
+
+<p>
+	The ConvScript resource lets you create a short scene where a several
+	NPCs have a conversation with one another. The conversation
+	can include speech, narration, sounds, and emotes.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Actions</xtrheader>
+	<tr>
+		<td width=20% bgcolor=#004000><bold><font color=#ffffff>
+			Action
+		</font></bold></td>
+		<td width=20% bgcolor=#004000><bold><font color=#ffffff>
+			NPC
+		</font></bold></td>
+		<td width=45% bgcolor=#004000><bold><font color=#ffffff>
+			Details
+		</font></bold></td>
+		<td width=15% bgcolor=#004000><bold><font color=#ffffff>
+			Order
+		</font></bold></td>
+	</tr>
+	<<<$ACTIONS>>>
+	<tr><td>
+		<xChoiceButton href=add>
+			<bold>Add new action</bold><br/>
+			Press this to add a new action.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=newttsfile>
+	<bold>Change text-to-speech voice</bold><br/>
+	Press this to change the text-to-speech voice used for hearing the sentence
+	and spell checking.
+	You can usually find some text-to-speech voices in "c:\program files\mXac\CircumReality".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=ttsfile/>
+
+<p/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	ConvScript resources can be used with a cConvScript object to create
+	a conversation among a group of up to four NPCs. The conversation
+	can include NPC speech, narration, sounds, and emotes.
+</p>
+
+<p>
+	To create a ConvScript:
+</p>
+
+<ol>
+	<li>
+		Press <bold>Add new action</bold> to add an action in the
+		script.
+	</li>
+	<li>
+		<bold>Select</bold> the type of action to use from the left column, such
+		as "speak", "sound", "narration", etc.
+	</li>
+	<li>
+		<bold>Fill in</bold> the settings specific to the type of action. For
+		more information, see below.
+	</li>
+</ol>
+
+<xtablecenter width=100%>
+	<xtrheader>Action types</xtrheader>
+
+	<tr>
+		<td width=20% bgcolor=#c0ff00><bold>
+			Speak
+		</bold></td>
+		<td width=80% bgcolor=#c0ff00>
+			This action causes a NPC to speak. You should fill in the following
+			information:
+			<p/>
+			<xul>
+				<li>
+					<bold>NPC</bold> - Which NPC number, from 1..4, will speak.
+				</li>
+				<li>
+					<bold>Speak to</bold> - Which NPC number, from 1..4, the NPC is directing his
+					speech towards. This can also be "All" to direct the speech towards everyone
+					in the room, or "PC" to direct it towards the player character.
+				</li>
+				<li>
+					<bold>Text or Transplanted prosody</bold> - Select whether the speech is
+					raw text, or it's a transplanted prosody resource. Transplanted prosody
+					will sound better, but requires more work.
+				</li>
+				<li>
+					<bold>Text</bold> - If you decide to speak just text, you'll need to type
+					the text to speak to the right of the "Text" combo-box.
+				</li>
+				<p>
+					The text can use "%1" .. "%4" as substituion points for the real
+					names (pNameReal) of the NPCs in the conversation. (If a player hears the speech,
+					they will be able to learn the true names of the NPCs involved.)
+					"%5" is substituted with
+					the name of the player character that is "watching" the conversation, as
+					known by the given NPC. (Which means %5 might be translated into "the (wo)man"
+					if the NPC doesn't know the PC's name.)
+				</p>
+				<li>
+					<bold>Transplanted prosody resource</bold> - If the speech is transplanted
+					prosody, you should select the transplanted prosody resource to the right
+					of the "Transplanted prosody" combo-box.
+				</li>
+				<li>
+					<bold>Speaking style</bold> - This controls the type of emotion that the
+					voice uses.
+				</li>
+				<li>
+					<bold>Language</bold> - The language the NPC speaks in. If this is blank the
+					NPC will speak in a default language.
+				</li>
+				<li>
+					<bold>Knowledge object</bold> - If a player character hears this statement,
+					they will learn the given knowledge object (based on cKnowledge). This makes it easy for
+					NPCs to tell players information, or for players to listen in on NPCs.
+				</li>
+				<li>
+					<bold>Relationship NPC-A</bold> - If the speech reveals a relationship,
+					then set this to one of the NPCs in the relationship.
+				</li>
+				<li>
+					<bold>KnownByName</bold> - Check this to send TRUE for the KnownByName flag
+					in KnowledgeRelationshipSet(), where NPC-A and NPC-B are also passed.
+				</li>
+				<li>
+					<bold>NPC-B</bold> - If the speech reveals a relationship,
+					then set this to one of the NPCs in the relationship.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#80c080><bold>
+			Narration
+		</bold></td>
+		<td width=80% bgcolor=#80c080>
+			Causes the narrator to speak a line. It's just like "Speak" except that:
+			<p/>
+			<xul>
+				<li>
+					There is no "Speak to", "Speaking style", or "Language".
+				</li>
+				<li>
+					For spoken text, "%1" .. "%5" are replaced with the NPCs/PCs name as
+					the listener knows it. (Which might be "the man" instead of "Fred".)
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#c0c0ff><bold>
+			Sound
+		</bold></td>
+		<td width=80% bgcolor=#c0c0ff>
+			Plays a sound, either a &lt;Wave&gt; or &lt;Music&gt; resource.
+			<p/>
+			<xul>
+				<li>
+					<bold>NPC</bold> - Which NPC number, from 1..4, causes the sound.
+				</li>
+				<li>
+					<bold>Resource</bold> - Select the sound resource to play.
+				</li>
+				<li>
+					<bold>Wait until sound completed</bold> - If checked, the cut scene
+					will wait until the sound has finished playing. If unchecked, the
+					sound while play while the cut scene progresses.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#c0c0c0><bold>
+			Rate
+		</bold></td>
+		<td width=80% bgcolor=#c0c0c0>
+			Usually, a 3 second pause occurs between every action. (This is adjusted by
+			gConvScriptRate). If you want to speed up or slow down a specific conversation,
+			use "Rate", and all events occuring after will be delayed by the given time.
+			<p/>
+			<xul>
+				<li>
+					<bold>Time</bold> - Number of seconds to pause between actions. If you leave this
+					blank the time will return to the default, gConvScriptRate.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=20% bgcolor=#ffc0c0><bold>
+			Emote
+		</bold></td>
+		<td width=80% bgcolor=#ffc0c0>
+			Causes the NPC to emote, as per an Emote() call.
+			<p/>
+			<xul>
+				<li>
+					<bold>NPC</bold> - Which NPC number, from 1..4, does the emote.
+				</li>
+				<li>
+					<bold>Emote to</bold> - Which NPC the emote is directed at. It can also be "All",
+					or "PC" to direct the emote towards the listening PC.
+				</li>
+				<li>
+					<bold>Emote</bold> - An lower-case string emote to pass into Emote(). Since this varies with every
+					NPC, the emotes can't be hard coded. However, some common emotes are:
+					
+					afraid, angry, angrybrief, bow, burp, closeeeyes, cough, crosseyed, cry, dead, eyebrowsup, frown, funnyface,
+					growl, hmmm, kiss, laugh, lookdown, lookleft, lookright, lookup,
+					neutral, nodno, nodyes, purselips, sad, sadmild,
+					shiftylookleft, shiftylookright, sigh, slidejawl, slidejawr,
+					sneer, smile, smilebrief, smilemild, sniff, sob, surprised,
+					tear, tiltheadl, tiltheadr, unconscious, wave, whistle,
+					wink, worried, yawn.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+
+</xtablecenter>
+
+<p>
+	You can use the up and down arrows (
+	<button style=uptriangle/> and <button style=downtriangle/>) to reorder the
+	action. The delete button (<button style=box color=#ff0000/>) will delete the specific
+	action.
+</p>

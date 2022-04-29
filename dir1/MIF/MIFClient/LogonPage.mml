@@ -1,0 +1,51 @@
+<pageinfo index=false title="User name and password"/>
+<?Include resource=500?>
+<xClientPage>
+
+<p align=center><table width=50% height=65% border=0>
+<tr><td valign=center>
+	<bold>User name</bold> - Type in your user name.
+	<br/>
+	<p align=right>
+		<bold><font color=#000000><edit width=66% maxchars=64 name=name/></font></bold><br/>
+	</p>
+	
+	<bold>Password</bold> - Type in your password; passwords are case sensative.
+	<br/>
+	<p align=right>
+		<bold><font color=#000000><edit width=66% maxchars=64 defcontrol=true password=true name=password/></font></bold><br/>
+	</p>
+	<xChoiceButton style=righttriangle accel=enter name=connect>
+		<bold>Connect</bold><br/>
+		Connect to the virtual world using the supplied user name and password.
+	</xChoiceButton>
+	<xChoiceButton style=lefttriangle accel=escape href=cancel>
+		<bold>Cancel</bold><br/>
+		Return to the previous page.
+	</xChoiceButton>
+	<xbr/>
+	If you haven't created an account on this virtual world's shard yet, then
+	type in a new user name and password, and press "New account".
+	Your user name is only for logging in, and won't be displayed to
+	other users. For extra security, use a different password for each account.
+	<p/>
+	<xChoiceButton style=box name=newaccount>
+		<bold>New account</bold><br/>
+		Create a new user account on the server.
+	</xChoiceButton>
+
+	<p/>
+	<xbr/>
+	<p>
+		<font color=#ff0000><bold>Security warning:</bold></font> Circumreality lets
+		you play interaction fiction titles developed by any number of different companies and
+		individuals. Make sure to <bold>create a unique password for each world</bold> just in case
+		any of the companies or individuals are dishonest. Also, <bold>never use
+		the same password or variant of a password for a Circumreality user account
+		that you use for other internet services, such as banking.</bold> Again, not
+		all companies or individuals are reputable.
+	</p>
+</td></tr>
+</table></p>
+
+</xClientPage>

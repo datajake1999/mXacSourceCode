@@ -1,0 +1,69 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Settings and options"/>
+
+<p/>
+
+<p align=center><table width=66% border=0 innerlines=0>
+	<tr><td>
+
+		<xChoiceButton style=righttriangle href=renderquality>
+			<bold>Image quality...</bold><br/>
+			Press this to change the quality of the computer-drawn images. Higher quality looks better,
+			but takes longer to draw.
+		</xChoiceButton>
+
+		<xChoiceButton style=righttriangle href=layout>
+			<bold>Layout settings...</bold><br/>
+			Show or hide the tabs and toolbar, customize the toolbar, use two monitors, or reset the window
+			locations.
+		</xChoiceButton>
+
+		<xChoiceButton style=righttriangle href=speech>
+			<bold>Speech settings...</bold><br/>
+			Change speaking options, including the speaking rate, the subtitle-text size, and
+			speech quality.
+		</xChoiceButton>
+
+		<xChoiceButton style=righttriangle name=uploadimage href=uploadimage>
+			<bold>Upload an image of your character...</bold><br/>
+			If you wish to change what your character looks like from the computer-generated image
+			to a .BMP or .JPG that you drew yourself, then select this option.
+			<<<$UPLOADIMAGE>>>
+		</xChoiceButton>
+
+		<xChoiceButton style=righttriangle name=voicechat href=voicechat>
+			<bold>Voice chat settings...</bold><br/>
+			This option lets you turn on voice chat and control your voice-disguise.
+			<<<$VOICECHAT>>>
+		</xChoiceButton>
+
+	</td></tr>
+</table></p>
+
+<xbr/>
+
+
+<p align=center><table width=66% border=0 innerlines=0>
+	<tr><td>
+
+		<xChoiceButton name=screenshot>
+			<bold>Save a screenshot</bold><br/>
+			This saves the main image.
+			<p/>
+			If you're saving a 360-degree surround (room) image, and you hold down the "control" key when you press this button
+			then the entire 360-degree image will be saved.
+		</xChoiceButton>
+
+<<<$IFADMINOPTIONS>>>
+		<xChoiceButton style=x checkbox=true name=randomactions>
+			<bold>Perform random actions</bold><br/>
+			If checked, the character will perform random actions every N seconds. (Make sure to fill in the time.)
+		</xChoiceButton>
+		<p align=right>
+			<bold><edit width=25% maxlen=64 name=randomtime/></bold>
+		</p>
+<<<$ENDIFADMINOPTIONS>>>
+
+	</td></tr>
+</table></p>

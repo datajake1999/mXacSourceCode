@@ -1,0 +1,81 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="General menu resource"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Menu items</xtrheader>
+	<tr><td>
+		Type in the text to show in the menu, and the command/message to send if the menu is
+		clicked on. The "Extra text" field, usually left blank, is appended onto the command, as listed in
+		the menu window. Leave the fields blank if you don't need that many menu items.
+		To add more menu slots, press <button href=redosamepage><bold>Add menu</bold></button>.
+	</td></tr>
+	<tr>
+		<td><bold>Displayed on menu</bold></td>
+		<td><bold>Extra text</bold></td>
+		<td><bold>Message sent</bold></td>
+	</tr>
+	<<<$MENUITEMS>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Time-out</xtrheader>
+	<tr><td>
+		You can have a menu automatically make a selection after a given amount of time
+		if the user doesn't click on an option.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Time-out</bold> - The number of seconds after the menu appears that
+			the default will automatically be chosen, unless the user clicks on
+			a menu item. If this is 0 there is no time-out.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=timeout/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Default choice</bold> - The menu item that's the default choice, if
+			the user doesn't click on an item and a time-out occurs. Use "1" for the 1st
+			menu item, "2" for the second, etc.
+		</td>
+		<td>
+			<edit width=100% maxchars=64 name=default/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Window location</bold> - If the menu window hasn't been shown before
+			(or if there's a new version), this is the default window location. Coordinates
+			range from 0..1, where 0 is the left/top, and 1 is the right/bottom.
+			If all the values are set to 0 then no window location will be set.
+		</td>
+		<td>
+			<align align=right>Left: <edit width=66% maxchars=32 name=windowloc0/><br/>
+			Right: <edit width=66% maxchars=32 name=windowloc1/><br/>
+			Top: <edit width=66% maxchars=32 name=windowloc2/><br/>
+			Bottom: <edit width=66% maxchars=32 name=windowloc3/></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Language</bold> - This is the language used for the menu commands.
+			For example: If you have typed "north" for a menu command
+			then you'd select English, but would use Spanish if you had "norte".
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=langid/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=exclusive style=x checkbox=true>
+			<bold>Exclusive</bold><br/>
+			If checked, then when this menu is visible the user will only be able to
+			make selections from the menu. They won't be able to click on images or
+			use context menus (associated with objects).
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
