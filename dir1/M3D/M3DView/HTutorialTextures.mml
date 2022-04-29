@@ -1,0 +1,103 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - color and texture"/>
+
+<xPageTitle>
+	Tutorial - color and texture
+</xPageTitle>
+
+<xSectionTitle>Changing and object's color or texture</xSectionTitle>
+
+<p>
+	It's time to take a small break from building and do some painting. (Or tiling.)
+	Every object has either a color or texture (tiles, shingles, wood grain, etc.)
+	associated with it. Many objects have several; building blocks have different textures
+	for the roof, external walls, internal walls, floors, ceilings, balustrade, etc.
+</p>
+
+<p>
+	To set the color or texture of an object:
+</p>
+
+<ol>
+	<li>
+		Click on <xButtonViewQuality/> and select "Textures". You need to do this because
+		in lower qualities textures aren't drawn (because they're slower to draw than solid
+		colors), and in the lowest quality, the object's real color isn't even used.
+	</li>
+	<li>
+		Select the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the surface whose color you want to change.
+	</li>
+	<p>
+		A dialog will appear with a column on the right for a texture category (including
+		"Solid colors"). If it's a texture, you'll see another column with sub-categories
+		for the main category. The rest of the dialog will display small thumbnail images
+		of the colors or textures to chose from.
+	</p>
+
+	<li>
+		If you want the surface to be a solid color, click <bold>"Solid colors"</bold> if
+		it isn't already selected, and then use the options in the dialog
+		to change the color.
+	</li>
+	<li>
+		To use a texture, <bold>click on</bold> one of the texture categories on
+		the left side of the dialog (except for "Solid colors").
+	</li>
+	<li>
+		Then, <bold>click on</bold> a sub-category in the list just to the right
+		of the categories.
+	</li>
+	<p>
+		Once you've done that, the thumbnail images on the right will change to show
+		you the textures in the sub-category.
+	</p>
+	<li>
+		When you find a texture you like, <bold>click on it</bold>. The dialog will close
+		and the surface will change to the new texture.
+	</li>
+	<p>
+		<italic>Some of the textures may take awhile to come up the first time you
+		select them. That's because they're automagically being generated, which
+		may take a few seconds. Once generated, they're saved to disk and are much
+		faster to load. <xSN/> generates the textures like this to minimize its
+		download size.</italic>
+	</p>
+</ol>
+
+<p>
+	<bold>Tip:</bold> If a surface is in a scheme (as shown in
+	the <xButtonObjPaint/> dialog) then whenever you change one of the surfaces in the
+	scheme to a new color or texture, all the other surfaces using the same
+	scheme will also change. Use this to make sure that colors and textures remain
+	consistent throughout the house, and to save you time. Example: If all your window
+	trim uses the same scheme then changing one window's color will change all the others
+	to the same color... much easier than changing them individually.
+</p>
+
+<p>
+	<bold>Tip:</bold> If you change the color or texture of a wall, floor, or ceiling, it
+	will change the color of the entire surface. If you only want to paint the color/texture
+	in the specific room you're in the hold down the <bold>shift</bold> key while clicking
+	on the wall, floor, or ceiling with the <xButtonObjPaint/> button. This will automatically
+	create an "overlay" to fit the room.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:282><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:404>Creating a new texture</a></li>
+	<li><a href=r:406>Materials</a></li>
+	<li><a href=r:405>Modifying a texture</a></li>
+	<li><a href=r:283>Overlays</a></li>
+	<li><a href=r:304>Overlaying textures on walls, roofs, and floors</a></li>
+</xul>

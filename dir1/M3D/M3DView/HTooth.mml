@@ -1,0 +1,40 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tooth or claw object"/>
+
+<xPageTitle>
+	Tooth or claw
+</xPageTitle>
+
+
+<p>
+	The "tooth" object makes it easy to create a tooth (or claw). Of course, there are
+	other ways to create teeth or claws, such as using the polygon mesh object, but
+	this is the easiest for standard teeth/claws.
+</p>
+
+
+<xsectiontitle>Creating a tooth or claw</xsectiontitle>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Teeth" section under "Object pieces".
+	</li>
+	<li>
+		<bold>Click</bold> on one of the teeth to add it.
+	</li>
+	<li>
+		You can adjust the size and shape of the tooth using the <xButtonObjDialog/> tool.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:926>Jaw object</a></li>
+</xul>

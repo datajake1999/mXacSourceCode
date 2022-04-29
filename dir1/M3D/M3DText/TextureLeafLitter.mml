@@ -1,0 +1,177 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Leaf-litter texture"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture width</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Texture height</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Background texture (grass)</xtrheader>
+	<tr><td>
+		Select which texture will be used underneath the leaves.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=BackgroundButton>
+			<bold>Change the background texture</bold><br/>
+			Press this to change the texture.
+		</xChoiceButton>
+		<<<$BACKGROUNDIMAGE>>>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves</xtrheader>
+	<tr>
+		<td>
+			<bold>Leaves across</bold> - Number of leaves horizontally across the
+			texture.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=numx/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaves up/down</bold> - Number of leaves up and down.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=numy/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Random variation number</bold> - Change this to create a new random
+			variation of leaves.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=seed/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape #1</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=leafuse0>
+			<bold>Use this</bold><br/>
+			Check this box if you wish to use this leaf style.
+		</xChoiceButton>
+		<xChoiceButton href=leafmod0>
+			<bold>Modify the leaf texture</bold><br/>
+			Change the texture and size of the leaf.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape #2</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=leafuse1>
+			<bold>Use this</bold><br/>
+			Check this box if you wish to use this leaf style.
+		</xChoiceButton>
+		<xChoiceButton href=leafmod1>
+			<bold>Modify the leaf texture</bold><br/>
+			Change the texture and size of the leaf.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape #3</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=leafuse2>
+			<bold>Use this</bold><br/>
+			Check this box if you wish to use this leaf style.
+		</xChoiceButton>
+		<xChoiceButton href=leafmod2>
+			<bold>Modify the leaf texture</bold><br/>
+			Change the texture and size of the leaf.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape #4</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=leafuse3>
+			<bold>Use this</bold><br/>
+			Check this box if you wish to use this leaf style.
+		</xChoiceButton>
+		<xChoiceButton href=leafmod3>
+			<bold>Modify the leaf texture</bold><br/>
+			Change the texture and size of the leaf.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape #5</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=leafuse4>
+			<bold>Use this</bold><br/>
+			Check this box if you wish to use this leaf style.
+		</xChoiceButton>
+		<xChoiceButton href=leafmod4>
+			<bold>Modify the leaf texture</bold><br/>
+			Change the texture and size of the leaf.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+
+
+<comment><xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter></comment>
+

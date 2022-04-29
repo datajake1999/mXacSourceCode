@@ -1,0 +1,68 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Playing audio objects"/>
+
+<xPageTitle>
+	Playing audio objects
+</xPageTitle>
+
+<p>
+	To add sound to your animations:
+</p>
+
+<ol>
+	<li>
+		In the main 3D view, <bold>select</bold> the object that causes the sound.
+		If it's general background sound then any object will do.
+	</li>
+	<li>
+		<bold>Switch</bold> to the animation timeline and notice the entry for the
+		object you just selected.
+	</li>
+	<li>
+		Press the <xButtonNewAnimWave/> button.
+	</li>
+	<li>
+		As with other animation objects, <bold>click and drag</bold> on the animation timeline
+		to indicate where you wish the sound to be played.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the new audio animation object.
+	</li>
+	<li>
+		In the animation object's settings, press the <bold>Browse</bold> button and
+		indicate where your .wav file is location. (If you haven't already recorded a wave
+		file you can do so using <xSN/>'s audio editor.)
+	</li>
+</ol>
+
+<p>
+	To hear the sound (without having to generate a movie file):
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonAnimPlayAudio/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the audio object and <bold>hold down</bold> the mouse button.
+	</li>
+	<p>
+		The audio will play back from the point you clicked, and will play as long as
+		you hold down the mouse.
+	</p>
+	<li>
+		If you <bold>move the mouse while the button is down,</bold> the audio will reset and start
+		playing from your new mouse location.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+</xul>

@@ -1,0 +1,71 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial (contents)"/>
+
+<xPageTitle>
+	Tutorial (contents)
+</xPageTitle>
+
+<p>
+	Please select which tutorial you wish to run. If you haven't gone through the
+	tutorials yet then you should view "Maneuvering around" first, followed by
+	"Building."
+</p>
+
+<ol>
+	<li>
+		<a href=r:247>Maneuvering around</a> - Teaches you how to move the camera around
+		the <xSN/> world. (Very important imformation.)
+	</li>
+	<li>
+		<a href=r:246>Building a house</a> - This tutorial takes you step-by-step through the
+		process of building a house. The same principles can then be used for any type
+		of construction. (Very important information.)
+	</li>
+</ol>
+
+<xsectiontitle>Advanced tutorials</xsectiontitle>
+
+<p>
+	The advanced tutorials all assume you have gone through "Maneuvering around" and
+	"Building a house".
+</p>
+
+<xul>
+	<li>
+		<a href=r:814>Painting</a> - Describes how you can paint directly onto your
+		objects.
+	</li>
+	<li>
+		<a href=r:416>Making your own objects</a> - Tells you how to make your own
+		objects, such as furniture.
+	</li>
+	<li>
+		<a href=r:914>Bones</a> - This tutorial takes you through the process of
+		making a skeleton for characters so you can animate them.
+	</li>
+	<li>
+		<a href=r:893>Polygon mesh</a> - This takes you through the process of
+		creating a polygon mesh and using the polygon mesh editor.
+	</li>
+	<li>
+		<a href=r:927>Creating characters</a> - Walk through this tutorial to create
+		your own characters.
+	</li>
+	<li>
+		<a href=r:643>Making your own trees</a> - Extends the "Making your own objects" into
+		making your own trees.
+	</li>
+	<li>
+		<a href=r:630>Ground objects</a> - Learn how to use the ground editor to build
+		a topography, change the ground's texture, and add forests.
+	</li>
+	<li>
+		<a href=r:934>Caves</a> - Tells you about the caves object.
+	</li>
+	<li>
+		<a href=r:555>Animation</a> - This tutorial tells you how to create a movie
+		file (.AVI) using <xSN/>.
+	</li>
+</xul>
+

@@ -1,0 +1,165 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Create a new object from scratch"/>
+
+<p>
+	Select the type of object you wish to create.
+</p>
+
+<xChoiceButton href=XXXObjEditor>
+	<bold>Object editor</bold><br/>
+	Use the standard object editor.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton href=XXXAnimCamera>
+	<bold>Animation camera</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXBalustrade>
+	<bold>Balustrade</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXbone>
+	<bold>Bone</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXbooks>
+	<bold>Books</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXbranch>
+	<bold>Branch</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXBuildBlock>
+	<bold>BuildBlock</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXCabinet>
+	<bold>Cabinet</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXCave>
+	<bold>Cave</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXceilingfan>
+	<bold>Ceiling fan</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXcolumn>
+	<bold>Column</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXcurtain>
+	<bold>Curtain</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXcushion>
+	<bold>Cushion</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXDoor>
+	<bold>Door</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXDrawer>
+	<bold>Drawer</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXEye>
+	<bold>Eyeball</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXFireplace>
+	<bold>Fireplace</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXGrass>
+	<bold>Grass</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXGround>
+	<bold>Ground</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXhairhead>
+	<bold>Hair, head of</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXhairlock>
+	<bold>Hair, length of</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXjaw>
+	<bold>Jaw</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXleaf>
+	<bold>Leaf</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXlight>
+	<bold>Light</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXlightgeneric>
+	<bold>Light, generic</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXnoodle>
+	<bold>Noodle</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXPainting>
+	<bold>Painting</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXpathway>
+	<bold>Pathway</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXPiers>
+	<bold>Piers</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXpolyhedron>
+	<bold>Polyhedron</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXpolymesh>
+	<bold>PolyMesh</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXpool>
+	<bold>Pool</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXRevolution>
+	<bold>Revolution</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXRock>
+	<bold>Rock</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXStairs>
+	<bold>Stairs</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXsinglesurface>
+	<bold>SingleSurface</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXskydome>
+	<bold>Skydome</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXstructsurface>
+	<bold>StructSurface</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXtablecloth>
+	<bold>Tablecloth</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXtarp>
+	<bold>Tarp</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXteapot>
+	<bold>Teapot</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXtooth>
+	<bold>Tooth or claw</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXTruss>
+	<bold>Truss</bold>
+</xChoiceButton>
+<xChoiceButton href=XXXUniHole>
+	<bold>UniHole</bold>
+</xChoiceButton>
+
+<xChoiceButton href=XXXWaterfall>
+	<bold>Waterfall</bold>
+</xChoiceButton>

@@ -1,0 +1,130 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh objects - basics"/>
+
+<xPageTitle>
+	Polygon mesh objects - basics
+</xPageTitle>
+
+<p>
+	A "polygon mesh" is a surface (that may be completely enclosed to form a volume)
+	that is composed of thousands of control points. Filling in the space between
+	the control points is a surface made of thousands of small triangles.
+	Of course, the control points
+	can be moved, causing the triangles to move with them, and changing the shape
+	of the polygon mesh.
+</p>
+
+<p>
+	You can also think of polygon meshes as a piece of clay that can be sculpted into
+	any shape you wish to use; this is why polygon meshes appear under "Polygon meshes"
+	section in "Object pieces".
+</p>
+
+<p>
+	Polygon meshes use a lot of memory and require a long time to draw because of their
+	complexity. (Don't use them when a different type of object will do.)
+	However, they come in very handy when building an "organic" (aka: irregular,
+	not geometric, etc.) shape such as a person, animal, or even a pillow.
+</p>
+
+<p>
+	To create and modify a polygon mesh to the shape you desire:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined polygon mesh (under "Polygon meshes" in the "Object pieces"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your model.
+	</li>
+</ol>
+
+<xsectiontitle>Phase I</xsectiontitle>
+<p>
+	Polygon meshes have two "phases" of existence. In the first phase they're solid
+	and geometric, but in the second they soften and become maleable. Newly created
+	polygon meshes start in Phase I (solid).
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonObjControlNSEWUD/> tool, drag the scale control points to
+		resize the shape to however large you want it. You can also squash it into
+		an oblong shape.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the polygon mesh.
+	</li>
+	<li>
+		You will see a slider for the number of <bold>control points</bold> and a comob-box
+		for the amount of <bold>smoothing</bold>. You can adjust these as you need. Here's
+		what they do:
+	</li>
+	<p>
+		Increasing the <bold>control points</bold> makes the object smoother,
+		just like the smoothing setting, but it also provides you with more control points
+		in Phase II so you can add fine detail to your object. (If the shape you ultimately
+		want is basically the same shape as you have now then you won't need many control
+		points, but if you want to build a face, then you'll need more control points.)
+		More control points increase the drawing time and the file size.
+	</p>
+	<p>
+		Increasing the <bold>smoothing</bold> will make the object look smoother. It
+		will also take longer to draw.
+	</p>
+	<li>
+		Once you have stretched and squashed your Phase I polygon-mesh sufficiently,
+		it's time to convert it to Phase II, so you can start shaping it like clay;
+		press the <bold>Convert to phase II</bold> button.
+	</li>
+</ol>
+
+<xsectiontitle>Phase II</xsectiontitle>
+<ol>
+	<li>
+		As soon as you press the "Convert to phase II" button you'll see control points
+		appear on the polygon mesh. The polygon mesh dialog will change
+		also. <bold>Close</bold> the polygon mesh dialog box so you can edit the mesh.
+	</li>
+	<li>
+		Using the <xButtonObjControlNSEWUD/> tool, drag the shape control points around
+		to adjust the shape of the object, like you would work a piece of clay
+		with your fingers.
+	</li>
+	<p>
+		The <xButtonObjControlInOut/> tool is particularly useful for polygon meshes because
+		it allows you to push and pull the points into and out of the screen. 
+	</p>
+	<li>
+		You'll notice that when you move one point, the neighboring points stay
+		in the same place. If you want broader control of your manipulations and
+		want adjuacent points to move,
+		just select the <xButtonObjControlDialog/> tool and click on the
+		object. In the "Which control points are displayed" dialog, change
+		the <bold>"Drag size"</bold> measurement to a larger value.
+	</li>
+	<li>
+		Polygon mesh objects start out with only a few hundred control points.
+		This may not be enough for you to add all the detail you want to the object.
+		To allow more detail, select the <xButtonObjControlDialog/> tool and
+		press one of the <bold>"Add detail XXX"</bold> buttons. You'll see
+		more control points appear right away. Add as many control points
+		as you need, but try not to add too many since more control points require
+		more memory and slow the object down more.
+	</li>
+</ol>
+
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:521>Polygon mesh objects - merging</a></li>
+	<li><a href=r:522>Polygon mesh objects - morphs</a></li>
+	<li><a href=r:520>Polygon mesh objects - textures</a></li>
+</xul>

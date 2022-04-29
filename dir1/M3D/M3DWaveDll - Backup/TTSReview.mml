@@ -1,0 +1,182 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review TTS voice"/>
+
+<xChoiceButton name=makevoice>
+	<bold>Save the text-to-speech voice</bold><br/>
+	Press this after you have reviewed and fixed all your phonemes. This will produce
+	a TTS voice file that you can load into the wave editor or <xSN/> and synthesize
+	text. The voice is <bold><<<$NUMUNITS>>></bold> units.
+</xChoiceButton>
+
+<xChoiceButton name=makeprosody>
+	<bold>Save the prosody model</bold><br/>
+	This button will save the prosody model from the voice, allowing you to incorporate
+	the prosody model in another text-to-speech voice.
+</xChoiceButton>
+
+<xbr/>
+
+<p>
+	You can listen to the voice and <bold>fine-tune phonemes for a text-to-speech voice</bold> (not
+	a prosody model), if you wish. In my
+	experience, this is <bold>much more work than it's worth.</bold>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Recordings</xtrheader>
+	<tr><td>
+		Click on the recording you wish to review.
+	</td></tr>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=recscroll sort=false name=rec/></big>
+		<scrollbar height=40% orient=vert name=recscroll/>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=playorig>
+			<bold>Play original recording</bold><br/>
+			Plays the original recording (although the vocal tract has been resynthesized).
+		</xChoiceButton>
+		<xChoiceButton name=markreview>
+			<bold>Mark phonemes as "reviewed" and continue to next recording</bold><br/>
+			Once you have listened to the synthesized voice and fixed any mistakes, press this.
+			It will mark all the phonemes as reviewed and jump to the next sentence in the list
+			containing unreviewed phonemes. Once you reach the end of the list you're finished
+			with your voice.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Text-to-speech</xtrheader>
+	<tr><td>
+		Type in the sentence you wish to synthesize and then
+		press <button name=synthnow><bold>Synthesize</bold></button>:
+		<xEditOneLine maxchars=126 name=synthtext/>
+		<xChoiceButton name=markreviewsynth>
+			<bold>Mark phonemes as "reviewed" and continue to next word</bold><br/>
+			Once you have listened to the synthesized voice and fixed any mistakes, press this.
+			It will mark all the phonemes as reviewed and jump to the next word in
+			the lexicon that contains
+			unreviewed phonemes.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton style=righttriangle name=playnew>
+	<bold>Play synthesized voice</bold><br/>
+	Plays the synthesized voice version of the recording. Listen for phonemes that
+	sound wrong (such as an "aa" phoneme sounding like an "oo" phoneme), or where
+	phonemes don't blend smoothly (soundlike like a pop). Use the "black list" below
+	to fix these problems.
+</xChoiceButton>
+
+<xChoiceButton name=editnew>
+	<bold>Edit synthesized voice</bold><br/>
+	This runs the wave editor using the synthesized voice; sometimes the errors are
+	easier to see in the editor than to hear. You will be asked what file you wish
+	to save it as.
+</xChoiceButton>
+
+
+<xTableCenter width=100%>
+	<xtrheader>Phoneme recordings</xtrheader>
+	<<<$PHONEREC>>>
+</xtablecenter>
+
+<xbr/>
+
+<xsectiontitle>Instructions</xsectiontitle>
+
+<p>
+	The audio recordings of the speaker have been analyzed and mXac NLP Editor has
+	made its best guess for which recordings to use for which phonemes. The analysis
+	will choose a good recording most of the time, but sometimes it makes a
+	mistake.
+</p>
+
+<p>
+	Before you produce a final text-to-speech voice,
+	you will need to review all the phoneme recordings that the analysis has choosen.
+	These instructions will show you how.
+</p>
+
+<p>
+	If you <bold>haven't recorded all the sentences you intend to</bold> then you
+	can follow the upcoming instructions, but don't need to take them too seriously.
+	There is no point in marking phonemes as bad (see below) because when you record more sentences
+	later, the anlysis may decide to use a different phoneme recording anyway.
+	You can skip the steps and just press "Make a voice".
+</p>
+
+<p>
+	You should review the recordings that analysis has chosen by:
+</p>
+
+<ol>
+	<li>
+		Select a recording from the <bold>"Recordings"</bold> list that you wish to
+		hear, or type in text under <bold>"Text-to-speech"</bold> and press <bold>Synthesize</bold>.
+	</li>
+	<li>
+		If you have selected a recording,
+		press <bold>"Play original recording"</bold> to hear the sentence as you
+		originally recorded it. You don't need to do this if you use Text-to-speech.
+	</li>
+	<li>
+		Press the <bold>"Play synthesized voice"</bold> to play the voice after it has
+		been synthesized. The voice will be played with the original phonemes, phoneme
+		timing, volume, and pitch. However, the voice will be reconstructed by pasting
+		together recordings of individual phonemes.
+	</li>
+	<p>
+		The individual phoneme recordings were
+		chosen from your collection of recordings by the analysis process. Sometimes
+		the anlysis process choses the wrong recordings to use for a phoneme. Either
+		it's of a completely wrong sound (such as an "oo" sound being used where an "aa"
+		sound should be played), or the phoneme doesn't join well to its neighbors,
+		which will sound like a click.
+	</p>
+	<p>
+		When you play the synthesized voice you'll be able to hear these problems.
+		You can then mark the phonemes as "bad" (see below) to fix them by eliminating
+		to bad recording from the candidates.
+	</p>
+	<p>
+		Sometimes it's easier to see the differences than hear them;
+		pressing the <bold>"Edit synthesized voice"</bold> will run the wave editor.
+		If you <bold>do change the wave</bold> then you will need to re-analyze the voice.
+	</p>
+	<li>
+		Alternatively, you can <bold>click on</bold> the words or phonemes in the
+		"Phoneme recordings" section to hear what they sound like.
+	</li>
+	<li>
+		If you notice that a word or phoneme doesn't sound right (such as the wrong phoneme,
+		or it doesn't blend in with adjacent phonemes well) then press
+		the <bold>"Mark as bad"</bold> link. The next best choice will be made and the
+		sentence resynthesized; press
+		the word/phoneme again to hear that choice. Repeat until you get a phoneme you like.
+		If you can't find any, you'll either need to edit the wave file with the phoneme (and
+		adjust the phoneme's start and end time), or re-record the sentence.
+	</li>
+	<li>
+		Once all the phonemes in the sentence sound good,
+		press <bold>"Mark phonemes as "reviewed" and continue"</bold>. This will remember
+		that you have looked at the phonemes in this sentence, and then find the next sentence
+		in the list, skipping sentences with phonemes that have already been reviewed.
+	</li>
+	<li>
+		<bold>Repeat</bold> the process of reviewing sentences, fixing bad phonemes,
+		and then pressing the "Mark phonemes as "reviewed" and continue" button.
+	</li>
+	<li>
+		<bold>When you have reviewed all the sentences</bold>, or if you just want to
+		play around with your text-to-speech voice, press
+		the <bold>"Make a voice"</bold> button.
+	</li>
+	<li>
+		In real life no one has time to review all the phonemes, so you may just wish
+		to skip the review step and fix phoneme problems as they arrise.
+	</li>
+</ol>

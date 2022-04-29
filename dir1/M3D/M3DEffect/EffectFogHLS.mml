@@ -1,0 +1,76 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Fog (hue, lightness, saturation)"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Thickness</xtrheader>
+	<tr><td>
+		You can control the "thickness" of fog independently for red, green, and blue.
+		This lets you simulate atmopheric haze, where green fades away quicker than
+		red or blue.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Hue distance</bold> - The distance (in m or km) where the half
+			the color component comes from the original pixel, and half from the fog.
+			Set this to "0" if you don't want hue affected.
+		</td>
+		<td><bold><edit width=100% name=dist0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness distance</bold>
+		</td>
+		<td><bold><edit width=100% name=dist1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation distance</bold>
+		</td>
+		<td><bold><edit width=100% name=dist2/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Color</xtrheader>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changecolor>
+				<bold>Fog color</bold><br/>
+				The color used for fog.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=color/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignoreskydome>
+			<bold>Don't affect the skydome</bold><br/>
+			If checked the fog won't affect the skydome.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the fog won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

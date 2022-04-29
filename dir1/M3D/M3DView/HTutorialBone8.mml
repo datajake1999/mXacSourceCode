@@ -1,0 +1,133 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Inverse kinematics"/>
+
+<xPageTitle>
+	Bones tutorial - Inverse kinematics
+</xPageTitle>
+
+
+<p>
+	The ability to click on a joint, move it to wherever you want, and have the rest
+	of the body follow along with that movement, is called <bold>"Inverse kinematics (IK)"</bold>.
+	In every-day experience it's what's happens when a mother pulls her child by
+	it's hand... the rest of the child's body pretty much follows along.
+</p>
+
+<p>
+	When you create a skeleton, all the inverse kinematics is automatically set up.
+	A major factor in the setup are the limits of movmement (obviously) and the
+	envelope sizes. The envelope sizes are important because the are used to calculate
+	the mass (technical term for weight) of the bone. This mass controls how much
+	the bone is willing to move. Smaller bones have ligher mass so they will move first
+	when they're pulled. Example: If you pull a person's finger back, the finger will
+	bend before the rest of the arm comes with it. The finger has less mass.
+</p>
+
+<p>
+	Inverse kinematics, for the most part, doesn't require any more work on your
+	part. There are a few things you should know:
+</p>
+
+<xsectiontitle>Fixing joint locations</xsectiontitle>
+
+<p>
+	You may have noticed that when you pull one
+	limb (such as an arm), the whole body moves, including the other arm and feet.
+	This can be a bit inconvenient since you may have wanted the feet in their
+	previous position.
+	The inverse kinetics algorithm does this because (essentially) you just told it
+	to move the arm bone to that location at all costs.
+</p>
+
+<p>
+	You can "fix" (technical term "constrain") parts of the skeleton to specific
+	locations until you say otherwise (by moving their control point or manually
+	changing their angle). Typically, you could constrain the location of the feet
+	and wrists. That way, if you pull one wrist, the other wrist and feet stay in the
+	same position as before.
+</p>
+
+<p>
+	To fix a bone:
+</p>
+
+<ol>
+	<li>
+		<bold>Return</bold> to the bone editor.
+	</li>
+	<li>
+		Select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on bone you wish to fix.
+	</li>
+	<li>
+		In the "Modify a bone" dialog, scroll down to the
+		"Inverse kinematics" section and <bold>check</bold> the "Can be fixed" button.
+	</li>
+	<li>
+		<bold>Repeat</bold> for all the bones you wish to fix.
+	</li>
+	<li>
+		Save the object with <xButtonSave/>.
+	</li>
+	<li>
+		Back in the main world view, create an instance of the object
+		using <xButtonObjNew/>.
+	</li>
+	<li>
+		<bold>Select the object</bold> and use <xButtonObjControlNSEWUD/> to move the
+		control points around. You'll notice that the fixed bones don't move around
+		unless you tell them to. (Actually, they will move if you pull hard enough.)
+	</li>
+</ol>
+
+<p>
+	You can control how much an bone will insist on staying fixed; you might want
+	to make sure that the feet are more fixed than the wrists since feet sliding
+	across the ground is a bigger animation error than a hand moving slightly.
+	To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the character.
+	</li>
+	<li>
+		In the "Attributes" page that appears, find the bone's name follwed by
+		"(Fixed)". <bold>Move</bold> the slider to the right to increase the strength
+		of the immobility, or left to weaken it. Moving the slider all the way to the
+		left will temporarily disabled the "fixed" setting, allowing the limb to move
+		freely.
+	</li>
+</ol>
+
+
+<xSectiontitle>Other IK information</xSectionTitle>
+<p>
+	<bold>Important:</bold> Moving the joints through control points (inverse kinematics)
+	will only work properly when animating if <bold>all the skeleton's attributes</bold> are
+	exported by the object that contains the skeleton. By default the attributes are all
+	exported, so you have nothing to worry about unless you specifically delete them
+	in the <xButtonObjEditor/> button. The exports are needed because the animation editor
+	stores the attribute values that are exported only, so if a bone's attributes are not
+	exported they won't be animated.
+</p>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:913><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:533>Face forwards control point</a></li>
+	<li><a href=r:534>Keeping feet on the ground</a></li>
+</xul>

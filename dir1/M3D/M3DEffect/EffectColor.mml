@@ -1,0 +1,123 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Color"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Hue, lightness, saturation</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=hlson>
+			<bold>Use hue, lightness, and saturation</bold><br/>
+			Check this to use the hue, lightness, and saturation effects.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Hue</bold> - Shifts the color in the image.
+		</td>
+		<td><scrollbar orient=horz min=-50 max=50 name=hls0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness</bold> - Controls how bright the image is.
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=hls1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation</bold> - Controls how colorful the image is.
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=hls2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Contrast and brightness</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=cbon>
+			<bold>Use contrast and brightness</bold><br/>
+			Check this to use the contrast and brightness effects.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Contrast</bold> - Causes the image to look faded (left) or
+			more extremes of dark and light (right).
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=cb0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brightness</bold> - The further to the right, the brighter
+			the image.
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=cb1/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Red, green, blue</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=rgbon>
+			<bold>Use red, green, blue</bold><br/>
+			Check this to use the red, green, blue effects.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Red</bold> - Increases (or decreases) the amount of red.
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=rgb0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Green</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=rgb1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blue</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=rgb2/></td>
+	</tr>
+	<tr><td align=center>
+		<button style=x checkbox=true name=rgbinvert0>
+			<bold>Invert red</bold><br/>
+		</button>
+		<button style=x checkbox=true name=rgbinvert1>
+			<bold>Invert green</bold><br/>
+		</button>
+		<button style=x checkbox=true name=rgbinvert2>
+			<bold>Invert blue</bold><br/>
+		</button>
+	</td></tr>
+</xtablecenter>
+
+
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the color effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

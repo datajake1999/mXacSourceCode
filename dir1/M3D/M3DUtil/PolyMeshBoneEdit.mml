@@ -1,0 +1,110 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Bone affects morph"/>
+
+<p>
+	This dialog lets you automatically connect the motion of a bone with a morph.
+	You might want to do so to make muscles bulge more depending upon a joint's angle,
+	or to fix crimping that appears at the back of the knees or the elbow when they're
+	bent. You can also use the automatic morphing to create wrinkles in clothing.
+</p>
+
+<p>
+	Each bone can affect up to two morphs based upon the angle of the bone.
+</p>
+
+<!xComboAngle>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Bend</elem>
+		<elem name=1>Side-to-side</elem>
+		<elem name=2>Twist</elem>
+		<elem name=3>Extend</elem>
+	</combobox></bold>
+</xComboAngle>
+
+<xtablecenter width=100%>
+	<xtrheader>Affect #1</xtrheader>
+	<tr>
+		<td>
+			<bold>Morph</bold> - Select the morph you wish affected based upon this bone.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=morph0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Joint motion</bold> - How the joint moves.
+		</td>
+		<td><xComboAngle name=dim0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Effective angle, low</bold> - This is the range (of the angle specified by
+			joint motion) which affects the morph. For example, if a bicep muscle only bulges
+			if the elbow is past 45 degrees then the "low" value would be 45, and "high" would
+			be 90.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=anglelow0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Effective angle, high</bold> - High value of the range.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=anglehi0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Morph value, low</bold> - Value of the morph when the angle is at or
+			below the low angle. In the case of the biceps this would be "0".
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=morphlow0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Morph value, high</bold> - Value of the morph when the angle is at or
+			able the high angle. In the case of the biceps this would be "1.0".
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=morphhi0/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Affect #2</xtrheader>
+	<tr>
+		<td>
+			<bold>Morph</bold>
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=morph1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Joint motion</bold>
+		</td>
+		<td><xComboAngle name=dim1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Effective angle, low</bold>
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=anglelow1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Effective angle, high</bold>
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=anglehi1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Morph value, low</bold>
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=morphlow1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Morph value, high</bold>
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=morphhi1/></bold></td>
+	</tr>
+</xtablecenter>
+

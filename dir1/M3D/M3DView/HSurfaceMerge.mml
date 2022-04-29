@@ -1,0 +1,36 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Merging walls, floors, and roofs"/>
+
+<xPageTitle>
+	Merging walls, floors, and roofs
+</xPageTitle>
+
+<p>
+	If you have two or more walls, floors, or roofs that are aligned with each other
+	and touching (technical term is co-planar) then you can "merge" them together.
+	This will combine the two surfaces into one object, making it easier to handle
+	and eliminating any breaks in textures.
+</p>
+
+<ol>
+	<li>
+		Use the <xButtonSelIndividual/> tool to select one of the walls (floors, roofs, etc.).
+	</li>
+	<li>
+		Select the <xButtonObjMerge/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the non-selected wall (floor, roof, etc.).
+	</li>
+	<p>
+		The two surfaces will be merged together. If they aren't then check to make sure
+		they're both flat, touching, on the same plane, and the same thickness.
+	</p>
+	<p>
+		<bold>Caution:</bold> Merging two surfaces will sometimes rotate the textures
+		in overlays and may get the bevelling setting wrong. You should look over the merged
+		surface to look for changes and fix any that need it.
+	</p>
+</ol>
+

@@ -1,0 +1,44 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Cabinet pieces"/>
+
+<xPageTitle>
+	Cabinet pieces
+</xPageTitle>
+
+<p>
+	You can use the "cabinet" object to create kitchen counters, bathroom vanities, shelves,
+	etc. This will allow you to create the most common styles. However, if you need
+	more control then you can build a cabinet out of individual pieces: the countertop,
+	cabinet walls, and shelves. (You can even build cabinets from simpler elements like
+	individual boards, found
+	in the "Object pieces" section.)
+</p>
+
+<p>
+	There are two ways you can end up with cabinet pieces: By "deconstructing" a
+	cabinet object using <xButtonObjDeconstruct/>, or by creating them using
+	the <xButtonObjNew/> tool and looking in the "Cabinet pieces" section
+	under "Object pieces".
+</p>
+
+<p>
+	Cabinet pieces are really "Surface objects" in disguise. Surface objects are used
+	to create walls, roofs, ceilings, and floors in houses. The only difference is that
+	the cabinet pieces are much thinner and smaller. Everything else: Object embedding,
+	overlays, cutouts, and shaping, works exactly the same. For more information on
+	"Surface objects" follow the "See also..." links below.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:454>Cabinets</a></li>
+	<li><a href=r:337>Customized doors and windows</a></li>
+	<li><a href=r:347>Door and window size</a></li>
+	<li><a href=r:348>Opening and closing doors and windows</a></li>
+	<li><a href=r:305>Surfaces - Curved walls, roofs, and floors</a></li>
+	<li><a href=r:304>Surfaces - Overlaying textures on walls, roofs, and floors</a></li>
+	<li><a href=r:303>Surfaces - Wall, roof, and floor edges</a></li>
+	<li><a href=r:302>Surfaces - Wall, roof, and floor thickness</a></li>
+</xul>

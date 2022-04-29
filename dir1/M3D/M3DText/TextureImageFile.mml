@@ -1,0 +1,261 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Bitmap or JPEG image"/>
+
+<p>
+	Use this texture creator to use your own bitmap (.bmp) or JPEG (.jpg) file as
+	a texture. Just type in the file name below to load the image in.
+</p>
+
+<p>
+	You can either:
+</p>
+
+<xul>
+	<li>
+		<bold>Produce your own images</bold> - Using a digital camera take an image of the surface.
+		Load in your favorite paint program and crop the image to a repeatable grid.
+		Save that as a .bmp or .jpg. Load it into <xSN/> using this dialog box.
+	</li>
+	<li>
+		<bold>Professionally produced textures</bold> - Search on the Internet for "3d textures"
+		or "CAD textures". Some can be download for free while others require that you pay
+		for them. Make sure they come as a .bmp or .jpg. Use this dialog to load them
+		into <xSN/>.
+	</li>
+</xul>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Color image</xtrheader>
+	<tr><td>
+		This image affects the color of the texture. It has no effect on the transparency,
+		bump map, specularity, or glow.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the image or press "Browse"
+			to see a list of files. Leave this blank if you wish to use the default
+			color.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=file/><br/>
+			<button name=browse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changedef>
+				<bold>Default color</bold><br/>
+				Click this to change the default color for the surface (if it doesn't
+				have any color image file.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=defcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - How wide the image is, in meters.
+		</td>
+		<td><edit maxchars=64 width=100% name=width/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=cached>
+			<bold>Store the image in every <xSN/> file that uses it</bold><br/>
+			If this <bold>is checked</bold> then the texture will be stored in every <xSN/> file that uses
+			it. Anyone that you give the file to will be able to see the texture. However, this
+			will make the <xSN/> files larger - sometimes by several hundred K per image texture.
+			<p/>
+			If this <bold>isn't checked</bold>, then your <xSN/> files will be smaller, but
+			the texture won't display on other computers.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency from the color image</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=transuse>
+			<bold>Use transparency</bold><br/>
+			If checked, then any color in the image that matches the following color will
+			be made transparent. Usually this color will be a white or black background.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetrans>
+				<bold>Change transparency color</bold><br/>
+				This is the color that is turned transparent.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=transcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color match</bold> - The further to the left, the more exact the color
+			match must be for it to be made transparent. Moving the slider to the right
+			will allow close matches to be made transparent.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=transdist/>
+		</td>
+	</tr>
+</xtablecenter>
+<!xComboRGBChannel>
+	<bold><combobox cbheight=150 width=100% MACROATTRIBUTE=1>
+		<elem name=0><font color=#800000><bold>Red</bold></font></elem>
+		<elem name=1><font color=#008000><bold>Green</bold></font></elem>
+		<elem name=2><font color=#000080><bold>Blue</bold></font></elem>
+	</combobox></bold>
+</xComboRGBChannel>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency image</xtrheader>
+	<tr><td>
+		If you enter a file name for the transparency image,
+		the transparency of the texture will be gotten
+		from a .bmp or .jpg image, based on either the red, green, or blue color. The brighter
+		the color, the more transparent the region.
+		The transparency image must be the same size (in pixels) as the color image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the transparency image or press "Browse"
+			to see a list of files. Leave this blank if you do not wish transparency to come
+			from an image.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=transfile/><br/>
+			<button name=transbrowse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color</bold> - Which color of the image is used to determine the amount of
+			transparency?
+		</td>
+		<td><xComboRGBChannel name=transrgb/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Glossiness image</xtrheader>
+	<tr><td>
+		If you enter a file name for the glossiness image,
+		the glossiness of the texture will be gotten
+		from a .bmp or .jpg image, based on either the red, green, or blue color. The brighter
+		the color, the more glossy the region.
+		The glossiness image must be the same size (in pixels) as the color image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the glossiness image or press "Browse"
+			to see a list of files. Leave this blank if you do not wish glossiness to come
+			from an image.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=glossfile/><br/>
+			<button name=glossbrowse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color</bold> - Which color of the image is used to determine the amount of
+			glossiness?
+		</td>
+		<td><xComboRGBChannel name=glossrgb/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Bump-map image</xtrheader>
+	<tr><td>
+		If you enter a file name for the bump-map image,
+		the bumps of the texture will be gotten
+		from a .bmp or .jpg image, based on either the red, green, or blue color. The brighter
+		the color, the higher the bumps.
+		The bump-map image must be the same size (in pixels) as the color image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the bump-map image or press "Browse"
+			to see a list of files. Leave this blank if you do not wish any bumps on the texture.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=bumpfile/><br/>
+			<button name=bumpbrowse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color</bold> - Which color of the image is used to determine the amount of
+			bumps?
+		</td>
+		<td><xComboRGBChannel name=bumprgb/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - The distance in height between the tallest and lowest portions
+			of the bump map. Usually this is only a few mm.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=bumpheight/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Glow image</xtrheader>
+	<tr><td>
+		If you enter a file name for the glow image,
+		the texture will provide its own light source and glow using the given image.
+		The glow image must be the same size (in pixels) as the color image. The
+		image represents the amount of glow given when the object is seen under full
+		sunlight.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the glow image or press "Browse"
+			to see a list of files. Leave this blank if you do not wish the texture to glow.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=glowfile/><br/>
+			<button name=glowbrowse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+</xtablecenter>
+

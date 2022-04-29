@@ -1,0 +1,11 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - Conventions"/>
+
+<xPageTitle>
+	Bones - Conventions
+</xPageTitle>
+
+<p>
+	BUGBUG - Bones that should be handled by all human characters.
+</p>

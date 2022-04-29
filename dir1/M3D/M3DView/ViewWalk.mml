@@ -1,0 +1,92 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Walkthrough view settings"/>
+
+<p>
+	You can use this page to hand-enter values for location and rotation.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Current view location</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>East/west</bold> - Position of the camera relative to the center
+			of the house.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>North/south</bold> - Position of the camera relative to the center
+			of the house.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Up/down</bold> - Position of the camera relative to the center
+			of the house.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transz/></bold>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width=66%>
+			<bold>Longitude</bold> - Rotate the camera so it's looking towards this
+			longitude. 0 degrees is north, -90 east, 180 south, 90 west.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotz/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Latitude</bold> - Rotate the camera so it's looking up/down at this
+			latitude. 0 is straigh ahead. 90 is straight up. -90 is straight down.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Tilt</bold> - Tilt the camera to the right or left by this angle
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=roty/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Other settings</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Walking speed</bold> - When using the move forward/backward and
+			rotate left/right mouse control, this is the distance covered per second.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=speed/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Rotation speed</bold> - Number of degrees the view can turn in a second.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=grid/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+

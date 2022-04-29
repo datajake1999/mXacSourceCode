@@ -1,0 +1,198 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify function"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+
+<null><<<$IFTAB0>>>
+<xtablecenter width=100%>
+	<xtrheader>Function</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the function. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<p/>
+			<hr/>
+			<p/>
+			
+			<bold><a>Help topic
+				<xHoverHelp>
+					Type in the help category that this function should be placed under.
+					Leave this blank if you do not wish the function placed in a help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat0/></bold>
+			<p/>
+			
+			<bold><a>Help topic (alternate)
+				<xHoverHelp>
+					Type in the alternate help category that this function should be placed under.
+					Leave this blank if you do not wish the function placed in an alternate help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat1/></bold>
+		</td>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the function.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the function that can be used for help.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true <<<$LIBREADONLY>>> name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+<<<$ENDIFTAB0>>></null>
+
+<null><<<$IFTAB1>>>
+<xtablecenter width=100%>
+	<xtrheader>Parameters</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Parameter name
+			<xHoverHelp>
+				The name of the parameter. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the paramter slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the parameter means. This description is displayed
+				in help.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$PARAMSLOT>>>
+	<tr>
+		<td width=33%><bold><a>Return value description
+			<xHoverHelp>
+				This describes what kind of values are returned by the function.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><edit width=100% maxchars=20000 multiline=true wordwrap=true <<<$LIBREADONLY>>> name=retdesc/></bold></td>
+	</tr>
+	<tr><td>
+		<<<$IFMENULIBRO>>><xChoiceButton <<<$LIBENABLE>>> name=addparam>
+			<bold>Add more parameter slots</bold>
+		</xChoiceButton><<<$ENDIFMENULIBRO>>>
+		<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=anynumparam>
+			<bold>This function can be passed any number of parameters</bold><br/>
+			If checked then the function can be passed any number of parameters.
+			This should be un-checked for most functions so that the compile can double-check
+			that the right number of parameters are passed to the function.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+<<<$ENDIFTAB1>>></null>
+
+
+<null><<<$IFTAB3>>>
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this function</bold><br/>
+	Permenantly delete the function.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this function</bold><br/>
+	After you duplicate the function, make sure to rename the new function or
+	you won't be able to compile properly.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the function to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+<<<$ENDIFTAB3>>></null>
+
+<comment><xtablecenter width=100%>
+	<xtrheader>Variables</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Variable name
+			<xHoverHelp>
+				The name of the variable. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the variable slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Initial value
+			<xHoverHelp>
+				This is the initial value of the variable. If you wish to initialize it
+				to a string, don't forget to put quotes around the string.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the variable is used for.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$VARSLOT>>>
+	<<<$IFMENULIBRO>>><tr><td>
+		<xChoiceButton name=addvar>
+			<bold>Add more variable slots</bold>
+		</xChoiceButton>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter></comment>
+
+<null><<<$IFTAB2>>>
+<xtablecenter width=100%>
+	<xtrheader>Code</xtrheader>
+	<tr><td align=center>
+		<align tab=16><font face="courier new">
+			<edit width=90% height=45% maxchars=200000 multiline=true wordwrap=false capturetab=true prelineindent=true vscroll=codescroll <<<$LIBREADONLY>>> name=code/>
+		</font></align>
+		<scrollbar orient=vert height=45% name=codescroll/>
+		<br/>
+		<edit width=50% maxchars=128 name=codesearch/>
+		<button name=codesearchthis><bold>Search this</bold>
+			<xHoverHelp>
+				Pressing this searches the current code block for the given text.
+			</xHoverHelp>
+		</button>
+		<button name=codesearchall><bold>Search all</bold>
+			<xHoverHelp>
+				Pressing this searches all the code in the project for the given text.
+			</xHoverHelp>
+		</button>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=compthis>
+			<bold>Test compile this function</bold><br/>
+			Tries compiling only this function, looking for errors.
+		</xChoiceButton>
+		<xChoiceButton href=compall>
+			<bold>Test compile the entire project</bold><br/>
+			Tries compiling only the entire project, looking for errors.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+<<<$ENDIFTAB2>>></null>

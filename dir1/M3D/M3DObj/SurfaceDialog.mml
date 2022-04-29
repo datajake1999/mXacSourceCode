@@ -1,0 +1,126 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Surface settings"/>
+
+<xSectionTitle>Structure</xSectionTitle>
+
+<xChoiceButton href=hideclad>
+	<bold>Cladding</bold><br/>
+	Use this to hide the wall cladding and expose the structure, and to specify which
+	side is external or internal.
+</xChoiceButton>
+
+<xChoiceButton href=thickness>
+	<bold>Thickness</bold><br/>
+	Change the thickness of the material, included the depth of the studs (or other
+	structure) and thickness of the cladding on both sides.
+</xChoiceButton>
+
+<xChoiceButton href=framing>
+	<bold>Framing</bold><br/>
+	Change the framing of the surface and if it's visible.
+</xChoiceButton>
+
+<xSectionTitle>Curvature</xSectionTitle>
+
+<xChoiceButton href=controlpoints>
+	<bold>Add or remove control points</bold><br/>
+	Visiting this page will let you add or remove control points to your surface, giving
+	you more control over its curvature.
+</xChoiceButton>
+
+<xChoiceButton href=curvesegment>
+	<bold>Specify curvature</bold><br/>
+	Tell <xSN/> what kind of curves (straight, bi-cubic patch, circle segments, or
+	elliptical) you want to use at different places in the surface.
+</xChoiceButton>
+
+<xChoiceButton href=detail>
+	<bold>Curvature detail</bold> <italic>(Not used very often)</italic><br/>
+	Since all curves must be subdivded into straight
+	segments to draw this, this allows you to control how much <xSN/> should divide
+	the curves. The more subdivisions the smoother the curve but the slower the drawing time.
+</xChoiceButton>
+
+
+
+<xsectiontitle>Edges</xsectiontitle>
+
+<xChoiceButton href=edgeinter>
+	<bold>Specify the edge through intersections</bold><br/>
+	Change the shape (edge) of the surface using the intersections of other surfaces
+	with this one.
+</xChoiceButton>
+
+<xChoiceButton href=edgemodify>
+	<bold>Modify edge control points</bold><br/>
+	This page lets you add/remove control points for shaping the edges of the surface.
+	You can also control the edge's curvature.
+</xChoiceButton>
+
+<xChoiceButton href=edgetexture enabled=false>
+	<bold>Edge texture or color</bold><br/>
+	Subdivide the edge so that different colors or textures are used based upon
+	the height.
+</xChoiceButton>
+
+<xChoiceButton href=bevelling>
+	<bold>Bevelling</bold><br/>
+	Use this page to adjust how much the surface is bevelled on the left, right,
+	top, and bottom edges.
+</xChoiceButton>
+
+
+
+<xsectiontitle>Overlays</xsectiontitle>
+<p>
+	Overlays are regions of the surface where the color or texture is different than
+	that shown in the rest of the surface.
+</p>
+
+<xChoiceButton href=oversidea>
+	<bold>Side A (top or external side)</bold><br/>
+	Modify the overlays (regions of the surface with different coloration or textures)
+	on side A. <<<$WHICHSIDEA>>>
+</xChoiceButton>
+
+<xChoiceButton href=oversideb>
+	<bold>Side B (bottom or internal side)</bold><br/>
+	Modify the overlays (regions of the surface with different coloration or textures)
+	on side B. <<<$WHICHSIDEB>>>
+</xChoiceButton>
+
+<xsectiontitle>Cutouts</xsectiontitle>
+
+<p>
+	Cutouts are pieces of the surface that have been removed - usually by the "intelligent
+	adjust" of walls intersecting with other walls and roofs, etc.
+</p>
+
+<xChoiceButton href=cutouta>
+	<bold>Side A (top or external side)</bold><br/>
+	Modify the cutouts that exist on side A. <<<$WHICHSIDEA>>>
+</xChoiceButton>
+
+<xChoiceButton href=cutoutb>
+	<bold>Side B (bottom or internal side)</bold><br/>
+	Modify the cutouts that exist on side B. <<<$WHICHSIDEB>>>
+</xChoiceButton>
+
+<xChoiceButton style=righttriangle name=reducetocutout>
+	<bold>Shrink the size of the surface by cutouts</bold><br/>
+	Often times one end of a wall will be cut out (by the intersection of the other wall)
+	yet the surface still remembers the location of its phantom piece. Pressing this
+	button will trim off the right, left, top, and bottom of the surface if they're
+	alreay cut out.
+</xChoiceButton>
+
+<xsectiontitle>Floors</xsectiontitle>
+
+<xChoiceButton href=floors>
+	<bold>Change floor definitions</bold><br/>
+	Some embedded objects, such as doors and doorways, automatically place themselves
+	at floor level (so there's no lip to step over when moving between rooms). Use
+	this page to specify what the floor levels for the surface are.
+</xChoiceButton>
+

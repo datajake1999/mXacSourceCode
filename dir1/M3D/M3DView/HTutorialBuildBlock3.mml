@@ -1,0 +1,120 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - building blocks (3)"/>
+
+<xPageTitle>
+	Tutorial - building blocks (3)
+</xPageTitle>
+
+<xSectionTitle>Adding another building block</xSectionTitle>
+
+<p>
+	While you have a basic home already built in the virtual world, let's make
+	it more complicated by adding another building block.
+</p>
+
+<ol>
+	<li>
+		Switch to the <xButtonViewFlat/> view.
+	</li>
+	<li>
+		Use <xButtonViewFlatQuick/> to look at the house "From above".
+	</li>
+	<li>
+		Click on <xButtonObjNew/>. Pick one of the building
+		block shapes from either "House blocks (common)" or "House blocks (unusual)".
+	</li>
+	<li>
+		Once you have selected the object and the dialog
+		closes, <bold>click on</bold> a point on the ground that's next to
+		your other building building block.
+	</li>
+	<li>
+		The new one should appear right next door, probably intersecting and merging in
+		with the other building block. If it doesn't, no problem. The next section
+		explains how to move objects.
+	</li>
+</ol>
+
+<xSectionTitle>Moving objects</xSectionTitle>
+
+<p>
+	To move an object:
+</p>
+
+<ol>
+	<li>
+		First selected it if it's not already. Use the <xButtonSelIndividual/> tool to
+		do so.
+	</li>
+	<li>
+		Choose the <xButtonMoveNSEW/> tool.
+	</li>
+	<li>
+		Click on the object move the mouse while holding the mouse button down.
+		The object will move along with the mouse, but only in the north, south, east,
+		or west direction.
+	</li>
+	<li>
+		<bold>Move the new building block so it intersects the other one.</bold>
+	</li>
+	<li>
+		The <xButtonMoveUD/> tool is virtually the same except that it moves objects
+		up or down. You can try moving the building block up or down if you want. It will
+		not move smoothly, but will align it's bottom with the different floor levels.
+		You may have to move the mouse up a bit before you'll see the object move.
+		If you do move it up, please <xButtonUndo/> the changes so it's back on the ground
+		floor - otherwise the rest of the tutorial might be a bit confusing.
+	</li>
+	<li>
+		The <xButtonMoveNSEWUD/> tool likewise move objects. The only difference is that
+      it doesn't restric movement; the object can be moved in any direction.
+	</li>
+</ol>
+
+<xSectionTitle>Rotating objects</xSectionTitle>
+
+<p>
+	To rotate an object:
+</p>
+
+<ol>
+	<li>
+		First selected it if it's not already. Use the <xButtonSelIndividual/> tool to
+		do so.
+	</li>
+	<li>
+		Choose the <xButtonMoveRotZ/> tool.
+	</li>
+	<li>
+		Click on the object, and holding the mouse button down, move the
+		mouse left or right. The object will rotate clockwise or counter clockwise
+		around a vertical axis at its center.
+	</li>
+	<li>
+		You can also rotate the object around the the front/back axis
+		using the <xButtonMoveRotY/> tool. The house block
+		will look a little strange being built on an angle though.
+	</li>
+	<li>
+		Press <xButtonUndo/> one or more times to undo any rotations you've made
+		using <xButtonMoveRotY/>. Rotations using <xButtonMoveRotZ/> with
+		the building blocks are fine though, as long as the two building blocks are
+		intersecting.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:276><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:286>Displaying the grid</a></li>
+	<li><a href=r:275>Movement and rotation reference points</a></li>
+	<li><a href=r:523>Object list</a></li>
+	<li><a href=r:287>Setting the grid center and orientation</a></li>
+	<li><a href=r:285>Setting the grid size</a></li>
+</xul>

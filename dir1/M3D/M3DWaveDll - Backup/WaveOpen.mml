@@ -1,0 +1,64 @@
+<?Include resource=500?>
+<PageInfo index=false title="Wavefile open or save"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff>
+
+<p>
+		<button accel=escape href=cancel>
+			<bold>Cancel</bold>
+		</button>
+		<button posn=edgeright accel=enter name=ok>
+			<bold><big><<<$OPENSAVE>>></big></bold>
+		</button>
+</p>
+
+<table width=100% bordercolor=#c0c0c0>
+	<tr><td align=center>
+		<image transparent=true bmpresource=782/>
+		<combobox width=80% sort=false cbheight=150 name=dir>
+			<elem name=test>Test</elem>
+		</combobox>
+	</td></tr>
+	<tr><td align=center>
+		<font color=#000000><listbox width=80% height=40% vscroll=listscroll sort=false name=list>
+		</listbox></font>
+		<scrollbar height=40% orient=vert name=listscroll/>
+	</td></tr>
+	<tr><td align=center>
+		File name: <font color=#000000><bold>
+			<edit maxchars=128 width=70% defcontrol=true selall=true name=edit/>
+		</bold></font>
+	</td></tr>
+</table>
+
+<p/>
+
+<table width=100% bordercolor=#c0c0c0>
+	<tr>
+		<td>
+			<bold>Look for word</bold> - If you type in a word then only those
+			files with a recording of the word will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=textfilter/></font></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Look for speaker</bold> - If you type in a speaker's name then only those
+			files with a recording of the speaker will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=speakerfilter/></font></bold></td>
+	</tr>
+	<<<$IFMULTISEL>>>
+	<tr><td>
+		<xChoiceButton name=multisel>
+			<bold>Open all visible wave files</bold><br/>
+			You can use the "Look for word" and "Look for speaker" fields to narrow a list
+			of wave files down, and then press this button to open all of them at once.
+		</xChoiceButton>
+	</td></tr>
+	<<<$ENDIFMULTISEL>>>
+</table>
+
+</font>

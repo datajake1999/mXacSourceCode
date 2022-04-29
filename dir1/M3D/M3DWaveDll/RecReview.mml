@@ -1,0 +1,39 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review recording"/>
+
+
+<p>
+	Please review the <big><bold>"<<<TEXT>>>"</bold></big> recording:
+</p>
+
+<ol>
+	<li>
+		Make sure that "s" and "sh" sounds don't sound
+		like you're blowing into the microphone by <bold><a href=playsynth>listening to the recording</a></bold>. 
+	</li>
+	<li>
+		Make sure that the words are properly identified by clicking
+		on each of the following words, <bold><<<$WORDWAVE>>></bold>. If a small bit of the start
+		or end of a word is included in an adjacent word then don't worry.
+	</li>
+	<comment><li>
+		Test phoneme start/stop (optional): <bold><<<$PHONEWAVE>>></bold>
+	</li></comment>
+	
+	<li>
+		If the sentence was recorded properly, then press <button href=keep><bold>Keep this</bold></button>.
+	</li>
+	
+	<p>
+		If there was a problem, press <button href=rerecord><bold>Re-record</bold></button> to re-do the recording.
+		<comment><button name=edit><bold>Edit</bold></button></comment>
+	</p>
+	
+	<li>
+		After reviewing a few sentences, you'll have learned how clearly you need to speak to
+		get the best results. Once you're confident that you're speaking clearly,
+		press the <button name=dontreviewmore><bold>Don't review any more recordings</bold></button> button.
+		You won't be asked to review any future sentences that you record, <bold>which makes recording go much quicker</bold>.
+	</li>
+</ol>

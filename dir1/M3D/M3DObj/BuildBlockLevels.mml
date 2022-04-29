@@ -1,0 +1,110 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Levels"/>
+
+<p>
+	Use this page to tell <xSN/> what the elevation of the levels (aka: floors) of the
+	building block are. I recommend that you <bold>do not change level elevations after
+	populating the stories with windows, doors, furniture, etc.</bold> Because <xSN/> is
+	not always entirely sure what belongs to a floor, changing levels may cause
+	objects to be placed incorrectly, requiring you to verify that they're location
+	is good.
+</p>
+
+<p>
+	Because accidentally changing the levels may cause you difficulties, unlike other
+	pages, you must press the "Commit" button at the bottom of the page to actually
+	use the new settings.
+</p>
+
+<xbr/>
+
+<xchoicebutton style=x checkbox=true name=useglobal>
+	<bold>Use global level elevations</bold><br/>
+	If this is checked then this building block uses the same floor level elevations as
+	all the other building blocks you use (that also have this checked). It ensures that
+	all floors line up and that there are no steps up or down. Changing the level here
+	will adjust the levels of all building blocks (with this button checked). If you
+	uncheck the checkbox, then the floor levels can be different than other building
+	blocks, allowing you to have sunken rooms, etc.
+</xchoicebutton>
+
+<xtablecenter width=100%>
+	<xtrheader>Levels</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Basement</bold> - If the structure has a basement (see foundations) then
+			this is the elevation of the basement. (Basements are usually at negative
+			elevations.)
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level0/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Ground floor</bold> - The elevation of the lowest floor. In the case
+			of a cement pad this is pretty close to 0 (ground level). However, for any
+			other type of foundation ground level can be any value.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level1/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>1st floor</bold> - Elevation of the second-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level2/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>2st floor</bold> - Elevation of the third-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level3/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>3rd floor</bold> - Elevation of the fourth-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level4/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Subsequent floors</bold> - If the building block is tall enough,
+			extra floors will be added this many meters (or feet) in elevation
+			apart.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=upperlevels/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Highest level</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Minimum distance between the ceiling and the top level</bold> - The
+			ceiling is placed at the intersection of the roof and the wall. Enter
+			the minimum distance between the ceiling and the top level's floor. (This
+			ensure that if there's only 1.2m between the top floor and the ceiling that
+			the top floor is discarded and the next one down is used.)
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=ceilmindist/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xchoicebutton name=commit>
+	<bold>Commit</bold><br/>
+	Click this for the builing block to incorporate any changes you've made.
+</xchoicebutton>

@@ -1,0 +1,13 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="General settings"/>
+
+<p>
+	This page lets you control some general settings for <xSN/>.
+</p>
+
+<xChoiceButton href=measurement>
+	<bold>Metric or English measurement</bold><br/>
+	Lets you tell <xSN/> if you're using metric or English measurement,
+	and the standard units.
+</xChoiceButton>

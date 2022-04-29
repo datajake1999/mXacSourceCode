@@ -1,0 +1,23 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Keep your old settings?"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Keep your old settings?</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You are starting with a "blank slate" and haven't made
+				any previous changes to your voice disguise.
+			</p>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href=p:2050>
+				<bold>Next</bold><br/>
+				Continue on to the pitch adjustment page.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

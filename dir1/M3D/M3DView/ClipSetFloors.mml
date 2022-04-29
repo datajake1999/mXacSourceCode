@@ -1,0 +1,30 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Show and hide floors/levels"/>
+
+<p>
+	From the page you can clip out floors/levels above a specific elevation.
+	(If you want to clip based on a floor use the "View a level" button.)
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Clipping settings</xtrheader>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=x checkbox=true name=clipabove>
+				<bold>Clip floors above this height</bold><br/>
+				Portions of the building above this height will be clipped.
+				Set this to a height just below the ceiling's height (relative to ground level)
+				of the level you're currently working on. This will ensure that you can see
+				the level from above without it being obstructed by the ceiling, roof,
+				or other levels.
+			</xChoiceButton>
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=64 width=100% name=above/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+

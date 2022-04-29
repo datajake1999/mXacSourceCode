@@ -1,0 +1,68 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Theory behind trees"/>
+
+<xPageTitle>
+	Tutorial - Theory behind trees
+</xPageTitle>
+
+<p>
+	A "tree" (bush, shrub, plant, etc.) is just another object in <xSN/>. You can create
+	one any way you wish; You could create the trunk and branches from extrusions, and
+	use individual polygons to draw the leaves. Conceptually it's not difficult, but
+	placing all those objects takes a lot of time. <xSN/> provides a few objects that will make
+	creating most trees easier and faster.
+</p>
+
+<p>
+	Most 3D applications provide a way to automatically generate entire trees from
+	just a few options (such as how much the tree branches out and in what direction).
+	This allows you to quickly and easily (although somewhat unpredictably) create
+	most trees. <xSN/> can do this too.
+</p>
+
+<p>
+	I recommend a slightly different approach though, because when a 3D application creates
+	a tree all in one go the tree ends up taking a long time to draw, especially when
+	ray traced, because there's no pattern to it.
+</p>
+
+<p>
+	To make life easier, and drawing faster, <xSN/> divides a tree into three parts:
+</p>
+
+<xul>
+	<li>
+		<bold>Leaves</bold> - When creating a tree, you will create an object to draw a leaf,
+		or even a flower. Most trees only have one type of leaf. You can include several
+		types of leaves.
+	</li>
+	<li>
+		<bold>Branches</bold> - For each tree you will create one (or more) branch objects.
+		A branch is just that, a branch of the tree with several hundred leaves attached.
+		You may create several different branches for each tree so that it won't be
+		visually obvious that portions of the tree repeat themselves.
+	</li>
+	<li>
+		<bold>Tree</bold> - A tree is an object with a trunk and limbs. Attached to each
+		limb is one or more copied of the branch object you create. Each branch object
+		draws the branch and a few hundred leaves.
+	</li>
+</xul>
+
+<p>
+	Making a tree from increasingly larger components not only makes a tree easier
+	to build, but it draws faster and uses less memory.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:642><bold>Next</bold></button>
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:930>Grass, fast-drawing</a></li>
+</xul>

@@ -1,0 +1,56 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Playback sample recording"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Playback sample recording</xtrheader>
+	<tr>
+		<td>
+			<p>
+				Your recording was successful. Press "Play" to hear it.
+			</p>
+			
+			<xChoiceButton style=righttriangle name=play>
+				<bold>Play</bold><br/>
+				Press this to listen to the recording you just made.
+			</xChoiceButton>
+			
+			<p>
+				Some things to watch out for:
+			</p>
+			
+			<ul>
+				<li>
+					<bold>The recording should be clear, easily understandable, and
+					not have any background noises.</bold> If it isn't, you
+					may need to get a better microphone.
+				</li>
+				<li>
+					If you're using a headset microphone and have placed the microphone
+					right in front of your mouth, instead of off to the side (the
+					correct position) then <bold>you may hear busts of breath when
+					you speak an "s", "t", or "p".</bold> You may need to adjust
+					your microphone location.
+				</li>
+			</ul>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="p:2000">
+				<bold>Next, disguise my voice</bold><br/>
+				You're finished with the microphone setup. Press this to
+				continue onto the voice disguise wizard.
+				<p/>
+				The voice diguise wizard takes a while to run through.
+				If you want to test voice chat immediately, skip to
+				the tutorial.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="p:3000">
+				<bold>Next, skip to the voice-chat tutorial</bold><br/>
+				If you won't wish to diguise your voice yet,
+				press this to just view the voice-chat tutorial.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

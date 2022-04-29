@@ -1,0 +1,95 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Object library"/>
+
+<p>
+	Select the object you want to modify from the list, and then press
+	one of the buttons below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Object to modify</xtrheader>
+	<tr><td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<tr>
+			<td width=30%>Major category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=major>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30%>Minor category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=minor>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30% valign=top>Object</td>
+			<td>
+				<font color=#000000><bold><listbox sort=true vscroll=lbscroll width=85% height=150 name=name>
+					<elem name=1><small>Test elem</small></elem>
+					<elem name=2><small>Test elem2</small></elem>
+				</listbox></bold></font>
+				<scrollbar height=150 width=15% orient=vert name=lbscroll/>
+			</td>
+		</tr>
+	</table>
+	
+	<p/>
+	<p align=center>
+		Sample
+		<br/>
+		<image transparent=true transparentdistance=0 transparentcolor=#000000 width=204 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=newtext href=newtext>
+	<bold>Create a new object from scratch</bold><br/>
+	Create a new object that is not based on an existing one.
+	This is the most common method of creating an object.
+</xChoiceButton>
+
+<xChoiceButton name=edit href=edit>
+	<bold>Modify the selected object</bold><br/>
+	Brings up a dialog that lets you modify the object. <italic>(You cannot modify
+	built-in objects directly, but you can "Copy and modify" them. See below.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=copyedit>
+	<bold>Copy and modify the selected object</bold><br/>
+	Copies the object and then modifies the copy. This is useful if you want
+	to create a new object based upon an old one.
+</xChoiceButton>
+
+<xChoiceButton name=justcopy>
+	<bold>Copy the selected object</bold><br/>
+	Copies the object. This is useful if you want
+	to create a new object based upon an old one.
+</xChoiceButton>
+
+<xChoiceButton name=newtemp>
+	<bold>Create a new template from the current selection</bold><br/>
+	Creates a specialized objected, called a template, from the currently selected
+	object. The template keeps all the settings and customizations of the
+	current object.
+</xChoiceButton>
+
+<xChoiceButton name=rename>
+	<bold>Rename the selected object</bold><br/>
+	Changes the object's name or moves it to another category. <italic>(You cannot rename
+	built-in objects.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=remove>
+	<bold>Delete the selected object</bold><br/>
+	Deletes the object. <italic>(You cannot delete
+	built-in objects.)</italic>
+</xChoiceButton>
+

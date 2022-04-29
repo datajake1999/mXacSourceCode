@@ -1,0 +1,85 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Turning lights on and off"/>
+
+<xPageTitle>
+	Turning lights on and off
+</xPageTitle>
+
+
+<p>
+	When <xSN/> draws in the "Shadows" mode, it will include the light coming from lamps
+	and light fixtures. However, the lights must first be turned on.
+</p>
+
+<p>
+	To turn a light on/off:
+</p>
+
+<ol>
+	<li>
+		Select <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the light.
+	</li>
+	<li>
+		In the "Attributes" dialog that appears, find the <bold>"Turned on"</bold> setting.
+		Adjust the adjacent slider to the right or left to brighten or dim the light.
+	</li>
+</ol>
+
+<p>
+	To see how the lights affect the scene:
+</p>
+
+<ol>
+	<li>
+		<bold>Turn the lights on</bold> as above.
+	</li>
+	<p>
+		<bold>IMPORTANT:</bold> When drawing using
+		the "Shadows" mode (which is the next step), every light you have on slows down the
+		drawing process and uses more memory. Unless you have a really fast computer, you
+		should only turn on those lights necessary for the particular scene. Turn all the
+		other lights off.
+	</p>
+	<li>
+		Press the <xButtonViewQuality/> button and select the "Shadows" quality.
+	</li>
+	<p>
+		The image will be redrawn with shadows and better quality textures.
+	</p>
+	<li>
+		Because most of the lights will have little illumination impact during the
+		daylight, you should set the time to night. Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sky.
+	</li>
+	<li>
+		In the "Skydome page", <bold>change the time</bold> to sometime at dusk or
+		night.
+	</li>
+	<p>
+		The image will be redrawn as soon as you change the time. You will see the illumination
+		from the lights. If the display is black, you probably forgot to turn the lights on.
+	</p>
+	<li>
+		<bold>Close</bold> the view settings page.
+	</li>
+	<li>
+		If the image is too dark, the press the <xButtonViewQuality/> button and
+		select an "Image exposure" setting.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:400>Creating lights</a></li>
+	<li><a href=r:401>Customizing lights</a></li>
+	<li><a href=r:403>Lighting exposure</a></li>
+	<li><a href=r:402>The sun, moon, and weather</a></li>
+</xul>

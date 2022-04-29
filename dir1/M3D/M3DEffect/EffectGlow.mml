@@ -1,0 +1,51 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Glow"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Glow</xtrheader>
+	<tr>
+		<td>
+			<bold>Size</bold> - This controls how wide the "glow area" is.
+			(Technically it's the width of the standard deviation as a percentage of
+			the screen width, but most people won't know what this means.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=glowwidth/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Effect</bold> - Select the type of effect to use:
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mode>
+			<elem name=0>Glow</elem>
+			<elem name=1>Enhance edges</elem>
+			<elem name=2>Photocopy</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the glow effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

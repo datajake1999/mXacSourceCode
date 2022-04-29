@@ -1,0 +1,936 @@
+# Microsoft Developer Studio Generated Dependency File, included by M3D.mak
+
+.\CBalustrade.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CButtonBar.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CColumn.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CDoor.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CDoorFrame.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CDoorOpening.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CDoorSet.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CDoubleSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CHouseView.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CIconButton.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CImage.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CImageShader.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CLibrary.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CLight.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CNoodle.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectBalustrade.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectBooks.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectBuildBlock.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectCabinet.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectCamera.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectCeilingFan.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectColumn.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectCurtain.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectCushion.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectDoor.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectDrawer.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectEditor.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectFireplace.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectGround.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectLight.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectNoodle.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPainting.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPathway.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPiers.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPolyhedron.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPolyMesh.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectPool.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectRevolution.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectSingleSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectStairs.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectStructSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTableCloth.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTarp.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTeapot.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTemplate.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTestBox.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTree.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectTruss.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CObjectUniHole.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CPiers.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CProgress.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CRenderClip.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CRenderMatrix.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CRenderSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CRenderTraditional.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CRevolution.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CShadowBuf.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CSingleSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CSpline.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CSplineSurface.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CThumbnail.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CToolTip.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\CWorld.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Help.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\buildnum.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\M3D.rc : \
+	".\BalAppearance.mml"\
+	".\BalCorners.mml"\
+	".\BalCustom.mml"\
+	".\BalDialog.mml"\
+	".\BalDisplay.mml"\
+	".\BalOpenings.mml"\
+	".\bitmap1.bmp"\
+	".\bitmap2.bmp"\
+	".\bmp00001.bmp"\
+	".\bmp00002.bmp"\
+	".\bmp00003.bmp"\
+	".\bmp00004.bmp"\
+	".\bmp00005.bmp"\
+	".\bmp00006.bmp"\
+	".\bmp00007.bmp"\
+	".\bmp00008.bmp"\
+	".\bmp00009.bmp"\
+	".\bmp00010.bmp"\
+	".\bmp00011.bmp"\
+	".\bmp00012.bmp"\
+	".\bmp00013.bmp"\
+	".\bmp00014.bmp"\
+	".\bmp00015.bmp"\
+	".\bmp00016.bmp"\
+	".\bmp00017.bmp"\
+	".\bmp00018.bmp"\
+	".\bmp00019.bmp"\
+	".\bmp00020.bmp"\
+	".\bmp00021.bmp"\
+	".\bmp00022.bmp"\
+	".\bmp00023.bmp"\
+	".\bmp00025.bmp"\
+	".\bmp00026.bmp"\
+	".\bmp00027.bmp"\
+	".\bmp00028.bmp"\
+	".\bmp00029.bmp"\
+	".\bmp00030.bmp"\
+	".\bmp00031.bmp"\
+	".\bmp00032.bmp"\
+	".\bmp00033.bmp"\
+	".\bmp00034.bmp"\
+	".\bmp00035.bmp"\
+	".\bmp00036.bmp"\
+	".\bmp00037.bmp"\
+	".\bmp00038.bmp"\
+	".\bmp00039.bmp"\
+	".\bmp00040.bmp"\
+	".\bmp00041.bmp"\
+	".\BooksDialog.mml"\
+	".\BuildBlockCeiling.mml"\
+	".\BuildBlockDialog.mml"\
+	".\BuildBlockDisplay.mml"\
+	".\BuildBlockFloors.mml"\
+	".\BuildBlockFoundation.mml"\
+	".\BuildBlockIntel.mml"\
+	".\BuildBlockLevels.mml"\
+	".\BuildBlockRoof.mml"\
+	".\BuildBlockVerandah.mml"\
+	".\BuildBlockVerandahAny.mml"\
+	".\BuildBlockWallAngle.mml"\
+	".\BuildBlockWalls.mml"\
+	".\BuildBlockWallsAny.mml"\
+	".\buildnum.h"\
+	".\buildnum.rc"\
+	".\CabinetDialog.mml"\
+	".\clipleve.bmp"\
+	".\ClipLevels.mml"\
+	".\clipline.bmp"\
+	".\ClipPoint.mml"\
+	".\ClipSet.mml"\
+	".\ClipSetFloors.mml"\
+	".\ClipSetHand.mml"\
+	".\ClipShow.mml"\
+	".\close1.bmp"\
+	".\ColorSel.mml"\
+	".\Column.mml"\
+	".\cur00001.cur"\
+	".\cur00002.cur"\
+	".\cur00003.cur"\
+	".\cur00004.cur"\
+	".\cur00005.cur"\
+	".\cur00006.cur"\
+	".\cur00007.cur"\
+	".\cur00008.cur"\
+	".\cur00009.cur"\
+	".\cur00010.cur"\
+	".\cur00011.cur"\
+	".\cur00012.cur"\
+	".\cur00013.cur"\
+	".\cur00014.cur"\
+	".\cur00015.cur"\
+	".\cur00016.cur"\
+	".\cur00017.cur"\
+	".\cur00018.cur"\
+	".\cur00019.cur"\
+	".\cur00020.cur"\
+	".\cur00021.cur"\
+	".\cur00022.cur"\
+	".\cur00023.cur"\
+	".\cur00024.cur"\
+	".\cur00025.cur"\
+	".\cur00026.cur"\
+	".\cur00027.cur"\
+	".\cur00028.cur"\
+	".\cur00029.cur"\
+	".\cur00030.cur"\
+	".\cur00031.cur"\
+	".\cur00032.cur"\
+	".\cursor1.cur"\
+	".\cursorcl.cur"\
+	".\cursordi.cur"\
+	".\cursorin.cur"\
+	".\cursormo.cur"\
+	".\cursorob.cur"\
+	".\cursorpa.cur"\
+	".\cursorvi.cur"\
+	".\cursorzo.cur"\
+	".\CurtainDialog.mml"\
+	".\CushionDialog.mml"\
+	".\cut1.bmp"\
+	".\cutzoomi.bmp"\
+	".\dialogbo.bmp"\
+	".\DoorCustom.mml"\
+	".\DoorDialog.mml"\
+	".\DoorFrameShape.mml"\
+	".\DoorFrameWD.mml"\
+	".\DoorKnob.mml"\
+	".\DoorOpening.mml"\
+	".\DrawerDialog.mml"\
+	".\EagleEye.jpg"\
+	".\GridFromPoint.mml"\
+	".\gridsele.bmp"\
+	".\GridSet.mml"\
+	".\GridValues.mml"\
+	".\GroundBoundary.mml"\
+	".\GroundBoundary2.mml"\
+	".\GroundCutoutAddInter.mml"\
+	".\GroundCutoutMain.mml"\
+	".\GroundDialog.mml"\
+	".\GroundDisplay.mml"\
+	".\GroundSize.mml"\
+	".\GroundWater.mml"\
+	".\habout.mml"\
+	".\hBalCustom.mml"\
+	".\HBalInBB.mml"\
+	".\hBalInStairs.mml"\
+	".\hBalObject.mml"\
+	".\HBBBypass.mml"\
+	".\HBBCathedral.mml"\
+	".\HBBDeconstruct.mml"\
+	".\HBBElevLimit.mml"\
+	".\HBBFoundation.mml"\
+	".\HBBLevels.mml"\
+	".\HBBOverlays.mml"\
+	".\HBBRoof.mml"\
+	".\HBBVerandah.mml"\
+	".\HBBWalls.mml"\
+	".\HBooks.mml"\
+	".\hBugs.mml"\
+	".\HCabinet.mml"\
+	".\HCabinetPieces.mml"\
+	".\HColumn.mml"\
+	".\HCurtain.mml"\
+	".\HCushion.mml"\
+	".\HDoorsCustom.mml"\
+	".\HDoorsOpen.mml"\
+	".\HDoorsSize.mml"\
+	".\HDrawer.mml"\
+	".\HExtrusion.mml"\
+	".\HFencing.mml"\
+	".\HFireplace.mml"\
+	".\HFog.mml"\
+	".\HFuture.mml"\
+	".\HGridCenter.mml"\
+	".\HGridDisplay.mml"\
+	".\HGridSize.mml"\
+	".\HGroundBoundary.mml"\
+	".\HGroundCountour.mml"\
+	".\HGroundSize.mml"\
+	".\HGroundWater.mml"\
+	".\HHistory.mml"\
+	".\HIfYouLike.mml"\
+	".\HLathe.mml"\
+	".\HLightCreate.mml"\
+	".\HLightCustom.mml"\
+	".\HLightOnOff.mml"\
+	".\HLightSun.mml"\
+	".\HLocale.mml"\
+	".\HMain.mml"\
+	".\HObjReference.mml"\
+	".\HPainting.mml"\
+	".\HPathway.mml"\
+	".\HPierCustom.mml"\
+	".\HPierInBB.mml"\
+	".\HPierObject.mml"\
+	".\HPlants.mml"\
+	".\HPlantsCustom.mml"\
+	".\HPolyhedron.mml"\
+	".\HPolyMesh.mml"\
+	".\HPool.mml"\
+	".\HProdCompare.mml"\
+	".\HRegister.mml"\
+	".\HSearch.mml"\
+	".\HSplineSurface.mml"\
+	".\HStairsCustom.mml"\
+	".\HStairsObject.mml"\
+	".\HSurfaceCurve.mml"\
+	".\HSurfaceEdge.mml"\
+	".\HSurfaceOverlay.mml"\
+	".\HSurfaceThick.mml"\
+	".\hSYstem.mml"\
+	".\HTableCloth.mml"\
+	".\HTarp.mml"\
+	".\HTBBath.mml"\
+	".\HTBKitchen.mml"\
+	".\HTextureCreate.mml"\
+	".\HTextureMaterial.mml"\
+	".\HTextureModify.mml"\
+	".\HThumbnail.mml"\
+	".\HTOC.mml"\
+	".\HTruss.mml"\
+	".\HTutorialBuildBlock1.mml"\
+	".\HTutorialBuildBlock2.mml"\
+	".\HTutorialBuildBlock3.mml"\
+	".\HTutorialBuildBlock4.mml"\
+	".\HTutorialBuildBlock5.mml"\
+	".\HTutorialBuildSite.mml"\
+	".\HTutorialButtons.mml"\
+	".\HTutorialClip.mml"\
+	".\HTutorialDoors.mml"\
+	".\HTutorialFinished.mml"\
+	".\HTutorialFinished3.mml"\
+	".\HTutorialFinishedView.mml"\
+	".\HTutorialImageQuality.mml"\
+	".\HTutorialInside.mml"\
+	".\HTutorialObjCreate.mml"\
+	".\HTutorialObjEdit.mml"\
+	".\HTutorialObjEdit2.mml"\
+	".\HTutorialObjSave.mml"\
+	".\HTutorialObjStart.mml"\
+	".\HTutorialObjTemplate.mml"\
+	".\HTutorialObjTheory.mml"\
+	".\HTutorialOpenSample.mml"\
+	".\HTutorialOutside.mml"\
+	".\HTutorialSave.mml"\
+	".\hTutorialStart.mml"\
+	".\HTutorialTextures.mml"\
+	".\HTutorialViews.mml"\
+	".\HTutorialViews2.mml"\
+	".\HTutorialViews3.mml"\
+	".\HTutorialViews4.mml"\
+	".\HTutorialWalls.mml"\
+	".\HTutorialWalls2.mml"\
+	".\HViewExposure.mml"\
+	".\HViewGlasses.mml"\
+	".\HViewLighting.mml"\
+	".\HViewMultiple.mml"\
+	".\HViewOutlines.mml"\
+	".\HViewPerspective.mml"\
+	".\HViewQuality.mml"\
+	".\HViewRotating.mml"\
+	".\HViewScreen.mml"\
+	".\HViewSmall.mml"\
+	".\icon1.ico"\
+	".\library.bmp"\
+	".\Light.mml"\
+	".\LocaleInfo.mml"\
+	".\LocaleLevels.mml"\
+	".\LocaleSet.mml"\
+	".\Logo150.jpg"\
+	".\Macros.mml"\
+	".\MaterialCustom.mml"\
+	".\minimize.bmp"\
+	".\moveembe.bmp"\
+	".\movelrfb.bmp"\
+	".\movelrud.bmp"\
+	".\movensew.bmp"\
+	".\MoveSet.mml"\
+	".\moveud1.bmp"\
+	".\new1.bmp"\
+	".\nextmoni.bmp"\
+	".\NoodleCurve.mml"\
+	".\NoodleDialog.mml"\
+	".\NoodleDisplay.mml"\
+	".\objcontr.bmp"\
+	".\ObjControlPointMove.mml"\
+	".\ObjectClassEdit.mml"\
+	".\ObjectClassNew.mml"\
+	".\ObjectLibrary.mml"\
+	".\ObjectNew.mml"\
+	".\ObjectRename.mml"\
+	".\ObjEditor.mml"\
+	".\objintel.bmp"\
+	".\objonoff.bmp"\
+	".\objpaint.bmp"\
+	".\ObjPaintAddScheme.mml"\
+	".\PaintingDialog.mml"\
+	".\PaintingKite.jpg"\
+	".\PaintingMitch.jpg"\
+	".\PaintingPuggle.jpg"\
+	".\PaintingQuoll.jpg"\
+	".\PathwayDialog.mml"\
+	".\PhotoKakadu.jpg"\
+	".\PhotoLetchworth.jpg"\
+	".\PhotoMindil.jpg"\
+	".\PhotoPayaso.jpg"\
+	".\PhotoUluru.jpg"\
+	".\PiersAppearance.mml"\
+	".\PiersCorners.mml"\
+	".\PiersCustom.mml"\
+	".\PiersDialog.mml"\
+	".\PiersDisplay.mml"\
+	".\PiersOpenings.mml"\
+	".\PolyhedronDisplay.mml"\
+	".\PolyMeshDialog.mml"\
+	".\PolyMeshDisplay.mml"\
+	".\PoolDialog.mml"\
+	".\Quality.mml"\
+	".\RevCurve.mml"\
+	".\RevDialog.mml"\
+	".\RevDisplay.mml"\
+	".\selall1.bmp"\
+	".\Select.mml"\
+	".\SelectColor.mml"\
+	".\SelectRegion.mml"\
+	".\selindiv.bmp"\
+	".\SingleControlPoints.mml"\
+	".\SingleCurvature.mml"\
+	".\SingleDialog.mml"\
+	".\SingleOverMain.mml"\
+	".\Splash.mml"\
+	".\StairsBal.mml"\
+	".\StairsDialog.mml"\
+	".\StairsPath.mml"\
+	".\StairsRails.mml"\
+	".\StairsTreads.mml"\
+	".\StairsWalls.mml"\
+	".\SurfaceBevelling.mml"\
+	".\SurfaceControlPoints.mml"\
+	".\SurfaceCurvature.mml"\
+	".\SurfaceCutoutAddInter.mml"\
+	".\SurfaceCutoutMain.mml"\
+	".\SurfaceDetail.mml"\
+	".\SurfaceDialog.mml"\
+	".\SurfaceDisplay.mml"\
+	".\SurfaceEdge.mml"\
+	".\SurfaceEdgeInter.mml"\
+	".\SurfaceFloors.mml"\
+	".\SurfaceOverAddCustom.mml"\
+	".\SurfaceOverAddInter.mml"\
+	".\SurfaceOverEditCustom.mml"\
+	".\SurfaceOverEditEdge.mml"\
+	".\SurfaceOverEditInter.mml"\
+	".\SurfaceOverMain.mml"\
+	".\SurfaceShowClad.mml"\
+	".\SurfaceThickness.mml"\
+	".\TableClothDialog.mml"\
+	".\TemplateBack.mml"\
+	".\TemplateHelp.mml"\
+	".\TextureBMP.mml"\
+	".\TextureBoardBatten.mml"\
+	".\TextureChip.mml"\
+	".\TextureClapboards.mml"\
+	".\TextureCorr.mml"\
+	".\TextureCrNoise.mml"\
+	".\TextureDirtPaint.mml"\
+	".\TextureFabric.mml"\
+	".\TextureGeneratePlank.mml"\
+	".\TextureGenerateTree.mml"\
+	".\TextureGrout.mml"\
+	".\TextureImageFile.mml"\
+	".\TextureLattice.mml"\
+	".\TextureLibrary.mml"\
+	".\TextureMakeStone.mml"\
+	".\TextureMakeTile.mml"\
+	".\TextureMarble.mml"\
+	".\TextureMarbling.mml"\
+	".\TextureNew.mml"\
+	".\TextureNoise.mml"\
+	".\TextureParquet.mml"\
+	".\TexturePavers.mml"\
+	".\TextureRename.mml"\
+	".\TextureSel.mml"\
+	".\TextureShingles.mml"\
+	".\TextureStones.mml"\
+	".\TextureStonesRandom.mml"\
+	".\TextureStripes.mml"\
+	".\TextureThreads.mml"\
+	".\TextureTiles.mml"\
+	".\TextureWicker.mml"\
+	".\TextureWoodPlanks.mml"\
+	".\TreeDialog.mml"\
+	".\TrussDialog.mml"\
+	".\UniHole.mml"\
+	".\View3D.mml"\
+	".\view3d1.bmp"\
+	".\view3dlr.bmp"\
+	".\view3dro.bmp"\
+	".\ViewFavorite.mml"\
+	".\viewflat.bmp"\
+	".\ViewFlat.mml"\
+	".\ViewSet.mml"\
+	".\ViewSetFog.mml"\
+	".\ViewSetGrid.mml"\
+	".\ViewSetLighting.mml"\
+	".\ViewSetMeasurement.mml"\
+	".\ViewSetOutlines.mml"\
+	".\ViewSetPerspective.mml"\
+	".\ViewSetRBGlasses.mml"\
+	".\viewwalk.bmp"\
+	".\ViewWalk.mml"\
+	".\World.bmp"\
+	".\zoomin1.bmp"\
+	
+
+.\main.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\buildnum.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Measure.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MML.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ObjectCF.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ResLeak.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sun.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Textures.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Util.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\VolumeIntersect.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\VolumeSort.cpp : \
+	"..\..\Include\Escarpment.h"\
+	".\M3D.h"\
+	".\ResLeak.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

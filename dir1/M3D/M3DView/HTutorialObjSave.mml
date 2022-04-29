@@ -1,0 +1,83 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Saving a custom object"/>
+
+<xPageTitle>
+	Tutorial - Saving a custom object
+</xPageTitle>
+
+<xsectiontitle>Saving</xsectiontitle>
+
+<p>
+	To save the changes you have made to the custom object:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonSave/> button on the object editor window.
+	</li>
+	<li>
+		Press the <xButtonClose/> button on the object editor window to close it.
+	</li>
+</ol>
+
+<p>
+	All the custom objects you make are stored in the "Library", just like any
+	of your custom textures. You don't have to worry about creating a file name for them.
+	Plus, if you create a custom object and put it in a house, and then E-mail the
+	house to someone, they will also get the custom object along with the house.
+	It's all included in the one file.
+</p>
+
+<p>
+	<bold>Tip:</bold> - If you create a library of objects that you want to share with
+	your friends, coworkers, or anyone on the Internet, just create a house (or a bare
+	patch of grass for that matter) that has at least one copy of each of the
+	custom objects you want to share. Save the <xSN/> file and distribute it.
+	When someone opens the file all your custom objects will automatically be
+	copied into their library. From then on they can use them.
+	If you have a library of objects you want to publicly distribure, E-mail me
+	at <xMyEmail/> so I can include your web site on a list of "Places to
+	find custom objects" that I will include on my web page.
+</p>
+
+
+<xsectiontitle>Renaming</xsectiontitle>
+
+<p>
+	You may want to name your object. To do this:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select the <bold>"Objects</bold> menu item.
+	</li>
+	<li>
+		Swtich to the <bold>Major and minor category</bold> where you created your object.
+	</li>
+	<li>
+		<bold>Scroll through the object list</bold> until you find the new object,
+		probably called "New object". (If you click on the object it's image will be
+		displayed underneath the list.)
+	</li>
+	<li>
+		<bold>Click on</bold> the object you want to rename.
+	</li>
+	<li>
+		Press the <bold>"Rename object"</bold> button.
+	</li>
+	<li>
+		In the "Rename object" dialog that appears, <bold>type in</bold> the new name
+		and press <bold>OK</bold>.
+	</li>
+</ol>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:525><bold>Next</bold></button>
+</p>
+

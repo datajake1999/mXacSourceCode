@@ -1,0 +1,39 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="mXac NLP Editor"/>
+
+<p>
+	The <bold>mXac NLP Editor</bold> lets you modify the "natural language" information
+	for <xLN/>. It lets you train speech recognition to your voice, modify the
+	pronunciations of words, or create your own text-to-speech voice.
+</p>
+
+
+<xChoiceButton href=srtrain>
+	<bold>Speech recognition training</bold><br/>
+	This tool lets you train speech recognition to your voice. This will improve the
+	lip synchronization ability of the wave editor. It is also useful (and necessary)
+	when creating your own text-to-speech voice.
+</xChoiceButton>
+
+<xChoiceButton href=lexicon>
+	<bold>Lexicon</bold><br/>
+	The lexicon tools let you modify the pronunciations of words that are used by
+	either speech recognition or text-to-speech. In general, you will only need
+	to modify the lexicon if you are using text-to-speech.
+</xChoiceButton>
+
+<xChoiceButton href=tts>
+	<bold>Text-to-speech or prosody model</bold><br/>
+	The text-to-speech tools lets you create your own text-to-speech voice or
+	a prosody model to improve an existing text-to-speech voice. You
+	can either record your own voice (which is a <bold>lot</bold> of work) or
+	change an existing voice.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton href=about>
+	<bold>About...</bold><br/>
+	Shows copyright information.
+</xChoiceButton>

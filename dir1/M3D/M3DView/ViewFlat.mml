@@ -1,0 +1,84 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Flattened view settings"/>
+
+<p>
+	You can use this page to hand-enter values for location and rotation.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Current view location</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Scale</bold> - Distance between left and right edges of the display.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=scale/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Right/left</bold> - Move the flattened image right by this distance.
+			Negative number move the image to the left.
+			This is relative to the rotation point of the house.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Up/down</bold> - Move the flattened image up by this distance.
+			Negative numbers move the image down.
+			This is relative to the rotation point of the house.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width=66%>
+			<bold>Rotation around vertical</bold> - Rotate the building this number
+			of degrees around an imaginary vertical at its point of rotation.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotz/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Rotation around east/west</bold> - Rotate the building this number
+			of degrees around an imaginary east/west line at its point of rotation.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Rotation around north/south</bold> - Rotate the building this number
+			of degrees around an imaginary north/south line at its point of rotation.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=roty/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Rotation point</bold> - This is the location in the house about which
+			rotations occur. The values are distances from the center of the house
+			east/west, north/south,
+			and up/down).
+		</td>
+		<td width=33% valign=center><align align=right>
+			EW: <bold><edit maxchars=32 width=66% name=cx/></bold><br/>
+			NS: <bold><edit maxchars=32 width=66% name=cy/></bold><br/>
+			UD: <bold><edit maxchars=32 width=66% name=cz/></bold>
+		</align></td>
+	</tr>
+</xtablecenter>
+

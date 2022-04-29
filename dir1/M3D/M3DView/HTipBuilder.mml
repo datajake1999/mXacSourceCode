@@ -1,0 +1,193 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for builders"/>
+
+<xPageTitle>
+	Tips for builders
+</xPageTitle>
+
+<p>
+	I am assuming (perhaps incorrectly) that builders will find <xSN/> most valuable
+	as a presentation tool (if you build from pre-designed houses),
+	and ultimately as a way to reduce the plague of construction mistakes that happen.
+	As such, here are
+	some suggestions:
+</p>
+
+<xul>
+	<li>
+		When you want to present an idea to your clients, provide them with a copy
+		of <xLN/> and a the <xSN/> files with your ideas. Not haviing
+		paid for <xSN/> they will be able to use all of <xSN/>'s features <bold>except</bold> they
+		won't be able to save any changes. They'll still be able to do 3D walkthroughs
+		and experiment with different colors and textures.
+	</li>
+	<li>
+		Likewise, provide <xSN/> to your subcontractors so they can see what the final
+		product will be like. You can use the <xButtonClipSet/> dialog to
+		hide all elements of the building except for those that the subcontractor
+		is responsible for.
+	</li>
+</xul>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> You're going to use <xSN/> to produce quality 3D
+	images to show your clients.
+	<p/>
+	My current plans are to have the 3D produce the following effects: (I mention if
+	the competitors do it because words are often a poor substitute for seeing the
+	effect, and seeing what the competitors produce will give you an idea what
+	<xSN/> will be able to do.)
+	<p/>
+	<xul>
+		<li>
+			Textures - I expect to have several hundred with the ability to import .jpeg or .bmp
+			files. (Which is what my competitors have, although they may have about 1000
+			initial textures. See below for my solution.)
+		</li>
+		<li>
+			Textures - I also plan to allow you to
+			make your own variety of bricks, tiles, etc. by starting with built-in ones
+			and adjusting parameters such as the variation in color across the brick,
+			variability from brick to brick, size, depth, etc. There will be hundreds of parameters.
+		</li>
+		<li>
+			Textures - Textures will include transparency (so you can see through the openings
+			in decks) and specularity (so that tile textures have shiny highlights where they
+			bend down into the grout). I haven't seen any competitors with this.
+		</li>
+		<li>
+			Shadows - Not only will you get the sun's shadow, but also from all the lights.
+			Shadows will be "hard" and will not have any softness to them. Of the architectual
+			CAD programs I've seen, some have shadows. (See below for
+			one of the potential rendering options.)
+		</li>
+		<li>
+			Specularity - Basically, the blurred reflection of a light on a shiny surface,
+			such as gloss paint. Most competitors have specularity.
+		</li>
+		<li>
+			Transparency - Glass, fly screen, etc. Some competitors have transparency.
+		</li>
+		<li>
+			Antialiasing - Smoothing of edges. All of the competitors do this.
+		</li>
+	</xul>
+	
+	It will take a few minutes for the computer to draw an image using the above
+	rendering techniques.
+	<p/>
+	Here's the question: I could potentially do more to improve the realism of
+	an image. Which of this (is any) would be most useful?
+	<p/>
+	<xul>
+		<li>
+			Ray tracing - (Much overhyped) This will allow mirrors, perfectly calm
+			reflecting pools, perfectly shiny granite counters, and mirroring seen
+			in glass if you look at it from an angle. A ray traced image will take
+			a couple of hours to draw.
+		</li>
+		<li>
+			Soft shadows, and blurry reflections - Instead of shadows being hard,
+			they will have soft edges (technically called the umbra and penumbra). I will
+			also be able to do blurred reflections (such as the reflection of furniture
+			on hardwood flooring). The only problem here: It will take the computer
+			about a week to draw a picture.
+		</li>
+		<li>
+			Grass and carpet - The reason grass and carpet look lousy when drawn by
+			a CAD program is because they're not simulated right. To do them properly I
+			need to simulate all of the blads of grass with a technique called "fur".
+			Drawing grass and carpet properly will probably take several hours.
+		</li>
+		<li>
+			More textures - If instead of spending a few weeks on ray tracing (or whatever) I spent
+			a few weeks and produced a few hundred more textures you might end up
+			with a better quality image.
+		</li>
+		<li>
+			More models - If instead of spending a few weeks on ray tracing (or whatever) I
+			produced more furniture (etc.) models.
+		</li>
+	</xul>
+	Any suggestions? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> If you distribute <xSN/> to clients, would you want
+	a simplified-looking version that only deals with moving the camera around and
+	(maybe) changing colors/textures? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Would some sort of cost estimating feature
+	be useful?
+	<p/>
+	If so, how far do I go?
+	<p/>
+	<xul>
+		<li>
+			Calculate the floor area and that's it.
+		</li>
+		<li>
+			Calculate the floor area, wall area, roof area, deck area, and window area?
+		</li>
+		<li>
+			Calculate every piece of steel, wood, tile, etc. that goes into building the
+			house, export it to a spreadsheet, and let you enter the prices?
+		</li>
+		<li>
+			Something else?
+		</li>
+		<li>
+			None of the above - For two reasons: 1) <xSN/> might have bugs in it that cause
+			it to miscalculate the estimate. 2) If you're building a house, your price is
+			ultimately decided based upon the price your subcontractors will give you.
+			Unless <xSN/> can accurately predict what your subcontractors will quote (which
+			it can't) it won't be useful.
+		</li>
+	</xul>
+	Ideas? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> How can I change <xSN/> so it reduces the number
+	of mistakes and material wastage on the construction site?
+	<p/>
+	Here are some ideas I've come up with, but I'm not sure how useful they'd be.
+	<p/>
+	<xul>
+		<li>
+			Calculate all the lengths of wood and steel needed. Compare this against the
+			different lengths you can get get locally, and order lengths of wood/steel
+			to minimize the wastage. (Problem: <xSN/> might have a bug which miscalculates.)
+		</li>
+		<li>
+			When calculating the number of tiles to order, don't just take the floor's
+			area and add 10%, but actually determine where all the cuts in all the tiles
+			will go.
+		</li>
+		<li>
+			Other calculations to minmimize wastage? Paint. Wood flooring. Wall cladding.
+			Roofing. Etc.
+		</li>
+		<li>
+			Allow you to design in all piping and electrical lines. This makes it
+			more difficult for the plumber or electrician to put them in the wrong place.
+		</li>
+		<li>
+			Use the <xSN/> virtual reality house as a project management tool. You could
+			tell <xSN/> when each portion of the house is to be built, so it'll draw it
+			as it should look at any stage in construction. When a piece is constructed,
+			you can "check it off" on the 3D image so you know that it's all finished.
+		</li>
+		<li>
+			Others?
+		</li>
+	</xul>
+	Unfortunately, all these require that you spend a lot of time building the house
+	100% accurate in <xSN/> first. How many people will actually do this?
+	<p/>
+	Suggestions? Email me at <xMyEmail/>.
+</xDefinition>

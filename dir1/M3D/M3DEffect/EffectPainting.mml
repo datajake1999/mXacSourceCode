@@ -1,0 +1,501 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Painting"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB0>>>
+	<tr>
+		<td>
+			<bold>Background</bold> - Select the background to paint on.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=textback>
+			<elem name=0>Paint over existing image</elem>
+			<elem name=1>Solid color (top/left color)</elem>
+			<elem name=2>Blend from top to bottom</elem>
+			<elem name=3>Blend from left to right</elem>
+			<elem name=4>Texture</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetextcolor0>
+				<bold>Top/left color</bold><br/>
+				The color of the top (or left) side of the image.
+				(Used if color-blended background.)
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=textcolor0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetextcolor1>
+				<bold>Bottom/right color</bold><br/>
+				The color of the bottom (or right) side of the image.
+				(Used if color-blended background.)
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=textcolor1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Image width</bold> - (Used if background is texture.)
+			The image width (in meters or feet). The wider
+			the image, the more times the texture will be repeated and the less
+			evident the shading.
+		</td>
+		<td><bold><edit width=100% name=textwidth/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=changetext>
+			<bold>Change texture</bold> (Used if background is texture)<br/>
+			Press this to change the texture to use for the background. <bold>Only the
+			color-map</bold> portion of the texture will be used. If you wish
+			to simulate a bumpy surface then include the "Relief" effect.
+		</xChoiceButton>
+	</td></tr>
+<<<$ENDIFTAB0>>>
+
+<<<$IFTAB1>>>
+	<tr>
+		<td>
+			<bold>Number of strokes</bold> - This number of strokes to used
+			when painting the image.
+		</td>
+		<td><bold><edit width=100% name=strokesnum/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average length</bold> - Average length of stroke as a percentage
+			of the image width.
+		</td>
+		<td><bold><edit width=100% name=strokelen/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Segment length</bold> - Segment length as a percentage
+			of the image width. Each stroke is subdivided into short segments.
+			The shorter the segment, the more curvy the stroke.
+		</td>
+		<td><bold><edit width=100% name=strokestep/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length variability</bold> - Amount the stroke length varies.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokelenvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stroke anchor</bold> - How far up the stroke it's "anchored".
+			Leftwards anchors the stroke at it's head, rightwards towards its tail.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokeanchor/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Penalty when cross colors</bold> - The further to the right,
+			the more the stroke will be shortened when it encounters a
+			large change in color.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokepencolor/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Penalty when cross object</bold> - The further to the right,
+			the more the stroke will be shortened when it crosses an object.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokepenobject/></td>
+	</tr>
+<<<$ENDIFTAB1>>>
+
+<<<$IFTAB3>>>
+	<tr><td>
+		The following settings control the path of that the stroke takes.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Preferred angle</bold> - What angle strokes prefer to be made at.
+			0 for up, 90 for right, 180 for down, 270 for left.
+		</td>
+		<td><bold><edit width=100% name=strokeprefangle/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Preferred-angle weighting</bold> - How much the stroke tries to
+			follow the preferred angle. The further to the right, the greater
+			the weight.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokeprefweight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Momentum</bold> - The further to the right, the more the
+			stroke will continue along the same path.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokemomentum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Randomness</bold> - Controls how random the stroke is,
+			how much wiggle it has.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokerandom/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth-weighting</bold> - How much the stroke tries to
+			maintain the same depth countour.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokezweight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color-weighting</bold> - How much the stroke tries to
+			maintain the same color (intensity) countour.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokecolorweight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Object-weighting</bold> - How much the stroke tries to
+			follow the borders of objects.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokeobjectweight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth-field size</bold> - This affects how much the depth
+			field is blurred before determining the field lines.
+			The value is a percentage of the image width.
+		</td>
+		<td><bold><edit width=100% name=strokezblur/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color-field size</bold> - Like depth-field, but for colors.
+		</td>
+		<td><bold><edit width=100% name=strokecolorblur/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Object-field size</bold> - Like depth-field, but for objects.
+		</td>
+		<td><bold><edit width=100% name=strokeobjectblur/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=strokeprefeither>
+			<bold>Opposite preferred angle is okay</bold><br/>
+			If checked, then the stroke will tend towards both the preferred angle,
+			and its opposite (180 degrees).
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=strokezperp>
+			<bold>Perpendicular to depth</bold><br/>
+			Strokes prefer to be perpendicular to the depth contour instead of parallel.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=strokecolorperp>
+			<bold>Perpendicular to color</bold><br/>
+			Strokes prefer to be perpendicular to the color contour instead of parallel.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=strokeobjectperp>
+			<bold>Perpendicular to objects</bold><br/>
+			Strokes prefer to be perpendicular to the object border instead of parallel.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=strokecrosshatch>
+			<bold>Crosshatching</bold><br/>
+			Half the strokes will be rotated 90 degrees from their normal angle.
+		</xChoiceButton>
+	</td></tr>
+<<<$ENDIFTAB3>>>
+
+<<<$IFTAB2>>>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the painting effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+	<xtrheader>Strokes where image changes</xtrheader>
+	<tr><td>
+		These settings cause strokes to be placed only where the colors in the image
+		change significantly. Pencil sketches often use this technique, not completely
+		filling in solid surfaces.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Filter width</bold> - The width of the "filter" used to determine how
+			much the color has changed, in percent width of the screen.
+			The larger the value the more areas covered by strokes.
+			"5" is a good place to start.
+			Use "0" to disable this feature.
+		</td>
+		<td><bold><edit width=100% name=deltafilterwidth/></bold></td>
+	</tr>
+	<xtrheader>Strokes discarded over a background color</xtrheader>
+	<tr><td>
+		These settings cause strokes for regions of the screen that are similar to
+		a "background" color to be discarded. Artists drawing with chalk and charcoal
+		will not draw lines for areas of the image similar to the paper color.
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changebackcolor>
+				<bold>Background color</bold><br/>
+				Strokes with a similar color will be discarded.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=backcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Similarity to background</bold> - Moving the slider to the right
+			allows for strokes whose colors are less-similar to the background
+			to be discarded. To disable this feature move the slider all the
+			way to the left.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=backmatch/></td>
+	</tr>
+	<xtrheader>Spyglass effect</xtrheader>
+	<tr><td>
+		Only strokes in the central region of the image will be drawn.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - The shape to use.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=spyglassshape>
+			<elem name=0>None (Spyglass off)</elem>
+			<elem name=1>Circular</elem>
+			<elem name=2>Elliptical</elem>
+			<elem name=3>Binocular</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Scale</bold> - This scales down the circular openings of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=spyglassscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blur</bold> - Move this to control the amount of blurring around the
+			edge of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=spyglassblur/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Near-objects stick out</bold> - Any object that is closer to
+			the camera than this distance will "stick out" of the spyglass area,
+			and won't be affected by the masking.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=spyglassstickout/></bold></td>
+	</tr>
+<<<$ENDIFTAB2>>>
+
+<<<$IFTAB4>>>
+	<tr>
+		<td>
+			<bold>Width (start)</bold> - Width of the brush at the start of the
+			stroke, as a percentage of the image width.
+		</td>
+		<td><bold><edit width=100% name=strokewidth0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (anchor)</bold> - Width at the stroke's "anchor point".
+		</td>
+		<td><bold><edit width=100% name=strokewidth1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (end)</bold> - Width at the end of the stroke.
+		</td>
+		<td><bold><edit width=100% name=strokewidth2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (variability)</bold> - How much the width changes
+			at each segment.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokewidth3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brush shape</bold> - Select the brush shape.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=brushshape>
+			<elem name=0>Circular</elem>
+			<elem name=1>Horizontal</elem>
+			<elem name=2>Vertical</elem>
+			<elem name=3>Diagonal 1</elem>
+			<elem name=4>Diagonal 2</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bristles (thick)</bold> - Affects how much the bristles
+			affect the transparency of the paint.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bristles (thin)</bold> - Affects how much the bristles
+			affect the transparency of the paint.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency contrast</bold> - The further to the right,
+			the larger the difference between the transparent and opaque
+			portions of the stroke. Further to the left reduces them.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Opacity</bold> - The further to the right,
+			the more opqaue the brush is. Leftwards is more transparent.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam3/></td>
+	</tr>
+<<<$ENDIFTAB4>>>
+
+<<<$IFTAB5>>>
+	<tr>
+		<td>
+			<bold>Hue variability</bold> - Random adjustment to hue.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness variability</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation variability</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar2/></td>
+	</tr>
+	<xtrheader>Palette (shades)</xtrheader>
+	<tr>
+		<td>
+			<bold>Hue palette</bold> - The number of colors used for the
+			poster. For example: If this is "3" then only red, green, and blue
+			will be used. If it's "6" then red, yellow, green, cyan, blue, and
+			magenta will be used. If "0" is used, all hues are possible.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hue shift</bold> - Shifts all the colors in the color
+			wheel. For example: If you have "3" colors for the "Hue palette" then
+			normally the colors will be red, green, and blue. You can adjust the
+			shift so the basic colors are cyan, yellow, and magenta.
+		</td>
+		<td><scrollbar orient=horz min=-50 max=50 name=colorhueshift/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness shades</bold> - The number of shades used for
+			lightness (how bright/dark the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation shades</bold> - The number of shades used for
+			saturation (how colorful the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette2/></bold></td>
+	</tr>
+	<xtrheader>Palette (fixed)</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=colorusefixed>
+			<bold>Use a fixed palette</bold><br/>
+			If checked then use the following five colors for the color palette.
+			If you need fewer than five colors then duplicate some entries.
+			If unchecked then the different color shades (above) will be used.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed0>
+				<bold>Color #1</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed1>
+				<bold>Color #2</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed2>
+				<bold>Color #3</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed3>
+				<bold>Color #4</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed4>
+				<bold>Color #5</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed4/>
+		</td>
+	</tr>
+<<<$ENDIFTAB5>>>
+
+</xtablecenter>

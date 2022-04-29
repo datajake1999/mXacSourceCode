@@ -1,0 +1,35 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Change the detail"/>
+
+<p>
+	Use this page to adjust the amount of detail in the map without changing
+	its size.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Detail</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Number of pixels left and right.
+			Note: Changing the width will also adjust the height because the map
+			will keep the same shape.
+		</td>
+		<td><edit maxchars=32 width=100% name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Number of pixels up and down.
+			Note: Changing the height will also adjust the width because the map
+			will keep the same shape.
+		</td>
+		<td><edit maxchars=32 width=100% name=height/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle href=keep>
+			<bold>Keep these changes</bold><br/>
+			Press this after you have typed in new values for the width and height.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

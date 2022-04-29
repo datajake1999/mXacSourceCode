@@ -1,0 +1,155 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Branch settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves and sub-branches</xtrheader>
+	<tr><td>
+		<p>
+			Click on "Add new object" to add another type of leaf or sub-branch
+			to the branch.
+		</p>
+		<p align=center>
+			<<<$CANOPY>>>
+		</p>
+		<xchoicebutton name=add>
+			<bold>Add new object</bold><br/>
+			Click this to add a new leaf or sub-branch to the branch
+		</xchoicebutton>
+		The edit box below the image is the leaf or sub-branch's
+		"weight". The higher the number the thicker the branches supporting the object
+		will be. An individual leaf should have a weight between 1 and 5, while a sub-branch
+		should have a weight (approximately) equal to the number of leaves on it times 1 to 5.
+	</td></tr>
+</xtablecenter>
+
+
+<!xComboDetail>
+	<bold><combobox MACROATTRIBUTE=1 cbheight=150 width=100%>
+		<elem name=0>No divisions</elem>
+		<elem name=1>2 divisions</elem>
+		<elem name=2>4 divisions</elem>
+		<elem name=3>8 divisions</elem>
+		<elem name=4>16 divisions</elem>
+	</combobox></bold>
+</xComboDetail>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Branch/trunk</xtrheader>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - How thick the trunk or branch is.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=thickscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Textures wrap</bold> - Because the diameter of a trunk or branch changes,
+			wrapping a texture around it usually causes a seam to appear along the branch/trunk.
+			If you set the "Texture wrap" value to a non-zero number, the texture will be
+			stretched/shrunk around the trunk so it repeats that many times, eliminating
+			and seams.
+		</td>
+		<td><edit width=100% maxchars=32 name=texturewrap/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lengthwise smoothing</bold> - Smooth lengthwise curves in the
+			branch/trunk are creating by pieces together many straight pieces.
+			The larger the number the smoother the branch/trunk but the longer it
+			will take to draw.
+		</td>
+		<td><xcombodetail name=divide/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=round>
+			<bold>Draw a circular branch/trunk</bold><br/>
+			To make drawing faster, the profile of the branch/trunk is only approximately
+			a circle. This is fine for thin branches, but may be noticed for thick
+			trunks. Check this box to draw the trunk more circular; this looks better
+			but slows down drawing.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=cap>
+			<bold>Cap the ends</bold><br/>
+			The ends of branches are usually left open (hollow) to make drawing faster.
+			However, if you're drawing thick branches without any leaves obscuring their
+			ends this may become noticable. If so, check this button.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Roots</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=roots>
+			<bold>This is a tree with roots</bold><br/>
+			Check this is you wish to make this a tree with roots (as opposed to
+			a sub-branch on a tree). If checked, the following settings will affect
+			the object.
+		</xChoiceButton>
+		To make roots, create "branches" off the base of the tree and have keep
+		them level to the ground or pointing downwards.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Thickness at the base</bold> - Moving the slider to the right will
+			make the tree thicker at the base.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=basethick/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness of roots</bold> - Controls how thick the roots are.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rootthick/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth to draw tap root</bold> - This draws the tap root slightly deeper than
+			ground level in case the tree is leaning or the terrain is steep.
+		</td>
+		<td><edit width=100% maxchars=32 name=taproot/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Low detail</xtrheader>
+	<tr><td>
+		When the branch or tree is far away (only 5-10 pixels high) it will be drawn
+		as a sphere (or ellipsoid) in order to increase the drawing speed. You will
+		need to paint the low detailed version so it has the same basic color as
+		the leaves you are using. You can see the low detailed version of your object
+		by zooming way out, or just check the following button:
+		<p/>
+		<xChoiceButton style=x checkbox=true name=displowdetail>
+			<bold>Display as low detail</bold><br/>
+			Temporarily draws the leaf group in low detail, even if it's close to you.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Automatically generate branch/tree</xtrheader>
+	<tr><td>
+		You can you the "procedural branch/tree generator" to automatically generate
+		a branch/tree for you. The generated branch/tree won't look completely natural,
+		but it may provide a starting point for you to work from. <bold>Before
+		using this tool make sure to add your leaves or sub-branches under
+		"Add new object".</bold>
+		<p/>
+		<xChoiceButton href=autobranch>
+			<bold>Procedural branch/tree generator</bold><br/>
+			Brings up a page that lets you create a branch/tree
+			algorithmically. <bold>NOTE: This will destroy any branches and leaves
+			you have already added to the tree.</bold>
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

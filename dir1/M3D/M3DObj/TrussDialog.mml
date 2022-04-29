@@ -1,0 +1,136 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Truss settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Curve/bend</xtrheader>
+	<tr><td>
+		<xchoicebutton name=custom0 href=custom0>
+			<bold>Modify curve/bend of truss</bold><br/>
+			Pressing this will bring up a dialog box that lets you control how the
+			truss curves and bends.
+		</xchoicebutton>
+		<xchoicebutton name=custom1 href=custom1>
+			<bold>Modify curve/bend of truss's lower member</bold><br/>
+			Pressing this will bring up a dialog box that lets you control how the
+			truss curves and bends. (Not applicable for all trusses.)
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Truss beams</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> -
+			The profile of the main truss beams, whether they're rectangular, circular,
+			or I-beams.
+		</td>
+		<td><bold>
+			<xComboShape width=100% name=beamstyle0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Size of the beams.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=beamsize00/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Size of the beams.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=beamsize01/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance</bold> - Distance between the major beams.
+			(Not applicable for all trusses.)
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=multisize/></bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=showbeam0>
+			<bold>Show beam #1</bold><br/>
+			Use this to show/hide the major beams.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showbeam1>
+			<bold>Show beam #2</bold><br/>
+			Use this to show/hide the major beams.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showbeam2>
+			<bold>Show beam #3</bold><br/>
+			Use this to show/hide the major beams. (Not applicable for all trusses.)
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showbeam3>
+			<bold>Show beam #4</bold><br/>
+			Use this to show/hide the major beams. (Not applicable for all trusses.)
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Bracing</xtrheader>
+	<tr>
+		<td>
+			<bold>Number</bold> - Divide the truss into this many sets of braces.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=members/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> -
+			The profile of the bracing, whether they're rectangular, circular,
+			or I-beams.
+		</td>
+		<td><bold>
+			<xComboShape width=100% name=beamstyle1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Size of the bracing members.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=beamsize10/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Size of the bracing members.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=beamsize11/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bracing diagonal pattern</bold> - How the diagonals in the truss
+			are arranged.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=membersstyle>
+			<elem name=5>None</elem>
+			<elem name=4>Saw-tooth (even)</elem>
+			<elem name=3>Saw-tooth (odd)</elem>
+			<elem name=2>Triangle (even)</elem>
+			<elem name=1>Triangle (odd)</elem>
+			<elem name=0>X</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bracing vertical pattern</bold> - How often the verticals are drawn.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=altverticals>
+			<elem name=3>All</elem>
+			<elem name=2>Every other (even)</elem>
+			<elem name=1>Every other (odd)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=mirrorstyle>
+			<bold>Mirror the bracing half way through</bold><br/>
+			If checked, the bracing will flip in the opposite direction half way along
+			the truss's length.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+

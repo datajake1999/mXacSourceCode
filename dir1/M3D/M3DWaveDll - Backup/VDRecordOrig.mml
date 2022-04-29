@@ -1,0 +1,23 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice has been synthesized"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice has been synthesized</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You don't need to record anything. The voice has been synthesized
+				using the text-to-speech engine.
+			</p>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href=p:2040>
+				<bold>Next</bold><br/>
+				Continue to the next step.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

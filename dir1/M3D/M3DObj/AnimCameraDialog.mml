@@ -1,0 +1,109 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Animation camera settings"/>
+
+<p>
+	The animation-camera object is used to place the cameras that will be
+	used to take the animation shots.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Exposure</xtrheader>
+	<tr>
+		<td>
+			<bold>Light levels</bold> - This is the final brightness of the image,
+			compensating for over-bright or dark scenes. See the following table
+			for some good light levels to use.
+		</td>
+		<td><edit maxchars=32 width=100% name=exposure/></td>
+	</tr>
+	<tr>
+		<td bgcolor=#004000 width=66%><font color=#ffffff><bold>Lighting condition</bold></font></td>
+		<td bgcolor=#004000 width=33%><font color=#ffffff><bold>Light level</bold></font></td>
+	</tr>
+	<tr>
+		<td width=66%>Bright sunlight</td>
+		<td width=33%>0.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Slightly overcast</td>
+		<td width=33%>1.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Overcast</td>
+		<td width=33%>2.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Daytime interior</td>
+		<td width=33%>3.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Night-time interior</td>
+		<td width=33%>4.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Dark night-time interior</td>
+		<td width=33%>5.0</td>
+	</tr>
+	<tr>
+		<td width=66%>Moonlight</td>
+		<td width=33%>6.0</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Field of view</xtrheader>
+	<tr>
+		<td>
+			<bold>Field of view</bold> - The number of degrees of view the
+			camera has. See the table below for FOV (field of view) based
+			on lens type.
+		</td>
+		<td><edit maxchars=32 width=100% name=fov/></td>
+	</tr>
+	<tr>
+		<td bgcolor=#004000 width=20%><font color=#ffffff><bold>Lens</bold></font></td>
+		<td bgcolor=#004000 width=60%><font color=#ffffff><bold>Lens name</bold></font></td>
+		<td bgcolor=#004000 width=20%><font color=#ffffff><bold>FOV</bold></font></td>
+	</tr>
+	<tr>
+		<td width=20%>15 mm</td>
+		<td width=60%>Ultra wide angle</td>
+		<td width=20%>115</td>
+	</tr>
+	<tr>
+		<td width=20%>20 mm</td>
+		<td width=60%>Very wide angle</td>
+		<td width=20%>94</td>
+	</tr>
+	<tr>
+		<td width=20%>28 mm</td>
+		<td width=60%>Wide angle</td>
+		<td width=20%>76</td>
+	</tr>
+	<tr>
+		<td width=20%>35 mm</td>
+		<td width=60%>Medium wide angle</td>
+		<td width=20%>63</td>
+	</tr>
+	<tr>
+		<td width=20%>50 mm</td>
+		<td width=60%>Normal/standard</td>
+		<td width=20%>46</td>
+	</tr>
+	<tr>
+		<td width=20%>85 mm</td>
+		<td width=60%>Medium long</td>
+		<td width=20%>28</td>
+	</tr>
+	<tr>
+		<td width=20%>135 mm</td>
+		<td width=60%>Long/telephoto</td>
+		<td width=20%>18</td>
+	</tr>
+	<tr>
+		<td width=20%>200 mm</td>
+		<td width=60%>Extra long/super</td>
+		<td width=20%>12</td>
+	</tr>
+</xtablecenter>

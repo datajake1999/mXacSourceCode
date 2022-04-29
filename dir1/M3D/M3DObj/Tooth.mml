@@ -1,0 +1,198 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Tooth/claw settings"/>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Length</xtrheader>
+	<tr>
+		<td>
+			<bold>Length</bold> - Width of the head in meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=length/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Curvature</bold> - The number of degrees of arc that the tooth curves
+			through. 0 will cause it to be straight, with higher numbers gradually increasing
+			the curvature.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=curvature/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Curvature change</bold> - This controls how quickly the curve
+			changes from the root to the tip. Moving the slider to the left will cause the tip
+			to be the most curved, while to the right will cause the root to curve the most.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=curvelinear/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Width and depth</xtrheader>
+	<tr>
+		<td>
+			<bold>Width (at root)</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=root0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth (at root)</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=root1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (at tip)</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tip0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth (at tip)</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tip1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness change</bold> - This controls how quickly the thickness changes
+			from the root to the tip. Moving the slider to the left will cause the tip's
+			thickness to dominated, and to the right the root's thickness.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profilelinear/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Profile shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Front roundness (at the base)</bold> - Affects the roundess of the front of the tooth.
+			The middle will produce a rounded front. Moving left will make it more
+			square, while to the right will make it more pointy.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile00/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Back roundness (base)</bold> - Like "Front roundness", except it affects
+			the back of the tooth.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right roundness (base)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile02/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left roundness (base)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile03/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Front roundness (tip)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile10/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Back roundness (tip)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile11/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right roundness (tip)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile12/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left roundness (tip)</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile13/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture wrapping (around tooth)</bold> - If you enter a number of 1 or
+			greater, any texture will be wrapped around the tooth exactly that many times,
+			ensuring that there are no seams. If you use 0, the texture wraps around
+			based on the diameter of the tooth.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=textwrapprof/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Texture wrapping (length of tooth)</bold> - If you enter a number of 1 or
+			greater, the texture will repeated exactly that many times along the length
+			of the tooth. 0 causes the texture to repeat normally, based on distance.
+			<p/>
+			(Using "1", for example, will let you use a texture that yellows the
+			tooth near its base, and is whiter at the tip.)
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=textwraplength/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extra detail</bold> - The tooth/claw will be drawn with more detailed the
+			closer the camera is to it. However, for some some teeth/claws this will not
+			be enough. You can use this setting to add extra detail to teeth/claws that need it.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=userdetail>
+			<elem name=0>None</elem>
+			<elem name=1>4x the polygons</elem>
+			<elem name=2>16x the polygons</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+
+

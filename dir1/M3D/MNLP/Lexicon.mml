@@ -1,0 +1,59 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lexicon"/>
+
+<p>
+	A lexicon stores the pronunciations of words. It also stores the words' part-of-speech
+	and the definition of what phonemes the language uses.
+</p>
+
+<p>
+	Two types of lexicons exist:
+</p>
+
+<xul>
+	<li>
+		<bold>Exceptions lexicon</bold> - An exceptions lexicon stores the pronunciations
+		of a handful of words whose pronunciations are either not in the master lexicon or
+		which are different. Use an exceptions lexicon if you wish to correct the
+		pronunciation of text-to-speech or speech recognition.
+	</li>
+	<li>
+		<bold>Master lexicon</bold> - These lexicons store the pronunciations of 100,000+
+		words and other information specific to a langauge. You only need to create or
+		modify a master lexicon if you plan to create text-to-speech (or speech recognition)
+		in a new language.
+	</li>
+</xul>
+
+<xbr/>
+
+<xSectionTitle>Exceptions lexicon</xSectionTitle>
+
+<xChoiceButton href=newex>
+	<bold>Create a new exceptions lexicon</bold><br/>
+	Press this to create a new exceptions lexicon.
+</xChoiceButton>
+
+<xChoiceButton href=editex>
+	<bold>Modify an existing exceptions lexicon</bold><br/>
+	Lets you edit an existing exceptions lexicon.
+</xChoiceButton>
+
+<xSectionTitle>Master lexicon</xSectionTitle>
+
+<xChoiceButton href=newmaster>
+	<bold>Create a new master lexicon</bold><br/>
+	Use this to create an entirely new master lexicon. You will need to do this
+	if you wish to create a text-to-speech voice for a language that you don't
+	have a lexicon for. Creating a master lexicon is a <bold>lot</bold> of work,
+	especially for non-phonetic languages like English.
+</xChoiceButton>
+
+<xChoiceButton href=editmaster>
+	<bold>Modify an existing master lexicon</bold><br/>
+	This modifies an existing master lexicon. <bold>Do not</bold> modify the
+	pre-installed lexicon(s) because if you ever re-install all your changes
+	will be lost.
+</xChoiceButton>
+

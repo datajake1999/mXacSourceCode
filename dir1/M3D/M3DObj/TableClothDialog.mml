@@ -1,0 +1,55 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Tablecloth settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Table</xtrheader>
+	<tr><td>
+		In order to shape the tablecloth properly, <xSN/> must know the size and shape
+		of the table upon which it is placed.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Shape of the table.
+		</td>
+		<td><bold><ComboBox width=100% cbheight=150 name=shape>
+			<elem name=1>Circular</elem>
+			<elem name=0>Rectangular</elem>
+			<elem name=2>Rounded</elem>
+		</ComboBox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Table size</bold> - Width and length of the table.
+		</td>
+		<td><align align=right><bold>
+			W: <edit maxchars=32 width=80% name=tablewidth/><br/>
+			L: <edit maxchars=32 width=80% name=tablelength/>
+		</bold></align></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tablecloth</xtrheader>
+	<tr>
+		<td>
+			<bold>Tablecloth size</bold> - Width and length of the tablecloth.
+			This must be larger than the size of the table. (All tablecloths
+			are rectangular.)
+		</td>
+		<td><align align=right><bold>
+			W: <edit maxchars=32 width=80% name=clothwidth/><br/>
+			L: <edit maxchars=32 width=80% name=clothlength/>
+		</bold></align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance between ripples</bold> - Whenever a cloth is placed over a table
+			ripples are formed at the hanging edge of the cloth. A larger number makes
+			the cloth look like a heavier fabric.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=ripplesize/>
+		</td>
+	</tr>
+</xtablecenter>

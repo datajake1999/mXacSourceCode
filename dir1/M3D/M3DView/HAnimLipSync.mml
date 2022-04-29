@@ -1,0 +1,216 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animating mouth shapes"/>
+
+<xPageTitle>
+	Animating mouth shapes
+</xPageTitle>
+
+<p>
+	Animating a character's mouth as he/she speaks (also known as lip synchronization) is
+	one of the more common, and more boring tasks of animation. <xSN/> provides tools
+	to make this task easier and quicker; it includes a simple speech recognition module
+	that determines where the phonemes on recorded speech begin and end. From there,
+	the mouth shapes are automatically generated. Most of the work is done for you.
+</p>
+
+
+<xSectionTitle>Recording audio and using speech recognition</xSectionTitle>
+
+<p>
+	The first step is to record your audio and use speech recognition:
+</p>
+
+<ol>
+	<li>
+		<bold>Run <xSN/>'s audio editor</bold>, accessible from the <xSN/> splash screen.
+	</li>
+	<li>
+		<bold>Record</bold> your speech. (You can always use a different editor for this.)
+	</li>
+	<li>
+		Press the <bold>Speech recognition</bold> button (an ear).
+	</li>
+	<li>
+		In the "Speech recognition" page, <bold>type in</bold> a transcription of what you
+		just spoke.
+	</li>
+	<li>
+		Press the <bold>"Do speech recognition"</bold> button.
+	</li>
+	<li>
+		<bold>Close</bold> the speech recognition dialog once all the processing is complete.
+	</li>
+	<p>
+		Underneath the wave display you'll see a list of phonemes that were recognized and
+		their timing.
+	</p>
+	<li>
+		You can press the <bold>"Show mouth"</bold> (mouth icon) button to see a mouth
+		that will animate as you play.
+	</li>
+	<li>
+		<bold>Adjust the timing</bold> of the phonemes by clicking and dragging on the vertical lines
+		between phonemes.
+	</li>
+	<li>
+		You can replace a phoneme by <bold>clicking on the phoneme letters</bold> to set the selection,
+		and then press the <bold>"New phoneme"</bold> (P icon) button to change the phoneme.
+	</li>
+	<li>
+		<bold>Save</bold> your wave file. The phoneme information will be saved with it.
+	</li>
+</ol>
+
+
+<xSectionTitle>Attributes for lip sync</xSectionTitle>
+
+<p>
+	For <xSN/> to use the phoneme information any object you wish to speak (aka: characters)
+	will need to support some extra attributes. Since <xSN/> doesn't really know what
+	part of your object is a mouth, it just looks at the phonemes in the .wav file and
+	manipulates one or more attributes based on that phoneme.
+</p>
+
+<p>
+	These attributes are either connected to a polygon mesh's deformations (morphing)
+	or a bones system, depending upon the object was created.
+	The number and name of the attributes will also vary depending upon the quality
+	of lip sync needed (and hence supported by the object). Most animators use only 6 to
+	8 shapes to represent all the phonemes. Others, especially if attempting realistic
+	closeups, may design their object with many more.	
+</p>
+
+<p>
+	<xSN/> will automatically determine which method
+	an object uses based upon which attributes are supported by the object. If you
+	are designing an object and wish to use automatic lip sync, your
+	object <bold>must</bold> support one of the following sets of attributes:
+</p>
+
+<xul>
+	<li>
+		<bold>One attribute per phoneme</bold> - <xSN/> will use a different attribute for
+		each phoneme (around 40 of them). The attributes must be
+		named <bold>LipSyncPhone:<italic>phoneme</italic></bold>, such
+		as <bold>LipSyncPhone:aa</bold> and <bold>LipSyncPhone:ae</bold>, etc.
+		When the phoneme is not spoken it's value will be 0. This will be changed to
+		1 when the phoneme is spoken.
+	</li>
+	<li>
+		<bold>8 mouth shapes</bold> - From the "Digital Character Animation 2"
+		book (<a href="http://www.newriders.com">http://www.newriders.com</a>) this
+		groups the phonemes into 8 categories: <bold>LipSyncPhone8:MBP</bold> for
+		"m", "b", and "p" phonemes. <bold>LipSyncPhone8:AI</bold> for wide open vowels such
+		as "aa" and "ay". <bold>LipSyncPhone8:E</bold> for the "iy"
+		phoneme. <bold>LipSyncPhone8:O</bold> for "ow". <bold>LipSyncPhone8:OO</bold> for
+		"uh" and "uw". <bold>LipSyncPhone8:LDTH</bold> for "l", "d", "th", and
+		"dh". <bold>LipSyncPhone8:FV</bold> for "f" and
+		"v". <bold>LipSyncPhone8:Rest</bold> for all the other mouth shapes.
+		Attribute values range from 0 (phoneme not spoken) to 1 (phoneme spoken).
+	</li>
+	<li>
+		<bold>6 mouth shapes</bold> - From a "3D World" magazine article (
+		<a href="http://www.3dworldmag.com">http://www.3dworldmag.com</a> by
+		Stepfan Marjoram. This groups phonemes into 6
+		categories: <bold>LipSyncPhone6:MBP</bold>, <bold>LipSyncPhone6:AI</bold>,
+		<bold>LipSyncPhone6:FV</bold>, <bold>LipSyncPhone6:E</bold>, and <bold>LipSyncPhone6:OO</bold> are
+		the same as the 8-mouth shapes. All the others are combined
+		into <bold>LipSyncPhone6:Rest</bold>.
+	</li>
+	<li>
+		<bold>Muscle-based attributes</bold> - Instead of selecting mouth shapes based on
+		attributes, the shape is determined by the amount of pulling and pushing on the mouth.
+		To use this an object must support 7 attributes, all of which range between 0 and
+		1: <bold>LipSyncMusc:LatTension</bold> pulls the mouth out to the left and right;
+		0 is a relaxed position, while 1 is the most stretched. <bold>LipSyncMusc:LatPucker</bold> is
+		the reverse of lateral tension, causing the lips to pucker; 0 is relaxed, while 1 is
+		fully puckered. <bold>LipSyncMusc:VertOpen</bold> indicates if the mouth is open, from
+		0 being closed to 1 fully open. <bold>LipSyncMusc:TeethUpper</bold> controls how much the
+		upper lip is raised above the teeth, where 0 keeps the upper teeth hidden, and 1 exposes
+		them. <bold>LipSyncMusc:TeethLower</bold> likewise affects the lower
+		teeth. <bold>LipSyncMusc:TongueForward</bold> controls how far forward the tip of
+		the tongue is; 0 is back at the soft palate, while 1 is touching the tips of the
+		teeth. <bold>LipSyncMusc:TongueUp</bold> controls the vertical position of the
+		tongue; 0 keeps the tongue against the base of the mouth, .5 level with the bottom
+		of the upper teeth, and 1 with the roof of the mouth.
+	</li>
+	<li>
+		<bold>Others?</bold> - Email me at <xMyEmail/> if you have any suggestions.
+	</li>
+</xul>
+
+
+<xSectionTitle>Adding audio to your animation</xSectionTitle>
+<p>
+	To add sound to your animations:
+</p>
+
+<ol>
+	<li>
+		In the main 3D view, <bold>select</bold> the object that causes the sound.
+		If it's general background sound then any object will do.
+	</li>
+	<li>
+		<bold>Switch</bold> to the animation timeline and notice the entry for the
+		object you just selected.
+	</li>
+	<li>
+		Press the <xButtonNewAnimWave/> button.
+	</li>
+	<li>
+		As with other animation objects, <bold>click and drag</bold> on the animation timeline
+		to indicate where you wish the sound to be played.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the new audio animation object.
+	</li>
+	<li>
+		In the animation object's settings, press the <bold>Browse</bold> button and
+		indicate where your .wav file is location. (If you haven't already recorded a wave
+		file you can do so using <xSN/>'s audio editor.)
+	</li>
+</ol>
+
+
+<xSectionTitle>Automatic lip sync</xSectionTitle>
+
+<p>
+	Assuming that the wave file you added has phonemes saved (see above), and you added it to an object
+	that supports the necessary attributes (see above), the object's lips will
+	automatically animate.
+</p>
+
+<p>
+	You can verify this in a number of ways:
+</p>
+
+<xul>
+	<li>
+		Change the object's display to its <bold>"Attribute graph"</bold> and verify that the mouth
+		attributes change during the timeframe of the audio.
+	</li>
+	<li>
+		Press <xButtonAnimPlay/> and see if the lips animate.
+	</li>
+</xul>
+
+
+<xSectionTitle>Tips</xSectionTitle>
+
+<p>
+	Using automatic phonemes will create completely symmetrical mouth
+	shapes that are not entirely realistic. To get a-symmetrical mouth shapes, you may
+	wish to <xButtonObjDeconstruct/> the wave object to expose all the attributes and then hand
+	modify them slightly to make them more realistic and/or visually interesting.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:926>Jaw object</a></li>
+	<li><a href=r:816>Playing audio objects</a></li>
+</xul>

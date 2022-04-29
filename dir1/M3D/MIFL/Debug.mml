@@ -1,0 +1,59 @@
+<PageInfo index=false title="Debug"/>
+<?Include resource=500?>
+
+<colorblend posn=background tcolor=#e0ffe0 bcolor=#b0e0b0/>
+<small><table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td valign=center align=right lrmargin=16>
+		<font color=#c0c0c0><big><big><italic>
+			<<<PAGETITLE>>>
+		</italic></big></big></font>
+	</td>
+</tr>
+</table>
+<br/>
+
+
+<table width=100%><tr>
+	<td width=66%>
+		<<<$DEBUGERR>>>
+		
+		<p align=center>
+			<align tab=12><small>
+				<font face="courier new"><edit width=85% height=40% multiline=true wordwrap=false readonly=true vscroll=codescroll name=code/></font>
+			</small></align>
+			<scrollbar orient=vert height=40% name=codescroll/>
+			<br/>
+			<button style=beveled accel=x href=exit><bold>E<u>x</u>it</bold><xHoverHelp>
+				Stops debugging.
+			</xHoverHelp></button>
+			<button style=box accel=r href=run><bold><u>R</u>un</bold><xHoverHelp>
+				Stops stepping through the code and runs until a break occurs.
+			</xHoverHelp></button>
+			<button style=uptriangle accel=o href=stepout><bold>Step <u>o</u>ut</bold><xHoverHelp>
+				Steps out of the current function/method.
+			</xHoverHelp></button>
+			<button style=downtriangle accel=i href=stepin><bold>Step <u>i</u>n</bold><xHoverHelp>
+				This steps to the next line. If it's on a function/method then it steps into the function.
+			</xHoverHelp></button>
+			<button defcontrol=true style=righttriangle accel=s href=stepover><bold><u>S</u>tep</bold><xHoverHelp>
+				This steps to the next line.
+			</xHoverHelp></button>
+		</p>
+		
+		<<<$DEBUGVARS>>>
+		<<<$DEBUGSTRING>>>
+	</td>
+	<td width=33%>
+		<<<$DEBUGLIST>>>
+	</td>
+</tr></table>
+
+<br/>
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr><td align=center>
+<font color=#808080><italic><small>Copyright 2002-2009 Mike Rozak (<font face=symbol>m</font>Xac). All rights reserved.</small></italic></font>
+</td></tr>
+</table></small>

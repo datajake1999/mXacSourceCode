@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Intelligent adjust"/>
+
+<p>
+	When you select the "Intelligent adjust tool" <image bmpresource=168 transparent=true/> and
+	click on a building block, the building block intersects itself with the neighboring
+	building blocks. It intersects walls, roofs, and floors. This page lets you control some
+	of the behavior.
+</p>
+
+<xchoicebutton style=x checkbox=true name=keepfloor>
+	<bold>Keep the floor</bold><br/>
+	When floors from two building blocks are intersected, the rule is: The
+	larger area floor is kept whole, while the smaller area on is clipped away from
+	the larger area. If this building block's floor is getting clipped away but you don't
+	want that, then check this box and re-do the intelligent adjust.
+</xchoicebutton>
+
+<xchoicebutton style=x checkbox=true name=keepwalls>
+	<bold>Keep the walls</bold><br/>
+	When two building blocks are intersected any walls that end up inside the combined
+	house are removed. If you want to keep the walls from this building block
+	then check this box and re-do the intelligent adjust.
+</xchoicebutton>
+
+<xchoicebutton style=x checkbox=true name=restrict>
+	<bold>Restrict building block elevation</bold><br/>
+	Normally on, this restricts the building block's elevation (distance between the
+	base of the building block and the "ground") so that the base always matches
+	one of the following levels. If you turn this off then the building block can be
+	moved up/down to any level, but will only contain one floor. Turn this off for bay
+	windows.
+</xchoicebutton>
+
+<xchoicebutton style=x checkbox=true name=restrictheight>
+	<bold>Restrict building block height to floors</bold><br/>
+	If checked, the top of the building block (excluding the roof) must be on one
+	of the floor levels; this insures that all top floors are the same height. If unchecked
+	then building block can be any height.
+</xchoicebutton>
+
+

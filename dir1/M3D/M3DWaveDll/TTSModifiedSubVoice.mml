@@ -1,0 +1,46 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify sub-voice page"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>>, <<<SUBVOICE>>></bold></big>
+</p>
+
+<p>
+	<bold>Sub-voice name</bold> - Type in a name for your own reference.
+</p>
+
+<xEditOneLine maxchars=128 name=name/>
+
+<p>
+	These pages will let you modify the sound of the master voice into a custom voice.
+</p>
+
+<xChoiceButton name=synth href=synth>
+	<bold>Change voice synthesis settings</bold><br/>
+	This allows you to change the quality of the voice, basically changing the vocal
+	tract.
+</xChoiceButton>
+
+<xChoiceButton name=prosody href=prosody>
+	<bold>Change prosody</bold><br/>
+	This page lets you control the prosody of the voice: timing, volume, and pitch.
+</xChoiceButton>
+
+<xChoiceButton name=pronunciation href=pronunciation>
+	<bold>Change pronunciation</bold><br/>
+	You can use this to change how the voice pronounces words.
+</xChoiceButton>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Test the voice</xtrheader>
+	<tr><td>
+		Type in some text below and press "Test" to hear what your modified voice
+		sounds like.
+		<p/>
+		<edit width=100% maxchars=250 name=testspeak/><br/>
+		<p align=right><button name=test><bold>Test</bold></button></p>
+	</td></tr>
+</xtablecenter>

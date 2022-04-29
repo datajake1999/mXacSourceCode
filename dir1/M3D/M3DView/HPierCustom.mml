@@ -1,0 +1,59 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Customizing piers"/>
+
+<xPageTitle>
+	Customizing piers
+</xPageTitle>
+
+
+<p>
+	While <xSN/> comes with a number of predefined pier styles, the piers
+	available may not be what you're looking for. <xSN/> allows you to customize piers
+	creating thousands of different styles. You can add or remove footings, posts, and bracing
+	to your pier design.
+</p>
+
+<p>
+	To customize a pier object:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on one of the piers.
+	</li>
+	<li>
+		Switch to the "Pier appearance" page.
+	</li>
+	<p>
+		If you're modifying the style of a pier object, press the <bold>"Appearance"</bold> button
+		in the "Pier settings" dialog.
+	</p>
+	<p>
+		From a building block, press the <bold>"Pier appearance"</bold> button.
+	</p>
+	<li>
+		In the "Pier appearance" dialog, <bold>select "Custom"</bold> in the
+		"Pier style" list box.
+	</li>
+	<p>
+		The "Modify custom pier" button will be enabled.
+	</p>
+	<li>
+		<bold>Press the "Modify custom pier" button.</bold>
+	</li>
+	<li>
+		<bold>Follow the directions</bold> in the "Custom pier appearance" page
+		that appears. Customizing piers will take some practice, so the best
+		way to learn is to experiment with the settings and see what they do.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:341>Piers</a></li>
+	<li><a href=r:342>Piers in building blocks</a></li>
+</xul>

@@ -1,0 +1,41 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Type in a transcription"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Type in a transcription</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You need to <bold>type in a the sentence(s) that
+				was spoken in the recording</bold>. If you skipped the
+				recording, you still need to type in a sentence, since
+				you will need to record it next.
+			</p>
+			
+			<p>
+				<bold><edit width=100% maxchars=256 defcontrol=true name=transcript/></bold>
+			</p>
+			
+			<xChoiceButton style=righttriangle name=play>
+				<bold>Play recording</bold><br/>
+				Press this to play the recording whose transcript you need to
+				type above.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle name=next>
+				<bold>Next, record your voice</bold><br/>
+				Once you have typed in what the recording said, pressing next will
+				pull up the recording page so you can record the sentence yourself.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=nextfile>
+				<bold>Next, load your recording from a file</bold><br/>
+				Press this if you have a recording of voice you wish to diguise.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

@@ -1,0 +1,101 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Location and embedding"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Typical location</xtrheader>
+	<tr><td>
+		<xchoicebutton radiobutton=true style=x group=ground,wall,ceiling name=ground>
+			<bold>On the ground/floor</bold><br/>
+			The object is usually placed on the ground, floor, or on top of some other
+			horizontal plane.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=x group=ground,wall,ceiling name=wall>
+			<bold>On the wall</bold><br/>
+			The object is usually placed on the wall, or on some other vertical plane.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=x group=ground,wall,ceiling name=ceiling>
+			<bold>On the ceiling</bold><br/>
+			The object is usually placed on the ceiling, or on the bottom of some other
+			horizontal plane.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=check name=drawplane>
+			<bold>Draw the ground, wall, or ceiling</bold><br/>
+			If checked, then the ground, wall, or ceiling will be drawn so you know
+			where it is in relation to the object you're builing.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Embedding</xtrheader>
+	<tr><td>
+		You can make an object <bold>embeddable</bold>. This will allow it to "stick" to
+		walls, ceilings, floors, and the ground. In addition, it will be able to "cut out
+		openings" in the surface you stick it to. For example: Windows are embeddable objects
+		because they stick to the wall you put them in (and move if the wall is moved or
+		resized) and then cut out an opening in the wall (the window frame). Wall-mounted
+		lights are also embeddable because they stick to the wall, although they do
+		not cut out any shape.
+		<p/>
+		<xchoicebutton radiobutton=true style=x group=embed0,embed1,embed2,embed3 name=embed0>
+			<bold>Not embeddable</bold><br/>
+			This object does not stick to or cut out pieces in surfaces.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=x group=embed0,embed1,embed2,embed3 name=embed1>
+			<bold>Embeddable, sticky</bold><br/>
+			This object is embeddable; it will stick to surfaces, but does not cut out pieces
+			of them.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=x group=embed0,embed1,embed2,embed3 name=embed2>
+			<bold>Embeddable, cut through one side only</bold><br/>
+			The object sticks to surfaces and cuts through one side of the surface, but not
+			the far side. For example: A knick-knack nook that cuts out the interior lining
+			but which is as only deep as the stud thickness. This also works for recessed
+			lighting.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=x group=embed0,embed1,embed2,embed3 name=embed3>
+			<bold>Embeddable, cut through both sides</bold><br/>
+			The object sticks to surfaces and cuts through both sides of the surface.
+			Use this for windows and doors.
+		</xchoicebutton>
+		<br/>
+		<bold>Important:</bold> If your embedded object cuts through the surface, the shape of the cutout
+		will be determined by the intersection of the object and the horizontal or vertical
+		plane (as specified in "Typical location" above). You should make sure to have the
+		"Draw the ground..." option on so you can see which parts of the object are cutting
+		through the plane.
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td><bold>Type</bold> of object:</td>
+		<td><bold><combobox cbheight=150 width=100% name=objtype>
+			<elem name=262144>Appliance</elem>
+			<elem name=16>Balustrade</elem>
+			<elem name=512>Cabinet</elem>
+			<elem name=262144>Camera, animation</elem>
+			<elem name=2097152>Characters</elem>
+			<elem name=128>Door</elem>
+			<elem name=32768>Electrical</elem>
+			<elem name=2>Floor</elem>
+			<elem name=2048>Furniture</elem>
+			<elem name=64>Framing</elem>
+			<elem name=8192>Ground</elem>
+			<elem name=4096>Landscaping</elem>
+			<elem name=16384>Miscellaneous</elem>
+			<elem name=32>Piers</elem>
+			<elem name=1048576>Plants</elem>
+			<elem name=1024>Plumbing</elem>
+			<elem name=4>Roof</elem>
+			<elem name=8>Staircase</elem>
+			<elem name=1>Wall</elem>
+			<elem name=131072>Weather</elem>
+			<elem name=256>Window</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>

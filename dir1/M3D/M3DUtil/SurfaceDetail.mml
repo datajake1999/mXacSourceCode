@@ -1,0 +1,102 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Curvature detail"/>
+
+<p>
+	You won't need to use this page very often. Use it only if you have a curved
+	surface that's doesn't look smooth enough... see below:
+</p>
+
+<p>
+	In order for <xSN/> to draw a curved surface it subdivides the curve into smaller
+	"segments" and draws them straight, not curved. The more segments used, the
+	smoother the curve, but the longer it takes to draw. Usually, a curve subdivided into 4
+	or 8 segments will look smooth to anyone looking at it, so that's all <xSN/> subdivides.
+	However, if your curve doesn't look smooth you may need to tell
+	<xSN/> to subdivide the surface further using this page.
+</p>
+
+<p>
+	The first number to adjust is the "subdivide down to" size. <xSN/> will subdivide
+	a surface until the longest segment is no longer than the "subdivide down to"
+	length (or height). For most curves 0.5 m is plenty, but if you have an espcially
+	sharp curve you may want this lower, perhaps as low as 0.1 m.
+</p>
+
+<p>
+	If adjusting the "subdivide down to" setting doesn't solve your problems then adjust
+	the "minimum/maximum" "horizontal/vertical" subdivisions setting.
+</p>
+
+<p>
+	If changes to "subdivide down to" don't seem to make any difference then increase
+	the "maximum horizontal/vertical" subdivisions settings.
+	<xSN/> <bold>will not</bold> subdivide the horizontal (left/right) and
+	vertical (up/down) length of the curve any more than the "maximum" number of times.
+</p>
+
+<p>
+	You can also adjust the minimum settings... When <xSN/> draws
+	a curve it will <bold>always</bold> subdivide the horizontal (left/right) or
+	vertical (up/down) length of the curve by the "minimum" number of times, no matter
+	how long this is. Adjusting this number up will add more curvature even if the
+	surface length does not warrant dividing by the "subdivide down to" setting.
+</p>
+
+
+<!xComboDetail>
+	<bold><combobox MACROATTRIBUTE=1 cbheight=150 width=100%>
+		<elem name=0>No divisions</elem>
+		<elem name=1>2 divisions</elem>
+		<elem name=2>4 divisions</elem>
+		<elem name=3>8 divisions</elem>
+		<elem name=4>16 divisions</elem>
+	</combobox></bold>
+</xComboDetail>
+
+<xtablecenter width=100%>
+	<xtrheader>Curvature detail</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Subdivide down to</bold> - Size which the sections should be smaller than.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=detail/></bold>
+		</td>
+	</tr>
+	<tr><td><br/></td></tr>
+	<tr>
+		<td width=66%>
+			<bold>Minimum horizontal subdivisions</bold>
+		</td>
+		<td width=33%>
+			<xcombodetail name=minh/>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Maximum horizontal subdivisions</bold>
+		</td>
+		<td width=33%>
+			<xcombodetail name=maxh/>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Minimum vertical subdivisions</bold>
+		</td>
+		<td width=33%>
+			<xcombodetail name=minv/>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Maximum vertical subdivisions</bold>
+		</td>
+		<td width=33%>
+			<xcombodetail name=maxv/>
+		</td>
+	</tr>
+
+</xtablecenter>
+

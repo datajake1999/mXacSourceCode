@@ -1,0 +1,153 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lexicon phonemes"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<p>
+	Every languages uses a different set of phonemes. You must provide a list of
+	phonemes for every master lexicon.
+</p>
+
+<p>
+	As a general rule, you fill in the
+	phoneme list when you first create the lexicon and then leave it untouched.
+	Changing phonemes once you have filled in the lexicon's pronunciations, or
+	have created speech recgonition training or text-to-speech, <bold>could seriously
+	damage</bold> your lexicon, speech recognition, or text-to-speech.
+</p>
+
+
+<!xComboEnglishPhone>
+	<combobox macroattribute=1 width=100% cbheight=300>
+		<elem name="0">Silence</elem>
+		<elem name="1">f<bold>A</bold>ther</elem>
+		<elem name="2"><bold>A</bold>t</elem>
+		<elem name="3">c<bold>U</bold>t</elem>
+		<elem name="4">l<bold>AW</bold></elem>
+		<elem name="5"><bold>OU</bold>t</elem>
+		<elem name="6"><bold>A</bold>bout</elem>
+		<elem name="7">t<bold>IE</bold></elem>
+		<elem name="8"><bold>B</bold>it</elem>
+		<elem name="9"><bold>CH</bold>in</elem>
+		<elem name="10"><bold>D</bold>ip</elem>
+		<elem name="11"><bold>TH</bold>is</elem>
+		<elem name="12">b<bold>E</bold>t</elem>
+		<elem name="13">h<bold>U</bold>rt</elem>
+		<elem name="14"><bold>AI</bold>d</elem>
+		<elem name="15"><bold>F</bold>at</elem>
+		<elem name="16"><bold>G</bold>ive</elem>
+		<elem name="17"><bold>H</bold>it</elem>
+		<elem name="18">b<bold>I</bold>t</elem>
+		<elem name="19">b<bold>EE</bold>t</elem>
+		<elem name="20"><bold>J</bold>oy</elem>
+		<elem name="21"><bold>K</bold>iss</elem>
+		<elem name="22"><bold>L</bold>ip</elem>
+		<elem name="23"><bold>M</bold>ap</elem>
+		<elem name="24"><bold>N</bold>ip</elem>
+		<elem name="25">ki<bold>NG</bold></elem>
+		<elem name="26">t<bold>OE</bold></elem>
+		<elem name="27">t<bold>OY</bold></elem>
+		<elem name="28"><bold>P</bold>in</elem>
+		<elem name="29"><bold>R</bold>ed</elem>
+		<elem name="30"><bold>S</bold>ip</elem>
+		<elem name="31"><bold>SH</bold>e</elem>
+		<elem name="32"><bold>T</bold>alk</elem>
+		<elem name="33"><bold>TH</bold>in</elem>
+		<elem name="34">f<bold>OO</bold>t</elem>
+		<elem name="35">f<bold>OO</bold>d</elem>
+		<elem name="36"><bold>V</bold>at</elem>
+		<elem name="37"><bold>W</bold>it</elem>
+		<elem name="38"><bold>Y</bold>et</elem>
+		<elem name="39"><bold>Z</bold>ip</elem>
+		<elem name="40">a<bold>Z</bold>ure</elem>
+	</combobox>
+</xComboEnglishPhone>
+
+<!xComboStressed>
+		<combobox macroattribute=1 width=100% cbheight=150>
+		<elem name="0">None</elem>
+		<elem name="1"><bold>Primary</bold></elem>
+		<elem name="2"><bold>Secondary</bold></elem>
+		<elem name="3"><bold>3 (useful for Chinese tones)</bold></elem>
+		<elem name="4"><bold>4 (useful for Chinese tones)</bold></elem>
+		<elem name="5"><bold>5 (useful for Chinese tones)</bold></elem>
+	</combobox>
+</xComboStressed>
+
+<xTableCenter width=100%>
+	<xtrheader>Phonemes</xtrheader>
+	<tr><td>
+		To learn what a column is for, hold your mouse cursor over the text.
+	</td></tr>
+	<tr>
+		<td><a>
+			<bold>Phoneme</bold>
+			<xHoverHelp>
+				This is a 1 to 4 letter identifier of the phoneme. It must be unique.
+			</xHoverHelp>
+		</a></td>
+		<td><a>
+			<bold>Sample word</bold>
+			<xHoverHelp>
+				Type in a sample word that uses the phoneme and capitalize the letters (or
+				put them in brackets) so when users see the sample word they will know
+				what the phoneme sounds like. For example: "fAther" would be a good sample
+				word for the "aa" sound.
+			</xHoverHelp>
+		</a></td>
+		<td><a>
+			<bold>English</bold>
+			<xHoverHelp>
+				Select the english phoneme that sounds most similar to this phoneme.
+				<xLN/> will use the english phoneme to determine the mouth shape.
+			</xHoverHelp>
+		</a></td>
+		<td><a>
+			<bold>Stressed</bold>
+			<xHoverHelp>
+				If the phoneme can be stressed or unstressed (such as a vowel) then
+				select "Primary", "Secondary", or "None" (stress) from the list.
+				If it's a consonant and
+				doesn't have any stress differences then select "None".
+				<p/>
+				As a general rule, supporting vowel phonemes with "primary" and "none" is good.
+				Having "Secondary" stress vowel phonemes will usually lower the quality of text-to-speech
+				because there are too many versions of each phone,
+				so it should be avoided.
+			</xHoverHelp>
+		</a></td>
+		<td><a>
+			<bold>Stress counterpart</bold>
+			<xHoverHelp>
+				If the phoneme is has a "Primary" or "Secondary" stress (see the "Stressed" setting) then
+				type in the name of its unstressed ("None") version here. You don't need to do this if
+				the phoneme is already unstressed.
+				(For example: If "aa1" is the primary stressed version, "aa2" is the secondary
+				stressed version, and "aa0" is unstressed, then type "aa0" into this entry for
+				aa1's and aa2's stress counterpart.)
+				This allows speech recognition and
+				text-to-speech to know that the two phonemes (the stressed and unstressed versions)
+				are similar sounding. If the "Stressed" setting is "None" then you don't
+				need to fill this in.
+			</xHoverHelp>
+		</a></td>
+	</tr>
+	<comment><tr>
+		<td><bold><edit width=100% maxchars=5 name=nm:/></bold></td>
+		<td><bold><edit width=100% maxchars=16 name=sw:/></bold></td>
+		<td><xComboEnglishPhone name=ep:/></td>
+		<td><xComboStressed name=st:/></td>
+		<td><bold><edit width=100% maxchars=5 name=sn:/></bold></td>
+	</tr></comment>
+	<<<$PHONEDIT>>>
+	<tr><td>
+		<xChoiceButton name=add>
+			<bold>Add a new phoneme</bold><br/>
+			Adds a new phoneme to the list. The new phoneme will be named "*new".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Change the map's size"/>
+
+<p>
+	Use this page to adjust the size of the map without affect it's detail or
+	doing any shrinking/expanding of the topography.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Size</xtrheader>
+	<tr>
+		<td>
+			<bold>Width (pixels)</bold> - Number of pixels east and west.
+		</td>
+		<td><edit maxchars=32 width=100% name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (distance)</bold> - Number of km (miles, etc.) east and west.
+		</td>
+		<td><edit maxchars=32 width=100% name=widthd/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height (pixels)</bold> - Number of pixels north and south.
+		</td>
+		<td><edit maxchars=32 width=100% name=height/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height (distance)</bold> - Number of km (mile, etc.) north and south.
+		</td>
+		<td><edit maxchars=32 width=100% name=heightd/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle href=keep>
+			<bold>Keep these changes</bold><br/>
+			Press this after you have typed in new values for the width and height.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

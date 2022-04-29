@@ -1,0 +1,40 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add a cutout based on intersections"/>
+
+<p>
+	With this page you can add a cutout using the intersection of
+	other surfaces (such as walls) with the surface to determine the boundaries.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Intersections</xtrheader>
+	<tr><td>
+		<p>
+			Click on the edges that enclose the area you wish to use for an cutout.
+			When you've completely enclosed an area, press "Add cutout."
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+		<br/>
+		<italic>If you only see the edge of the surface drawn then there may not be
+		any other surfaces that intersect it.</italic>
+	</td></tr>
+</xtablecenter>
+
+
+<xchoicebutton name=addclock>
+	<bold>Add cutout (remove the inside)</bold><br/>
+	Create a new cutout based on the edges you've selected above. The inside of the
+	boundary will be removed.
+</xchoicebutton>
+
+<xchoicebutton name=addcounter>
+	<bold>Add cutout (remove the outside)</bold><br/>
+	Create a new cutout based on the edges you've selected above. The outside of the
+	boundary will be removed.
+</xchoicebutton>

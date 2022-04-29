@@ -1,0 +1,140 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Leaf settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf size</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Distance across the leaf, perpendicular to the stem.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=size0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length</bold> - Distance across the leaf, parallel to the stem.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=size1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Detail (width)</bold> - The further this slider to the right, the
+			more polygons the leaf will be divided into and the smoother the leaf.
+			Use only as much detail as necessary, because detail slows down drawing.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=8 name=detailh/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Detail (length)</bold> - The further this slider to the right, the
+			more polygons the leaf will be divided into and the smoother the leaf.
+			Use only as much detail as necessary, because detail slows down drawing.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=8 name=detailv/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Crease angle</bold> - Controls the amount of creasing down the
+			middle of the leaf.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=620 name=perpshape0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stem angle</bold> - Controls the angle which the leaf is attached
+			to the stem.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=-150 max=150 name=lenshape0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rigidity (width)</bold> - Affects how rigid the leaf is across the
+			width. All the way to the left is completely rigid.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=perpshape1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rigidity (length)</bold> - Affects how rigid the leaf is across the
+			length. All the way to the left is completely rigid.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=lenshape1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ripples (height)</bold> - Many leaves have rippling along the edges.
+			This controls the height of the ripples.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=ripples0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ripples (length)</bold> - Many leaves have rippling along the edges.
+			This controls the length of the ripples.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=ripples1/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=cutouttop>
+			<bold>Don't draw top corners of the leaf</bold><br/>
+			If your leaf image doesn't extend to the tips of the leaf,
+			then check this. This is a drawing-speed optimization so that leaves
+			will draw slightly faster.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=cutoutbottom>
+			<bold>Don't draw bottom corners of the leaf</bold><br/>
+			If your leaf image doesn't extend to the tips of the leaf,
+			then check this. This is a drawing-speed optimization so that leaves
+			will draw slightly faster.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Stem</xtrheader>
+	<tr>
+		<td>
+			<bold>Diameter</bold> - Thickness of the stem.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=stemdiam/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Connect to the leaf</bold> - This slider controls where the stem
+			connects to the leaf. If all the way to the left it connects at the end.
+			If centered, the stems connects to the leaf in the center.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=stemconnect/>
+		</td>
+	</tr>
+</xtablecenter>
+

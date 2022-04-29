@@ -1,0 +1,72 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Moving animation keyframes"/>
+
+<xPageTitle>
+	Tutorial - Moving animation keyframes
+</xPageTitle>
+
+<p>
+	After viewing the information you may discover that you wish to change it's
+	timing. To do this, just move the keyframes in the object's animation
+	timeline:
+</p>
+
+<ol>
+	<li>
+		In the animation timeline select the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the keyframe you wish to move. If you want to move
+		several keyframes hold down the <bold>control</bold> key while clicking
+		on them.
+	</li>
+	<li>
+		Select the <xButtonAnimMoveLR/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on the selected keyframe(s). Moving them left
+		and right will move them in time. Moving them up and down will change their
+		vertical position; this has no effect on playback. It's just there so that
+		keyframes won't overlap one another.
+	</li>
+	<li>
+		You can use the <xButtonAnimMoveUD/> tool to just move keyframes up and down
+		without changing their timing.
+	</li>
+</ol>
+
+<xsectiontitle>Inserting and removing time</xsectiontitle>
+
+<p>
+	If you want a portion of an animation to take longer (or less time) you can insert
+	or remove time from the animation:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonAnimTimeInsert/> or <xButtonAnimTimeRemove/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on the object's timeline. If you are inserting time,
+		click on the point where you wish time to be inserted, and drag to the right for
+		the amount of time you wish inserted. If you are removing time, click and drag over
+		the period of time you wish removed.
+	</li>
+	<p>
+		When you lift up the mouse button the time will be inserted or
+		removed, but <bold>only for the object</bold> whose timeline you clicked on.
+		If you wish to affect all objects then hold down the <bold>shift</bold> key
+		while dragging.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:560><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:571>Resizing animation objects</a></li>
+</xul>

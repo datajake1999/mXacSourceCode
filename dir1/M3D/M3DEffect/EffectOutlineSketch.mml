@@ -1,0 +1,351 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Outline (sketch)"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<<<$RSTABS>>>
+
+<<<$IFTAB1>>>
+	<tr>
+		<td>
+			<bold>Outline</bold> - Select what to outline.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 sel=2 name=level>
+			<elem name=1>Objects only</elem>
+			<elem name=2>Objects and sub-objects</elem>
+			<elem name=3>Objects, sub-objects, and corners</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average length</bold> - Average length of stroke as a percentage
+			of the image width.
+		</td>
+		<td><bold><edit width=100% name=strokelen/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum length</bold> - Minimum length of stroke as a percentage
+			of the image width. Strokes shorter than the minimum length will
+			be discarded.
+		</td>
+		<td><bold><edit width=100% name=strokelenmin/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Segment length</bold> - Segment length as a percentage
+			of the image width. Each stroke is subdivided into short segments.
+			The shorter the segment, the more curvy the stroke.
+		</td>
+		<td><bold><edit width=100% name=strokestep/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length variability</bold> - Amount the stroke length varies.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokelenvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stroke anchor</bold> - How far up the stroke it's "anchored".
+			Leftwards anchors the stroke at it's head, rightwards towards its tail.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokeanchor/></td>
+	</tr>
+<<<$ENDIFTAB1>>>
+
+<<<$IFTAB3>>>
+	<tr><td>
+		The following settings control the path of that the stroke takes.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Preferred angle</bold> - What angle strokes prefer to be made at.
+			0 for up, 90 for right, 180 for down, 270 for left. This doesn't
+			affect the path of the stroke, but it does change which part of
+			the stroke is considered it's start vs. end.
+		</td>
+		<td><bold><edit width=100% name=strokeprefangle/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum bend</bold> - The maximum bend angle that
+			a stroke will bend before it is "broken" into two.
+			Moving the slider to the right allows for sharper angles.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=maxangle/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Randomness</bold> - Controls how random the stroke is,
+			how much wiggle it has.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokerandom/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Overshoot</bold> - Moving the slider to the right will cause
+			straight lines to extend beyond the start and end of the edge.
+			The amount of overshoot is also limited by the "Segment length".
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=overshoot/></td>
+	</tr>
+<<<$ENDIFTAB3>>>
+
+<<<$IFTAB2>>>
+	<xtrheader>Spyglass effect</xtrheader>
+	<tr><td>
+		Only strokes in the central region of the image will be drawn.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - The shape to use.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=spyglassshape>
+			<elem name=0>None (Spyglass off)</elem>
+			<elem name=1>Circular</elem>
+			<elem name=2>Elliptical</elem>
+			<elem name=3>Binocular</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Scale</bold> - This scales down the circular openings of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=spyglassscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blur</bold> - Move this to control the amount of blurring around the
+			edge of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=spyglassblur/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Near-objects stick out</bold> - Any object that is closer to
+			the camera than this distance will "stick out" of the spyglass area,
+			and won't be affected by the masking.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=spyglassstickout/></bold></td>
+	</tr>
+<<<$ENDIFTAB2>>>
+
+<<<$IFTAB4>>>
+	<tr>
+		<td>
+			<bold>Width (start)</bold> - Width of the brush at the start of the
+			stroke, as a percentage of the image width.
+		</td>
+		<td><bold><edit width=100% name=strokewidth0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (anchor)</bold> - Width at the stroke's "anchor point".
+		</td>
+		<td><bold><edit width=100% name=strokewidth1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (end)</bold> - Width at the end of the stroke.
+		</td>
+		<td><bold><edit width=100% name=strokewidth2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (variability)</bold> - How much the width changes
+			at each segment.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=strokewidth3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brush shape</bold> - Select the brush shape.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=brushshape>
+			<elem name=0>Circular</elem>
+			<elem name=1>Horizontal</elem>
+			<elem name=2>Vertical</elem>
+			<elem name=3>Diagonal 1</elem>
+			<elem name=4>Diagonal 2</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bristles (thick)</bold> - Affects how much the bristles
+			affect the transparency of the paint.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bristles (thin)</bold> - Affects how much the bristles
+			affect the transparency of the paint.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency contrast</bold> - The further to the right,
+			the larger the difference between the transparent and opaque
+			portions of the stroke. Further to the left reduces them.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Opacity</bold> - The further to the right,
+			the more opqaue the brush is. Leftwards is more transparent.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=brushparam3/></td>
+	</tr>
+<<<$ENDIFTAB4>>>
+
+<<<$IFTAB5>>>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeoutlinecolor>
+				<bold>Outline color</bold><br/>
+				The outline color.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=outlinecolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blend</bold> - This blends the color of the outlined object
+			with the outline color. The further to the right, the
+			greater the blend.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=outlineblend/></td>
+	</tr>
+	<xtrheader>Random variability</xtrheader>
+	<tr>
+		<td>
+			<bold>Hue variability</bold> - Random adjustment to hue.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness variability</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation variability</bold>
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=colorvar2/></td>
+	</tr>
+	<xtrheader>Palette (shades)</xtrheader>
+	<tr>
+		<td>
+			<bold>Hue palette</bold> - The number of colors used for the
+			poster. For example: If this is "3" then only red, green, and blue
+			will be used. If it's "6" then red, yellow, green, cyan, blue, and
+			magenta will be used. If "0" is used, all hues are possible.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hue shift</bold> - Shifts all the colors in the color
+			wheel. For example: If you have "3" colors for the "Hue palette" then
+			normally the colors will be red, green, and blue. You can adjust the
+			shift so the basic colors are cyan, yellow, and magenta.
+		</td>
+		<td><scrollbar orient=horz min=-50 max=50 name=colorhueshift/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness shades</bold> - The number of shades used for
+			lightness (how bright/dark the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation shades</bold> - The number of shades used for
+			saturation (how colorful the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=colorpalette2/></bold></td>
+	</tr>
+	<xtrheader>Palette (fixed)</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=colorusefixed>
+			<bold>Use a fixed palette</bold><br/>
+			If checked then use the following five colors for the color palette.
+			If you need fewer than five colors then duplicate some entries.
+			If unchecked then the different color shades (above) will be used.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed0>
+				<bold>Color #1</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed1>
+				<bold>Color #2</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed2>
+				<bold>Color #3</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed3>
+				<bold>Color #4</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolorfixed4>
+				<bold>Color #5</bold>
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=colorfixed4/>
+		</td>
+	</tr>
+<<<$ENDIFTAB5>>>
+
+</xtablecenter>

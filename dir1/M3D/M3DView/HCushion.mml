@@ -1,0 +1,46 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Cushions and pillows"/>
+
+<xPageTitle>
+	Cushions and pillows
+</xPageTitle>
+
+<p>
+	The "cushion" object allows you to make fluffy-looking cushions, pillows,
+	and upholstered pieces.
+</p>
+
+<p>
+	To add a cushion to your house the object you're editing.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined cushion that is closest to
+		your needs. Look under "Pillows" in "Interior decoration" for a variety of
+		pillows, or "Cushions" in "Object pieces" for some cushions useful for
+		building sofas, chairs, and recliners.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house or object.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to resize the cushion.
+	</li>
+	<li>
+		You can also change the color or texture using
+		the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		You may also want to select the <xButtonObjDialog/> tool and click on
+		the cushion. In the "Cushion settings" dialog box you'll find ways you can
+		control the fluffiness, thickness, and shape of your cushion.
+		You can even add buttons to it.
+	</li>
+</ol>
+
+

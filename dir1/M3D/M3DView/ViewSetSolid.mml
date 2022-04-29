@@ -1,0 +1,21 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Solid or wireframe"/>
+
+<p>
+	<xSN/> can draw objects either as solid or wireframe skeletons. Please
+	select which one you want:
+</p>
+
+<xChoiceButton style=x radiobutton=true group=solid,wire name=solid>
+	<bold>Solid</bold><br/>
+	Display objects as solids.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=solid,wire name=wire>
+	<bold>Wireframe</bold><br/>
+	Display wireframe versions of the objects. This will draw faster than
+	the solid objects and let you see through them. A way to get an effect
+	similar to wireframes, but where you can't see through the object, is
+	to use an outline and make use monochromatic coloring.
+</xChoiceButton>

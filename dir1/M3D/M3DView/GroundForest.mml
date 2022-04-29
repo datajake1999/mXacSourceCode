@@ -1,0 +1,50 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify the forest"/>
+
+<p>
+	Use a forest to cover a section of ground in randomly generated trees and grasses.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Forest</xtrheader>
+	<tr>
+		<td><bold>Name</bold></td>
+		<td><edit maxchars=62 width=100% name=name/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changemap>
+				<bold>Change the map color</bold><br/>
+				Press this button to change the color displayed on the map.
+			</xChoiceButton>
+		</td>
+		<td><xStatusColor width=100% name=mapcolor/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton href=canopy0>
+			<bold>Change the canopy</bold><br/>
+			Use this to modify the type and density of the tallest trees in the forest.
+			These are usually 10m-40m tall.
+		</xchoicebutton>
+		<xchoicebutton href=canopy1>
+			<bold>Change the under-canopy</bold><br/>
+			Use this to modify the type and density of the short trees in the forest.
+			These trees are usually 3m-10m tall.
+		</xchoicebutton>
+		<xchoicebutton href=canopy2>
+			<bold>Change the shrubs</bold><br/>
+			This button lets you modify the shrubs and bushes in the forest.
+		</xchoicebutton>
+		<xchoicebutton href=canopy3>
+			<bold>Grasses</bold><br/>
+			Use this to change the lowest canopy, including grasses and ferns.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xchoicebutton name=delete>
+	<bold>Delete the forest</bold><br/>
+	Deletes the selected forest.
+</xchoicebutton>

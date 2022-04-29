@@ -1,0 +1,119 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Curved walls, roofs, and floors"/>
+
+<xPageTitle>
+	Curved walls, roofs, and floors
+</xPageTitle>
+
+<p>
+	You can curve walls, roofs, and even floors. It gets a little bit tricky because
+	curvature provides so many ways to bend the surface that it's a bit overwhelming.
+</p>
+
+<xSectionTitle>Adding and moving control points</xSectionTitle>
+
+<p>
+	So curve a surface, such as a wall:
+</p>
+
+<ol>
+	<li>
+		Choose the <xButtonSelIndividual/> tool and select the wall.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Which control points are displayed" page that appears,
+		check the <bold>"Curvature"</bold> check-box. This will show
+		control points for all the "joints" in the curve that you can
+		move around.
+	</li>
+	<li>
+		<bold>Close</bold> the page.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall again.
+	</li>
+	<li>
+		Under the "Curvature" section, press the <bold>"Add or remove control points"</bold> button.
+	</li>
+	<li>
+		A new page, "Add or remove control point" appears. It provides documentation about
+		itself at the bottom of the page. For the purposes of this walkthough, just
+		click in the middle of the grey box in the <bold>"By column (vertical strip)"</bold> section.
+	</li>
+	<li>
+		A red line will appear down the center of the surface. This represents a vertical bend in the
+		surface. You'll see some extra control points show up on the wall, half way along the
+		top and half way along the bottom.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEW/> tool.
+	</li>
+	<li>
+		Click on one of the middle control points and drag it around. You'll see the
+		wall bend at that point. (It might be easiest to move the point
+		in <xButtonViewFlat/>.
+	</li>
+</ol>
+
+<p>
+	You can add (or remove) more control points using the same technique. The
+	surface can be subdivided horizontally and vertically as many times as you like.
+</p>
+
+<xSectionTitle>Surface curvature</xSectionTitle>
+
+<p>
+	To change the bend into a curve:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" page, press the <bold>"Specify curvature"</bold> button.
+	</li>
+	<p>
+		The page switches to "Specify curvature". Under the "By column (vertical strip)"
+		section you should see two fields, "Column 1" and "Column 2". (If you subdivided the
+		surface more than one time you'll see even more fields.) To the right
+		of each field is a drop-down combobox.
+	</p>
+	<li>
+		In the <bold>"Column 1"</bold> field, select "Semi-circle (next)". By doing
+		this you're telling <xSN/> to use a semi-circular curve for the left
+		half of the wall. <italic>(For
+		a more complete explanation of what's going on, scroll to the bottom of the page.)</italic>
+	</li>
+	<li>
+		In the <bold>"Column 2"</bold> field, select "Semi-circle (previous)".
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Using the <xButtonObjControlNSEW/> tool, move the control points around and
+		see how the curve changes.
+	</li>
+</ol>
+
+<p>
+	Using the same steps as above you can apply a curve vertically, or use different
+	types of curves.
+</p>

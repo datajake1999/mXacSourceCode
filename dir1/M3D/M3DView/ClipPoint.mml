@@ -1,0 +1,59 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Clip based on a point"/>
+
+<p>
+	How do you want to align the clipping plane?
+</p>
+
+<xChoiceButton style=x radiobutton=true group=camera,surface,nsew,nsud,ewud name=camera>
+	<bold>Perpendicular to the direction the camera is looking</bold><br/>
+	Objects will be cut off on a plane that is perpendicular to the way the camera
+	is facing (parallel to the computer screen).
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=camera,surface,nsew,nsud,ewud name=surface>
+	<bold>Parallel to the surface</bold><br/>
+	Clipping will occur on a plane parallel to the surface you clicked on. Use this to
+	clip everything in front of or behind a wall. <italic>If splotches of the wall are
+	clipped when you don't want them clipped, then adjust the "Offset" number
+	below.</italic>
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=camera,surface,nsew,nsud,ewud name=nsew>
+	<bold>Horizontal plane</bold><br/>
+	The clipping border will be a horizontal plane, parallel to the ground.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=camera,surface,nsew,nsud,ewud name=nsud>
+	<bold>Vertical plane running north/south</bold><br/>
+	The clipping border will run north/south.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=camera,surface,nsew,nsud,ewud name=ewud>
+	<bold>Vertical plane running east/west</bold><br/>
+	The clipping border will run east/west.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xChoiceButton style=x checkbox=true name=otherside>
+	<bold>Clip the other side</bold><br/>
+	If the wrong side is being clipped then click this and the other side will be cut
+	out instead.
+</xchoicebutton>
+
+<xtablecenter width=100%>
+	<xtrheader>Other settings</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Offset</bold> - Enter a distance (positive or negative number) to
+			adjust the distance of the clipping plane away from the point you clicked on.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=offset/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+

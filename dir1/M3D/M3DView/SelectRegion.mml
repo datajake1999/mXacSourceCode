@@ -1,0 +1,21 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Region selection options"/>
+
+<p>
+	Use this page to control how the region selection tool works.
+</p>
+
+<xChoiceButton style=x checkbox=true name=mustbein>
+	<bold>Objects must be entirely in selection region</bold><br/>
+	If checked, only select an object if it is entirely within the red selection region.
+	If this is unchecked then objects partially within the selection region will also be
+	selected.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=mustbevisible>
+	<bold>Objects must be visible</bold><br/>
+	Only select objects that are visible from the current view. Use this to make sure
+	you don't accidentally move an object that you can't see. Combine this feature with
+	clipping planes for finer control of what gets selected.
+</xChoiceButton>

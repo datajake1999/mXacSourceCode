@@ -1,0 +1,64 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Floors"/>
+
+<p>
+	Some embedded objects, such as doors and doorways, will only place themselves flush
+	against the "floor". To define what the "floor" is, type in the elevations for one
+	or more floors <bold>(relative to the base ground level)</bold> to be used by the surface. You can leave an entry
+	blank. If all of the floor entries are blank then doors and doorways can
+	be placed anywhere on the surface.
+	(Note: If you move the surface up or down you will need to enter in
+	new numbers.)
+</p>
+
+<p>
+	Embedded objects (such as doors) that rely on the floor level won't move to the new
+	floor level automatically. You'll need to select and drag them; then they'll
+	lock into place.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Floors</xtrheader>
+	<tr>
+		<td width=66%>1st (lowest) floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor0/></td>
+	</tr>
+	<tr>
+		<td width=66%>2nd floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor1/></td>
+	</tr>
+	<tr>
+		<td width=66%>3rd floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor2/></td>
+	</tr>
+	<tr>
+		<td width=66%>4th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor3/></td>
+	</tr>
+	<tr>
+		<td width=66%>5th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor4/></td>
+	</tr>
+	<tr>
+		<td width=66%>6th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor5/></td>
+	</tr>
+	<tr>
+		<td width=66%>7th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor6/></td>
+	</tr>
+	<tr>
+		<td width=66%>8th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor7/></td>
+	</tr>
+	<tr>
+		<td width=66%>9th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor8/></td>
+	</tr>
+	<tr>
+		<td width=66%>10th floor elevation</td>
+		<td width=33%><edit maxchars=32 width=100% name=floor9/></td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,157 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Leaf/flower"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Size and variation</xtrheader>
+	<tr>
+		<td>
+			<bold>Width (pixels)</bold> - Width of the leaf/flower in pixels.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=width/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height/length (pixels)</bold> - Height of the leaf/flower in pixels.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=height/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size variation</bold> - How much individial leaves/flowers vary
+			in size from each other.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=sizevar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width variation</bold> - How much individial leaves/flowers vary
+			in width. This simulates the leaf/flower being seen from the side, and
+			also darkens/lightens the leaf by the squish amount.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=widthvar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height/length variation</bold> - How much individial leaves/flowers vary
+			in height/length. This simulates the leaf/flower being seen from an angle, and
+			also darkens/lightens the leaf by the squish amount.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=heightvar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hue variation</bold> - How much the hue (color) of the
+			leaf/flower varies.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=huevar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation variation</bold> - How much the saturation (color intensity) of the
+			leaf/flower varies.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=satvar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness variation</bold> - How much the lightness (color) of the
+			leaf/flower varies.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=lightvar/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Dark edge</bold> - The further to the left, the darker the edge will
+			be (basically outlining).
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=200 name=darkedge/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=allowmirror>
+				<bold>Texture can be mirrored left to right</bold><br/>
+				If checked, the texture will be mirrored left to right half the time.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=usetext>
+				<bold>Use a texture for the leaf/flower image</bold><br/>
+				If checked, a texture will be used for the leaf/flower image. If not checked then
+				a solid shape will be used.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Solid shape</xtrheader>
+	<tr><td>
+		These settings are used if the "Use a texture" checkbox is off.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Select the shape of the leaf/flower.
+		</td>
+		<td>
+			<bold><combobox width=100% name=shape>
+				<elem name=0>None</elem>
+				<elem name=1>Leaf (pointy)</elem>
+				<elem name=2>Leaf (diamond, large end)</elem>
+				<elem name=3>Leaf (diamond, large base)</elem>
+				<elem name=4>Leaf (pine)</elem>
+				<elem name=5>Leaf (3 prong)</elem>
+				<elem name=6>Leaf (5 prong)</elem>
+				<elem name=7>Leaf (7 prong)</elem>
+				<elem name=8>Leaf (sickle, left)</elem>
+				<elem name=9>Leaf (sickle, right)</elem>
+				<elem name=21>Flower (round)</elem>
+				<elem name=22>Flower (3 petals)</elem>
+				<elem name=23>Flower (4 petals)</elem>
+				<elem name=24>Flower (5 petals)</elem>
+				<elem name=25>Flower (6 petals)</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=shapecolorbutton>
+				<bold>Color</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=shapecolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Texture image</xtrheader>
+	<tr><td>
+		These settings are used if the "Use a texture" checkbox is on.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=TextButton>
+			<bold>Change the texture</bold><br/>
+			Press this to change the texture.
+		</xChoiceButton>
+		<<<$TEXTIMAGE>>>
+	</td></tr>
+</xtablecenter>

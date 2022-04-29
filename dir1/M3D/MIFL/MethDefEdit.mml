@@ -1,0 +1,161 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify method definition"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<null><<<$IFTAB0>>>
+<xtablecenter width=100%>
+	<xtrheader>Method definition</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the method. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<p/>
+			<hr/>
+			<p/>
+			
+			<bold><a>Help topic
+				<xHoverHelp>
+					Type in the help category that this method should be placed under.
+					Leave this blank if you do not wish the method placed in a help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat0/></bold>
+			<p/>
+			
+			<bold><a>Help topic (alternate)
+				<xHoverHelp>
+					Type in the alternate help category that this method should be placed under.
+					Leave this blank if you do not wish the method placed in an alternate help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat1/></bold>
+		</td>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the method.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the method that can be used for help.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true <<<$LIBREADONLY>>> name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<<<$ENDIFTAB0>>></null>
+
+<null><<<$IFTAB1>>>
+<xtablecenter width=100%>
+	<xtrheader>Parameters</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Parameter name
+			<xHoverHelp>
+				The name of the parameter. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the paramter slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the parameter means. This description is displayed
+				in help.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$PARAMSLOT>>>
+	<tr>
+		<td width=33%><bold><a>Return value description
+			<xHoverHelp>
+				This describes what kind of values are returned by the method.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><edit width=100% maxchars=20000 multiline=true wordwrap=true <<<$LIBREADONLY>>> name=retdesc/></bold></td>
+	</tr>
+	<tr><td>
+		<<<$IFMENULIBRO>>><xChoiceButton name=addparam>
+			<bold>Add more parameter slots</bold>
+		</xChoiceButton><<<$ENDIFMENULIBRO>>>
+		<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=anynumparam>
+			<bold>This method can be passed any number of parameters</bold><br/>
+			If checked then the method can be passed any number of parameters.
+			This should be un-checked for most methods so that the compile can double-check
+			that the right number of parameters are passed to the method.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<<<$ENDIFTAB1>>></null>
+
+
+<null><<<$IFTAB3>>>
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td><bold><a>Overrides
+			<xHoverHelp>
+				This controls what happens if other sub-classes of the object
+				also support the method.
+			</xHoverHelp>
+		</a></bold></td>
+		<td><bold><combobox width=100% cbheight=150 <<<$LIBENABLE>>> cursel=1 name=override>
+			<elem name=0>Call only the highest priority method</elem>
+			<elem name=1>Call all the methods, from highest to lowest priority - stop if return not undefined</elem>
+			<elem name=2>Call all the methods, from lowest to highest priority - stop if return not undefined</elem>
+			<elem name=3>Call all the methods, from highest to lowest priority - don't stop</elem>
+			<elem name=4>Call all the methods, from lowest to highest priority - don't stop</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true <<<$LIBENABLE>>> name=commontoall>
+			<bold>Common to all objects</bold><br/>
+			This checkbox is only used for documenting built in methods that are
+			supported by all objects.
+			If checked, this method is documented as being supported by all objects.
+			It does <bold>not</bold> actually cause objects to support it.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this method definition</bold><br/>
+	Permenantly delete the method definition.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this method definition</bold><br/>
+	After you duplicate the definition, make sure to rename the new method or
+	you won't be able to compile properly.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the method definition to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+<<<$ENDIFTAB3>>></null>

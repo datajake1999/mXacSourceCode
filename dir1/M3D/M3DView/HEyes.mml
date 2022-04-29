@@ -1,0 +1,115 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Eyes object"/>
+
+<xPageTitle>
+	Eyes object
+</xPageTitle>
+
+
+<p>
+	The "eyes" object lets you easily add human or mammalian eyes to your character.
+	The eyes are not only drawn for you, but they handle stereoscopic vision, looking
+	at the same point in space.
+</p>
+
+<xsectiontitle>Creating eyes</xsectiontitle>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Eyes" section under "Object pieces".
+	</li>
+	<li>
+		<bold>Click</bold> on one of the eyes to add them.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>Focusing the eyes on a subject</xsectiontitle>
+
+<p>
+	The eyes object provides a control point called "Eyes look at" that the
+	eyes will always focus on. To change where they eyes are focusing, simply
+	move the control point using <xButtonObjControlNSEWUD/>.
+</p>
+
+<p>
+	Alternatively, you can change the attributes using the <xButtonObjAttrib/> tool.
+	This will not only let you change the eyes' direction, but their dilation.
+</p>
+
+
+<xsectiontitle>Attaching eyes to a character's head</xsectiontitle>
+
+<p>
+	The eyes object work best when included in a custom object of a character.
+	If you have created the eyes object in a character's object, then you should
+	attach the eyes to the bone associated with the head. That way, when you move
+	the head, the eyes will move along with it.
+</p>
+
+<p>
+	To do this:
+</p>
+
+<ol>
+	<li>
+		Use <xButtonSelIndividual/> to select the eyes.
+	</li>
+	<li>
+		Select the <xButtonObjShowEditor/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the bones object.
+	</li>
+	<p>
+		The bones editor will appear.
+	</p>
+	<li>
+		In the bones editor, select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the bone used for the head.
+	</li>
+	<p>
+		A dialog, "Modify a bone", will appear.
+	</p>
+	<li>
+		In the "Modify a bone" dialog, <bold>scroll down</bold> to the "Envelope" section.
+		This section allows you to have a bone affect an entire object, which is what
+		you want, since the eyes always move with the head bone.
+	</li>
+	<li>
+		Click on <bold>"Affect the selected objects uniformly"</bold>.
+	</li>
+	<p>
+		You should see the eyes object appear in the envelope list. If it doesn't, you
+		may have accidentally de-selected the eyes. Select them, and try again.
+	</p>
+	<li>
+		<bold>Close</bold> the dialog and <bold>save</bold> your object.
+	</li>
+	<p>
+		From now on, the newly created eyes will be attached to the character's head.
+		The "Eyes look at" control point will also move along with the head.
+	</p>
+</ol>
+
+
+<xsectiontitle>More options</xsectiontitle>
+
+<p>
+	You can find options to control the eyes' size, pupil size, and shape (such as
+	cat eyes) using <xButtonObjDialog/>.
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:914>Bones tutorial</a></li>
+</xul>

@@ -1,0 +1,109 @@
+<?Include resource=500?>
+<PageInfo index=false title="Colorize and size texture"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+<td>
+	<p align=center>
+		Sample
+		<br/>
+		<image width=204 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<<<$IFHV>>>
+		<tr>
+			<td width=30%>Pattern width</td>
+			<td width=70%><font color=#000000><edit maxchars=32 selall=true width=100% name=width/></font></td>
+		</tr>
+		<tr>
+			<td width=30%>Pattern height</td>
+			<td width=70%><font color=#000000><edit maxchars=32 selall=true width=100% name=height/></font></td>
+		</tr>
+		<tr>
+			<td width=30%>Pattern angle (degrees)</td>
+			<td width=70%><font color=#000000><edit maxchars=32 selall=true width=100% name=angle/></font></td>
+		</tr>
+		<<<$ENDIFHV>>>
+		<<<$IFHVXYZ>>>
+		<tr><td/></tr>
+		<<<$ENDIFHVXYZ>>>
+		<<<$IFXYZ>>>
+		<tr>
+			<td width=30%/>
+			<td width=23% align=center>X</td>
+			<td width=23% align=center>Y</td>
+			<td width=24% align=center>Z</td>
+		</tr>
+		<tr>
+			<td width=30%><a color=#8080ff>Scale
+				<xHoverHelp>Amount to scale in X, Y, Z. 1.0 is no change, 2.0 is twice as large, etc.</xHoverHelp>
+			</a></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=scale0/></font></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=scale1/></font></td>
+			<td width=24%><font color=#000000><edit maxchars=32 selall=true width=100% name=scale2/></font></td>
+		</tr>
+		<tr>
+			<td width=30%><a color=#8080ff>Rotation
+				<xHoverHelp>Amount to rotate the texture in degrees, around the X, Y, and Z axis.</xHoverHelp>
+			</a></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=rot0/></font></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=rot1/></font></td>
+			<td width=24%><font color=#000000><edit maxchars=32 selall=true width=100% name=rot2/></font></td>
+		</tr>
+		<tr>
+			<td width=30%><a color=#8080ff>Offset
+				<xHoverHelp>Amount to offset X, Y, Z, in meters or feet.</xHoverHelp>
+			</a></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=offset0/></font></td>
+			<td width=23%><font color=#000000><edit maxchars=32 selall=true width=100% name=offset1/></font></td>
+			<td width=24%><font color=#000000><edit maxchars=32 selall=true width=100% name=offset2/></font></td>
+		</tr>
+		<<<$ENDIFXYZ>>>
+	</table>
+	
+</td>
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<tr>
+			<td width=30%>Hue</td>
+			<td width=70%><scrollbar orient=horz width=100% min=-32768 max=32767 name=hue/></td>
+		</tr>
+		<tr>
+			<td width=30%>Saturation</td>
+			<td width=70%><scrollbar orient=horz width=100% min=0 max=127 pos=64 name=saturation/></td>
+		</tr>
+		<tr>
+			<td width=30%>Contrast</td>
+			<td width=70%><scrollbar orient=horz width=100% min=0 max=127 pos=64 name=contrast/></td>
+		</tr>
+		<tr>
+			<td width=30%>Brightness</td>
+			<td width=70%><scrollbar orient=horz width=100% min=0 max=127 pos=64 name=brightness/></td>
+		</tr>
+		<tr>
+			<td width=30%>Tint (red, green, blue)</td>
+			<td width=70%>
+				<scrollbar orient=horz width=100% min=0 max=255 pos=255 knobcolor=#ff0000 name=redtint/><br/>
+				<scrollbar orient=horz width=100% min=0 max=255 pos=255 knobcolor=#00ff00 name=greentint/><br/>
+				<scrollbar orient=horz width=100% min=0 max=255 pos=255 knobcolor=#0000ff name=bluetint/>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

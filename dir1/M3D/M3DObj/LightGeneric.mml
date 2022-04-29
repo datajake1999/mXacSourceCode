@@ -1,0 +1,103 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Light (generic) settings"/>
+
+
+<p>
+	Use this page to change the appearance of your generic light.
+	Generic lights can be used to create any sort of light; they object is not drawn
+	for the final render (although the light will still take effect).
+	Some changes will not be
+	noticable unless you are in "Shadows" render quality and have turned the light on.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Light</xtrheader>
+	<tr>
+		<td>
+			<bold>Type</bold> - Type of light, whether a point source, infinite source,
+			or omni-directional.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 cursel=1 name=type>
+			<elem name=0>Point light source</elem>
+			<elem name=1>Infinitely distance light source</elem>
+			<elem name=2>Ambient light source</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolor>
+				<bold>Change color</bold><br/>
+				This is the color produced by the light.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=color/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Intensity</bold> - The brightness of the light. For a point light source,
+			the is the number of watts (for an incandescent bulb) in brightness. For an
+			infinite light source, or an ambient one, it's the brightness compared to
+			the sun, where 1.0 is the sun's brightness.
+		</td>
+		<td><edit maxchars=32 width=100% name=watts2/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=noshadows>
+			<bold>Don't cast shadows</bold> - If checked then this light won't cast any
+			shadows. Use this for fill-lights and back-lights where the shadows would
+			be distracting in the scene. (Lights that don't cast shadows draw faster too.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Spotlight</xtrheader>
+	<tr><td>
+		These options only work with point light sources. They allow you to create a spotlight
+		effect.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Intensity, forward</bold> - Number of watts of brightness in the forward
+			direction.
+		</td>
+		<td><edit maxchars=32 width=100% name=watts0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Intensity, backward</bold> - Number of watts of brightness in the backward
+			direction.
+		</td>
+		<td><edit maxchars=32 width=100% name=watts1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spread (max), forward</bold> - Angle which the spotlight spreads out at,
+			in the forward direction. This is the maximum angle, where the cutoff falls to nothing.
+		</td>
+		<td><edit maxchars=32 width=100% name=direct00/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spread (min), forward</bold> - This is the minimum angle,
+			where the spotlight is full intensity.
+		</td>
+		<td><edit maxchars=32 width=100% name=direct01/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spread (max), backward</bold>
+		</td>
+		<td><edit maxchars=32 width=100% name=direct10/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spread (min), backward</bold>
+		</td>
+		<td><edit maxchars=32 width=100% name=direct11/></td>
+	</tr>
+</xtablecenter>
+

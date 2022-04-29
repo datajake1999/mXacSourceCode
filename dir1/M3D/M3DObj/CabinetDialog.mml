@@ -1,0 +1,264 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Cabinet settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height from the bottom of the cabinet (usually the floor)
+			to the top (of the countertop).
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=height/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - How deep the cabinet is, from front to back. This excludes the
+			countertop overhang.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=cabinetdepth/>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=custom href=custom>
+			<bold>Modify cabinet shape</bold><br/>
+			Displays a dialog that lets you control how the cabinet curves or bends.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Countertop</xtrheader>
+	<tr><td>
+		The countertop is drawn on the top of the cabinet. Usually counters are made of
+		laminate, granite, wood, or stainless steel.
+		<p/>
+		<xchoicebutton checkbox=true style=x name=drawcounter>
+			<bold>Draw countertop</bold><br/>
+			If checked, the cabinet is drawn with a countertop. Otherwise, a final shelf is added
+			just below the rim; used for wall-mounted cabinets.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=roundend0>
+			<bold>Round the left end</bold><br/>
+			The left end of the countertop will be drawn as a semi-circle.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=roundend1>
+			<bold>Round the right end</bold><br/>
+			The right end of the countertop will be drawn as a semi-circle.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Counter thickness</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counterthick/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rounded edges</bold> -  Any square edges will be rounded with an arc
+			of this radius.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counterrounded/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Front overhang</bold> - How much the countertop extends beyond the
+			cabinetry.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counteroverhang1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Back overhang</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counteroverhang0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left overhang</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counteroverhang2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right overhang</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=counteroverhang3/>
+		</bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Cabinet walls</xtrheader>
+	<tr><td>
+		The cabinet walls are the panels and boards that produce the four sides of the cabinet.
+		<p/>
+		<xchoicebutton checkbox=true style=x name=showwall1>
+			<bold>Show the front wall</bold><br/>
+			Draw the front wall of the cabinet. Un-check this if you want open cabinets.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showwall0>
+			<bold>Show the back wall</bold><br/>
+			Draw the back wall of the cabinet.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showwall2>
+			<bold>Show the left wall</bold><br/>
+			Draw the left wall of the cabinet.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=showwall3>
+			<bold>Show the right wall</bold><br/>
+			Draw the right wall of the cabinet.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Wall thickness</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=wallthick/>
+		</bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Cabinet base</xtrheader>
+	<tr><td>
+		The cabinet can (optionally) be drawn with a base underneath it. Bases are common for
+		kitchen cabinets.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Base height</bold> - If you don't want a base then type in "0".
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=baseheight/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Front indent</bold> - How much the base is indented under the cabinet.
+			Use "0" to make the base flush with the cabinetry.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=baseindent1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Back indent</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=baseindent0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left indent</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=baseindent2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Right indent</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=baseindent3/>
+		</bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Shelving</xtrheader>
+	<tr><td>
+		The cabinet can (optionally) be drawn with shelving inside.
+		<p/>
+		<xchoicebutton checkbox=true style=x name=drawonlybottom>
+			<bold>Draw only the bottom shelf</bold><br/>
+			If checked, the cabinet is drawn with only the bottom shelf. Otherwise, several shelves
+			are drawn.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shelving thickness</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=shelfthick/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom shelf elevation</bold> - The height of the top of the bottom
+			shelf, relative the the bottom of the cabinet.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelelevation0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>2nd shelf elevation</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelelevation1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>3rd shelf elevation</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelelevation2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>4th shelf elevation</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelelevation3/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>5th shelf elevation</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelelevation4/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Subsequent shelves</bold> - Distance between subsequent shelves.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelhigher/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minium shelf height</bold> - If only this much space is available between
+			the shelf and the countertop then don't draw the shelf.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=levelmindist/>
+		</bold></td>
+	</tr>
+</xtablecenter>

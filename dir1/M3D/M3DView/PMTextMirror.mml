@@ -1,0 +1,88 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Mirror a texture"/>
+
+<p>
+	This dialog lets you mirror a texture from one side of your object to the
+	other. Use this to save time. For example: Take the time to apply a texture
+	to the right hand side of a character's body, and use the mirror to automatically
+	mirror it to the left side of the body.
+	(The object must also be mirrored for this to work.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Mirroring in object</xtrheader>
+	<tr><td>
+		Select from which side you wish to mirror. Some of these options may be disabled if you haven't turned mirroring on for
+		the object using the <xButtonPMMirror/> menu.
+		<p/>
+		
+		<<<$IFHIDEX>>>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=rtol>
+			<bold>Mirror from the right side to the left</bold>
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=ltor>
+			<bold>Mirror from the left side to the right</bold>
+		</xChoiceButton>
+		<<<$ENDIFHIDEX>>>
+		
+		<<<$IFHIDEY>>>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=btof>
+			<bold>Mirror from the back side to the front</bold>
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=ftob>
+			<bold>Mirror from the front side to the back</bold>
+		</xChoiceButton>
+		<<<$ENDIFHIDEY>>>
+		
+		<<<$IFHIDEZ>>>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=ttob>
+			<bold>Mirror from the top side to the bottom</bold>
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=rtol,ltor,btof,ftob,ttob,btot name=btot>
+			<bold>Mirror from the bottom side to the top</bold>
+		</xChoiceButton>
+		<<<$ENDIFHIDEZ>>>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Mirroring in texture </xtrheader>
+	<tr><td>
+		When you mirror the side, <xSN/> transfers the texture mapping over. It can
+		either transfer over the mapping exactly (causing the actual texture to be
+		drawn as a mirror), or it can mirror the horizontal and vertical texture map
+		coordinates.
+		<p/>
+		To re-use the exact same portion of the texture on the mirrored side then make
+		sure both the horizontal and vertical mirroring are unchecked. To use a different
+		portion of the texture in the mirroring then check either the horizontal or
+		vertical mirror (or even both) and type in a value to mirror around.
+		<p/>
+		Example: If you were mirroring a face and wanted the textures on the right and
+		left side to be exact mirrors then uncheck both options. However, if you wanted
+		the left to have a different texture (for some asymmtetry in the face) then
+		check the "horizontal mirror" option and set the mirroring value to 0.5
+		so the right side of the face would use the right half of the texture (0.5 to 1.0),
+		and the left hand side would use 0.0 to 0.5.
+		<p/>
+		<xChoiceButton style=x checkbox=true name=mirrorx>
+			<bold>Horizontal mirror</bold><br/>
+			Mirror the texture map around a vertical line in the texture. Type in
+			the horizontal position to mirror around below:
+		</xChoiceButton>
+		<xEditOneLine name=transx/>
+		
+		<xChoiceButton style=x checkbox=true name=mirrory>
+			<bold>Vertical mirror</bold><br/>
+			Mirror the texture map around a horizontal line in the texture. Type in
+			the vertical position to mirror around below:
+		</xChoiceButton>
+		<xEditOneLine name=transy/>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton style=righttriangle name=mirror>
+	<bold>Mirror now</bold><br/>
+	After you have selected your mirroring options, press this button to mirror.
+</xChoiceButton>

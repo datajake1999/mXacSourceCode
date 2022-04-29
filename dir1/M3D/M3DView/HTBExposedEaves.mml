@@ -1,0 +1,86 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="How to create exposed eaves"/>
+
+<xPageTitle>
+	How to create exposed eaves
+</xPageTitle>
+
+<p>
+	Often times you will want exposed eaves for a roof where the framing of the roof
+	is exposed outside, underneath the eaves.
+	This is a little mini-tutorial about how you can expose them:
+</p>
+
+<ol>
+	<li>
+		If the building has cathedral ceilings... <bold>position the camera</bold> so it looks up from
+		the inside at the cathedral ceiling. Select the <xButtonObjPaint/> tool.
+		While <bold>holding down the shift key</bold> click on the ceiling and set the
+		ceiling color or texture. This creates an overlay for the internal
+		ceilings.
+	</li>
+	<li>
+		<bold>Position the camera</bold> so it's looking underneath the roof at the eaves to
+		be exposed.
+	</li>
+	<li>
+		Select the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		<bold>Click on the bottom surface</bold> of the roof to bring up the texture
+		selection dialog. Do <bold>not</bold> hold the shift key down.
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog, make sure that
+		the "Scheme" setting is set to <bold>"Not in a scheme"</bold>.
+	</li>
+	<li>
+		Under the "Advanced" section, select <bold>"Invisible"</bold> for the Material.
+	</li>
+	<li>
+		<bold>Close</bold> the
+		"Change an object's color or texture" dialog.
+	</li>
+	<p>
+		You will notice the underside of the roof go invisible, allowing you to see
+		the underside of the top surface. Because you did shift-paint above on the
+		inside ceiling they retain the same color and do not become transparent.
+		In all viewing qualities except "Shadows" you will still see some dithering
+		of the old surface; this is left so that you can click on one of the visible
+		pixels and change the color again. The invisible surface won't be
+		seen when drawn using "Shadows" quality though.
+	</p>
+	<li>
+		While using the <xButtonObjPaint/> tool, and holding the <bold>control</bold> key
+		down, <bold>click on</bold> the edge of the roof to make the edge invisible too.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the roof.
+	</li>
+	<li>
+		In the object dialog, press the <bold>"Framing"</bold> button.
+	</li>
+	<li>
+		In the framing dialog, <bold>uncheck the "Draw framing only when
+		it would be visible"</bold> button so the framing is drawn all the time.
+	</li>
+	<li>
+		<bold>Adjust</bold> the framing settings as desired so the framing
+		is the right thickness, spacing, and shape.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:472>Framing (studs, beams, joists, purlins)</a></li>
+	<li><a href=r:283>Overlays</a></li>
+	<li><a href=r:304>Overlaying textures on walls, roofs, and floors</a></li>
+</xul>
+

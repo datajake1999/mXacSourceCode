@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Cabinets"/>
+
+<xPageTitle>
+	Cabinets
+</xPageTitle>
+
+<p>
+	The "cabinet" object allows you to create kitchen counters, bathroom vanities,
+	wall-mounted cabinets, full-height cabinets, wardrobes, kitchen islands.
+</p>
+
+<p>
+	A cabinet (in terms of this object) is a box that may contain a countertop, base,
+	and interior shelves. The box may be lengthend, and it may be curved or bent
+	along it's length to form L-shaped or C-shaped kitchen counters.
+</p>
+
+<p>
+	To add a cabinet to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined cabinet that is closest to
+		your needs. Look under "With countertops", "Wall mounted", or
+		"Full height" in "Cabinets".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house or object.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to resize and reshape the cabinet
+		lengthwise.
+	</li>
+	<li>
+		To change a cabinet's height or depth, use the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		In the "Cabinet settings" dialog (attained using the <xButtonObjDialog/> tool) you
+		can also show or hide walls of the cabinet, adjust the height of the base,
+		shelf heights, thickness
+		of materials, and the curvature or number of bends in the cabinet.
+	</li>
+	<li>
+		Once you have adjusted your cabinet's size, you need to <bold>add doors
+		and drawers</bold> to your cabinet. You can find a number of cabinet doors
+		and drawers under "Doors" and "Drawers" under the "Cabinets"
+		section. The doors and drawers are customizable too.
+	</li>
+	<li>
+		If you want even more control over a cabinet's shape and size you
+		can use the <xButtonObjDeconstruct/> tool to break the cabinet into it's various
+		pieces (countertop, shelving, and walls). Then, modify those individually.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:455>Cabinet pieces</a></li>
+	<li><a href=r:337>Customized doors and windows</a></li>
+	<li><a href=r:347>Door and window size</a></li>
+	<li><a href=r:457>Drawers</a></li>
+	<li><a href=r:466>How to build a bathroom</a></li>
+	<li><a href=r:467>How to build a kitchen</a></li>
+	<li><a href=r:348>Opening and closing doors and windows</a></li>
+	<li><a href=r:462>Pools, ponds, sinks, and bathtubs</a></li>
+</xul>

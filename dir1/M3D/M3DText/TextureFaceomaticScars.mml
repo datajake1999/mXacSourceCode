@@ -1,0 +1,142 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Scars and wrinkles"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	This layer lets you add warts, freckles, acne, and pores to your character's skin.
+</p>
+
+<xChoiceButton style=x checkbox=true name=CoverageUse>
+	<bold>Use this</bold><br/>
+	Check this to use this scars/wrinkles layer.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Scars/wrinkles depth texture</xtrheader>
+	<tr><td>
+		The coverage texture is an image with blurry lines drawn to
+		indicates where the scars or wrinkles are located.
+		White means a scar/wrinkle, while black is normal skin.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=CoverageButton>
+			<bold>Change the scars/wrinkles depth texture</bold><br/>
+			Press this to change the texture used for coverage.
+		</xChoiceButton>
+		<<<$COVERAGEIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Coverageboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Coverageboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Coverageboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Coverageboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black meaning</bold> - Affects the depth of scarring/wrinkling when
+			the texture is black. Use 1.0 to indicate that black lines
+			are the scars/wrinkes, 0.0 means that black is un-scarred/wrinkled skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White meaning</bold> - Affects the depth of scarring/wrinkling when
+			the texture is white. Use 1.0 to indicate that black lines
+			are the scars/wrinkes, 0.0 means that black is un-scarred/wrinkled skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds coverage</bold> - Same as for black/white,
+			except this is used for areas
+			not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny2/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Scar/wrikle discoloration</xtrheader>
+	<tr><td>
+		You can use this section to cause the scars or wrinkles to discolor.
+		A solid color is usually sufficient, but you can include textures too.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=DiscolorButton>
+			<bold>Change the discoloration texture</bold><br/>
+			Press this to change the texture used for discoloration.
+		</xChoiceButton>
+		<<<$DISCOLORIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coloration blend</bold> - When a scar is at its deepest,
+			this is how much color is used from this texture.
+			Use 1.0 for
+			full discoloration. Mild affects should use
+			a lower number, like 0.3. If no discoloration takes affect use 0.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=coloration/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=AffectSpecularity>
+			<bold>Scars/wrinkles affect specularity (shinyness)</bold><br/>
+			Leave this unchecked if a scar/wrinkle uses the same shinyness
+			as the skin it's on. Otherwise, it uses the shinyness from
+			the dicsoloration texture.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Scars/wrinkles</xtrheader>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the scar/wrinkle in meters.
+			Use negative numbers to cause the scar/wrinkle to dig into
+			the skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=height/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=AffectFur>
+			<bold>Scars/wrinkles affect fur</bold><br/>
+			If checked, these scars/wrinkles reduce the amount of
+			fur growing over the scar/wrinkle.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

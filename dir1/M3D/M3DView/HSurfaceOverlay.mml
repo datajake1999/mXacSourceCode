@@ -1,0 +1,146 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Overlaying textures on walls, roofs, and floors"/>
+
+<xPageTitle>
+	Overlaying textures on walls, roofs, and floors
+</xPageTitle>
+
+<p>
+	If you want to change the color or texture or the entire side of a surface (wall,
+	roof, floor) then use the <xButtonObjPaint/> tool directly on the surface. Sometimes
+	you will want just part of the surface to use a different color or texture than
+	the rest. For example: Wainscotting, or tiles on some floors and hardwood on others.
+</p>
+
+<xSectionTitle>Add an overlay based on own points</xSectionTitle>
+
+<p>
+	To add an overlay to a surface: (For purposes of this sample assume it's a wall.)
+</p>
+
+<ol>
+	<li>
+		Use the <xButtonSelIndividual/> tool and select the wall.
+	</li>
+	<li>
+		Change to the <xButtonObjDialog/> tool and click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" dialog that appears, look for the "Overlays"
+		section. Then, either press
+		the <bold>"Side A"</bold> button or <bold>"Side B"</bold> button depending upon
+		which side you want to add the overlay to.
+	</li>
+	<p>
+		The "Overlays" page will appear. It contains an "Overlays" section displaying
+		an image of what overlays are currently on the wall. If this is a new wall
+		it should just be a grey rectangle.
+	</p>
+	<li>
+		Press the <bold>"Add an overlay based on your own points"</bold> button.
+	</li>
+	<p>
+		<xSN/> will switch to the "Add an overlay from your own points" page. The first
+		part lists a number of different shapes you can use, and the second half of
+		the page lets you specify the initial location of the overlay.
+	</p>
+	<li>
+		For the purpose of this help topic, check the <bold>"Horizontal band"</bold> option
+		under "Shape".
+	</li>
+	<li>
+		Next, scroll down to the "Initial location" section and click on the image of
+		the wall in the approximate location where you want the overlay to appear.
+	</li>
+	<p>
+		As soon as you click, the dialog will return to the "Overlays" page and, if
+		you look on the main display, you will see the overlay appear. It starts
+		out red so it's easily visible, but you can change the color
+		using the <xButtonObjPaint/> tool.
+	</p>
+</ol>
+
+<p>
+	To change the shape and location of the overlay:
+</p>
+
+
+
+<ol>
+	<li>
+		Change to the <xButtonObjControlDialog/> tool and click on the wall.
+	</li>
+	<li>
+		In the "Which control points are displayed" page, check
+		the <bold>"Horizontal band"</bold> radio button. The name changes depending
+		upon the type of overlay you selected, so if you used a different
+		overlay shape look for a different name.
+	</li>
+	<li>
+		When you check the radio button the control points for the overlay will appear.
+		Close the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/> or <xButtonObjControlUD/> tool and move
+		the control points as desired.
+	</li>
+</ol>
+
+<xSectionTitle>Add an overlay based on intersections</xSectionTitle>
+
+<p>
+	If the shape of an overlay is best determined by the other surfaces intersecting
+	the one with the overlay, then do the following: (The help topic assumes you're
+	applying the overlay to the floor.)
+</p>
+
+<ol>
+	<li>
+		Make sure that the other surfaces (probably walls) intersect the floor and
+		that three or more walls intersect each other to form one or more rooms. If
+		there aren't any totally-enclosed areas then the overlays based on
+		intersections won't work.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the floor.
+	</li>
+	<li>
+		In the "Surface settings" page, find the "Overlays" section.
+		Press the <bold>"Side A"</bold> or <bold>"Side B"</bold> button
+		as appropriate. Since this is a floor and you want to change the flooring,
+		use "Side A".
+	</li>
+	<li>
+		The "Overlays" page appears. Press the <bold>"Add an overlay based
+		on intersections"</bold> button.
+	</li>
+	<p>
+		In the "Add an overlay based on intersections" page you'll see a section
+		named "Intersections". It shows grey lines where the other surfaces (walls, roof, etc.)
+		intersect the floor, along with the edge of the floor.
+	</p>
+	<li>
+		Click on a grey edge that borders the region you wish to use a new overlay
+		foor. (This is probably a wall location.) The edge will turn red to indicate
+		it's selected.
+	</li>
+	<li>
+		Continue clicking on grey edges until the region where you want the overlay is
+		completely surrounded by red.
+	</li>
+	<li>
+		Press the <bold>"Add overlay"</bold> button.
+	</li>
+	<p>
+		The dialog will return to the "Overlays" page, and the overlay will be drawn (in
+		red) on the main display.
+	</p>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Use the <xButtonObjPaint/> tool to change the overlay's color or texture from
+		red to whatever you wish.
+	</li>
+</ol>

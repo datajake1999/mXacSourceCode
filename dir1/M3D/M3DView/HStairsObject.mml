@@ -1,0 +1,39 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Staircases"/>
+
+<xPageTitle>
+	Staircases
+</xPageTitle>
+
+<p>
+	To create a staircase:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> and select <bold>"Building blocks"</bold>.
+	</li>
+	<li>
+		Underneath that click on <bold>Staircases</bold>.
+	</li>
+	<li>
+		Look through the different staircase styles and <bold>chose one.</bold>
+	</li>
+	<li>
+		The cusor will change to indicate that you're adding an object. <bold>Click</bold> on the ground,
+		above where the top of the staircase should go.
+	</li>
+</ol>
+
+<xDefinition>
+	<bold>Tip:</bold> You can use staircases to make outdoor steps also. Just submerge
+	the staircase mostly below ground so that only the risers show.
+</xdefinition>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:343>Customized balustrades</a></li>
+	<li><a href=r:338>Customized staircases</a></li>
+</xul>

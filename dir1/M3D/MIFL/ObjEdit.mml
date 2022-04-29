@@ -1,0 +1,314 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify object"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<null><<<$IFTAB1>>>
+<xtablecenter width=100%>
+	<xtrheader>Super-classes</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x <<<$LIBENABLE>>> name=autocreate>
+			<bold>Automatically create as an object</bold><br/>
+			If checked, an object with the same name as the class will automatically be created.
+			You should also select what object will <bold>contain</bold> this object when it is first created
+			and its <bold>ID</bold>.
+		</xChoiceButton>
+		<p align=right><bold>
+			<a href=helpobject>?</a> <filteredlist width=66% cbheight=300 additem="" blank="Not contained" <<<$LIBENABLE>>> listname=object name=contained/><br/>
+			<a href=NewID>ID: <xHoverHelp>
+				This is a GUID (globally unique ID) that the object will use. Every object <bold>must</bold> have
+				a unique ID. You can generate a new GUID by pressing this link.
+				<p/>
+				If this object is a library that is overriding an existing object then clear the GUID's edit field.
+			</xHoverHelp></a>
+			<edit width=66% maxchars=64 name=ID/>
+		</bold></p>
+	</td></tr>
+	<tr>
+		<td>
+			<bold><a>Super-classes
+				<xHoverHelp>
+					This is a list of classes that the object is derived from. The earlier the
+					class appears in the list, the higher priority its methods and property
+					initialization is.
+				</xHoverHelp>
+			</a></bold>
+			<p/>
+			<blockquote>
+			<button style=righttriangle <<<$LIBENABLE>>> name=classaddquick>
+				<bold>Add class</bold> (fast)<br/>
+				Select the class from the list below.
+			</button>
+			<br/>
+			<align align=right><bold><filteredlist width=66% sort=false cbheight=300 additem="" blank="Select a class" <<<$LIBREADONLY>>> listname=class name=classaddlist/></bold></align>
+			<br/>
+			<button style=righttriangle <<<$LIBENABLE>>> name=classadd>
+				<bold>Add class</bold> (slow)
+				<xHoverhelp>
+					Adds a new class to the top of the list.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button style=lefttriangle <<<$LIBENABLE>>> name=classremove>
+				<bold>Remove class</bold>
+				<xHoverhelp>
+					Removes the selected class from the list.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button style=uparrow <<<$LIBENABLE>>> name=classmoveup>
+				<bold>Increase class priority</bold>
+				<xHoverhelp>
+					Pressing this increases the priority of the currently selected class.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button style=downarrow <<<$LIBENABLE>>> name=classmovedown>
+				<bold>Decrease class priority</bold>
+				<xHoverhelp>
+					Pressing this decreases the priority of the currently selected class.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button name=classhelp>
+				<bold>Help</bold>
+				<xHoverhelp>
+					Displays help about the currently selected class.
+				</xHoverhelp>
+			</button>
+			</blockquote>
+		</td>
+		<td valign=center align=center>
+			<bold><listbox width=80% height=200 vscroll=classlistscroll <<<$LIBENABLE>>> name=classlist/></bold>
+			<scrollbar orient=vert height=200 name=classlistscroll/>
+		</td>
+	</tr>
+</xtablecenter>
+<<<$ENDIFTAB1>>></null>
+
+<null><<<$IFTAB0>>>
+<xtablecenter width=100%>
+	<xtrheader>Object</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the object. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<p/>
+			<hr/>
+			<p/>
+			
+			<bold><a>Help topic
+				<xHoverHelp>
+					Type in the help category that this object should be placed under.
+					Leave this blank if you do not wish the object placed in a help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat0/></bold>
+			<p/>
+			
+			<bold><a>Help topic (alternate)
+				<xHoverHelp>
+					Type in the alternate help category that this object should be placed under.
+					Leave this blank if you do not wish the function placed in an alternate help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat1/></bold>
+		</td>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the object.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the object that can be used for help.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true <<<$LIBREADONLY>>> name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+<<<$ENDIFTAB0>>></null>
+
+<null><<<$IFTAB2>>>
+<xtablecenter width=100%>
+	<xtrheader>Properties, public</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Property name
+			<xHoverHelp>
+				The name of the property. It must be selected from one of the "property
+				definitions" from one of the libraries in the project.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><a>
+			Initial value
+			<xHoverHelp>
+				This is the initial value of the property. If you wish to initialize it
+				to a string, don't forget to put quotes around the string.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$PROPPUBSLOT>>>
+	<tr><td>
+		<p align=center>
+			<bold>Recommended properties</bold> - You may wish to add one or more of the following
+			properties. <bold>Click on the property name</bold> to add it.
+		</p>
+		<p align=center>
+			<listbox width=80% height=200 vscroll=recommendproplistscroll <<<$LIBENABLE>>> name=recommendproplist/>
+			<scrollbar orient=vert height=200 name=recommendproplistscroll/>
+		</p>
+	</td></tr>
+	<<<$IFMENULIBRO>>><tr><td>
+		<xChoiceButton name=proppubadd>
+			<bold>Add more public property slots</bold>
+		</xChoiceButton>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Properties, private</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Property name
+			<xHoverHelp>
+				The name of the property. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the property slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Initial value
+			<xHoverHelp>
+				This is the initial value of the property. If you wish to initialize it
+				to a string, don't forget to put quotes around the string.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the property is used for.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$PROPPRIVSLOT>>>
+	<<<$IFMENULIBRO>>><tr><td>
+		<xChoiceButton name=propprivadd>
+			<bold>Add more private property slots</bold>
+		</xChoiceButton>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter>
+<<<$ENDIFTAB2>>></null>
+
+<null><<<$IFTAB3>>>
+<xtablecenter width=100%>
+	<xtrheader>Methods, public</xtrheader>
+	<<<$METHPUBLIST>>>
+	<tr><td>
+		<p align=center>
+			<bold>Recommended methods</bold> - You may wish to add one or more of the following
+			methods. <bold>Click on the method name</bold> to add it.
+		</p>
+		<p align=center>
+			<listbox width=80% height=200 vscroll=recommendmethodlistscroll <<<$LIBENABLE>>> name=recommendmethodlist/>
+			<scrollbar orient=vert height=200 name=recommendmethodlistscroll/>
+		</p>
+	</td></tr>
+	<<<$IFMENULIBRO>>><tr><td>
+		<p align=center><italic>
+			To delete a method, hold the "control" key down when pressing the method's button.
+		</italic></p>
+		<xChoiceButton name=methodpubadd>
+			<bold>Add a new public method</bold><br/>
+			Press this to the public method indicated below:
+		</xChoiceButton>
+		<align align=right><bold><filteredlist width=66% sort=false cbheight=300 additem="" blank="Select a method" <<<$LIBREADONLY>>> listname=methpub name=methodpubaddlist/></bold></align>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter>
+
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Methods, private</xtrheader>
+	<<<$METHPRIVLIST>>>
+	<<<$IFMENULIBRO>>><tr><td>
+		<p align=center><italic>
+			To delete a method, hold the "control" key down when pressing the method's button.
+		</italic></p>
+		<xChoiceButton name=methodprivadd>
+			<bold>Add a new private method</bold><br/>
+			Press this to add a private method.
+		</xChoiceButton>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter>
+<<<$ENDIFTAB3>>></null>
+
+<null><<<$IFTAB4>>>
+<null><<<$IFMENULIBRO>>><xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>In "New object" menu</bold> - If checked,
+			this class/object will appear in the "New object" menu, allowing
+			users to quickly and easily create an instance of this object.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=innewobjectmenu>
+			<elem name=0>Not in the menu</elem>
+			<elem name=1>In the menu, create as contained object</elem>
+			<elem name=3>In the menu, create as object but not contained</elem>
+			<elem name=2>In the menu, create as sub-class</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=recommend>
+			<bold>Recommend properties and methods for sub-classes</bold><br/>
+			This button brings up a page that lets you recommend properties and methods
+			that a sub-class of the object should support. For example: If your class
+			is a "Box" then any objects created using this class should support the
+			"Width", "Height", and "Depth" properties since they're used by the box-class's
+			properties.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter><<<$ENDIFMENULIBRO>>></null>
+
+
+
+
+
+<null><<<$IFMENULIBRO>>><xChoiceButton name=delete>
+	<bold>Delete this object</bold><br/>
+	Permenantly delete the object.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this object</bold><br/>
+	After you duplicate the object, make sure to rename the new object or
+	you won't be able to compile properly.
+</xChoiceButton><<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the object to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+<<<$ENDIFTAB4>>></null>

@@ -1,0 +1,136 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Makeup"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	You can use the makeup page to create makeup, tatoos, beard shadows,
+	as well as skin discoloration.
+</p>
+
+<xChoiceButton style=x checkbox=true name=CoverageUse>
+	<bold>Use this</bold><br/>
+	Check this to use this makeup layer.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Makeup coverage</xtrheader>
+	<tr><td>
+		The makeup texture is an image that indicates where the makeup is placed.
+		White means full coverage, while black is no coverage.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=CoverageButton>
+			<bold>Change the makeup coverage texture</bold><br/>
+			Press this to change the texture used for coverage.
+		</xChoiceButton>
+		<<<$COVERAGEIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Coverageboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Coverageboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Coverageboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Coverageboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black coverage</bold> - The amount of makeup applied when
+			the texture is black. Use 1.0 for full makeup, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White coverage</bold> - The amount of makeup applied when
+			the texture is white. Use 1.0 for full makeup, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds coverage</bold> - How much makeup is used when
+			it's not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny2/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Makeup color/texture</xtrheader>
+	<tr><td>
+		This controls the actual color/texture of the makeup. Use a solid
+		color for ordinary makeup, but you can also use a "gold" texture to
+		simulate gold makeup, or a vein pattern for skin discoloration.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=MakeupButton>
+			<bold>Change the makeup texture</bold><br/>
+			Press this to change the texture used for makeup.
+		</xChoiceButton>
+		<<<$MAKEUPIMAGE>>>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=BeforeWarts>
+			<bold>Apply before warts and scars</bold><br/>
+			If checked, the coloration is applied before warts and scars, which
+			is useful for tatoos and skin discoloration. If unchecked, it's
+			applied after, which is used for makeup.
+		</xChoiceButton>
+		
+		<xChoiceButton style=x checkbox=true name=AffectSpecularity>
+			<bold>Makeup affects specularity (shinyness)</bold><br/>
+			This should be checked for makeup since it affects the shininess
+			of the skin it covers. Uncheck this for tatoos and skin discolorations
+			since they don't affect skin shininess.
+		</xChoiceButton>
+		
+		<xChoiceButton style=x checkbox=true name=Discoloration>
+			<bold>Use the makeup texture as discoloration</bold><br/>
+			If checked, the makeup is treated as a discoloration in the skin.
+			This means that the effect of how much color is blended into the
+			skin is affected by how different the color is from the average
+			"makeup" color. Thus, discoloration makeup textures should have
+			a lot of variation in color to show up. You can scale the
+			strength of the discoloration below, entering values less than 1.0
+			to weaken the discoloration, greater than 1.0 to strengthen it:
+		</xChoiceButton>
+		
+		<p align=right><bold>
+			Discoloration scale: <edit width=50% maxchars=32 name=discolorationscale/>
+		</bold></p>
+	</td></tr>
+</xtablecenter>

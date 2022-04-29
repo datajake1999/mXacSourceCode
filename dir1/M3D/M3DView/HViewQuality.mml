@@ -1,0 +1,37 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Modifying image quality settings"/>
+
+<xPageTitle>
+	Modifying image quality settings
+</xPageTitle>
+
+<p>
+	You can change the quality of the image that <xSN/> draws by pressing
+	the <xButtonViewQuality/> button and selecting one of the six qualities.
+	Each setting is a combination of whether or not
+	textures are used, and a number of other settings.
+</p>
+
+<p>
+	If you want, you can customize the quality setting. To do this:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonViewQuality/> button.
+	</li>
+	<li>
+		Hold the control key down and press the quality setting you want to modify.
+		(You can't change the resolution settings.)
+	</li>
+	<li>
+		The "Drawing quality" dialog box will appear. Change the settings as desired.
+		All changes will immediately be shown.
+	</li>
+	<li>
+		Close the dialog when you're done.
+	</li>
+</ol>
+
+

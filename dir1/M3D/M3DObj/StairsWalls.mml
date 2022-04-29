@@ -1,0 +1,47 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase walls"/>
+
+<p>
+	A staircase can have "walls" on its left, right, or center. These walls can either
+	extend down to the ground, enclosing the area underneath the staircase, or they
+	can extend a fixed distance below the treads, producing a stringer. (You can also use
+	rails to produce stringers.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Show/hide walls</xtrheader>
+	<tr><td>
+		<p>
+			Click on a checkbox to show or hide a wall.
+		</p>
+		<xchoicebutton checkbox=true valign=center style=x name=balon0>
+			Show the <bold>left</bold> wall
+		</xChoiceButton>
+		<xchoicebutton checkbox=true valign=center style=x name=balon1>
+			Show the <bold>center</bold> wall
+		</xChoiceButton>
+		<xchoicebutton checkbox=true valign=center style=x name=balon2>
+			Show the <bold>right</bold> wall
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Indent</bold> - Amount to move the wall inwards from the left/right
+			sides. Use this to place stringers closer towards the center.
+		</td>
+		<td><edit width=100% maxchars=32 name=wallindent/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stringer width</bold> - If the wall is to be used for a stringer,
+			then type the width of the stringer board (such as 300mm or 12") here.
+			Type "0" to have the wall extend to the ground.
+		</td>
+		<td><edit width=100% maxchars=32 name=wallbelow/></td>
+	</tr>
+</xtablecenter>

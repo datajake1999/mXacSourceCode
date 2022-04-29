@@ -1,0 +1,75 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Water"/>
+
+<xPageTitle>
+	Tutorial - Water
+</xPageTitle>
+
+<p>
+	The ground object also lets you add a water to create an ocean or lake. To add
+	water:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGroundWater/> button.
+	</li>
+	<li>
+		In the "Water level" dialog that appears, <bold>check</bold> the <bold>"Draw the water</bold>" button.
+	</li>
+	<li>
+		The water will be drawn at the elevation listed under <bold>"Elevation"</bold>. The
+		topography map will change so that any elevation below this level will be drawn
+		as blue. Adjust the <bold>"Elevation"</bold> setting as appropriate.
+	</li>
+	<li>
+		<bold>Close</bold> the page.
+	</li>
+	<li>
+		Press <xButtonSave/> to save the changes to the ground.
+	</li>
+	<li>
+		<bold>Switch to</bold> the main 3D view to see the water.
+	</li>
+</ol>
+
+<xsectiontitle>Water color and texture</xsectiontitle>
+
+<p>
+	You can change the water's color and texture in the <xButtonGroundWater/> page.
+	Before you do so, let me explain a bit how the water is drawn:
+</p>
+
+<p>
+	The water is drawn as one large (and flat) sheet. The water does not contain
+	any realy bumps, so it can't be used to draw large waves. You can use
+	the <xButtonGroundWater/> page to control the size of the sheet; it starts out
+	at a large number so the water goes to the horizon, but you can make this smaller
+	if you only want the water to create a small lake.
+</p>
+
+<p>
+	The water looks like water because of the texture drawn on it. The texture is
+	unique because it is a combination of other textures, and its color depends upon
+	the depth of the water. This way, shallow water is drawn more transparent than
+	deep water.
+	You can change the textures used for the shallow, medium, and deep water in
+	the <xButtonGroundWater/> dialog.
+</p>
+
+<p>
+	<bold>Potential gotcha:</bold> If you are creating an island, make sure the edges
+	or your topgraphy are at leas as deep as the <bold>"Deep water depth"</bold> setting,
+	or there will be a sudden change in your water color at the edge of the map. When
+	the water extends beyond the edge of the map (as it will do with an island) then the
+	water's depth is assumed to be really deep, using the "Deep water" textures. Unless
+	the topography gradually slopes to the deep-water depth by the time it reaches the
+	edge of the map, there will be a sudden drop-off in depth.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:624><bold>Next</bold></button>
+</p>
+

@@ -1,0 +1,18 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="List of libraries"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Libraries</xtrheader>
+	<<<$LIBS>>>
+</xtablecenter>
+
+<xbr/>
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Libraries at the top of the list have higher priority; any code or definition will override
+	identically named code/definitions in lower priority libraryes.
+	Use the up and down arrows to re-order the libraries. Press the right arrow to remove
+	the library from the project.
+</p>

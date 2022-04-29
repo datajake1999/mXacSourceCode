@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MNLP", "MNLP.vcproj", "{A195F3A4-E3FB-4A8A-844A-818781391878}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A195F3A4-E3FB-4A8A-844A-818781391878}.Debug.ActiveCfg = Debug|Win32
+		{A195F3A4-E3FB-4A8A-844A-818781391878}.Debug.Build.0 = Debug|Win32
+		{A195F3A4-E3FB-4A8A-844A-818781391878}.Release.ActiveCfg = Release|Win32
+		{A195F3A4-E3FB-4A8A-844A-818781391878}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

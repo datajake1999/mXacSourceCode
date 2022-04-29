@@ -1,0 +1,116 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="mXac NLP Editor - Create your own text-to-speech voice"/>
+
+<p>
+	<bold>Text to speech</bold> is computer technology that lets the computer speak any
+	text. CircumReality uses text-to-speech (TTS) to generate all the voices it uses.
+</p>
+
+<p>
+	This application (mXac NLP Editor) can be used to <bold>create a text-to-speech voice from
+	recordings of your own voice.</bold> The text-to-speech voice will sound (mostly)
+	like you.
+</p>
+
+<p/>
+
+<p>
+	<bold>Why would anyone want a text-to-speech voice that sounds like their own voice?</bold> That's
+	a tricky question.
+</p>
+
+<ul>
+	<li>
+		You could use the voice with any <bold>SAPI 5.0</bold> (or higher) compliant application...
+		Most "SAPI" applications are designed for helping vision-impaired people (reading text off the
+		screen), language learning, or for computerized telephone operators that make you press 1 a lot. I suspect you're not
+		too interested in this...
+	</li>
+	<li>
+		With a bit of hacking, you could <bold>replace any of the voices used by CircumReality with
+		your own voice</bold>... just for fun. Of course, you'll be the only one to hear your voice.
+	</li>
+	<li>
+		Do your friends like hearing you speak?
+		You could <bold>send the voice file to your friends</bold>, and they could do all/any of the above.
+	</li>
+	<li>
+		And for the real reason why I'm making this tool available: You could <bold>"donate" the recordings
+		of your voice</bold> to a public "open-source" library of voices. This would allow me (as well as other game/application developers
+		using text-to-speech)
+		to <bold>add your voice to my game, and everyone would hear your voice!</bold> (I need lots of voices since I
+		have lots of characters in my game.)
+	</li>
+</ul>
+
+<p/>
+
+<p>
+	<bold>What do you need to do to create a voice?</bold>
+</p>
+
+<ol>
+	<li>
+		You need to get your hands on a <bold>headset microphone</bold> with <bold>active noise
+		cancellation</bold>. You can easily get one from a computer-gaming store. The
+		better ones cost around US$50.00.
+	</li>
+	<li>
+		You will be shown a sentence, asked to speak it, and then be <bold>recorded</bold> by this application as you speak it.
+	</li>
+	<p>
+		The text-to-speech voice needs as few as 10 recordings before it can speak. However,
+		at 10 recordings it will sound lousy and be difficult to understand. 100 recordings
+		sounds better. <bold>1000 recordings</bold> (which will take you a few hours) are used for
+		most of CircumReality's voices. If you're really keen, professional text-to-speech
+		voices are created from 10,000 recordings.
+	</p>
+	<li>
+		Any computer will be able to generate a small, 10-sentence, voice.
+		Analyzing the larger voices requires a lot of memory (and compute time).
+		If you record more than (around) 10
+		sentences, <bold>you will need to be running on a computer with 64-bit Windows with
+		at least 4 gigabytes of memory</bold>. <<<$HAVEENOUGHMEMORY>>>
+	</li>
+</ol>
+
+<p/>
+<p>
+	<bold>What do you want to do?</bold>
+</p>
+
+<null>
+	<<<$EXISTINGFILES>>>
+</null>
+
+<xChoiceButton href=newvoice>
+	<bold>Start recording my voice</bold><br/>
+	Press this if you wish to start recording your voice. Of course, if you
+	have already done some recordings, don't press this button; press the
+	"Add more recordings to..." button instead.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton name=registersapi>
+	<bold>I want to use a voice with a SAPI application</bold><br/>
+	If your friend has just given you a text-to-speech version of their voice,
+	and you want to use it with a SAPI application (see above), then
+	press this button.
+	<p/>
+	Immediately after pressing this button, you will be asked to find
+	the text-to-speech file (.tts) on your hard disk.
+</xChoiceButton>
+
+<xChoiceButton name=waveedit>
+	<bold>Run the wave editor</bold><br/>
+	A simple wave-editor is installed with CircumReality. You can use it
+	to test your text-to-speech voice, or just play around.
+</xChoiceButton>
+
+<xChoiceButton href=advancedstuff>
+	<bold>Advanced stuff...</bold><br/>
+	If you want to do speech recognition training, modify a lexicon, or use the
+	advanced text-to-speech voice-creator then press this.
+</xChoiceButton>

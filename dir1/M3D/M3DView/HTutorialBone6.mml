@@ -1,0 +1,45 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Other tools"/>
+
+<xPageTitle>
+	Bones tutorial - Other tools
+</xPageTitle>
+
+<p>
+	There are some other tools that you may find handy when working with bones:
+</p>
+
+<xul>
+	<li>
+		<xButtonBoneDisconnect/> - This tool lets you disconnect the bone from the rest
+		of the skeleton and create a new object from it. Just click on the bone you wish
+		to disconnect. The disconnect feature is useful for cutting skeletal sections (like
+		hands) from one skeleton so you can paste (merge) it with another skeleton.
+	</li>
+	<li>
+		<xButtonObjMerge/> - This lets you merge one skeleton (such as a hand) in with
+		the skeleton you're working on.
+	</li>
+	<li>
+		<xButtonBoneScale/> - Use this tool to enlarge (or shrink) a bone and all the
+		bones attached to it. Just click on the bone and drag the mouse right to enlarge,
+		or left to shrink. To scale the entire skeleton hold the control key down before
+		clicking.
+	</li>
+	<li>
+		<xButtonBoneSplit/> - Clicking on a bone with this tool will split it in two.
+		"Split the bone" makes it easy to create backbones since you can create one single
+		bone to start up with and then split it a couple of times into backbone-sized
+		pieces.
+	</li>
+	<li>
+		<xButtonBoneDelete/> - Deletes the bone and the bones attached to it.
+	</li>
+</xul>
+
+
+<p align=right>
+	<button style=rightarrow href=r:920><bold>Next</bold></button>
+</p>
+

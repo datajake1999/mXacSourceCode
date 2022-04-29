@@ -1,0 +1,36 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Recommended properties and methods"/>
+
+<p>
+	Check those properties or methods that should be supported by any sub-classes
+	of this object.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Properties</xtrheader>
+	<<<$PROPLIST>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Methods</xtrheader>
+	<<<$METHLIST>>>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	The "recommended properties and methods" of an object/class are used when another
+	object/class is created as a sub-class. The recommendations are used just to make
+	sure the sub-class doesn't forget to define any properties or methods that the
+	super-class expects it to have.
+</p>
+
+<p>
+	For example: A class "Bird", might include the property, "FlyingSpeed" in
+	its recommended list. Then, whenever an object is based off of "Bird" (thus being
+	a type of bird), the "FlyingSpeed" property will automatically be added to the
+	class.
+</p>

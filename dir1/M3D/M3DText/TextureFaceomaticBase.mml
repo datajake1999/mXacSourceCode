@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Base color"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Base color</xtrheader>
+	<tr><td>
+		The human face isn't one solid color. The skin tends to be redder around the eyes, nose,
+		and (of course) the lips. (Note: Makeup is excluded.)
+		The base color layer of the face-o-matic texture lets
+		you specify the base color of the face from a low-resolution image of the face (about
+		200 x 100 pixels).
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=BaseButton>
+			<bold>Change the base texture</bold><br/>
+			Press this to change the texture used for the base.
+		</xChoiceButton>
+		<<<$BASEIMAGE>>>
+	</td></tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=BaseMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=BaseMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+</xtablecenter>
+

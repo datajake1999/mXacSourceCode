@@ -1,0 +1,95 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Setting the grid size"/>
+
+<xPageTitle>
+	Setting the grid size
+</xPageTitle>
+
+<p>
+	The <bold>grid</bold> forces the location and rotation of objects, and the location
+	of object control points, to nice round numbers, such as multiples of 100mm.
+	This is useful because:
+</p>
+<xul>
+	<li>
+		It makes reading the plan easier - If walls and other objects are placed only
+		at 100mm (or whatever) intervals, then the distances between them will all
+		be 100mm units apart.
+	</li>
+	<li>
+		It makes sure walls intersect properly - If wall A's end and wall B's start are
+		both moved to the closest 100mm grid, they're going to end up with a perfect
+		intersection. If their start/end can be placed down to millimeters then
+		expect to have a very diffuclt time getting them lined up.
+	</li>
+	<li>
+		The angular grid (limiting rotations to 10 degree increments) does the same job
+		but for angles.
+	</li>
+</xul>
+
+<xSectionTitle>Grid's size</xSectionTitle>
+
+<p>
+	Of course, 100mm is not everyone's idea of a nice round number. Or, it may not always
+	be the best number; smaller objects require a smaller grid, while positioning buildings
+	might be best at the 1m grid.
+</p>
+
+<p>
+	To change the size of the grid:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGridSelect/> button.
+	</li>
+	<li>
+		Click on the size of the grid you want to use. Distances are on top. Angles
+		are on bottom.
+	</li>
+</ol>
+
+<xSectionTitle>Advanced grid features</xSectionTitle>
+
+<p>
+	If you want to see the grid (which is sometimes useful) then look at
+	the <a href=r:286>Displaying the grid</a> page.
+</p>
+
+<p>
+	The grid also contains a <bold>"center"</bold> and <bold>"orientation"</bold>.
+	The center of the grid is used to base the measurements off a point in space -
+	such as the center of the house, corner of a room, or surveyer's stake.
+	The orientation of the grid controls the angle (off or north) that it's rotated.
+</p>
+
+<p>
+	Here are some examples why changing the grid's center and orientation are important:
+</p>
+
+<xul>
+	<li>
+		Say you want to place an object 1.5m above the floor, but the floor is 2.6m above
+		the ground (which is the original grid center). Rather than calculating 1.5 + 2.6 =
+		4.1 in your mind, just set the grid's vertical center to the floor's height.
+		Then, as you move the object around all the elevation numbers you see will be
+		relative to the floor.
+	</li>
+	<li>
+		The grid becomes even more important if your floor (in the above example) is
+		2.62m above the ground and you're using a 0.10m grid. Without setting the
+		grid's center you'd only be able to place the object at 4.1m or 4.2m, not the
+		4.12m that you want.
+	</li>
+	<li>
+		If you have a room with walls out-of-square with NSEW but you want to place objects
+		within the room so they're on grid with the walls (and not NSEW), then change
+		the grid's orientation.
+	</li>
+</xul>
+
+<p>
+	To find out more, see <a href=r:287>Setting the grid center and orientation</a>.
+</p>

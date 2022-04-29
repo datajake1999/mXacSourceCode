@@ -1,0 +1,59 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Moving cave segments"/>
+
+<xPageTitle>
+	Tutorial - Moving cave segments
+</xPageTitle>
+
+<p>
+	Of course, you can move the cave segments around before merging them into
+	one large cave, but that gets to be tedious. It's easier to move a cave
+	segment around within the larger cave.
+</p>
+
+<ol>
+	<li>
+		<bold>Select</bold> the cave if it's not already selected.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		One of the cave segments has a <bold>purple circle</bold> control point at its
+		center. <bold>Drag</bold> the circle to move the cave segment.
+	</li>
+	<p>
+		Notice how only the one cave segment moves, and the others stay still.
+	</p>
+	<li>
+		<bold>Drag the green square</bold> to size the cave segment, and shape it
+		into an ellongated ellipsoid.
+	</li>
+	<li>
+		<bold>Drag the blue triangles</bold> to rotate the cave segment around.
+	</li>
+	<li>
+		If you wish to shape a different cave segment, <bold>click
+		on the yellow triangle</bold> at the center of the other cave segment.
+	</li>
+</ol>
+
+<p>
+	You can also move the cave segment by selecting
+	the <xButtonObjDialog/> tool and clicking on the cave segment.
+	A dialog will appear letting you manually type in the cave segment's
+	center, size, and rotation.
+</p>
+
+<p>
+	It also lets you affect the cave segment's <bold>squareness</bold>. Adjusting
+	these sliders will let you turn your sphere or ellipsoid into a cylinder or
+	box.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:937><bold>Next</bold></button>
+</p>
+
+

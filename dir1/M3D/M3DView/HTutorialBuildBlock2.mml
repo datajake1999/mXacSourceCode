@@ -1,0 +1,201 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - building blocks (2)"/>
+
+<xPageTitle>
+	Tutorial - building blocks (2)
+</xPageTitle>
+
+<xSectionTitle>Resizing building blocks</xSectionTitle>
+
+<p>
+	Now that you've played with the different views, it's time to learn how to
+	manipulate the objects in the world. We'll start with resizing the building
+	blocks.
+</p>
+
+<ol>
+	<li>
+		Switch to the <xButtonView3D/> view.
+	</li>
+	<li>
+		Press the <xButtonViewFlatQuick/> button and select an arial view, such
+		as "North-west (elevated)".
+	</li>
+	<li>
+		Select the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		Click anywhere on the building block. Notice how it turns reddish, has an outline of box drawn
+		around it, and some smaller boxes in the corners? That's because the building block
+		has been <bold>selected</bold>. The reddish tint and outline is so you can tell
+		it's selected. The outline lets you see the extent of the object, since it completely
+		encloses is. And, the small, solid boxes are <bold>control points</bold> that
+		let you manipulate portions of the object (like its size).
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEW/> tool. This will allow you to move control
+		points north, south, east, or west. (You can't move them vertically with this one -
+		you need to use it's neighbor.)
+	</li>
+	<li>
+		Click on one of the control points in the building block, and while still holding
+		the mouse down, move it around. You'll see the house's corner move in tandem
+		with the control point, enlarging or shrinking it along the east/west and north/south
+		lengths. The house's size is shown in a large tooltip displayed in the screen.
+	</li>
+	<p>
+		Tip: You don't have to click directly on the control point; clicking near it (but
+		still on the object) will also work. This doesn't provide as accurate movement though.
+	</p>
+	<li>
+		Trying using the <xButtonViewFlat/> view and <xButtonViewFlatQuick/> to look
+		from above. Then move the control points around. It's the same thing except that
+		without perspective it's a bit easier to control.
+	</li>
+	<li>
+		Make the house a bit larger than it originally stared out as.
+	</li>
+</ol>
+
+<p>
+	Now for the building's height:
+</p>
+<ol>
+	<li>
+		Select the <xButtonViewFlat/> view (if it's not already chosen)
+		and <xButtonViewFlatQuick/> to look from the "West".
+	</li>
+	<li>
+		Select the <xButtonObjControlUD/> tool.
+	</li>
+	<li>
+		Click and drag a control point (either one underneath the eaves or above the
+		roof) up. Nothing will change for awhile, but once you move it high enough up
+		another story will suddenly be added to the building block. If you keep
+		moving it up even more stories will appear. <italic>(There is a way to have
+		building block heights not aligned with floors, but that's one of the
+		"See also" topics.)</italic>
+	</li>
+</ol>
+
+<xSectionTitle>Changing roof pitch</xSectionTitle>
+
+<p>
+	Now that you have a large, two story structure, you may want to adjust the
+	roof pitch to your preference.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjControlDialog/> tool.
+	</li>
+	<li>
+		Using the tool, click on the building block. A dialog box will appear that
+		lets you specify which "control points" are shown. The <xButtonObjControlDialog/> tool
+		works with many objects.
+	</li>
+	<li>
+		The new page has several radio buttons. The "Size" radio
+		button should be checked. Click on the <bold>"Roof"</bold> radio button.
+		When you do so, you'll see that the control point on the object change.
+	</li>
+	<li>
+		Close the dialog box.
+	</li>
+	<li>
+		Select the <xButtonViewFlat/> view (if it's not already chosen)
+		and <xButtonViewFlatQuick/> to look from the "West".
+	</li>
+	<li>
+		Select the <xButtonObjControlUD/> tool.
+	</li>
+	<li>
+		Click on the control point on the peak, and dragging the mouse,
+		move the point up or down. The roof's peak will move along with the
+		mouse. You can watch the tooltip as it lists off the roof's angles.
+	</li>
+</ol>
+
+<p>
+	Notice that if you click on the lower roof control points you can't
+	move them... that's because they're <bold>"constrained"</bold>. The constraints
+	exist so you don't accidentally create some really strange roof designs.
+	Initially, only some of
+	the control points in a building block can be moved, and even at that,
+	the points can only be moved in certain directions. 
+</p>
+
+<p>
+	However, sometimes you want to be creative. To remove the constraints and play
+	around:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjControlDialog/> tool.
+	</li>
+	<li>
+		Click on the building block. The dialog box appears.
+	</li>
+	<li>
+		Scroll to the bottom of the page and click on the <bold>"No constraints"</bold> radio
+		button.
+	</li>
+	<li>
+		Close the dialog box.
+	</li>
+	<li>
+		Select the <xButtonView3D/> view (just to be different)
+		and <xButtonViewFlatQuick/> to look from the "West".
+	</li>
+	<li>
+		Select the <xButtonObjControlUD/> tool.
+	</li>
+	<li>
+		Click on one of the control points at the <bold>eaves</bold> and
+		drag the point up. That control point moves, along with its segment of the
+		roof, but not the others. The movement ends up warping part of the roof;
+		this is what the constraints were there to protect you from.
+	</li>
+	<li>
+		Use the <xButtonViewFlatQuick/> button and look from a few different directions
+		to see what you did.
+	</li>
+	<li>
+		You can have even more fun than that. Select the <xButtonObjControlNSEW/> tool.
+	</li>
+	<li>
+		Click on a control point and drag it; this time it won't move up or down,
+		but north, south, east, or west.
+	</li>
+	<li>
+		By now your roof should look fairly strange. To return to a normal roof can
+		return to the object dialog, put constraints back on, and move some control
+		points; everything will snap back into place. Or, the
+		easier solution is to press the <xButtonUndo/> button a one or two times
+		until the roof is back to normal. If you "undo" too much,
+		press the <xButtonRedo/>. <xSN/> supports many levels of undo and redo, so
+		don't be afraid to experiment since you can always go back. (Don't
+		rely completely on undo/redo - save to disk once in awhile, of course.)
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:266><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:273>Cathedral ceilings</a></li>
+	<li><a href=r:271>Changing roof styles</a></li>
+	<li><a href=r:267>Controlling wall shape</a></li>
+	<li><a href=r:473>Exposed eaves</a></li>
+	<li><a href=r:270>Floor elevations</a></li>
+	<li><a href=r:269>Foundations</a></li>
+	<li><a href=r:472>Framing (studs, beams, joists, purlins)</a></li>
+	<li><a href=r:268>Limiting building block elevations to stories</a></li>
+	<li><a href=r:272>Under-roof verandas</a></li>
+</xul>

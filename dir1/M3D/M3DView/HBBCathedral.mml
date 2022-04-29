@@ -1,0 +1,34 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Cathedral ceilings"/>
+
+<xPageTitle>
+	Cathedral ceilings
+</xPageTitle>
+
+<p>
+	Depending upon the climate you specify in the <xButtonLocale/> dialog, your
+	building blocks will come with cathedral ceilings (on the top floor) or a
+	drop ceiling.
+</p>
+
+<p>
+	If you want to change whether or not a building block has cathedral ceilings:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the building block.
+	</li>
+	<li>
+		In the "Building block settings" dialog box that appears,
+		click <bold>"Ceiling"</bold>.
+	</li>
+	<li>
+		Check or uncheck the <bold>"Cathedral ceilings"</bold> button.
+	</li>
+	<li>
+		While you're there, you can specify the thickness of the structure
+		used for the drop ceiling.
+	</li>
+</ol>

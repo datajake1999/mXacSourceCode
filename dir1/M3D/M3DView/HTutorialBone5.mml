@@ -1,0 +1,100 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Sizing and envelopes"/>
+
+<xPageTitle>
+	Bones tutorial - Sizing and envelopes
+</xPageTitle>
+
+<xSectionTitle>Sizing</xSectionTitle>
+
+<p>
+	If you're like me, you probably created the bones with the wrong length or
+	in not quite the right location. To fix this:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonBoneDefault/> button. You need to do this since you
+		cannot resize a bone unless the entire skeleton is in the default position.
+	</li>
+	<p>
+		You'll notice blue control points appear at the bone vertices; these allow you
+		to resize and move the bones.
+	</p>
+	<li>
+		A circular cage may appear around one of the bones. You don't need it for now.
+		If it does appear, choose the <xButtonSelIndividual/> tool and <bold>click</bold> on
+		any other object besides the skeleton. The cage will disappear.
+	</li>
+	<li>
+		To move the bones
+		use <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/>, <xButtonObjControlUD/>, or <xButtonObjControlInOut/> like
+		you would for any control point.
+	</li>
+</ol>
+
+<xSectionTitle>Envelope</xSectionTitle>
+
+<p>
+	Now it's time to learn about the rounded cage you may have seen. The technical
+	term for it is the bone's "envelope". It has two main functions:
+</p>
+
+<xul>
+	<li>
+		Any objects within the bone's envelope will be affected by the bone. That means
+		that the envelope needs to be large enough to cover the portion of the character that
+		it moves, but not so large that it affects the entire character.
+	</li>
+	<p>
+		For example: The envelope for the "R upper arm" bone needs to be as large as the
+		right upper arm. The envelope for the spine must be very wide so it encompases
+		the character's chest.
+	</p>
+	<p>
+		By the way, if two or more envelopes cover the same area of the character, which will
+		happen around the joints, then they both have an effect on the joint, causing it
+		to bend.
+	</p>
+	<li>
+		The envelopes are used to calculate the "mass" off a bone. This will be
+		explained in detail later.
+	</li>
+</xul>
+
+<p>
+	To modify a bone's envelope:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonBoneDefault/> button to make sure the skeleton is in its
+		default position.
+	</li>
+	<li>
+		Choose the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> a bone.
+	</li>
+	<p>
+		The envelope for that bone will be displayed. The yellow triangle or pyramid that
+		appears represent the limits of motion for the bone.
+	</p>
+	<li>
+		Use the <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/>, <xButtonObjControlUD/>, or <xButtonObjControlInOut/> to
+		move the purple envelope control points around and resize it.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:919><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:922>Eyes objects</a></li>
+</xul>

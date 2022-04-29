@@ -1,0 +1,45 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Row of books or videos"/>
+
+<xPageTitle>
+	Row of books or videos
+</xPageTitle>
+
+<p>
+	The "row-of-books" object allows you to quickly and easy create a row of
+	books, videos, DVDs, CD's, CD-ROMs, or records that are stacked on a shelf.
+</p>
+
+<p>
+	To add a book, DVD, CD, CD-ROM, or record:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined row-of-books object that is closest to
+		your needs. Look under "Books and videos" in "Interior decoration".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house or object.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to resize the row. More books, videos, etc.
+		will be added or removed to fit in the area. You can even resize the row to just
+		one book, video, etc.
+	</li>
+	<li>
+		Colors for the book covers are randomly generated. (See the <xButtonObjDialog/> tool
+		to change the colors.) However, you may wish to change the color of the
+		book's paper with the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and clicking on
+		the row of books will provide you with options for the book sizes and variability.
+	</li>
+</ol>
+
+

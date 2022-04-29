@@ -1,0 +1,55 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Changing wall shape"/>
+
+<xPageTitle>
+	Changing wall shape
+</xPageTitle>
+
+<p>
+	Most building blocks start out with boring, rectangular walls. If you want some
+	more interesting wall shapes then try the following:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the building block.
+	</li>
+	<li>
+		In the "Building block settings" page that appears, press
+		the <bold>"Walls"</bold> button.
+	</li>
+	<li>
+		<xSN/> will switch to the "Walls" page. In that you will see a list of
+		different <bold>"Wall shapes"</bold>. Click on them to select the shape you
+		want. (If you choose "Any shape" then the "Add/remove wall panels in "Any shape""
+		button will be enabled, a page that provides incredible flexibility
+		for wall shapes.)
+	</li>
+	<li>
+		You can use the same page to control the walls' thickness or how much
+		they're angled out/in.
+	</li>
+	<li>
+		When you're finished with those settings, <bold>close</bold> the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool and click on the object.
+	</li>
+	<li>
+		In the "Which control points are displayed" dialog check the <bold>"Walls"</bold> checkbox.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Using the <xButtonObjControlNSEW/> tool you can click and drag the wall's control
+		points, reshaping the wall. All of the walls (except for the "Any shape" wall)
+		have constraints on the type of shape the walls can take. The "Any shape" wall
+		will let you move the panels practically anywhere.
+	</li>
+</ol>
+

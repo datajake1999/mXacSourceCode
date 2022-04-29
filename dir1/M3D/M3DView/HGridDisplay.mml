@@ -1,0 +1,47 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Displaying the grid"/>
+
+<xPageTitle>
+	Displaying the grid
+</xPageTitle>
+
+
+<p>
+	See <a href=r:285>Setting the grid size</a> for a description of what the grid is.
+</p>
+
+<p>
+	To show the grid:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGridSettings/> button.
+	</li>
+	<li>
+		In the "Grid settings" dialog, press the <bold>"Display"</bold> button.
+	</li>
+	<li>
+		The "Grid display" page will appear. Press the <bold>"Show the 2D grid"</bold> button.
+		The grid will be drawn on the display if you are using a "flattened view"; it will
+		not display in the model or walkthrough views.
+	</li>
+	<li>
+		If you want the grid displayed in the model or walkthrough views then
+		turn on the <bold>"Show the 3D grid"</bold> checkbox. The grid is most handy
+		in the flattened (isometric) view and much less so in the two perspective views, so
+		it is unlikely that you'll need the 3D grid.
+	</li>
+	<li>
+		In the same dialog you can also set the grid color, if dots are to be drawn
+		instead of lines, and whether the vertical grid elements should be shown.
+	</li>
+</ol>
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:287>Setting the grid center and orientation</a></li>
+	<li><a href=r:285>Setting the grid size</a></li>
+</xul>

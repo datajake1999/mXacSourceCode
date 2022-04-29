@@ -1,0 +1,209 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify a bone"/>
+
+<p>
+	This page lets you modify a bone.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Name</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - The name of the bone. This must be
+			unique.
+		</td>
+		<td><edit width=100% maxchars=60 selall=true name=name/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Description</bold> - Description of the bone.
+		</td>
+		<td><edit width=100% wordwrap=true multiline=true maxchars=256 name=desc/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Limits</xtrheader>
+	<tr><td>
+		Change these values to affect how much movement is allowed in the bone.
+		If the minimum and maximum values are the same then no movement is allowed.
+		Rest the mouse over the row and column headers to get a description.
+	</td></tr>
+	<tr>
+		<td/>
+		<td><a><bold>Minimum</bold>
+			<xHoverHelp>
+				The bone's bend angle, side-to-side angle, twist angle, or extend amount
+				is not normally allowed to go below this value.
+			</xHoverHelp>
+		</a></td>
+		<td><a><bold>Maximum</bold>
+			<xHoverHelp>
+				The bone's bend angle, side-to-side angle, twist angle, or extend amount
+				is not normally allowed to go above this value.
+			</xHoverHelp>
+		</a></td>
+		<td><a><bold>Default</bold>
+			<xHoverHelp>
+				This is the value of the bone's bend angle, side-to-side angle, twist angle, or extend amount
+				when the bone is in it's default position.
+				The default position is the one that matches the polygon mesh (or other surfaces)
+				which the bones deform.
+			</xHoverHelp>
+		</a></td>
+	</tr>
+	<tr>
+		<td><a><bold>Bend</bold>
+			<xHoverHelp>
+				The main rotation of the joint. For a shoulder this is up/down motion.
+				For an elbow this is opening and closing.
+				Numbers are in degrees.
+			</xHoverHelp>
+		</a></td>
+		<td><edit maxchars=32 selall=true width=100% name=min0/></td>
+		<td><edit maxchars=32 selall=true width=100% name=max0/></td>
+		<td><edit maxchars=32 selall=true width=100% name=def0/></td>
+	</tr>
+	<tr>
+		<td><a><bold>Side-to-side</bold>
+			<xHoverHelp>
+				The secondary rotation of the joint. For a shoulder this is left/right (or swinging) motion.
+				Elbows have no side-to-side motion so both minimum and maximum would be 0.
+				Numbers are in degrees.
+			</xHoverHelp>
+		</a></td>
+		<td><edit maxchars=32 selall=true width=100% name=min1/></td>
+		<td><edit maxchars=32 selall=true width=100% name=max1/></td>
+		<td><edit maxchars=32 selall=true width=100% name=def1/></td>
+	</tr>
+	<tr>
+		<td><a><bold>Twist</bold>
+			<xHoverHelp>
+				The twisting motion of a joing.
+				Both shoulders and elbows can twist, but finger joints cannot.
+				Numbers are in degrees.
+			</xHoverHelp>
+		</a></td>
+		<td><edit maxchars=32 selall=true width=100% name=min2/></td>
+		<td><edit maxchars=32 selall=true width=100% name=max2/></td>
+		<td><edit maxchars=32 selall=true width=100% name=def2/></td>
+	</tr>
+	<tr>
+		<td><a><bold>Extend</bold>
+			<xHoverHelp>
+				Amount that the length of the bone can extend (maximum) or shrink (minimum).
+				A chameleon tongue would have an extending bone so the tongue could shrink
+				to nothing or extend to catch a fly.
+				1.0 represents no change in length from the default. Values between 0 and 1.0
+				are shrinking, and 1.0 and above are lengthening.
+			</xHoverHelp>
+		</a></td>
+		<td><edit maxchars=32 selall=true width=100% name=min3/></td>
+		<td><edit maxchars=32 selall=true width=100% name=max3/></td>
+		<td><edit maxchars=32 selall=true width=100% name=def3/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=uselimits>
+			<bold>Enforce limits</bold><br/>
+			If checked then the limits you set will be enforced. Otherwise, the bones can
+			be rotated and extended beyond the limits.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=fliplr>
+			<bold>Flip direction of side-to-side</bold><br/>
+			Sometimes you need "side-to-side" to rotate in the opposite direction
+			it currently is. If so, check this.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Envelope</xtrheader>
+	<tr><td>
+		All bones have an "envelope" of area around them. Any objects (or parts of objects)
+		within this envelope bend along with the bone. For most objects the envelopes will
+		work well automatically. However, you may decide you don't want an object affected by
+		this bone, or that you want it affected uniformly.
+		
+		<xChoiceButton style=x checkbox=true name=useenvelope>
+			<bold>Use an envelope</bold><br/>
+			If checked then use an envelope to bend objects along with the bone. If not
+			checked the bone will only affect objects added to the following list
+			using "Affect the selected objects uniformly".
+		</xChoiceButton>
+		
+		<listbox sort=false vscroll=lscroll1 height=85% width=85% name=envelope>
+		</listbox>
+		<scrollbar orient=vert height=85% name=lscroll1/>
+		<p/>
+
+		<xchoicebutton name=envremove>
+			<bold>Remove object from list</bold><br/>
+			Remove the currently selected object from the list.
+		</xchoicebutton>
+
+		<xchoicebutton name=envaddrigid>
+			<bold>Affect the selected objects uniformly</bold><br/>
+			Select one or more objects using <xButtonSelIndividual/> and press this button
+			to add them to the list.
+			The selected objects will be moved along with bone as one rigid piece.
+			Use this for robot limbs and solid objects that do not flex at the joints.
+		</xchoicebutton>
+		
+		<xchoicebutton name=envaddignore>
+			<bold>Don't affect the selected objects</bold><br/>
+			Select one or more objects using <xButtonSelIndividual/> and press this button
+			to add them to the list.
+			The selected objects will be unaffected by movement of this bone, even if
+			they touch the bone's envelope.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Inverse kinetics</xtrheader>
+	<tr><td>
+		Manipulating the skeleton by dragging control points for the locations
+		of key bones (such as the feet and wrists) instead of adjusting angles
+		manually is called "Inverse kinetics". Normally, if you drag one bone, the whole
+		skeleton will move to accomodate to motion. To prevent this (especially with
+		the feet which you want to stay fixed with the ground), check the "Can be fixed"
+		button below.
+		
+		<xChoiceButton style=x checkbox=true name=canbefixed>
+			<bold>Can be fixed</bold><br/>
+			The bone will provide an attribute, "<italic>Name</italic> (Fixed)", that
+			will allow you to fix to end of the bone in place.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Drawing thickness</bold> - Move the slider to adjust the thickness of the
+			bone. This only affects the bone's appearance, not it's envelope.
+		</td>
+		<td><scrollbar width=100% orient=horz min=0 max=100 name=drawthick/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=deflowrank>
+			<bold>Initially displayed at the bottom of the attribute list</bold><br/>
+			If the bone is not likely to be changed that often then check this
+			button; that way when the list of attributes are displayed the bone's attribute
+			will be near the bottom.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=defpassup>
+			<bold>Automatically used by container object</bold><br/>
+			If you place this object within another object, and this button is checked,
+			then this bone's attribute will automatically be supported by the container
+			object.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

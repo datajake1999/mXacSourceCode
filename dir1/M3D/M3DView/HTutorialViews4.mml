@@ -1,0 +1,120 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Walkthrough view"/>
+
+<xPageTitle>
+	Tutorial - Walkthrough view
+</xPageTitle>
+
+<p>
+	The "Walkthrough view" draws the house using perspective. When moving or rotating the camera,
+	it treats the 3D world as though you were inside the world and walking around.
+</p>
+
+<p>
+	The "Walkthrough view" is mostly used for:
+</p>
+
+<xul>
+	<li>
+		<bold>Looking at the interior of the house</bold> - The walkthrough view makes it
+		seems like you're walkthrough the real thing (as close as a computer can get today).
+	</li>
+	<li>
+		<bold>Looking at details</bold> - Because you can more accurately control the
+		camera's location and direction in the walkthrough view, it's a good way to look
+		at small details.
+	</li>
+</xul>
+
+<xsectiontitle>Using the walkthrough view</xsectiontitle>
+
+<ol>
+	<li>
+		To display the world using the walkthrough view, click on the <xButtonViewWalkthrough/> button.
+	</li>
+	<p>
+		The movement buttons (to the right of the view selection buttons) will change.
+	</p>
+</ol>
+
+<xsectiontitle>Similarities with model view</xsectiontitle>
+
+<p>
+	The walkthrough view has a lot in common with the model view, but less in common with
+	the flattened view.
+</p>
+
+<xul>
+	<li>
+		The <xButtonViewFlatQuick/>, <xButtonZoomIn/>, and <xButtonZoomOut/> tools
+		behave exactly like they did in model view.
+	</li>
+	<li>
+		<xButtonViewWalkLRFB/> and <xButtonViewWalkLRUD/> also act the same.
+	</li>
+</xul>
+
+<xsectiontitle>Differences</xsectiontitle>
+
+<p>
+	Because the walkthrough view simlates a virtual walkthrough of the house, as
+	opposed to simulating it as a model held at arms length, the rotation tools
+	have been removed. A few new tools are added in their place:
+</p>
+
+<ol>
+	<li>
+		So that you can best appreciate the differences, press
+		the <xButtonViewFlatQuick/> button and <bold>select "From the south-east".</bold>
+	</li>
+	<li>
+		If you want the view to simulate walking around and turning,
+		select the <xButtonViewWalkFBRotZ/> tool.
+		This tool lets you walk forward/backwards and look left/right.
+	</li>
+	<li>
+		<bold>Click on the center of the image</bold> and move the mouse pointer up (while the button is still
+		held down) to walk forwards. Moving it down will cause your camera to walk backwards.
+		Left and right will cause it to turn left an right.
+	</li>
+	<li>
+		To simulate standing still and looking around, select
+		the <xButtonViewWalkRotZX/> tool.
+	</li>
+	<li>
+		<bold>Click on the center of the view, and while holding the mouse button
+		down,</bold> move it left, right, up, or down. The camera will rotate along with the mouse.
+	</li>
+	<li>
+		If you want to tilt your head, switch to the <xButtonViewWalkRotY/> tool.
+		This tilts the camera left and right (like tilting your head).
+		It's not used too often though.
+	</li>
+</ol>
+
+<xsectiontitle>Scrollbars</xsectiontitle>
+
+<p>
+	In the walkthrough view, the <bold>left scrollbar and mouse wheel</bold> will
+	walk forwards or backwards. The <bold>bottom scrollbar</bold> rotates the camera.
+	The <bold>right scrollbar</bold> looks up and down. The <bold>top scrollbar</bold> moves
+	the camera up and down.
+</p>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:274><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:265>Fog</a></li>
+	<li><a href=r:259>Rotating in fixed amounts</a></li>
+	<li><a href=r:262>Object outlines</a></li>
+	<li><a href=r:261>Lighting</a></li>
+	<li><a href=r:410>Thumbnail views</a></li>
+</xul>

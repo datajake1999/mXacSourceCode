@@ -1,0 +1,57 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Text"/>
+
+<p>
+	Type in the text you wish displayed below:
+</p>
+
+<<<$BOLDFONT>>><<<$ITALICFONT>>><font <<<$SUBFONT>>>>
+<edit maxchars=1024 width=100% height=50% defcontrol=true multiline=true wordwrap=true name=text/>
+</font>
+<<<$UNITALICFONT>>><<<$UNBOLDFONT>>>
+<p/>
+
+<xtablecenter width=100%>
+	<xtrheader>Appearance</xtrheader>
+	<tr><td>
+		<xChoiceButton name=font>
+			<bold>Change the font</bold><br/>
+			This button will bring up a dialog that lets you change the font face, size,
+			and color.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changefont>
+				<bold>Change font color</bold><br/>
+				This is the color used for the font.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=fontcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeback>
+				<bold>Change background color</bold><br/>
+				This is the color used for the background.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=backcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Alignment</bold> - Adjust whether the text if left, center, or
+			right aligned.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=align>
+			<elem name=0>Left</elem>
+			<elem name=1>Center</elem>
+			<elem name=2>Right</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>

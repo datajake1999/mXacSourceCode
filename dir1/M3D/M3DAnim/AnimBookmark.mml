@@ -1,0 +1,15 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Bookmark settings"/>
+
+<p>
+	Use bookmarks to identify places in the animation that are important,
+	such as important stills or times associated with different camera angles.
+</p>
+
+
+<p>
+	Type in the bookmarks <bold>name</bold>:
+</p>
+
+<xEditOneline maxchars=63 defcontrol=true name=name/>

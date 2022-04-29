@@ -1,0 +1,269 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Test your microphone"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Test your microphone</xtrheader>
+	<tr>
+		<td>
+			<p>
+				To the right is an <bold>oscillascope</bold>. As your speak
+				into your microphone, you should see:
+			</p>
+			<ul>
+				<li>
+					The familiar <bold>wiggly oscillascope line in white</bold>.
+					As you speak, you will see the lines wiggle, practically
+					growing to the full height of the oscillascope.
+				</li>
+				<p>
+					If the lines don't vertically cover most of the oscillascope
+					when you speak, then you can either move the microphone
+					closer to your mouth, or increase your volume level.
+					See below.
+				</p>
+				<li>
+					If the <bold>background turns red</bold> then your
+					audio is "clipping", which means that either your microphone
+					is too close to your mouth, or you need to reduce
+					your record volume. See below.
+				</li>
+				<li>
+					The <bold>blue spikes</bold> on the lower-left corner
+					of the oscillascope show that frequencies and harmonics
+					the microphone is recording. If you don't know what this
+					is (which you probably don't) then ignore it.
+				</li>
+			</ul>
+			
+			<p>
+				You will probably need to <bold>adjust the record
+				level</bold> on your sound card. If the curvy white
+				lines touch the top and bottom of the oscillascope,
+				or the background of
+				the oscillascope turns red, you need
+				to <bold>reduce your microphone level</bold>. If
+				the curvy white lines aren't very tall when
+				you speak, you need
+				to <bold>increase your microphone level</bold>.
+			</p>
+			
+			<ol>
+				<li>
+					Unforunately, sound card manufacturers haven't made
+					life easy for us. Each sound card usually comes with
+					its own "Volume control" applet, each one different
+					than the others. This applet can usually be accessed
+					by <bold>double-clicking a small speaker icon
+					on your Windows taskbar</bold>, near the clock.
+					You may need press the left arrow (&lt;) near the clock
+					to show the full list of icons.
+				</li>
+				<p>
+					If you can't find the speaker icon, or double-clicking
+					it doens't work, then pull up the <bold>Windows
+					control panel</bold>, click on <bold>"Sounds, speech,
+					and Audio Devices"</bold>. Then, click on <bold>"Adjust
+					the system volume"</bold>. Select
+					the <bold>"Audio"</bold> tab. Click on
+					the <bold>"Volume"</bold> button in the
+					"Sound recording" section.
+				</p>
+				
+				<li>
+					Once you have the volume control up, you need to find the <bold>microphone
+					recording controls level adjustment</bold>, or whatever
+					it's called on your sound card. This is different for every sound card.
+					The process I'll describe is for the standard Windows volume
+					control, which you may or may not have.
+				</li>
+				
+				<li>
+					Under the "Options" menu, select <bold>Properties</bold>.
+				</li>
+				
+				<li>
+					The "Properties" dialog will appear. Select
+					the <bold>Recording</bold> button in the "Adjust volume for"
+					section. Then, press <bold>OK</bold>.
+				</li>
+				
+				<li>
+					The volume control will change to display different sliders.
+					Find the one labelled "Microphone" and make sure
+					that <bold>Select</bold> is checked (if it isn't already). This
+					causes your sound card to record from your microphone,
+					and not your line-in or CD.
+				</li>
+				<li>
+					<bold>Adjust</bold> the vertical volume slider up/down. You
+					should notice an effect on the curvy white lines in the
+					oscillascope as you speak. If you <bold>do not</bold> detect
+					any differences then you might be adjusting the volume
+					for the wrong sound card/device.
+				</li>
+				<li>
+					If you can't adjust the volume loud enough or quiet enough,
+					you may need to check out some advanced controls...
+				</li>
+				<li>
+					To see the advanced controls, display the "Options" menu
+					and select the <bold>Advanced controls</bold> menu if
+					it's not already displayed.
+				</li>
+				<li>
+					If an <bold>Advanced</bold> button appears underneath the
+					microphone slider, then <bold>press it</bold>.
+				</li>
+				<li>
+					The "Advanced" dialog will appear; it's content vary from
+					sound card to sound card. If you find an option
+					like <bold>20 dB boost</bold> then try checking or unchecking
+					it. If not, try playing with the other controls to see
+					if they work.
+				</li>
+			</ol>
+			
+			<p>
+				By this point, <bold>you should have adjusted your microphone
+				volume control</bold> so that it's high enough that
+				the oscillascope's white curvy lines use up most of area (vertically),
+				but not so much that they touch the top/bottm of the
+				oscillascope and the background turns red.
+			</p>
+			
+			<p>
+				If you are having problems with this, see below.
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<image width=304 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+			</p>
+			
+			<xChoiceButton style=righttriangle href="p:1020">
+				<bold>Next</bold><br/>
+				Press this <bold>after</bold> you have properly
+				adjusted the volume control.
+				The next page will let you listen to some of your
+				recordings to make sure they're clear.
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<table width=100%>
+				<tr>
+					<td><align align=center>
+						<br/><image bmpresource=815/><br/>
+						Good volume level
+					</align></td>
+					<td><align align=center>
+						<br/><image bmpresource=813/><br/>
+						Too loud
+					</align></td>
+				</tr>
+				<tr>
+					<td><align align=center>
+						<br/><image bmpresource=814/><br/>
+						Not hearing anything
+					</align></td>
+					<td><align align=center>
+						<br/><image bmpresource=812/><br/>
+						Too quiet
+					</align></td>
+				</tr>
+			</table>
+		</td>
+		
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=80%>
+	<xtrheader>What to do if it doesn't work...</xtrheader>
+	<tr><td>
+		This section may help you if you're having problems.
+	</td></tr>
+	<xtrheader>The white line doesn't wiggle when I speak...</xtrheader>
+	<tr><td>
+		<p>
+			If the white line has no response whatsoever when you speak, then
+			try the following:
+		</p>
+		<ul>
+			<li>
+				You may have <bold>forgotten to plug in your microphone, or may have plugged
+				it into the wrong hole.</bold>
+			</li>
+			<li>
+				<bold>The sound card may be recording from the CD or line-in.</bold> Most
+				sound cards have the ability to record direct from CD or from the line-in
+				port. See above for directions on how to tell your sound card to
+				record from the microphone.
+			</li>
+			<li>
+				<bold>MIF may be recording from the wrong sound card.</bold> If you have
+				more than one sound card/device, or sometimes even a MODEM, MIF could
+				be recording from the wrong one.
+			</li>
+			<p>
+				To change the sound card, run the Windows <bold>control
+				panel</bold>, go to <bold>"Sounds, Speech, and Audio
+				Devices"</bold>. Click on <bold>"Sounds and audio
+				devices"</bold>. Select the <bold>"Audio"</bold> tab.
+				Under the "Sound recording" section, set
+				the <bold>Default device</bold> to your sound card.
+				Press <bold>"Back"</bold> on this page and try again.
+			</p>
+			<li>
+				<bold>The microphone may be incompatible with your sound card.</bold> There
+				are different types of microphones. Some microphones don't work with
+				computer sound cards. (If you purchased your microphone at
+				a computer store, it probably works. If your microphone was purchased
+				at a music store, it may not work.)
+			</li>
+			<li>
+				You microphone <bold>may have a small mute/silence switch on it.</bold>
+			</li>
+			<li>
+				<bold>The microphone may be broken.</bold> This is always a possibility.
+			</li>
+		</ul>
+	</td></tr>
+	
+	<xtrheader>The white line wiggles, but is very flat (vertically)...</xtrheader>
+	<tr><td>
+		<p>
+			This sounds like your volume setting for the sound card is too
+			loud/quiet. Try the following:
+		</p>
+		<ul>
+			<li>
+				<bold>Adjust the recording volume control</bold> as described at the
+				top of this page. You might also try <bold>moving
+				the microphone</bold> closer or futher away.
+			</li>
+			<li>
+				If you can't increase the volume enough, <bold>your microphone may
+				not produce enough volume for your sound card</bold>. To solve this,
+				you either need to move the microphone closer, buy a new microphone,
+				or buy a new sound card. If you're an audio engineer you can run
+				the microphone through a pre-amp.
+			</li>
+			<li>
+				You microphone <bold>may have a small volume-control knob or
+				slider on it.</bold>
+			</li>
+		</ul>
+	</td></tr>
+
+	<xtrheader>My computer (the software) crashes/hangs when I record...</xtrheader>
+	<tr><td>
+		<ul>
+			<li>
+				<bold>Try downloading the latest drivers</bold> from your sound card
+				manufacturer.
+			</li>
+		</ul>
+	</td></tr>
+</xtablecenter>

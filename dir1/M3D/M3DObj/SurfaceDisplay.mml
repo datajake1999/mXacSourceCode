@@ -1,0 +1,13 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<p>
+	Surfaces have several different types of control points. Displaying all of
+	them at once would make the surface too busy, so only one type of control
+	point is displayed at a time. Use this page to select which:
+</p>
+
+<null>
+	<<<$DISPLAY>>>
+</null>

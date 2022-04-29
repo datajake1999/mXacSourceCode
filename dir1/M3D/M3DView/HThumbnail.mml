@@ -1,0 +1,103 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Thumbnail images"/>
+
+<xPageTitle>
+	Thumbnail images
+</xPageTitle>
+
+<p>
+	Sometimes you want to switch quickly between a number of views of the house.
+	For example: You may be working on a room and need to keep switching between
+	an isometric view of the room from above and two perspective views from within
+	the room. You can solve this by using the "Thumbnail" tool; it shows
+	multiple views of the house at once.
+</p>
+
+<xSectionTitle>Turning on and switching between thumbnails</xSectionTitle>
+
+<p>
+	To use the thumbnail tool.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonThumbnail/> button.
+	</li>
+	<li>
+		In the menu that drops down, select
+		either <bold>"Thumbnails on the right"</bold> or <bold>"Thumbnails on the bottom"</bold>.
+	</li>
+	<p>
+		When you do this, your main view will shrink down and four "thumbnail images" of the house
+		will be drawn on the right (or bottom) of the screen. One of the thumbnail slots will
+		be left blank, because that it the one you're currently working on.
+	</p>
+	<li>
+		<bold>Click</bold> on one of these images.
+	</li>
+	<p>
+		The thumbnail you clicked on will take over the main view and the old view will be
+		shrunk down to a thumbnail.
+	</p>
+	<li>
+		If you move the camera around and then switch to another thumbnail, your changes (the
+		camera movements) will be saved for the existing thumbnail.
+	</li>
+	<li>
+		If you <bold>hold the control key down and click</bold> on a thumbnail the
+		camera settings for the main view will be copied to the thumbnail you click on.
+	</li>
+</ol>
+
+<p>
+	Thumbnails automatically update, so if you move an object in the main view, you'll
+	also see it move in the thumbnail (assuming the thumbnail camera is pointing at the object).
+	This can be particularliy useful when moving an object in 3D since you can set up
+	thumbnails to view the object from all directions. With such coverage, you can make sure
+	you put it in the right place.
+</p>
+
+<xSectionTitle>Automatically setting up thumbnails</xSectionTitle>
+
+<p>
+	You will often use the thumbnail images to view an object or portion of the house
+	that you're modifying. The multitude of views makes it easier to position an object
+	properly in three dimensions. Most of the time when you're doing this you want
+	a camera looking down, from the east (or west), from the south (or north), and
+	a perspective view.
+</p>
+
+<p>
+	<xSN/> provides an easy way to do this:
+</p>
+
+<ol>
+	<li>
+		Using your current view, <bold>zoom in</bold> on the object (or portion of the house) you
+		wish to edit. The object be fully visible, taking up most of the screen.
+	</li>
+	<li>
+		Press the <xButtonThumbnail/> button.
+	</li>
+	<li>
+		Select the <bold>Setup thumbnails (tool)</bold> menu item.
+	</li>
+	<li>
+		<xSN/> switches to the thumbnail tool. Using the tool <bold>click</bold> on the center
+		of the object.
+	</li>
+	<p>
+		If thumbnails aren't already visible they will be shown. All four panes will automatically
+		be filled so that one is looking from above, another from the east, one from the south,
+		and one will be a perspective view.
+	</p>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:250>Multiple view windows</a></li>
+</xul>

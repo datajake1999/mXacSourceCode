@@ -1,0 +1,80 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Registration"/>
+
+<xPageTitle>
+	Registration
+</xPageTitle>
+
+
+<xtablecenter width=100%>
+	<tr><td>
+		IMPORTANT: (BUGBUG) This is a <bold>pre-release</bold> version of <xLN/>.
+		You cannot register yet; if you need a registration key then
+		E-mail me at <xMyEmail/>.
+	</td></tr>
+</xtablecenter>
+
+<p align=center><big>
+	<status name=top width=80% height=75/>
+</big></p>
+
+<p>
+	<bold>I need to pay the bills too.</bold> <xLN/> is shareware software; you can download
+	it and try it out before paying. Some people seem to think that because they
+	have it in hand they no longer need to pay. Please, if you use <xLN/> then
+	pay for it.
+</p>
+
+<p>
+	Note: Because not everyone will listen to the honor system, <xSN/> does not
+	allow you to save large files
+	unless you pay <a>BUGBUG<xhoverhelpshort>Prices subject to change.</xhoverhelpshort></a> and register it.
+</p>
+
+<xSectionTitle>Paying for <xLN/></xSectionTitle>
+
+<p>
+	Credit Card payment is handled by <bold>RegNow.com</bold>, a US company
+	that has a <bold>secure
+	Internet site</bold>. Internet Explorer shows a small lock icon in its status
+	bar to indicate that communications with the site are encrypted.
+	Netscape Navigator has similar functionality. To pay, see:
+</p>
+
+<blockquote><p>
+	<a href="https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-9">https://www.regnow.com/softsell/nph-softsell.cgi?item=3440-9</a>
+</p></blockquote>
+
+<p>
+	You may also pay me by personal check in any major currency for the equivalent
+	of <a>BUGBUG<xhoverhelpshort>Prices subject to change.</xhoverhelpshort></a>. Check out my web page for details.
+</p>
+
+<xSectionTitle>Registration Key</xSectionTitle>
+
+<p>
+	Type in the E-mail name you registered with:
+</p>
+
+<xEditOneLine name=email maxchars=128/>
+
+<p>
+	Once you have paid, you will be shown a registration number on the RegNow.com
+	web site. You will also receive the registration number in E-mail. Please type the
+	number below.
+</p>
+
+<xEditOneLine name=regkey maxchars=32/>
+
+<xDefinition>
+	<bold>I need your help marketing <xLN/>!</bold>
+	<p/>
+	Please fill in a "User feedback/rating"
+	form on the download web-site where
+	you found <xSN/>. That way other users will hear about <xSN/> and know how good it is.
+</xDefinition>
+
+<p align=center><big>
+	<status name=bottom width=80% height=75/>
+</big></p>

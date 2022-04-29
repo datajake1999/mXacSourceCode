@@ -1,0 +1,149 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Marbling"/>
+
+<p>
+	Unforuntately, the technique for creating marble is a bit too complicated to explain.
+	Just play with the values and see what happens.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Use this effect</bold><br/>
+			This effect will only be used if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Noise size</bold> - Size of a "blob"
+			of noise, in meters or feet.
+		</td>
+		<td><edit maxchars=64 width=100% name=noisesize/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise detail</bold> - The further this slider is to the right, the
+			more detailed the marbling, the further to the left, the less detailed.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=noisedetail/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise contribution</bold> - The further to the right, the more the noise
+			affect the color. Further to the left causes the noise to have less effect.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=noisecontrib/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=noisemax>
+			<bold>Noise value maxes out</bold><br/>
+			If checked, the texture will look more like granite because the colors will
+			tend to be on one extereme or the other. If unchecked, the colors will cycle.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Coloration</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton0>
+				<bold>Color 1</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton1>
+				<bold>Color 2</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton2>
+				<bold>Color 3</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton3>
+				<bold>Color 4</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton4>
+				<bold>Color 5</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus4/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton5>
+				<bold>Color 6</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus5/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton6>
+				<bold>Color 7</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus6/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton7>
+				<bold>Color 8</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus7/>
+		</td>
+	</tr>
+</xtablecenter>

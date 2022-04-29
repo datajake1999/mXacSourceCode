@@ -1,0 +1,235 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Volumetric sandstone"/>
+
+<p>
+	This page lets you specify information about the sandstone (or other layered rock).
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Stratification</xtrheader>
+	<tr>
+		<td>
+			<bold>Total thickness</bold> - Number of meters (or feet) before the pattern
+			repeats itself.
+		</td>
+		<td><edit maxchars=64 width=100% name=totalthick/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton0>
+				<bold>Color 1</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 1</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight0/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton1>
+				<bold>Color 2</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 2</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight1/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton2>
+				<bold>Color 3</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 3</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight2/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton3>
+				<bold>Color 4</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 4</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight3/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton4>
+				<bold>Color 5</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus4/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 5</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight4/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton5>
+				<bold>Color 6</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus5/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 6</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight5/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton6>
+				<bold>Color 7</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus6/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 7</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight6/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton7>
+				<bold>Color 8</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus7/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height 8</bold> - Height at which this layer starts.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=cheight7/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Turbulence</xtrheader>
+	<tr>
+		<td>
+			<bold>Noise size</bold> - Size of a "blob"
+			of noise, in meters or feet.
+		</td>
+		<td><edit maxchars=64 width=100% name=noisesize/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise iterations</bold> - The higher this number the rougher the noise
+			will be (and the longer the drawing time). Use a number from 1 to 10.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoiseiter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Push layer up/down</bold> - This is the amount that a layer of stone can
+			be pushed up/down based upon the noise.
+		</td>
+		<td><edit maxchars=64 width=100% name=noiseaffect/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise detail</bold> - The further this slider is to the right, the
+			more detailed the noise, the further to the left, the blurrier.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=noisedetail/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Bumpiness</xtrheader>
+	<tr>
+		<td>
+			<bold>Bumpiness</bold> - This is how many meters (or feet) the surface
+			bumps in or out based upon the noise.
+		</td>
+		<td><edit maxchars=64 width=100% name=bumpamount/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

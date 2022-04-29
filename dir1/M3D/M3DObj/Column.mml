@@ -1,0 +1,156 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Column settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Main column</xtrheader>
+	<tr>
+		<td>
+			<bold>Profile</bold> - The shape of a slice through the column.
+		</td>
+		<td><xComboShape width=100% name=mainshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width (in meters or inches) of the column.
+		</td>
+		<td><edit maxchars=32 width=100% name=mainwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth (in meters or inches) of the column.
+		</td>
+		<td><edit maxchars=32 width=100% name=maindepth/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Column base</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=bottomused>
+				<bold>Show the base</bold><br/>
+				Check this if you want the column to be standing on a base.
+				You can adjust the base's appearance below.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Profile</bold> - The shape of a slice through the column's base.
+		</td>
+		<td><xComboShape width=100% name=bottomshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The shape of the column's base when look at if from the side.
+		</td>
+		<td><xComboTaper width=100% name=bottomtaper/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width (in meters or inches) of the column base.
+		</td>
+		<td><edit maxchars=32 width=100% name=bottomwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth (in meters or inches) of the column base.
+		</td>
+		<td><edit maxchars=32 width=100% name=bottomdepth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height (in meters or inches) of the column base.
+		</td>
+		<td><edit maxchars=32 width=100% name=bottomheight/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Column cap</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=topused>
+				<bold>Show the cap</bold><br/>
+				Check this if you want to cap the column.
+				You can adjust the cap's appearance below.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Profile</bold> - The shape of a slice through the column's cap.
+		</td>
+		<td><xComboShape width=100% name=topshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The shape of the column's cap when look at if from the side.
+		</td>
+		<td><xComboTaper width=100% name=toptaper/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width (in meters or inches) of the column's cap.
+		</td>
+		<td><edit maxchars=32 width=100% name=topwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth (in meters or inches) of the column's cap.
+		</td>
+		<td><edit maxchars=32 width=100% name=topdepth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height (in meters or inches) of the column's cap.
+		</td>
+		<td><edit maxchars=32 width=100% name=topheight/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Braces</xtrheader>
+	<tr>
+		<td>
+			Click on the right to specify which braces are visible.
+		</td>
+		<td>
+			<xChoiceButton style=x checkbox=true name=brace0>
+				<bold>Brace 1</bold>
+			</xChoiceButton>
+			<xChoiceButton style=x checkbox=true name=brace1>
+				<bold>Brace 2</bold>
+			</xChoiceButton>
+			<xChoiceButton style=x checkbox=true name=brace2>
+				<bold>Brace 3</bold>
+			</xChoiceButton>
+			<xChoiceButton style=x checkbox=true name=brace3>
+				<bold>Brace 4</bold>
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Profile</bold> - The shape of a slice through the brace.
+		</td>
+		<td><xComboShape width=100% name=braceshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width (in meters or inches) of the brace.
+		</td>
+		<td><edit maxchars=32 width=100% name=bracewidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth (in meters or inches) of the brace.
+		</td>
+		<td><edit maxchars=32 width=100% name=bracedepth/></td>
+	</tr>
+</xtablecenter>

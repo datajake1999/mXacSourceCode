@@ -1,0 +1,77 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Effects"/>
+
+<xPageTitle>
+	Effects
+</xPageTitle>
+
+<p>
+	<xSN/> lets you apply effects to your image once they're finished drawing.
+	These effects include fog, outlines, blurring, depth-of-field,
+	make it look like a painting, and a number of other styles.
+	The technical term for effects is "image post-processing" or "non-photorealistic
+	rendering" (NPR).
+</p>
+
+<p>
+	To apply an effect to your image:
+</p>
+
+<ol>
+	<li>
+		In the print image, save to file, or animation dialogs, press
+		the <bold>Change effect</bold> button.
+	</li>
+	<li>
+		The "Change effect" dialog will appear letting you chose from a library
+		of effects. <bold>Select</bold> the one you want.
+	</li>
+	<p>
+		When you print, save the image, or create the animation the effect will
+		be applied. A <bold>warning</bold> about animations: Many of the effects (such as
+		simulated painting) are randomized. If you animate with randomized effects
+		the image will change every frame, even where no motion occurs. While such
+		results can be artistic, many viewers will find them annoying.
+	</p>
+</ol>
+
+<xSectiontitle>Creating your own effects</xSectionTitle>
+
+<p>
+	If you want to create a variation on an existing effect then use
+	the library button:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select <bold>"Effects"</bold> in the menu that appears.
+	</li>
+	<li>
+		In the "Effects library" dialog box that appears, select
+		the <bold>"Major category"</bold> and <bold>"Minor category"</bold> that
+		best classifies your effect (or the one you wish to base it off of).
+	</li>
+	<li>
+		Press the <bold>"Create a new effect from scratch"</bold> button, or
+		the <bold>"Copy and modifying an existing effect"</bold> to modify one
+		that already exists.
+	</li>
+	<li>
+		In the dialogs that appear, follow the in-page documentation
+		and <bold>experiment</bold>.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:563>Making a movie</a></li>
+	<li><a href=r:481>Printing</a></li>
+	<li><a href=r:480>Saving JPEG and bitmap images</a></li>
+</xul>

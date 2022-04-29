@@ -1,0 +1,95 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Show/hide items"/>
+
+<p>
+	Click on the elements of the house to show or hide them.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Show/hide</xtrheader>
+	<tr>
+		<td>
+			<button style=x checkbox=true name=sh1>
+				<bold>Floors</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh6>
+				<bold>Framing</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh5>
+				<bold>Piers</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh2>
+				<bold>Roof</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh0>
+				<bold>Walls</bold>
+			</button>	<br/>
+		</td>
+		<td>
+			<button style=x checkbox=true name=sh4>
+				<bold>Balustrades</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh7>
+				<bold>Doors</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh3>
+				<bold>Stairs</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh8>
+				<bold>Windows</bold>
+			</button>	<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button style=x checkbox=true name=sh18>
+				<bold>Appliance</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh9>
+				<bold>Cabinets</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh15>
+				<bold>Electrical</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh10>
+				<bold>Plumbing</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh11>
+				<bold>Furniture</bold>
+			</button>	<br/>
+		</td>
+		<td>
+			<button style=x checkbox=true name=sh21>
+				<bold>Characters</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh13>
+				<bold>Ground</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh12>
+				<bold>Landscaping</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh20>
+				<bold>Plants</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh17>
+				<bold>Sun, moon, clouds</bold>
+			</button>	<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button style=x checkbox=true name=sh19>
+				<bold>Animation cameras</bold>
+			</button>	<br/>
+			<button style=x checkbox=true name=sh16>
+				<bold>View cameras</bold>
+			</button>	<br/>
+		</td>
+		<td>
+			<button style=x checkbox=true name=sh14>
+				<bold>Miscellaneous</bold>
+			</button>	<br/>
+		</td>
+	</tr>
+</xtablecenter>

@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify an effect"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Effects</xtrheader>
+	<<<$LIBS>>>
+</xtablecenter>
+
+<xChoiceButton href=addeffect>
+	<bold>Add effect</bold><br/>
+	This adds an effect to the list of effects, such as outlining, making it look
+	like a painting, etc.
+</xChoiceButton>
+
+<xbr/>
+
+<xsectiontitle>Documentation</xsectiontitle>
+
+<p>
+	Press "Add effect" to add an effect to the end of the list.
+</p>
+
+<p>
+	When the effects are applied to the image, they are applied from the top down.
+	You can reorder the effects using the arrows.
+</p>
+
+

@@ -1,0 +1,195 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Transplanted prosody review"/>
+
+<p>
+	Instructions below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Transplanted prosody</xtrheader>
+	<tr>
+		<td>
+			Select the quality of transplanted prosody to use and press "Next".
+			<p/>
+			<xChoiceButton style=check radiobutton=true group=synth,word,phone1,phone2,phone3 name=synth>
+				<bold>All synthesized</bold><br/>
+				Uses the least disk space, but the worst sounding.
+			</xChoiceButton>
+			<xChoiceButton style=check radiobutton=true group=synth,word,phone1,phone2,phone3 name=word>
+				<bold>Per-word prosody</bold><br/>
+				Store only one prosody value (pitch, volume, duration) per word.
+			</xChoiceButton>
+			<xChoiceButton style=check radiobutton=true group=synth,word,phone1,phone2,phone3 name=phone1>
+				<bold>1 per-phoneme prosody</bold><br/>
+				Store only one prosody value (pitch, volume, duration) per phoneme.
+			</xChoiceButton>
+			<xChoiceButton style=check radiobutton=true group=synth,word,phone1,phone2,phone3 name=phone2>
+				<bold>2 per-phoneme prosody</bold><br/>
+				Store two pitch values, and one volume and duration value per phoneme.
+			</xChoiceButton>
+			<xChoiceButton style=check radiobutton=true group=synth,word,phone1,phone2,phone3 name=phone3>
+				<bold>3 per-phoneme prosody</bold><br/>
+				Store three pitch values, and one volume and duration value per phoneme.
+				This is the best quality, but uses the most disk space.
+			</xChoiceButton>
+			<xbr/>
+			<xChoiceButton style=righttriangle name=playtp>
+				<bold>Play transplanted prosody</bold><br/>
+				Play the transplanted prosody voice using the current quality.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play original</bold><br/>
+				Play the original recording.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle accel=enter href=next>
+				<bold>Next</bold><br/>
+				Keep the selected transplanted prosody setting and continue.
+			</xChoiceButton>
+		</td>
+		<td align=center>
+			<p>Text sent to the text-to-speech:</p>
+			<edit width=85% height=100% maxchars=10000 name=text multiline=true wordwrap=false vscroll=textscroll hscroll=textscrollh/>
+			<scrollbar orient=vert height=100% name=textscroll/><br/>
+			<scrollbar orient=horz width=85% name=textscrollh/>
+			<p/>
+			<xChoiceButton name=restore>
+				<bold>Restore text</bold><br/>
+				If you make any changes to the text (such as fine-tuning the pitch or duration) and
+				wish to undo your changes, this will restore the text to its intial setting.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xTableCenter>
+
+<!xComboInfoKeep>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold>Don't transplant</bold></elem>
+		<elem name="1"><bold>Relative</bold></elem>
+		<elem name="2"><bold>Absolute</bold></elem>
+	</combobox></bold>
+</xComboInfoKeep>
+
+<xTableCenter width=100%>
+	<xtrheader>Advanced settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Pitch (relative or absolute)</bold> - Select if you want pitch information
+			transplanted, and whether it's relative (adjusted for the pitch of the TTS
+			voice speaking it) or absolute (keep the same pitch as the speaker).
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><xComboInfoKeep width=100% name=pitchrel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume (relative or absolute)</bold> - Select if you want volume information
+			transplanted, and whether it's relative (adjusted for the volume of the TTS
+			voice speaking it) or absolute (keep the same volume as the speaker).
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><xComboInfoKeep width=100% name=volrel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Duration (relative or absolute)</bold> - Select if you want word/phoneme duration
+			transplanted, and whether it's relative (adjusted for the duration of the TTS
+			voice speaking it) or absolute (keep exactly the same duration as the speaker).
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><xComboInfoKeep width=100% name=durrel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pitch adjust</bold> - This adjusts the pitch for the entire phrase by an
+			additional amount. Use 1.0 for no change, 2.0 for twice the pitch, 0.5 for
+			half the pitch, etc.
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=pitchadjust/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pitch expresiveness</bold> - This increases or decreases the amount of
+			pitch variation for the phrase.
+			Use 1.0 for no change, 2.0 for twice the pitch expressivenes, 0.5 for
+			half the pitch expressiveness, etc.
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=pitchexpressadjust/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Volume adjust</bold> - This adjusts the volume for the entire phrase by an
+			additional amount. Use 1.0 for no change, 2.0 for twice the volume, 0.5 for
+			half the volume, etc.
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=voladjust/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Duration adjust</bold> - This adjusts the duration for the entire phrase by an
+			additional amount. Use 1.0 for no change, 2.0 for twice the duration, 0.5 for
+			half the duration, etc.
+			(Doesn't affect "All synthesized" mode.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=duradjust/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average speaking pitch</bold> - This is the average pitch of the speaker.
+			You can type in a number, or press "Recalculate" to calculate it from the
+			current recording. The average speaking pitch is used to for calculating
+			relative pitch and pitch expressiveness.
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=32 selall=true name=avgpitch/></bold>
+			<br/>
+			<p align=right>
+				<button style=uptriangle name=recalcpitch><bold>Recalculate</bold></button>
+			</p>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xSectionTitle>Instructions</xSectionTitle>
+
+<p>
+	Now that you have recorded your the phrase, this page lets you listen to the
+	transplanted prosody version and fine-tune it.
+</p>
+
+<ol>
+	<li>
+		<bold>Select</bold> the transplanted prosody quality you think will work best.
+	</li>
+	<li>
+		Press <bold>Play transplanted prosody</bold> to hear it.
+	</li>
+	<li>
+		If the quality isn't good enough the <bold>select a better</bold> (but larger)
+		quality. If it's better than you need then select a smaller (but lower quality)
+		version.
+	</li>
+	<li>
+		You can <bold>fine tune</bold> the transplanted prosody using the settings
+		under the <bold>"Advanced settings"</bold> header.
+	</li>
+	<li>
+		If you're really keen you can always <bold>hand modify</bold> the transplanted
+		prosody text in place. This will allow you very fine control of the prosody, and
+		is especially useful if you're trying to get exact timing or pitch (such as with
+		singing).
+	</li>
+	<li>
+		When you're satisfied with the quality press <bold>Next</bold>.
+	</li>
+	<p>
+		Alternatively, pressing <bold>Back</bold> will let you re-record the phrase.
+		You might need to do this if the pitch detection messes up.
+	</p>
+</ol>

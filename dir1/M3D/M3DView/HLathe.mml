@@ -1,0 +1,50 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Lathe objects"/>
+
+<xPageTitle>
+	Lathe objects
+</xPageTitle>
+
+<p>
+	An "lathe object" looks like it was created on a lathe. It's generally round (although
+	in the case of <xLN/> it can be other shapes) and it has some sort
+	of profile, such as an hour-glass shape.
+</p>
+
+<p>
+	In <xSN/>, the lathe object is mostly used as part of other objets. It can
+	be used to create such objects as: wine glasses, table legs, bowls, light shapes,
+	lamp posts, columns, waste-paper baskets, door knobs, etc.
+</p>
+
+<p>
+	You will find a collection of pre-defined lathe objects under the "Lathe objects" section
+	in "Object pieces".
+</p>
+
+<p>
+	If you want to make your own lathe object then:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined lathe object (under "Lathe objects" in the "Object pieces"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Using the <xButtonObjDialog/> tool, click on the lathe object.
+	</li>
+	<li>
+		In the "Lathe settings" button you'll find a number of ways you can customize
+		the extrusion. You can control how the profile (such as hour-glass or cone) and
+		the revolution shape (which is usually round but doesn't have to be).
+	</li>
+	<li>
+		You may also wish to use <xButtonObjControlDialog/> on the lathe objects to
+		display different control points.
+	</li>
+</ol>

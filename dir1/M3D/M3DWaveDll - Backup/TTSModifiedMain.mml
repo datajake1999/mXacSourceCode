@@ -1,0 +1,102 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modified TTS Voice page"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>></bold></big>
+</p>
+
+<p>
+	To modify a master TTS voice you must:
+</p>
+
+<ol>
+	<li>
+		Select the <bold>master TTS voice</bold> to use.
+	</li>
+	<li>
+		Add one or more sub-voices using the <bold>Add a new sub-voice</bold>.
+	</li>
+	<li>
+		<bold>Customize</bold> each sub-voice.
+	</li>
+</ol>
+
+<xbr/>
+
+<xsectiontitle>Master TTS Voice</xsectiontitle>
+
+<xChoiceButton name=newtts>
+	<bold>Change Master TTS Voice</bold><br/>
+	If you haven't already, you should select the master TTS voice to use.
+	Your modified TTS voice will be based off this master; it will initially
+	sound like the master voice, but as you change the settings below the
+	voice will change.
+	<p/>
+	The master TTS voice is <bold><<<MASTERTTS>>></bold>.
+</xChoiceButton>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Prosody affecting all sub-voices</xtrheader>
+	<tr>
+		<td>
+			<bold>Prosody from another TTS voice (.tts) or Prosody model (.mpm)</bold> -
+			You may wish to add prosody (word
+			emphasis) information from a custom prosody model that you created. This
+			will cause the voice to take on some of the inflection of another voice,
+			and can improve the quality of text-to-speech if you know basically what
+			phrases will be spoken, and create a prosody model from those phrases.
+			<p/>
+			<bold>Note:</bold> - The prosody model is "rebuilt" whenever you select
+			"Open". If the prosody file is changed, the changes won't be reflected
+			for this voice until you press "Open" and re-add the file.
+		</td>
+		<td>
+			<edit readonly=true maxchars=256 width=100% name=prosodytts0/><br/>
+			<p align=right><bold><button name=prosodyttsopen0>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts1/><br/>
+			<p align=right><bold><button name=prosodyttsopen1>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts2/><br/>
+			<p align=right><bold><button name=prosodyttsopen2>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts3/><br/>
+			<p align=right><bold><button name=prosodyttsopen3>Open...</button></bold></p>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Subvoices</xtrheader>
+	<<<$SUBVOICES>>>
+</xtablecenter>
+
+
+<xChoiceButton name=add>
+	<bold>Add a new sub-voice</bold><br/>
+	Press this to add a new sub-voice. You should have at least one sub-voice.
+</xChoiceButton>
+
+<xChoiceButton name=import>
+	<bold>Import sub-voices from another modified TTS voice</bold><br/>
+	This will import one or more sub-voices from another modified TTS voice.
+	After pressing the button, you will be asked for the modified TTS voice file,
+	and then for which sub-voices to import.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Test the voice</xtrheader>
+	<tr><td>
+		Type in some text below and press "Test speak" (above, in subvoices) to hear what your modified voice
+		sounds like.
+		<p/>
+		<edit width=100% maxchars=250 name=testspeak/>
+	</td></tr>
+</xtablecenter>

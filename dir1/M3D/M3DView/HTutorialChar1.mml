@@ -1,0 +1,54 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Creating characters tutorial"/>
+
+<xPageTitle>
+	Creating characters tutorial
+</xPageTitle>
+
+<p>
+	This tutorial is a very short because it merely builds on what you learned in
+	other tutorials.
+</p>
+
+<p>
+	To create a character (such as a person or an animal):
+</p>
+
+<ol>
+	<li>
+		<bold>Create an object</bold> for your character. See the <a href=r:416>Making your own objects</a> tutorial.
+	</li>
+	<li>
+		In the object, <bold>create the skin</bold> of your character (head, neck, torso, arms, hands, legs, feet) using
+		a <bold>polygon mesh</bold>. See the <a href=r:893>Polygon mesh</a> tutorial for details on this.
+	</li>
+	<li>
+		While you can create the character's <bold>eyes, teeth, and hair</bold> using the polygon mesh,
+		the easiest way is to use
+		the <a href=r:922>Eyes objects</a>, <a href=r:926>Jaw object</a>, and <a href=r:924>Hair, head of</a> object.
+	</li>
+	<li>
+		Create a skeleton using the <bold>bones object</bold>. See
+		the <a href=r:914>Bones tutorial</a> for help.
+		BUGBUG - pointer to standard attributes for characters.
+	</li>
+	<li>
+		You can <bold>paint</bold> your character using the standard methods.
+		See the <a href=r:814>Painting tutorial</a> for more information.
+	</li>
+	<li>
+		BUGBUG - pointer to making clothing
+	</li>
+	<li>
+		BUGBUG - pointer to stanrdard poses
+	</li>
+	<li>
+		After all this work you're finished.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Finished</bold></button>
+</p>
+

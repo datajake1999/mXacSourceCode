@@ -1,0 +1,37 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Lighting exposure"/>
+
+<xPageTitle>
+	Lighting exposure
+</xPageTitle>
+
+
+<p>
+	Because <xSN/> can draw the house both as it will appear in the daytime and at night,
+	extra controls are provided so you can adjust the lighting exposure. It acts
+	just like the exposure setting on a camera.
+</p>
+
+<p>
+	To adjust the exposure:
+</p>
+<ol>
+	<li>
+		Press the <xButtonViewQuality/> button.
+	</li>
+	<li>
+		In the menu that appears, open the <bold>Lighting exposure</bold> sub-menu.
+	</li>
+	<li>
+		Select whichever exposure setting you wish to use.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:401>The sun, moon, and weather</a></li>
+	<li><a href=r:399>Turning lights on and off</a></li>
+</xul>

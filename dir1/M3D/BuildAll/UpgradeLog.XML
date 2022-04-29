@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BuildAll">
+</Property><Property Name="Solution File" Value="Z:\M3D\BuildAll\BuildAll.sln">
+</Property><Property Name="User Options File" Value="Z:\M3D\BuildAll\BuildAll.suo">
+</Property><Property Name="Date" Value="Friday, 13 April 2007">
+</Property><Property Name="Time" Value="11:58 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="BuildAll.sln" Description="File successfully backed up as Z:\M3D\BuildAll\BuildAll.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="BuildAll.suo" Description="File successfully backed up as Z:\M3D\BuildAll\BuildAll.suo.old">
+</Event><Event ErrorLevel="0" Project="M3D" Source="..\M3D\M3D.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3D" Source="..\M3D\M3D.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DAnim" Source="..\M3DAnim\M3DAnim.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DAnim" Source="..\M3DAnim\M3DAnim.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DObj" Source="..\M3DObj\M3DObj.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DObj" Source="..\M3DObj\M3DObj.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DRend" Source="..\M3DRend\M3DRend.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DRend" Source="..\M3DRend\M3DRend.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DSplash" Source="..\M3DSplash\M3DSplash.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DSplash" Source="..\M3DSplash\M3DSplash.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DText" Source="..\M3DText\M3DText.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DText" Source="..\M3DText\M3DText.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DUtil" Source="..\M3DUtil\M3DUtil.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DUtil" Source="..\M3DUtil\M3DUtil.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DView" Source="..\M3DView\M3DView.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DView" Source="..\M3DView\M3DView.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DWave" Source="..\M3DWave\M3DWave.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DWave" Source="..\M3DWave\M3DWave.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DWaveDll" Source="..\M3DWaveDll\M3DWaveDll.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DWaveDll" Source="..\M3DWaveDll\M3DWaveDll.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DWorld" Source="..\M3DWorld\M3DWorld.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DWorld" Source="..\M3DWorld\M3DWorld.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DKey" Source="..\M3DKey\M3DKey.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DKey" Source="..\M3DKey\M3DKey.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MNLP" Source="..\MNLP\MNLP.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="MNLP" Source="..\MNLP\MNLP.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MIFL" Source="..\MIFL\MIFL.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="MIFL" Source="..\MIFL\MIFL.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="M3DEffect" Source="..\M3DEffect\M3DEffect.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="M3DEffect" Source="..\M3DEffect\M3DEffect.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BuildAll.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="BuildAll.sln" Description="Converted">
+</Event></UpgradeLog>

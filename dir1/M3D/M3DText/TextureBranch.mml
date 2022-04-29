@@ -1,0 +1,422 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Branch"/>
+
+<p>
+	The procedural branch/tree generator automatically creates the branches and
+	leaves of a tree using an algorithm that simulates the tree growing and
+	sprouting new branches over time. You may wish to use this tool to quickly
+	generate a tree (composed of sub-branches) or a sub-branch (composed of leaves),
+	and then hand-modify the results after you have something close.
+</p>
+
+<p>
+	To generate the tree, a branch (or tree) is divided into "nodes". Each node is a
+	length of branch followed but one or more of the following: A continuation of the
+	branch. A fork in the branch. Leaves. Each node, if it has branches coming out
+	of it, connects to other nodes. This repeats until you get to the end-nodes where
+	there are just leaves. Every time a node connects to another node this is called
+	a "generation".
+</p>
+
+<p>
+	Each settings has a description of what it does next to it. If the description
+	isn't clear (which it may not be) then just play around with different slider
+	locations and values until you get something you like.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<p/>
+		Since the background is also drawn green, you may find it difficult identifying
+		where the branches or leaves are.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Width in pixels</bold> - How wide the texture is, in pixels.
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height in pixels</bold> - How high the texture is, in pixels.
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch length</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=branchbutton>
+				<bold>Branch color</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=branchcolor/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Length</bold> - Typical length of a node at the base of the branch/tree.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchlength/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation</bold> - How much the length of a node varies.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchlengthvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shorten</bold> - The average length of a node shorten every
+			generation as the branches thin. This controls the amount of
+			shortening.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchshorten/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - How thick the branches are.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=thickscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Dark edge</bold> - The further to the left, the darker the edge will
+			be on the branch.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=200 name=darkedge/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch extension</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of continuing straight ahead</bold> - The further the slider
+			is to the right the more likely that the branch will continue in it's
+			current direction.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchextendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the less likely this branch will continue straight ahead. This is the
+			change to the "Likelihood of continuing straght ahead" every new
+			generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchextendprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Direction variation</bold> - The higher the setting the more
+			random the branches direction will be.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchdirvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch forking</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of forking</bold> - Controls how likely a branch is to
+			fork at each node.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the more likely the branch will fork. This slider controls how much the
+			"Likelihood of forking" changes every generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of forks</bold> - The further to the right, the more forks
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforknum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forward forking</bold> - Controls whether the new forks will be
+			more forward (to the right) or backwards (to the left).
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkforwards/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Up/down forking</bold> - If all the way to the right, forks will tend
+			to go up, while all the way to the left will cause forks to go down.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkupdown/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forking variation</bold> - How much the forking varies.
+			If all the way to the right forking will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch gravity</xtrheader>
+	<tr>
+		<td>
+			<bold>Up/down affinity</bold> - This controls whether the branch will want
+			to go more upwards (all the right) or downwards (to the left) every generation.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchgrav/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change in up/down affinity</bold> - Every generation, the up/down
+			affinity changes slightly. If to the right, the branches will become more
+			upwards searching, while to the left will cause them to angle down more.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchgravgen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves along non-forking branch</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of leaves</bold> - Controls how likely a branch is to
+			have leaves, if it extends further but has no forks.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the more likely the branch will will have leaves. This slider controls how much the
+			"Likelihood of leaves" changes every generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of leaves</bold> - The further to the right, the more leaves
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendnum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forward pointing</bold> - Controls whether the new leaves will be
+			more forward (to the right) or backwards (to the left).
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendforwards/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf variation</bold> - How much the leaf orientation varies.
+			If all the way to the right orientation will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size</bold> - Size of the leaf.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size variation</bold> - How much the leaves vary in size.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscalevar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf scale change</bold> - How much the size of the leaf changes
+			every generation.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscalegen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves at end of branch</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of leaves</bold> - Controls how likely a branch is to
+			have leaves attached to its end.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of leaves</bold> - The further to the right, the more leaves
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendnum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation in the number of leaves</bold> - The further to the right,
+			the more varied the number of leaves.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendnumvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Symmetry</bold> - The further to the right, the more symmetrical
+			the leaf placement will be.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendsymmetry/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf variation</bold> - How much the leaf orientation varies.
+			If all the way to the right orientation will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size</bold> - Size of the leaf.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size variation</bold> - How much the leaves vary in size.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendscalevar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Misc. settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Maximum generations</bold> - This number is a check to make sure the
+			tree doesn't end up with infinitely many generations. Increasing this value
+			will allow for more complex trees, but also slower ones to draw.
+		</td>
+		<td><edit width=100% maxchars=32 name=maxgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparent near base</bold> - To make the branch blend in better with the ground,
+			the blades are usually slightly transparent near the base. Moving this slider to the
+			right will make the base more transparent. (You will only be able to see the effects
+			when the branch in on a model.)
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=transbase/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Darken at the bottom</bold> - Darkens the branch at its base, and
+			brightens it at its tip. This simulates branches on the inside of the tree
+			being more in shadow than those outside.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=darkenatbottom/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves</xtrheader>
+	<tr><td>
+		<xChoiceButton href=tip>
+			<bold>Change the leaf</bold><br/>
+			Press this to display a page that lets you change the shape and color of the
+			leaf.
+		</xChoiceButton>
+	</td></tr>
+
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=stembutton>
+				<bold>Stem color</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=stemcolor/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Stem length</bold> - Length of the stem to the leaf.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=stemlength/></td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Lower leaves darker</bold> - If all the way to the right then
+			lower leaves are darker than upper leaves. If all the way to the left
+			then upper leaves are darker than lower leaves.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=lowerdarker/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

@@ -1,0 +1,114 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Bone association 2"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Bone association 2
+</xPageTitle>
+
+<p>
+	To change the bone-weighting of a vertex of the polygon mesh:
+</p>
+
+<ol>
+	<li>
+		<bold>Select</bold> the bone from the list of bones on the right. When
+		you do so the polygon mesh will be redrawn so it only displays the weighting
+		for that bone.
+	</li>
+	<li>
+		Select the <xButtonBrush64/> (or other brushes) tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> the mouse on the area of the polygon mesh that you
+		wish to be more affected by the bone. As you hold the mouse down you will see
+		the coloring (and hence the weighting) getting brighter.
+	</li>
+	<li>
+		If you hold down the <bold>control</bold> key while the button is down the
+		weighting will be decreased instead of increased.
+	</li>
+	<li>
+		As with the other modes of the polygon mesh, you can
+		use <xButtonBrushShape/>, <xButtonBrushEffect/>, and <xButtonBrushStrength/> to
+		control the brush's behaviour.
+	</li>
+</ol>
+
+
+<xSectionTitle>Fine tuning</xSectionTitle>
+<p>
+	When you think you have all the bone weights correct, you should test and fine-tune
+	the weights. To do this:
+</p>
+
+<ol>
+	<li>
+		In the main view, select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the bones object and <bold>modify</bold> the
+		bone attributes so the bones are hinged at the joints.
+	</li>
+	<li>
+		<bold>Return to the polygon mesh editor</bold> and use the tools to <bold>paint or unpaint
+		bone weighting</bold> so that the pose creates a natural looking bend in
+		the polygon mesh. The polygon mesh will automatically redraw using the new bone
+		weighting while you paint.
+	</li>
+</ol>
+
+<xSectionTitle>Bones affecting morphs</xSectionTitle>
+
+<p>
+	You may wish to have bone movement automatically turn on/off a morph. This
+	is most useful at the elbow and knee joints to alleviate unnatural looking
+	criming caused by bent elbows or knees. You can also use automatic morph
+	adjustment to cause muscles to flex based upon the joint angle.
+</p>
+
+<p>
+	To do this:
+</p>
+
+<ol>
+	<li>
+		<bold>Create the morph</bold> that you will turn on as the bone angle increase (or decreases).
+		You may need to fine tune it after you have connected the bone.
+	</li>
+	<li>
+		Press the <xButtonPMModeBone/> button to return to the bone association mode.
+	</li>
+	<li>
+		<bold>Double-click</bold> the bone in the list box.
+	</li>
+	<li>
+		In the "Bone affects morph" dialog that appears, select the <bold>Morph</bold> from
+		the list.
+	</li>
+	<li>
+		If the morph is tied to an action other than bending, such as side-to-side movement,
+		you should change the <bold>Joint motion</bold> setting.
+	</li>
+	<li>
+		Type in the <bold>Low and high effective angle</bold> for the joint. These are the
+		angles where the morph first starts to turn on and where it reaches its maximum value.
+	</li>
+	<li>
+		Likewise, type in the <bold>Low and high morph value</bold> for how much the
+		joint affects the morph.
+		One of these should be 0 so that the morph will be completely off.
+	</li>
+	<li>
+		If one morph isnt't enough, the "Bone affects morph" provides a second affects
+		table so you can have the bone affect more than one morph.
+	</li>
+	<li>
+		<bold>Test and refine</bold> these settings.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:912><bold>Next</bold></button>
+</p>
+

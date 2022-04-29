@@ -1,0 +1,151 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add new tracing paper"/>
+
+<p>
+	Press on of the buttons to indicate what type of color or texture you'd like
+	to add to your palette of tracing papers. Hover your mouse cursor over a button
+	to get a description.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Solid colors</xtrheader>
+	<tr>
+		<td>
+<button name=color>
+	<bold>Color</bold>
+	<xHoverHelp>
+	Press this to add a new color to your palette. You will be asked what color to use.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button name=glowcolor>
+	<bold>Color, glow</bold>
+	<xHoverHelp>
+	Press this to add a new glow color to your palette; this will cause the painted color
+	to glow, instead of just reflecting light. You will be asked what color to use.
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+<button name=transadd>
+	<bold>Transparent</bold>
+	<xHoverHelp>
+	Painting with this "color" will make the surface more transparent.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button name=transsub>
+	<bold>Opaque</bold>
+	<xHoverHelp>
+	Painting with this "color" will make the surface more opaque, and less transparent.
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+<button name=specadd>
+	<bold>Specular (glossy)</bold>
+	<xHoverHelp>
+	Painting with this "color" will make the surface glossier.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button name=specsub>
+	<bold>Specular (matte)</bold>
+	<xHoverHelp>
+	Painting with this "color" will make the surface less glossy.
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+<button name=bumpadd>
+	<bold>Bump (increase height)</bold>
+	<xHoverHelp>
+	Painting with this "color" will raise the surface using the bump map.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button name=bumpsub>
+	<bold>Bump (decrease height)</bold>
+	<xHoverHelp>
+	Painting with this "color" will lower the surface using the bump map.
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+<button name=bumpmed>
+	<bold>Bump (average out)</bold>
+	<xHoverHelp>
+	Painting with this "color" will average away bumps.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Images and textures</xtrheader>
+	<tr>
+		<td>
+<button name=image>
+	<bold>Image from a file(.bmp or .jpg)</bold>
+	<xHoverHelp>
+	This lets you "paint" with an image that you have scanned in, downloaded from
+	your digital camera, or created in another paint package.
+	You will be asked what image to use.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button name=clipboard>
+	<bold>Image from the clipboard</bold>
+	<xHoverHelp>
+	This lets you "paint" with an image that has been copied onto the clipboard.
+	(To use this, copy and image to the clipboard from another application first, and
+	then press this button.)
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+<button name=texture>
+	<bold>Texture</bold>
+	<xHoverHelp>
+	This lets you "paint" with a texture, such as bricks or wood.
+	You will be asked what texture to use.
+	</xHoverHelp>
+</button>
+		</td>
+		<td>
+<button href=text>
+	<bold>Text</bold>
+	<xHoverHelp>
+	Use this to paint text onto your surface.
+	This will ask you what text and font to use.
+	</xHoverHelp>
+</button>
+		</td>
+	</tr>
+</xtablecenter>
+
+

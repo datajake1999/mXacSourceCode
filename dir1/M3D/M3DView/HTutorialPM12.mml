@@ -1,0 +1,88 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Organic modelling 3"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Organic modelling 3
+</xPageTitle>
+
+<p>
+	The organic modeller provides some other functionality you might find handy...
+</p>
+
+<xSectionTitle>Magnetic move</xSectionTitle>
+
+<p>
+	On the lower right side of the screen are some magnet buttons that allow you to
+	pull out an entire group of vertices at once as though you were pinching the clay
+	or magnetically pulling it.
+</p>
+
+<xul>
+	<li>
+		<xButtonPMMagAny/> - After selecting this tool, click on your sphere and drag
+		your mouse in any direction. The area you clicked on will be dragged along with it.
+	</li>
+	<li>
+		<xButtonPMMagViewer/> - This works like <xButtonPMMagAny/> except that it pulls
+		the vertices in or out of the screen.
+	</li>
+	<li>
+		<xButtonPMMagNorm/> - This works like <xButtonPMMagAny/> except that it pulls
+		or pushes the vertices based on their normals, basically bulging out the surface.
+	</li>
+	<li>
+		<xButtonPMMagPinch/> - The pinch tool either pinches all the vertices towards the
+		center of the magnet or pushes them away.
+	</li>
+	<li>
+		<xButtonPMMagSize/> - This menu lets you control the size (area of affect) of the
+		magnet along with the shape of it's affect.
+	</li>
+</xul>
+
+
+<xSectionTitle>Other tools</xSectionTitle>
+<xul>
+	<li>
+		<xButtonPMOrgScale/> - Once this tool is selected, clicking on the polygon mesh
+		and dragging the mouse will scale the entire object. If you hold down "x", "y", or
+		"z" the scaling will be limited to that dimension. <xButtonPMStencil/> is particularly
+		useful when used with scaling.
+	</li>
+	<li>
+		<xButtonObjMerge/> - This lets you merge in another polygon mesh object with the one
+		currently being modified. To do this, you need to show the other objects by
+		using <xButtonPMShowBackground/>. Then, select the <xButtonObjMerge/> tool and click
+		on the polygon mesh you with to merge into this one.
+	</li>
+	<p>
+		Merging takes mirroring into account, duplicating and mirroring the merged object
+		to maintain symmetry. This can be useful when constructing a model of a person from
+		body parts; if you position and then merge in one arm its mirror will also be created.
+		Same thing with legs.
+	</p>
+	<li>
+		<xButtonPMSideExtra/> - The extra effects menu has some less-used features in it:
+	</li>
+	<p>
+		<bold>Mirror from X to Y</bold> - This throws out half your model and mirrors the
+		other half over it. It can be used to fixed an object that's supposed to be mirrored but
+		which you accidently broke.
+	</p>
+	<p>
+		<bold>Flip X and Y</bold> - Flips the object from left to right, front to back, or
+		top to bottom.
+	</p>
+	<p>
+		<bold>Add more detail</bold> - This subdivides all the polygons in the mesh an extra
+		level. More detail helps when using <xButtonPMStencil/> and can provide better control
+		over the shape. It also <bold>quadruples</bold> the memory usage, disk space, and drawing time
+		for the polygon mesh, so use it sparingly.
+	</p>
+</xul>
+
+<p align=right>
+	<button style=rightarrow href=r:905><bold>Next</bold></button>
+</p>
+

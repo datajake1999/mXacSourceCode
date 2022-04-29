@@ -1,0 +1,87 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify pronunciations"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>>, <<<SUBVOICE>>></bold></big>
+</p>
+
+<p>
+	This page lets you modify how the voice pronounces words. You can use this to
+	create a different accent or dialect.
+</p>
+
+<xtablecenter width=100%>	
+	<xtrheader>Lexicon</xtrheader>
+	<tr><td>
+		You can change the lexicon that the voice will use. A different lexicon will
+		allow you to change the dialect, or simply fix some mispronounced words.
+		<p/>
+		<xChoiceButton name=newlex>
+			<bold>Change the lexicon</bold><br/>
+			Press this to select a new lexicon. Make sure that the lexicon is the
+			sample language (and the same phonemes) as the original voice; otherwise
+			it will sound very strange. (If you press "Cancel" when opening the lexicon
+			your voice will use the same lexicon as the master voice.)
+			<p/>
+			The master TTS voice is <bold><<<MASTERLEX>>></bold>.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>	
+	<xtrheader>Accent</xtrheader>
+	<tr><td>
+		Below are a series of rules that convert from one (or more) phonemes to another (or
+		more) phonemes. You can use this to make different accents or dialect.
+		<p/>
+		For example: If you change the "ing" ending ("iy0 ng") to sound like "in" ("ih0 n"),
+		then you get a more rural dialect.
+	</td></tr>
+	<tr><td>
+		<p align=center>
+			<listbox width=80% height=30% sort=false scrolly=accentscroll name=accent/>
+			<scrollbar orient=vert height=30% name=accentscroll/>
+		</p>
+		<xChoiceButton name=delaccent>
+			<bold>Delete the selected rule</bold><br/>
+			Deletes the selected phoneme conversion rule from the list.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=addaccent>
+			<bold>Add a new rule</bold><br/>
+			Adds a new rule to the list. This uses the following "original phonemes" and
+			"new phonemes" settings:
+		</xChoiceButton>
+		<p align=right>Original phonemes: <bold><edit width=50% maxchars=64 name=origphone/></bold></p>
+		<p align=right>New phonemes: <bold><edit width=50% maxchars=64 name=newphone/></bold></p>
+		<p align=right>Where is occurs: <bold><combobox width=50% cbheight=100 name=wherephone>
+			<elem name=0>Anywhere in the word</elem>
+			<elem name=1>Start of the word only</elem>
+			<elem name=2>End of the word only</elem>
+		</combobox></bold></p>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Test the voice</xtrheader>
+	<tr><td>
+		Type in some text below and press "Test" to hear what your modified voice
+		sounds like.
+		<p/>
+		<edit width=100% maxchars=250 name=testspeak/><br/>
+		<p align=right><button name=test><bold>Test</bold></button></p>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Available phonemes</xtrheader>
+	<<<$PHONELIST>>>
+</xtablecenter>
+

@@ -1,0 +1,296 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Procedural branch/tree generator"/>
+
+<p>
+	The procedural branch/tree generator automatically creates the branches and
+	leaves of a tree using an algorithm that simulates the tree growing and
+	sprouting new branches over time. You may wish to use this tool to quickly
+	generate a tree (composed of sub-branches) or a sub-branch (composed of leaves),
+	and then hand-modify the results after you have something close.
+</p>
+
+<p>
+	To generate the tree, a branch (or tree) is divided into "nodes". Each node is a
+	length of branch followed but one or more of the following: A continuation of the
+	branch. A fork in the branch. Leaves. Each node, if it has branches coming out
+	of it, connects to other nodes. This repeats until you get to the end-nodes where
+	there are just leaves. Every time a node connects to another node this is called
+	a "generation".
+</p>
+
+<p>
+	Each settings has a description of what it does next to it. If the description
+	isn't clear (which it may not be) then just play around with different slider
+	locations and values until you get something you like.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Branch length</xtrheader>
+	<tr>
+		<td>
+			<bold>Initial angle</bold> - Controls what the angle of the starting
+			branch/trunk is. Trees generally start out upright, branches more diagonal.
+		</td>
+		<td><scrollbar orient=horz min=0 max=310 name=branchinitialangle/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length</bold> - Typical length of a node at the base of the branch/tree.
+		</td>
+		<td><edit width=100% maxchars=32 name=branchlength/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation</bold> - How much the length of a node varies.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchlengthvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shorten</bold> - The average length of a node shorten every
+			generation as the branches thin. This controls the amount of
+			shortening.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchshorten/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - How thick the branches are. This is the same setting
+			as from the main branch settings page.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=thickscale/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch extension</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of continuing straight ahead</bold> - The further the slider
+			is to the right the more likely that the branch will continue in it's
+			current direction.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchextendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the less likely this branch will continue straight ahead. This is the
+			change to the "Likelihood of continuing straght ahead" every new
+			generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchextendprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Direction variation</bold> - The higher the setting the more
+			random the branches direction will be.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchdirvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch forking</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of forking</bold> - Controls how likely a branch is to
+			fork at each node.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the more likely the branch will fork. This slider controls how much the
+			"Likelihood of forking" changes every generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of forks</bold> - The further to the right, the more forks
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforknum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forward forking</bold> - Controls whether the new forks will be
+			more forward (to the right) or backwards (to the left).
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkforwards/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Up/down forking</bold> - If all the way to the right, forks will tend
+			to go up, while all the way to the left will cause forks to go down.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkupdown/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forking variation</bold> - How much the forking varies.
+			If all the way to the right forking will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchforkvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Branch gravity</xtrheader>
+	<tr>
+		<td>
+			<bold>Up/down affinity</bold> - This controls whether the branch will want
+			to go more upwards (all the right) or downwards (to the left) every generation.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchgrav/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change in up/down affinity</bold> - Every generation, the up/down
+			affinity changes slightly. If to the right, the branches will become more
+			upwards searching, while to the left will cause them to angle down more.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=branchgravgen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves along non-forking branch</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of leaves</bold> - Controls how likely a branch is to
+			have leaves, if it extends further but has no forks.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Change every generation</bold> - The further into the branch/tree,
+			the more likely the branch will will have leaves. This slider controls how much the
+			"Likelihood of leaves" changes every generation.
+			This affects the branches further away from the trunk more.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendprobgen/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of leaves</bold> - The further to the right, the more leaves
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendnum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Forward pointing</bold> - Controls whether the new leaves will be
+			more forward (to the right) or backwards (to the left).
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendforwards/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf variation</bold> - How much the leaf orientation varies.
+			If all the way to the right orientation will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size</bold> - Size of the leaf.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size variation</bold> - How much the leaves vary in size.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscalevar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf scale change</bold> - How much the size of the leaf changes
+			every generation.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafextendscalegen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Leaves at end of branch</xtrheader>
+	<tr>
+		<td>
+			<bold>Likelihood of leaves</bold> - Controls how likely a branch is to
+			have leaves attached to its end.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendprob/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of leaves</bold> - The further to the right, the more leaves
+			likely.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendnum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation in the number of leaves</bold> - The further to the right,
+			the more varied the number of leaves.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendnumvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Symmetry</bold> - The further to the right, the more symmetrical
+			the leaf placement will be.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendsymmetry/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf variation</bold> - How much the leaf orientation varies.
+			If all the way to the right orientation will vary a lot, while to the left
+			and forking will be very exact.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size</bold> - Size of the leaf.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf size variation</bold> - How much the leaves vary in size.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=leafendscalevar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Misc. settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Version</bold> - Typing in a new number will create a new version of the
+			tree.
+		</td>
+		<td><edit width=100% maxchars=32 name=seed/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum generations</bold> - This number is a check to make sure the
+			tree doesn't end up with infinitely many generations. Increasing this value
+			will allow for more complex trees, but also slower ones to draw.
+		</td>
+		<td><edit width=100% maxchars=32 name=maxgen/></td>
+	</tr>
+</xtablecenter>
+

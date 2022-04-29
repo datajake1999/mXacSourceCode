@@ -1,0 +1,157 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - basics"/>
+
+<xPageTitle>
+	Bones - basics
+</xPageTitle>
+
+<p>
+	"Bones" are objects that help you draw and animate people, animals, and other characters.
+	Although they don't look like skeletal bones (and aren't drawn in the final image), they
+	act like a skeleton, allowing the character's limbs to bend.
+</p>
+
+<p>
+	When you build a character in <xSN/> you create a new object
+	using the <xButtonLibrary/> button, mold the polygon mesh object
+	into the human, animal, or alien shape you wish, and then build a virtual
+	skeleton using the <bold>bones</bold> object. (BUGBUG - Link to how to build character.)
+</p>
+
+<p>
+	The bones, even though they don't look exactly like skeletal bones, are arranged to
+	create a skeleton underneath the polygon mesh shape. The polygon mesh (and other
+	nearby objects) is then attached to the nearest bone so that when the bone is
+	moved, the shape goes along with it; your character can move its limbs.
+</p>
+
+<xsectiontitle>Creating the first bone</xsectiontitle>
+
+<p>
+	To start creating a skeleton:
+</p>
+
+<ol>
+	<li>
+		While you can create a skeleton in your main world, they don't actually do anything
+		there. For a skeleton to be useful, it must be created in an object. Since you
+		use objects to create character, this is no problem. Using
+		the <xButtonLibrary/> tool, either <bold>create a new object or edit an existing one.</bold>
+	</li>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		Switch to the <bold>"Object pieces"</bold> section, and look under <bold>"Bones"</bold>.
+	</li>
+	<li>
+		You will find a variety of different bones you can start out with, including
+		human hand, arm, leg, and torso skeletons. For this example, being with the simplest
+		bone, the "Single bone" object. <bold>Click on it and add it to the object you're editing.</bold>
+	</li>
+	<p>
+		The bone looks like a long stick with a buldge on one end. It contains a set of yellow
+		lines on one end, and some purple lines encircling it.
+	</p>
+	<p>
+		The "stick" is the actual bone. The bulging end the the base of the bone, where it
+		rotates from. If this bone were the upper leg bone, the bulge would be at the hip. If it
+		were the upper arm-bone it would be at the shoulder. The thin end is where other bones
+		are attached to it; such as the lower leg bone, or the lower-arm bone. (You can have more
+		than one bone attached to the end, such as the back bone being attached to two shoulder
+		bones and a neck bone.) The "top" of the bone is blue, botton is black, right is red,
+		left is green; these are useful for seeing how the bone will rotate/swivel in its socket.
+	</p>
+	<p>
+		The yellow lines on the end indicate the extent of the freedom of motion of the bone, how much it
+		can move up and down, or side to side. Look at the "See also" section for changing this.
+	</p>
+	<p>
+		The purple cage around the bone is called its "envelope"; it indicates what portions
+		of the polygon mesh or other objects are affected by the bone. Look at "See also" for
+		information on changing the envelope.
+	</p>
+	<li>
+		Move and orient the bone so that it is lined up with the backbone of your character.
+		The based of the bone (bulging end) should be placed at the hips, and the end of the
+		bone at the top of the back, between the shoulders.
+	</li>
+	<p>
+		To see the bone within the polygon mesh, to use "wireframe" mode
+		in <xButtonViewQuality/>, or you can show and hide the polygon mesh
+		using <xButtonObjectList/>. Alternatively, you can temporary turn the
+		polygon mesh transparent using <xButtonObjPaint/>.
+	</p>
+	<li>
+		To change the length of the bone, select the object
+		using the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		If you see more than two control points (one at the end and a white triangular one
+		in the middle of the bone), then <bold>click on the white triangular</bold> control point in
+		the middle. This will hide all of the points except for the sizing one.
+	</li>
+	<li>
+		<bold>Drag</bold> the control point at the end to resize it.
+	</li>
+</ol>
+
+
+<xsectiontitle>Making a skeleton</xsectiontitle>
+
+<p>
+	To make an entire skeleton requires that you create a number of small bones and
+	merge them into your main skeleton.
+</p>
+
+<ol>
+	<li>
+		<bold>Create another bone</bold> like above.
+	</li>
+	<li>
+		Move it into position and size it (for example, where the shoulder bone goes). The base of the
+		bone should be placed near the end of the bone it attaches to (such as the top of
+		the backbone).
+	</li>
+	<li>
+		Select the new bone using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Using the <xButtonObjMerge/> tool, click on the main skeleton (currently just the backbone).
+	</li>
+	<p>
+		The shoulder bone will be attached to the backbone.
+	</p>
+	<li>
+		<bold>Repeat</bold> the process for every moving bone in the body.
+	</li>
+	<li>
+		Tip: You can save your self a lot of time by using the <bold>symmetry</bold> feature
+		in the bones (link in "See also"). With symmetry you only need to design the left
+		side of the skeleton and the right side will automatically build itself.
+	</li>
+</ol>
+
+<xsectiontitle>Freedom of motion and envelopes</xsectiontitle>
+
+<p align=right>
+	<button style=rightarrow href=r:533><bold>Next</bold></button>
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:536>Conventions</a></li>
+	<li><a href=r:533>Face forwards control point</a></li>
+	<li><a href=r:531>Freedom of motion and envelopes</a></li>
+	<li><a href=r:534>Keeping feet on the ground</a></li>
+	<li><a href=r:535>Rigid surfaces</a></li>
+	<li><a href=r:532>Skeletal motion</a></li>
+	<li><a href=r:529>Symmetry</a></li>
+</xul>

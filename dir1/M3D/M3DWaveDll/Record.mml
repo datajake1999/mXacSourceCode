@@ -1,0 +1,178 @@
+<?Include resource=500?>
+<PageInfo index=false title="Record"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top>
+<tr><td>
+	Please speak: <font color=#ffffc0><bold><big><big><<<RECSTRING>>></big></big></bold></font>
+</td></tr>
+<tr>
+<td>
+	<p align=center>
+		Oscilloscope
+		<br/>
+		<image width=304 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+
+</td>
+<td>
+	<xChoiceButton accel=r name=record>
+		<bold><u>R</u>ecord/stop</bold><br/>
+		Pressing this the first time will start recording. The second time will stop recording.
+	</xChoiceButton>
+	<xChoiceButton enabled=false name=oops>
+		<bold>Oops</bold><br/>
+		If you make a mistake while speaking, press this to clean the slate.
+	</xChoiceButton>
+		<p/>
+		<small>
+			You can adjust the record volume by right-clicking the "Volume" icon (a
+			small speaker) in the taskbar, selecting "Recording options". Find your microphone
+			in the "recording device" list, and double-click that. Switch to
+			the "Levels" tab, and adjust the sliders.
+		</small>
+</td>
+</tr>
+<<<$IFSHOWOPTIONS>>>
+
+<tr>
+<td>
+	<xChoiceButton style=check checkbox=true name=removedc>
+		<bold>Remove sub-voice frequencies</bold><br/>
+		<small>Use this is you're recording speech; it removes noise such as the speaker
+		accidentally blowing into the microphone.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=normalize>
+		<bold>Normalize</bold><br/>
+		<small>The recording's volume will automatically be increased so that the full
+		dynamic range is used.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=noisereduce>
+		<bold>Noise reduction</bold><br/>
+		<small><xSN/> will automatically do noise reduction on the audio to get rid of
+		microphone hiss and quiet background sounds.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=trimsilence>
+		<bold>Trim silence</bold><br/>
+		<small>When you're finished recording silence from the beginning and end of the
+		recording will automatically be removed.</small>
+	</xChoiceButton>
+</td>
+<td>
+<<<$IFSHOWREPLACE>>>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replacesel>
+		<bold>Record over selection</bold><br/>
+		<small>The recorded audio will overwrite the current selection.</small>
+	</xChoiceButton>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replaceall>
+		<bold>Record over the entire file</bold><br/>
+		<small>The recorded audio will overwrite the entire wave file.</small>
+	</xChoiceButton>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replaceend>
+		<bold>Record onto the end</bold><br/>
+		<small>Recording will be appended to the end.</small>
+	</xChoiceButton>
+<<<$ENDIFSHOWREPLACE>>>
+</td>
+</tr>
+<<<$ENDIFSHOWOPTIONS>>>
+
+<<<$IFSIMPLEINSTRUCTIONS>>>
+<tr><td>
+	You should:
+	<p/>
+	<ol>
+		<li>
+			Silently read the sentence to yourself.
+		</li>
+		<li>
+			Press the "Record/Stop" button.
+		</li>
+		<li>
+			Read the sentence aloud in a clear voice.
+		</li>
+		<p>
+			If you are unsure how to pronounce a word, just speak your best guess.
+		</p>
+		<p>
+			When you read, the oscillascope's wavy line (above) should respond to your speech.
+			The height of the waves should be as large as possible without causing "clipping".
+			Clipping is indicated by a red background in the oscillascope.
+			If you get a "clipping" warning, you will need to adjust your microphone's "gain"
+			setting lower, see below. If the waves aren't very tall, you will need to
+			increase your microphone's "gain", see below. If the oscillascope doesn't respond
+			to your speech, you may have other problems, see below.
+		</p>
+		<li>
+			Press the "Record/Stop" button a second time
+		</li>
+		<li>
+			Your speech will be analyzed.
+		</li>
+		<li>
+			You can stop recording at any time by pressing the close "X" button in the upper-right corner
+			of this window.
+		</li>
+	</ol>
+	
+	<p/>
+	
+	<bold>Some tips...</bold><p/>
+	
+	<ul>
+		<li>
+			You can record with any microphone you wish,
+			but "headset microphones" (headphones and microphone combined) usually produce the best results.
+			The best headset microphones have "active noise cancellation". These cost
+			around US$50.00, and are available in game and electronics stores.
+		</li>
+		<li>
+			When you wear the headset microphone, make sure that the microphone <bold>isn't</bold> directly
+			in front of your mouth, but is instead positioned off to the side. If the microphone
+			is directly in front of your mouth, then "s" and "sh" sounds will will sound like you're blowing into
+			the microphone.
+		</li>
+		<li>
+			You can adjust the microphone's "gain" (or sometimes called "volume" or "boost") by clicking on the speaker
+			icon in the lower-right corner of your screen. It's in the Windows taskbar.
+		</li>
+		<p>
+			Right-click on the icon and select "Recording devices". Double-click on the recording device
+			you're using, and click on the "Levels" tab. Be aware, <bold>every sound card and version of
+			Windows is slightly different</bold>, so these steps may vary.
+		</p>
+		<p>
+			The easiest way to adjust the volume is to say "Aaaaa" and adjust the volume up or down based
+			on the oscillascope wave's height.
+		</p>
+		<li>
+			If your speech doesn't affect the oscillascope at all, then several different problems might have
+			occurred:
+		</li>
+		<p>
+			You may have plugged the microphone into the wrong hole in (the back of) the computer.
+		</p>
+		<p>
+			Your microphone cable may have a small switch on it that "mutes" the microphone.
+		</p>
+		<p>
+			Your microphone may not work with your computer.
+		</p>
+		<p>
+			Windows may be not be recording from the microphone, but might instead be recording from the line-in
+			or CD. You can tell Windows to record from the microphone instead of the line-in or CD in the
+			same "area" that you would change the microphone volume (see above), by selecting the microphone and
+			pressing the "Set default" button. Unfortunately, every sound card
+			and version of Windows is different, so I can't go into more detail. <bold>If you do tell Windows to
+			record from a different source,</bold> you will need to stop recording (by closing this window) and
+			restart in order to record from the new source.
+		</p>
+	</ul>
+</td></tr>
+<<<$ENDIFSIMPLEINSTRUCTIONS>>>
+
+
+</table>
+
+</font>

@@ -1,0 +1,26 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Ground settings"/>
+
+<xChoiceButton href=elev>
+	<bold>Change the elevation range</bold><br/>
+	This adjust how high and low the ground levels can get.
+	Use this if your topography is brushing up against the elevation limits.
+</xChoiceButton>
+
+<xChoiceButton name=excavate href=detail>
+	<bold>Change the detail</bold><br/>
+	Increases or reduces the detail in the map. (aka: number of pixels in the map)
+</xChoiceButton>
+
+<xChoiceButton name=excavate href=size>
+	<bold>Change the map's size</bold><br/>
+	Use this to make the map larger or smaller by adding or removing ground.
+	This keeps existing topography the same size.
+</xChoiceButton>
+
+<xChoiceButton name=excavate href=scale>
+	<bold>Scale the map</bold><br/>
+	This tool will keep the same topography, but scale it up or down so it is
+	a further distance across or up and down.
+</xChoiceButton>

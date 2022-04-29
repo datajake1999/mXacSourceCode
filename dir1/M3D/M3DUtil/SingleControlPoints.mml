@@ -1,0 +1,77 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add or remove control points"/>
+
+<p>
+	This page lets you add or remove control points to the surface.
+	(Details below.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>By column (vertical strip)</xtrheader>
+	<tr><td>
+		<p>
+			Click on a grey column strip to split into two columns, or click on a red column divider to
+			delete it and merge the adjacent columns strips.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly scrolldistance=scrollcold name=column>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcold height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>By row (hoizontal strip)</xtrheader>
+	<tr><td>
+		<p>
+			Click on a grey row strip to split into two rows, or click on a red row divider to
+			delete it and merge the adjacent row strips.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollrowx scrollroty=scrollrowy scrolldistance=scrollrowd name=row>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollrowx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollrowy height=10% width=90%/>
+		<br/>
+		<scrollbar orient=horz name=scrollrowd height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<p>
+	Every surface is divided into a number of rows and columns. At the intersection
+	of each row/column is a "control point" that can be used to bend/warp the surface.
+	The control points appear when you select the surface.
+</p>
+
+<p>
+	This page allows you to add or remove control points, giving you more control
+	over where the bends in the surface are. You can only add or remove a row or
+	column of control points at a time though.
+</p>
+
+<p>
+	To add a row or column of control points, find the <bold>grey</bold> row or column
+	in the image and click on it. The row or column will be divide in two and new control
+	points placed there.
+</p>
+
+<p>
+	To remove a row or column of control points, find the <bold>red</bold> row or column
+	separator and click on it. The adjacent rows or columns will be merged together.
+</p>
+
+<p>
+	Tip: To control what type of curve is used, go to the <a href=curvesegment>Specify
+	curvature</a> page.
+	Make sure the curvature control points are showing in
+	the <bold>Which control points are displayed</bold> button.
+</p>

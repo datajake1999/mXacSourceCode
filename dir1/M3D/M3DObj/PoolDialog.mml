@@ -1,0 +1,98 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Pool settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Shape of the pool.
+		</td>
+		<td><bold><ComboBox width=100% cbheight=150 name=shape>
+			<elem name=0><font color=#800000>Custom</font></elem>
+			<elem name=3>Circular</elem>
+			<elem name=1>Rectangular</elem>
+			<elem name=2>Rectangular, rounded</elem>
+			<elem name=4>Rounded</elem>
+		</ComboBox></bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=custom href=custom>
+			<bold>Modify custom shape</bold><br/>
+			Displays a dialog that lets you control the pool's shape in more detail.
+			You need to have the "Custom" shape selected to use this.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Rounded amount</bold> - Used only if you have selected "Rectangular,
+			rounded", this is the size of the rounding on each corner.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=shapesize3/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Drain diameter</bold> - A drain-hole is drawn at the center of the pool.
+			If you don't want a drain then set this to 0.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=holesize/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Wall slope</bold> - How much the walls of the pool slope inwards towards
+			the center.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=wallslope/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Wall rounded</bold> - How rounded the walls in. If all the way to the left
+			the walls slope down in a straight line. The further the the right the more curved
+			they are.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=wallrounded/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Pool lip/rim</xtrheader>
+	<tr><td>
+		The lip or rim of the pool (or tub) surrounds the basic container. If you make the
+		lip large enough it can be used as a concrete walkway around the pool.
+		<p/>
+		<xchoicebutton radiobutton=true style=check group=liprect,liparound,lipnone name=liprect>
+			<bold>Rectangular lip</bold><br/>
+			The lip is a rectangle around the pool, no matter what the shape of the pool.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=check group=liprect,liparound,lipnone name=liparound>
+			<bold>Lip matches pool shape</bold><br/>
+			The shape of the lip is just a larger version of the pool shape.
+		</xchoicebutton>
+		<xchoicebutton radiobutton=true style=check group=liprect,liparound,lipnone name=lipnone>
+			<bold>Lip none</bold><br/>
+			The pool doesn't have any lip but instead fits into the surrounding land. Use this
+			to draw ponds.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Lip width</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=lip0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lip height</bold> - Height/thickness of the lip.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=lip1/>
+		</bold></td>
+	</tr>
+</xtablecenter>
+

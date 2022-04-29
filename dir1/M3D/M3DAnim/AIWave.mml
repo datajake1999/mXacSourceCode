@@ -1,0 +1,66 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Animation audio"/>
+
+<button posn=edgeright style=rightarrow href=next><bold>Next</bold></button>
+
+<p>
+	Select the quality of the audio you wish to save with then
+	press "Next".
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Audio fidelity</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=useaudio>
+			<bold>Include audio with this animation</bold><br/>
+			If checked then the animation will include any audio from audio objects
+			in the scene. If unchecked audio won't be included.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Samples per second</bold> - The higher the number, the crisper the sound
+			will be, but the more disk space it will use.
+		</td>
+		<td><combobox width=100% cbheight=150 name=samples>
+			<elem name=8000><bold>Telephone quality</bold> (8 kHz)</elem>
+			<elem name=11025><bold>AM-radio quality</bold> (11 kHz)</elem>
+			<elem name=22050><bold>FM-radio quality</bold> (22 kHz)</elem>
+			<elem name=44100><bold>CD quality</bold> (44 kHz)</elem>
+		</combobox></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Channels</bold> - This controls whether it's mono or stereo.
+			Stereo audio uses more disk space than mono.
+		</td>
+		<td><combobox width=100% cbheight=150 name=channels>
+			<elem name=1><bold>Mono</bold></elem>
+			<elem name=2><bold>Stereo</bold></elem>
+		</combobox></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Compression</bold> - Selecting a compression format will (theoretically)
+			reduce the wave file size without (much) loss of sound quality. You
+			should test that the sound produced by the compression you chose is
+			acceptable by saving to a new file (after selecting the compression)
+			and reloading it. (Also note that some compressions will only work
+			with certain sampling rates, or may not work with stereo files.)
+			<p/>
+			<combobox width=100% cbheight=150 name=compression>
+				<elem name=1><bold>A very long string to make sure the combo is large enough</bold></elem>
+			</combobox>
+			<p/>
+			<status width=100% height=25% border=0 align=left name=status>
+			</status>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+
+<p align=right>
+	<button style=rightarrow href=next><bold>Next</bold></button>
+</p>

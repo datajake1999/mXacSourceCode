@@ -1,0 +1,76 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - internal walls (1)"/>
+
+<xPageTitle>
+	Tutorial - internal walls (1)
+</xPageTitle>
+
+<p>
+	Once you create the building blocks and use <xButtonObjIntelAdjust/> to cut out
+	the intersections, you'll probably want to add some walls. (Well, whether
+	you want to or not, this tutorial assumes you do.)
+</p>
+
+<p>
+	To add a wall:
+</p>
+
+<ol>
+	<li>
+		Switch to <xButtonViewFlat/>. You don't have to, but it's the easiest way to add
+		walls.
+	</li>
+	<li>
+		Using <xButtonViewFlatQuick/>, select "From above." Again, you can add walls
+		from any view direction, but it's easiest from above.
+	</li>
+	<li>
+		You might want to expose the ground floor in the building blocks by
+		pressing <xButtonClipLevel/> and selecting "Ground floor".
+	</li>
+	<li>
+		Press <xButtonObjNew/>, select the <bold>"Building blocks"</bold> category,
+		followed by the <bold>"Walls"</bold> sub-category, and then
+		choose the type of wall to create.
+	</li>
+	<li>
+		You cursor will change to cross-hairs with a hammer nearby (symbolizing
+		a new object) and a red line (for dragging).
+	</li>
+	<li>
+		Click on the ground where one end of the wall is to go. While still holding the
+		mouse button down, drag the mouse to where the wall ends. A straight red line
+		will be drawn between the start and end.
+	</li>
+	<li>
+		When you position the wall, lift the button up and a new wall will appear.
+	</li>
+</ol>
+
+<p>
+	To add more walls:
+</p>
+
+<ol>
+	<li>
+		While holding the <bold>control key down</bold>, click on
+		the <xButtonObjNew/> button.
+	</li>
+	<p>
+		The menu will <bold>not</bold> appear this time. The control key tells
+		<xSN/> to use the same type object as before.
+	</p>
+	<li>
+		As you just did above, click on the location where you want to start the wall,
+		drag the mouse, and lift up. If you want the walls to connect the start (or end)
+		the wall at the start (or end) of one you've already created.
+	</li>
+</ol>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:301><bold>Next</bold></button>
+</p>
+

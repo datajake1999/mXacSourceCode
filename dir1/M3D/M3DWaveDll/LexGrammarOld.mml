@@ -1,0 +1,77 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Learn grammar rules"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+	<br/>
+	<bold><<<PERDONE>>>%</bold> of the way through the text file
+</p>
+
+<p>
+	The analysis is unsure of the following sentence. Please verify that the parts-of-speech
+	are correct, and fix any that aren't. Then, press "Next".
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Sentence</xtrheader>
+	<<<$WORDLIST>>>
+</xtablecenter>
+
+<xChoiceButton name=train>
+	<bold>Next</bold><br/>
+	Press this once you have fixed the part-of-speech for the words. Be aware that the
+	part-of-speech for a word changes depeding upon its location within the sentence.
+	(Ex: "weed" can be a noun or verb depending upon how it is used.)
+</xChoiceButton>
+
+<xChoiceButton href=next>
+	<bold>Bad sentence</bold><br/>
+	Pressing this ignores the sentence. Use it tf the sentence is bad
+	(perhaps because of a typo or really bad grammar).
+</xChoiceButton>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Parts of speech</xtrheader>
+	<tr><td><xul>
+		<li>
+			<bold>Noun (N)</bold> - Person, place, thing, quality, or action.
+		</li>
+		<li>
+			<bold>Pronoun (Pron)</bold> - An identifying word used in place of a noun, such
+				as I, you, he, she, it, we, and they.
+		</li>
+		<li>
+			<bold>Adjective (Adj)</bold> - Word that modifies or qualifies a word or noun.
+		</li>
+		<li>
+			<bold>Preposition (Prep)</bold> - Words that combine with a noun or pronoun to
+			form a phrase, such as "to" or "of".
+		</li>
+		<li>
+			<bold>Article (Art)</bold> - Word to signal a noun, such as "a" or "the".
+		</li>
+		<li>
+			<bold>Verb (V)</bold> - Word that expresses a form of action.
+		</li>
+		<li>
+			<bold>Adverb (Adv)</bold> - Word that modifies a verb, adjective, or another adverb.
+		</li>
+		<li>
+			<bold>Auxiliary verb (Aux v)</bold> - A word that forms the mood, tense, or aspect
+			of the main verb, such as "have", "can" or "will".
+		</li>
+		<li>
+			<bold>Conjunction (Conj)</bold> - These words connect sentences phrases, clauses,
+			or words, such as "and", "or", and "but".
+		</li>
+		<li>
+			<bold>Interjection (Interj)</bold> - Exclamation words such as "oh" and "wow".
+		</li>
+	</xul></td></tr>
+</xtablecenter>
+

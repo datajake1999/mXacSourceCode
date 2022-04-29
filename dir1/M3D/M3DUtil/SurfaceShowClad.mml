@@ -1,0 +1,46 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Cladding"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Show or hide cladding</xtrheader>
+	<tr><td>
+<xChoiceButton style=x checkbox=true name=sidea>
+	<bold>Hide side A</bold><br/>
+	Check this to hide the cladding on side A. (Usually the external side.)
+	If you have told the surface to draw its
+	structure you will see the structure beneath.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=sideb>
+	<bold>Hide side B</bold><br/>
+	Check this to hide the cladding on side B. If you have told the surface to draw its
+	structure you will see the structure beneath.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=edges>
+	<bold>Hide edges</bold><br/>
+	Check this to hide the edges of the surface.
+</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>External vs. internal</xtrheader>
+	<tr><td>
+		<p>
+			Many embedded objects, such as windows and doors, draw themselves differently
+			on the external side than the internal side. Use these check-boxes to
+			specify if side A and B are internal or external.
+		</p>
+		<xChoiceButton style=x checkbox=true name=extsidea>
+			<bold>Side A is external</bold><br/>
+			Check this to make side A be external. If not, side A is internal.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=extsideb>
+			<bold>Side B is external</bold><br/>
+			Check this to make side B be external. If not, side B is internal.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

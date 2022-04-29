@@ -1,0 +1,54 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Attributes"/>
+
+<xPageTitle>
+	Attrbutes
+</xPageTitle>
+
+<p>
+	All objects have "Attributes"; these are numbers associated with the object such
+	as it's position, rotation, and whether or not it's opened/closed or on/off.
+	Every object will have a different set of attributes.
+</p>
+
+<p>
+	Attributes are most useful for animations because an animation works by gradually
+	changing the attributes over time to simulate movement.
+</p>
+
+<p>
+	To see and change an object's attributes:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the object <bold>close to the source</bold> of the attribute.
+		(The attributes are sorted by the distance from where you click, so if you click
+		on the knee of a character the attributes affecting the knee will be on top the list.)
+	</li>
+	<p>
+		The "Attributes" dialog will appear showing you a list of attributes, such as
+		"Position (X)". Each attribute has an edit field next to it so you can type
+		in a number for it, and a slider for intuitive control of the attribute.
+		Some attributes, such as "Visible", can only be turned on/off.
+	</p>
+	<li>
+		As a test, <bold>move the slider</bold> for "Rotation (Z)". Notice how the object
+		rotates around.
+	</li>
+	<li>
+		Alternatively, you can <bold>type in an angle</bold> (in degrees) for the
+		rotation.
+	</li>
+	<li>
+		Attributes are organized into two groups, the top (and "most likely to be used" group)
+		and the bottom. If you are using a particular attribute a lot, <bold>click on</bold> the
+		up-arrow to move it to the top group. If an attribute is in the top group but is not
+		being used much, press the down-arrow to move it out of your way. The groups are
+		only there for your visual convenience.
+	</li>
+</ol>

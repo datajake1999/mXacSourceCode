@@ -1,0 +1,53 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice disguising"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice disguising</xtrheader>
+	<tr>
+		<td>
+			<p>
+				For MIF to disguise your voice so that it sounds like a
+				different voice, you'll need to go through the following
+				steps. They will take you at least 10 minutes, probably
+				more like 20-30 minutes.
+			</p>
+			
+			<ol>
+				<li>
+					<bold>You need a short recording of the voice you're trying to
+					mimic.</bold> If you don't have one, MIF comes installed
+					with a few sample voices you can load.
+				</li>
+				<p>
+					Your disguised voice <bold>will not sound like
+					the recording you're mimicing, and may not even be
+					close.</bold> Voice diguising technology is still in its infancy.
+				</p>
+				<li>
+					You need to <bold>record your own voice</bold> speaking the
+					same phrase as the voice you're trying to mimic.
+				</li>
+				<li>
+					The time-consuming part is <bold>adjusting a variety of sliders
+					and settings</bold> that slowly transform your voice so
+					it sounds approximately like the mimiced voice. The voice
+					disguise wizard includes tools that provide both visual
+					and audio status on your progress.
+				</li>
+			</ol>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="p:2010">
+				<bold>Next</bold><br/>
+				Procede to loading in a recording of the voice you wish to mimic.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="finished">
+				<bold>Exit</bold><br/>
+				Exit the voice disguise wizard now.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

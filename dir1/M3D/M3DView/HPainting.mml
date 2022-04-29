@@ -1,0 +1,58 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Paintings and rugs"/>
+
+<xPageTitle>
+	Paintings and rugs
+</xPageTitle>
+
+<p>
+	The "painging and rug" object makes it easy to create hang a painting or picture,
+	or to lay a throw-rug down.
+</p>
+
+<p>
+	To add a painting, photograph, or rug to your house.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined painting or rug that is closest to
+		your needs. Look under "Paintings", "Photographs, or "Rugs" in "Interior decoration".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house by clicking on the wall, floor, or surface
+		where you want it placed.
+	</li>
+	<li>
+		Select the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the canvas region of the painting, or the main area of the
+		rug.
+	</li>
+	<li>
+		<bold>Change</bold> the texture as desired. If you have scanned in your own image
+		that you would like to use, see <a href=r:404>Creating a new texture</a> for
+		instructions on how to add it to your textures list.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to resize the painting/rug.
+	</li>
+	<li>
+		You may also want to select the <xButtonObjDialog/> tool and click on your
+		artwork or rug. You'll find more options, such as the frame shape and size,
+		and the matting size in this dialog.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:404>Creating a new texture</a></li>
+</xul>

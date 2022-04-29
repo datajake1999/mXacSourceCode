@@ -1,0 +1,65 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Learn pronunciation rules"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+	<br/>
+	<bold><<<PERDONE>>>%</bold> of the way through the lexicon
+</p>
+
+<p>
+	The analysis is unsure of the following word. Please identify what letters produce
+	what sounds. To do this, type a <big><edit width=25 maxchars=2 selall=true name=divide/></big> between
+	the appropriate letters and phonemes. (Examples below.) Then, press "Next".
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Word</xtrheader>
+	<tr>
+		<td>
+			<bold>Text</bold> - Type slashes in the word to group the sound-producing letters.
+			Do <bold>not</bold> add extra spaces or otherwise change the word.
+		</td>
+		<td><bold><big><big><edit maxchars=64 width=100% name=text/></big></big></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Phonemes</bold> - Type slashes in the word to group the phonemes produced
+			by the sound-producing letters.
+			Do <bold>not</bold> change the pronunciation.
+		</td>
+		<td><bold><big><big><edit maxchars=128 width=100% name=pron/></big></big></bold></td>
+	</tr>
+</xtablecenter>
+
+<xChoiceButton name=train>
+	<bold>Next</bold><br/>
+	Press this once you have segmented the word and its pronunciaton.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Examples</xSectionTitle>
+
+<p>
+	For example: The word "hello" is pronounced "hh eh0 l ow1". You would modify the
+	text to "h/e/ll/o" and the proncunation to "hh/eh0/l/ow1". In "hello" most letters
+	correspond to only one phoneme, but the two letters "ll" only produce one phoneme
+	so they're grouped together.
+</p>
+
+<p>
+	For example: The word "Mike" is pronunced "m ay1 k". You would modify the word
+	text to "M/i/k/e" and the phonemes to "m/ay1/k//". Note the extra slash at the end
+	because the final "e" in "Mike" is silent and produces no phonemes.
+</p>
+
+<p>
+	For example: The word "walking" is pronounced "w ao1 k iy0 ng". Because "ing" is
+	a common suffix, you might put it in its own group. Therefore, the
+	division would be "w/a/lk/ing" and "w/ao1/k/iy0 ng".
+</p>
+

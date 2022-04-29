@@ -1,0 +1,47 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice chat tutorial"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice chat tutorial</xtrheader>
+	<tr>
+		<td>
+			<p>
+				Now that you have set up your microphone, you can use "Voice chat".
+				Voice chat acts a lot like a <bold>walkie talkie</bold>; you push
+				a button and talk while the button is depressed.
+				To use voice chat:
+			</p>
+			
+			<ol>
+				<li>
+					When you have exited this tutorial... (The following instructions won't
+					work right now.)
+				</li>
+				<li>
+					<bold>Press the "Ctrl" key</bold> and
+					hold it down.
+				</li>
+				<li>
+					<bold>Speak into the microphone.</bold>
+				</li>
+				<li>
+					<bold>Release the "Ctrl" key</bold> to stop sending a voice chat message.
+				</li>
+			</ol>
+			
+			<p>
+				That's it. You can close the tutorial.
+			</p>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="finished">
+				<bold>Finished</bold><br/>
+				Congratulations, you finished the voice-chat tutorial.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

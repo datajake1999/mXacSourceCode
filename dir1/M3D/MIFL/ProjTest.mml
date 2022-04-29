@@ -1,0 +1,24 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Test compiled code"/>
+
+<table width=100%><tr>
+	<td width=66%>
+		<bold><edit defcontrol=true width=100% name=testcode/></bold>
+		<p align=right>
+			<button style=x checkbox=true name=stepdebug><bold>Debug</bold><xHoverHelp>
+				If this is checked then when the code is run each line will be stepped through
+				individually.
+			</xHoverHelp></button>
+			<button style=uptriangle href=runthis><bold>Run this</bold><xHoverHelp>
+				Press this button to run the code from the above line.
+			</xHoverHelp></button>
+		</p>
+		
+		<<<$DEBUGVARS>>>
+		<<<$DEBUGSTRING>>>
+	</td>
+	<td width=33%>
+		<<<$DEBUGLIST>>>
+	</td>
+</tr></table>

@@ -1,0 +1,27 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Finished"/>
+
+<xPageTitle>
+	Bones tutorial - Finished
+</xPageTitle>
+
+<p>
+	That's the end of the bones tutorial. You may wish to learn about
+	polygon meshes next.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:536>Conventions</a></li>
+	<li><a href=r:533>Face forwards control point</a></li>
+	<li><a href=r:534>Keeping feet on the ground</a></li>
+	<li><a href=r:535>Rigid surfaces</a></li>
+</xul>

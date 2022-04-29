@@ -1,0 +1,18 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Bone settings"/>
+
+<p>
+	This page lets you reset the bones to their default position.
+	You may need to do this so you can modify a polygon mesh attached
+	to the bones.
+	To modify this bone further, use the <xButtonObjShowEditor/> tool.
+</p>
+
+
+<xChoiceButton style=righttriangle name=default>
+	<bold>Return all bones to default position</bold><br/>
+	Use this to return all the bones to their original position. <bold>You
+	cannot modify the bone lengths and envelopes,
+	or merge, unless they are in the default location.</bold>
+</xChoiceButton>

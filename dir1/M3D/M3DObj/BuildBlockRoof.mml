@@ -1,0 +1,237 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Roof"/>
+
+<p>
+	This page lets you specify information about the roof. Make sure the roof completely
+	covers all the walls or the building block intersection will behave strangely.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Roof shape</xtrheader>
+	<tr><td align=center>
+		<listbox width=85% height=85% sort=false vscroll=listscroll tbmargin=16 name=roofshape>
+			<elem name=15>
+				<bold>Balinese</bold><br/>
+				Four shallow roofs that meet in the center with a steep, almost box-like roofs.
+			</elem>
+			<elem name=101>
+				<bold>Balinese, curved</bold><br/>
+				Like a Balinese roof, but with curved roof segments.
+			</elem>
+			<elem name=102>
+				<bold>Cone</bold><br/>
+				Cone-shaped roof.
+			</elem>
+			<elem name=103>
+				<bold>Cone, curved</bold><br/>
+				Cone-shaped roof that is also curved on the ascent.
+			</elem>
+			<elem name=16>
+				<bold>Flat</bold><br/>
+				Flat roof overhanging the walls.
+			</elem>
+			<elem name=7>
+				<bold>Gable, quadruple</bold><br/>
+				Four gables, one to a side.
+			</elem>
+			<elem name=5>
+				<bold>Gable, tripple</bold><br/>
+				Roof with three gables.
+			</elem>
+			<elem name=12>
+				<bold>Gambrel</bold><br/>
+				Traditional barn-like roof.
+			</elem>
+			<elem name=13>
+				<bold>Gull-wing</bold><br/>
+				Two slightly sloped roofs on opposite walls that steepen part way in.
+			</elem>
+			<elem name=107>
+				<bold>Gull-wing, curved</bold><br/>
+				Curved gull-wing roof.
+			</elem>
+			<elem name=105>
+				<bold>Hemisphere</bold><br/>
+				Roof that's the top half of a sphere.
+			</elem>
+			<elem name=106>
+				<bold>Hemisphere, half</bold><br/>
+				Roof that's the front part of the top half of a sphere.
+			</elem>
+			<elem name=20>
+				<bold>Hexagon, peaked</bold><br/>
+				Six roofs meeting in a peak. Make sure the underlying walls don't
+				extend outside of the roof.
+			</elem>
+			<elem name=2>
+				<bold>Hip</bold><br/>
+				Hip roof. Four roof sections meeting in a ridge line.
+			</elem>
+			<elem name=0>
+				<bold>Hip, half</bold><br/>
+				Standard roof with a two flat roofs coming to a peak at a ridge.
+			</elem>
+			<elem name=104>
+				<bold>Hip, half with curve at ridge</bold><br/>
+				Half-hip roof, except that instead of a pointed ridge it's curved.
+			</elem>
+			<elem name=109>
+				<bold>Hip, half (curved)</bold><br/>
+				Half-hip roof, except that both the panels are curved.
+			</elem>
+			<elem name=21>
+				<bold>Hip, skewed half</bold><br/>
+				Roof with a two flat roofs coming to a peak at a ridge. However, the ridge
+				is diagonal to the walls.
+			</elem>
+			<elem name=1>
+				<bold>Hip, peaked</bold><br/>
+				Hip roof with all four roofs coming to a single point at the top.
+			</elem>
+			<elem name=11>
+				<bold>Monsard</bold><br/>
+				Four roofs (one to each side) rising up to a mostly flat section on top.
+			</elem>
+			<elem name=17>
+				<bold><italic>None</italic></bold><br/>
+				No roof is drawn.
+			</elem>
+			<elem name=3>
+				<bold>Outback, style 1</bold><br/>
+				Like a hip roof, except that there are two different sets of roof angles.
+			</elem>
+			<elem name=14>
+				<bold>Outback, style 2</bold><br/>
+				Like a hip roof, except that top part of the roof a half-hip roof.
+			</elem>
+			<elem name=19>
+				<bold>Pentagon, peaked</bold><br/>
+				Five roofs meeting in a peak. Make sure the underlying walls don't
+				extend outside of the roof.
+			</elem>
+			<elem name=4>
+				<bold>Saltbox</bold><br/>
+				Two roof sections meeting in a ridge that is off center.
+			</elem>
+			<elem name=6>
+				<bold>Shed</bold><br/>
+				A single, flat piece of roof section.
+			</elem>
+			<elem name=100>
+				<bold>Shed, curved</bold><br/>
+				A single, curved piece of roof.
+			</elem>
+			<elem name=8>
+				<bold>Shed, folded</bold><br/>
+				Like a shed roof, except that it's bent someplace in the middle so the
+				roof has two different angles.
+			</elem>
+			<elem name=9>
+				<bold>Shed, peaked hip</bold><br/>
+				Half of a peaked hip roof.
+			</elem>
+			<elem name=10>
+				<bold>Shed, ridged hip</bold><br/>
+				Half of a ridged hip roof.
+			</elem>
+			<elem name=22>
+				<bold>Shed, skewed</bold><br/>
+				Shed roof angled so it's diagonal to the walls.
+			</elem>
+			<elem name=18>
+				<bold>Triangle, peaked</bold><br/>
+				Three roofs meeting in a peak. Make sure the underlying walls don't
+				extend outside of the roof.
+			</elem>
+		</listbox>
+		<scrollbar width=10% height=85% orient=vert name=listscroll/>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Roof overhang</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Left/right overhang</bold> - The overhang (past the edge of the wall), in feet or meters.
+		</td>
+		<td width=33%>
+			<edit width=100% maxchars=32 selall=true name=overhang1/>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Front/back overhang</bold> - The overhang (past the edge of the wall), in feet or meters.
+		</td>
+		<td width=33%>
+			<edit width=100% maxchars=32 selall=true name=overhang2/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Roof height</xtrheader>
+	<tr><td>
+		When you resize a building block (width or length) the roof's height is
+		automatically adjusted. There are several ways in which this adjustment
+		can be made: (You may want to change this setting if you have a roof's angle
+		set up but want to play with the building's width and length.)
+		<p/>
+		<xChoiceButton radiobutton=true style=x group=rhcombo,rh1,rh2,rhconst name=rhcombo>
+			<bold>Combination of width and length</bold><br/>
+			Resizing either the width or the length of the building block will change the
+			roof height.
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=rhcombo,rh1,rh2,rhconst name=rh1>
+			<bold>Width only</bold><br/>
+			Changing the building's length has no effect on the roof's height.
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=rhcombo,rh1,rh2,rhconst name=rh2>
+			<bold>Length only</bold><br/>
+			Changing the building's width has no effect
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=rhcombo,rh1,rh2,rhconst name=rhconst>
+			<bold>Constant</bold><br/>
+			The height of the roof is the same no matter what the building length or width.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Roof thickness</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>External cladding thickness</bold> - Thickness of the cladding on the
+			roof surface.
+			For example: If it's 8mm thick plywood nailed onto the stud, enter "8mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Underneath cladding thickness</bold> - Thickness of the cladding on the underside
+			of the roof (often the cathedral ceiling).
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>

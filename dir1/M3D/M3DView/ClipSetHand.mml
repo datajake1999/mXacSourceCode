@@ -1,0 +1,66 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Hand-modify clipping"/>
+
+<p>
+	Use this page to hand-modify the location and direction of the clipping plane.
+	For most people, the "Clip to a line" and "Clip based on a point" tools will
+	provide enough control. However, if you need more you can enter the numbers
+	here. Be warned, <bold>this dialog is technical.</bold> If it confuses you then
+	you're probably better off using the other clipping tools.
+</p>
+
+<p>
+	The clipping plane is controlled by three points in space (each with an east/west,
+	north/south, and up/down location relative to the center of the house). The plane
+	passes through all three points. Changing any one of these points will change the
+	orientation and location of the plane.
+</p>
+
+<p>
+	The portion of the house clipped out is the side, when looking at the plane, that
+	sees the points progress in a counter clockwise direction.
+</p>
+
+<xChoiceButton style=x checkbox=true name=showplane>
+	<bold>Clipping is on</bold><br/>
+	Use this to turn clipping on or off.
+</xChoiceButton>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Clipping settings</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>First point</bold> - First of the three points.
+		</td>
+		<td width=33% valign=center><align align=right>
+			EW: <bold><edit maxchars=64 width=66% name=p1x/></bold><br/>
+			NS: <bold><edit maxchars=64 width=66% name=p1y/></bold><br/>
+			UD: <bold><edit maxchars=64 width=66% name=p1z/></bold>
+		</align></td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Second point</bold>
+		</td>
+		<td width=33% valign=center><align align=right>
+			EW: <bold><edit maxchars=64 width=66% name=p2x/></bold><br/>
+			NS: <bold><edit maxchars=64 width=66% name=p2y/></bold><br/>
+			UD: <bold><edit maxchars=64 width=66% name=p2z/></bold>
+		</align></td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Third point</bold>
+		</td>
+		<td width=33% valign=center><align align=right>
+			EW: <bold><edit maxchars=64 width=66% name=p3x/></bold><br/>
+			NS: <bold><edit maxchars=64 width=66% name=p3y/></bold><br/>
+			UD: <bold><edit maxchars=64 width=66% name=p3z/></bold>
+		</align></td>
+	</tr>
+</xtablecenter>
+

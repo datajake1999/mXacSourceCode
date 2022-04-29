@@ -1,0 +1,28 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Fog"/>
+
+<xPageTitle>
+	Fog
+</xPageTitle>
+
+<p>
+	<xSN/> can add fog to it's 3D drawings. In some cases it makes the depth more obvious.
+	It can also be used for effect in presentation. To add fog:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonViewSettings/> button.
+	</li>
+	<li>
+		In the "View settings" page that appears, press the <bold>"Fog"</bold> button.
+	</li>
+	<li>
+		A new page, "Fog", will be presented. Check the <bold>"Show fog"</bold> button.
+	</li>
+	<li>
+		In that same page you can also control thr fog thickness and color.
+	</li>
+</ol>
+

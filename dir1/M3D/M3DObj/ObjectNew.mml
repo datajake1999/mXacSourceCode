@@ -1,0 +1,60 @@
+<?Include resource=500?>
+<PageInfo index=false title="Add a new object"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<tr>
+			<td width=30%>Major category</td>
+			<td>
+				<bold><combobox width=100% sort=false cbheight=200 name=major>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30%>Minor category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=minor>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30% valign=top>Object</td>
+			<td>
+				<font color=#000000><bold><listbox sort=true vscroll=lbscroll width=85% height=250 name=name>
+					<elem name=1><small>Test elem</small></elem>
+					<elem name=2><small>Test elem2</small></elem>
+				</listbox></bold></font>
+				<scrollbar height=250 width=15% orient=vert name=lbscroll/>
+			</td>
+		</tr>s
+	</table>
+</td>
+<td align=center>
+	<image width=80% height=80% border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	<scrollbar height=80% orient=vert name=vscroll min=-100 max=100/><br/>
+	<scrollbar width=80% orient=horz name=hscroll min=-100 max=100/>
+	
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

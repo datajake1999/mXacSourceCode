@@ -1,0 +1,130 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Pavers"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of each paver.
+		</td>
+		<td><edit maxchars=64 width=100% name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of each paver.
+		</td>
+		<td><edit maxchars=64 width=100% name=height/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton href=stone>
+			<bold>Modify the paver</bold><br/>
+			Change the paver's color and texture.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<!xComboPattern>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold>Brick, angled</bold></elem>
+		<elem name="3"><bold>Brick, I</bold></elem>
+		<elem name="5"><bold>Cross, interlocked</bold></elem>
+		<elem name="4"><bold>Cross, open</bold></elem>
+		<elem name="1"><bold>Hexagon</bold></elem>
+		<elem name="2"><bold>Hexagon, tripple</bold></elem>
+	</combobox></bold>
+</xComboPattern>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Pattern</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold>
+		</td>
+		<td><xComboPattern width=100% name=shape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pavers across</bold> - Number of pavers (from left to right) in
+			the texture. More pavers will reduce the visible pattern, but will increase
+			the data size.
+		</td>
+		<td><edit maxchars=64 width=100% name=stonesacross/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pavers down</bold> - Number of pavers (from top to bottom) in
+			the texture. More pavers will reduce the visible pattern, but will increase
+			the data size.
+		</td>
+		<td><edit maxchars=64 width=100% name=stonesdown/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Grout</xtrheader>
+	<tr><td>
+		Grout will be visible on some of the pavers.
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=grout>
+			<bold>Grout</bold><br/>
+			Bring up a page letting you control the color of the grout.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=dirtpaint>
+			<bold>Dirt or paint</bold><br/>
+			Apply dirt to your stones.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

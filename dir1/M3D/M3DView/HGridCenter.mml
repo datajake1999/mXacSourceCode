@@ -1,0 +1,85 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Setting the grid center and orientation"/>
+
+<xPageTitle>
+	Setting the grid center and orientation
+</xPageTitle>
+
+<p>
+	See <a href=r:285>Setting the grid size</a> for a description of what the grid is.
+</p>
+
+<p>
+	There are two ways to set the grid's center and orientation, either as a set
+	of numbers, or by clicking on a point where you want the center.
+</p>
+
+<xSectionTitle>By hand</xSectionTitle>
+
+<p>
+	To set the center and orientation by entering the numbers by hand:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGridSettings/> button.
+	</li>
+	<li>
+		In the "Grid settings" dialog, press the <bold>"Hand-enter values"</bold> button.
+	</li>
+	<li>
+		Type in the numbers.
+	</li>
+</ol>
+
+<xSectionTitle>By clicking on a point</xSectionTitle>
+<p>
+	To set the center by clicking on a point:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonGridFromPoint/> tool.
+	</li>
+	<li>
+		Click on the point in space that you want to be the center of the grid.
+	</li>
+	<li>
+		The "Grid from point" dialog appears allowing you to check one or more items.
+		Check those appropriate.
+	</li>
+	<p>
+		If you want the point you clocked on to be the center
+		for east/west, north/south, and vertical then check the first three options.
+		If, for example, you clicked on a floor and wanted to measure all heights
+		based upon the floor, but wanted to leave EW and NS measurements the same
+		then just check the "Use the UD (vertical) location" button.
+	</p>
+</ol>
+
+<p>
+	To set the orientation by clicking on a point:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonGridFromPoint/> tool.
+	</li>
+	<li>
+		Click on the vertical surface (such as a wall) whose angle (longitude) you
+		want to use for the grid's orientation. (So that all grid lines will either
+		run parallel or perpendicular to the surface.)
+	</li>
+	<li>
+		The "Grid from point" dialog appears allowing you to check one or more items.
+		Check the <bold>"Use the longitude"</bold> button.
+	</li>
+</ol>
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:286>Displaying the grid</a></li>
+	<li><a href=r:285>Setting the grid size</a></li>
+</xul>

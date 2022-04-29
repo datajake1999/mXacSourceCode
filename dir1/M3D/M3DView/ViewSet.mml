@@ -1,0 +1,65 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="View settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeback>
+				<bold>Change background color</bold><br/>
+				If you don't have a "sky dome" then this color will be used for backgrounds.
+				If a sky dome is present then the sky will be drawn.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=monoback/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>View scale</bold> - This is the size of the model (house or object).
+			Making this larger will change the scrollbars so you can zoom out further.
+			Conversely, a smaller number will limit the amount you can zoom out, but
+			allow you to zoom in more.
+		</td>
+		<td>
+			<bold><edit name=viewscale width=100%/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Control point size</bold> - How large control points are drawn.
+		</td>
+		<td>
+			<bold><combobox name=cpsize cbheight=150 width=100%>
+				<elem name=0>Small</elem>
+				<elem name=1>Medium</elem>
+				<elem name=2>Large</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xChoiceButton href=fog>
+	<bold>Fog</bold><br/>
+	Control the fog settings so that more distant objects fade into the background.
+</xChoiceButton>
+
+<xChoiceButton href=lighting>
+	<bold>Lighting</bold><br/>
+	Other lighting options, such as adjusting ambient light intensity.
+</xChoiceButton>
+
+<xChoiceButton href=outline>
+	<bold>Outlines</bold><br/>
+	Change the outline settings for objects.
+</xChoiceButton>
+
+<xChoiceButton href=perspective>
+	<bold>Perspective</bold><br/>
+	Adjust the "field of view" (aka: wide angle or not) for the drawing.
+</xChoiceButton>
+

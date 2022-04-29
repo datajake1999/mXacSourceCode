@@ -1,0 +1,15 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Finished"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Finished
+</xPageTitle>
+
+<p>
+	And that's the end of the polygon mesh tutorial.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>

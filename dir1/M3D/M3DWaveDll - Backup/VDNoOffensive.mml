@@ -1,0 +1,50 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="No offensive language"/>
+
+<xtablecenter width=80%>
+	<xtrheader>No offensive language</xtrheader>
+	<tr>
+		<td>
+			Before you are allowed to use voice chat, <bold>you must
+			agree to abide by the following rules</bold>. Breaking a rule might
+			result in your permanent expulsion from the virtual world.
+			
+			<p/>
+			
+			<ul>
+				<li>
+					<bold>Your voice chat audio may be recorded and monitored.</bold>
+				</li>
+				<li>
+					<bold>Language that is offensive</bold> (either sexually, racially, religiously,
+					culturally) <bold>is not permitted at any time.</bold>
+				</li>
+				<li>
+					<bold>Verbal harrassment is not permitted.</bold>
+				</li>
+				<li>
+					<bold>Swearing is not permitted.</bold>
+				</li>
+			</ul>
+			
+			<p>
+				<bold>If you are unsure</bold> if an intended action violates any of the above
+				rules, contact an administrator.
+			</p>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="p:3010">
+				<bold>I agree to the rules</bold><br/>
+				Press this if you agree to the listed rules about voice chat.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="back">
+				<bold>I don't agree with the rules</bold><br/>
+				Select this if you don't accept the listed rules.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

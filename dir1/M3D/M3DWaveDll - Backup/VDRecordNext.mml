@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Try recording something"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Try recording something</xtrheader>
+	<tr>
+		<td>
+			<p>
+				When you press "Next", a dialog will appear asking
+				you to record. Just:
+			</p>
+			
+			<ol>
+				<li>
+					Press the <bold>Start/stop</bold> recording button.
+				</li>
+				<li>
+					<bold>Speak a short sentence</bold> that will be played back to you.
+					Try to speak a sentence using some s's, t's, and p's in the
+					word to make sure that if you're using a headset microphone,
+					it's properly positioned.
+				</li>
+				<li>
+					Press the <bold>Start/stop</bold> recording button.
+				</li>
+			</ol>
+		
+			<p>
+				The record page will have options for advanced features, like
+				trimming silence off the start and end of a recording.
+				You can leave these alone.
+			</p>	
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="p:1030">
+				<bold>Next</bold><br/>
+				Press this to record a short sample.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

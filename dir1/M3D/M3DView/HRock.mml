@@ -1,0 +1,36 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Rocks and boulders"/>
+
+<xPageTitle>
+	Rocks and boulders
+</xPageTitle>
+
+<p>
+	If you wish to draw a rock or a boulder, create a "Rock" object.
+</p>
+
+<p>
+	To add a rock or boulder to your scenery:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined rock that most closely meets your
+		needs. You can find them in "Rocks" under "Outdoors".
+	</li>
+	<li>
+		<bold>Add</bold> it to your scenery by clicking where you want the rock.
+	</li>
+	<li>
+		Resize and reshape the rock using <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		The <xButtonObjDialog/> tool lets you change the look of your rock even more.
+	</li>
+</ol>
+
+

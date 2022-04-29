@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape name=scale>
+	<bold>Size</bold><br/>
+	Use this to control the width, height, and depth of the polyhedron.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape name=shape>
+	<bold>Shape</bold><br/>
+	This lets you control the the location of each of the polyhedron's vertices.
+	(See below to adjust the movement constraints)
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Shape constraints</xSectionTitle>
+
+<xChoiceButton style=check radiobutton=true group=full,some,none name=full>
+	<bold>Full constraints</bold><br/>
+	Moving one corner will usually cause several others to move so that the
+	sides stay aligned.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=full,some,none name=some>
+	<bold>Some constraints</bold><br/>
+	Moving one corner will usually cause several others to move so that the
+	sides stay aligned. It does not constrain as much as "Full constraints".
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=full,some,none name=none>
+	<bold>No constraints</bold><br/>
+	Moving one corner point will not affect any other points.
+</xChoiceButton>

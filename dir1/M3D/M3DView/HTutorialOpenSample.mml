@@ -1,0 +1,50 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - open a sample file"/>
+
+<xPageTitle>
+	Tutorial - open a sample file
+</xPageTitle>
+
+
+<p>
+	In the first part of the tutorial I'll teach you the skills you need to
+	look at an existing <xSN/> house. The second part will explain how to build
+	a house in <xSN/>. Those of you reading that don't care about designing a
+	house will be given an opportunity to quit the tutorial.
+</p>
+
+<xsectiontitle>Opening a file</xsectiontitle>
+
+<p>
+	To proceed with this tutorial you first need to open one of the sample files
+	provided when <xSN/> was installed. To do this:
+</p>
+
+<ol>
+	<li>
+		Find the <xButtonOpen/> button and press it.
+	</li>
+	<p>
+		A dialog, "Open <xLN/> file" will appear.
+	</p>
+	<li>
+		It should show a number of ASp files in the directory. If it doesn't,
+		then <bold>change the directory</bold> to wherever <xSN/> is installed;
+      this is usually "c:\program files\mxac\<xLN/>".
+	</li>
+	<li>
+		<bold>Select one of the files and press Open.</bold>
+	</li>
+	<p>
+		The file will be loaded in and the <xSN/> will (after momentarily disappearing) will
+		reappear showing you a house.
+	</p>
+</ol>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:257><bold>Next</bold></button>
+</p>
+

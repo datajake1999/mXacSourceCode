@@ -1,0 +1,219 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Custom object attributes"/>
+
+<xPageTitle>
+	Tutorial - Custom object attributes
+</xPageTitle>
+
+<p>
+	You can make custom <a href=r:524>attributes</a> attributes for your object.
+	For example: You can allow lights within your object to be turned on and off (individually
+	or in a group), doors to be opened and closed, or morphs in polygon mesh objects
+	to be controlled.
+</p>
+
+<p>
+	Generally, you will "export" attributes in your object when you want your object to
+	have movement within its confines. An object of a person is a perfect example: While
+	you may only need a still manequin that you can place in different locations, most
+	people need to have arms that bend and faces that show different expressions.
+	You will need to export attributes to accomplish this.
+</p>
+
+<p>
+	Any attributes that a custom object provides are really combinations of one or more
+	attributes from the sub-objects (used to create the object). This, if your object has
+	a "Turned on" attribute that turns on a light, this translates directly to setting
+	the "Turned on" attribute for a light sub-object contained within the custom object.
+	Likewise, a "Smile" attribute on a person translates into the "Smile" attribute
+	from the polygon mesh of the person's head.
+</p>
+
+<xsectiontitle>Automatic attributes</xsectiontitle>
+
+<p>
+	Some attributes are automatically exported from an object because the sub-objects
+	have specifically indicated that the attribute is to be exported. These attributes
+	include "Turned on" and "Opened". Thus, if you place a light, door, or window in
+	your custom object, the custom object will automatically support the "Turned on" and/or
+	"Opened" attributes.
+</p>
+
+<p>
+	Try this:
+</p>
+
+<ol>
+	<li>
+		<bold>Create a new object from scratch</bold> from the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Add a <bold>light</bold> and a <bold>door</bold> to the object.
+	</li>
+	<li>
+		<xButtonSave/> the object.
+	</li>
+	<li>
+		Create an instance of the object using <xButtonObjNew/>.
+	</li>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the custom object.
+	</li>
+	<li>
+		You will see an "Opened" and "Turned on" attribute.
+	</li>
+	<li>
+		<bold>Move the "Opened"</bold> slider to see the door/window (a sub-object of
+		your custom object) open and close.
+	</li>
+	<li>
+		Likewise, you can <bold>move</bold> the "Turned on" slider to turn the light on
+		or off. You won't see anything happen unless you have "Shadows" on though.
+	</li>
+</ol>
+
+<p>
+	If you don't want an automatic attribute to be exported by your custom object:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonObjEditor/> button when editing the object.
+	</li>
+	<li>
+		Press the <bold>"Attributes"</bold> button in the "Object settings" page.
+	</li>
+	<li>
+		In the "Attributes" page that appears, <bold>select</bold> the automatic
+		attribute. It will have "(automatic)" next to its name. Underneath the name
+		are listed the sub-objects that it affects and their attributes.
+	</li>
+	<li>
+		Press the <bold>"Remove selected attribute"</bold> button.
+	</li>
+</ol>
+
+<xsectiontitle>Exporting a new attribute</xsectiontitle>
+
+<p>
+	You may wish to export an attribute that is not exported automatically. For example:
+	You may want to have an attribute that can move your light up or down relative to
+	the door.
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonObjEditor/> button when editing the object.
+	</li>
+	<li>
+		Press the <bold>"Attributes"</bold> button in the "Object settings" page.
+	</li>
+	<li>
+		In the "Attributes" page that appears, press the <bold>Add
+		a new attribute</bold> button.
+	</li>
+	<p>
+		The "Select object and attribute" page will appear. This lists all the sub-objects
+		within the object you're editing. Underneath each sub-object it lists all the attributes
+		supported by the sub-object.
+	</p>
+	<li>
+		If you <bold>click on</bold> the object name the object will be selected in
+		the object editor window. Use this to make sure you have the right object, just
+		in case the object hasn't been named yet.
+	</li>
+	<li>
+		<bold>Click on</bold> the attribute you wish to use. In this case, click on
+		the "Position (Z)" attribute for the light.
+	</li>
+	<p>
+		The "Modify an attribute" dialog will appear. This allows you to control how
+		the attribute behaves.
+	</p>
+	<li>
+		Type in a <bold>name and description</bold>, such as "Raise light".
+	</li>
+	<li>
+		In the "Values" section you'll notice that the attribute is a measurement (which is
+		appropriate for a light's heigh), but that the minimum and maximum values are really
+		huge. Change the <bold>minimum and maximum values</bold> to "-1 m" and "1m" respectively.
+		(Or "-3 ft" and "3 ft" if you're using English measurement.)
+	</li>
+	<li>
+		<bold>Close</bold> the dialog and <xButtonSave/> the object.
+	</li>
+	<li>
+		In your main world, create an instance of the object using <xButtonObjNew/>.
+	</li>
+	<li>
+		Select the <xButtonObjAttrib/> tool and <bold>click on</bold> the new object.
+	</li>
+	<li>
+		Move the <bold>Raise light</bold> slider and watch the light move up and down
+		by a meter.
+	</li>
+</ol>
+
+<xsectiontitle>Have an attribute do more than one thing</xsectiontitle>
+
+<p>
+	You may want an attribute to affect more than one sub-object. For example:
+	You might want "Raise light" to open and close the door at the same time.
+	To do this:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonObjEditor/> button when editing the object.
+	</li>
+	<li>
+		Press the <bold>"Attributes"</bold> button in the "Object settings" page.
+	</li>
+	<li>
+		In the "Attributes" page that appears, press the <bold>Add
+		a new attribute</bold> button.
+	</li>
+	<li>
+		<bold>Select</bold> the "Raise light" attribute. Notice how underneath the description
+		it shows the sub-object's name followed by "Position (Z)"; this shows you
+		what the attribute affects.
+	</li>
+	<li>
+		Press the <bold>"Modify selected attribute"</bold> button.
+	</li>
+	<li>
+		In the "Modify an attribute" page, scroll to the bottom and press
+		the <bold>"Affect an additional attribute in a sub-object"</bold> button.
+	</li>
+	<li>
+		The "Select object and attribute" page appears. Find the door and then <bold>click on</bold> the
+		"Opened" attribute.
+	</li>
+	<p>
+		<xSN/> will return to "Modify an attribute". If you scroll down to the bottom of the
+		page you'll see a new table with the door's name followed by "Opened" as the title.
+	</p>
+	<li>
+		<bold>Close</bold> the dialog, <xButtonSave/> the object, and create an instance
+		using <xButtonObjNew/> as before.
+	</li>
+	<li>
+		Play with the <bold>"Raise light"</bold> attribute. Now it not only moves the
+		light up and down, but also opens and closes the door.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:426><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+</xul>

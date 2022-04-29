@@ -1,0 +1,62 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Polygon mesh (phase II) settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Morphs</xtrheader>
+	<tr><td>
+		<bold>Morphs</bold> allows a polygon mesh to maintain several shapes "in memory"
+		and tranform between them. This allows you to do facial expressions, such
+		as smiling and mouth open.
+		See the documentation for more information.
+		<p/>
+		
+		<listbox sort=false vscroll=lscroll height=85% width=85% name=morph>
+		</listbox>
+		<scrollbar orient=vert height=85% name=lscroll/>
+		<p/>
+
+		<xchoicebutton href=addmorph>
+			<bold>Add a new morph</bold><br/>
+			Create a new morph and add it to the list. To shape the morph you must set
+			the attribute (named after the morph's name) to 1.0, and all other morph
+			attributes to 0. Then, any shaping done with <xButtonObjControlNSEWUD/> will
+			reshape the morph, not the default shape.
+		</xchoicebutton>
+
+		<xchoicebutton name=addmorphcombo>
+			<bold>Add a combo-morph</bold><br/>
+			A combo-morph combines two or more morphs together into one attribute without
+			requiring you to reshape the object. For example: If you have two morphs, "left
+			eyebrow up" and "right eyebrow up", you could make a combo-morph called
+			"eyebrows up" that raises both left and right at the same time.
+		</xchoicebutton>
+		
+		<xchoicebutton name=editmorph>
+			<bold>Modify selected morph</bold><br/>
+			Lets you change the selected morph's name, range, and description.
+			If it's a combo-morph you can change what morphs it affects.
+		</xchoicebutton>
+
+		<xchoicebutton name=removemorph>
+			<bold>Remove selected morph</bold><br/>
+			Deletes the morph.
+		</xchoicebutton>
+		
+		<xchoicebutton name=addmorphmirrorlr>
+			<bold>Add a morph that mirrors an existing morph (left/right)</bold><br/>
+			Click on a sub-morph (not combo-morph) and press this button to create a left/right
+			mirror of the morph. Example use: Create a "left eyebrow raised" morph the usual way.
+			Select it, and press this button to automatically create the "right eyebrow raised" morph.
+			For this to work you need to have have created the basic shape (excluding morphs)
+			with symmetry turned on.
+		</xchoicebutton>
+		
+		<xchoicebutton name=addmorphmirrorfb>
+			<bold>Add a morph that mirrors an existing morph (front/back)</bold>
+		</xchoicebutton>
+		<xchoicebutton name=addmorphmirrortb>
+			<bold>Add a morph that mirrors an existing morph (top/bottom)</bold>
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>

@@ -1,0 +1,33 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase settings"/>
+
+<xChoiceButton href=balustrades>
+	<bold>Balustrades</bold><br/>
+	Press this to show or hide the left, right, and center balustrades. You
+	can also change the balustrade appearance here.
+</xChoiceButton>
+
+<xChoiceButton href=path>
+	<bold>Path</bold><br/>
+	Use this page to select the staircase's path, whether it's just straight,
+	has a landing, is spiral, etc.
+</xChoiceButton>
+
+<xChoiceButton href=rails>
+	<bold>Rails</bold><br/>
+	Instead of being supported by walls, stairs can be supported by rails that run
+	directly underneath the treads on the left,
+	right, and center.
+</xChoiceButton>
+
+<xChoiceButton href=treads>
+	<bold>Treads</bold><br/>
+	Change the tread thickness, overhang, and kickboards.
+</xChoiceButton>
+
+
+<xChoiceButton href=walls>
+	<bold>Walls and stringers</bold><br/>
+	This page allows you to show/hide walls and stingers beneath the staircase.
+</xChoiceButton>

@@ -1,0 +1,88 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Floor elevations"/>
+
+<xPageTitle>
+	Floor elevations
+</xPageTitle>
+
+<p>
+	Building blocks automatically have a sense of floors (or levels). This
+	affects the building block in several ways:
+</p>
+
+<xul>
+	<li>
+		(Most) building blocks can only be raised using <xButtonMoveUD/> to
+		elevations where their buttom is level with one of the floors.
+		To turn this off see <a href=r:268>Limiting building block elevations to stories</a>.
+	</li>
+	<li>
+		(Most) building block's height is automatically adjusted so the base of the roof
+		(and ceiling) is level with a floor. Turn turn this off
+		see <a href=r:268>Limiting building block elevations to stories</a>.
+	</li>
+	<li>
+		As a building block's height is increased using <xButtonObjControlUD/> to
+		move its control points, floors may be added.
+	</li>
+	<li>
+		When doors are placed in building block walls they're automatically positioned
+		such as the the base of the door is level with a floor.
+	</li>
+</xul>
+
+<p>
+	You will want to change the floor elevations for building blocks. To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on a building block.
+	</li>
+	<li>
+		In the "Building block settings" dialog that appears, click on
+		the <bold>"Levels"</bold> button.
+	</li>
+	<li>
+		If you want this building block's floor heights to be the same as all the other
+		building blocks' heights (assuming they also want to use the same value) then
+		check the <bold>"Use global level elevations"</bold> button. If you want this
+		building block to have different heights then uncheck it.
+	</li>
+	<p>
+		The reason you'd
+		want different heights is a split level home or to add interest to the
+		house by making different sections of the
+		house have different floor elevations.
+	</p>
+	<li>
+		Then, type in the floor levels you want to use.
+	</li>
+	<p>
+		<bold>WARNING:</bold> If you already started placing objects (such as doors, windows,
+		furniture) in your building blocks then changing the floor levels is not
+		recommended. You'll end up with furniture, windows, and doors either elevating
+		mid-floor or embedded half way between floors. You can, of course, move all the
+		hovering objects to their proper elevation, but it's a lot of work.
+	</p>
+	<li>
+		Unlike most pages, to actually act on your changes you need to
+		press the <bold>"Commit"</bold> button. Once you have done so the
+		new level changes will be applied.
+	</li>
+</ol>
+
+<p>
+	You can also set global floor levels in the <xButtonLocale/> dialog
+	or the <xButtonClipSet/> dialog.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:339>Staircases</a></li>
+</xul>

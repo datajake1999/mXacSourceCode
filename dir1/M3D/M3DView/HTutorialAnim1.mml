@@ -1,0 +1,31 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Set up for animation"/>
+
+<xPageTitle>
+	Tutorial - Set up for animation
+</xPageTitle>
+
+<p>
+	<xLN/> lets you animate your world and create movies (.AVI files) from them.
+	You can use the movies to do a walkthrough of a house or even an animation short.
+	Just follow along with this tutorial to learn how.
+</p>
+
+<p>
+	For the purpose of this tutorial, create a simple scene to animate:
+</p>
+
+<ol>
+	<li>
+		Create a new <xSN/> file using <xButtonNew/>.
+	</li>
+	<li>
+		Add an object, such a table, to the world using <xButtonObjNew/>.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:556><bold>Next</bold></button>
+</p>
+

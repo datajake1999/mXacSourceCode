@@ -1,0 +1,69 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Grid display"/>
+
+<p>
+	You can turn on a colored grid in <xSN/> that helps you see how large objects are
+	and where they're located. The grid's size is set using the "Grid size" button.
+</p>
+
+<xChoiceButton style=x checkbox=true name=showgrid2d>
+	<bold>Show the 2D grid</bold><br/>
+	If this is turned on then the display will show a grid when
+	you are using the <bold>flattened (isometric)</bold> viewing mode. (Assuming that there's
+	a grid to show).
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=showgrid>
+	<bold>Show the 3D grid</bold><br/>
+	If this is turned on then the display will show a <bold>three dimensional</bold> grid
+	for all modes, including perspective. This one is less commonly used. (Assuming that there's
+	a grid to show).
+</xChoiceButton>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Grid colors</xtrheader>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changeminor>
+				<bold>Change grid color</bold><br/>
+				This is the color used by the grid that you specified.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=minorcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changemajor>
+				<bold>Change major grid color</bold><br/>
+				This grid is the "next step up" from the grid you selected.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=majorcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Options</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=showud>
+				<bold>Draw vertical grid</bold><br/>
+				If checked, when the grid is drawn it will show vertical grid lines.
+				Otherwise, it only shows the NS and EW gridlines.
+				(This only works if "Show the 3D grid" is checked.)
+			</xChoiceButton>
+			<xChoiceButton style=x checkbox=true name=showdots>
+				<bold>Draw dots instead of lines</bold><br/>
+				If checked, dots will be drawn at the grid corners instead of lines
+				connecting the corners.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+

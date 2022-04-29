@@ -1,0 +1,33 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Select changing objects"/>
+
+<xPageTitle>
+	Select changing objects
+</xPageTitle>
+
+<p>
+	When you open a <xSN/> file it's not immediately obvious which objects are
+	animated and which ones don't change over the scene. To discover which objects
+	change:
+</p>
+
+<ol>
+	<li>
+		In the animation timeline, zoom in to the time period you are interested in.
+		Use the <xButtonZoom/> tool and the scrollbar to do this.
+	</li>
+	<li>
+		Press the <xButtonSceneBays/> button and select a large number of bays. You
+		will also need to <bold>resize</bold> your animation timeline so it can
+		display all the bays.
+	</li>
+	<li>
+		Press the <xButtonAnimSelActive/> button.
+	</li>
+	<p>
+		All the objects that change within the viewed time period will be selected
+		in the main view. Additonally, as many of those as can be displayed will
+		have their timeline displayed.
+	</p>
+</ol>

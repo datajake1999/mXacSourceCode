@@ -1,0 +1,137 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bugs and feature requests"/>
+
+<xPageTitle>
+	Bugs and feature requests
+</xPageTitle>
+
+<p>
+	<xLN/> is different than the other applications in one
+	other fundamental way: It's designed, written, tested, documented, and
+	marketed by just one person: me. This has certain implications from your point of view:
+</p>
+
+<xul>
+	<li>
+		<bold><xLN/> is not your typical house CAD application</bold> - Probably
+		because I'm not your typical programmer and I definitely have atypical tastes in housing.
+	</li>
+	<li>
+		<bold>Feature requests</bold> - After I get a product out, most of the changes
+		I make are from user feedback. While I don't incorporate all requests, I
+		do try to get most of them in. See <a href=r:297>Future plans</a> for some of
+		the ideas I'm thinking about; your vote and ideas will help me decide what to do.
+		Since I'm in a one-person company, there's a fairly good chance your
+		requests will be in <xSN/> and on my web site within a few months, as opposed to a
+		year or two, if ever.
+	</li>
+	<li>
+		<bold>Bugs</bold> - My software will tend to have more bugs that a product
+		produced by a larger company. I don't have an army of testers nor do I have a
+		huge test lab to test on different configurations. However, if you find a bug and
+		give me enough details to fix it, I can usually squash the bug within a few weeks.
+	</li>
+	<li>
+		<bold>New versions</bold> - I don't release a new product every 18-24 months.
+		Assuming that I'm not working on another application, I release weekly updates.
+		Just stop by my web site at <a href="http://www.mxac.com.au">http://www.mxac.com.au</a> for
+		the latest version. (Make sure you back up your files before trying the
+		latest version though, just in case.)
+	</li>
+</xul>
+
+
+
+<xSectionTitle>Bugs</xSectionTitle>
+
+<p>
+	Please send any bugs you find to <xMyEmail/>. I will try to get them fixed within a few days. Sometimes, such
+	as when I'm on vacation, this isn't possible.
+</p>
+
+<p>
+	Before I can fix a bug, I must be able to reproduce it on my machine. You can get the bugs fixed a few
+	days quicker if you give me the necessary information up front instead of making me interrogate it from
+	you:
+</p>
+
+<ol>
+	<li>
+		Don't send me bug reports that say, "It doesn't work," or "It crashes." I need much more detail than that.
+	</li>
+	<li>
+		To fix a bug I need to be able to cause it to happen on my machine.
+		As a result I usually need lots of details, such as what you were doing when it
+		crashed. And how reproducible is it? Does it crash every time or just once in a blue moon.
+	</li>
+	<li>
+		Sometimes the version of Windows or web browser makes a difference. Please include this information
+		in your E-mail.
+	</li>
+	<li>
+		Try reproducing the bug on a different machine. Sometimes the bugs reported to me are really bugs
+		in printer drivers, display drivers, sound card drivers, etc. I may be able to modify <xSN/> to
+		work around the bug if you tell me it's specific to a certain piece of hardware.
+	</li>
+</ol>
+
+<xSectionTitle>Documentation Problems</xSectionTitle>
+
+<p>
+	Please send documentation problems <xMyEmail/>. Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		If any part of the documentation is unclear, tell me. I designed and wrote this, so everything
+		in <xSN/> is very obvious to me. I am so used to <xSN/> I am blind to its flaws. You, on the other
+		hand, are not, so your feedback is very helpful.
+	</li>
+	<li>
+		You can send me bugs about spelling errors, poor grammar, and typos. I may fix them, but ultimately,
+		are they really important?
+	</li>
+</ul>
+
+<xSectionTitle>Feature improvements</xSectionTitle>
+
+<p>
+	I'm very interested in improving existing features. Please send me mail at <xMyEmail/>.
+	Some comments:
+</p>
+
+<ul type=pointer>
+	<li>
+		<bold>Will you actually use the feature?</bold> While designing the speech API at Microsoft I asked all the
+		speech technology companies what they'd like in the speech API. I got a lot of requests and implemented
+		tons of features in the specification. As it turns out, many of the companies were just giving
+		me their wish list. They had no need for the feature; they only thought it might be useful at some point
+		in the future. I learned my lesson. I don't like adding features that might hypothetically
+		be useful at some unspecified time in the future. I want to add features that are
+		required here and now. For a list of feature ideas see <a href=r:297>Future plans</a>.
+	</li>
+	<li>
+		<bold>Will other people want to use the feature?</bold> The more people I can envision using the feature, the
+		more eager I am.
+	</li>
+	<li>
+		<bold>How does the feature mesh with <xSN/>'s goals?</bold> I want <xSN/> to
+		produce house designs that the other design applications can't.
+	</li>
+</ul>
+
+<xSectionTitle>Models and textures</xSectionTitle>
+
+<p>
+	<xSN/>'s collection of models (objects) and textures is inadequate right now. If you have
+	any that you need, please send me E-mail at <xMyEmail/>. I may not get to them right
+	away but I'll keep a list.
+</p>
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:297>Future plans</a></li>
+	<li><a href=r:244>Theory</a></li>
+</xul>

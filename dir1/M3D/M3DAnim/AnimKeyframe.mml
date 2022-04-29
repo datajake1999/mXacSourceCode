@@ -1,0 +1,71 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Keyframe settings"/>
+
+<p>
+	You can change the keyframe's attribute values below.
+</p>
+
+<table width=100%>
+	<xtrheader>Attributes modified by keyframe</xtrheader>
+<<<$TABLE>>>
+</table>
+
+<br/>
+<p>
+	Click on an attribute to <bold>remove</bold> it from the list.
+</p>
+
+
+<xchoicebutton name=split enabled=false>
+	<bold>Split the keyframe</bold><br/>
+	Split the keyframe into two parts; use this to group related attributes together or
+	to change the timing of only some of the attributes.
+</xchoicebutton>
+
+<xbr/>
+
+<xsectiontitle>Add attributes</xsectiontitle>
+
+<p>
+	Following is a list of attributes that you can add to the list. To add one, click
+	on the attribute.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Attributes you can add to the list</xtrheader>
+	<tr><td>
+		<xul>
+		<<<$TABLEADD>>>
+		</xul>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Interpolation</xtrheader>
+	<tr><td>
+		Select one of the following to chose how the attributes in this keyframe will
+		be interpreted between this keyframe and the next. You will only notice the effects
+		of this setting when you animate or look at the attribute's graph in the timeline.
+		<p/>
+		<xChoiceButton style=check radiobutton=true group=constant,linear,spline name=constant>
+			<bold>Constant</bold><br/>
+			The value will remain the same until it's changed by another keyframe.
+			Use this for instantaneous motion.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=constant,linear,spline name=linear>
+			<bold>Linear</bold><br/>
+			The value will change evenly (linearly) from this value to the next value set
+			by a keyframe. Use this to make motion that is machine-like.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=constant,linear,spline name=spline>
+			<bold>Curved (spline)</bold><br/>
+			The value will change smoothly from this value to the next value set
+			by a keyframe. Use this to make motion that is natural and organic.
+		</xChoiceButton>
+		<italic>(Any on/off attributes will always be treated as "Constant".)</italic>		
+	</td></tr>
+</xtablecenter>

@@ -1,0 +1,77 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Printing"/>
+
+<xPageTitle>
+	Printing
+</xPageTitle>
+
+<p>
+	If you want to print the current screen:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPrinter/> button.
+	</li>
+	<li>
+		Select the <bold>"Print..."</bold> menu item in the list.
+	</li>
+	<li>
+		<bold>Change</bold> any settings that you wish
+		in the "Print the image" dialog box that appears.
+	</li>
+	<li>
+		Press the <bold>"Print"</bold> button.
+	</li>
+	<li>
+		<bold>Select</bold> your printer and press <bold>OK</bold>.
+	</li>
+	<p>
+		The progress meter will appear while the image is drawn. When finished drawing
+		it will be printed.
+	</p>
+</ol>
+
+<xSectiontitle>Printing to scale</xSectionTitle>
+
+<p>
+	If you are designing a house or other object,
+	you can print an image "to scale" to approximate a "plan" view of the object.
+	You can set the scale to anything you wish, such as 1cm (on paper) = 1m (in the model).
+</p>
+
+<p>
+	To print to scale:
+</p>
+
+<ol>
+	<li>
+		Make sure you're in the <xButtonViewFlat/>.
+	</li>
+	<li>
+		<bold>Center your image</bold>.
+	</li>
+	<li>
+		As above, press <xButtonPrinter/> and select <bold>"Print"</bold>.
+	</li>
+	<li>
+		At the bottom of the page is a section for "Printing to scale". Check
+		the <bold>"Print to scale"</bold> button.
+	</li>
+	<li>
+		<bold>Change</bold> the scale settings if necessary.
+	</li>
+	<li>
+		Press the <bold>"Print"</bold> button and continue from there.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:929>Effects</a></li>
+	<li><a href=r:480>Saving JPEG and bitmap images</a></li>
+</xul>

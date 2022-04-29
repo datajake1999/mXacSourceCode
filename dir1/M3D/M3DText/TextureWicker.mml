@@ -1,0 +1,160 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Wicker"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Horizontal spacing</bold> - Vertical strands/wires are aligned at this interval.
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical spacing</bold> - Horizontal strands/wires are aligned at this interval.
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pattern size</bold> - Number of horizontal and vertical strands or wires that
+			make up a complete pattern. The larger this number the less visible will be
+			the texture repeats, but the larger the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=patternsize/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Strands/wires</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of each strand or wire.
+		</td>
+		<td><edit maxchars=64 width=100% name=plankwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - The thickness of the strand/wire.
+		</td>
+		<td><edit maxchars=64 width=100% name=plankdepth/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=surfabutton>
+				<bold>Color variant 1</bold><br/>
+				Click this to change the color variation of the strand.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=surfacolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=surfbbutton>
+				<bold>Color variant 2</bold><br/>
+				Click this to change the color variation of the strand.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=surfbcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=straighthorz>
+				<bold>Horizontals are straight</bold><br/>
+				If unchecked then the strands weave in and out.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=straightvert>
+				<bold>Verticals are straight</bold><br/>
+				If unchecked then the strands weave in and out.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton href=dirtpaint>
+			<bold>Dirt or paint</bold><br/>
+			Bring up a dialog letting you either add dirt into the cracks, or
+			to paint the strands/wires.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Gaps between strands/wires</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=spacingbutton>
+				<bold>Spacing color</bold><br/>
+				Click this to change the color of the space between the strands/wires.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=spacingcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=spacingtransparent>
+				<bold>Gaps are transparent</bold><br/>
+				If checked, when the texture is drawn using the "Shadows" quality,
+				the gaps between the boards will be transparent.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

@@ -1,0 +1,58 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - building blocks (5)"/>
+
+<xPageTitle>
+	Tutorial - building blocks (5)
+</xPageTitle>
+
+<xSectionTitle>Decks, porches, and verandas</xSectionTitle>
+
+<p>
+	Adding decks, verandas, and porches to your house is easy; they're just
+	another building block. <bold>Try adding some now.</bold> You know the
+	routine:
+</p>
+
+<ol>
+	<li>
+		Pick a view and a direction to view from. (From above is probably best for this.)
+	</li>
+	<li>
+		Click on <xButtonObjNew/>.
+	</li>
+	<li>
+		Make sure the major category is set to <bold>"Building blocks"</bold>.
+		Set the minor category to <bold>"Decks", "Verandas", "Bays",
+		"Bay windows", "Dormers" or whatever.</bold>
+	</li>
+	<li>
+		Find the building block you want to add and <bold>click on it</bold>.
+	</li>
+	<li>
+		Click on the ground where you want it (or in the case of dormers, on the roof).
+	</li>
+	<li>
+		Use <xButtonMoveNSEW/> and <xButtonMoveRotZ/> to move and rotate it in place.
+		It should be intersecting the house at some points.
+	</li>
+	<li>
+		Select <xButtonObjIntelAdjust/> and click on both the newly added deck (dormer, etc.)
+		and the building block it intersects with.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:280><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:334>Balustrades in building blocks</a></li>
+	<li><a href=r:278>Bypassing building blocks and using "Basic structures"</a></li>
+	<li><a href=r:279>Deconstructing building blocks</a></li>
+	<li><a href=r:272>Under-roof verandas</a></li>
+</xul>

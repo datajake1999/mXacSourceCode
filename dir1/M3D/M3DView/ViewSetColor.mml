@@ -1,0 +1,64 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Color and shading"/>
+
+<p>
+	Please choose the "lighting model" that <xSN/> uses to display colors:
+</p>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture name=mono>
+	<bold>Monochromatic</bold><br/>
+	All objects in <xSN/> are displayed using the same color. <italic>See below to
+	change this color.</italic> Lighting is not taken into account. <italic>This
+	option draws slightly faster than "Shaded".</italic>
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture name=solid>
+	<bold>Solid</bold><br/>
+	Objects are displayed using their original color without any shading from
+	the light sources. <italic>This
+	option draws slightly faster than "Shaded".</italic>
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture name=shaded>
+	<bold>Shaded</bold><br/>
+	Objects are displayed using their original color <bold>and including shading</bold> from
+	the sun.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture name=texture>
+	<bold>Shaded with textures</bold><br/>
+	Objects are displayed using <bold>textures and including shading</bold> from
+	the sun. This lighting model is the most realistic. <italic>This
+	is the slowest form of drawing.</italic>
+</xChoiceButton>
+<xbr/>
+
+<xSectionTitle>Colors</xSectionTitle>
+
+<table width=100% border=0 innerlines=0>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changebackground>
+				<bold>Background color</bold><br/>
+				This is the color used for the background of the image.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=background/>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changemono>
+				<bold>Monochromatic color</bold><br/>
+				The color of objects when drawing in the "Monochromatic" shading model.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=monocolor/>
+		</td>
+	</tr>
+</table>
+

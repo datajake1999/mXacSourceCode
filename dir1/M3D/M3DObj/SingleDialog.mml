@@ -1,0 +1,48 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Surface settings"/>
+
+
+<xSectionTitle>Curvature</xSectionTitle>
+
+<xChoiceButton href=controlpoints>
+	<bold>Add or remove control points</bold><br/>
+	Visiting this page will let you add or remove control points to your surface, giving
+	you more control over its curvature.
+</xChoiceButton>
+
+<xChoiceButton href=curvesegment>
+	<bold>Specify curvature</bold><br/>
+	Tell <xSN/> what kind of curves (straight, bi-cubic patch, circle segments, or
+	elliptical) you want to use at different places in the surface.
+</xChoiceButton>
+
+<xChoiceButton href=detail>
+	<bold>Curvature detail</bold> <italic>(Not used very often)</italic><br/>
+	Since all curves must be subdivded into straight
+	segments to draw this, this allows you to control how much <xSN/> should divide
+	the curves. The more subdivisions the smoother the curve but the slower the drawing time.
+</xChoiceButton>
+
+
+
+<xsectiontitle>Edges</xsectiontitle>
+
+<xChoiceButton href=edgemodify>
+	<bold>Modify edge control points</bold><br/>
+	This page lets you add/remove control points for shaping the edges of the surface.
+	You can also control the edge's curvature.
+</xChoiceButton>
+
+
+<xsectiontitle>Overlays</xsectiontitle>
+<p>
+	Overlays are regions of the surface where the color or texture is different than
+	that shown in the rest of the surface.
+</p>
+
+<xChoiceButton href=oversidea>
+	<bold>Modify overlays</bold><br/>
+	Modify the overlays (regions of the surface with different coloration or textures).
+</xChoiceButton>
+

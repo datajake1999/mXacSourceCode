@@ -1,0 +1,29 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Changing roof styles"/>
+
+<xPageTitle>
+	Changing roof styles
+</xPageTitle>
+
+<p>
+	If you create a building block and later decide you don't like the style of
+	roof, it's easy to change:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the building box.
+	</li>
+	<li>
+		In the "Building block settings" dialog that appears, press
+		the <bold>"Roof"</bold> button.
+	</li>
+	<li>
+		The "Roof" page will appear letting you change the roof shape, overhang,
+		and thickness.
+	</li>
+</ol>

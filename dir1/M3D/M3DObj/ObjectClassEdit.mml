@@ -1,0 +1,9 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Class edit"/>
+
+<p>
+	Type in the ID to use for the default creator for the object:
+</p>
+
+<xeditoneline name=id/>

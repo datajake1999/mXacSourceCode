@@ -1,0 +1,118 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify global variable"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<xtablecenter width=100%>
+	<xtrheader>Global variable definition</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the global variable. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<p/>
+
+			<bold><a>Initialized to
+				<xHoverHelp>
+					Type the value that the variable will be initialized to.
+					If you wish to initialize it to a string remember to type the quotes
+					before and after.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=100000 multiline=true capturetab=true <<<$LIBREADONLY>>> name=init/></bold>
+			<p/>
+
+			<table width=100% border=0 innerlines=0><tr>
+				<td align=center><button checkbox=true style=x <<<$LIBENABLE>>> name=getsetuse>
+					<bold>Use get/set code</bold>
+					<xHoverHelp>
+						If this is checked then the global variable supports special functions
+						for getting and setting its value.
+					</xHoverHelp>
+				</button></td>
+				
+				<td align=center><button name=codeget>
+					<bold>Get code</bold>
+					<xHoverHelp>
+						Press this to modify the code for "getting" the global variable's value.
+					</xHoverHelp>
+				</button></td>
+				
+				<td align=center><button name=codeset>
+					<bold>Set code</bold>
+					<xHoverHelp>
+						Press this to modify the code for "setting" the global variable's value.
+					</xHoverHelp>
+				</button></td>
+			</tr></table>
+			
+			<hr/>
+			<p/>
+			
+			<bold><a>Help topic
+				<xHoverHelp>
+					Type in the help category that this global variable should be placed under.
+					Leave this blank if you do not wish the global variable placed in a help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat0/></bold>
+			<p/>
+			
+			<bold><a>Help topic (alternate)
+				<xHoverHelp>
+					Type in the alternate help category that this global variable should be placed under.
+					Leave this blank if you do not wish the global variable placed in an alternate help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat1/></bold>
+		</td>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the global variable.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the global variable that can be used for help.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true <<<$LIBREADONLY>>> name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this global variable</bold><br/>
+	Permenantly delete the global variable.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this global variable</bold><br/>
+	After you duplicate the variable, make sure to rename the new global variable or
+	you won't be able to compile properly.
+</xChoiceButton>
+
+<<<$ENDIFMENULIBRO>>></null>
+<xChoiceButton name=move>
+	<bold>Move the global variable to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+

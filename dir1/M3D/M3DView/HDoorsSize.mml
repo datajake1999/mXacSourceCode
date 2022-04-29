@@ -1,0 +1,46 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Door and window size"/>
+
+<xPageTitle>
+	Door and window size
+</xPageTitle>
+
+<p>
+	To change the size of a door or window that you've already inserted into a wall:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the door/window.
+	</li>
+	<p>
+		The "Door/window settings" page will appear.
+	</p>
+	<li>
+		<bold>Scroll down to the bottom of the page</bold> and <bold>change the values</bold>
+		in them "Measurements" sections. These are the width and height of the
+		door <bold>excluding</bold> the frame. I have not provided control points to drag
+		since most doors and windows come in standard sizes (although for a price you can
+		get custom sizes made.) Entering a number instead of dragging a size with a mouse
+		provides a much more accurate and deliberate way of chosing the size.
+	</li>
+	<li>
+		To change the width of the door/window frame, press
+		the <bold>Framing width and depth</bold> button.
+	</li>
+	<li>
+		<bold>Follow the instructions</bold> on the "Frame width and depth" page.
+		With this page you can not only change the frame width and depth, but also
+		how it is aligned in the wall if you have a very thick stone or concrete wall.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:448>Curtains, drapes, and blinds</a></li>
+	<li><a href=r:337>Customized doors and windows</a></li>
+	<li><a href=r:348>Opening and closing doors and windows</a></li>
+</xul>

@@ -1,0 +1,118 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Volumetric noise"/>
+
+<p>
+	This page lets you specify information about the noise.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Noise size</bold> - Size of a "blob"
+			of noise, in meters or feet.
+		</td>
+		<td><edit maxchars=64 width=100% name=noisesize/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise iterations</bold> - The higher this number the rougher the noise
+			will be (and the longer the drawing time). Use a number from 1 to 10.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoiseiter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise detail</bold> - The further this slider is to the right, the
+			more detailed the noise, the further to the left, the blurrier.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=noisedetail/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Coloration</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton0>
+				<bold>Color 1</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton1>
+				<bold>Color 2</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus1/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Bumpiness</xtrheader>
+	<tr>
+		<td>
+			<bold>Bumpiness</bold> - This is how many meters (or feet) the surface
+			bumps in or out based upon the noise.
+		</td>
+		<td><edit maxchars=64 width=100% name=bumpamount/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency</xtrheader>
+	<tr>
+		<td>
+			<bold>Minimum transparency</bold> - Minimum amount of transparency due to the
+			bump map. To the left is opaque, and to the right is transparent.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=65535 pos=0 name=transmin/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum transparency</bold> - Maximum amount of transparency due to the
+			bump map.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=65535 pos=0 name=transmax/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

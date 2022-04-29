@@ -1,0 +1,101 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Attribute graph"/>
+
+<xPageTitle>
+	Tutorial - Attribute graph
+</xPageTitle>
+
+<p>
+	Viewing an animation as a series of keyframes is useful for dealing with relatively
+	large timespaces (several seconds). However, for more complete control, you may
+	wish to view a graph of the object's attributes and how they change over time.
+	To view the graph:
+</p>
+
+<ol>
+	<li>
+		To the left of the object's timeline, and to the right of the object's name,
+		is a small button that has an image of a graph on it. <bold>Click on</bold> it.
+	</li>
+	<p>
+		The keyframe objects will be hidden and instead a graph will be shown in
+		the object's timeline. Underneath the object's name will be displayed all the
+		object's attributes. Any attributes displayed in the graph will have a colored
+		selection coresponding to the color of the line used to graph it.
+	</p>
+</ol>
+
+<xsectiontitle>Modifying a graph</xsectiontitle>
+
+<p>
+	To modify the graph:
+</p>
+
+<ol>
+	<li>
+		In the list box of attributes, select the <bold>"Rotation (Z)"</bold> attribute. This
+		rotates the table around it's up/down axis.
+	</li>
+	<p>
+		The timeline display to the right will show a line. If you had added rotation keyframes
+		earlier then the graph will display a curve. Otherwise it will be a straight line.
+		The vertical ticks indicate the number of degrees of rotation.
+	</p>
+	<li>
+		Select the <xButtonGraphPointMove/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> a the line/curve and <bold>drag</bold> the point up, down,
+		left or right.
+	</li>
+	<p>
+		A box will appear where you click indicating that a keyframe has been
+		added. You'll notice the graph moving to where you pull it. If your current playback time
+		is set anyplace close to the time you're modifying you'll also see the table
+		rotate.
+	</p>
+	<p>
+		A new keyframe is automatically created; if you switch back to the keyframe view
+		of the timeline by clicking on the keyframe/graph button (just right of the object's
+		name) you'll see the new keyframe.
+	</p>
+	<li>
+		Sometimes you don't want to change the time of the keyframe but just want to adjust
+		the value. To do this use the <xButtonGraphPointMoveUD/> tool instead. With this you will
+		only be able to change the values, not the timing.
+	</li>
+	<li>
+		You can delete a keyframe using <xButtonGraphPointDelete/> and clicking on the
+		box. This will only remove the attribute from the keyframe; it won't affect other
+		attributes modified by the keyframe.
+	</li>
+	<li>
+		If you want to see multiple attributes on the same graph, just <bold>click on</bold> more
+		than one item in the attribute listbox. Only attributes of the same units can be displayed
+		together; you can't display an angle attribute (such as "Rotation (Y)") with
+		a distance attribute (such as "Location (X)").
+	</li>
+</ol>
+
+<xsectiontitle>Zooming</xsectiontitle>
+
+<p>
+	You can zoom in horizontally (in time) and vertically (attribute value):
+</p>
+
+<ol>
+	<li>
+		In the animation timeline window select the <xButtonZoom/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on the object timeline. Move to the left and right
+		zooms out and in horizontally. Moving up and down zooms in and out vertically.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:562><bold>Next</bold></button>
+</p>
+

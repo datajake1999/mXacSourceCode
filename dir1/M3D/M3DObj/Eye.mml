@@ -1,0 +1,107 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Eye settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Individual eyeball</xtrheader>
+	<tr>
+		<td>
+			<bold>Diameter</bold> - Diameter of the eyeball.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=diameter/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Iris size</bold> - Controls the size of the iris relative to the eyeball.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=corneaarc/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Cornea height</bold> - Amount the cornea bulges out of the eyeball over
+			the iris.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=30 name=corneaheight/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Cats eye, sharpness</bold> - The further to the right, the more the eyes
+			will look like cat's eyes.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=cateyes0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Cats eye, angle</bold> - This tilts the slit of the eye.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=cateyes1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sclera texture repetition</bold> - To ensure that the textures in the sclera
+			(the white part of the eye with the blood vessels) don't have seams, the texture
+			pattern is repeated an exact number of times. Type in a new value to change the
+			repetition.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=repeatsclera/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Iris texture repetition</bold> - To ensure that the textures in the iris
+			don't have seams, the texture
+			pattern is repeated an exact number of times. Type in a new value to change the
+			repetition.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=repeatiris/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Two eyes</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=numeyes>
+			<bold>Two eyes</bold><br/>
+			If checked then two eyes will be drawn.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=indepcolor>
+			<bold>The eyes have independent coloration</bold><br/>
+			If checked then the eyes can have different colors/textures. If unchecked then
+			both eyes will use the same color/texture.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=indepmove>
+			<bold>The eyes have independent movement</bold><br/>
+			This allow the eyes to move independently of one another. If unchecked then both
+			eyes will always look at the same point in space.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Eye separation</bold> - Distance between the centers of the two eyes.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=apart/>
+		</td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,102 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Organic modelling 2"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Organic modelling 2
+</xPageTitle>
+
+<p>
+	The organic modelling mode provides a different toolset then the polygon editing
+	mode. For one, there's no selection because you won't need it. Organic modelling
+	is a lot more like sculpting clay.
+</p>
+
+<xSectionTitle>Painting elevation</xSectionTitle>
+
+<p>
+	Probably the most commonly used feature of organic editing is the "painting" on
+	of elevation to the object. To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonBrush64/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sphere and <bold>hold the mouse button down</bold>.
+	</li>
+	<p>
+		You'll notice the region that the cursor is over slowly rise while you hold the
+		mouse button down. (If you have mirroring turned on in <xButtonPMMirror/> then
+		mirrored areas will also rise.)
+	</p>
+	<li>
+		If you want to modify a smaller or larger area you can either <bold>change your brush
+		size</bold> or <bold>zoom in/out</bold> of the scene.
+	</li>
+	<li>
+		If the increase in elevation is too great you can change the
+		strength of the painting using <xButtonBrushStrength/>.
+	</li>
+	<li>
+		You can decrease the elevation from the <xButtonBrushEffect/> menu. Alternatively,
+		you can hold down the <bold>control</bold>, which causes painting to do the opposite
+		of what is checked in the menu.
+	</li>
+	<li>
+		You can also use the <xButtonBrushShape/> menu to control the shape of your brush.
+	</li>
+</ol>
+
+<xSectionTitle>Stenciling</xSectionTitle>
+
+<p>
+	Stenciling is a useful feature that affects painting and most other organic modelling
+	tools. It affects the strength of a tool based upon the texture color of the surface
+	underneath. You can use this to use an image's color to affect how much elevation is
+	added duringing painting. For example: You could apply a texture image of the earth onto
+	a sphere made up of thousands of control points, and through stenciling you'd be able
+	to raise all the continent elevations (being light green) above the sea elevations (dark
+	blue).
+</p>
+
+<p>
+	To use stenciling:
+</p>
+
+<ol>
+	<li>
+		Return back to the main view and select the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sphere.
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog, <bold>choose a texture</bold> with
+		a very obvious light and dark. For example, choose the black and white checkerboard
+		tiles under "Tiles, ceramic" in "Flooring".
+	</li>
+	<li>
+		Return to the polygon mesh editor and press the <xButtonPMStencil/> button.
+	</li>
+	<li>
+		In the menu that appears, choose <bold>"Stencil based on the texture's brightness"</bold>.
+	</li>
+	<li>
+		Select the <xButtonBrush64/> tool and start painting on the sphere.
+	</li>
+	<p>
+		You'll notice that only the white vertices will be raised; the black ones won't
+		be moved at all. Of course, the more vertices (control points) you have the better this will
+		work. I'll explain how to increase your control points later.
+	</p>
+	<li>
+		You might want to turn stencilling off in the <xButtonPMStencil/> menu.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:904><bold>Next</bold></button>
+</p>
+

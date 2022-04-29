@@ -1,0 +1,87 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add many recordings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Unknown words</xtrheader>
+	<tr><td>
+		The following words are unknown. They don't appear in the text-to-speech voice's
+		lexicon, and they don't appear in the list of known misspelled worlds.
+		<p/>
+		Please review the words. If the word is <bold>misspelled then check it.</bold> If
+		it is correct, then <bold>add the pronunciation</bold> to the lexicon
+		used by the text-to-speech engine. (You will need to shut down this program
+		and re-start it to load in your new changes. You will also need to re-scan the text
+		file containing the sentences.)
+	</td></tr>
+	<<<$UNKWORDS>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Words to be added to the lexicon</xtrheader>
+	<tr>
+		<td>
+			To the right is a list of all the unknown words that
+			are <bold>not</bold> marked as misspelled. The list
+			is here so you can copy the words to the clipboard,
+			paste them in notepad, and have them on the screen
+			while you pull up the lexicon editor.
+		</td>
+		<td align=center>
+			<edit width=50% height=100% readonly=true multiline=true vscroll=vscroll name=addtolex/>
+			<scrollbar orient=vert height=100% name=vscroll/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<p>
+	The following sentences have not been added because one
+	of the words is <bold>unknown</bold>. The list of unknown
+	words is listed above. You should either add the words to
+	the lexicon, or check them to indicate they're misspelled.
+</p>
+
+<ul>
+	<<<$SENTUNKNOWN>>>
+</ul>
+
+
+<p/>
+
+<p>
+	The following sentences have not been added because one
+	of the words is <bold>misspelled</bold>. You can clear the
+	list of misspelled words in the previous page.
+</p>
+
+<ul>
+	<<<$SENTMISSPELLED>>>
+</ul>
+
+
+<p/>
+
+<p>
+	The following sentences have not been added because
+	the sentence is <bold>already on the to-do list, or is already
+	recorded.</bold>
+</p>
+
+<ul>
+	<<<$SENTONLIST>>>
+</ul>
+
+
+<p/>
+
+<p>
+	The following sentences <bold>have been added</bold> to the
+	to-do list.
+</p>
+
+<ul>
+	<<<$SENTADDED>>>
+</ul>
+

@@ -1,0 +1,60 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Set the object's control point"/>
+
+<p>
+	Type in the coordinates for the control point.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Control point location</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>East/west</bold> - Position the object's control point relative to
+			the center of the object or house. Use negative numbers for west.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit defcontrol=true maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>North/south</bold> - Position the object's control point relative to
+			the center of the object or house. Use negative numbers for south.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Up/down</bold> - Position the object's control point relative to
+			the center of the object or house. Use negative numbers for down.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transz/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Coordinates</xtrheader>
+	<tr>
+		<td>
+			<xchoicebutton style=x radiobutton=true group=world,object name=world>
+				<bold>Grid coordinates</bold><br/>
+				Show east/west, north/south, and up/down values relative to the grid's
+				center, and affected by the grid's orientation.
+			</xchoicebutton><br/>
+			<xchoicebutton style=x radiobutton=true group=world,object name=object>
+				<bold>Object coordinates</bold><br/>
+				Show east/west, north/south, and up/down values relative to the object's
+				center.
+			</xchoicebutton>
+		</td>
+	</tr>
+	
+</xtablecenter>

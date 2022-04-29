@@ -1,0 +1,45 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="How to build a kitchen"/>
+
+<xPageTitle>
+	How to build a kitchen
+</xPageTitle>
+
+<p>
+	This is a little mini-tutorial about how you can build a kitchen.
+</p>
+
+<ol>
+	<li>
+		Assuming you already have a house, build the walls around the kitchen. If you
+		want a refresher on how to build walls, see <a href=r:282>Internal walls (1)</a>.
+	</li>
+	<li>
+		Add any doors and windows that will open into the kitchen.
+		For a refresher, see <a href=r:284>Doors and windows</a>.
+	</li>
+	<li>
+		Look through the "Cabinets" available in the object library to find which one is
+		closest to what you want. <bold>Create a cabinet</bold> and place
+		it in the room. See <a href=r:454>Cabinets</a> for more information.
+	</li>
+	<li>
+		Select a sink object from "Sinks" under "Plumbing"
+		and <bold>place it in the top of the cabinet.</bold> For more
+		information on this, see <a href=r:462>Pools, ponds, sinks, and bathtubs</a>.
+	</li>
+	<li>
+		Under the "Cabinets" objects, select some cabinet draws and doors. <bold>Place
+		these</bold> on the front of the vanity.
+		For more information see <a href=r:457>Drawers</a>.
+	</li>
+	<li>
+		You can create wall-mounted cabinets in exactly the same way. Several default
+		wall-mounted cabinets are available in the object library.
+	</li>
+	<li>
+		The rest is a matter of placing lights, appliances, and other decorations.
+	</li>
+</ol>
+

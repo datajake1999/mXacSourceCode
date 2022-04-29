@@ -1,0 +1,95 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating keyframes manually"/>
+
+<xPageTitle>
+	Tutorial - Creating keyframes manually
+</xPageTitle>
+
+<p>
+	Until now, all the keyframes have automatically been created by <xSN/> when you
+	move or rotate an object in the main view. (Keyframes are also automatically created
+	if you turn on/off a light, open/close a door, move a limb in a character, etc.)
+	You can manually create keyframes. To do this:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonNewAnimKeyframe/>, <xButtonNewAnimKeyframeLoc/>, <xButtonNewAnimKeyframeRot/>, or
+		any of the buttons in the section. Each creates a different sort of keyframe.
+	</li>
+	<p>
+		The <xButtonNewAnimKeyframeLoc/> button creates a keyframe that affects an object's location.
+		Such keyframes are drawn with a 3D axis, as you have already seen.
+	</p>
+	<p>
+		The <xButtonNewAnimKeyframeRot/> button creates a keyframe that affects an object's rotation.
+		Such keyframes are drawn with a circular arrow, as you have already seen.
+	</p>
+	<p>
+		The <xButtonNewAnimKeyframe/> button creates a keyframe that affects attributes other
+		than an object's location or rotation. These include whether it's on or off, if
+		it's opened or closed, or a limb's position in a character.
+	</p>
+	<li>
+		When you press the new keyframe button, the mouse pointer will change to indicate
+		that it's ready to add the keyframe to the object. Just <bold>click</bold> on the
+		object's timeline that you wish to add to.
+	</li>
+	<p>
+		The keyframe object will be created at the current playback time. If you don't
+		want to create the keyframe at the playback time then hold down
+		the <bold>control</bold> key when you click on the object's timeline.
+	</p>
+</ol>
+
+<xsectiontitle>Manually modifying a keyframe</xsectiontitle>
+
+<p>
+	You can modify an existing keyframe by:
+</p>
+
+<ol>
+	<li>
+		In the animation timeline window select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the keyframe you wish to modify.
+	</li>
+	<p>
+		A dialog will appear letting you change they keyframe's settings. Assuming
+		that you have clicked on a general keyframe, motion keyframe, or rotation keyframe,
+		the dialog will display a list of object attributes modified by the keyframe
+		as well as a list of attributes that can be modified.
+	</p>
+	<li>
+		If you <bold>click on</bold> an attribute than can be modified by the keyframe but
+		which isn't (near the middle of the page), then it will be added to the list.
+	</li>
+	<li>
+		<bold>Moving</bold> the attribute's slider or typing in a new value will change the
+		keyframe. This works just like <xButtonObjAttrib/> in the main view.
+	</li>
+	<li>
+		If you <bold>click on</bold> an attribute that is modified by the keyframe the
+		attribute will be deleted.
+	</li>
+	<li>
+		You can also control how the attribute will be interpolated between this keyframe and
+		the next. By default interpolation is set to "Smooth" so that a very smooth curve
+		will be used. However, you may want to use "Linear" to make the movement more mechanical,
+		or even "Constant" to incorporate sudden jumps in movement.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:561><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:564>Bookmarks</a></li>
+</xul>
+

@@ -1,0 +1,82 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - Face forwards control point"/>
+
+<xPageTitle>
+	Bones - Face forwards control point
+</xPageTitle>
+
+<p>
+	When posing a character it's handy to have a control point that allows easy control
+	of which direction the face is pointing towards. (A second control point to specify
+	what the eyes are looking at is also useful, but that's covered in a different help
+	topic.)
+</p>
+
+<p>
+	To make such a "face forwards" control point:
+</p>
+
+<ol>
+	<li>
+		Edit your character object using <xButtonLibrary/> or <xButtonObjShowEditor/>.
+	</li>
+	<li>
+		Edit the bones using <xButtonObjShowEditor/>.
+	</li>
+	<li>
+		Create a bone extending from the head about half a meter forwards so the end of the
+		bone will be where you want your face-forwards control point
+		using <xButtonBoneNew/>.
+	</li>
+	<li>
+		Select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the face-forwards bone.
+	</li>
+	<p>
+		The "Modify an bone" page will appear.
+	</p>
+	<li>
+		Change the <bold>name</bold> to "Face forwards".
+	</li>
+	<li>
+		Under the "Limits" section, set all the <bold>maximum and minimum</bold> values
+		to "0" (for bend, side-to-side, and twist) or "1" (for extend). This makes the joint
+		between the "face forwards" bone and head completely rigid.
+	</li>
+	<li>
+		Under the "Envelope" section, <bold>un-check</bold> the "Use an envelope" button.
+		You don't need an envelope for this button since it won't actually affect any
+		flesh directly.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		<xButtonSave/> the object.
+	</li>
+</ol>
+
+<p>
+	To test the face-fowards control:
+</p>
+
+<ol>
+	<li>
+		Use <xButtonObjNew/> to create an instance of your object.
+	</li>
+	<li>
+		Select the object using <xButtonSelIndividual/>.
+	</li>
+	<p>
+		You should see a control point where the end of the face-fowards bone is.
+	</p>
+	<li>
+		Use <xButtonObjControlNSEWUD/> to move the face-forwards control point and
+		point your character's face in a different direction.
+	</li>
+</ol>
+
+

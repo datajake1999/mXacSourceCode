@@ -1,0 +1,131 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Animation quality"/>
+
+<button posn=edgeright style=rightarrow href=next><bold>Next</bold></button>
+
+<p>
+	Select the quality of image you wish to generate and then
+	press "Next".
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Quality</xtrheader>
+	<tr>
+		<td>
+			<bold>Image quality</bold>
+		</td>
+		<td><xComboImageQuality width=100% name=quality/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Resolution</xtrheader>
+	<tr>
+		<td>
+			<bold>Pixels across</bold> - Horizontal resolution.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=width/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixels up/down</bold> - Vertical resolution.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=height/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Anti-aliasing</bold> - The better the anti-aliasing the fewer
+			"jaggies" you'll see on the image.
+		</td>
+		<td>
+			<bold><combobox width=100% cbheight=150 name=anti>
+				<elem name=1><bold>None</bold> (fastest)</elem>
+				<elem name=2><bold>2x2</bold> (moderate)</elem>
+				<elem name=3><bold>3x3</bold> (slow)</elem>
+				<elem name=4><bold>4x4</bold> (slowest)</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Effects</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeeffect>
+				<bold>Change effect</bold><br/>
+				Press this to change the effect used, such as fog, outlines, or make it
+				look like a painting.
+			</xChoiceButton>
+		</td>
+		<td align=center>
+			<image border=2 hbitmap=<<<EFFECTBITMAP>>>/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Framerate</xtrheader>
+	<tr>
+		<td>
+			<bold>Frames per second</bold> - More frames per second increase the smoothness
+			of the animation but also the time to generate the movie and size of the file.
+			Movies are 24 FPS. Television is 30 FPS in the US, 25 FPS in many other countries.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=fps/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Motion blur</xtrheader>
+	<tr><td>
+		Motion blur causes fast moving objects to be blurred.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Exposure time</bold> - This is the number of seconds exposure that the
+			virtual film is exposed for. Longer times creates more motion blur.
+			Usually this is betweem .01 and .001 seconds.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=exposuretime/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Exposure strobe</bold> - <xSN/> produces motion blur by taking many
+			image over the exposure time and combining them together. The more images (strobe
+			shots) the smoother the motion blur, but the longer the drawing time.
+			Usually this is between 4 and 16.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=exposurestrobe/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Movie compression format</xtrheader>
+	<tr>
+		<td>
+			<bold>Compression</bold> - If you save the images as a move (.avi) then
+			the selected compression will be used:<br/>
+			<listbox width=85% height=50% vscroll=compressscroll name=compress>
+			</listbox>
+			<scrollbar orient=vert height=50% name=compressscroll/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button style=rightarrow href=next><bold>Next</bold></button>
+</p>

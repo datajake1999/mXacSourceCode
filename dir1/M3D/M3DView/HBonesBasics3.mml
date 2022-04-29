@@ -1,0 +1,169 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - Skeletal motion"/>
+
+<xPageTitle>
+	Bones - Skeletal motion
+</xPageTitle>
+
+<p>
+	You can only really see the way bones behave when you save the object you have
+	places the skeleton in using using <xButtonSave/> and then
+	use <xButtonObjNew/> to create an instance in your world.
+</p>
+
+<p>
+	Skeletons (and their associated flesh) can be moved in two ways, by directly
+	changing the angles for the limbs (technically called "Forward kinetics") or
+	by moving a joint location and letting the computer figure out the angles (techincally
+	called "Inverse kinetics").
+</p>
+
+<xsectiontitle>Manually controlling the angles</xsectiontitle>
+
+<p>
+	To control the angles of the joints directly:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the object containing the skeleton.
+	</li>
+	<li>
+		You will find at least one slider for every bone, named after the bone. If the
+		bone can do more than just bend, it will have extra sliders. <bold>Move</bold> the
+		sliders and watch the skeleton move.
+	</li>
+</ol>
+
+
+<xsectiontitle>Moving the joints</xsectiontitle>
+
+<p>
+	To move the joints and let the angles figure themselves out:
+</p>
+
+<ol>
+	<li>
+		Select the object using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		Click on the object near the joint you wish to move and <bold>drag</bold> the
+		control point for the joint. (You may not see the control point because it could
+		be hidden underneath the flesh.)
+	</li>
+	<p>
+		The limb and bones that make it up, will move so that the joint repositions itself
+		to where you drag it.
+	</p>
+</ol>
+
+<p>
+	<bold>Important:</bold> Moving the joints through control points (inverse kinematics)
+	will only work properly when animating if <bold>all the skeleton's attributes</bold> are
+	exported by the object that contains the skeleton. By default the attributes are all
+	exported, so you have nothing to worry about unless you specifically delete them
+	in the <xButtonObjEditor/> button. The exports are needed because the animation editor
+	stores the attribute values that are exported only, so if a bone's attributes are not
+	exported they won't be animated.
+</p>
+
+<xsectiontitle>Tips for inverse kinematics (IK)</xsectiontitle>
+
+<p>
+	If you just created your object, you may have noticed that when you pull one
+	limb (such as an arm), the whole body moves, including the other arm and feet.
+	This can be a bit inconvenient since you may have wanted the feet in their
+	previous position.
+	The inverse kinetics algorithm does this because (essentially) you just told it
+	to move the arm bone to that location at all costs.
+</p>
+
+<p>
+	You can "fix" (technical term "constrain") parts of the skeleton to specific
+	locations until you say otherwise (by moving their control point or manually
+	changing their angle). Typically, you could constrain the location of the feet
+	and wrists. That way, if you pull one wrist, the other wrist and feet stay in the
+	same position as before.
+</p>
+
+<p>
+	To fix a bone:
+</p>
+
+<ol>
+	<li>
+		Use the <xButtonLibrary/> or <xButtonObjShowEditor/> button to edit your character.
+	</li>
+	<li>
+		In the object editor, select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the skeleton.
+	</li>
+	<li>
+		In the "Bone settings" dialog that appears, <bold>click</bold> on
+		the bone whose <bold>end</bold> you wish to fix.
+	</li>
+	<li>
+		The page will switch to "Modify a bone". Scroll down to the
+		"Inverse kinematics" section and <bold>check</bold> the "Can be fixed" button.
+	</li>
+	<li>
+		<bold>Repeat</bold> for all the buttons you wish to fix.
+	</li>
+	<li>
+		Save the object with <xButtonSave/>.
+	</li>
+	<li>
+		Back in the main world view, create an instance of the object
+		using <xButtonObjNew/>.
+	</li>
+	<li>
+		<bold>Select the object</bold> and use <xButtonObjControlNSEWUD/> to move the
+		control points around. You'll notice that the fixed bones don't move around
+		unless you tell them to. (Actually, they will move if you pull hard enough.)
+	</li>
+</ol>
+
+<p>
+	You can control how much an bone will insist on staying fixed; you might want
+	to make sure that the feet are more fixed than the wrists since feet sliding
+	across the ground is a bigger animation error than a hand moving slightly.
+	To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the character.
+	</li>
+	<li>
+		In the "Attributes" page that appears, find the bone's name follwed by
+		"(Fixed)". <bold>Move</bold> the slider to the right to increase the strength
+		of the immobility, or left to weaken it. Moving the slider all the way to the
+		left will temporarily disabled the "fixed" setting, allowing the limb to move
+		freely.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:530>Basics</a></li>
+	<li><a href=r:536>Conventions</a></li>
+	<li><a href=r:533>Face forwards control point</a></li>
+	<li><a href=r:531>Freedom of motion and envelopes</a></li>
+	<li><a href=r:534>Keeping feet on the ground</a></li>
+	<li><a href=r:535>Rigid surfaces</a></li>
+	<li><a href=r:529>Symmetry</a></li>
+</xul>

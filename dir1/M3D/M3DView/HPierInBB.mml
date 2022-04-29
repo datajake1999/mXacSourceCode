@@ -1,0 +1,121 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Piers in building blocks"/>
+
+<xPageTitle>
+	Piers in building blocks
+</xPageTitle>
+
+<p>
+	When you create a building block that is elevated, it also includes
+	a set of piers underneath to support the structure. (Building blocks
+	with a perimeter, basement, or slab don't have piers.)
+</p>
+
+<xsectiontitle>Changing the pier style</xsectiontitle>
+
+<p>
+	<xSN/> supports many different pier styles. To change
+	the style of a pier in a building block:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on one of the piers.</bold> You must click on the piers. If you
+		click elsewhere on the building block you won't be able to customize the
+		piers settings.
+	</li>
+	<li>
+		In the "Building block settings" page that appears, press
+		the <bold>Pier appearance</bold> dialog.
+	</li>
+	<li>
+		In the "Pier appearance" page scroll through the "Pier style" listbox
+		and <bold>select whichever pier</bold> you
+		wish. As soon as you select it the piers will be redrawn.
+	</li>
+	<li>
+		If you want a pier style not shown on the list, select "Custom". Look in the
+		"See also" section for instructions on custom piers.
+	</li>
+	<li>
+		The rest of the "Pier appearance" page contains a number of settings for
+		how far apart the piers are.
+	</li>
+</ol>
+
+<xsectiontitle>Creating openings for the piers</xsectiontitle>
+
+<p>
+	When you intersect two building blocks with piers toegether
+	using the <xButtonObjIntelAdjust/> tool, some of the piers
+	will automatically be removed as they become redundant.
+</p>
+
+<p>
+	However, sometimes you want an opening in the piers which isn't
+	automatically generated.
+	To set the piers' opening:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on one of the piers.</bold> You must click on a pier. If you
+		click elsewhere on the building block you won't be able to customize the
+		pier settings.
+	</li>
+	<li>
+		In the "Building block settings" page that appears, press
+		the <bold>Pier openings</bold> button.
+	</li>
+	<p>
+		In the "Pier openings" dialog you'll see a bird's eye view of the pier perimeter
+		including circles where the piers go.
+	</p>
+	<li>
+		To remove a section of the pier perimeter, <bold>click on a segment between the piers</bold>.
+	</li>
+	<p>
+		The 3D display will redraw the piers without the segment.
+	</p>
+	<li>
+		To make finer adjustments to the opening, <bold>close</bold> the page.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool and click on the piers in the
+		building block.
+	</li>
+	<li>
+		In the "Which control points are displayed" page, check
+		the <bold>"Piers"</bold> button.
+	</li>
+	<li>
+		<bold>Close the "Which control points are displayed"</bold> window.
+	</li>
+	<li>
+		Using the <xButtonSelIndividual/> tool, click on the building block to select it.
+	</li>
+	<p>
+		You will two control points, one at either end of the piers opening you
+		just created.
+	</p>
+	<li>
+		Using the <xButtonObjControlNSEW/> tool, drag the control points to the left
+		or right to widen or narrow the opening.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:340>Customized piers</a></li>
+	<li><a href=r:279>Deconstructing building blocks</a></li>
+	<li><a href=r:341>Piers</a></li>
+</xul>

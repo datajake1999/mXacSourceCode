@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Polygon mesh settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Appearance</xtrheader>
+	<tr>
+		<td>
+			<bold>Smoothing (while working)</bold> - The higher the smoothing the better the curved
+			sections of the polygon mesh will look, but the slower the object will be to
+			draw. This affects how smooth the object is while you're working on it.
+		</td>
+		<td><xComboPolyMeshSub name=SubWork/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Smoothing (final render)</bold> - Same as above, except this affects
+			how smooth the object will be drawn when you save an image or animate. Usually
+			this is higher than the "while working" setting since you want a better quality
+			for the final result.
+		</td>
+		<td><xComboPolyMeshSub name=SubFinal/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=backface>
+			<bold>Can backface cull</bold><br/>
+			In order to make drawing faster <xSN/> uses
+			a technique called "backface culling" where surfaces facing away from the camera
+			are not drawn. This works well for solid objects where the inside can never be
+			seen. However, if you cut any holes in your polygon mesh you should turn this
+			off so the insides of the object can be seen.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

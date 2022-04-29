@@ -1,0 +1,47 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Curtains, drapes, and blinds"/>
+
+<xPageTitle>
+	Curtains, drapes, and blinds
+</xPageTitle>
+
+<p>
+	The "curtain object" is used to draw a number of varieties of curtains, drapes, and blinds.
+</p>
+
+<p>
+	To add a curtain, drape, or blind to your house.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined curtian, drape, or blind that is closest to
+		your needs. Look under "Curtains and blinds" in "Interior decoration".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house by clicking on the wall, floor, or surface
+		where you want it placed. You'll probably want to click directly over a window
+		so that it hangs down over the window opening.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to resize the curtain or blind.
+	</li>
+	<li>
+		You can also change the color or texture using
+		the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		Curtains can be opened and closed using the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		You may also want to select the <xButtonObjDialog/> tool and click on
+		the curtain. You'll find more options, such as how much fabric is used or
+		the blade size for blinds.
+	</li>
+</ol>
+
+

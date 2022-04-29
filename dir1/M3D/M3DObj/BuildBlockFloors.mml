@@ -1,0 +1,95 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Floors"/>
+
+<p>
+	This page lets you specify information about the floors.
+</p>
+
+
+<xChoiceButton style=x checkbox=true name=intoroof>
+	<bold>Floors can ascend into the roof</bold><br/>
+	Normally, floors are not allowed in the roof cavity. If this is checked
+	then floors will be created in the roof cavity. For example: You would want
+	this checked for an A-frame building where most of the structure is roof.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Floor thickness</xtrheader>
+	<tr><td>
+		This is used for floors in-between stories and eleveted floors. It is <bold>not</bold> used
+		for ground floors (or basement floors) that are cement pads.
+	</td></tr>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Flooring thickness</bold> - Thickness of the flooring material.
+			For example: If it's 15mm thick plywood nailed onto the stud, enter "15mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Ceiling cladding thickness</bold> - Thickness of the ceilings (since floors
+			also act as ceilings.)
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Cement pads thickness</xtrheader>
+	<tr><td>
+		The following thicknesses are used for the cement pad. If the building block has a
+		basement then this is the thickness of the basement pad. If there isn't any basement
+		and the building block is not an elevated structure, it's the thickness of the pad.
+
+	</td></tr>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=padstud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Flooring thickness</bold> - Thickness of the flooring material.
+			For example: If it's 15mm thick plywood nailed onto the stud, enter "15mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=padsidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Ceiling cladding thickness</bold> - Thickness of the ceilings (since floors
+			also act as ceilings.)
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=padsideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>

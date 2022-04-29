@@ -1,0 +1,30 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation deconstruct"/>
+
+<xPageTitle>
+	Animation deconstruct
+</xPageTitle>
+
+<p>
+	Some animation objects can be "de-constructed" from their original form
+	into one or more keyframes. The original form is designed to
+	make animation easier than animating by just keyframes. However, sometimes
+	you need more control and wish to convert the object to keyframes.
+</p>
+
+<p>
+	To deconstruct an object:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDeconstruct/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the animation object you wish to convert to keyframes.
+		Not all objects can be deconstructed.
+	</li>
+</ol>
+
+

@@ -1,0 +1,53 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Intoduction"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Intoduction
+</xPageTitle>
+
+<p>
+	A "<bold>polygon mesh</bold>" is a technical term for "an object that can be molded into practically
+	any shape you can imagine." It's an awful lot like a lump of clay, capable of being
+	sculpted into anything.
+</p>
+
+<p>
+	Internally, a polygon mesh is constructed as hundreds or thousands of small polygons
+	(usually triangles and rectangles) that are all sewn together at the edges so they
+	form a contiguous surface. With a polygon mesh you're in total control; you can reshape
+	the polygons, move them anywhere you want, and sew any combination together.
+	With enough polygons you can produce any shape.
+</p>
+
+<p>
+	Use polygon mesh objects when the other objects in <xSN/> won't do what you need.
+	While polygon meshes can be used to create any shape, they use much more memory and
+	disk space than the other objects. Therefore, use them as a last resort.
+</p>
+
+<p>
+	You're most likely to use a polygon mesh for:
+</p>
+
+<xul>
+	<li>
+		<bold>Characters</bold> - The flexibility provided is the only way to model
+		humans and animals.
+	</li>
+	<li>
+		<bold>Fluid shapes</bold> - Such as modern cars.
+	</li>
+	<li>
+		<bold>Objects that need detail</bold> - The other <xSN/> objects let you produce
+		low detail object; they look good from a distance but if you zoom the camera too
+		close it's easy to see they're too perfect. If you have objects that will
+		be displayed up close, such as a teapot with a chip in it, you'll need to
+		use a polygon mesh.
+	</li>
+</xul>
+
+<p align=right>
+	<button style=rightarrow href=r:894><bold>Next</bold></button>
+</p>
+

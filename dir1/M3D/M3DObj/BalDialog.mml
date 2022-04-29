@@ -1,0 +1,24 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Balustrade/fence settings"/>
+
+<p><italic>
+	Note: The term <bold>"balustrade"</bold> and <bold>"fence"</bold> are
+	interchangable since they're effectively the same sort of structure.
+</italic></p>
+
+<xChoiceButton href=balappear name=balappear>
+	<bold>Appearance</bold><br/>
+	Change the style and appearance of the balustrade.
+</xChoiceButton>
+
+<xChoiceButton href=corners>
+	<bold>Corners</bold><br/>
+	Use this to add or remove corners to your balustrade, or to curve it.
+</xChoiceButton>
+
+<xChoiceButton href=balopenings name=balopenings>
+	<bold>Openings</bold><br/>
+	Add or remove openings in the balustrade. The openings can be for gates or
+	doorways.
+</xChoiceButton>

@@ -1,0 +1,36 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Add a new class"/>
+
+<p>
+	Check the class(es) that you wish to include your object in: (If you do not wish to
+	automatically add the recommended properties and methods then press "control" when
+	you click on the class.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Class list</xtrheader>
+	<<<$CLASSLIST>>>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Arrange the list</xtrheader>
+	<tr>
+		<td>
+			<bold>Show only</bold> - Show only those classes based upon the following class:
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=showonly>
+			<elem name=0><italic>Show all</italic></elem>
+			<<<$SHOWONLY>>>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=sortbycount>
+			<bold>Show the most-referenced classes first</bold><br/>
+			This shows the classes in order based upon how often they are super-classes to
+			other classes.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

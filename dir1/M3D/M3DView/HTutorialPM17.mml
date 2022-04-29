@@ -1,0 +1,84 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Texture editing 3"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Texture editing 3
+</xPageTitle>
+
+<xSectionTitle>Manually modifying the texture map</xSectionTitle>
+
+<p>
+	If the spherical, cylindrical, or planar texture map doesn't do the trick
+	then you can modify the maps by hand.
+</p>
+
+<ol>
+	<li>
+		To do this you'll probably need
+		the blue texture grid turned on, using <xButtonPMTextToggle/>.
+	</li>
+	<li>
+		As with polygon editing,
+		press <xButtonPMEditVert/>, <xButtonPMEditEdge/>, or <xButtonPMEditSide/> to specify
+		how you wish to move points. This time, you won't be moving the vertices, edges, or
+		sides in 3-dimensional space though. You'll be moving the vertex, edge, or side
+		as it appears on the 2-dimensional texture. (It's a bit mind bending.)
+	</li>
+	<li>
+		Select the <xButtonPMTextMove/> tool. <bold>Click and drag</bold> a vertex, edge, or
+		side to move the texture mapping.
+	</li>
+	<p>
+		When you do this you'll notice two things: One, the texture as drawn on the 3D object
+		will move for the selected vertices, edges, or sides. Two, the blue texture grid will
+		show how your move affects the 2-dimensional texture map.
+	</p>
+	<li>
+		The <xButtonPMTextRot/> tool will rotate the selected vertices, edges, or sides.
+		In vertex mode, you'll need at least two vertices selected.
+	</li>
+	<li>
+		The <xButtonPMTextScale/> tool will scale the selected vertices, edges, or sides.
+		In vertex mode, you'll need at least two vertices selected.
+	</li>
+	<li>
+		The <xButtonPMTextMoveDialog/> tool brings up a dialog that lets you type in the
+		texture's horizontal and vertical coordinates.
+	</li>
+	<li>
+		The <xButtonPMTextCollapse/> tool will collapse the selected vertices, edges, or sides.
+		You can use collapse to reconnect two or more disconnected vertices; see below.
+	</li>
+	<li>
+		The <xButtonPMTextDisconnect/> tool lets you "disconnect" one or more sides from the
+		rest of the texture. When you do this, moving the sides using <xButtonPMTextMove/> will
+		no longer affect the textures in the surrounding sides. To reconnect disconnected
+		sides use <xButtonPMTextCollapse/> on the vertices.
+	</li>
+</ol>
+
+<p>
+	Hand modify the texture map gets a bit strange. The only suggestion I can make is that
+	you play around with the tools until you get the hang of it.
+</p>
+
+<xSectionTitle>Mirroring the texture map</xSectionTitle>
+
+<p>
+	Unlike the other polygon mesh tools, the texture map tools don't do any automatic
+	mirroring. The reason for this is that it isn't always obvious (to a computer) where
+	and how texture maps should be mirrored.
+</p>
+
+<p>
+	If you want to mirror a texture map, press the <xButtonPMTextMirror/> button.
+	This will bring up a dialog that asks you which axis you wish to mirror around
+	and what that corresponds to in the horizontal and vertical coordinates of
+	the texture map.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:910><bold>Next</bold></button>
+</p>
+

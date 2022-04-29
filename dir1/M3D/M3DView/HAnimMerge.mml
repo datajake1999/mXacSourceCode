@@ -1,0 +1,34 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation merge"/>
+
+<xPageTitle>
+	Animation merge
+</xPageTitle>
+
+<p>
+	Some animation objects, such as keyframes at the same time, can be merged together.
+</p>
+
+<p>
+	To merge animation objects together:
+</p>
+
+<ol>
+	<li>
+		Use <xButtonSelIndividual/> to select one or more animation objects (keyframes)
+		that you wish to merge together. Always leave one object un-selected since that
+		will be the one that the selected objects will be merged into.
+	</li>
+	<li>
+		Select the <xButtonObjMerge/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the object you wish to merge into (the un-selected object).
+	</li>
+	<p>
+		Not all objects will merge. If an object can't merge you will hear a warning
+		beep.
+	</p>
+</ol>
+

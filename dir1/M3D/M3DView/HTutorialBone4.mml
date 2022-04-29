@@ -1,0 +1,73 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Freedom of motion"/>
+
+<xPageTitle>
+	Bones tutorial - Freedom of motion
+</xPageTitle>
+
+<p>
+	When you move the bones using <xButtonObjAttrib/> you'll notice that your
+	bones don't move far enough, or sometimes rotate too far into painful looking
+	positions. You can fix this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> a bone, such as the right upper arm bone.
+	</li>
+	<p>
+		Look for the "Limits" group. This allows you to type in angles for how
+		much the bone can be moved.
+	</p>
+	<li>
+		<bold>Type in</bold> 120 for "Bend maximum", and -60 for "Bine minimum". This
+		will allow your arm bone to swing up and down more freely. (By the way, when
+		you change the right upper arm bone the mirror, the left upper arm bone,
+		will also change.)
+	</li>
+	<li>
+		Since your upper arm bone can also swing from side-to-side, <bold>type</bold>-20
+		into the "Side-to-side minimum" and 110 to the "Side-to-side maximum". The
+		-20 will allow the arm to be swung slightly back, while 110 lets it swing all
+		the way in front of the character.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Select <xButtonObjAttrib/> and <bold>click on</bold> the skeleton.
+	</li>
+	<p>
+		In the attributes you'll now notice that "R upper arm" has changed to
+		"R upper arm (bend)", and "R upper arm (Side-to-side)".
+	</p>
+	<li>
+		<bold>Play</bold> with the slides to make sure the limits are set correctly.
+	</li>
+	<p>
+		The chances are that the "Bend" minimum and maximum values are fine, but
+		the "Side-to-side" settings are reversed, allowing the arms to be swung
+		way to far back. This is easy to fix:
+	</p>
+	<li>
+		Using the <xButtonBoneEdit/> too, <bold>return</bold> to the "Modify a bone" page.
+	</li>
+	<li>
+		In the "Limits" table, <bold>check or uncheck</bold> (whichever is opposite)
+		the <bold>"Flip direction of side-to-side"</bold>. If you go back and try the
+		attributes you'll see the side-to-side movement work properly.
+	</li>
+	<p>
+		The "Limits" table also includes settings for "Twist" which allows your bone
+		to twist, like at the wrist, and "Extend" which allows it to stretch or contract.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:918><bold>Next</bold></button>
+</p>
+

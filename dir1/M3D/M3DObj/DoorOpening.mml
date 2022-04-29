@@ -1,0 +1,54 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Door/window opening"/>
+
+<p>
+	Use this page to add/remove doors/windows to an opening in a frame. Each
+	frame can have several door/window sets, so that (for example) a doorway
+	can have a solid door and a scren door.
+</p>
+
+<!xComboOrient>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Left</elem>
+		<elem name=1>Right</elem>
+		<elem name=2>Left and right</elem>
+		<elem name=3>Up</elem>
+		<elem name=4>Down</elem>
+		<elem name=5>Up and down</elem>
+	</combobox></bold>
+</xComboOrient>
+
+<!xComboMove>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=4>Bi-fold</elem>
+		<elem name=7><italic>Fixed</italic></elem>
+		<elem name=5>Garage</elem>
+		<elem name=0>Hinged</elem>
+		<elem name=1>Pivot</elem>
+		<elem name=6>Roller</elem>
+		<elem name=2>Sliding</elem>
+		<elem name=3>Sliding (pocket)</elem>
+	</combobox></bold>
+</xComboMove>
+
+<!xComboCustom>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=1>Rectangle</elem>
+		<elem name=2>Saloon</elem>
+	</combobox></bold>
+</xComboCustom>
+
+
+<!xComboOpens>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>All the way</elem>
+		<elem name=1>Half way</elem>
+		<elem name=2>One quarter way</elem>
+		<elem name=3>Always open</elem>
+	</combobox></bold>
+</xComboOpens>
+
+<null>
+	<<<$THEPAGE>>>
+</null>

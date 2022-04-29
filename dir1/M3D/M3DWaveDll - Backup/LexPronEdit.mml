@@ -1,0 +1,144 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify pronunciation"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Word</xtrheader>
+	<tr>
+		<td>
+			<bold>Word</bold> - Type in the word here.
+		</td>
+		<td><bold><edit defcontrol=true maxchars=64 width=100% name=name/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Main ponunciation</bold> - Type in the pronunciation of the word
+			using phonemes separated by spaces. For example: The word "hat" would
+			have the pronunciation "h ae1 t". You can look at the bottom of the
+			page for a list of phonemes. Alternatively, you can type in
+			a <bold>sounds like</bold> phrase, such as "hell oh" as a sounds-like
+			for "hello" and press the "Speak" button to hear it.
+			<p/>
+			You can also enter the part-of-speech.
+		</td>
+		<td>
+			<bold><edit maxchars=128 width=100% name=pron0/></bold><br/>
+			<p align=right><button style=uptriangle name=speak0><bold>Speak</bold></button></p>
+			<status width=50% height=40 name=posstat0/><scrollbar width=50% orient=horz min=0 max=10 name=pos0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Alternate ponunciation #1</bold> - Type in an alternate pronunciation
+			for the word, or leave this blank.
+		</td>
+		<td>
+			<bold><edit maxchars=128 width=100% name=pron1/></bold><br/>
+			<p align=right><button style=uptriangle name=speak1><bold>Speak</bold></button></p>
+			<status width=50% height=40 name=posstat1/><scrollbar width=50% orient=horz min=0 max=10 name=pos1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Alternate ponunciation #2</bold>
+		</td>
+		<td>
+			<bold><edit maxchars=128 width=100% name=pron2/></bold><br/>
+			<p align=right><button style=uptriangle name=speak2><bold>Speak</bold></button></p>
+			<status width=50% height=40 name=posstat2/><scrollbar width=50% orient=horz min=0 max=10 name=pos2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Alternate ponunciation #3</bold>
+		</td>
+		<td>
+			<bold><edit maxchars=128 width=100% name=pron3/></bold><br/>
+			<p align=right><button style=uptriangle name=speak3><bold>Speak</bold></button></p>
+			<status width=50% height=40 name=posstat3/><scrollbar width=50% orient=horz min=0 max=10 name=pos3/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Available phonemes</xtrheader>
+	<<<$PHONELIST>>>
+</xtablecenter>
+
+<p>
+	If you wish the pronunciation to be based on another word, such as "likeable" to
+	automatically use the pronunciation for "like" and the "_able" suffix, then
+	type "|like |_able". The "|" indicates that the pronunciation comes from a word.
+	If you use ":like" then the like's pronunciation will be used, but any stressed
+	phonemes will be unstressed.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Parts of speech</xtrheader>
+	<tr><td><xul>
+		<li>
+			<bold>Noun (N)</bold> - Person, place, thing, quality, or action.
+		</li>
+		<li>
+			<bold>Pronoun (Pron)</bold> - An identifying word used in place of a noun, such
+				as I, you, he, she, it, we, and they.
+		</li>
+		<li>
+			<bold>Adjective (Adj)</bold> - Word that modifies or qualifies a word or noun.
+		</li>
+		<li>
+			<bold>Preposition (Prep)</bold> - Words that combine with a noun or pronoun to
+			form a phrase, such as "to" or "of".
+		</li>
+		<li>
+			<bold>Article (Art)</bold> - Word to signal a noun, such as "a" or "the".
+		</li>
+		<li>
+			<bold>Verb (V)</bold> - Word that expresses a form of action.
+		</li>
+		<li>
+			<bold>Adverb (Adv)</bold> - Word that modifies a verb, adjective, or another adverb.
+		</li>
+		<li>
+			<bold>Auxiliary verb (Aux v)</bold> - A word that forms the mood, tense, or aspect
+			of the main verb, such as "have", "can" or "will".
+		</li>
+		<li>
+			<bold>Conjunction (Conj)</bold> - These words connect sentences phrases, clauses,
+			or words, such as "and", "or", and "but".
+		</li>
+		<li>
+			<bold>Interjection (Interj)</bold> - Exclamation words such as "oh" and "wow".
+		</li>
+	</xul></td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Voice file</xtrheader>
+	<tr><td>
+		To use text-to-speech you must specify a text-to-speech voice. <xSN/> doesn't
+		come with one, but you may be able to download a text-to-speech voice or
+		create your own using the "mXac NLP Editor".
+		<p/>
+		The current TTS file is:<br/>
+		<xeditoneline enabled=false name=ttsfile/>
+		<p/>
+		To change the file, click the following:
+		<p/>
+		<xChoiceButton name=opentts>
+			<bold>Load in a different text-to-speech voice</bold><br/>
+			Press this to open a TTS voice file.
+			You can create a voice using the "mXac
+			NLP Editor".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

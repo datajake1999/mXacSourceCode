@@ -1,0 +1,79 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Texture editing 1"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Texture editing 1
+</xPageTitle>
+
+<p>
+	The texture editing mode lets you do two things:
+</p>
+
+<ol>
+	<li>
+		<bold>Use more than one texture in the polygon mesh</bold> - The texture editing
+		mode lets you create several textures for the polygon mesh and paint each
+		side with one of the textures. This can be used to apply varying coloration to
+		different parts of the mesh. In the case of human characters, it can isolate the
+		face texture map from the rest of the body, the face texture map usually requiring
+		more detail than the rest of the body.
+	</li>
+	<li>
+		<bold>Change texture mapping</bold> - Textures are basically 2 dimensional rectangular
+		"sheets" of color, transparency, and other information. When they're attached to
+		a curved object some portions of the texture need to be stretched while others squashed.
+		It's the same problem that map makers have; they need to produce a map of the earth
+		on a flat piece of paper (aka: a texture) but the earth is a sphere. As a result, the
+		map is stretched at the poles and squashed at the equator.
+	</li>
+</ol>
+
+<xSectionTitle>Using more than one texture in a polygon mesh</xSectionTitle>
+
+<p>
+	To use more than one texture in a polygon mesh:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPMModeTexture/> button to switch to the texture editing mode.
+	</li>
+	<p>
+		The main view of the texture editor displays a blue grid on it; ignore this for
+		now.
+	</p>
+	<li>
+		<bold>Double-click</bold> the "Double-click to add a new texture" entry in
+		the texture list on the right side of the screen.
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog that
+		appears, <bold>select</bold> whatever texture or color you wish to use.
+	</li>
+	<p>
+		The dialog will close and your new texture will be displayed in the list.
+		If you ever wish to change the texture just double-click the list item.
+	</p>
+	<li>
+		Make sure the new texture is <bold>selected</bold>.
+	</li>
+	<li>
+		Select the <xButtonBrush64/> (or another brush) tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on the texture with your cursor. As you move
+		the mouse you'll see the old texture replaced by the one you're painting.
+		The texture mapping (how it's stretched over the surface) may be a bit
+		wrong, but that can be fixed later.
+	</li>
+</ol>
+
+<p>
+	You can add as many textures as you like to a polygon mesh.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:908><bold>Next</bold></button>
+</p>
+

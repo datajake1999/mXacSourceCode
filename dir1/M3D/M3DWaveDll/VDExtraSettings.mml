@@ -1,0 +1,147 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Extra settings"/>
+
+<!xComboViewHow>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Waveform</elem>
+		<elem name=1>Spectrogram</elem>
+		<elem name=2>Features</elem>
+	</combobox></bold>
+</xComboViewHow>
+
+<xtablecenter width=80%>
+	<xtrheader>Extra settings</xtrheader>
+	<tr>
+		<td width=2>
+			<align align=center><bold>Convert voiced to unvoiced</bold></align><br/>
+			<table width=100% border=0 innerlines=0>
+				<tr>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert0/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert1/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert2/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert3/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert4/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert5/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=convert6/></td>
+				</tr>
+				<tr>
+					<td align=center>Octave 1</td>
+					<td align=center>Octave 2</td>
+					<td align=center>Octave 3</td>
+					<td align=center>Octave 4</td>
+					<td align=center>Octave 5</td>
+					<td align=center>Octave 6</td>
+					<td align=center>Octave 7</td>
+				</tr>
+			</table>
+			<p/>
+			
+			<align align=center><bold>Overall volume</bold></align><br/>
+			<table width=100% border=0 innerlines=0>
+				<tr>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=overall0/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=overall1/></td>
+				</tr>
+				<tr>
+					<td align=center>Voiced</td>
+					<td align=center>Unvoiced</td>
+				</tr>
+			</table>
+			<p/>
+			
+			<xbr/>
+			
+			<bold>Non-integer harmonics</bold> - To make the voice sound human, use 1.0. If you
+			use a number other than 1.0, the voice will sound more like a talking bell.
+			<br/>
+			<xEditOneLine name=nonharmonic/>
+			<p/>
+			
+			
+			<xbr/>
+			
+			<<<$IFBASEVOICE>>>
+			<bold>Base the voice on a recording</bold> - You can base the voice on a recording,
+			such as a musical instrument or someone laughing. Doing so will cause the
+			voice to sound like a talking musical instrument or someone talkng while they
+			laugh.
+			<p/>
+			
+			<<<$IFANYFILE>>>
+			Select the wave file to load:
+			<xEditOneLine readonly=true name=wavebase/>
+			<align align=right><button style=righttriangle name=waveopen>
+				<bold>Open...</bold>
+			</button></align>
+			<p/>
+			
+			<bold>Wavefile pitch</bold> - Type in the pitch of the recording, such as 100.0
+			if the recording is of a 100 Hz voice. If you wish the wave to be used without
+			any pitch bend, then type 0.
+			<xEditOneLine name=wavepitch/>
+			<p/>
+			<<<$ENDIFANYFILE>>>
+
+			<<<$IFCOMBO>>>
+			Select a wavefile to use:
+			<br/>
+			<p align=right><bold><combobox width=75% cbheight=150 name=wavebasecombo>
+				<elem name=0>None (normal voice)</elem>
+				<<<$COMBOELEM>>>
+			</combobox></bold></p>
+			<<<$ENDIFCOMBO>>>
+			
+			<xbr/>
+			<<<$ENDIFBASEVOICE>>>
+			
+			<p>
+				The adjustments on this page let you make additional modifications to
+				your voice. For example:
+			</p>
+			
+			<ul>
+				<li>
+					To make your voice <bold>whisper</bold>, adjust the "Convert voiced to
+					unvoiced" sounds so the higher frequencies are all converted to unvoiced.
+					Then, set the "Voiced overall volume" to 0.
+				</li>
+				<li>
+					When converting from a <bold>male to female voice</bold>, you
+					may wish to adjust the "Convert voiced to
+					unvoiced" sounds so some of the higher frequencies are converted to unvoiced.
+				</li>
+			</ul>
+			
+			
+		</td>
+		
+		<td width=1>
+			<xChoiceButton style=righttriangle href=p:2110>
+				<bold>Next</bold><br/>
+				The next page lets you save your changes away for
+				safe keeping.
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=playmimic>
+				<bold>Play the voice to mimic</bold><br/>
+				Plays a recording of the voice you're trying to mimic.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

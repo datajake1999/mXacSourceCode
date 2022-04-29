@@ -1,0 +1,76 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Editor"/>
+
+<xPageTitle>
+	Bones - Editor
+</xPageTitle>
+
+<p>
+	The bones object has its own editor. To display it:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjShowEditor/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the bone.
+	</li>
+</ol>
+
+<p>
+	The editor window is similar to the main <xSN/> world editor except that it's specialized
+	for bones. You'll learn about the new tools as you go through the tutorial.
+</p>
+
+<p>
+	The first tool you should know about is <xButtonPMShowBackground/>. Pressing this
+	will hide everything except the bone your working on, uncluttering the display.
+	Pressing it again will show the other objects again.
+</p>
+
+<xSectionTitle>Adding a bone</xSectionTitle>
+
+<p>
+	Bodies consist of more than just one bone. To add more bones:
+</p>
+
+<ol>
+	<li>
+		Switch your camera to looking <bold>from the south/front</bold> by clicking on
+		the "From south" (or "From front") thumnail on the right.
+	</li>
+	<li>
+		Select the <xButtonBoneNew/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the top tip of your bone and <bold>drag</bold> the mouse
+		to the right.
+	</li>
+	<li>
+		A red line will track the mouse, showing where the bone will be created.
+		When you're satisfied, <bold>lift up</bold> the mouse button.
+	</li>
+	<p>
+		When you lift the new mouse button a new bone is created.
+	</p>
+	<li>
+		Actually, two new bones should be created. That's because the bone has
+		mirroring turned on, so any action done to one side affects the other.
+		Mirroring makes it easier to produce skeletons because
+		most skeletons are symmetrical. You can turn mirroring off
+		by pressing the <xButtonPMMirror/> button and unchecking menu items.
+	</li>
+	<li>
+		For now, pretend that the two new bones you created are the upper arm bones
+		of your character. Create the lower arm using <xButtonBoneNew/> by clicking
+		on the end of the upper arm bones.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:916><bold>Next</bold></button>
+</p>
+

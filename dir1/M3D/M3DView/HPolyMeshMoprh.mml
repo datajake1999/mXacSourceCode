@@ -1,0 +1,177 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh objects - morphs"/>
+
+<xPageTitle>
+	Polygon mesh objects - morphs
+</xPageTitle>
+
+<p>
+	Polygon meshes support a feature known as "morphs" (short for transformation).
+	A morph is one of several shapes
+	the polygon mesh can assume besides the main shape.
+</p>
+
+<p>
+	An example might clarify
+	the use: When you use a polygon mesh to sculpt a head you will start with a sphere,
+	add indentations for eye sockets, form the lips, and add ears. Generally, you
+	will sculpt the face in a neutral position, looking forward, not smiling, eyes open.
+	If you want to animate the face, and consequently want facial expressions, you use
+	morphs, one morph per expression. To create a facial expression for "left eyebrow
+	raised" you add a new morph and then reshape the basic shape so the left eyebrow
+	is raised. For "smiling" you restart with the basic shape, add a "smiling" morph,
+	and then sculpt the face into a smile. Repeat until all expressions are added.
+</p>
+
+<p>
+	One nice thing about morphs is that you can combine them. Once you you have "right
+	eyebrow raised" and "smiling", you can turn both morphs on and get "right eyebrow raised
+	while smiling". You can also turn them partially on, raising the eyebrow just slightly.
+</p>
+
+<xSectionTitle>Creating a morph</xsectiontitle>
+
+<p>
+	To create a morph:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the polygon mesh. (It should have
+		already been converted to Phase II.)
+	</li>
+	<li>
+		In the "Polygon mesh (phase II) settings" dialog, find the "Morphs" section at
+		the bottom of the page and press <bold>"Add a new morph"</bold>.
+	</li>
+	<li>
+		In the "Modify a morph" dialog, type in the morph's <bold>name and description.</bold>
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the polygon mesh.
+	</li>
+	<li>
+		In the "Attributes" dialog, <bold>move</bold> the newly created morph's slider all the way to
+		the right. If you have created any other morphs for this object, move their
+		slides all the way to the left.
+	</li>
+	<li>
+		<bold>Close</bold> the "Attributes" dialog.
+	</li>
+	<li>
+		Using the <xButtonObjControlNSEWUD/> tool, reshape the polygon mesh into the morph's
+		shape (such as "right eyebrow up").
+	</li>
+	<li>
+		When finished shaping, return to the <xButtonObjAttrib/> tool and play with the
+		morph's attribute. Notice how moving the slider around adjusts how much of the
+		morph is affected.
+	</li>
+	<li>
+		If you want to go back and modify the basic shape (without any morphs) then
+		use the <xButtonObjAttrib/> tool and set all the morph attributes to 0.
+		Likewise, if you want to edit a different morph, set all the morph attributes
+		to 0 except for the one you want to edit.
+	</li>
+</ol>
+
+<xsectiontitle>Mirrored morphs</xsectiontitle>
+
+<p>
+	If you create a face you may want both a "right eyebrow raised" morph and
+	a "left eyebrow raised" morph. Since they're symmetrical, here's an easy way
+	to create them:
+</p>
+
+<ol>
+	<li>
+		When you create your basic polygon mesh shape, make sure you have <bold>"Left
+		and right symmetry"</bold> turned on. You can adjust this
+		using the <xButtonObjControlDialog/> tool.
+	</li>
+	<li>
+		Create a morph for the "right eyebrow raised" as above; you will need
+		to <bold>turn off</bold> "Left and right symmetry" to do this.
+	</li>
+	<li>
+		<bold>Make sure</bold> the morph works properly by testing it.
+	</li>
+	<li>
+		When you know it works, select the <xButtonObjDialog/> tool and <bold>click on</bold> the
+		polygon mesh.
+	</li>
+	<li>
+		Find the "Morphs" section and <bold>select</bold> the "right eyebrow raised" morph
+		in the list box.
+	</li>
+	<li>
+		Press the <bold>"Add a morph that mirrors an exising morph (left/right)"</bold> button
+		to create the "left eyebrow raised".
+	</li>
+	<p>
+		The mirrored morph will be added as "Right eyebrow raised (mirror)"; you
+		may wish to rename it using <bold>"Modify selected morph"</bold>.
+	</p>
+	<li>
+		Use the <xButtonObjAttrib/> tool to test that the mirrored morph works.
+	</li>
+</ol>
+
+<xsectiontitle>Combo-morphs</xsectiontitle>
+
+<p>
+	Once you have created the left and right eyebrow morphs, you may want a morph
+	that raises both of them at the same time. Doing this is easy:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click</bold> on the polygon mesh object.
+	</li>
+	<li>
+		In the "Morphs" section, press the <bold>"Add a combo-morph"</bold> button.
+	</li>
+	<li>
+		In the "Modify a morph" page, type in a new <bold>name and description</bold>.
+	</li>
+	<li>
+		At the bottom of the page you'll find a section titled "Affected sub-morphs".
+		Below that is a table with a combo-box in its title. <bold>Click</bold> on the
+		combo-box and <bold>select</bold> "Right eyebrow raised".
+	</li>
+	<li>
+		Then, add the bottom of the page, press the <bold>"Affect an additional
+		sub-morph"</bold> button.
+	</li>
+	<li>
+		A new table will be added to the page. In this one, <bold>select</bold> the
+		"Left eyebrow raised" morph.
+	</li>
+	<li>
+		<bold>Close</bold> the settings dialog.
+	</li>
+	<li>
+		Using the <xButtonObjAttrib/> tool to play with the newly created combo-morph.
+		Notice how it moves both eyebrows up equally in tandem. Also notice that you
+		can mix and match any of the "Both eyebrows raised" and "Left/right eyebrows raised"
+		morphs.
+	</li>
+</ol>
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+	<li><a href=r:442>Polygon mesh objects - basics</a></li>
+	<li><a href=r:521>Polygon mesh objects - merging</a></li>
+	<li><a href=r:520>Polygon mesh objects - textures</a></li>
+</xul>
+
+

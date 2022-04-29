@@ -1,0 +1,20 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify the texture"/>
+
+<xchoicebutton name=change>
+	<bold>Change the texture</bold><br/>
+	Displays the texture selection dilaog and lets you pick a new texture to display.
+</xchoicebutton>
+
+<xchoicebutton name=delete>
+	<bold>Delete the texture</bold><br/>
+	Deletes the selected texture.
+</xchoicebutton>
+
+<xChoiceButton style=righttriangle name=changemap>
+	<bold>Change the map color</bold><br/>
+	Press this button to change the color displayed on the map.
+</xChoiceButton>
+<p align=right><xStatusColor width=50% name=mapcolor/></p>
+

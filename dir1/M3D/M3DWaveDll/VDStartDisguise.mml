@@ -1,0 +1,48 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice disguising"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice disguising</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You have three options for diguising your voice:
+			</p>
+			
+			<ul>
+				<li>
+					<bold>No disguise</bold> - Use your voice as is, without any diguise.
+				</li>
+				<li>
+					<bold>Quick disguise</bold> - This lets you quickly disguise your
+					voice using a few easy choices. This
+					approach will only take you a few minutes.
+				</li>
+				<li>
+					<bold>Mimic another voice</bold> - A much more technical process,
+					this tries to convert your voice into another voice. (It probably
+					will only sound somewhat like the other voice.) This process takes 20-30
+					minutes.
+				</li>
+			</ul>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle name="nextnosave">
+				<bold>No disguise</bold>
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="p:2300">
+				<bold>Quick disguise</bold>
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="p:2005">
+				<bold>Mimic another voice</bold> (Long process)
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle href="finished">
+				<bold>Exit</bold><br/>
+				Exit the voice disguise wizard now.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

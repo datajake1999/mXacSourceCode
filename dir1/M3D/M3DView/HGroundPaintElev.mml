@@ -1,0 +1,59 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Paint based on elevation and slope"/>
+
+<xPageTitle>
+	Paint based on elevation and slope
+</xPageTitle>
+
+<p>
+	Many landscape features are based upon the elevation or slope of the land. For example:
+	Snow occurs at high elevations, rock-falls on steep elevations, and some trees favor
+	level ground more than mountain slopes. The ground editor allows you to quickly paint
+	a texture or forest to cover a elevation or slope.
+</p>
+
+<ol>
+	<li>
+		In the ground editor, switch to either the <xButtonViewText/> or <xButtonViewForest/>.
+	</li>
+	<li>
+		<bold>Select</bold> the texture or forest you wish to paint with.
+	</li>
+	<li>
+		Press the <xButtonGroundPaint/> buton.
+	</li>
+	<li>
+		In the "Paint based on elevation and slope", move the <bold>"Elevation"</bold>
+		slider for the ideal elevation for the texture or forest; left is lower elevations
+		while right is higher.
+	</li>
+	<p>
+		As you adjust the elevation slider (and others) you will see a red-region on the
+		map indicate which areas are affected.
+	</p>
+	<li>
+		Fine-tune the <bold>elevation range</bold> slider to determine how narrow the
+		elevation band is. Moving the slider to the right widens the possible elevations.
+	</li>
+	<li>
+		Similarly, adjust the <bold>Slope</bold> and <bold>Slope range</bold> sliders.
+		If the slope slider is all the way to the left it favors flat land. A slope
+		all the way to the right favors steep cliffs.
+	</li>
+	<p>
+		The wider the elevation is, the more important slope becomes to determining what
+		is painted. The narrower elevation is, the less important slope becomes.
+		Likewise, a wide slope range causes elevation to be important, and a narrow slope
+		range decreases its importance.
+	</p>
+	<li>
+		The <bold>"Amount"</bold> slider lets you control how heavily the texture or
+		forest is "painted" on.
+	</li>
+	<li>
+		Press the <bold>"Paint"</bold> button to apply the texture or forest. You can also press
+		the <bold>"Un-paint"</bold> button to remove texture or forest.
+	</li>
+</ol>
+

@@ -1,0 +1,43 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Customizing lights"/>
+
+<xPageTitle>
+	Customizing lights
+</xPageTitle>
+
+
+<p>
+	Once you have created a light, you can customize it. There are three ways to customize
+	a light:
+</p>
+
+<ol>
+	<li>
+		<bold>Chaning the colors or textures of the light fixture</bold> - This
+		is the same as changing the color or texture of any object.
+		See <a href=r:281>Color and texture</a> for information on how to
+		do this. One <bold>important</bold> note: If you change the light's diffuser
+		to an opaque surface it may block all the light coming from the light bulb.
+	</li>
+	<li>
+		<bold>Moving control points</bold> - Depending upon the light, when you select
+		it you may see one or more control points appear. These will allow you to
+		reorient the lamp, stretch the lamp post, or curve the lamp arm.
+	</li>
+	<li>
+		<bold>Different combinations of lamp bases, shades, and bulb colors</bold> - If you
+		select the <xButtonObjDialog/> tool and click on the light, you will be shown
+		a dialog that lets you customize the light. In it you'll be able to change the
+		light's base (the bit that holds the shade), the lamp shade, and the color
+		of the light bulb. The dialog is self explanatory so I won't go into detail here.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:400>Creating lights</a></li>
+	<li><a href=r:399>Turning lights on and off</a></li>
+</xul>

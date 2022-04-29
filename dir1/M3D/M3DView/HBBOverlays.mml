@@ -1,0 +1,80 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Overlays"/>
+
+<xPageTitle>
+	Overlays
+</xPageTitle>
+
+<p>
+	Building blocks support <bold>"Overlays"</bold> for the floors, walls, ceilings,
+	and roofs. Overlays are just areas of the surface (wall, floor, etc.) that have
+	a different color or texture than the rest of the surface. For example:
+	Some rooms have different floor coverings than other rooms - that's an overlay
+	on the floor. Or, some walls have different textures part way down (like
+	wainscotting) - that's an overlay.
+</p>
+
+<p>
+	To create (and later edit) an overlay in a building block:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the surface (wall, floor, etc.) that you want to change the overlay foor.
+		Since each side of the wall, floor, etc. has a different surface, you'll need
+		to click on the proper side too.
+	</li>
+	<li>
+		The "Building block settings" dialog will appear. Scroll down to the bottom
+		and press the <bold>"Modify overlays"</bold> button.
+	</li>
+	<li>
+		The page will switch to the "Overlays" page, showing any overlays that currently
+		exist on the surface. Since there probably aren't any, the surface should just
+		be a grey rectangle.
+	</li>
+	<li>
+		Press <bold>"Add an overlay based on your own points"</bold>.
+	</li>
+	<li>
+		A new page, "Add an overlay from your own points" will appear. It lists a
+		number of different shapes for the overlay. Select what you want.
+	</li>
+	<li>
+		It also has an "Initial location" section containing an image of the surface
+		and a checkerboard. Click on the approximate location of where the overlay
+		should go; if you're not sure then click in the center.
+	</li>
+	<li>
+		After clicking on the "Initial location" display, the "Overlays" page will
+		reappear. Close it.
+	</li>
+	<li>
+		Someplace on the surface you clicked you should see the overlay. It will initially
+		be colored red so it's easy to see.
+	</li>
+	<li>
+		To move or reshape the overlay, select the building block with
+		the <xButtonSelIndividual/> tool (if the building block isn't already selected).
+	</li>
+	<li>
+		The overlay's control points should be displayed. If they're not
+		then use the <xButtonObjControlDialog/> tool and click on the building block again.
+		(Make sure to click on the section where the overlay is.)
+		Find the overlay
+		listed in the items that can display control points, and check it. Close
+		the dialog.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/> and <xButtonObjControlUD/> tools to move the
+		overlay control points as desired.
+	</li>
+	<li>
+		Finally, to change the overlay's color, just select the <xButtonObjPaint/> tool
+		and click on the red overlay. You know how to do the rest.
+	</li>
+</ol>

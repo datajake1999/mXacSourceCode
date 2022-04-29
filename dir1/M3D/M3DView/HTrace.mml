@@ -1,0 +1,80 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tracing paper"/>
+
+<xPageTitle>
+	Tracing paper
+</xPageTitle>
+
+
+<p>
+	<xSN/> supports a "tracing paper" feature that draws a semi-transparent image
+	that you supply over the 3D image you're working on. Use tracing paper if:
+</p>
+
+<xul>
+	<li>
+		You have a paper copy of <bold>architectual plans</bold> and wish to create
+		a 3D model from those plans.
+	</li>
+	<li>
+		You have paper <bold>plans for an object</bold> you wish to create in the object editor.
+	</li>
+	<li>
+		You have a <bold>photograph</bold> of the house or object you wish to create and want
+		to use it as a visual guide.
+	</li>
+</xul>
+
+<p>
+	<xSN/> will load in an image (saved as a JPEG or bitmap) of your plans or photograph,
+	and superimpose it on top your 3D workspace. That way, when you place walls or
+	other objects you can see where you're putting them in relation to the plans.
+	This feature is enormously useful.
+</p>
+
+<p>
+	To trace off an image:
+</p>
+<ol>
+	<li>
+		If you don't already have the image on your computer, <bold>Scan</bold> the
+		paper/photograph in with your scanner. Make sure
+		to save it as a <bold>JPEG (.jpg) or bitmap (.bmp)</bold> file.
+	</li>
+	<li>
+		Switch to the <xButtonViewFlat/> mode if you're not in it already.
+	</li>
+	<li>
+		<bold>Maneuver the camera</bold> so that it's looking from
+		the <bold>same angle</bold> as your plans/photograph, and that
+		the 3D view is approximately the <bold>same size</bold> as the plans/photograph.
+	</li>
+	<li>
+		Press the <xButtonTrace/> button.
+	</li>
+	<li>
+		In the tracing paper dialog, press the <bold>"Use a .jpg or .bmp file
+		as tracing paper"</bold> button.
+	</li>
+	<li>
+		In the "Open image file" dialog, select the image to open
+		and press <bold>Open</bold>.
+	</li>
+	<li>
+		The page will switch to "Add new tracing paper". Follow the instructions on the
+		page and type in any enter the <bold>size and transparency</bold>.
+		Press <bold>Next</bold> when you've done that.
+	</li>
+	<li>
+		The page will transition to the "Modify tracing paper" page. In here
+		you can fine-tine the <bold>size, position, and transparency</bold> of the
+		image. <bold>Close</bold> the dialog when you have it place correctly.
+	</li>
+	<li>
+		If you ever need to modify the size, position, or transparency, or show/hide
+		the image, just retun to the <xButtonTrace/> page.
+	</li>
+</ol>
+
+

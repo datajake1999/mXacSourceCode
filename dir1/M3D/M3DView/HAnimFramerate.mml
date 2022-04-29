@@ -1,0 +1,41 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation framerate"/>
+
+<xPageTitle>
+	Animation framerate
+</xPageTitle>
+
+<p>
+	You can assign a framerate to a scene (in frames per second). This can be useful
+	because:
+</p>
+
+<xul>
+	<li>
+		When you animate the framerate for the animation will default to whatever you
+		have set in the scene.
+	</li>
+	<li>
+		Keyframes and other animation objects will "snap to" the frames.
+	</li>
+	<li>
+		The timeline will display time periods less than a second as frame numbers.
+		If you don't specify a framerate then the time periods are shown in tenths,
+		hundredths, and thousandths of a second.
+	</li>
+</xul>
+
+<p>
+	To set the framerate:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonSceneFPS/> button.
+	</li>
+	<li>
+		<bold>Select</bold> the desired framerate from the menu.
+	</li>
+</ol>
+

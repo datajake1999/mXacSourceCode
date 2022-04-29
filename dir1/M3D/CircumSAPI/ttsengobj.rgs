@@ -1,0 +1,25 @@
+HKCR
+{
+	CircumSAPI.CircumSAPI.1 = s 'CircumSAPI Class'
+	{
+		CLSID = s '{76D2054C-8841-4fe0-93BA-4EBA0C2C4D00}'
+	}
+	CircumSAPI.CircumSAPI = s 'CircumSAPI Class'
+	{
+		CLSID = s '{76D2054C-8841-4fe0-93BA-4EBA0C2C4D00}'
+		CurVer = s 'CircumSAPI.CircumSAPI.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {76D2054C-8841-4fe0-93BA-4EBA0C2C4D00} = s 'CircumSAPI Class'
+		{
+			ProgID = s 'CircumSAPI.CircumSAPI.1'
+			VersionIndependentProgID = s 'CircumSAPI.CircumSAPI'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{A3BA21EC-15A4-4d42-8939-39E25F647854}'
+		}
+	}
+}

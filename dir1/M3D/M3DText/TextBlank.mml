@@ -1,0 +1,139 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Blank texture for painting"/>
+
+<p>
+	This page lets you create a blank texture that you can paint on using
+	the "Painting view". Blank textures are particularly useful for "organic" shapes
+	such as people and animals since they let you paint directly onto the character.
+</p>
+
+<p>
+	Please enter the following the information and press "Add texture" when you're done.
+</p>
+
+<p align=right>
+	<button name=ok><bold>Add texture</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Maps to use</xtrheader>
+	<tr><td>
+		Please check one or more of the following to indicate what properties of the
+		texture you'd like to paint:
+		<p/>
+		<xChoiceButton checkbox=true style=x name=mapcolor>
+			Use a <bold>color map</bold><br/>
+			This allows you to paint colors onto to the object.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapglow>
+			Use a <bold>glow map</bold><br/>
+			This allows you to paint self-illuminating colors onto to the object.
+			Use this portions of the object that emit light, such as television screens,
+			or phosophorescence.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapbump>
+			Use a <bold>bump map</bold><br/>
+			Bump maps allow you to add bumps, wrinkles, scratches, and other changes
+			in surface height.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=maptrans>
+			Use a <bold>transparency map</bold><br/>
+			With a transparency map, different portions of your texture will contain
+			different amounts of transparency.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapspec>
+			Use a <bold>specularity map</bold><br/>
+			With a transparency map, different portions of your texture will contain
+			different amounts of glossiness. This is particularly useful for faces since
+			foreheads tend to be more oily (and hence more specular) than the rest of
+			the face.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file where you wish to save the
+			image(s) for the maps.
+		</td>
+		<td>
+			<edit maxchars=150 width=100% name=file/><br/>
+			<button name=browse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Name</bold> - Name for the texture.
+		</td>
+		<td>
+			<edit maxchars=64 width=100% name=name/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (pixels)</bold> - Number of pixels across.
+		</td>
+		<td><edit maxchars=32 width=100% name=widthpix/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height (pixels)</bold> - Number of pixels up/down.
+		</td>
+		<td><edit maxchars=32 width=100% name=heightpix/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (distance)</bold> - How wide the image is, in meters.
+		</td>
+		<td><edit maxchars=32 width=100% name=widthdist/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changedef>
+				<bold>Default color</bold><br/>
+				Click this to change the default color for the texture.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=defcolor/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=cached>
+			<bold>Store the image in every <xSN/> file that uses it</bold><br/>
+			If this <bold>is checked</bold> then the texture will be stored in every <xSN/> file that uses
+			it. Anyone that you give the file to will be able to see the texture. However, this
+			will make the <xSN/> files larger - sometimes by several hundred K per image texture.
+			<p/>
+			If this <bold>isn't checked</bold>, then your <xSN/> files will be smaller, but
+			the texture won't display on other computers.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button name=ok><bold>Add texture</bold></button>
+</p>

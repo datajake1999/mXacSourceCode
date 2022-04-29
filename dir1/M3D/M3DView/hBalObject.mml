@@ -1,0 +1,214 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Balustrade object"/>
+
+<xPageTitle>
+	Balustrade object
+</xPageTitle>
+
+<xSectionTitle>Creating a balustrade</xSectiontitle>
+
+<p>
+	Balustrades are automatically created for staircases and decks/porches. If you
+	wish to add a balustrade elsewhere in your house, try the following:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button and select the <bold>Building blocks</bold> menu
+		item.
+	</li>
+	<li>
+		Click on the <bold>Balustrades</bold> sub-category.
+	</li>
+	<li>
+		Look through the balustrade selections and <bold>click on</bold> one.
+	</li>
+	<p>
+		The dialog will close and the cursor will change to indicate that you're
+		inserting an object by dragging a line.
+	</p>
+	<li>
+		<bold>Click</bold> on the area of floor where the balustrade starts
+		and while still holding the mouse down, <bold>drag</bold> the mouse to
+		the end of the balustrade.
+	</li>
+	<p>
+		A new balustrade object will appear covering the area you clicked on.
+	</p>
+</ol>
+
+<xsectiontitle>Resizing the balustrade</xsectiontitle>
+
+<p>
+	To resize the balustrade, select the <xButtonObjControlNSEW/> tool and drag the
+	balustrade's control points around.
+</p>
+
+<xsectiontitle>Balustrade style</xsectiontitle>
+
+<p>
+	To change the style...
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the balustrade object.
+	</li>
+	<li>
+		In the "Balustrade/fence settings" page that appears, press
+		the <bold>Appearance</bold> dialog.
+	</li>
+	<li>
+		In the "Balustrade appearance" page scroll through the "Balustrade style" listbox
+		and <bold>select whichever balustrade</bold> you
+		wish. As soon as you select it the balustrade will be redrawn.
+	</li>
+	<li>
+		If you want a balustrade not shown on the list, select "Custom". Look in the
+		"See also" section for instructions on custom balustrades.
+	</li>
+	<li>
+		The rest of the "Balustrade appearance" page contains a number of settings for
+		how the balustrade interacts with the roofline and openings.
+	</li>
+</ol>
+
+<xsectiontitle>Openings</xsectiontitle>
+<p>
+	To create an opening in the balustrade (such as for a gate):
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the balustrade object.
+	</li>
+	<li>
+		In the "Balustrade/fence settings" page that appears, press
+		the <bold>Openings</bold> button.
+	</li>
+	<p>
+		In the "Balustrade openings" dialog you'll see a bird's eye view of the balustrade
+		including circles where the posts go.
+	</p>
+	<li>
+		To remove a section of the balustrade, <bold>click on a segment between the posts</bold>.
+	</li>
+	<p>
+		The 3D display will redraw the balustrade without the segment.
+	</p>
+	<li>
+		To make finer adjustments to the opening, <bold>close</bold> the page.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool and click on the balustrade.
+	</li>
+	<li>
+		In the "Which control points are displayed" page, check
+		the <bold>"Openings</bold> button.
+	</li>
+	<li>
+		<bold>Close the "Which control points are displayed"</bold> window.
+	</li>
+	<li>
+		Using the <xButtonSelIndividual/> tool, click on the balustrade to select it.
+	</li>
+	<p>
+		You will two control points, one at either end of the balustrade opening you
+		just created.
+	</p>
+	<li>
+		Using the <xButtonObjControlNSEW/> tool, drag the control points to the left
+		or right to widen or narrow the opening.
+	</li>
+</ol>
+
+
+<xsectiontitle>Corners and curves</xsectiontitle>
+
+<p>
+	To curve the balustrade, or to place a bend in it:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the balustrade object.
+	</li>
+	<li>
+		In the "Balustrade/fence settings" page that appears, press
+		the <bold>Corners</bold> button.
+	</li>
+	<p>
+		In the "Balustrade corners" dialog you'll see two bird's eye views of the balustrade.
+		The top one "Add/remove corners" allows you to add corners to the balustrade, or
+		in the case of curved balustrades, points of inflection. The lower view
+		titled "Curve the balustrade" lets you select what kind of curve is used in each
+		balustrade section.
+	</p>
+	<li>
+		To add a corner, <bold>click</bold> on the grey line in "Add/remove corners".
+		You will see a red circle appear indicating that the corner was added.
+	</li>
+	<li>
+		To move the newly created corner around, <bold>close</bold> the page.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool and click on the balustrade.
+	</li>
+	<li>
+		In the "Which control points are displayed" page, check
+		the <bold>"Corner"</bold> button.
+	</li>
+	<li>
+		<bold>Close the "Which control points are displayed"</bold> window.
+	</li>
+	<li>
+		Using the <xButtonSelIndividual/> tool, click on the balustrade to select it.
+	</li>
+	<p>
+		You will see control points at each of the corners in the balustrade.
+	</p>
+	<li>
+		Using the <xButtonObjControlNSEW/> tool, drag the control points around to
+		bend the balustrade.
+	</li>
+</ol>
+
+<p>
+	To curve the balustrade:
+</p>
+
+<ol>
+	<li>
+		<bold>Return to the "Balustrade/fence settings" dialog.</bold>
+	</li>
+	<li>
+		<bold>Press</bold> the "Corners" button.
+	</li>
+	<li>
+		In the "Corners" page, <bold>find</bold> the "Curve the balustrade" section.
+	</li>
+	<li>
+		<bold>Click on a section</bold> to change the type of curvature. The
+		color of the section will change to indicate what kind of curve is used.
+		The 3D image will also change. Continue clicking until you have the
+		desired curve.
+	</li>
+</ol>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:343>Customized balustrades</a></li>
+	<li><a href=r:346>Fencing</a></li>
+	<li><a href=r:279>Deconstructing building blocks</a></li>
+</xul>

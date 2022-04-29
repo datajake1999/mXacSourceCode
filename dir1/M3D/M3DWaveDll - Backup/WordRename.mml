@@ -1,0 +1,29 @@
+<?Include resource=500?>
+<PageInfo index=false title="Type in a word"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+
+<td>
+	<p>
+		Please type in the word you wish to add.
+	</p>
+	<bold><font color=#000000><xEditOneLine defcontrol=true maxchars=64 name=name/></font></bold>
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

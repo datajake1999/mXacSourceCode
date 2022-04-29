@@ -1,0 +1,27 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Index"/>
+
+<xPageTitle>
+	Index
+</xPageTitle>
+
+<p>
+	Use this page to search through the project's
+	documentation. <bold>Type in the index entry to look for:</bold>
+</p>
+
+<p align=right>
+	<edit defcontrol=true selall=true width=80% name=searchstring wordwrap=false multiline=false/>
+</p>
+
+<p>
+	<bold>Click</bold> on one of the matches to view the help topic:
+</p>
+
+<p align=center>
+	<small><listbox width=80% height=80% vscroll=searchscroll name=searchlist/></small>
+	<scrollbar orient=vert height=80% name=searchscroll/>
+</p>
+
+

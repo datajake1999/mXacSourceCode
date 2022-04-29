@@ -1,0 +1,675 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Master TTS Voice main page"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>></bold></big>
+</p>
+
+<p>
+	To produce a master <bold>TTS voice</bold> you must:
+</p>
+
+<ol>
+	<li>
+		You need to be running <bold>64-bit</bold> windows with a <bold>64-bit</bold> version
+		of this application. You will run out of memory if you are only running the
+		32-bit version.
+	</li>
+	<li>
+		Select the <bold>lexicon</bold> to use. <xSN/> is installed with a default
+		lexicon for American English (from Carnegie Mellon University); you'll
+		find this in the <xSN/> install directory. If you want to do speech recognition
+		in another language you'll either need to locate a lexicon for that
+		language (see <a href="http://www.mXac.com.au/m3d">http://www.mXac.com.au/m3d</a> for
+		a list of lexicons), create your own lexicon using the "mXac NLP Editor" (a huge
+		amount of work), or
+		use the English lexicon and type in phonetic representations of the non-English
+		words.
+	</li>
+	<li>
+		Press <bold>Change speech recognition training</bold> to select training
+		done on the person's voice who you'll be creating a TTS voice from.
+	</li>
+	<li>
+		Press the <bold>Identify common words</bold> button so that the TTS voice
+		can be recorded using the most common words that will be spoken.
+	</li>
+	<li>
+		Press the <bold>Recommend to-do list</bold> button so the training recommends words
+		and sentences to have you speak.
+	</li>
+	<li>
+		<bold>Record</bold> the recommended words and sentences. When you record
+		each sentence <xSN/> will the training to determine where each
+		phoneme begins and ends. You will need to review this for each sentence.
+	</li>
+	<li>
+		<bold>Edit</bold> any recorded sentences that didn't record well.
+	</li>
+	<li>
+		Press <bold>Analyze</bold> so that a TTS voice is created from the recorded voice.
+	</li>
+	<li>
+		Once all the data has been analyed,
+		press <bold>Save the text-to-speech voice</bold> in the review page.
+	</li>
+</ol>
+
+<p/>
+
+<p>
+	To produce a <bold>prosody model</bold> you must:
+</p>
+
+<ol>
+	<li>
+		Select the <bold>lexicon</bold> to use, as the same for a master TTS voice.
+	</li>
+	<p>
+		The lexicon should be a derived lexicon (not main) since you'll
+		need to <bold>add new words to the lexicon</bold> if they're used in
+		the prosody model.
+	</p>
+	<li>
+		Press <bold>Change speech recognition training</bold> to select training
+		done on the person's voice who you'll be creating a TTS voice from.
+	</li>
+	<li>
+		Add a list of sentences you expect to speak by
+		pressing the <bold>Add many items to to-do-list</bold>.
+	</li>
+	<li>
+		<bold>Record</bold> the recommended words and sentences. When you record
+		each sentence <xSN/> will the training to determine where each
+		phoneme begins and ends. You will need to review this for each sentence.
+	</li>
+	<li>
+		Press <bold>Analyze</bold> so that the prosody information will be created.
+	</li>
+	<li>
+		Once all the data has been analyed,
+		press <bold>Save the prosody model</bold> in the review page.
+	</li>
+	<li>
+		To use the prosody model with a different text-to-speech voice, you will
+		need to <bold>create a derived text-to-speech voice</bold> and load the
+		prosody model into the derived voice.
+	</li>
+</ol>
+
+<xbr/>
+
+<xsectiontitle>Lexicon and speech recognition</xsectiontitle>
+
+<xChoiceButton href=newmaster>
+	<bold>Change lexicon</bold><br/>
+	If you haven't already, you need to specify what lexicon TTS
+	will use. Since each language has a different lexicon, selecting the lexicon
+	will indirectly select the language to use.
+	<p/>
+	The lexicon is <bold><<<MASTERLEX>>></bold>.
+</xChoiceButton>
+
+
+<xChoiceButton href=newtrain>
+	<bold>Change speech recognition training</bold><br/>
+	You need to select the speech recognition training that you did for the person
+	whose voice is to be used for TTS. (If you haven't done this training then
+	see the Speech Recognition Training option at the start of the mXac NLP Editor.)
+	The speech recognition
+	training file should use the <bold>same lexicon</bold> as the lexicon you're
+	using for your training.
+	<p/>
+	The default training file is <bold><<<DEFTRAIN>>></bold>.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Quality settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Group phoneme recordings</bold> - For non-technical people, just choose the quality setting
+			that you want from the right.
+			(<bold>Make sure
+			to press "Recommend"</bold> after changing this option since you may need
+			more recordings with higher qualities.)
+			<p/>
+			If you have recorded less than 1000 sentences then stick with "Low quality, small
+			size" since you won't have enough recordings to do a good job of producing the
+			higher qualities. Use "Medium" for 1000-5000 sentences. 5000 and above calls for
+			"High quality".
+			<p/>
+			For technical people, here's an explanation: In "Low quality" there
+			are a maximum of about 16 x 60 x 16 phoneme ASR models since the left and right
+			phonemes are grouped into 16 categories. In "Medium quality" there are a maximum
+			of 40 x 60 x 40 ASR models. In "High quality" there can be as
+			many as 60 x 60 x 60 ASR models.
+			<p/>
+			<bold>If you change</bold> this value, press the "Recommend" button
+			to update the list.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><bold><combobox width=100% cbheight=100 name=triphonegroup>
+			<elem name=2>1 - High quality (5000+ sentences)</elem>
+			<elem name=1>2 - Medium (1000-5000 sentences)</elem>
+			<elem name=0>3 - Low quality (&lt; 1000 sentences)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum number of recordings per phoneme</bold> - A
+			recording of phoneme (given the surrounding phonemes)
+			must appear this many times before one of the recordings will
+			be used.
+			<p/>
+			If this is low then the voice quality will be erratic,
+			speaking some words really well and making mistakes in
+			others. If it is high, then the voice won't make mistakes,
+			but won't sound as natural.
+			<p/>
+			"3" is a good value. If you don't have many recordings (less than
+			2000 recordings), you might try a lower number such as "2".
+			Use "1" if you have less than 200 recordings.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><edit maxchars=32 width=100% name=minexamples/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of units</bold> - The more units, the better the voice will
+			sound, and the bigger it will be. 3000 is a small voice, while 30000 is a large voice.
+			<p/>
+			If you don't have enough recordings, or you have "Minimum number of
+			recordings per phoneme" high, the voice may not produce as many units
+			as you wish.
+			<p/>
+			If you set this to <bold>1000000</bold> then <bold>all of the units</bold> in
+			the voice will be kept, creating a very large voice with the best
+			possible quality.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><edit maxchars=32 width=100% name=totalunits/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Prosody from another TTS voice (.tts) or Prosody model (.mpm)</bold> - If your voice is small
+			(a thousand recordings or less), you may wish to add prosody (word
+			emphasis) information from another TTS voice, such as MikeRozak.tts.
+			(Do <bold>not</bold> have this TTS voice get prosody from itself since the
+			internal prosody model will keep increasing in size every iteration.)
+			<p/>
+			<bold>Not important</bold> for a prosody model. You can have one prosody model
+			include other prosody models, if you wish, but watch out for a prosody
+			model ultimately including itself.
+		</td>
+		<td>
+			<edit readonly=true maxchars=256 width=100% name=prosodytts0/><br/>
+			<p align=right><bold><button name=prosodyttsopen0>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts1/><br/>
+			<p align=right><bold><button name=prosodyttsopen1>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts2/><br/>
+			<p align=right><bold><button name=prosodyttsopen2>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts3/><br/>
+			<p align=right><bold><button name=prosodyttsopen3>Open...</button></bold></p>
+		</td>
+	</tr>
+	<comment><tr><td>
+		<xChoiceButton checkbox=true style=x name=wordstartendcombine>
+			<bold>Treat phonemes at start/end of word the same as those in the middle</bold><br/>
+			Usually, phonemes at the start or end of a word are remembered seperately
+			from phonemes within the word. However, if you don't have many recordings (1000 or less)
+			then this distinction results in too few copies of start/end word phonemes.
+			This makes it more difficult to choose a "best" copy to use in TTS, and
+			results in lower quality.
+			<p/>
+			As a general rule, check this if you have 1000 or fewer recordings.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</xChoiceButton>
+	</td></tr></comment>
+	<tr>
+		<td>
+			<bold>Time compression</bold> - This will reduce the size of a voice, but with a slight loss
+			in quality.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><bold><combobox width=100% cbheight=100 name=timecompress>
+			<elem name=0>1 - Best quality, largest (200 fames/sec)</elem>
+			<elem name=1>2 - Lower quality, small (100 fames/sec)</elem>
+			<elem name=2>3 - Low quality, smaller (66 frames/sec)</elem>
+			<elem name=3>4 - Lowest quality, smallest (50 frames/sec)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>PCM compression</bold> - Affects the size of your voice, but with a loss in
+			quality.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><bold><combobox width=100% cbheight=100 name=pcmcompress>
+			<elem name=2>1 - Raw PCM, biggest and best</elem>
+			<elem name=1>2 - ADPCM, medium size</elem>
+			<elem name=0>3 - No PCM stores, smallest</elem>
+		</combobox></bold></td>
+
+	</tr>
+	<tr>
+		<td>
+			<bold>Frequency compression</bold> - Affects the size of your voice, but with a loss in
+			quality.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</td>
+		<td><bold><combobox width=100% cbheight=100 name=freqcompress>
+			<elem name=1>1 - High quality, medium size (Full spectrum)</elem>
+			<elem name=2>2 - Low quality, smallest (Compressed spectrum)</elem>
+			<elem name=0>X - Test quality (not recommended to use), largest (Full spectrum + frame PCM)</elem>
+		</combobox></bold></td>
+
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=keeplog>
+			<bold>Keep log of what is spoken</bold><br/>
+			If turned on, text-to-speech will keep a log of the text that is has spoken. The
+			file will be a text file using the same name as the text-to-speech voice, but
+			with a ".txt" extension. Make sure to <bold>turn this off</bold> before shipping
+			your voice to customers though or you may needlessly fill their hard drive with
+			the log.
+			<p/>
+			Use this while you're developing your content since it will keep track of the
+			types of sentences spoken by the text-to-speech voice. These sentences can
+			be fed back into the text-to-speech and lexicon tools to determine what sentences
+			should be recorded for the text-to-speech voice and what words
+			need pronunciations.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=pauselessoften>
+			<bold>Pause less often than original recordings</bold><br/>
+			Some people record prompts very slowly, leaving pauses short (micro) pauses between
+			words. This improves the TTS voice intelligibility, but sounds unnatural
+			because of the stacatto speech.
+			<p/>
+			If you check this button, the TTS engine will speak with fewer micro-pauses than
+			the actual speaker, correcting this problem.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+<xSectionTitle>Common words</xSectionTitle>
+
+<p>
+	To improve quality, the TTS file maintains a recording of the most common words.
+	The more words recorded, the better TTS will sounds, but the larger the TTS file
+	and more sentences you will need to record for the voice.
+	You can control how many words will be recoded using the "Recording of
+	entire words" setting above.
+	Press the "Identify common words" button to scan a text file for the most
+	commonly used words.
+</p>
+
+<xChoiceButton name=comwords>
+	<bold>Identify common words</bold><br/>
+	Press this to read in a text file (of about 1 MB, or 200,000 words) that will be
+	scanned to determine the most common words. The common words are used for recommendation
+	and prosody.
+	<p/>
+	For TTS: After using this make sure to
+	press "Recommend" to update your list of recommended sentences. (You can use
+	the same text file for both identifying common words and recommending recordings.)
+	<p/>
+	This is also important for the prosody model.
+</xChoiceButton>
+
+<xbr/>
+<xSectionTitle>To-do list</xSectionTitle>
+
+<p>
+	Below is a list of sentences that you should record. You can record the sentences
+	by pressing "Record to-do list". <bold>If the list is empty</bold> and you haven't
+	yet recorded any sentences then press the "Recommend to-do list" button.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>To-do list</xtrheader>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=todoscroll sort=false name=todo/></big>
+		<scrollbar height=40% orient=vert name=todoscroll/>
+		<br/><status border=0 width=80% height=25 name=todocount>0 entries</status>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Look for word</bold> - If you type in a word then only those
+			sentences using the word will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=todotextfilter/></font></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Recommend recordings of each sound or word</bold> - Because your speech is often
+			flawed (with phonemes blurred together, mispoken, or voice cracking) the
+			"Recommend" feature has you record several versions of the same sound and
+			uses only the best one.
+			<p/>
+			This setting lets you control how many versions
+			of the sound the recommend feature has you speak. Use "1" to get a voice
+			up and running. A high quality voice will require "10" or
+			"20".
+			<p/>
+			<bold>If you change</bold> this value, press the "Recommend" button
+			to update the list.
+		</td>
+		<td><edit maxchars=32 width=100% name=mininstance/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=todorecommend>
+			<bold>Recommend to-do list</bold><br/>
+			If your to-do list is empty then press this button; <xSN/> will recommend a series
+			of sentences for you to record so that TTS will be able to synthesize your
+			voice.
+			<p/>
+			A dialog box will ask you to provide a text file (.txt) that contains sample text.
+			It should be a large file (about 1 MB or 100,000 words.)
+			"Recommend" will use this text to determine what sentences to record. The more text
+			and the closer the text is to what your TTS voice will speak, the better the results.
+			<p/>
+			If you don't like any of the recommended sentences (perhaps
+			because they are words you don't know how to pronounce) then remove the bad sentences and press
+			"Recommend to-do list" again to recommend replacements.
+			<p/>
+			<bold>Tip:</bold> Before you recommend sentences you may want to run the text file
+			through your lexicon (also using the mXac NLP Editor) to see what (if any) words
+			in the text file are missing pronunciations, and add the pronunciations. Words
+			without pronunciations will <bold>not</bold> be added to the recommend list.
+			<p/>
+			<bold>Not important</bold> for a prosody model.
+		</xChoiceButton>
+		<xChoiceButton name=todoaddmany>
+			<bold>Add many items to to-do list</bold><br/>
+			To use this, you need a text file with one sentence per line. This will add all the
+			sentences to the to-do list after verifying that there aren't any unknown or
+			misspelled words. Sentences already in the to-do or recordings list won't be added.
+			<p/>
+			Use this to create a <bold>prosody model</bold> that's designed to ensure the
+			given phrases/sentences sound as good as possible.
+		</xChoiceButton>
+		<xChoiceButton name=todoadd>
+			<bold>Add item to to-do list</bold><br/>
+			This adds the following sentence to the to-do list: (Don't use an abbreviations,
+			numbers, or symbols since <xSN/> might make a mistake when determining how they
+			are spoken.)
+		</xChoiceButton>
+		<xEditOneLine name=todoaddedit/>
+		<xChoiceButton name=todoremove>
+			<bold>Remove the selected sentence</bold><br/>
+			Deletes the selected sentence from the to-do list.
+		</xChoiceButton>
+		<xChoiceButton name=todoclearall>
+			<bold>Clear the to-do list</bold><br/>
+			Removes all sentences from the to-do list.
+		</xChoiceButton>
+		<xChoiceButton name=clearmisspelled>
+			<bold>Clear the misspelled words list</bold><br/>
+			This clears the list of known misspelled words. There are <<<MISSPELLED>>> entries. Sentences
+			containing words in this list which are passed into "Add many items to to-do list" are
+			automatically ignored.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xbr/>
+<xSectionTitle>Record</xSectionTitle>
+
+
+<xChoiceButton name=recordall>
+	<bold>Record all of the sentences in the to-do list</bold><br/>
+	Pressing this button will have you record each sentence in the to-do list, one
+	by one. You will be able to stop recording at any time, even if you haven't
+	completed the entire list.
+	<p/>
+	Make sure to speak clearly and at a normal speaking pace.
+</xChoiceButton>
+
+<xChoiceButton name=recordsel>
+	<bold>Record the selected sentence in the to-do list</bold><br/>
+	Lets you record only one sentence at a time. Make sure to select the sentence
+	from the to-do list.
+	<p/>
+	Make sure to speak clearly and at a normal speaking pace.
+</xChoiceButton>
+
+
+
+<xbr/>
+
+<xSectionTitle>Recordings</xSectionTitle>
+
+<p>
+	Below is a list of recordings (of your voice) that will be used to
+	simulate your voice. TTS needs
+	recordings containg samples of all of the phonemes, the phonemes in context
+	of other phonemes, and the most common words. While you can add recordings
+	yourself using the provided buttons, the most common way to add recordings
+	of your voice is through the "Recommendations" section.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Recordings</xtrheader>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=recscroll sort=false name=rec/></big>
+		<scrollbar height=40% orient=vert name=recscroll/>
+		<br/><status border=0 width=80% height=25 name=recordcount>0 entries</status>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Look for word</bold> - If you type in a word then only those
+			files with a recording of the word will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=textfilter/></font></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Look for speaker</bold> - If you type in a speaker's name then only those
+			files with a recording of the speaker will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=speakerfilter/></font></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=rerecord>
+			<bold>Re-record the select wave</bold><br/>
+			Use this to re-record a wave that is spoken incorrectly.
+		</xChoiceButton>
+		<xChoiceButton name=edit>
+			<bold>Edit the selected recording with the wave editor</bold><br/>
+			This brings up the wave editor so you can double-check that the phonemes'
+			start and end are correct.
+		</xChoiceButton>
+		<xChoiceButton name=add>
+			<bold>Add one or more recordings</bold><br/>
+			Press this to add one or more wave files (of your voice) that you have
+			already recorded. The wave files should already have their phoneme locations
+			marked. (Most people will add recordings using the "Recommendations" section.
+		</xChoiceButton>
+		<xChoiceButton name=remove>
+			<bold>Remove the selected recording</bold><br/>
+			Pressing this will remove the selected recording from the list that speech
+			recognition uses to train. It will <bold>not</bold> delete the actual file.
+		</xChoiceButton>
+		<xChoiceButton name=clearall>
+			<bold>Clear all recordings</bold><br/>
+			Removes all the recordings from your list.
+		</xChoiceButton>
+		<xChoiceButton name=segmentempty>
+			<bold>Detect phoneme start and stop in newly recorded audio</bold><br/>
+			If you just made new recordings and had the recording session skip
+			the speech-recognition review process (to make it faster), then you
+			may need to do the phoneme detection now (which is slow). If
+			so, press this button.
+			<p/>
+			You can change the <bold>start and stop percentage</bold> to
+			only do some of your wave files at a time, since this may take a long time.
+		</xChoiceButton>
+		<p align=right><bold>
+			Start percent: <edit width=33% maxchars=32 text=0 name=resegstart/><br/>
+			Stop percent: <edit width=33% maxchars=32 text=100 name=resegend/>
+		</bold></p>
+		<xChoiceButton name=resegment>
+			<bold>Re-detect phoneme start and stop</bold><br/>
+			This re-detects where the phonemes start in stop in the listed audio files.
+			Use this if you train a new speech recognition file and wish to use the
+			new training for phoneme detection. <bold>Warning:</bold> Not only
+			is this slow, but
+			it <bold>will erase</bold> any changes you have made to the phoneme or
+			word timing.
+			<p/>
+			If you hold down <bold>control</bold> when pressing this button then
+			the analsys will <bold>not</bold> re-detect your phoneme start/stop,
+			but it <bold>will</bold> recalculate the acoustic features.
+			<p/>
+			You can change the <bold>start and stop percentage (above)</bold> to
+			only do some of your wave files at a time, since this may take a long time.
+		</xChoiceButton>
+		<xChoiceButton name=redovowels>
+			<bold>Fine-tune vowels</bold><br/>
+			The greatest difference between different dialects of a language is
+			in the vowels. As an old song goes: "You say toe-may-toe, I say
+			toe-ma-toe." The lexicon probably includes many of these variations,
+			but not all. This is problematical for generating a TTS voice since
+			a discrepency in pronunciation will either mean that the recording
+			of the phoneme is ignored (if you're lucky), or improperly used (if
+			you're unlucky).
+			<p/>
+			Once you have added all your sentences to the TTS voice (at least 1000 of them), and have
+			already detected the phoneme start and stop, you can press this
+			button to fine-tune the vowels, looking for (and hopefully fixing)
+			issues like "toe-may-toe" vs "toe-ma-toe". Warning: This is
+			a fairly slow process.
+			<p/>
+			You can change the <bold>start and stop percentage (above)</bold> to
+			only do some of your wave files at a time, since this may take a long time.
+			<p/>
+			The results are saved to c:\temp\MNLPRedoVowels.txt.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xSectionTitle>Recordings EXCLUDED from prosody model</xSectionTitle>
+
+<p>
+	Some recordings are of nonsense sentences because they're
+	intended to learn the sound of a voice, NOT its prosody.
+	You should add these recordings to this list (excluded recordings)
+	so they don't affect the prosody model.
+</p>
+
+<p>
+	Used for making a text-to-speech voice only.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Recordings EXCLUDED from prosody model</xtrheader>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=recexscroll sort=false name=recex/></big>
+		<scrollbar height=40% orient=vert name=recexscroll/>
+		<br/><status border=0 width=80% height=25 name=recordexcount>0 entries</status>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=addex>
+			<bold>Add one or more recordings</bold><br/>
+			Press this to add one or more wave files. There's no point adding
+			a wave file unless it ALSO APPEARS in the list of recordings.
+		</xChoiceButton>
+		<xChoiceButton name=removeex>
+			<bold>Remove the selected recording</bold><br/>
+			Pressing this will remove the selected recording from the list of
+			excluded recordings. It will <bold>not</bold> delete the actual file.
+		</xChoiceButton>
+		<xChoiceButton name=clearallex>
+			<bold>Clear all recordings</bold><br/>
+			Removes all the recordings from your list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Analyze</xSectionTitle>
+
+<p>
+	Once you have recorded all the recommended phrases, you need to press the "Analyze" button
+	(below) so that <xSN/> will learn what your voice sounds like from the recorded files.
+</p>
+
+<xChoiceButton href=train>
+	<bold>Analyze</bold><br/>
+	Pressing this will cause <xSN/> to analyze the recordings you have made and learn
+	what your voice sounds like. Once all the data has been analyzed a text-to-speech
+	voice and/or prosody model will be created.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Miscellaneous</xSectionTitle>
+
+<p>
+	These are tools that you probably won't use:
+</p>
+
+<xChoiceButton href=joincosts>
+	<bold>Calculate target costs</bold> (slow)<br/>
+	An internal tool used to calculate the target costs of units for the beam search.
+	Only run this if your voice has <bold>5000 or more</bold> sentences.
+	This writes the output into the TTS working file, as well as c:\temp\JoinCosts.txt.
+</xChoiceButton>
+
+<blockquote>
+<xChoiceButton name=deljoincosts>
+	<bold>Delete calculated target costs</bold><br/>
+	If this button is enabled then you have already calculated target costs for
+	this voice. Pressing this button will delete the target costs and cause
+	TTS to use default target costs values.
+</xChoiceButton>
+</blockquote>
+
+<xChoiceButton name=saverectranscript>
+	<bold>Save the transcript of the recordings to a text file</bold><br/>
+	This saves the transcript (text spoken) of the recordings to
+	c:\temp\SaveRecTranscript.txt. You can use this to check out-of-lexicon
+	words by sending the text file to "Recommend words that
+	need pronunciations" in the lexicon editor.
+</xChoiceButton>
+
+<xChoiceButton name=import2008>
+	<bold>Import recordings for Blizzard 2008</bold><br/>
+	Blizzard 2008 comes with an "Utts.Data" file that contains a list of lines
+	with "(roger_0000 "`Ahem!' said the Mouse with an important air, `are you all ready?")".
+	This parses the line, and writes the text into the .wav file.
+	From here, just add the wave files to the project as regular.
+</xChoiceButton>
+
+<xChoiceButton name=import2009mandarin>
+	<bold>Import recordings for Blizzard 2009 - Mandarin</bold><br/>
+	The Blizzard 2009 mandarin voice comes with an "ProText.Data" file that contains a list of files.
+	For each file, the first line is an digit number, like "00000005". The second line is chinese characters.
+	The third line is pinyin, like "ju4liao2jie3tian1jin1shi4". This reads in the wave file (with .wav added)
+	and attached the pinyin text, with spaces between the syllables.
+	From here, just add the wave files to the project as regular.
+</xChoiceButton>
+

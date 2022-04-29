@@ -1,0 +1,113 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Foundation"/>
+
+<p>
+	This page lets you specify what type of foundation the building block uses and
+	information specific to the foundation.
+</p>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Foundation type</xtrheader>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=check radiobutton=true group=none,piers,perimiter,pad,basement name=none/>
+		</td>
+		<td width=80%>
+			<bold>None</bold> - Leave the structure floating in mid air.
+		</td>
+	</tr>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=check radiobutton=true group=none,piers,pad,perimiter,basement name=piers/>
+		</td>
+		<td width=80%>
+			<bold>Piers</bold> - The lowest floor is built on piers.
+		</td>
+	</tr>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=check radiobutton=true group=none,piers,pad,perimiter,basement name=pad/>
+		</td>
+		<td width=80%>
+			<bold>Cement pad</bold> - The lowest floor is only slightly above ground level and
+			built upon a cement pad. (If the lowest floor is above ground level you will need
+			to make the pad thicker.)
+		</td>
+	</tr>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=check radiobutton=true group=none,piers,pad,perimiter,basement name=perimiter/>
+		</td>
+		<td width=80%>
+			<bold>Perimeter</bold> - The structure's perimeter is supported by a wall of cement
+			blocks or formed concrete that goes descends below ground level.
+			<p/>
+			What <bold>elevation</bold> does the perimeter go down to? (This is usually a negative
+			number that's a meter or more below ground level, depending upon the frost level
+			of the area.)
+			<br/>
+			<xEditOneLine name=perimdepth/>
+		</td>
+	</tr>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=check radiobutton=true group=none,piers,pad,perimiter,basement name=basement/>
+		</td>
+		<td width=80%>
+			<bold>Basement</bold> - The structure contains a basement beneath. The basement's
+			floor is a cement bad. (To change the elevation of the basement floor visit
+			the "Floors" page.
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Foundation wall thickness</xtrheader>
+	<tr><td>
+		The foundation wall thickness information is used for the basement walls (if
+		there's a basement) or if the foundation is a perimeter of cement blocks
+		or concrete, this the the thickness of that.
+		<p/>
+		<xChoiceButton style=x checkbox=true name=foundwall>
+			<bold>Use normal walls instead of foundation walls</bold><br/>
+			Check this if the structure has a perimeter or basement, <bold>and</bold> the
+			normals walls are cement block, stone, or other material suitable for a foundation.
+			If checked, this will ignore the "Foundation wall thickness" settings and make
+			one continuous wall from above the ground to underneath.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 200mm thick cement, enter "200mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>External cladding thickness</bold> - Thickness of the cladding on the
+			on the outside.
+			For example: If it's 8mm thick cement render, enter "8mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Internal cladding thickness</bold> - Thickness of the cladding on the inside
+			the building block.
+			For example: If it's 8mm thick cement render, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>

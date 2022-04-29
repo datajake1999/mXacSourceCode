@@ -1,0 +1,128 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "3D Outside the Box"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "M3DEffect.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""3D Outside the Box""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""M3DEffect.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "..\\Macros.mml"
+IDR_MMLTEMPLATEBACK     MML                     "..\\TemplateBack.mml"
+IDR_MMLEFFECTOUTLINE    MML                     "EffectOutline.mml"
+IDR_MMLEFFECTFOG        MML                     "EffectFog.mml"
+IDR_MMLEFFECTLIBRARY    MML                     "EffectLibrary.mml"
+IDR_MMLEFFECTRENAME     MML                     "EffectRename.mml"
+IDR_MMLEFFECTSLIST      MML                     "EffectsList.mml"
+IDR_MMLEFFECTSADD       MML                     "EffectsAdd.mml"
+IDR_MMLEFFECTCOLOR      MML                     "EffectColor.mml"
+IDR_MMLEFFECTFOGHLS     MML                     "EffectFogHLS.mml"
+IDR_MMLEFFECTPOSTERIZE  MML                     "EffectPosterize.mml"
+IDR_MMLEFFECTBLUR       MML                     "EffectBlur.mml"
+IDR_MMLEFFECTFILMGRAIN  MML                     "EffectFilmGrain.mml"
+IDR_MMLEFFECTTV         MML                     "EffectTV.mml"
+IDR_MMLEFFECTHALFTONE   MML                     "EffectHalfTone.mml"
+IDR_MMLEFFECTGLOW       MML                     "EffectGlow.mml"
+IDR_MMLEFFECTSPYGLASS   MML                     "EffectSpyglass.mml"
+IDR_MMLEFFECTRELIEF     MML                     "EffectRelief.mml"
+IDR_MMLEFFECTPAINTING   MML                     "EffectPainting.mml"
+IDR_MMLEFFECTOUTLINESKETCH MML                     "EffectOutlineSketch.mml"
+IDR_MMLEFFECTWATERCOLOR MML                     "EffectWatercolor.mml"
+IDR_MMLEFFECTAUTOEXPOSURE MML                     "EffectAutoExposure.mml"
+IDR_MMLEFFECTCOLORBLIND MML                     "EffectColorBlind.mml"
+IDR_MMLEFFECTDOF        MML                     "EffectDOF.mml"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

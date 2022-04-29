@@ -1,0 +1,8 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="List property definitions"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Property definitions</xtrheader>
+	<<<$LIBLIST>>>
+</xtablecenter>

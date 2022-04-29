@@ -1,0 +1,102 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bypassing building blocks and using Basic structures"/>
+
+<xPageTitle>
+	Bypassing building blocks and using "Basic structures"
+</xPageTitle>
+
+<p>
+	Building blocks are good ways of getting a building up quickly. They are
+	fairly flexible in what they can build, but they can't build everything.
+	If you have a building that won't work well with building blocks then
+	you should look into the <bold>Basic structures</bold> sections
+	in <xButtonObjNew/>. With these you should be able to build
+	practically anything.
+</p>
+
+<p>
+	The basic structures are divided into floors, walls (internal and external),
+	ceilings, and roofs. Internally, the building blocks use the basic structures
+	objects for their construction, although it's hidden by the user
+	interface design. You can't get to them from the building blocks
+	unless you <xButtonObjDeconstruct/> the building block.
+</p>
+
+<p>
+	All of the basic structures are really just one thing: A surface that
+	can be bent, streched, and have bits cut out of. (Technically called a two
+	dimensional spline.) With this you can build just about anything.
+</p>
+
+<p>
+	I won't discuss the step-by-step instructions for building a house (or part of
+	it) using basic structures because most of the steps will be fairly obvious
+	to experienced users of <xSN/>, and there's decent documentation within the
+	dialog box of the basic structure. (Most of the basic structure's
+	functionality and documentation is accessed through the <xButtonObjDialog/> tool.)
+	I will give you some tips:
+</p>
+
+<xul>
+	<li>
+		The reason that basic structures are difficult to use is that they're too
+		flexible; not just in a bendy kind-of sense, but in the number of features
+		offered by them. You'll find that besides being offered a large number of ways
+		to shape them, providing all the shaping information (and there can be a lot)
+		requires moving a lot of control points around.
+	</li>
+	<li>
+		After you create the appropriate structural element (floor, wall, roof, etc.),
+		you need to place it in space. This will involved the movement
+		tools: <xButtonMoveNSEWUD/>, <xButtonMoveNSEW/> and <xButtonMoveUD/>, and the
+		rotation tools: <xButtonMoveRotZ/> and <xButtonMoveRotY/>.
+	</li>
+	<li>
+		If you want your surface to be curved: Go into <xButtonObjDialog/> and <bold>"Add or remove
+		control points"</bold>. The more control points you have, the more curving
+		you can get. To specify the type of curvature between the control point,
+		click on the <bold>"Specify curvature"</bold> button.
+	</li>
+	<li>
+		To move the curve's control points around, first make sure they're
+		visible by using the <xButtonObjControlDialog/> tool. (When you move
+		the control points you may find that there are unacceptable constraints on
+		their movement. If so, see <bold>"Specify curvature"</bold> and turn
+		off the constraints.) Of course, move the control points
+		using <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/> and <xButtonObjControlUD/>.
+	</li>
+	<li>
+		All of the basic structural elements are initially rectangular. To change
+		their shape, use the <xButtonObjDialog/> tool and visit
+		the <bold>"Edges"</bold> or <bold>"Cutouts"</bold> sections. They're two different
+		ways of accomplishing virtually the same task. The only real difference is that:
+		Edges are for the outer edge of the surface and come with an accompanying
+		border (around the object) drawn between the top and bottom surfaces of the
+		structure. Cutouts are more flexible, can be used in the middle of the
+		surface, and don't include an edge. The instructions in the
+		dialog should be self explanatory.
+	</li>
+	<li>
+		If you want different portions of your basic structure to have different textures,
+		use the <xButtonObjDialog/> tool and look at the <bold>"Overlays"</bold> section.
+		You'll be able to create overlay regions (which can contain different colors)
+		and shape them by moving control points.
+	</li>
+	<li>
+		Basic structural elements also include options for setting the floor levels
+		(important when embedding doors since doors place themselves even with
+		the floor), and framing.
+	</li>
+</xul>
+
+<xbr/>
+
+<xSectionTitle>See also...</xSectionTitle>
+
+<xul>
+	<li><a href=r:305>Curved walls, roofs, and floors</a></li>
+	<li><a href=r:304>Overlaying textures on walls, roofs, and floors</a></li>
+	<li><a href=r:303>Wall, roof, and floor edges</a></li>
+	<li><a href=r:302>Wall, roof, and floor thickness</a></li>
+</xul>

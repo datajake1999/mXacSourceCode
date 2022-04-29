@@ -1,0 +1,40 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice disguising, quick"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice disguising, quick</xtrheader>
+	<tr>
+		<td>
+			<p>
+				To begin your voice diguise, we'll have
+				you <bold>record</bold> a short sentence so that
+				you'll be able to hear what the disguise sounds like.
+			</p>
+			
+			<p>
+				<bold>Type in the sentence(s) that
+				you would like to speak</bold>.
+			</p>
+			
+			<p>
+				<bold><edit width=100% maxchars=256 defcontrol=true name=transcript/></bold>
+			</p>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle name=next>
+				<bold>Next, record your voice</bold><br/>
+				Once you have typed in what you wish to speak, pressing next will
+				pull up the recording page so you can record the sentence yourself.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=nextfile>
+				<bold>Next, load your recording from a file</bold><br/>
+				Press this if you have a recording of voice you wish to diguise.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

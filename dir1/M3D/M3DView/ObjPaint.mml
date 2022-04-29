@@ -1,0 +1,74 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Change color or texture"/>
+
+<listbox name=schemes width=90% height=200 vscroll=lbscroll sort=false>
+	<elem name=custom>
+		<font color=#000040><bold>Custom color or texture</bold></font><br/>
+		<align parlineindent=32 wrapindent=32><small>The object uses its own color
+		and texture. Any changes you make will only affect this object.</small></align>
+	</elem>
+</listbox>
+<scrollbar name=lbscroll orient=vert width=10% height=200/>
+<br/>
+<p align=right>
+	<button href=addscheme>
+		<bold>Add scheme...</bold>
+		<xHoverHelp>
+			Click on this to add a new scheme. This will allow you to change the colors
+			of several objects at once.
+		</xHoverHelp>
+	</button>
+	<button href=help>
+		<bold>Help</bold>
+		<xHoverHelp>
+			Color schemes can be a bit confusing. Clear here to learn more about them.
+		</xHoverHelp>
+	</button>
+</p>
+
+<xbr/>
+
+<table width=100% innerlines=0>
+	<xtrHeader>Color or texture?</xtrheader>
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=x radiobutton=true group=solidcolor,texture name=solidcolor/>
+		</td>
+		<td width=80% valign=top>
+			<xStatusColor posn=edgeright width=33% href=changecolor name=csolid/>
+			<bold>Solid color</bold> - Selecting this will set the object or scheme to
+			use a solid color. <a href=changecolor>To change the color click this.</a>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width=20% valign=top align=center>
+			<button style=x radiobutton=true group=solidcolor,texture name=texture/>
+		</td>
+		<td width=80% valign=top>
+			<image width=33% height=33% border=4 bordercolor=#000000 hbitmap=<<<HBITMAP>>> posn=edgeright name=image/>
+			<bold>Texture</bold> - Apply a texture to the surface, such as wallpaper,
+			brick-effects, etc. <a href=changetexture>To change the texture click this.</a>
+		</td>
+	</tr>
+</table>
+
+<xtablecenter width=100%>
+	<xtrheader>Advanced</xtrheader>
+	<tr>
+		<td>
+			<bold>Material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Does not affect some textures. Need to have
+			"Shadows" image quality to see most effects.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>

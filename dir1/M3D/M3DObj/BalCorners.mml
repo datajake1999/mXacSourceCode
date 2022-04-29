@@ -1,0 +1,143 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Balustrade corners"/>
+
+<p>
+	This page lets you add or remove corners points to the balustrade.
+	(Details below.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Add/remove corners</xtrheader>
+	<tr><td>
+		<p>
+			Click on a grey edge to split into two, or click on a red corner to
+			delete it and merge the adjacent edges.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=edgeaddremove>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Curve the balustrade</xtrheader>
+	<tr><td>
+		<p>
+			Click on an edge to cycle the curvature through: <font color=#c0c0c0>
+			Straight,</font> <font color=#8080ff>Curved,</font> <font color=#ffc0c0>
+			Semi-circle (next),</font> <font color=#c04040>Semi-circle (previous),
+			</font> <font color=#40c040>Semi-ellipse (next),</font> <font color=#004000>
+			Semi-ellipse (previous)</font>. <italic>The coloration tells you what kind of
+			curve is used.</italic>
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollrowx scrollroty=scrollrowy name=edgecurve>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollrowx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollrowy height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Misc. settings</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=looped>
+			<bold>Looped</bold><br/>
+			If you have three or more corners you can make loop the balustrade in on itself.
+			This is useful for enclosing spaces.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<p>
+	The shape of a balustrade based on two or more control points, with edges drawn
+	between each of the corners.
+</p>
+
+<p>
+	To add/remove corners:
+</p>
+
+<xul>
+	<li>
+		Look for an edge in the 3D display above that's roughly where you want to make
+		your changes. Click on it (the grey part) and a new corner will be
+		inserted.
+	</li>
+	<li>
+		Every time you add or remove a corner in this dialog you should
+		also see the control point appear in the balustrade. If you don't then the balustrade object
+		may not be selected (try doing this).
+	</li>
+	<li>
+		Close this dialog and drag the corner(s) around until you have
+		the desired shape for the balustrade.
+	</li>
+	<li>
+		You may need to return to this page to add more corners.
+	</li>
+</xul>
+
+<p>
+	By default, all the edges will be "straight". If you want them curved then
+	use the "Curve the balustrade" section on this page. Click on an edge until it uses
+	the type of curve you want. The curves are color-coded so you know which one
+	you're using.
+</p>
+
+<p>
+	The types of curves are:
+</p>
+
+<xul>
+	<li>
+		<bold>Straight</bold> - The "curve" really isn't a curve, but is a straight line.
+	</li>
+	<li>
+		<bold>Curved</bold> - Technically it's called a Hermite bi-cubic patch, but just
+		think of it as being a curve that isn't circular.
+	</li>
+	<li>
+		<bold>Semi-circle (next)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the edge
+		are used, and a third one is also included, the next point over. The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-circle (previous)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the edge
+		are used, and a third one is also included, the previous point. The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (next)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		edge, and the next point over.
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (previous)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		edge, and the previous point.
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+</xul>
+

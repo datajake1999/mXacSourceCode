@@ -1,0 +1,142 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - clipping"/>
+
+<xPageTitle>
+	Tutorial - clipping
+</xPageTitle>
+
+<xSectionTitle>Looking at individual floors</xSectionTitle>
+
+<p>
+	You may have noticed that you've spent most of your time looking at the outside
+	of the building, and unless you used the walkthrough view, you haven't
+	easily been able to see what's inside.
+</p>
+
+<p>
+	Here's how to look inside:
+</p>
+
+<ol>
+	<li>
+		Switch to the <xButtonView3D/> view.
+	</li>
+	<li>
+		Using <xButtonViewFlatQuick/>, look from the "South-west (elevated)".
+	</li>
+	<li>
+		Click on the <xButtonClipLevel/> button and a menu will appear.
+	</li>
+	<li>
+		Select <bold>"Ground floor"</bold>.
+	</li>
+	<li>
+		The top of the house will suddenly be chopped off. If you want to see it
+		whole again, go back to <xButtonClipLevel/> and chose <bold>"All"</bold>.
+		You can also chose other floors or even the basement, but since you probably
+		don't have them you won't see much.
+	</li>
+</ol>
+
+<xSectionTitle>Clipping to a line</xSectionTitle>
+
+<p>
+	When you used the <xButtonClipLevel/> button you were really creating
+	a <bold>clipping plane</bold>. A clipping plane is computer graphics jargon meaning
+	that it's an imaginary plane (flat surface) running through the house. Everything
+	on one side of it is hidden. In the case of the "View a level" tool, the plane
+	was set to floor levels, and everything above the floor level was hidden.
+</p>
+
+<p>
+	Here are some other neat tricks you can use to cut-away sections of the house
+	to see inside:
+</p>
+
+<ol>
+	<li>
+		If you haven't already, click on <xButtonClipLevel/> and select "All". (You
+		don't have to though; <xSN/> supports several clipping planes at the same time.
+		It's just that for the purposes of the tutorial it might get a bit confusing
+		with several clipping planes running around.)
+	</li>
+	<li>
+		Press <xButtonViewFlatQuick/> and choose "From above".
+	</li>
+	<li>
+		Select the <xButtonClipLine/> tool.
+	</li>
+	<li>
+		Click someplace on the roof, and holding the mouse button down, move the mouse
+		up.
+	</li>
+	<li>
+		You'll see a red line appear; everything (including the grass) will disappear to
+		the right of the line. The red line is the clipping plane seen from edge on.
+		Everything to the right of the line has been clipped out.
+	</li>
+	<p>
+		The line will follow the mouse pointer as it's moved around. When you
+		lift up the mouse button your view will be moved so it looks perpendicular to
+		the clip plane. (If you hold the control-key down when lifting up the
+		view will not be changed.)
+	</p>
+	<li>
+		Go back to <xButtonViewFlatQuick/> and look at the house from some other
+		directions. As you see, part of the house has been cut away and you can
+		see inside it.
+	</li>
+	<li>
+		To stop clipping, just select the <xButtonClipLine/> tool and click on a
+		point in the screen. Don't drag this time though; let the mouse button up
+		immediately. The clipping plane will be removed.
+	</li>
+</ol>
+
+<xSectionTitle>Clipping based on a point</xSectionTitle>
+
+<p>
+	Sometimes you want even more control over the location and orientation of the clipping plane.
+</p>
+
+<ol>
+	<li>
+		Press <xButtonViewFlatQuick/> and choose "From above".
+	</li>
+	<li>
+		Select the <xButtonClipPoint/> tool.
+	</li>
+	<li>
+		Click in the middle of one of the flat roof panels. No need to drag this time.
+	</li>
+	<li>
+		A dialog, "Clip based on a point" will appear. It has a number of options to
+		choose from.
+	</li>
+	<li>
+		Try playing with several of the options and see what happens. Changes
+		will immediately occur.
+	</li>
+	<li>
+		Close the dialog when you're finished.
+	</li>
+	<li>
+		To stop clipping, just select the <xButtonClipLine/> tool and click on a
+		point in the screen. Don't drag this time though; let the mouse button up
+		immediately. The clipping plane will be removed.
+	</li>
+</ol>
+
+<p>
+	When you get time (not now) you may want to check out
+	the <xButtonClipSet/> button. It will bring up a well-documented dialog box
+	that gives you even more control over clipping.
+</p>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:350><bold>Next</bold></button>
+</p>
+

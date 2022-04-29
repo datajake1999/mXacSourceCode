@@ -1,0 +1,65 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Increase drawing speed"/>
+
+<p>
+	<xSN/> uses several tricks to make drawing speed faster. Some of these
+	cause drawing problems once in awhile, so this page lets you
+	turn them on/off.
+</p>
+
+<xtablecenter width=100%>
+	<tr>
+		<td width=66%>
+			<bold>Resolution</bold> - The resolution of the image is the number of pixels
+			across. The fewer pixels across, the faster drawing times. <xSN/> can
+			reduce the resolution for faster drawing.
+		</td>
+		<td width=33% valign=center>
+			<bold><combobox name=resolution width=100% cbheight=100>
+				<elem name=1>Full <italic>(slowest)</italic></elem>
+				<elem name=2>Half</elem>
+				<elem name=3>One third <italic>(fastest)</italic></elem>
+			</combobox></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Back-face culling</bold> - If this is on then portions of objects
+			facing away from the viewer won't even be drawn. Normally this optimization
+			is never noticed. However, you'll see it if you draw the image as wire-frame,
+			walk inside an object, or adjust the clipping plane so you can see inside
+			an object.
+		</td>
+		<td width=33% valign=center>
+			<bold><button style=x checkbox=true name=backface>On</button></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Desired detail (in pixels)</bold> - <xSN/> can really only draw flat
+			surfaces, so when it draws a curved object it breaks it into many small,
+			flat ones. It keeps dividing the object up until the flat sections are
+			about this many pixels across. Typing in a low number will make a smooth
+			looking image but decrease drawing speed.
+		</td>
+		<td width=33% valign=center>
+			<edit maxchars=32 width=100% name=detail/>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Maximum detail (in metric or English)</bold> - (Continued from
+			"Desired detail".) If the camera zooms in really close to an object though,
+			there's no point providing too much detail. This setting is the smallest
+			that a curve will be divided up into, in metric or English measurements.
+		</td>
+		<td width=33% valign=center>
+			<edit maxchars=32 width=100% name=maxdetail/>
+		</td>
+	</tr>
+</xtablecenter>
+

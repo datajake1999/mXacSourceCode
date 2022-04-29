@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - saving"/>
+
+<xPageTitle>
+	Tutorial - saving
+</xPageTitle>
+
+<xSectionTitle>File functions</xSectionTitle>
+
+<p>
+	This might be a good time to save the work you've put into the tutorial so
+	far. Just click the <xButtonSave/> button and type in a file name.
+</p>
+
+<p>
+	Not to state the obvious, but the file buttons are:
+</p>
+
+<xul>
+	<li>
+		<xButtonNew/> - Create a new file.
+	</li>
+	<li>
+		<xButtonOpen/> - Create a file you created or a sample. Alternatively, you can
+		find the file using Windows and double-click it.
+	</li>
+	<li>
+		<xButtonSave/> and <xButtonSaveAs/> - Save the file.
+	</li>
+</xul>
+
+<xSectionTitle>Clipboard buttons</xSectionTitle>
+
+<p>
+	On a similar note, there's the clipboard. I won't say too much about this since
+	everyone knows how to use the clipboard. <xSN/> is just like the other applications:
+</p>
+
+<ol>
+	<li>
+		Select one or more objects using <xButtonSelIndividual/> or <xButtonSelRegion/>.
+	</li>
+	<li>
+		Use <xButtonCut/> or <xButtonCopy/>. <xButtonDelete/> will remove the objects
+		but <bold>won't</bold> copy them to the clipboard.
+	</li>
+	<li>
+		Either in the current <xSN/> file (or another one), press <xButtonPaste/>.
+	</li>
+	<li>
+		The cursor will change to let you know you're pasting. Click on the location
+		where you want to place the object.
+	</li>
+	<li>
+		Since it's not always obvious to <xSN/> where exactly you want the object, you may
+		need to move or rotate it after pasting it.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:281><bold>Next</bold></button>
+</p>
+

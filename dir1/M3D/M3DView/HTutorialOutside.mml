@@ -1,0 +1,35 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - outside"/>
+
+<xPageTitle>
+	Tutorial - outside
+</xPageTitle>
+
+<p>
+	Now that you have finished building the house and its interior, you may
+	want to turn your attention to landscaping.
+</p>
+
+<p>
+	Because you should have gotten the hang of <xSN/> by now, I won't lead you through
+	creating outdoor objects step by step. Instead, you can browse through the
+	"See also" section for some objects that interest you.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:288><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:432>Column objects</a></li>
+	<li><a href=r:346>Fencing</a></li>
+	<li><a href=r:459>Pathways, roads, and planting beds</a></li>
+	<li><a href=r:462>Pools, ponds, sinks, and bathtubs</a></li>
+	<li><a href=r:339>Staircases</a></li>
+	<li><a href=r:460>Tarps and sails</a></li>
+</xul>

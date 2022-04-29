@@ -1,0 +1,136 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Cushion settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Shape of the cushion.
+		</td>
+		<td><bold><ComboBox width=100% cbheight=150 name=shape>
+			<elem name=0><font color=#800000>Custom</font></elem>
+			<elem name=6>Arm rest</elem>
+			<elem name=5>Circular</elem>
+			<elem name=3>L-shaped</elem>
+			<elem name=1>Rectangular</elem>
+			<elem name=2>Rectangular, pinched</elem>
+			<elem name=4>T-shaped</elem>
+		</ComboBox></bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=custom href=custom>
+			<bold>Modify custom shape</bold><br/>
+			Displays a dialog that lets you control how the cushion curves between the
+			edge control points. You need to have the "Custom" shape selected to use this.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Type in a number for the cushion thickness.
+			If you use "0" then there won't be a middle piece connecting the top and bottom.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=thick/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Detail</bold> - Cushions are subdivided into small squares when drawing
+			of approximately this size. The smaller this number, the smoother the cushion
+			looks, but the slower it is too draw.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=detail/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bulge thickness for top/bottom</bold> - This slider affects how thick the cushion
+			bulges out on the top and bottom.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=0 name=bulge0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bulge slope for top/bottom</bold> - How quickly the bulge reaches
+			maximum thickness as it slopes in from the edges.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=bulgedist0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bulge thickness for sides</bold> - This slider affects how thick the cushion
+			bulges out on the sides.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=0 name=bulge1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bulge slope for sides</bold> - How quickly the bulge reaches
+			maximum thickness as it slopes in from the edges.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=bulgedist1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rounded</bold> - Changing this sliders affects how rounded the edges
+			of the cushion are.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=0 name=rounded/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Buttons</xtrheader>
+	<tr><td>
+		<xSN/> can draw button indents in the pillow. Change the following to affect the
+		buttons. To see the buttons, you must have at least one row and one column.
+		The buttons will be centered around the "Center" of the cushion, which
+		can be moved using the control points.
+		You may need to decrease the "detail" measurement in order to see the
+		buttons clearly.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Columns</bold> - Number of columns of buttons.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=buttonnumx/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rows</bold> - Number of rows of buttons.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=buttonnumy/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Column separation</bold> - Distance between each column of buttons.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=buttondist0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Row separation</bold> - Distance between each row of buttons.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=buttondist1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Staggering</bold> - How the buttons are arranged.
+		</td>
+		<td><bold><ComboBox width=100% cbheight=150 name=buttonstagger>
+			<elem name=1>Even rows are offset</elem>
+			<elem name=0>Grid</elem>
+			<elem name=2>Odd rows are offset</elem>
+		</ComboBox></bold></td>
+	</tr>
+</xtablecenter>

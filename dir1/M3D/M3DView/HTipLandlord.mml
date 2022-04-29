@@ -1,0 +1,28 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for landlords"/>
+
+<xPageTitle>
+	Tips for landlords
+</xPageTitle>
+
+<p>
+	One of the worst aspects of being a landlord is finding a new tennant. Anything
+	that makes that job less time consuming is a bonus. My suggestion for using <xSN/>
+	is:
+</p>
+
+<xul>
+	<li>
+		Take photos of your rental and put them up on a web page. Have your ads
+		list your web page. People interested in your property will check out your
+		web page first, hopefully reducing the number of walkthroughs you
+		need to do with potential renters.
+	</li>
+	<li>
+		If you're really ambitious, model your rental in <xSN/>. Include that file
+		on your web page. Your computer-literate renter could do a virtual walkthrough
+		first, or even see how his/her furtniture might fit.
+	</li>
+</xul>
+

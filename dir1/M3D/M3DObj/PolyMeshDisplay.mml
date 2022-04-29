@@ -1,0 +1,99 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape,divide,hide,merge name=scale>
+	<bold>Size</bold><br/>
+	Use this to control the width, height, and depth of the poly-mesh.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape,divide,hide,merge name=shape>
+	<bold>Shape</bold><br/>
+	This lets you control the the location of each of the poly-mesh's vertices.
+	To modify a morph, use the <xButtonObjAttrib/> tool and set all mesh values to 0, except
+	the one you wish to modify, which should be set to 1.
+	(See below to adjust the movement constraints)
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape,divide,hide,merge name=divide>
+	<bold>Divide the side</bold><br/>
+	Use this to add more detail to a polygon mesh.
+	This displauy mode shows a control point for each side. Clicking on the
+	control point will subdivide the side into
+	more sides.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape,divide,hide,merge name=hide>
+	<bold>Show/hide side</bold><br/>
+	Click on the green control point to show or hide the side.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=scale,shape,divide,hide,merge name=merge>
+	<bold>Merge sides</bold><br/>
+	Click on the red control point to remove the vertex and merge all the sides together.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Editing regions</xtrheader>
+	<tr><td>
+		When you are displaying control points for "Shape", "Show/hide side", "Merge sides",
+		and "Divide the side", polygon mesh objects can have thousands of control points.
+		Since displaying so
+		many could obscure the object, <xSN/> displays only the control points for
+		a small region in the polygon mesh. To modify a different region than the
+		one currently displaying the control points click on one of
+		the <bold>white triangles</bold> using the <xButtonObjControlNSEWUD/> tool.
+		<p/>
+		If you want to enlarge or shrink the size of the region then adjust the following
+		sliders:
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Region size</bold> - Enlarges or shrinks the number of control points
+			shown for a region.
+		</td>
+		<td>
+			<scrollbar orient=horz min=1 max=15 width=100% name=region/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance between regions</bold> - Controls the number of "triangles" shown
+			on the object, providing you with finer or coarser control of the region
+			you're editing.
+		</td>
+		<td>
+			<scrollbar orient=horz min=3 max=10 width=100% name=density/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Options</xtrheader>
+	<tr><td>
+		<bold>Drag size</bold> - When you drag one "Shape" control point, the nearby points
+		will also be pulled. To change how far "nearby" is, type a new distance in below.
+		If want to move only the point you drag, type in "0".
+		<xEditOneLine name=dragsize/>
+	</td></tr>
+	<tr><td>
+		<bold>Symmetry</bold> - If you check any of the three symmetry options below, any
+		changes you make to one side of the object will also affect the other. This is useful
+		for creating people or animals, since then in the act of creating one side you
+		also create the other.
+		<br/>
+		<xChoiceButton checkbox=true style=x name=sym0>
+			<bold>Left and right symmetry</bold><br/>
+			Changes to the left/right side affect the right/left side also.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=sym1>
+			<bold>Front and back symmetry</bold><br/>
+			Changes to the front/back side affect the back/front side also.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=sym2>
+			<bold>Top and bottom symmetry</bold><br/>
+			Changes to the top/bottom side affect the bottom/top side also.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

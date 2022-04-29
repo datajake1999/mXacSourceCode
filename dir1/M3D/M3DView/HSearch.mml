@@ -1,0 +1,29 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Search"/>
+
+<xPageTitle>
+	Search
+</xPageTitle>
+
+<p>
+	Use this page to search through <xLN/>'s
+	documentation. <bold>Type in the text string you want to search for:</bold>
+</p>
+
+<p align=right>
+	<edit defcontrol=true selall=true width=80% name=searchstring wordwrap=false multiline=false/>
+</p>
+
+<p>
+	And press <button accel=enter href=searchbutton>Search</button> to run the search.
+</p>
+
+<p>
+	Search results:
+</p>
+
+<p align=center>
+	<listbox width=80% height=80% vscroll=searchscroll name=searchlist/>
+	<scrollbar orient=vert height=80% name=searchscroll/>
+</p>

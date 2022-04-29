@@ -1,0 +1,52 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<p>
+	Building blocks have several different types of control points. Displaying all of
+	them at once would make the building block too busy, so only one type of control
+	point is displayed at a time. Use this page to select which one.
+</p>
+
+<p>
+	This page only shows the control points for overlays in the side you clicked on. If you
+	want to see control points for overlays from othersides, exit this dialog and click
+	on another side.
+</p>
+
+<null>
+	<<<$DISPLAY>>>
+</null>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrHeader>Roof control-point constraints</xtrheader>
+	<tr><td>
+		Each roof style provides you with many control points that you can use
+		to change the shape of the roof. Moving control points in some directions will
+		produce non-orthodox results (such as sloping ridge lines instead of level
+		ridge lines.) Initially, control point movement is constrained so that lines
+		will be parallel, etc. However, if you want complete freedom you can turn off
+		the constraints.
+		<p/>
+		<xChoiceButton style=check radiobutton=true group=constnorm,constreduced,constnone name=constnorm>
+			<bold>Normal constraints</bold><br/>
+			You can move the control points around in ways that produce generally normal
+			roof shapes. Moving one control point will often cause others to move.
+			Some control points will not move at all.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=constnorm,constreduced,constnone name=constreduced>
+			<bold>Reduced constraints</bold><br/>
+			In general, control points can be moved in any direction. Moving a control point will
+			often cause others to be moved.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=constnorm,constreduced,constnone name=constnone>
+			<bold>No constraints</bold><br/>
+			Control points can be moved in any direction and without affecting other control
+			points. <bold>Warning:</bold> Without any constraints you can twist the roof
+			into shapes it can't handle; If you do this, the roof will "break" and bits will disappear or
+			not intersect with the rest of the roof properly.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

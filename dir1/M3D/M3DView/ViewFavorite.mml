@@ -1,0 +1,31 @@
+<?Include resource=500?>
+<PageInfo index=false title="Favorite camera angle name"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+<td>
+
+<p>
+	Type in the <bold>name of the new favorite camera angle</bold> to add and press "Add".
+</p>
+
+<font color=#000000><xEditOneLine defcontrol=true maxchars=60 name=scheme/></font>
+
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			Add
+		</button>
+	</td>
+</tr></table>
+
+</font>

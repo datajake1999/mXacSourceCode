@@ -1,0 +1,48 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Rivers and streams"/>
+
+<xPageTitle>
+	Rivers and streams
+</xPageTitle>
+
+<p>
+	The "pathway" object can also be used to create rivers and streams.
+</p>
+
+<p>
+	To add a river or stream to your landscape:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined river or stream that is closest to
+		your needs. Look under "Water" in "Outdoors".
+	</li>
+	<li>
+		<bold>Add</bold> it to your landscape. Most river objects will allow you to click
+		at the start of the river, drag to where the river ends, creating a straight
+		river in-between.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool move the river's control points
+		around. You can change the direction that the river takes or it's width.
+	</li>
+	<li>
+		If you don't have enough control points to curve the river the way you wish,
+		use the <xButtonObjDialog/> tool and click on the river. In the "Pathway settings"
+		dialog box, press <bold>"Modify path shape"</bold> and add or remove control
+		points, or change the curvature of the river.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:459>Pathways, roads, and planting beds</a></li>
+</xul>

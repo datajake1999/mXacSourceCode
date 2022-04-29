@@ -1,0 +1,124 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Curtain and blind settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>General settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Style</bold> - Style of the curtains/blinds.
+		</td>
+		<td><bold><ComboBox width=100% cbheight=150 name=shape>
+			<elem name=41>Blinds, cloth, hanging</elem>
+			<elem name=60>Blinds, retractable, both sides</elem>
+			<elem name=61>Blinds, retractable, left</elem>
+			<elem name=62>Blinds, retractable, right</elem>
+			<elem name=63>Blinds, retractable, hanging</elem>
+			<elem name=42>Blinds, Roman</elem>
+			<elem name=40>Blinds, Venetian</elem>
+			<elem name=50>Blinds, vertical, both sides</elem>
+			<elem name=51>Blinds, vertical, left</elem>
+			<elem name=52>Blinds, vertical, right</elem>
+			<elem name=10>Curtain, both sides</elem>
+			<elem name=11>Curtain, left</elem>
+			<elem name=12>Curtain, right</elem>
+			<elem name=20>Drapes, both sides</elem>
+			<elem name=30>Drapes, hanging</elem>
+			<elem name=21>Drapes, left</elem>
+			<elem name=22>Drapes, right</elem>
+		</ComboBox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance from wall</bold> - Distance that the curtain/drape
+			hangs out from the wall.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=fromwall/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Fabric settings</xtrheader>
+	<tr><td>
+		Some of these settings may be disabled for some style curtains and blinds.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Distance between ripples</bold> - The size of the folds in the
+			fabirc. A larger number makes
+			the cloth look like a heavier fabric.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=ripplesize/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hanging drapery ties</bold> - Number of places to tie up the hanging
+			drapery.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=hangdivide/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tie location</bold> - Location of the drapery tie.
+		</td>
+		<td><scrollbar orient=horz width=100% min=5 max=95 pos=50 name=tiev/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tie tightness</bold> - How tightly the drapes are tied when they
+			are completely open.
+		</td>
+		<td><scrollbar orient=horz width=100% min=1 max=50 pos=25 name=tieh/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sagging</bold> - How much hanging draperies sag.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=25 name=hangsag/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extra fabric</bold> - The amount of extra fabric used for the
+			curtains or drapes.
+		</td>
+		<td><scrollbar orient=horz width=100% min=100 max=300 pos=150 name=clothextra/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extra compressability</bold> - The further to the left, the more a fabric's
+			ripples can be compressed. The cloth looks thinner when the slider is to the left.
+		</td>
+		<td><scrollbar orient=horz width=100% min=5 max=50 pos=50 name=compressability/></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Louver settings</xtrheader>
+	<tr><td>
+		Some of these settings may be disabled for some style curtains and blinds.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Blade size</bold> - Size of the louver blades.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=bladesize/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blade angle</bold> - Angle of the louver blades.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=bladeangle/>
+		</td>
+	</tr>
+</xtablecenter>

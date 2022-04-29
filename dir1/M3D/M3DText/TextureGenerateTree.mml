@@ -1,0 +1,96 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Tree"/>
+
+<p>
+	This page lets you specify information about the tree, such as the ring size.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tree rings</xtrheader>
+	<tr>
+		<td>
+			<bold>Ring thickness</bold> - Amount of wood the tree puts on in a year, the
+			smaller this number the finer the grain.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringthickness/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton href=noise0>
+			<bold>Bumps 1 (Noise)</bold><br/>
+			Use this to add bumps to the tree, so the tree rings aren't perfectly regular.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton href=noise1>
+			<bold>Bumps 2 (Noise)</bold><br/>
+			Use this to add bumps to the tree, so the tree rings aren't perfectly regular.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Knots</xtrheader>
+	<tr>
+		<td>
+			<bold>Number of knots per square meter</bold> - Some woods have more knots
+			than other.
+		</td>
+		<td><edit maxchars=64 width=100% name=numknotspermeter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum knot width</bold> - Size of the knot.
+		</td>
+		<td><edit maxchars=64 width=100% name=knotwidthmin/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum knot width</bold> - Size of the knot.
+		</td>
+		<td><edit maxchars=64 width=100% name=knotwidthmax/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Where the cut is made</xtrheader>
+	<tr><td>
+		When the tree is cut up, the location and orientation of the board within the tree
+		affects how the grain shows. This texture effect assumes that the board is cut a
+		certain distance from the center of the log (radius), and that it may be somewhat
+		to the left or right of that center (offset minimum and maximum).
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Radius</bold> - Distance from the center of the tree where the cut
+			for the board is made.
+		</td>
+		<td><edit maxchars=64 width=100% name=radius/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Offset minimum</bold> - Minimum offset (negative numbers to the left)
+			for where the tree is cut. This should be less than the radius.
+		</td>
+		<td><edit maxchars=64 width=100% name=logcenterxoffsetmin/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Offset maximum</bold> - Maximum offset (positive numbers to the right)
+			for where the tree is cut. This should be less than the radius.
+		</td>
+		<td><edit maxchars=64 width=100% name=logcenterxoffsetmax/></td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,27 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Library description"/>
+
+<null><<<$READONLY>>></null>
+
+<xtablecenter width=100%>
+	<xtrheader>Description</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the library.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the library that can be used for help.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% <<<$LIBREADONLY>>> height=200 maxchars=200000 wordwrap=true multiline=true name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+

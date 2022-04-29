@@ -1,0 +1,40 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Head-of-hair control points"/>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Brush size</bold> - When you change a hair-length (by shaping it, lengthening it,
+			or deleting it), adjacent hair-lengths will also be affected. This slider affects
+			low large this affect is. Moving the slider to the right will increase the area of effect.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=brushsize/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>End hair weight</bold> - This affects the hair's ends when you pull the roots of
+			the hair. If all the way to the right, the hair ends act like they're stiff wires, while
+			to the left they act like they're stuck in space.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=endhairweight/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Density of hairs</bold> - Move the slider to the right to increase the density
+			of the hair-lengths. <bold>Warning:</bold> Changing this slider will erase <bold>all</bold> existing
+			hair-lengths.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=20 name=density/>
+		</td>
+	</tr>
+</xtablecenter>
+

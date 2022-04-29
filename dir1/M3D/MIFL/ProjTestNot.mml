@@ -1,0 +1,13 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Test compiled code"/>
+
+<p>
+	You haven't compiled the code yet.
+</p>
+
+<xChoiceButton href=compall>
+	<bold>Test compile the entire project</bold><br/>
+	Tries compiling only the entire project, looking for errors.
+</xChoiceButton>
+

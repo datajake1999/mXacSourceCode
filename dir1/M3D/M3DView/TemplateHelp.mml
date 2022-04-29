@@ -1,0 +1,48 @@
+<colorblend posn=background tcolor=#ffffe0 bcolor=#e0e0b0/>
+<small><align tab=24>
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=leftarrow href=back accel=alt-b>
+			<u>B</u>ack
+		</button></font>
+	</td>
+	<td width=33% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=teapot href=r:239 accel=alt-h>
+			<u>H</u>ome
+		</button></font>
+	</td>
+	<td width=33% valign=center align=right lrmargin=8 tbmargin=0>
+		<font color=#c0c0c0><big><italic>
+			<xSN/> Help
+		</italic></big></font>
+	</td>
+</tr>
+</table>
+<br/>
+
+<?TemplateSubst?>
+
+<br/>
+
+
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=33% valign=center align=left lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+		</button></font>
+	</td>
+	<td width=33% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button href=r:237 accel=alt-s>
+			<u>S</u>earch
+		</button></font>
+	</td>
+	<td width=33% valign=center align=center lrmargin=0 tbmargin=0>
+	</td>
+</tr>
+
+</table>
+</align></small>

@@ -1,0 +1,213 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Creating a new texture"/>
+
+<xPageTitle>
+	Creating a new texture
+</xPageTitle>
+
+
+<p>
+	<xSN/> comes installed with several hundred textures. Inevitably, you will need
+	a texture that isn't available in the library.
+</p>
+
+<p>
+	There are three basic ways to create a new texture:
+</p>
+
+<xul>
+	<li>
+		<bold>Bitmap or JPEG</bold> - Either take a photo of the surface with a digital camera
+		or a purchase/download professionally produced texture image.
+	</li>
+	<li>
+		<bold>Copy and modify an existing texture</bold> - Find a texture in <xSN/>'s library
+		that is close to what you want. Then, duplicate it and modify the duplicate.
+	</li>
+	<li>
+		<bold>From scratch</bold> - Create a new texture from scratch.
+	</li>
+</xul>
+
+<xsectiontitle>Bitamp or JPEG</xsectiontitle>
+
+<p>
+	You can either use a bitmap or JPEG you created yourself from your digital camera
+	or scanner, or can buy or download one from the Internet. Just seach on the
+	Internet for "3D textures" or "CAD textures".
+</p>
+
+<p>
+	To create a new texture from a JPEG or bitmap image that you have acquired:
+</p>
+
+<ol>
+	<li>
+		The image <bold>must be repeatable</bold>. In other words, the image you
+		provide to <xSN/> must contain at least one whole section of the pattern such that
+		if you were to duplicate the image and lay the two side by side their edges
+		would meet smoothly.
+	</li>
+	<li>
+		The image should also be <bold>fairly small</bold>, only a few hundred
+		pixels by a few hundred pixels. If it's too large then it will take a lot
+		of memory.
+	</li>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select <bold>"Textures"</bold> in the menu that appears.
+	</li>
+	<li>
+		In the "Texture library" dialog box that appears, select
+		the <bold>"Major category"</bold> and <bold>"Minor category"</bold> that
+		best classifies your texture.
+	</li>
+	<li>
+		Press the <bold>"Create a new texture from scratch"</bold> button.
+	</li>
+	<li>
+		In the "Create a new texture from scratch" dialog, press
+		the <bold>"Use .BMP or .JPG file"</bold> button.
+	</li>
+	<li>
+		In the "Bitmap or JPEG image" dialog, press the <bold>"Browse"</bold> button
+		to load your image from disk.
+	</li>
+	<p>
+		Your image will appear in the "Sample" section, tiled so that a 1 meter x 1 meter
+		section is displayed.
+	</p>
+	<li>
+		If you want your image to be smaller or larger, type in a new <bold>Width</bold> and
+		then <bold>click on</bold> the image to refresh the display.
+	</li>
+	<li>
+		Select a <bold>"Material"</bold> at the bottom of the page. This affects how
+		glossy/shiny your new texture will be, and if it will be transparent or not.
+	</li>
+	<li>
+		Press the <bold>Back</bold> button in the "Bitmap or JPEG image" page.
+	</li>
+	<li>
+		You will be asked if you want to save the changes to your texture.
+		Press <bold>Yes</bold>
+	</li>
+	<p>
+		Your texture will be added to the list as "New texture".
+	</p>
+	<li>
+		To rename your texture, press <bold>"Rename the selected texture"</bold>.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>Copy and modify an existing texture</xsectiontitle>
+
+<p>
+	To copy and modify an existing texture:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select <bold>"Textures"</bold> in the menu that appears.
+	</li>
+	<li>
+		In the "Texture library" dialog box that appears, select
+		the <bold>"Major category"</bold> and <bold>"Minor category"</bold> that
+		best classifies your texture.
+	</li>
+	<li>
+		Find an existing texture that's closest to what you want
+		and <bold>select</bold> it from the list.
+	</li>
+	<li>
+		Press the <bold>"Copy and modify the selected texture"</bold> button.
+	</li>
+	<li>
+		The page will change so you can modify the texture. For information
+		about how to do this, see <a href=r:405>Modifying a texture</a>.
+	</li>
+	<li>
+		To rename your texture, press <bold>"Rename the selected texture"</bold>.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>From scratch</xsectiontitle>
+
+<p>
+	Creating a texture from scratch is the most difficult of the three options, so
+	I generally recommend that you use one of the other two.
+</p>
+
+<p>
+	To create a new texture from scratch:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select <bold>"Textures"</bold> in the menu that appears.
+	</li>
+	<li>
+		In the "Texture library" dialog box that appears, select
+		the <bold>"Major category"</bold> and <bold>"Minor category"</bold> that
+		best classifies your texture.
+	</li>
+	<li>
+		Press the <bold>"Create a new texture from scratch"</bold> button.
+	</li>
+	<li>
+		In the "Create a new texture from scratch" dialog, select
+		whicher texture creator sounds most appropriate and <bold>press</bold> the button.
+	</li>
+	<li>
+		The page will change so you can modify the texture. For information
+		about how to do this, see <a href=r:405>Modifying a texture</a>.
+	</li>
+	<li>
+		To rename your texture, press <bold>"Rename the selected texture"</bold>.
+	</li>
+</ol>
+
+<xSectionTitle>Dsitributing textures publicly</xSectionTitle>
+
+<p>
+	All the custom textures you make are stored in the "Library", just like any
+	of your custom objects. You don't have to worry about creating a file name for them.
+	Plus, if you create a custom texture and put it in a house, and then E-mail the
+	house to someone, they will also get the custom texture along with the house.
+	It's all included in the one file.
+</p>
+
+
+<p>
+	If you create a library of objects that you want to share with
+	your friends, coworkers, or anyone on the Internet, just create a house (or a bare
+	patch of grass for that matter) that has at least one copy of each of the
+	custom objects you want to share. Save the <xSN/> file and distribute it.
+	When someone opens the file all your custom objects will automatically be
+	copied into their library. From then on they can use them.
+	If you have a library of objects you want to publicly distribure, E-mail me
+	at <xMyEmail/> so I can include your web site on a list of "Places to
+	find custom objects" that I will include on my web page.
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:406>Materials</a></li>
+	<li><a href=r:405>Modifying a texture</a></li>
+</xul>

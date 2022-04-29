@@ -1,0 +1,85 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Blur"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Blurring</xtrheader>
+	<tr>
+		<td>
+			<bold>Blurriness</bold> - This controls how blurry the image will appear.
+			(Technically it's the width of the standard deviation as a percentage of
+			the screen width, but most people won't know what this means.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurwidth/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Accuracy</bold> - Usually use "2", but if you want to create a
+			"glow" around bright highlights and reflections, set this to "10" or
+			greater, but make sure to have "Blurriness" be very small, like 0.1.
+			(Technically, this is the number of standard deviations in radius
+			before the gaussian is clipped to 0.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blursize/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Scale saturated</bold> - If a color (red, green, or blue) is completely
+			saturated, then scale the brightness by this amount. You can use
+			this to create a "glow" around lights and highlights. (This
+			scaling is ignored in ray tracing because ray tracing uses HDRI already.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=scalesaturated/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Depth of field (kind of...)</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=blurrange>
+			<bold>Blur only the given range</bold><br/>
+			If checked, only those pixels between the closest and furthest range (from the
+			camera) will be blurred.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Closest range</bold> - Pixels closer than this range will <bold>not</bold> be
+			blurred.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurzmin/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Furthest range</bold> - Pixels furhter than this range will <bold>not</bold> be
+			blurred.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurzmax/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the blur effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

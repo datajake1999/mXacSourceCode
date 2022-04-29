@@ -1,0 +1,101 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Door/window handle"/>
+
+<p>
+	This page lets you specify what kind of doorknob (or handle) is on each side of
+	the door, and if there is a kickboard.
+</p>
+
+<!xComboKnobType>
+	<combobox cbheight=150 width=100% sort=false macroattribute=1>
+		<elem name=30><bold>Cabinet handle 1</bold></elem>
+		<elem name=31><bold>Cabinet handle 2</bold></elem>
+		<elem name=32><bold>Cabinet handle 3</bold></elem>
+		<elem name=33><bold>Cabinet handle 4</bold></elem>
+		<elem name=34><bold>Cabinet handle 5</bold></elem>
+		<elem name=35><bold>Cabinet handle 6</bold></elem>
+		<elem name=36><bold>Cabinet handle 7</bold></elem>
+		<elem name=1><bold>Doorknob</bold></elem>
+		<elem name=2><bold>Doorknob with deadbolt</bold></elem>
+		<elem name=11><bold>Handle, curved</bold></elem>
+		<elem name=12><bold>Handle, commercial 1</bold></elem>
+		<elem name=13><bold>Handle, commercial 2</bold></elem>
+		<elem name=14><bold>Handle, commercial 3</bold></elem>
+		<elem name=15><bold>Handle, commercial 4</bold></elem>
+		<elem name=16><bold>Handle, commercial 5</bold></elem>
+		<elem name=17><bold>Handle, commercial 6</bold></elem>
+		<elem name=18><bold>Handle, commercial 7</bold></elem>
+		<elem name=3><bold>Lever</bold></elem>
+		<elem name=4><bold>Lever with deadbolt</bold></elem>
+		<elem name=0><font color=#800000><italic><bold>None</bold></italic></font></elem>
+		<elem name=5><bold>Pocket-door handle</bold></elem>
+		<elem name=21><bold>Push plate 1</bold></elem>
+		<elem name=22><bold>Push plate 2</bold></elem>
+		<elem name=6><bold>Sliding-door handle</bold></elem>
+	</combobox>
+</xComboKnobType>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Doorknob settings</xtrheader>
+	<tr>
+		<td>
+			<bold>"Pull" side</bold> - Select the doorknob style.
+		</td>
+		<td><xcomboknobtype name=dkstyle0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>"Push" side</bold> - Select the doorknob style.
+		</td>
+		<td><xcomboknobtype name=dkstyle1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - The vertical distance of the
+			doorknob from the ground.
+		</td>
+		<td><edit maxchars=32 width=100% name=dklocv/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance from edge</bold> - The horizontal distance of the
+			doorknob from the edge of the door.
+		</td>
+		<td><edit maxchars=32 width=100% name=dkloch/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rotation</bold> - Rotate the knob by this many degrees.
+		</td>
+		<td><edit maxchars=32 width=100% name=knobrotate/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=kick0>
+			<bold>Kickboard on the "pull" side</bold><br/>
+			If checked, a kickboard will be drawn on the pull side.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=kick1>
+			<bold>Kickboard on the "push" side</bold><br/>
+			If checked, a kickboard will be drawn on the push side.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Kickboard height</bold> - Height of the kickboard,
+			if used.
+		</td>
+		<td><edit maxchars=32 width=100% name=kickv/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Kickboard indent</bold> - If there is a kickboard,
+			this is the distance from the left and right edges, along
+			with the bottom.
+		</td>
+		<td><edit maxchars=32 width=100% name=kickh/></td>
+	</tr>
+</xtablecenter>

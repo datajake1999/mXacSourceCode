@@ -1,0 +1,51 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Grid from point"/>
+
+<p>
+	The point you just clicked on is at:
+</p>
+<xul>
+	<li>
+		Location: <bold><<<NEWEW>>></bold> EW, <bold><<<NEWNS>>></bold> NS, <bold><<<NEWUD>>></bold> UD
+	</li>
+	<li>
+		Orientation: <bold><<<NEWLO>>></bold> degrees longitude
+	</li>
+</xul>
+
+<p/>
+
+<p>
+	<bold>Click on one or more</bold> of the following options:
+</p>
+
+<xtablecenter width=100%>
+<xtrheader>Options</xtrheader>
+<tr><td>
+<xChoiceButton style=x checkbox=true name=transx>
+	<bold>Use the EW location</bold><br/>
+	Use the EW location where you clicked (<bold><<<NEWEW>>></bold>) instead of the
+	old location, <<<OLDEW>>>.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=transy>
+	<bold>Use the NS location</bold><br/>
+	Use the NS location where you clicked (<bold><<<NEWNS>>></bold>) instead of the
+	old location, <<<OLDNS>>>.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=transz>
+	<bold>Use the UD (vertical) location</bold><br/>
+	Use the UD location where you clicked (<bold><<<NEWUD>>></bold>) instead of the
+	old location, <<<OLDUD>>>.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=rotz>
+	<bold>Use the longitude</bold><br/>
+	Use the longitude from where you clicked (<bold><<<NEWLO>>> degrees</bold>) instead of the
+	old longitude, <<<OLDLO>>> degrees.
+</xChoiceButton>
+
+</td></tr>
+</xtablecenter>

@@ -1,0 +1,146 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Jaw settings"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Jaw</xtrheader>
+	<tr>
+		<td>
+			<bold>Extra detail</bold> - The jaw and tongue will be drawn with more detailed the
+			closer the camera is to it. However, you may wish more than the default detail.
+			You can use this setting to add extra detail to jaw/tongue that need it.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=userdetail>
+			<elem name=0>None</elem>
+			<elem name=1>4x the polygons</elem>
+			<elem name=2>16x the polygons</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=lowerjaw>
+			<bold>This is a lower jaw</bold><br/>
+			Only lower jaws can inclue a tongue. If unchecked, this is an upper jaw.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Teeth settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Embed teeth in gums</bold> - This is the distance (meters or feet) to embed
+			teeth into the gums.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=teethdeltaz/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=teethsymmetry>
+			<bold>Symmetry</bold><br/>
+			If checked, then any changes made to one tooth will automatically affect
+			its opposite tooth.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Individual teeth</xtrheader>
+	<<<$TOOTH>>>
+	<tr><td>
+		<xChoiceButton href=newtooth>
+			<bold>Add a new tooth</bold><br/>
+			This adds a new tooth to the end of the jaw. If symmetry is on then two
+			teeth will be added.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Tongue</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=tongueshow>
+			<bold>Draw a tongue</bold><br/>
+			If checked, a tongue will be drawn and automatically connected to the
+			lip-sync attributes for it. Usually the tongue is only drawn attached
+			to the lower jaw, not the upper.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the tongue at the back of the mouth.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tonguesize0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length</bold> - Length of the tongue.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tonguesize1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the tongue at the back of the mouth.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tonguesize2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Roof of mouth height</bold> - This is the height that the tip of the
+			tongue is raised when lip-sync requires it to touch the roof of the mouth.
+			Test with the "LipSyncMusc:TongueUp".
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=tonguelimit0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tongue back</bold> - This is how far back the tongue can go when
+			the lip-sync attribute, "LipSyncMusc:TongueForward".
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=tonguelimit1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tongue roundness</bold> - Controls how round the tongue is at its tip.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=tonguesize3/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton href=mirrorlr>
+			<bold>Mirror left to right</bold><br/>
+			Pressing this deletes all the teeth on the right side, and mirrors all the teeth
+			from the left.
+		</xChoiceButton>
+		<xChoiceButton href=mirrorrl>
+			<bold>Mirror right to left</bold><br/>
+			Pressing this deletes all the teeth on the left side, and mirrors all the teeth
+			from the right.
+		</xChoiceButton>
+		<xChoiceButton href=swaplr>
+			<bold>Swap left and right sides</bold><br/>
+			This swaps the teeth from left to right, and right to left.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+

@@ -1,0 +1,56 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Saving JPEG and bitmap images"/>
+
+<xPageTitle>
+	Saving JPEG and bitmap images
+</xPageTitle>
+
+<p>
+	In <xSN/> you can take a virtual snapshot of what you're looking at
+	and save it as either a bitmap (.bmp) or JPEG (.jpg) image file.
+	You can E-mail this image out, post it to the internet, or include
+	it in a word-processor document.
+</p>
+
+<p>
+	To save the image:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPrinter/> button.
+	</li>
+	<li>
+		Select the <bold>"Save image..."</bold> menu item in the list.
+	</li>
+	<li>
+		<bold>Change</bold> any settings that you wish
+		in the "Save the image" dialog box that appears.
+	</li>
+	<li>
+		Press the <bold>"Save"</bold> button.
+	</li>
+	<li>
+		<bold>Type in</bold> a file name and select the type of file. .jpg or .bmp to
+		save it as. (Note: .jpg images use <bold>much</bold> less disk space than
+		.bmp images. Only use .bmp images if you need to 100% accurate quality.)
+	</li>
+	<li>
+		Press the <bold>"Save"</bold>.
+	</li>
+	<p>
+		The progress meter will appear while the image is drawn. When it's finished the
+		dialog will close down and return to the main display window. Your
+		file will have been saved.
+	</p>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:929>Effects</a></li>
+	<li><a href=r:481>Printing</a></li>
+</xul>

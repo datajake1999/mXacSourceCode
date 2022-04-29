@@ -1,0 +1,32 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Small view windows"/>
+
+<xPageTitle>
+	Small view windows
+</xPageTitle>
+
+<p>
+	When you first create a view window it occupies the entire screen since most of the
+	time this is what you'll need. However, if you are using multiple views, or want
+	to see the view in tandem with some other application, you'll need to shrink the
+	window down.
+</p>
+
+<p>
+	To shrink or expand a view window:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonSmallWindow/> button.
+	</li>
+</ol>
+
+<p>
+	Normally, a small window will display the same set of buttons around the edge of the
+	window that you see when it occupies the entire screen. (It does shrink them to half
+	size though so that the 3D image still has space.) However, if you shrink a window
+	enough even the buttons disappear. You can still access the button functionality
+	though; just click on the window with the <bold>right mouse button</bold>.
+</p>

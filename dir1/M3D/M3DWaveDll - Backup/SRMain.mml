@@ -1,0 +1,263 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Speech recognition training main page"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>></bold></big>
+</p>
+
+<p>
+	To train speech recognition to your voice you must:
+</p>
+
+<ol>
+	<li>
+		Select the <bold>lexicon</bold> to use. <xSN/> is installed with a default
+		lexicon for American English (from Carnegie Mellon University); you'll
+		find this in the <xSN/> install directory. If you want to do speech recognition
+		in another language you'll either need to locate a lexicon for that
+		language (see <a href="http://www.mXac.com.au/m3d">http://www.mXac.com.au/m3d</a> for
+		a list of lexicons), create your own lexicon using the "mXac NLP Editor" (a huge
+		amount of work), or
+		use the English lexicon and type in phonetic representations of the non-English
+		words.
+	</li>
+	<li>
+		Press <bold>Change default training</bold> to select a speech
+		recognition training file to start with. You don't need a default training
+		file, but without one you'll need to do more work.
+		(If you are using the American English
+		lexicon, you can find speaker independent training in the <xSN/> install
+		directory named "EnglishDefault.mtf".)
+	</li>
+	<li>
+		Press the <bold>Recommend to-do list</bold> button so the training recommends words
+		and sentences to have you speak.
+	</li>
+	<li>
+		<bold>Record</bold> the recommended words and sentences. When you record
+		each sentence <xSN/> will use the default training to guess where each
+		phoneme begins and ends; these will have mistakes that you need to correct.
+	</li>
+	<li>
+		<bold>Edit</bold> each of the recorded sentences and hand-correct the start and
+		stop of the phonemes. (If you don't have a default training file then <xSN/> won't
+		even be able to guess where the phonemes begin and end, so you'll have to enter
+		each phoneme's start and stop entirely by hand.)
+	</li>
+	<p>
+		Watch out for mislabelling of phonemes. Often there are several ways to
+		pronounce a word, and the phonemes will be improperly tagged.
+		For example: "Hello" could
+		be pronounced as "hell-oh" or "hull-oh". If the
+		wrong phoneme appears then fix it.
+	</p>
+	<li>
+		Press <bold>Analyze</bold> so that <xSN/> learns what your voice sounds like
+		from the recorded words and sentences.
+	</li>
+</ol>
+
+<xbr/>
+
+<xsectiontitle>Settings</xsectiontitle>
+
+<xChoiceButton href=newmaster>
+	<bold>Change lexicon</bold><br/>
+	If you haven't already, you need to specify what lexicon speech recognition
+	will use. Since each language has a different lexicon, selecting the lexicon
+	will indirectly select the language to use.
+	<p/>
+	The lexicon is <bold><<<MASTERLEX>>></bold>.
+</xChoiceButton>
+
+
+<xChoiceButton href=newtrain>
+	<bold>Change default training</bold><br/>
+	You should select a default speech-recognition training file so that <xSN/> can
+	make a good guess of where phonemes begin and end in your recorded training speech.
+	This will make it easier for you to correct the phonemes. If you haven't already,
+	press this button and select a default training file to use. The default
+	training file should use the <bold>same lexicon</bold> as the lexicon you're
+	using for your training.
+	<p/>
+	The default training file is <bold><<<DEFTRAIN>>></bold>.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=fortts>
+	<bold>This training is to be used to generate a text-to-speech voice</bold><br/>
+	Check this option if you will use this speech recognition training to generate a text-to-speech
+	voice. The training system will provide more recommendations for sentences and words
+	to train so that speech recognition can more accurate learn what you voice sounds like.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=cdphone>
+	<bold>Context-dependent phonemes (requires 1000+ sentences)</bold><br/>
+	If you have recorded 1000+ sentences for a text-to-speech voice, you can also add
+	all 1000+ sentence to a speech recognition training file and make
+	a speech recognition file specific to the TTS voice. With so many sentences,
+	you can make the speech recognition "context dependent", which means that
+	it's more accurate. Then, use the new speech recognition file to re-calculate
+	where the phonemes are in the recordings for TTS.
+</xChoiceButton>
+
+<xbr/>
+<xSectionTitle>To-do list</xSectionTitle>
+
+<p>
+	Below is a list of sentences that you should record. You can record the sentences
+	by pressing "Record to-do list". <bold>If the list is empty</bold> and you haven't
+	yet recorded any sentences then press the "Recommend to-do list" button.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>To-do list</xtrheader>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=todoscroll sort=false name=todo/></big>
+		<scrollbar height=40% orient=vert name=todoscroll/>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Look for word</bold> - If you type in a word then only those
+			sentences using the word will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=todotextfilter/></font></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=todorecommend>
+			<bold>Recommend to-do list</bold><br/>
+			If your to-do list is empty and press this button; <xSN/> will recommend a series
+			of words for you to record so that speech recognition will be able to effectively
+			train on your voice. Each recommended sentence contains five words from the lexicon
+			that you should speak, leaving a short pause between each word.
+			<p/>
+			A dialog box will ask you to provide a text file (.txt) that contains sample text.
+			It should be a fairly large file (about 100 kBytes or 10,000 words.)
+			"Recommend" will use this text to determine the vocabulary.
+			You can skip the file, but if you don't provide
+			a text file "Recommend" will use words selected from the lexicon, some of which
+			may be words whose pronunciations you won't know.
+			<p/>
+			If you don't like any of the recommended sentences (perhaps
+			because they words you don't know how to pronounce) then remove the bad sentences and press
+			"Recommend to-do list" again to recommend replacements.
+		</xChoiceButton>
+		<xChoiceButton name=todoadd>
+			<bold>Add item to to-do list</bold><br/>
+			This addes the following sentence to the to-do list: (Don't use an abbreviations,
+			numbers, or symbols since <xSN/> might make a mistake when determining how they
+			are spoken.)
+		</xChoiceButton>
+		<xEditOneLine name=todoaddedit/>
+		<xChoiceButton name=todoremove>
+			<bold>Remove the selected sentence</bold><br/>
+			Deletes the selected sentence from the to-do list.
+		</xChoiceButton>
+		<xChoiceButton name=todoclearall>
+			<bold>Clear the to-do list</bold><br/>
+			Removes all sentences from the to-do list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xbr/>
+<xSectionTitle>Record</xSectionTitle>
+
+
+<xChoiceButton name=recordall>
+	<bold>Record all of the sentences in the to-do list</bold><br/>
+	Pressing this button will have you record each sentence in the to-do list, one
+	by one. You will be able to stop recording at any time, even if you haven't
+	completed the entire list.
+	<p/>
+	Make sure to speak clearly and at a normal speaking pace.
+</xChoiceButton>
+
+<xChoiceButton name=recordsel>
+	<bold>Record the selected sentence in the to-do list</bold><br/>
+	Lets you record only one sentence at a time. Make sure to select the sentence
+	from the to-do list.
+	<p/>
+	Make sure to speak clearly and at a normal speaking pace.
+</xChoiceButton>
+
+
+
+<xbr/>
+
+<xSectionTitle>Recordings</xSectionTitle>
+
+<p>
+	Below is a list of recordings (of your voice) that will be used to train
+	speech recognition to the sound of your voice. Speech recognition needs
+	recordings containg samples of all of the phonemes. While you can add recordings
+	yourself using the provided buttons, the most common way to add recordings
+	of your voice is through the "Recommendations" section.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Recordings</xtrheader>
+	<tr><td align=center>
+		<big><listbox width=80% height=40% vscroll=recscroll sort=false name=rec/></big>
+		<scrollbar height=40% orient=vert name=recscroll/>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Look for word</bold> - If you type in a word then only those
+			files with a recording of the word will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=textfilter/></font></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Look for speaker</bold> - If you type in a speaker's name then only those
+			files with a recording of the speaker will be shown.
+		</td>
+		<td><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=speakerfilter/></font></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=edit>
+			<bold>Edit the selected recording with the wave editor</bold><br/>
+			This brings up the wave editor so you can double-check that the phonemes'
+			start and end are correct. <bold>Before you train the recognizer</bold> you
+			should have gone through every recording to verify (and fix) the
+			start and stop of the recordings.
+		</xChoiceButton>
+		<xChoiceButton name=add>
+			<bold>Add one or more recordings</bold><br/>
+			Press this to add one or more wave files (of your voice) that you have
+			already recorded. The wave files should already have their phoneme locations
+			marked. (Most people will add recordings using the "Recommendations" section.
+		</xChoiceButton>
+		<xChoiceButton name=remove>
+			<bold>Remove the selected recording</bold><br/>
+			Pressing this will remove the selected recording from the list that speech
+			recognition uses to train. It will <bold>not</bold> delete the actual file.
+		</xChoiceButton>
+		<xChoiceButton name=clearall>
+			<bold>Clear all recordings</bold><br/>
+			Removes all the recordings from your list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Analyze</xSectionTitle>
+
+<p>
+	Once you have recorded all the recommended phrases, you need to press the "Analyze" button
+	(below) so that <xSN/> will learn what your voice sounds like from the recorded files.
+</p>
+
+<xChoiceButton name=train>
+	<bold>Analyze</bold><br/>
+	Pressing this will cause <xSN/> to analyze the recordings you have made and learn
+	what your voice sounds like. Once the training is finished you can use the
+	training to do lip synchronization or build a text-to-speech voice.
+	<p/>
+	If you hold the control-key down when you press the analysis will be less
+	picky about phoneme durations. Only use control as a last resort.
+</xChoiceButton>

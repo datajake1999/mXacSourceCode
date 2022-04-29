@@ -1,0 +1,87 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Orientation"/>
+
+<xPageTitle>
+	Bones - Orientation
+</xPageTitle>
+
+<xSectionTitle>Naming your bones</xSectionTitle>
+
+<p>
+	Each bone can have a name. To name your bones:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> your central bone.
+	</li>
+	<p>
+		A dialog, "Modify a bone", will appear.
+	</p>
+	<li>
+		Type in a new <bold>Name</bold>, such as "Backbone".
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Repeat and type in <bold>names</bold> for your other bones, such as
+		"R upper arm", "L upper arm", etc.
+	</li>
+</ol>
+
+
+<xSectionTitle>Moving your bones</xSectionTitle>
+
+<p>
+	Whenever you create a bone, it creates one or more attributes in the bone object
+	that allow the bone to be rotated. The attributes' names use the bones' names
+	so you can idenity what attribute rotates what bone.
+</p>
+
+<p>
+	To move/rotate your bone:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> your bones object.
+	</li>
+	<p>
+		The "Attributes" dialog will appear.
+	</p>
+	<li>
+		Find the slider for "R Upper arm" and <bold>drag the slider</bold> back and forth.
+	</li>
+	<p>
+		You'll see the bone move, but it doesn't really move in the right direction; it
+		moves forwards and backwards but not up and down.
+	</p>
+	<li>
+		To fix this, select the <xButtonBoneRotate/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the bone and <bold>drag</bold> the bone to the left or
+		right. Doing so will cause the right arm bone (and it's left partner) to
+		swivel. <bold>Drag</bold> the cursor so that the blue side of the bone is
+		rotated to the top, then <bold>let go.</bold>
+	</li>
+	<li>
+		Return to <xButtonObjAttrib/> and you'll see that a positive angle causes the
+		bone to rotate down, while a negative rotates up. If you wanted it to work
+		the other way around then you'd rotate the bone so that the blue side
+		was on the bottom.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:917><bold>Next</bold></button>
+</p>
+

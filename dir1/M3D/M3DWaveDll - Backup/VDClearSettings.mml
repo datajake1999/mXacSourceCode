@@ -1,0 +1,28 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Keep your old settings?"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Keep your old settings?</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You have already made some changes to affect a voice
+				disguise. <bold>Do you
+				wish to keep them?</bold>
+			</p>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href=p:2050>
+				<bold>Keep changes</bold><br/>
+				Keep the changes you have already made.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle name=discard>
+				<bold>Start with a blank slate</bold><br/>
+				Permanently discards your previous changes and starts over from scratch.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

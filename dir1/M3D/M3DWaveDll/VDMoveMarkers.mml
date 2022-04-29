@@ -1,0 +1,205 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Move markers"/>
+
+<!xComboViewHow>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Waveform</elem>
+		<elem name=1>Spectrogram</elem>
+		<elem name=2>Features</elem>
+	</combobox></bold>
+</xComboViewHow>
+
+<xtablecenter width=80%>
+	<xtrheader>Move markers</xtrheader>
+	<tr>
+		<td width=2>
+			<align align=center><bold>Recording of your voice</bold></align><br/>
+			<waveview width=90% height=30% display=2 name=orig hscroll=orighscroll vscroll=origvscroll/>
+			<scrollbar orient=vert height=30% name=origvscroll/><br/>
+			<scrollbar orient=horz width=90% name=orighscroll/><br/>
+			<align align=right><xComboViewHow width=50% cursel=2 name=origcombo/></align>
+
+			<p/>
+			<align align=center><bold>Voice to mimic</bold></align><br/>
+			<waveview width=90% height=30% display=2 name=mimic hscroll=mimichscroll vscroll=mimicvscroll/>
+			<scrollbar orient=vert height=30% name=mimicvscroll/><br/>
+			<scrollbar orient=horz width=90% name=mimichscroll/><br/>
+			<align align=right><xComboViewHow width=50% cursel=2 name=mimiccombo/></align>
+			
+			<p/>
+			
+			<xbr/>
+			
+			<p>
+				This page shows a <bold>graphical representation</bold> of your voice (top) and of the voice
+				you wish to mimic (bottom). You can change the graphical representation from
+				"waveform" to other views, such as "spectrogram" or "features" if
+				you they make the display easier to understand.
+			</p>
+			
+			<p>
+				Each display has <bold>eight markers</bold>, each with a different color. As you click and drag
+				a marker around, you will hear the sound that the marker is over. (Try this
+				now if it's your first time.)
+			</p>
+			
+			<p>
+				You need to <bold>place each of the markers on your voice recording</bold> over
+				a different vowel sound, or even a voiced consonant like "m", "n", or "l".
+				("t", "th", "k", "f", and "s" are unvoiced consonants since you can't hear the person's
+				voice-box when they're spoken.) Make
+				sure to cover a variety of vowels, such as "a", "e", "i", "o", and "u".
+			</p>
+			
+			<p>
+				Then, <bold>place each of the markers on the voice to mimic</bold> over the same
+				vowels, with the same color marker as you used in your voice. For example:
+				If both recordings speak, "It is raining.", then if you place the blue marker
+				over "i" in "it" for your voice, then place the blue marker "i" in "it" for
+				the to-be-mimiced voice. Likewise, if a red marker is over "ai" in your
+				recording of "raining" then place the red marker in over "ai" in the mimic voice.
+			</p>
+			
+			<p>
+				As you move a colored marker around, you'll notice that <bold>the
+				matching-colored graph on the right will change</bold>. The <bold>black</bold> line
+				shows you the "energy" in your voice at the marker's location.
+				The <bold>white</bold> line shows the "energy" of the to-be-mimiced voice.
+			</p>
+			
+			<p>
+				You can use the graphs to fine-tune the location of the markers
+				since <bold>the more similar the black and white lines, the more similar
+				the sounds</bold>. The <bold>peaks and valleys</bold> in the white and black
+				lines are particularly imporant; they won't line up exactly, but should be
+				fairly close. (If a male-to-female or female-to-male voice, the peaks and valleys
+				will be skewed to the right or left.)
+			</p>
+			
+			<p>
+				In the "feature" view of the recordings, the peaks correspond to bright
+				yellow or red areas, while the valleys are blue or black.
+			</p>
+			
+			<p>
+				To the right each graph is an edit field where you should <bold>type in the
+				phoneme name</bold> for your own reference. For example: If the marker is on
+				the "a" in "cat" then you could type "cAt" (upper-case "A") to indicate the
+				sound. (If you happen to know the technical name, such as "aa1", then enter
+				that.)
+			</p>
+			
+			<p>
+				Next to each graph are three hot spots. Pressing "Orig" will play the marked sound
+				as it appears in your voice. "Disg." plays the marked sound with pitch
+				modifications and other disguise settings. "Mimic" plays the marked sound
+				in the mimiced voice.
+			</p>
+			
+		</td>
+		<td width=1>
+			<table width=100% innerlines=0 border=0>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature0/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename0/><br/>
+						<a href=po:0>Orig</a><br/>
+						<a href=pd:0>Disg.</a><br/>
+						<a href=pm:0>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature1/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename1/><br/>
+						<a href=po:1>Orig</a><br/>
+						<a href=pd:1>Disg.</a><br/>
+						<a href=pm:1>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature2/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename2/><br/>
+						<a href=po:2>Orig</a><br/>
+						<a href=pd:2>Disg.</a><br/>
+						<a href=pm:2>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature3/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename3/><br/>
+						<a href=po:3>Orig</a><br/>
+						<a href=pd:3>Disg.</a><br/>
+						<a href=pm:3>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature4/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename4/><br/>
+						<a href=po:4>Orig</a><br/>
+						<a href=pd:4>Disg.</a><br/>
+						<a href=pm:4>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature5/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename5/><br/>
+						<a href=po:5>Orig</a><br/>
+						<a href=pd:5>Disg.</a><br/>
+						<a href=pm:5>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature6/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename6/><br/>
+						<a href=po:6>Orig</a><br/>
+						<a href=pd:6>Disg.</a><br/>
+						<a href=pm:6>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature7/></td>
+					<td width=1>
+						<edit selall=true maxchars=15 width=95% name=phonename7/><br/>
+						<a href=po:7>Orig</a><br/>
+						<a href=pd:7>Disg.</a><br/>
+						<a href=pm:7>Mimic</a>
+					</td>
+				</tr>
+			</table>
+			<p/>
+			<xbr/>
+			<xChoiceButton style=righttriangle href=p:2070>
+				<bold>Next</bold><br/>
+				Press this <bold>after</bold> you have accurately placed all the markers
+				over the vowels (and voiced consonants).
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=playmimic>
+				<bold>Play the voice to mimic</bold><br/>
+				Plays a recording of the voice you're trying to mimic.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

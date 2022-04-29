@@ -1,0 +1,80 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Adjust pitch"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Adjust pitch</xtrheader>
+	<tr>
+		<td>
+			<p>
+				The speaker's pitch is a large part of what makes someone's
+				voice sound different from anothers. This page lets you adjust
+				the pitch.
+			</p>
+			
+			<p>
+				<bold>Pitch</bold> - Enter the average pitch (in Hz) of the recording
+				of your voice. The recommended value is <bold><<<PITCHRECOMMEND>>></bold>.
+			</p>
+			
+			<xEditOneLine maxchars=32 name=pitchorig/>
+			
+			<p>
+				<bold>Pitch scaling</bold> - This is how much to scale the pitch of
+				your voice so it matches that of the voice you with
+				to mimic. The recommended value is <bold><<<SCALERECOMMEND>>></bold>.
+			</p>
+			
+			<xEditOneLine maxchars=32 name=pitchscale/>
+			
+			<p>
+				<bold>Pitch variation</bold> - This is how much more the pitch of
+				the mimiced voice varies from your recording. A number of 1.0 will
+				keep the same variation. 2.0 will make the pitch inflection twice as
+				much. 0.0 results in a completely monotone voice.
+				The recommended value is <bold><<<VARIATIONRECOMMEND>>></bold>.
+			</p>
+			
+			<xEditOneLine maxchars=32 name=pitchvariationscale/>
+			
+			<xChoiceButton style=x checkbox=true name=pitchmusical>
+				<bold>Snap pitch to the nearest note</bold><br/>
+				If checked, your voice's pitch will automatically be snapped to the
+				nearest musical note.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href=p:2060>
+				<bold>Next</bold><br/>
+				Continue on to the next page.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle href=p:2090>
+				<bold>Don't add any new phonemes to the database</bold><br/>
+				If you've already run through the voice disguise wizard once, you can
+				press this to skip recording more phonemes and jump directly to
+				the database.
+			</xChoiceButton>
+
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=playmimic>
+				<bold>Play the voice to mimic</bold><br/>
+				Plays a recording of the voice you're trying to mimic.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

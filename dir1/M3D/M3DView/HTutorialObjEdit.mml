@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Editing a custom object (1)"/>
+
+<xPageTitle>
+	Tutorial - Editing a custom object (1)
+</xPageTitle>
+
+<p>
+	The <bold>object editor window</bold> is practically the same as the normal house-editing
+	<xSN/> window. The only differences are:
+</p>
+
+<xul>
+	<li>
+		The button background is green instead of blue, to make it obvious that you're
+		editing an object.
+	</li>
+	<li>
+		A few buttons (like new, open, save as) have been removed.
+	</li>
+	<li>
+		A new button, <xButtonObjEditor/> has been added.
+	</li>
+</xul>
+
+<xsectiontitle>Object settings</xsectiontitle>
+
+<p>
+	The first thing to do when you create a new object is to pull up the
+	"Object settings" page and tell <xSN/> some information about the object:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjEditor/> button.
+	</li>
+	<li>
+		Press the <bold>Location and embedding</bold> button in the Object Setting page.
+	</li>
+	<li>
+		Decide what the object is usually placed up against and change the
+		setting under <bold>Typical location</bold>. Example: Furniture is usually placed
+		on the ground or floor, paintings on the wall, and hanging lights on
+		the ceiling.
+	</li>
+	<p>
+		If you change the "Typical location" the ground plane will be redrawn to
+		a wall plane, or ceiling plane. (Make sure that if you select "On the ceiling"
+		that everything you draw is underneath the ceiling plane, otherwise your hanging
+		lamps will hang up.)
+	</p>
+	<li>
+		If you want the object to be embeddable - built into the wall, floor, or ceiling,
+		then select on of the <bold>Embedding</bold> options. Of course, most furniture
+		is <bold>not</bold> embeddable because it just rests on the floor. However,
+		if you're making a custom window, wall-mounted light, or swimming pool, then
+		you will want the object embeddable.
+	</li>
+	<li>
+		You may also want to chang the <bold>"Type of object"</bold> setting at the bottom
+		of the page. This is used when you press the <xButtonClipSet/> button
+		and hide certain items (like trees) to make your image easier to see.
+	</li>
+	<li>
+		<bold>Close</bold> the "Object settings" page.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:420><bold>Next</bold></button>
+</p>
+

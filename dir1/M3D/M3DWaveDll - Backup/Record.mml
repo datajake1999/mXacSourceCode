@@ -1,0 +1,78 @@
+<?Include resource=500?>
+<PageInfo index=false title="Record"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top>
+<tr><td>
+	Please record: <font color=#ffffc0><bold><big><big><<<RECSTRING>>></big></big></bold></font>
+</td></tr>
+<tr>
+<td>
+	<p align=center>
+		Oscilloscope
+		<br/>
+		<image width=304 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+
+</td>
+<td>
+	<xChoiceButton accel=r name=record>
+		<bold><u>R</u>ecord/stop</bold><br/>
+		Pressing this the first time will start recording. The second time will stop recording.
+	</xChoiceButton>
+	<xChoiceButton enabled=false name=oops>
+		<bold>Oops</bold><br/>
+		If you make a mistake while speaking, press this to clean the slate.
+	</xChoiceButton>
+		<p/>
+		<small>
+			You can adjust the record volume by double-clicking the "Volume" icon (a
+			small speaker) in the taskbar. Then, in the volume control, go to the
+			"Options" menu, and select "Properties". In the "Properties" page, click
+			on "Recording". Press "OK" and adjust the sliders as desired.
+		</small>
+</td>
+</tr>
+<tr>
+<td>
+	<xChoiceButton style=check checkbox=true name=removedc>
+		<bold>Remove sub-voice frequencies</bold><br/>
+		<small>Use this is you're recording speech; it removes noise such as the speaker
+		accidentally blowing into the microphone.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=normalize>
+		<bold>Normalize</bold><br/>
+		<small>The recording's volume will automatically be increased so that the full
+		dynamic range is used.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=noisereduce>
+		<bold>Noise reduction</bold><br/>
+		<small><xSN/> will automatically do noise reduction on the audio to get rid of
+		microphone hiss and quiet background sounds.</small>
+	</xChoiceButton>
+	<xChoiceButton style=check checkbox=true name=trimsilence>
+		<bold>Trim silence</bold><br/>
+		<small>When you're finished recording silence from the beginning and end of the
+		recording will automatically be removed.</small>
+	</xChoiceButton>
+</td>
+<td>
+<<<$IFSHOWREPLACE>>>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replacesel>
+		<bold>Record over selection</bold><br/>
+		<small>The recorded audio will overwrite the current selection.</small>
+	</xChoiceButton>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replaceall>
+		<bold>Record over the entire file</bold><br/>
+		<small>The recorded audio will overwrite the entire wave file.</small>
+	</xChoiceButton>
+	<xChoiceButton style=x radiobutton=true group=replacesel,replaceall,replaceend name=replaceend>
+		<bold>Record onto the end</bold><br/>
+		<small>Recording will be appended to the end.</small>
+	</xChoiceButton>
+<<<$ENDIFSHOWREPLACE>>>
+</td>
+</tr></table>
+
+</font>

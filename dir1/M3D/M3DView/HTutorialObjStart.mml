@@ -1,0 +1,41 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Making your own objects"/>
+
+<xPageTitle>
+	Tutorial - making your own objects
+</xPageTitle>
+
+<p>
+	<xLN/> comes installed with hundreds of different "objects", such
+	as house building blocks, windows, doors, furniture, and trees. However, often
+	times you'll find that you need an object that isn't provided. You have several
+	choices at this stage:
+</p>
+
+<xul>
+	<li>
+		<bold>Do without or find a substitute</bold> - Leaving out an object isn't always desirable,
+		but creating a new object does take time which you may not have.
+	</li>
+	<li>
+		<bold>Customize an existing object</bold> - You
+		can click on an object using the <xButtonObjDialog/> and customize it.
+		Often you'll be able to customize it enough using the dialog that
+		you won't need to create a new object.
+	</li>
+	<li>
+		<bold>Create a new type of object</bold> using the object editor.
+		This takes a bit of work because you basically need to put together all the
+		bits and pieces of the object within <xSN/>. It's kind of like building
+		the furniture by hand, and can take a long time. This option will be discussed
+		next in the tutorial.
+	</li>
+</xul>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:417><bold>Next</bold></button>
+</p>
+

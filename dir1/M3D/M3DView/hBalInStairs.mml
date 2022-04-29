@@ -1,0 +1,79 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Balustrades in stairs"/>
+
+<xPageTitle>
+	Balustrades in stairs
+</xPageTitle>
+
+
+<p>
+	Most staircases you create include a balustrade. Sometimes you may want to
+	change the balustrade style or remove them from the staircase.
+</p>
+
+<xsectiontitle>Changing the balustrade style</xsectiontitle>
+
+<p>
+	To change
+	the style of a balustrade in a staircase:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the staircase.
+	</li>
+	<li>
+		In the "Staircase settings" page that appears, press
+		the <bold>Balustrades</bold> button.
+	</li>
+	<li>
+		In the "Staircase balustrades" page, press the "Modify the left/center/right balustrade"
+		button depending upon which side you wish to change.
+	</li>
+	<li>
+		In the "Balustrade appearnace" page scroll through the "Balustrade style" listbox
+		and <bold>select whichever balustrade</bold> you
+		wish. As soon as you select it the balustrade will be redrawn.
+	</li>
+	<li>
+		If you want a balustrade not shown on the list, select "Custom". Look in the
+		"See also" section for instructions on custom balustrades.
+	</li>
+	<li>
+		The rest of the "Balustrade appearance" page contains a number of settings for
+		how the balustrade interacts with the roofline and openings.
+	</li>
+</ol>
+
+
+<xsectiontitle>Showing or hiding balustrades</xsectiontitle>
+
+<p>
+	A staircase can have up to three balustrades, one on the left, right, and center.
+	To show or hide one of these balustrades:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the staircase.
+	</li>
+	<li>
+		In the "Staircase settings" page that appears, press
+		the <bold>Balustrades</bold> button.
+	</li>
+	<li>
+		In the "Staircase balustrades" page, <bold>check (or uncheck)</bold> the
+		checkboxes according to which balustrades you wish displayed.
+		The 3D image will change immediately to show or hide the balustrade.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:344>Balustrades</a></li>
+	<li><a href=r:343>Customized balustrades</a></li>
+	<li><a href=r:339>Staircases</a></li>
+</xul>

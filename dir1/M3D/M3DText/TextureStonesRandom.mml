@@ -1,0 +1,132 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Stone wall - random"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=height/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton href=stone>
+			<bold>Modify the stone</bold><br/>
+			Change the stone's color and texture.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Pattern</xtrheader>
+	<tr>
+		<td>
+			<bold>Stones across</bold> - Number of stones (from left to right) in
+			the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=stonesacross/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stones down</bold> - Number of stones (from top to bottom) in
+			the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=stonesdown/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variability in width</bold> - Amount of variability in stone width.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variability in height</bold> - Amount of variability in stone height.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varheight/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=pebbles>
+			<bold>Pebbles</bold><br/>
+			If checked, this will draw two levels of stone, creating a stone-on-stone
+			effect like pebbles.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Grout</xtrheader>
+	<tr>
+		<td>
+			<bold>Spacing between stones</bold>
+		</td>
+		<td><edit maxchars=64 width=100% name=spacing/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton href=grout>
+			<bold>Grout</bold><br/>
+			Bring up a page letting you control the color of the grout.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=dirtpaint>
+			<bold>Dirt or paint</bold><br/>
+			Apply dirt to your stones.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

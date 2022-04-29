@@ -1,0 +1,171 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Canopy"/>
+
+<p>
+	This lets page lets you modify a canopy in a forest.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Canopy objects</xtrheader>
+	<tr><td>
+		<p>
+			Click on "Add new object" to add another object to the canopy, or click on one
+			of the objects to remove it from the canopy.
+		</p>
+		<p align=center>
+			<<<$CANOPY>>>
+		</p>
+		<xchoicebutton name=add>
+			<bold>Add new object</bold><br/>
+			Click this to add a new tree (or other object) to the canopy. If you add the
+			same object more than once it will become more common.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Distance between trees</xtrheader>
+	<tr><td>
+		To randomly place trees, <xSN/> first aligns them into rows and columns separated
+		by the EW and NS distance. It then moves each tree randomly EW and NW according
+		the the amount of variation. To make natural looking forests, keep EW and NW the same
+		and use maximum variation. To make orchards or rows of crops adjust EW and NS to
+		the row and column size, and use little variation.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>EW distance</bold> - Average distance between trees in the EW
+			direction.
+		</td>
+		<td><edit width=100% maxchars=32 name=separation0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>NS distance</bold> - Average distance between trees in the NS
+			direction.
+		</td>
+		<td><edit width=100% maxchars=32 name=separation1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>EW variation</bold> - Amount that the trees' positions vary in
+			the EW direction. Move the slider all the way to the right to make it
+			look natural, and all the way to the left to make rows.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=separationvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>NS variation</bold> - Amount that the trees' positions vary in
+			the NS direction. Move the slider all the way to the right to make it
+			look natural, and all the way to the left to make rows.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=separationvar1/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Rotation</xtrheader>
+	<tr><td>
+		When the trees are drawn they are rotated randomly. To make natural looking trees
+		you may want to set the amount of Z rotation all the way to the right, but keep
+		X and Y rotation fairly small (since this will cause the trees to lean).
+	</td></tr>
+	<tr>
+		<td>
+			<bold>X rotation</bold> - Positioning the slider to the right
+			causes the tree to lean.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Y rotation</bold> - Positioning the slider to the right
+			causes the tree to lean.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Z rotation</bold> - Rotates the tree around its trunk.
+			Move this all the way to the right for natural positioning.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar2/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Size</xtrheader>
+	<tr><td>
+		Use these sliders to provide more variation in the trees' sizes. The further to
+		the right the larger the variation in size.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>General size variation</bold> - Adjust this to control the over-all amount
+			of variation in the width, depth, and height of a tree. Use the EW, NS, and UD
+			sliders to adjust one of the dimensions independently.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar3/></td>
+	</tr>
+	<tr>
+		<td><bold>EW size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar0/></td>
+	</tr>
+	<tr>
+		<td><bold>NS size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar1/></td>
+	</tr>
+	<tr>
+		<td><bold>UD size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Pattern</xtrheader>
+	<tr><td>
+		In order to save memory, <xSN/> generates a grid of about 100 x 100 trees
+		and repeats them. If you can see the repetition in your images you may wish
+		to enlarge the grid.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>EW grid</bold> - The pattern repeats after this many trees in
+			the EW direction.
+		</td>
+		<td><edit width=100% maxchars=32 name=repeatx/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>NS grid</bold> - The pattern repeats after this many trees in
+			the NS direction.
+		</td>
+		<td><edit width=100% maxchars=32 name=repeaty/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Version</bold> - Changing the number produces a different random
+			variation.
+		</td>
+		<td><edit width=100% maxchars=32 name=seed/></td>
+	</tr>
+</xtablecenter>
+
+<xChoiceButton style=x checkbox=true name=noshadows>
+	<bold>Canopy doesn't produce shadows</bold><br/>
+	If checked, then the canopy objects won't produce shadows in "shadows" render
+	mode. They will produce shadows for ray tracing though. Make sure to check
+	this for <bold>grasses and shrubs</bold> since shadows are not accurate enough
+	for such small objects.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=lowdensity>
+	<bold>Canopy draws as low-density in the distance</bold><br/>
+	If seen from a distance, the canopy is drawn with fewer objects. Use this
+	for most trees/grasses unless you want to make an ordered orchard where
+	not drawing some trees would be easily noticed.
+</xChoiceButton>

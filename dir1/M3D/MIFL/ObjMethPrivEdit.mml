@@ -1,0 +1,166 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify private method"/>
+
+<null><<<$READONLY>>></null>
+
+<null><<<$IFTAB0>>>
+<xtablecenter width=100%>
+	<xtrheader>Method</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the method. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBPRIVREADONLY>>> name=name/></bold>
+		</td>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the method.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBPRIVREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description of the method.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true <<<$LIBPRIVREADONLY>>> name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+<<<$ENDIFTAB0>>></null>
+
+<null><<<$IFTAB1>>>
+<xtablecenter width=100%>
+	<xtrheader>Parameters</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Parameter name
+			<xHoverHelp>
+				The name of the parameter. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the paramter slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the parameter means.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$PARAMSLOT>>>
+	<tr>
+		<td width=33%><bold><a>Return value description
+			<xHoverHelp>
+				This describes what kind of values are returned by the method.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=66%><bold><edit width=100% maxchars=20000 multiline=true wordwrap=true <<<$LIBPRIVREADONLY>>> name=retdesc/></bold></td>
+	</tr>
+	<tr><td>
+		<<<$IFMENULIBPRIVRO>>><xChoiceButton <<<$LIBPRIVENABLE>>> name=addparam>
+			<bold>Add more parameter slots</bold>
+		</xChoiceButton><<<$ENDIFMENULIBPRIVRO>>>
+		<xChoiceButton style=x checkbox=true <<<$LIBPRIVENABLE>>> name=anynumparam>
+			<bold>This method can be passed any number of parameters</bold><br/>
+			If checked then the method can be passed any number of parameters.
+			This should be un-checked for most methods so that the compile can double-check
+			that the right number of parameters are passed to the method.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+<<<$ENDIFTAB1>>></null>
+
+
+<null><<<$IFTAB3>>>
+<null><<<$SWAPPRIVPUB>>></null>
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this method</bold><br/>
+	Permenantly delete the method.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<null><<<$IFMENULIBPRIVRO>>>
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this method</bold><br/>
+	After you duplicate the method, make sure to rename the new method or
+	you won't be able to compile properly.
+</xChoiceButton>
+<<<$ENDIFMENULIBPRIVRO>>></null>
+<<<$ENDIFTAB3>>></null>
+
+<comment><xtablecenter width=100%>
+	<xtrheader>Variables</xtrheader>
+	<tr>
+		<td width=33%><bold><a>
+			Variable name
+			<xHoverHelp>
+				The name of the variable. It cannot contain any spaces or symbols,
+				just letter and numbers. Leave this blank if you do not wish to use
+				the variable slot.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Initial value
+			<xHoverHelp>
+				This is the initial value of the variable. If you wish to initialize it
+				to a string, don't forget to put quotes around the string.
+			</xHoverHelp>
+		</a></bold></td>
+		<td width=33%><bold><a>
+			Description
+			<xHoverHelp>
+				Description of what the variable is used for.
+			</xHoverHelp>
+		</a></bold></td>
+	</tr>
+	<<<$VARSLOT>>>
+	<<<$IFMENULIBRO>>><tr><td>
+		<xChoiceButton name=addvar>
+			<bold>Add more variable slots</bold>
+		</xChoiceButton>
+	</td></tr><<<$ENDIFMENULIBRO>>>
+</xtablecenter></comment>
+
+<null><<<$IFTAB2>>>
+<xtablecenter width=100%>
+	<xtrheader>Code</xtrheader>
+	<tr><td align=center>
+		<align tab=16><font face="courier new">
+			<edit width=90% height=45% maxchars=200000 multiline=true wordwrap=false capturetab=true prelineindent=true vscroll=codescroll <<<$LIBREADONLY>>> name=code/>
+		</font></align>
+		<scrollbar orient=vert height=45% name=codescroll/>
+		<br/>
+		<edit width=50% maxchars=128 name=codesearch/>
+		<button name=codesearchthis><bold>Search this</bold>
+			<xHoverHelp>
+				Pressing this searches the current code block for the given text.
+			</xHoverHelp>
+		</button>
+		<button name=codesearchall><bold>Search all</bold>
+			<xHoverHelp>
+				Pressing this searches all the code in the project for the given text.
+			</xHoverHelp>
+		</button>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=compthis>
+			<bold>Test compile this method</bold><br/>
+			Tries compiling only this method, looking for errors.
+		</xChoiceButton>
+		<xChoiceButton href=compall>
+			<bold>Test compile the entire project</bold><br/>
+			Tries compiling only the entire project, looking for errors.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+<<<$ENDIFTAB2>>></null>

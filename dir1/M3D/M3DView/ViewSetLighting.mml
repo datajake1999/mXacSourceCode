@@ -1,0 +1,21 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lighting"/>
+
+<p>
+	This page has some extra lighting sttings.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Lighting</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Extra ambient light intensity</bold> - Some ambient light is provided by
+			the sun (and moon). If that isn't enough, then this slider will add more.
+		</td>
+		<td width=33% valign=center>
+			<scrollbar orient=horz min=0 max=32000 name=ambientintensity/>
+		</td>
+	</tr>
+</xtablecenter>
+

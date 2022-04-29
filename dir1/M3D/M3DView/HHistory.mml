@@ -1,0 +1,262 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Revision history"/>
+
+<xPageTitle>
+	Revision history
+</xPageTitle>
+
+
+<p>
+	This page lists all of the bug fixes, feature tweaks, and new features I've made
+	to <xSN/> over time. If you have any more fixes or changes you'd like
+	me to make, see <a href=r:241>Bugs and feature requests</a>.
+</p>
+
+<!xVersion>
+	<td width=20% valign=top><section><bold>
+		<?MacroContent?>
+	</bold></section></td>
+</xVersion>
+
+<!xChanges>
+	<td width=80% valign=top><align tab=32>
+		<xul>
+			<?MacroContent?>
+		</xul>
+	</align></td>
+</xChanges>
+
+<!xMisc>
+	<li><font color=#000000>
+		<?MacroContent?>
+	</font></li>
+</xMisc>
+
+<!xBug>
+	<li><font color=#800000>
+		<?MacroContent?>
+	</font></li>
+</xBug>
+
+<!xFeature>
+	<li><font color=#006000>
+		<?MacroContent?>
+	</font></li>
+</xFeature>
+
+<Table width=100% border=0 innerlines=0>
+	<xtrheader>Future features</xtrheader>
+	<tr>
+		<xVersion></xVersion>
+		<xChanges>
+			<xMisc>
+				<a href=r:297>Click here to learn about planned features.</a>
+			</xMisc>
+		</xChanges>
+	</tr>
+	
+	<xtrheader>2006</xtrheader>
+	<tr>
+		<xVersion>0.0.5016<br/>February 16</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 19. More mult-core CPU support. Improved text-to-speech.
+				Text over texture.
+			</xMisc>
+		</xChanges>
+	</tr>
+
+	<xtrheader>2005</xtrheader>
+	<tr>
+		<xVersion>0.0.4821<br/>December 21</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 18. Support multi-core CPUs, improved speech recognition,
+				improved text-to-speech, improved voice disguise, face textures,
+				chainmail texture, head model
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.4020<br/>April 20</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 17. Caves, fast trees, fast grass, rocks, waterfalls.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.3904<br/>March 4</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 16. Improved text-to-speech quality some more.
+			</xMisc>
+		</xChanges>
+	</tr>
+
+	<xtrheader>2004</xtrheader>
+	<tr>
+		<xVersion>0.0.3430<br/>Oct 30</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 15. Improved text-to-speech quality. Reduced load times and
+				memory usage.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.2830<br/>Apr 30</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 14. Effects (image post-processing and non-photorealistic rendering)
+			</xMisc>
+		</xChanges>
+	</tr>
+	<xtrheader>2003</xtrheader>
+	<tr>
+		<xVersion>0.0.2412<br/>Dec 12</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 13. Includes: Volumetric textures, eyes, hair, and teeth.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.2229<br/>Oct 29</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 12. Includes: Improved speech recognition. Voice modification
+				in the wave editor. Lexicon editor. Text-to-speech.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.2017<br/>Aug 17</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 11. Includes: New polygon mesh with special editing: vertex
+				editing, organic modelling, morphs, skinning, UV texture mapping, and tailor
+				mode. Also includes bone editor.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1827<br/>July 27</xVersion>
+		<xChanges>
+			<xBug>
+				Pre-release 10a. Misc. bug fixes.
+			</xBug>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1721<br/>May 21</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 10. Includes: Audio editor, speech recognition for lip sync,
+				audio in animations.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1629<br/>April 29</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 9. Includes: 3D painting, ray tracing, split <xSN/> into multiple DLLs.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1527<br/>March 27</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 8. Includes: Realistic sky. Topography editing with texture painting
+				and forests. Realistic trees.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1404<br/>February 4</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 7. Includes: Bones and skeletons. Attach feature. Animation
+				timeline.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<xtrheader>2002</xtrheader>
+	<tr>
+		<xVersion>0.0.1228<br/>December 28</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 6. Includes: Improved UI, attributes, specularity in texture view,
+				object list, polygon mesh subdivision,
+				polygon mesh merging, polygon mesh morphs.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1123<br/>November 23</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 5. Includes: Paint generated overlays, framing, printing, save as
+				bitmap, tracing, quotes.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.1017<br/>October 17</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 4. Includes: Thumbnail views, object editing, extrusions, revolutions, columns,
+				surfaces, polygon meshes, paintings, table cloths, rugs, curtains,
+				cushions, books, ceiling fans, cabinets, cabinet doors, cabinet drawers,
+				walkways, tarps, swimming pools, fireplaces, trusses.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.0730<br/>July 30</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 3. Includes: User interface improvements.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.0703<br/>July 3</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 2.9. Includes: Shadows, specularity, texture editing, lots of textures,
+				lights.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.0517<br/>May 17</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 2. Includes: Balustrades, piers, stairs, doors, windows, doorways,
+				shrubbery, and miscellaneous changes.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<tr>
+		<xVersion>0.0.213<br/>Feb 13</xVersion>
+		<xChanges>
+			<xMisc>
+				Pre-release 1.
+			</xMisc>
+		</xChanges>
+	</tr>
+	<xtrheader>2001</xtrheader>
+	<tr>
+		<xVersion>Aug 31</xVersion>
+		<xChanges>
+			<xMisc>
+				Began programming <xLN/>.
+			</xMisc>
+		</xChanges>
+	</tr>
+</table>
+

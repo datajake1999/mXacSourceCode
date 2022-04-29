@@ -1,0 +1,61 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Animation timespan"/>
+
+<button posn=edgeright style=rightarrow href=next><bold>Next</bold></button>
+
+<p>
+	Select the timespan within the scene that you wish to animate and then
+	press "Next".
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Timespan</xtrheader>
+	<tr>
+		<td width=20%><button style=check radiobutton=true group=rball,rbtime,rbframe,rbbookmarkrange,rbbookmarkzero name=rball/></td>
+		<td width=80%>
+			Animate the <bold>entire scene</bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=20%><button style=check radiobutton=true group=rball,rbtime,rbframe,rbbookmarkrange,rbbookmarkzero name=rbtime/></td>
+		<td width=80%>
+			Animate a <bold>timespan</bold> from <edit maxchars=32 width=100 name=timeedit1/> second(s) to <edit maxchars=32 width=100 name=timeedit2/> second(s).
+		</td>
+	</tr>
+	<tr>
+		<td width=20%><button style=check radiobutton=true group=rball,rbtime,rbframe,rbbookmarkrange,rbbookmarkzero name=rbframe/></td>
+		<td width=80%>
+			Animate from <bold>frame</bold> <edit maxchars=32 width=100 name=frameedit1/> to <bold>frame</bold> <edit maxchars=32 width=100 name=frameedit2/>.
+		</td>
+	</tr>
+	<tr>
+		<td width=20%><button style=check radiobutton=true group=rball,rbtime,rbframe,rbbookmarkrange,rbbookmarkzero name=rbbookmarkrange/></td>
+		<td width=80%>
+			Set the timeframe based on the following <bold>durational bookmark</bold>:<br/>
+			<listbox width=85% height=50% vscroll=bmrangescroll name=bookmarkrange/>
+			<scrollbar orient=vert height=50% name=bmrangescroll/>
+		</td>
+	</tr>
+	<tr>
+		<td width=20%><button style=check radiobutton=true group=rball,rbtime,rbframe,rbbookmarkrange,rbbookmarkzero name=rbbookmarkzero/></td>
+		<td width=80%>
+			Animate from <bold>bookmark</bold>:<br/>
+			<listbox width=85% height=50% vscroll=bmzero1scroll name=bookmarkzero1/>
+			<scrollbar orient=vert height=50% name=bmzero1scroll/>
+			<p/>To <bold>bookmark</bold>:<br/>
+			<listbox width=85% height=50% vscroll=bmzero2scroll name=bookmarkzero2/>
+			<scrollbar orient=vert height=50% name=bmzero2scroll/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<p align=center><italic>
+	(If you have the start and end times the same then you can use generate just one image
+	to save as a .bmp or .jpg.)
+</italic></p>
+
+<p align=right>
+	<button style=rightarrow href=next><bold>Next</bold></button>
+</p>

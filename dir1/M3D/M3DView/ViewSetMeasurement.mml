@@ -1,0 +1,46 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Measurement"/>
+
+<p>
+	<xSN/> can display distances in either metric or English, and in
+	various units for each. Please select which one you want.
+</p>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,in,ftin name=m>
+	<bold>Metric - Meters</bold><br/>
+	Show distance in meters. Any distance entered by itself will be assumed
+	to be in meters.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,ftin,in name=cm>
+	<bold>Metric - Centimeters</bold><br/>
+	Show distance in centimeters. Any distance entered by itself will be assumed
+	to be in centimeters.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,ftin,in name=mm>
+	<bold>Metric - Millimeters</bold><br/>
+	Show distance in millimeters. Any distance entered by itself will be assumed
+	to be in millimeters.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,ftin,in name=ft>
+	<bold>English - Feet</bold><br/>
+	Show distance in feet. Any distance entered by itself will be assumed
+	to be in feet.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,ftin,in name=ftin>
+	<bold>English - Feet and inches</bold><br/>
+	Show distance in feet and inches. You cannot enter numbers by themselves
+	in the measurement mode because <xSN/> wouldn't be sure if you meant feet
+	or inches.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=m,cm,mm,ft,ftin,in name=in>
+	<bold>English - Inches</bold><br/>
+	Show distance in inches. Any distance entered by itself will be assumed
+	to be in inches.
+</xChoiceButton>
+

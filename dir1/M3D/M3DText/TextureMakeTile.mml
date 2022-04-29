@@ -1,0 +1,167 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Tile or brick"/>
+
+<p>
+	Use this page to control the size, color, and bumpiness or a tile or brick.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<!xComboBevel>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold>Square edges</bold></elem>
+		<elem name="1"><bold>Chamfered edges</bold></elem>
+		<elem name="2"><bold>Rounded edges</bold></elem>
+	</combobox></bold>
+</xComboBevel>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Size</xtrheader>
+	<tr>
+		<td>
+			<bold>Tile width</bold>
+		</td>
+		<td><edit maxchars=64 width=100% name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tile height</bold>
+		</td>
+		<td><edit maxchars=64 width=100% name=height/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tile depth</bold>
+		</td>
+		<td><edit maxchars=64 width=100% name=thickness/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Diagonal corners</bold> - The amount of corner to cut
+			off from the tile. Use "0" for a square corner.
+		</td>
+		<td><edit maxchars=64 width=100% name=diagcorner/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bevel width</bold> - Width of the bevel (seen from above)
+			around the corners.
+		</td>
+		<td><edit maxchars=64 width=100% name=bevel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bevel shape</bold>
+		</td>
+		<td><xcombobevel width=100% name=bevelmode/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Variations</xtrheader>
+	<tr>
+		<td>
+			<bold>Rock left/right</bold> - Amount of height variation from left to right
+			due to uneven placement of tiles.
+		</td>
+		<td><edit maxchars=64 width=100% name=rocklr/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rock top/bottom</bold> - Amount of height variation from top to bottom
+			due to uneven placement of tiles.
+		</td>
+		<td><edit maxchars=64 width=100% name=rocktb/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=surfabutton>
+				<bold>Color variant 1</bold><br/>
+				Click this to change the color variation of the tile.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=surfacolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=surfbbutton>
+				<bold>Color variant 2</bold><br/>
+				Click this to change the color variation of the tile.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=surfbcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Effects</xtrheader>
+	<tr><td>
+		<xchoicebutton href=marble>
+			<bold>Marbling</bold><br/>
+			Turn the marble effect on or off, and change the settings.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=noise0>
+			<bold>Noise, pass 1</bold><br/>
+			Bring up a page letting you specify what kind of bumps/colors are applied.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=noise1>
+			<bold>Noise, pass 2</bold><br/>
+			Bring up a page letting you specify what kind of bumps/colors are applied.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=noise2>
+			<bold>Noise, pass 3</bold><br/>
+			Bring up a page letting you specify what kind of bumps/colors are applied.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=noise3>
+			<bold>Noise, pass 4</bold><br/>
+			Bring up a page letting you specify what kind of bumps/colors are applied.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=noise4>
+			<bold>Noise, pass 5</bold><br/>
+			Bring up a page letting you specify what kind of bumps/colors are applied.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=chip>
+			<bold>Tile chipping</bold><br/>
+			Lets you put chips into the tile edges.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tile shininess</xtrheader>
+	<tr>
+		<td>
+			<bold>Shininess</bold> - Select a material whose shininess is closest to
+			the tile's.
+		</td>
+		<td><xcombomaterial2 width=100% name=material/></td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,360 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "Audio Outside the Box"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "M3DWaveDll.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""Audio Outside the Box""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""M3DWaveDll.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PRINTER             BITMAP                  "..\\m3dview\\bitmap1.bmp"
+IDB_SAVE                BITMAP                  "..\\m3dview\\bmp00003.bmp"
+IDB_SAVEAS              BITMAP                  "..\\m3dview\\bmp00004.bmp"
+IDB_NEW                 BITMAP                  "..\\m3dview\\bmp00005.bmp"
+IDB_OPEN                BITMAP                  "..\\m3dview\\bmp00006.bmp"
+IDB_HELP                BITMAP                  "..\\m3dview\\bmp00007.bmp"
+IDB_CUT                 BITMAP                  "..\\m3dview\\bmp00008.bmp"
+IDB_COPY                BITMAP                  "..\\m3dview\\bmp00009.bmp"
+IDB_PASTE               BITMAP                  "..\\m3dview\\bmp00010.bmp"
+IDB_UNDO                BITMAP                  "..\\m3dview\\bmp00011.bmp"
+IDB_REDO                BITMAP                  "..\\m3dview\\bitmap2.bmp"
+IDB_DELETE              BITMAP                  "..\\m3dview\\bmp00012.bmp"
+IDB_DIALOGBOX           BITMAP                  "..\\m3dview\\bmp00013.bmp"
+IDB_SELREGION           BITMAP                  "..\\m3dview\\selindiv.bmp"
+IDB_SELALL              BITMAP                  "..\\m3dview\\bmp00029.bmp"
+IDB_SELNONE             BITMAP                  "..\\m3dview\\selall1.bmp"
+IDB_ZOOMIN              BITMAP                  "..\\m3dview\\cut1.bmp"
+IDB_ANIMPLAY            BITMAP                  "..\\m3dview\\anim1.bmp"
+IDB_ANIMSTOP            BITMAP                  "..\\m3dview\\animplay.bmp"
+IDB_ANIMPLAYLOOP        BITMAP                  "..\\m3dview\\bmp00053.bmp"
+IDB_ANIMJUMPSTART       BITMAP                  "..\\m3dview\\bmp00054.bmp"
+IDB_ANIMJUMPEND         BITMAP                  "..\\m3dview\\animjump.bmp"
+IDB_BRUSHSHAPE          BITMAP                  "..\\m3dview\\groundge.bmp"
+IDB_BRUSHSTRENGTH       BITMAP                  "..\\m3dview\\brushsha.bmp"
+IDB_BRUSHEFFECT         BITMAP                  "..\\m3dview\\brushstr.bmp"
+IDB_BRUSH32             BITMAP                  "..\\m3dview\\brush65.bmp"
+IDB_BRUSH16             BITMAP                  "..\\m3dview\\brush33.bmp"
+IDB_BRUSH8              BITMAP                  "..\\m3dview\\brush17.bmp"
+IDB_BRUSH4              BITMAP                  "..\\m3dview\\brush9.bmp"
+IDB_BRUSH64             BITMAP                  "..\\m3dview\\bmp00066.bmp"
+IDB_ANIMRECORD          BITMAP                  "bmp00001.bmp"
+IDB_SHOWWAVE            BITMAP                  "showwave.bmp"
+IDB_SHOWFFT             BITMAP                  "showfft.bmp"
+IDB_PASTEMIX            BITMAP                  "pastemix.bmp"
+IDB_FX                  BITMAP                  "fx.bmp"
+IDB_ZOOMALL             BITMAP                  "zoomall.bmp"
+IDB_SELPLAYBACK         BITMAP                  "selplayback.bmp"
+IDB_SHOWOTHERS          BITMAP                  "showothers.bmp"
+IDB_ANIMPLAYSEL         BITMAP                  "PlaySel.bmp"
+IDB_ZOOMSEL             BITMAP                  "zoomsel.bmp"
+IDB_SHOWPHONEMES        BITMAP                  "showphonemes.bmp"
+IDB_NEWPHONE            BITMAP                  "NewPhone.bmp"
+IDB_SPEECHRECOG         BITMAP                  "SpeechRecog.bmp"
+IDB_SHOWMOUTH           BITMAP                  "ShowMouth.bmp"
+IDB_NEWWORD             BITMAP                  "newword.bmp"
+IDB_FOLDER              BITMAP                  "Folder.bmp"
+IDB_BITMAPSCOPEQUIET    BITMAP                  "ScopeQuiet.bmp"
+IDB_BITMAPSCOPECLIP     BITMAP                  "ScopeClip.bmp"
+IDB_BITMAPSCOPEFLAT     BITMAP                  "ScopeFlat.bmp"
+IDB_BITMAPSCOPEGOOD     BITMAP                  "ScopeGood.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "..\\Macros.mml"
+IDR_MMLTEMPLATEBACK     MML                     "..\\TemplateBack.mml"
+IDR_MMLTEMPLATEHELP     MML                     "..\\m3dview\\TemplateHelp.mml"
+IDR_MMLRECORD           MML                     "Record.mml"
+IDR_MMLSETTINGS         MML                     "Settings.mml"
+IDR_MMLFXVolume         MML                     "FXVolume.mml"
+IDR_MMLFXFILTER         MML                     "FXFilter.mml"
+IDR_MMLFXBLEND          MML                     "FXBlend.mml"
+IDR_MMLFXACCOMPRESS     MML                     "FXAcCompress.mml"
+IDR_MMLFXECHO           MML                     "FXEcho.mml"
+IDR_MMLFXPITCHSPEED     MML                     "FXPitchSpeed.mml"
+IDR_MMLFXSINE           MML                     "FXSine.mml"
+IDR_MMLFXSPEED          MML                     "FXSpeed.mml"
+IDR_MMLFXPITCH          MML                     "FXPitch.mml"
+IDR_MMLSPEECHRECOG      MML                     "SpeechRecog.mml"
+IDR_MMLHELP             MML                     "Help.mml"
+IDR_MMLVOICESYNSETTINGS MML                     "VoiceSynSettings.mml"
+IDR_MMLWORDRENAME       MML                     "WordRename.mml"
+IDR_MMLWAVEOPEN         MML                     "WaveOpen.mml"
+IDR_MMLLEXPRONOOV       MML                     "LexPronOOV.mml"
+IDR_MMLLEXLANGID        MML                     "LexLangID.mml"
+IDR_MMLLEXMAIN          MML                     "LexMain.mml"
+IDR_MMLLEXPHONE         MML                     "LexPhone.mml"
+IDR_MMLLEXPRONEDIT      MML                     "LexPronEdit.mml"
+IDR_MMLLEXPRONMAIN      MML                     "LexPronMain.mml"
+IDR_MMLSRMAIN           MML                     "SRMain.mml"
+IDR_MMLTTSMAIN          MML                     "TTSMain.mml"
+IDR_MMLRECREVIEW        MML                     "RecReview.mml"
+IDR_MMLTTSREVIEW        MML                     "TTSReview.mml"
+IDR_MMLFXTTS            MML                     "FXTTS.mml"
+IDR_MMLLEXPRONREVIEW    MML                     "LexPronReview.mml"
+IDR_MMLLEXPOSREVIEW     MML                     "LexPOSReview.mml"
+IDR_MMLLEXGRAMMAR       MML                     "LexGrammar.mml"
+IDR_MMLLEXLTS           MML                     "LexLTS.mml"
+IDR_MMLTRANSPROS1       MML                     "TransPros1.mml"
+IDR_MMLTRANSPROS2       MML                     "TransPros2.mml"
+IDR_MMLTTSMODIFIEDMAIN  MML                     "TTSModifiedMain.mml"
+IDR_MMLTTSMODIFIEDPRON  MML                     "TTSModifiedPron.mml"
+IDR_MMLTTSMODIFIEDPROS  MML                     "TTSModifiedPros.mml"
+IDR_MMLVDSTARTWIZARD    MML                     "VDStartWizard.mml"
+IDR_MMLVDTYPESOFMICS    MML                     "VDTypesOfMics.mml"
+IDR_MMLTESTMIC          MML                     "VDTestMic.mml"
+IDR_MMLVDNOSOUNDCARD    MML                     "VDNoSoundCard.mml"
+IDR_MMLVDRECORDNEXT     MML                     "VDRecordNext.mml"
+IDR_MMLVDRECORDSAMPLEPLAYBACK MML                     "VDRecordSamplePlayback.mml"
+IDR_MMLVDSTARTDISGUISE  MML                     "VDStartDisguise.mml"
+IDR_MMLVDLOADMIMICAUDIO MML                     "VDLoadMimicAudio.mml"
+IDR_MMLVDENTERTRANSCRIPTION MML                     "VDEnterTranscription.mml"
+IDR_MMLVDRECORDORIG     MML                     "VDRecordOrig.mml"
+IDR_MMLVDCLEARSETTINGSNOT MML                     "VDClearSettingsNot.mml"
+IDR_MMLVDCLEARSETTINGS  MML                     "VDClearSettings.mml"
+IDR_MMLVDADJUSTPITCH    MML                     "VDAdjustPitch.mml"
+IDR_MMLVDMOVEMARKERS    MML                     "VDMoveMarkers.mml"
+IDR_MMLVDOCTAVESTRETCHES MML                     "VDOctaveStretches.mml"
+IDR_MMLVDFINETUNEPHONEME MML                     "VDFineTunePhoneme.mml"
+IDR_MMLVDPHONEMEDATABASE MML                     "VDPhonemeDatabase.mml"
+IDR_MMLVDEXTRASETTINGS  MML                     "VDExtraSettings.mml"
+IDR_MMLVDSAVE           MML                     "VDSave.mml"
+IDR_MMLVDNOOFFENSIVE    MML                     "VDNoOffensive.mml"
+IDR_MMLVDVOICECHATTUTORIAL MML                     "VDVoiceChatTutorial.mml"
+IDR_MMLTTSMODIFIEDSUBVOICE MML                     "TTSModifiedSubVoice.mml"
+IDR_MMLWAVEDIRINFOADDFILES MML                     "WaveDirInfoAddFiles.mml"
+IDR_MMLTTSMAINADDMANY   MML                     "TTSMainAddMany.mml"
+IDR_MMLVDSTARTDISGUISEMIMIC MML                     "VDStartDisguiseMimic.mml"
+IDR_MMLVDSTARTDISGUISEQUICK MML                     "VDStartDisguiseQuick.mml"
+IDR_MMLVDRECORDORIGQUICK MML                     "VDRecordOrigQuick.mml"
+IDR_MMLQUICKOPTIONS     MML                     "VDQuickOptions.mml"
+IDR_MMLLEXGRAMMARGROUP  MML                     "LexGrammarGroup.mml"
+IDR_MMLLEXGRAMMARRULE   MML                     "LexGrammarRule.mml"
+IDR_MMLFXTTSBATCH       MML                     "FXTTSBatch.mml"
+IDR_MMLFXMONOTONE       MML                     "FXMonotone.mml"
+IDR_MMLTRANSPROSQUICK2  MML                     "TransProsQuick2.mml"
+IDR_MMLTRANSPROSQUICK1  MML                     "TransProsQuick1.mml"
+IDR_MMLTTSMODIFIEDIMPORT MML                     "TTSModifiedImport.mml"
+IDR_MMLLEXIMPORTUNISYN  MML                     "LexImportUnisyn.mml"
+IDR_MMLLEXIMPORTMANDARIN MML                     "LexImportMandarin.mml"
+IDR_MMLLEXIMPORTMANDARIN2 MML                     "LexImportMandarin2.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSORPASTE         CURSOR                  "..\\m3dview\\cursor1.cur"
+IDC_CURSORZOOMIN        CURSOR                  "..\\m3dview\\cur00003.cur"
+IDC_CURSORSELREGION     CURSOR                  "..\\m3dview\\cursorcl.cur"
+IDC_CURSORBRUSH32       CURSOR                  "..\\m3dview\\cursor2.cur"
+IDC_CURSORBRUSH16       CURSOR                  "..\\m3dview\\cursorbr.cur"
+IDC_CURSORBRUSH8        CURSOR                  "..\\m3dview\\cur00046.cur"
+IDC_CURSORBRUSH4        CURSOR                  "..\\m3dview\\cur00047.cur"
+IDC_CURSORBRUSH64       CURSOR                  "..\\m3dview\\cur00045.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUSHOWOTHERS MENU 
+BEGIN
+    POPUP "Show others"
+    BEGIN
+        MENUITEM "Waveform",                    ID_SHOWOTHERS_WAVEFORM
+        MENUITEM "Spectrogram",                 ID_SHOWOTHERS_SPECTROGRAM
+        MENUITEM "Phonemes",                    ID_SHOWOTHERS_PHONEMES
+        MENUITEM "Words",                       ID_SHOWOTHERS_WORDS
+        MENUITEM "Mouth",                       ID_SHOWOTHERS_MOUTH
+        MENUITEM SEPARATOR
+        MENUITEM "Energy",                      ID_SHOWOTHERS_ENERGY
+        MENUITEM "Pitch",                       ID_SHOWOTHERS_PITCH
+        MENUITEM "Spectrogram: Pitch detect",   ID_SHOWOTHERS_SPECTROGRAMOFSPECTROGRAM
+        MENUITEM "Spectrogram: Pitch independent", ID_SHOWOTHERS_SPECTROGRAMNOPITCH
+        MENUITEM "Spectrogram: Pitch independent, octaves", ID_SHOWOTHERS_SPECTROGRAMOCTAVES
+        MENUITEM SEPARATOR
+        MENUITEM "Speech recognition features (voiced and unvoiced))", ID_SHOWOTHERS_SPECTROGRAMSRFEAT
+        MENUITEM "Speech recognition features (voiced)", ID_SHOWOTHERS_SPECTROGRAMSRFEATVOICED
+        MENUITEM "Speech recognition features (unvoiced)", ID_SHOWOTHERS_SPECTROGRAMSRFEATNOISE
+        MENUITEM "Speech recognition features (phase)", ID_SHOWOTHERS_SPEECHRECOGNITIONFEATPHASE
+        MENUITEM "Speech recognition features (phase by pitch)", ID_SHOWOTHERS_SPEECHRECOGNITIONFEATPHASEPITCH
+        MENUITEM "Speech recognition features (PCM)", ID_SHOWOTHERS_SPEECHRECOGNITIONFEATURES
+    END
+END
+
+IDR_MENUFX MENU 
+BEGIN
+    POPUP "FX"
+    BEGIN
+        POPUP "Filtering"
+        BEGIN
+            MENUITEM "Remove DC offset (selection)", ID_FILTERING_REMOVEDCOFFSET
+            MENUITEM "Remove sub-voice frequencies (selection)", ID_FILTERING_REMOVESUB
+            MENUITEM SEPARATOR
+            MENUITEM "Bass boost (selection)",      ID_FILTERING_BASSBOOST
+            MENUITEM "Bass reduce (selection)",     ID_FILTERING_BASSREDUCE
+            MENUITEM "Treble boost (selection)",    ID_FILTERING_TREBLEBOOST
+            MENUITEM "Treble reduce (selection)",   ID_FILTERING_TREBLEREDUCE
+            MENUITEM SEPARATOR
+            MENUITEM "Cheap radio (selection)",     ID_FILTERING_CHEAPRADIO
+            MENUITEM "Old-fashioned recording (selection)", ID_FILTERING_OLD
+            MENUITEM SEPARATOR
+            MENUITEM "Advanced filtering...",       ID_FILTERING_ADVANCEDFILTERING
+        END
+        POPUP "Misc"
+        BEGIN
+            MENUITEM "Acoustic compression...",     ID_MISC_ACOUSTICCOMPRESSION
+            MENUITEM "Blend for loop...",           ID_MISC_BLENDFORLOOP
+            MENUITEM "Echo and reverb...",          ID_MISC_ECHOANDREVERB
+            MENUITEM "Generate sine wave...",       ID_MISC_GENERATESINEWAVE
+            MENUITEM "Pich and speed...",           ID_PITCHANDSPEED_PICHANDSPEED
+        END
+        POPUP "Silence"
+        BEGIN
+            MENUITEM "Reduce background hiss (selection)", ID_SILENCE_NOISEREDUCTION
+            MENUITEM "Trim silence from start and end (selection)", ID_SILENCE_TRIMSILENCEFROMSTARTANDEND
+        END
+        POPUP "Stereo effects"
+        BEGIN
+            MENUITEM "Swap channels (selection)",   ID_STEREOEFFECTS_SWAPCHANNELS
+        END
+        POPUP "Strange"
+        BEGIN
+            MENUITEM "Reverse (selection)",         ID_STRANGE_REVERSE
+            MENUITEM SEPARATOR
+            MENUITEM "Remove phase (selection)",    ID_STRANGE_REMOVEPHASE
+            MENUITEM "Swap phase (selection)",      ID_STRANGE_SWAPPHASE
+            MENUITEM "Comb through frequencies, stereo (selection)", ID_STRANGE_COMBTHROUGHFREQUENCIES
+            MENUITEM "Comb through frequencies 2, stereo (selection)", ID_STRANGE_COMBTHROUGHFREQUENCIES2
+            MENUITEM "Invert frequencies (selection)", ID_STRANGE_INVERTFREQUENCIES
+            MENUITEM "Stretch frequencies (selection)", ID_STRANGE_STRETCHFREQUENCIES
+            MENUITEM "Shrink frequencies (selection)", ID_STRANGE_SHRINKFREQUENCIES
+        END
+        POPUP "Text-to-speech"
+        BEGIN
+            MENUITEM "Text-to-speech...",           ID_TEXT_TEXT
+            MENUITEM "Transplanted prosody...",     ID_TEXT_TRANSPLANTEDPROSODY
+            MENUITEM "Batch text-to-speech...",     ID_TEXT_BATCHTEXT
+        END
+        POPUP "Voice modification"
+        BEGIN
+            MENUITEM "Voice disguise...",           ID_RESYNTHESIS_CHANGETHEVOICE
+            MENUITEM "Speed without pitch shift...", ID_PITCHANDSPEED_SPEEDWITHOUTPITCHSHIFT
+            MENUITEM "Pitch change without speed change...", ID_PITCHANDSPEED_PITCHCHANGEWITHOUTSPEEDCHANGE
+            MENUITEM "Turn into a whisper",         ID_VOICEMODIFICATION_WHISPER
+            MENUITEM "Monotone (change speed)",     ID_VOICEMODIFICATION_MONOTONE
+        END
+        POPUP "Volume"
+        BEGIN
+            MENUITEM "Increase (selection)",        ID_VOLUME_INCREASE
+            MENUITEM "Decrease (selection)",        ID_VOLUME_DECREASE
+            MENUITEM "Fade in (selection)",         ID_VOLUME_FADEIN
+            MENUITEM "Fade out (selection)",        ID_VOLUME_FADEOUT
+            MENUITEM SEPARATOR
+            MENUITEM "Normalize (selection)",       ID_VOLUME_NORMALIZE
+            MENUITEM "Make silent (selection)",     ID_VOLUME_MAKESILENT
+            MENUITEM "Invert sign (selection)",     ID_VOLUME_INVERTSIGN
+            MENUITEM SEPARATOR
+            MENUITEM "Advanced volume...",          ID_VOLUME_ADVANCEDVOLUME
+        END
+    END
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,31 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Showing the ground editor"/>
+
+<xPageTitle>
+	Tutorial - Showing the ground editor
+</xPageTitle>
+
+<p>
+	<xSN/> comes with a "ground editor" that lets you modify the topography, texutres,
+	and foliage of a landscape. To display this editor:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjShowEditor/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the ground. (If you don't have a ground object created in
+		your world then you can create it in the usual way: Use <xButtonObjNew/> to
+		create it from "Topography" in "Outdoors".)
+	</li>
+	<p>
+		The "Ground editor" window will appear.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:629><bold>Next</bold></button>
+</p>
+

@@ -1,0 +1,109 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add an effect"/>
+
+<p>
+	Select the effect you wish to add:
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Effects</xtrheader>
+	<tr><td>
+		<xChoiceButton href=XXXautoexposure>
+			<bold>Auto exposure</bold><br/>
+			Autoamtically adjusts the brightness of the image so it's properly exposed.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXblur>
+			<bold>Blur</bold><br/>
+			Blurs the image.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXcolor>
+			<bold>Color</bold><br/>
+			You can use this to adjust constrast, brightness, hue, saturation, lightness,
+			red, green, and blue.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXcolorblind>
+			<bold>Color blindness</bold><br/>
+			Simulates color blindness, eliminating one or more of the chroma.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXdof>
+			<bold>Depth of field</bold><br/>
+			Creates a depth of field (blurring in the distance). This takes some algorithmic
+			shortcuts to make blurring as fast as possible.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXfilmgrain>
+			<bold>Film grain</bold><br/>
+			Adds noise to the image, making it look like it was shot on film.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXfog>
+			<bold>Fog</bold><br/>
+			This effect creates fog (or haze) in the image.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXfoghls>
+			<bold>Fog (hue, lightness, saturation)</bold><br/>
+			This fog causes the image's saturation to drop in the distance.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXglow>
+			<bold>Glow</bold><br/>
+			Use this to creating a glowing image, or emphasize edges.
+		</xChoiceButton>
+
+		<xChoiceButton href=XXXhalftone>
+			<bold>Halftoning</bold><br/>
+			Creates halftone effects so you image looks like it is from a newspaper.
+		</xChoiceButton>
+
+		<xChoiceButton href=XXXoutlinesketch>
+			<bold>Outline (sketch)</bold><br/>
+			This draws a sketched outline around objects.
+		</xChoiceButton>
+
+		<xChoiceButton href=XXXoutline>
+			<bold>Outline (solid)</bold><br/>
+			This draws a solid outline around objects.
+		</xChoiceButton>
+
+		<xChoiceButton href=XXXpainting>
+			<bold>Painting</bold><br/>
+			Makes the image look like it was painted.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXposterize>
+			<bold>Posterize</bold><br/>
+			Reduces the number of colors in an image so it looks like a poster or
+			cartoon.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXrelief>
+			<bold>Relief</bold><br/>
+			The relief effect makes the image look like it was painted/drawn on
+			a rough surface.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXspyglass>
+			<bold>Spyglass</bold><br/>
+			Creates a circular mask so the image looks like it was shot through
+			a spyglass or binoculars.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXtv>
+			<bold>TV</bold><br/>
+			Makes the image look like it comes from a traditional color-television.
+		</xChoiceButton>
+		
+		<xChoiceButton href=XXXwatercolor>
+			<bold>Watercolor</bold><br/>
+			Makes the image look like it's a watercolor painting.
+		</xChoiceButton>
+		
+	</td></tr>
+</xtablecenter>
+

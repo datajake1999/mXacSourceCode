@@ -1,0 +1,45 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Suns, planets, and moons"/>
+
+<p>
+	Use this page to add or remove extra suns, planets, or moons to your scene.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Suns, planets, and moons</xtrheader>
+	<tr>
+		<td>
+			<listbox width=85% height=50% vscroll=planetsscroll name=planets>
+			</listbox>
+			<scrollbar orient=vert height=50% name=planetsscroll/><br/>
+			
+			<xchoicebutton name=edit>
+				<bold>Modify the selected sun, planet, or moon</bold><br/>
+				Modifies the whatever sun, planet, or moon you have selected above.
+			</xchoicebutton>
+			<xchoicebutton name=remove>
+				<bold>Delete the selected sun, planet, or moon</bold><br/>
+				Removes the sun, planet, or moon you have selected above.
+			</xchoicebutton>
+			<xchoicebutton name=copy>
+				<bold>Copy the selected sun, planet, or moon</bold><br/>
+				Copies the selected celestial body. The copy will be created at the same
+				location as the original object.
+			</xchoicebutton>
+			<xchoicebutton name=addsun>
+				<bold>Add a new sun based upon the Earth's sun</bold><br/>
+				Use this to make a copy of the sun so you can customize it. The copy
+				will be created at the same location as the existing sun, so you will either
+				need to move the copy or existing sun to see it.
+			</xchoicebutton>
+			<xchoicebutton name=addmoon>
+				<bold>Add a new moon based upon the Earth's moon</bold><br/>
+				Use this to make a copy of the moon so you can customize it. The copy
+				will be created at the same location as the existing moon, so you will either
+				need to move the copy or existing sun to see it.
+			</xchoicebutton>
+		</td>
+	</tr>
+</xtablecenter>

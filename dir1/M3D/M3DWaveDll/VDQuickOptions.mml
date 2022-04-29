@@ -1,0 +1,58 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice disguise options, quick"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Adjust pitch</xtrheader>
+	<tr>
+		<td>
+			<p>
+				Drag the slider to adjust the <bold>pitch</bold> of the disguised voice:
+			</p>
+			
+			<p align=right><scrollbar orient=horz width=80% min=-200 max=200 name=pitch/></p>
+
+			<p/>
+						
+			<p>
+				Adjust the slider to affect how <bold>feminine or masculine</bold> the voice
+				sounds.
+			</p>
+			
+			<p align=right><scrollbar orient=horz width=80% min=80 max=120 name=stretch/></p>
+			
+			<p/>
+						
+			<p>
+				Finally, the next slider acts like a <bold>graphic equalizer</bold> and affects
+				how much bass or treble is in the voice.
+			</p>
+			
+			<p align=right>Voiced: <scrollbar orient=horz width=60% min=-6 max=6 name=volume0/></p>
+			<p align=right>Unvoiced: <scrollbar orient=horz width=60% min=-6 max=6 name=volume1/></p>
+			
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href=p:2110>
+				<bold>Next</bold><br/>
+				Finished with your changes and continue to the "Save" page.
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

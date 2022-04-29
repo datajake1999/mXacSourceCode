@@ -1,0 +1,100 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Adding to the palette"/>
+
+<xPageTitle>
+	Tutorial - Adding to the palette
+</xPageTitle>
+
+<p>
+	<xSN/> is different than most paint programs because the act of "painting" is not
+	really apply paint (in a virtual sense) but transferring the paint from the
+	paint's "tracing paper" to the object at the place where you clicked your brush.
+	In other words, it's like one of those iron-on pictures that you lay atop a
+	t-shirt and the run the iron over. <xSN/>'s brush acts like the iron, tranferring
+	the image over.
+</p>
+
+<p>
+	You haven't noticed this unique behaviour because by using a "Color" you have been
+	tranferring from a solid color, so no texturing has been evident. To use a
+	texture instead of a color:
+</p>
+
+<ol>
+	<li>
+		In the palette, <bold>double click</bold> the last entry, called "Double-click to
+		add a new tracing paper...".
+	</li>
+	<li>
+		The "Add a new tracing paper" dialog will appear. Click on
+		the <bold>"Texture"</bold> button.
+	</li>
+	<li>
+		The "Change an object's color or texture" dialog will appear. Browse through
+		the familiar dialog to find an interesting texture, such as some bricks.
+	</li>
+	<p>
+		Once you have selected the texture, the dialogs will close and you're be
+		back in the "Painting view". The brick texture you just added will be
+		selected in the texture.
+	</p>
+	<li>
+		Select the <xButtonBrush32/> tool and <bold>paint</bold> onto your object.
+	</li>
+	<p>
+		Instead of a solid color being painted, your brick texture will appear.
+	</p>
+</ol>
+
+<p>
+	But what if you want to paint diagonal bricks?
+</p>
+
+<ol>
+	<li>
+		<bold>Move the scrollbar knob</bold> for the "Tracing-blend scrollbar" underneath
+		the palette. As you move it to the right, the brick texture (from the palette) is
+		blended in with the image of the object. Moving the scrollbar doesn't change your
+		texture at all, it just makes the "iron-on" tracing paper visible so you can see what you will
+		paint and where. (You can also roll the mouse wheel up and down to adjust
+		the blend.)
+	</li>
+	<li>
+		Now that you can see your brick texture, select the <xButtonTraceRot/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the main display and <bold>drag</bold> the mouse to the
+		right. As you drag the mouse, the bricks (or whatever texture you use) will rotate.
+	</li>
+	<li>
+		Now, if you use the <xButtonBrush32/> tool and paint, any bricks you paint
+		will be on the diagonal. (You may wish to slide the tracing-blend slider all the
+		way to the left so you can see what you're painting.)
+	</li>
+	<li>
+		Likewise, you can use <xButtonTraceMove/>, <xButtonTraceScale/> and <xButtonPVMirror/> to
+		move, scale, and mirror the tracing paper.
+	</li>
+</ol>
+
+<p>
+	If you <bold>double click</bold> on a tracing paper entry in the palette, <xSN/> will
+	bring up the "Modify tracing paper" dialog. You can use this to remove the entry
+	from the palette, or modify what maps (bump, specularity, glow, etc.) it paints.
+</p>
+
+<p>
+	As you may have noticed in the "Add a new tracing paper" dialog, you can add
+	more than just existing textures to your image. You can also load in image files,
+	text, and images from the clipboard; this last one is particularly useful
+	since <xSN/>'s Painting View has a fairly limited set of features and effects.
+	To get more, just create an image in your favorite paint program, copy it to the
+	clipboard, and load it into <xSN/> through the "Add a new tracing paper" dialog.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:810><bold>Next</bold></button>
+</p>
+

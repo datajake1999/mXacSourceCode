@@ -1,0 +1,42 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Red-blue 3D glasses"/>
+
+<xPageTitle>
+	Red-blue 3D glasses
+</xPageTitle>
+
+<p>
+	<xLN/> will show draw the image using red and blue colors
+	so you can use the red and blue glasses (common in 1950's horror films) to
+	view the image. Because the red and blue in computer monitors are not exactly
+	the same as the glasses, the technique only works moderately well.
+	It's there if you need it though.
+</p>
+
+<p>
+	To turn on the red/blue glasses feature:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonViewSettings/> button.
+	</li>
+	<li>
+		In the "View settings" dialog that appears click on the <bold>"Red-blue glasses"</bold> button.
+	</li>
+	<li>
+		In the "Red/blue colored glasses" page check the <bold>"Use red/blue 3D glasses"</bold>.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+</ol>
+
+<xDefinition>
+	<bold>Feedback question:</bold> I have played with LCD shutter glasses and stereo
+	display glasses in the past. It wouldn't be terribly difficult to modify <xSN/>
+	to support them, but there's no point doing the work until I know of users
+	that will actually use them. If you would use them for <xSN/>, send
+	me E-mail at <xMyEmail/>.
+</xDefinition>

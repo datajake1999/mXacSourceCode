@@ -1,0 +1,70 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Speech Recognition"/>
+
+<p>
+	This page uses speech recognition to determine what phonemes are spoken and where
+	they begin and end. The phonemes, in turn, are used to determine the mouth shape
+	during animation. It's not 100% accurate, but you'll find that that even wrong
+	phonemes will often have the right mouth shape, so you won't need to correct it
+	that often... ultimately whether the animation looks right is the important thing.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Recognize speech</xtrheader>
+	<tr><td>
+		<bold>Text spoken (sounds like)</bold> - Type in a transcription of the the audio recording here.
+		Make sure to spell out any spoken symbols. (Ex: Instead of "12" type in "twelve.")
+		Because <xSN/> sometimes guesses the pronunciations of words (and is rather awful at it), you
+		might get better results by spelling uncommon words phonetically. (Ex: Instead of "tableau" type in "tablow".)
+		Alternatively, you can add the mispronounced word to the lexicon using the "mXac NLP Editor".
+		<br/>
+		<edit width=100% multiline=true defcontrol=true wordwrap=true name=soundslike>
+		</edit>
+		
+		<br/>
+	
+		<xChoiceButton name=recog>
+			<bold>Do speech recognition</bold><br/>
+			Press this to identify where the phonemes begin and end. If it doesn't work well
+			enough you may with to create custom training data.
+		</xChoiceButton>
+		<p/>
+		(The pronunciation dictionary is provided by CMU University.
+		See <a href="http://www.speech.cs.cmu.edu/cig-bin/cmudict">http://www.speech.cs.cmu.edu/cig-bin/cmudict</a> for details.)
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Training data</xtrheader>
+	<tr><td>
+		To recognize speech you need to have "training data" so <xSN/> knows what the
+		phonemes sound like. <xSN/> comes with some default training data. It should
+		do a decent job with any voice, but you might
+		want to create custom training data for each of your speakers to make speech
+		recognition more accurate.
+		<p/>
+		The current voice is:<br/>
+		<xeditoneline enabled=false name=trainfile/>
+		<p/>
+		To change the voice, click the following:
+		<p/>
+		<xChoiceButton name=open>
+			<bold>Load in different training data</bold><br/>
+			Press this to open a training data file you have previously saved.
+			You can create train speech recognition to your voice using the "mXac
+			NLP Editor".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=seetrain>
+	<bold>See training data</bold><br/>
+	If you're curious, press this button to replace your current wave file with the
+	training data (minus the original audio). You can see the data by using the
+	"Spectrogram: Speech recognition features" and "Phonemes" views.
+</xChoiceButton>
+
+

@@ -1,0 +1,321 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Light settings"/>
+
+<!xComboLightStand>
+	<combobox cbheight=300 width=100% height=50% sort=false macroattribute=1>
+		<elem name=140><bold>Ceiling flourescent box, 8w</bold></elem>
+		<elem name=141><bold>Ceiling flourescent box, 18w</bold></elem>
+		<elem name=142><bold>Ceiling flourescent box, 18wx2</bold></elem>
+		<elem name=143><bold>Ceiling flourescent box, 36w</bold></elem>
+		<elem name=144><bold>Ceiling flourescent box, 36wx2</bold></elem>
+		<elem name=145><bold>Ceiling flourescent box, 36wx4</bold></elem>
+		<elem name=146><bold>Ceiling flourescent box, round</bold></elem>
+		<elem name=110><bold>Ceiling mounted, cable</bold></elem>
+		<elem name=111><bold>Ceiling mounted, cable 2</bold></elem>
+		<elem name=112><bold>Ceiling mounted, cable 3</bold></elem>
+		<elem name=113><bold>Ceiling mounted, fixed</bold></elem>
+		<elem name=114><bold>Ceiling mounted, fixed 2</bold></elem>
+		<elem name=115><bold>Ceiling mounted, fixed 3</bold></elem>
+		<elem name=120><bold>Chandelier, down, 3 arms</bold></elem>
+		<elem name=121><bold>Chandelier, down, 4 arms</bold></elem>
+		<elem name=122><bold>Chandelier, down, 5 arms</bold></elem>
+		<elem name=123><bold>Chandelier, down, 6 arms</bold></elem>
+		<elem name=124><bold>Chandelier, up, 3 arms</bold></elem>
+		<elem name=125><bold>Chandelier, up, 4 arms</bold></elem>
+		<elem name=126><bold>Chandelier, up, 5 arms</bold></elem>
+		<elem name=127><bold>Chandelier, up, 6 arms</bold></elem>
+		<elem name=52><bold>Desk lamp, arm, flexible</bold></elem>
+		<elem name=50><bold>Desk lamp, arm (large)</bold></elem>
+		<elem name=51><bold>Desk lamp, arm (small)</bold></elem>
+		<elem name=57><bold>Desk lamp, ceramic 1</bold></elem>
+		<elem name=58><bold>Desk lamp, ceramic 2</bold></elem>
+		<elem name=59><bold>Desk lamp, ceramic 3</bold></elem>
+		<elem name=54><bold>Desk lamp, curve, down</bold></elem>
+		<elem name=55><bold>Desk lamp, curve to horizontal</bold></elem>
+		<elem name=53><bold>Desk lamp, vertical post</bold></elem>
+		<elem name=152><bold>Fire, candelabra</bold></elem>
+		<elem name=151><bold>Fire, fireplace log</bold></elem>
+		<elem name=150><bold>Fire, wall torch holder</bold></elem>
+		<elem name=31><bold>Floor lamp, 3 lights</bold></elem>
+		<elem name=33><bold>Floor lamp, horizontal arm</bold></elem>
+		<elem name=34><bold>Floor lamp, horizontal arm w/swivel</bold></elem>
+		<elem name=30><bold>Floor lamp, simple, 1.5m</bold></elem>
+		<elem name=35><bold>Floor lamp, simple, 2m</bold></elem>
+		<elem name=32><bold>Floor lamp, tulip</bold></elem>
+		<elem name=56><bold>Lava lamp base</bold></elem>
+		<elem name=90><bold>None, ceiling or wall mounted</bold></elem>
+		<elem name=91><bold>None, freestanding</bold></elem>
+		<elem name=11><bold>Outdoor, lamp, 2m</bold></elem>
+		<elem name=12><bold>Outdoor, lamp, 3m</bold></elem>
+		<elem name=14><bold>Outdoor, lamp, tripple</bold></elem>
+		<elem name=15><bold>Outdoor, parking lot, single</bold></elem>
+		<elem name=16><bold>Outdoor, parking lot, double</bold></elem>
+		<elem name=17><bold>Outdoor, parking lot, tripple</bold></elem>
+		<elem name=10><bold>Outdoor, pathway</bold></elem>
+		<elem name=13><bold>Outdoor, tulip</bold></elem>
+		<elem name=70><bold>Table lamp, simple 1</bold></elem>
+		<elem name=71><bold>Table lamp, simple 2</bold></elem>
+		<elem name=72><bold>Table lamp, ceramic 1</bold></elem>
+		<elem name=73><bold>Table lamp, ceramic 2</bold></elem>
+		<elem name=74><bold>Table lamp, ceramic 3</bold></elem>
+		<elem name=75><bold>Table lamp, ceramic 4</bold></elem>
+		<elem name=76><bold>Table lamp, ceramic 5</bold></elem>
+		<elem name=77><bold>Table lamp, ceramic 6</bold></elem>
+		<elem name=78><bold>Table lamp, base 1</bold></elem>
+		<elem name=79><bold>Table lamp, base 2</bold></elem>
+		<elem name=80><bold>Table lamp, base 3</bold></elem>
+		<elem name=81><bold>Table lamp, base 4</bold></elem>
+		<elem name=82><bold>Table lamp, base 5</bold></elem>
+		<elem name=134><bold>Strip, 2 fixed lights</bold></elem>
+		<elem name=135><bold>Strip, 3 fixed lights</bold></elem>
+		<elem name=136><bold>Strip, 4 fixed lights</bold></elem>
+		<elem name=137><bold>Strip, 5 fixed lights</bold></elem>
+		<elem name=130><bold>Track lighting, 2 lights</bold></elem>
+		<elem name=131><bold>Track lighting, 3 lights</bold></elem>
+		<elem name=132><bold>Track lighting, 4 lights</bold></elem>
+		<elem name=133><bold>Track lighting, 5 lights</bold></elem>
+		<elem name=101><bold>Wall mounted, arm curved down</bold></elem>
+		<elem name=102><bold>Wall mounted, arm curved up</bold></elem>
+		<elem name=100><bold>Wall mounted, arm straight out</bold></elem>
+		<elem name=103><bold>Wall mounted, two arms</bold></elem>
+		<elem name=104><bold>Wall mounted, three arms</bold></elem>
+	</combobox>
+</xComboLightStand>
+
+<!xComboLightShade>
+	<combobox cbheight=300 width=100% height=50% sort=false macroattribute=1>
+		<elem name=163><bold>Fire, bowl with flame</bold></elem>
+		<elem name=160><bold>Fire, candle 1</bold></elem>
+		<elem name=161><bold>Fire, candle 2</bold></elem>
+		<elem name=164><bold>Fire, lantern, hung</bold></elem>
+		<elem name=162><bold>Fire, torch</bold></elem>
+		<elem name=165><bold>Flame, candle</bold></elem>
+		<elem name=167><bold>Flame, fire</bold></elem>
+		<elem name=166><bold>Flame, torch</bold></elem>
+		<elem name=100><bold>Flourescent, 8w</bold></elem>
+		<elem name=140><bold>Flourescent, 8w, curved</bold></elem>
+		<elem name=101><bold>Flourescent, 18w</bold></elem>
+		<elem name=141><bold>Flourescent, 18w, curved</bold></elem>
+		<elem name=102><bold>Flourescent, 18w x 2</bold></elem>
+		<elem name=142><bold>Flourescent, 18w x 2, curved</bold></elem>
+		<elem name=103><bold>Flourescent, 36w</bold></elem>
+		<elem name=143><bold>Flourescent, 36w, curved</bold></elem>
+		<elem name=104><bold>Flourescent, 36w x 2</bold></elem>
+		<elem name=144><bold>Flourescent, 36w x 2, curved</bold></elem>
+		<elem name=105><bold>Flourescent, 36w x 4</bold></elem>
+		<elem name=106><bold>Flourescent, circular</bold></elem>
+		<elem name=80><bold>Flourescent spot, 8w, style 1</bold></elem>
+		<elem name=81><bold>Flourescent spot, 8w, style 2</bold></elem>
+		<elem name=82><bold>Flourescent spot, 8w, style 2 with diffuser</bold></elem>
+		<elem name=68><bold>Halogen bulb (small) cover, external, cylinder</bold></elem>
+		<elem name=67><bold>Halogen bulb (small) cover, external, box</bold></elem>
+		<elem name=63><bold>Halogen bulb (small) cover, glass, cylinder</bold></elem>
+		<elem name=66><bold>Halogen bulb (small) cover w/cap, glass, cylinder</bold></elem>
+		<elem name=62><bold>Halogen bulb (small) cover, glass, box</bold></elem>
+		<elem name=65><bold>Halogen bulb (small) cover w/cap, glass, box</bold></elem>
+		<elem name=61><bold>Halogen bulb (small) cover, glass, sphere</bold></elem>
+		<elem name=64><bold>Halogen bulb (small) cover w/cap, glass, sphere</bold></elem>
+		<elem name=133><bold>Halogen bulb (small), fake candle</bold></elem>
+		<elem name=114><bold>Halogen spot, embedded in ceiling</bold></elem>
+		<elem name=110><bold>Halogen spot, style 1</bold></elem>
+		<elem name=111><bold>Halogen spot, style 2</bold></elem>
+		<elem name=112><bold>Halogen spot, style 3</bold></elem>
+		<elem name=113><bold>Halogen spot, style 4</bold></elem>
+		<elem name=60><bold>Halogen tube, shallow bowl</bold></elem>
+		<elem name=115><bold>Halogen tube, spotlight</bold></elem>
+		<elem name=58><bold>Incandescent bulb cover, external, cylinder</bold></elem>
+		<elem name=57><bold>Incandescent bulb cover, external, box</bold></elem>
+		<elem name=53><bold>Incandescent bulb cover, glass, cylinder</bold></elem>
+		<elem name=56><bold>Incandescent bulb cover w/cap, glass, cylinder</bold></elem>
+		<elem name=52><bold>Incandescent bulb cover, glass, box</bold></elem>
+		<elem name=55><bold>Incandescent bulb cover w/cap, glass, box</bold></elem>
+		<elem name=51><bold>Incandescent bulb cover, glass, sphere</bold></elem>
+		<elem name=59><bold>Incandescent bulb cover w/base, glass, sphere</bold></elem>
+		<elem name=54><bold>Incandescent bulb cover w/cap, glass, sphere</bold></elem>
+		<elem name=130><bold>Incandescent bulb in ceramic socket</bold></elem>
+		<elem name=122><bold>Incandescent, ceiling mounted, cone</bold></elem>
+		<elem name=121><bold>Incandescent, ceiling mounted, hemisphere</bold></elem>
+		<elem name=123><bold>Incandescent, ceiling mounted, round</bold></elem>
+		<elem name=120><bold>Incandescent, ceiling mounted, square</bold></elem>
+		<elem name=134><bold>Incandescent spotlight in plastic socket</bold></elem>
+		<elem name=124><bold>Incandescent spot, embedded in ceiling</bold></elem>
+		<elem name=70><bold>Incandescent spot, style 1</bold></elem>
+		<elem name=71><bold>Incandescent spot, style 2</bold></elem>
+		<elem name=72><bold>Incandescent spot, style 3</bold></elem>
+		<elem name=73><bold>Incandescent spot, style 4</bold></elem>
+		<elem name=74><bold>Incandescent spot, style 5</bold></elem>
+		<elem name=75><bold>Incandescent spot, style 6</bold></elem>
+		<elem name=150><bold>Incandescent wall sconce, style 1</bold></elem>
+		<elem name=151><bold>Incandescent wall sconce, style 2</bold></elem>
+		<elem name=152><bold>Incandescent wall sconce, style 3</bold></elem>
+		<elem name=10><bold>Lamp shade, cloth, style 1</bold></elem>
+		<elem name=20><bold>Lamp shade, cloth, style 1 (down)</bold></elem>
+		<elem name=11><bold>Lamp shade, cloth, style 2</bold></elem>
+		<elem name=21><bold>Lamp shade, cloth, style 2 (down)</bold></elem>
+		<elem name=12><bold>Lamp shade, cloth, style 3</bold></elem>
+		<elem name=22><bold>Lamp shade, cloth, style 3 (down)</bold></elem>
+		<elem name=13><bold>Lamp shade, cloth, style 4</bold></elem>
+		<elem name=23><bold>Lamp shade, cloth, style 4 (down)</bold></elem>
+		<elem name=14><bold>Lamp shade, cloth, style 5</bold></elem>
+		<elem name=24><bold>Lamp shade, cloth, style 5 (down)</bold></elem>
+		<elem name=15><bold>Lamp shade, cloth, style 6</bold></elem>
+		<elem name=25><bold>Lamp shade, cloth, style 6 (down)</bold></elem>
+		<elem name=16><bold>Lamp shade, cloth, style 7</bold></elem>
+		<elem name=26><bold>Lamp shade, cloth, style 7 (down)</bold></elem>
+		<elem name=17><bold>Lamp shade, cloth, style 8</bold></elem>
+		<elem name=27><bold>Lamp shade, cloth, style 8 (down)</bold></elem>
+		<elem name=18><bold>Lamp shade, cloth, style 9</bold></elem>
+		<elem name=28><bold>Lamp shade, cloth, style 9 (down)</bold></elem>
+		<elem name=19><bold>Lamp shade, cloth, style 10</bold></elem>
+		<elem name=29><bold>Lamp shade, cloth, style 10 (down)</bold></elem>
+		<elem name=40><bold>Lamp shade, glass, style 1</bold></elem>
+		<elem name=30><bold>Lamp shade, glass, style 1 (down)</bold></elem>
+		<elem name=41><bold>Lamp shade, glass, style 2</bold></elem>
+		<elem name=31><bold>Lamp shade, glass, style 2 (down)</bold></elem>
+		<elem name=42><bold>Lamp shade, glass, style 3</bold></elem>
+		<elem name=32><bold>Lamp shade, glass, style 3 (down)</bold></elem>
+		<elem name=43><bold>Lamp shade, glass, style 4</bold></elem>
+		<elem name=33><bold>Lamp shade, glass, style 4 (down)</bold></elem>
+		<elem name=44><bold>Lamp shade, glass, style 5</bold></elem>
+		<elem name=34><bold>Lamp shade, glass, style 5 (down)</bold></elem>
+		<elem name=45><bold>Lamp shade, glass, style 6</bold></elem>
+		<elem name=35><bold>Lamp shade, glass, style 6 (down)</bold></elem>
+		<elem name=50><bold>Lamp shade, glass, style 7</bold></elem>
+		<elem name=46><bold>Lamp shade, glass, style 8</bold></elem>
+		<elem name=36><bold>Lamp shade, glass, style 8 (down)</bold></elem>
+		<elem name=47><bold>Lamp shade, glass, style 9</bold></elem>
+		<elem name=37><bold>Lamp shade, glass, style 9 (down)</bold></elem>
+		<elem name=116><bold>Lamp shade, pool table</bold></elem>
+		<elem name=76><bold>Lava lamp shade</bold></elem>
+		<elem name=173><bold>Lightbulb, halogen bulb</bold></elem>
+		<elem name=172><bold>Lightbulb, halogen spotlight</bold></elem>
+		<elem name=174><bold>Lightbulb, halogen tube</bold></elem>
+		<elem name=170><bold>Lightbulb, incandescent globe</bold></elem>
+		<elem name=171><bold>Lightbulb, incandescent spotlight</bold></elem>
+		<elem name=175><bold>Lightbulb, flourescent, 8w</bold></elem>
+		<elem name=176><bold>Lightbulb, flourescent, 18w</bold></elem>
+		<elem name=177><bold>Lightbulb, flourescent, 36w</bold></elem>
+		<elem name=179><bold>Lightbulb, flourescent, globe</bold></elem>
+		<elem name=178><bold>Lightbulb, flourescent, round</bold></elem>
+		<elem name=180><bold>Lightbulb, sodium globe</bold></elem>
+		<elem name=131><bold>Skylight diffuser, round</bold></elem>
+		<elem name=132><bold>Skylight diffuser, square</bold></elem>
+		<elem name=90><bold>Sodium spotlight, style 1</bold></elem>
+		<elem name=91><bold>Sodium spotlight, style 2</bold></elem>
+	</combobox>
+</xComboLightShade>
+
+<!xComboLightColor>
+	<combobox cbheight=150 width=100% sort=false macroattribute=1>
+		<elem name=1024><bold>Black light</bold></elem>
+		<elem name=1792><bold>Blue</bold></elem>
+		<elem name=2304><bold>Cyan</bold></elem>
+		<elem name=1536><bold>Green</bold></elem>
+		<elem name=768><bold>Insect light</bold></elem>
+		<elem name=2560><bold>Magenta</bold></elem>
+		<elem name=256><bold>Pink</bold></elem>
+		<elem name=1280><bold>Red</bold></elem>
+		<elem name=2816><bold>Sodium light</bold></elem>
+		<elem name=0><bold>White</bold></elem>
+		<elem name=512><bold>White, flourescent</bold></elem>
+		<elem name=2048><bold>Yellow</bold></elem>
+	</combobox>
+</xComboLightColor>
+
+<!xComboLightBulb>
+	<combobox cbheight=150 width=100% sort=false macroattribute=1>
+		<elem name=10>Flame, candle</elem>
+		<elem name=12>Flame, fire</elem>
+		<elem name=11>Flame, torch</elem>
+		<elem name=40>Flourescent, 8 watt</elem>
+		<elem name=41>Flourescent, 18 watt</elem>
+		<elem name=42>Flourescent, 36 watt</elem>
+		<elem name=44>Flourescent, globe</elem>
+		<elem name=43>Flourescent, loop</elem>
+		<elem name=31>Halogen, small bulb</elem>
+		<elem name=30>Halogen, splotlight</elem>
+		<elem name=32>Halogen, tube</elem>
+		<elem name=20>Incandescent, globe</elem>
+		<elem name=21>Incandescent, spotlight</elem>
+		<elem name=50>Sodium, globe</elem>
+		<elem name=60>Sunlight</elem>
+	</combobox>
+</xComboLightBulb>
+
+<p>
+	Use this page to change the appearance of your light. Some changes will not be
+	noticable unless you are in "Shadows" render quality and have turned the light on.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Light bulb</xtrheader>
+	<tr>
+		<td>
+			<bold>Shapes</bold> - Type of bulb. You <bold>cannot</bold> change this because
+			lamp shades requires specific bulbs.
+		</td>
+		<td><xcombolightbulb enabled=false name=lightbulb/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color</bold>
+		</td>
+		<td><xcombolightcolor name=lightcolor/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Watts</bold> - Number of watts rating for the bulb. If more than one
+			bulb is in the shade then add all the watts together and type it in.
+		</td>
+		<td><edit maxchars=32 width=100% name=watts/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=noshadows>
+			<bold>Don't cast shadows</bold> - If checked then this light won't cast any
+			shadows. Use this for fill-lights and back-lights where the shadows would
+			be distracting in the scene. (Lights that don't cast shadows draw faster too.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Lamp shade</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Which type of lamp shade will you use? Some shades
+			work better with other stands than others.
+		</td>
+		<td><xcombolightshade name=lightshade/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width 1</bold> - Width of the light shade, 1.
+		</td>
+		<td><edit maxchars=32 width=100% name=size0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width 2</bold> - Width of the light shade, 2.
+			If this is different than Width 1 your shade will be oval-shaped instead of
+			circular.
+		</td>
+		<td><edit maxchars=32 width=100% name=size1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length</bold> - Length of the light shade.
+		</td>
+		<td><edit maxchars=32 width=100% name=size2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Light stand</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Select the type of lightstand used for the light.
+		</td>
+		<td><xcombolightstand name=lightstand/></td>
+	</tr>
+</xtablecenter>

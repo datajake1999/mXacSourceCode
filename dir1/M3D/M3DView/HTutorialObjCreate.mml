@@ -1,0 +1,42 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating a custom object"/>
+
+<xPageTitle>
+	Tutorial - Creating a custom object
+</xPageTitle>
+
+<p>
+	To create a custom object:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select the <bold>Objects</bold> menu item.
+	</li>
+	<p>
+		The "Objects library" dialog box will appear showing a list of the objects stored in the
+		library, organized by major and
+		minor category.
+	</p>
+	<li>
+		Using the <bold>Major and minory category</bold> drop-down controls, select what
+		category best fits your object. (Don't worry if it's not right; you can change
+		the category later on.)
+	</li>
+	<li>
+		Once you have selected a category, press the <bold>Create a new object from scratch</bold> button.
+	</li>
+	<p>
+		A new <xSN/> window will be created that lets you edit your new object.
+	</p>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:419><bold>Next</bold></button>
+</p>
+

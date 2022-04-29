@@ -1,0 +1,109 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Atmosphere"/>
+
+<p>
+	Use the atmosphere page to control the appearnce of the sky - excluding the sun(s),
+	moon(s), and clouds.
+</p>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Colors</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=autocolors>
+			<bold>Colors automatically calculated by sun/moon location</bold><br/>
+			If checked, the sky colors will automatically be calculated from the sun
+			and moon location. However, you can uncheck this and modify the following
+			colors to customize your sky.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changezenith>
+				<bold>Change zenith color</bold><br/>
+				This is the color used at the sky's zenith.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=zenithcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changemid>
+				<bold>Change mid color</bold><br/>
+				This is the color used mid-way between the zenith and
+				the ground.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=midcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeground>
+				<bold>Change ground color</bold><br/>
+				This is the color used when they sky is near the ground.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=groundcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Haze around the sun</bold> - Affects the amount of diffusion around the sun.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=500 name=haze/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Density</bold> - The more dense the atmosphere the more clouds fade
+			away in the distance.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=20 name=density/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stars</bold> - Moving the slider to the right increases the number of
+			stars. (You can only see the stars when the sun has set.)
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=5000 name=numstars/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Skydome size</bold> - <xSN/> draws the skydome as a large dome. Usually
+			the default size is large enough, but you may wish to enlarge it if you
+			have a particularly large landscape.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=skydomesize/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Resultion</bold> - If there isn't enough detail in the sky (you
+			can see the pixels) then you can increase the resolution. Higher resolutions
+			will require more memory.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=resolution>
+			<elem name=0>500 x 500 (fastest)</elem>
+			<elem name=1>1000 x 1000 (fast)</elem>
+			<elem name=2>2000 x 2000 (slow)</elem>
+			<elem name=3>4000 x 4000 (slowest)</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>

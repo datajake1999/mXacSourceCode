@@ -1,0 +1,77 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation starting attributes"/>
+
+<xPageTitle>
+	Animation starting attributes
+</xPageTitle>
+
+<p>
+	<xSN/> files can contain more than one scenes. This leads to some trickiness because
+	some objects start at different locations (and with different attributes) in
+	different scenes. To solve this problem, some behind-the-scenes (excuse the pun) work
+	is done by <xSN/>.
+</p>
+
+<p>
+	<xSN/> maintains a set of "default" locations, rotations, and other attributes for
+	every object. These are the locations, rotations, etc. that would be used for the
+	object if it were not in a scene. It it also the default locations, rotations, etc.
+	that are used at the beginning of every scene.
+</p>
+
+<p>
+	Whenever you create a new scene, it's start (0 seconds) will be set up so that
+	all the objects in the world will be positioned the same as they are when the
+	scene is created. You will see this because many (but not all) objects will have
+	keyframes at the 0-second mark. (An object will not have keyframes if the
+	default location, rotation, etc. is the same.)
+</p>
+
+<p>
+	If you delete these keyframes the object will return to it's "default" location,
+	rotation, etc.
+</p>
+
+<p>
+	Every object having keyframes at 0-seconds provides a bit of visual clutter that
+	you may not want. If you have an object that doesn't move or change in any of
+	your scenes, you may want to adjust the default location, rotation, etc. so that
+	you can delete the keyframes and remove some clutter.
+</p>
+
+<p>
+	To se the default attributes:
+</p>
+
+<ol>
+	<li>
+		<bold>Change the scene and playback time</bold> to a period where the object
+		is in the same place and rotation as it's default should be. (Of course, if the
+		object is in the same place all the time this won't be too difficult to do.)
+	</li>
+	<li>
+		Select the object in the main view using the <xButtonSelIndividual/> tool.
+	</li>
+	<p>
+		This will cause the object to appear in the animation timeline.
+	</p>
+	<li>
+		Back in the animation timeline, select the <xButtonAnimDefault/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the object.
+	</li>
+	<p>
+		The object's defaults will be set to it's current location, rotation, etc.
+		You can verify this by deleting any keyframes it has at 0-seconds.
+	</p>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:568>Scenes</a></li>
+</xul>

@@ -1,0 +1,91 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Movement settings"/>
+
+
+<p>
+	You can use this page to hand-enter values for the object's location
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Object location</xtrheader>
+
+	<tr>
+		<td width=66%>
+			<bold>East/west</bold> - Position the object's reference point this far
+			east of the center of the <bold>grid</bold>. Use negative numbers for west.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>North/south</bold> - Position the object's reference point this far
+			north of the center of the <bold>grid</bold>. Use negative numbers for south.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Up/down</bold> - Position the object's reference point this far
+			above of the <bold>grid</bold> center. Use negative numbers for below.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=transz/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Object orientation</xtrheader>
+	
+	<tr>
+		<td width=66%>
+			<bold>Rotation around vertical axis (longitude)</bold> - Rotate the object this number
+			of degrees around an imaginary vertical at its reference point.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotz/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Rotation around left/right axis (latitude)</bold> - Rotate the object this number
+			of degrees around an imaginary right/left line at its reference point.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=rotx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Rotation around front/back (tilt)</bold> - Rotate the object this number
+			of degrees around an imaginary front/back line at its reference point.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 width=100% name=roty/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Reference point</xtrheader>
+	<tr>
+		<td>
+			<bold>Reference point</bold> - This is the position on the object against
+			which distances are measured.
+			<p/>
+			<align align=right><bold><combobox width=66% cbheight=100 name=reference>
+			</combobox></bold></align>
+		</td>
+	</tr>
+</xtablecenter>

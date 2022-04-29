@@ -1,0 +1,66 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Painting color"/>
+
+<xPageTitle>
+	Tutorial - Painting color
+</xPageTitle>
+
+<p>
+	Painting in <xSN/> works much like any other paint program you've used except that
+	you're painting on a 3-dimensional object instead of a 2D sheet.
+</p>
+
+<ol>
+	<li>
+		Click on the <bold>red</bold> color in the palette.
+	</li>
+	<li>
+		Select the <xButtonBrush32/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on your surface and <bold>drag</bold> the mouse. As
+		you hold the mouse button down paint will be applied to your surface.
+	</li>
+	<li>
+		You can change the brush's size by using any of the tools
+		from <xButtonBrush4/> to <xButtonBrush64/>.
+	</li>
+	<li>
+		If the paint applied is a bit too thick, press the <xButtonBrushStrength/> tool
+		and select a weaker strength.
+	</li>
+	<li>
+		Pressing <xButtonBrushShape/> will let you change the shape of the brush along
+		with it's behaviour. Some comments about the brush's behaviour:
+	</li>
+	<p>
+		<bold>Airbrush</bold> - Lays down paint in a continuous stream. The longer you
+		hold it over an area the more paint will be applied.
+	</p>
+	<p>
+		<bold>Brush</bold> - Paints only when you move the brush. If you move the brush
+		quickly less paint will be applied.
+	</p>
+	<p>
+		<bold>Pen</bold> - Paints only when you move the brush, but with even amounts
+		of color as you move.
+	</p>
+	<li>
+		You can use <xButtonBrushEffect/> for effects other than painting, such
+		as blurring or sharpening whatever you paint over.
+	</li>
+	<li>
+		To change one of the colors in the palette, <bold>double click</bold> the color's entry
+		in the palette. <xSN/>'s standard color-selection box will appear.
+	</li>
+	<li>
+		Changes you make in the "Painting view" will not appear in the main 3D view
+		until you press <xButtonSave/>. Try it now.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:811><bold>Next</bold></button>
+</p>
+

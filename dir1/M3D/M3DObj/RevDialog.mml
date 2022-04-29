@@ -1,0 +1,81 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lathe settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Profile shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> -
+			What the lathe looks like in profile. For example: A wine glass shape.
+		</td>
+		<td><bold>
+			<combobox cbheight=150 width=100% name=shape>
+				<elem name=0><font color=#800000><italic>Custom</italic></font></elem>
+				<elem name=21>Circle</elem>
+				<elem name=22>Circle, hemi</elem>
+				<elem name=24>Circle, open</elem>
+				<elem name=23>Circle, quarter</elem>
+				<elem name=25>Circle, quarter and linear</elem>
+				<elem name=41>Curved 1</elem>
+				<elem name=42>Curved 2</elem>
+				<elem name=43>Curved 3</elem>
+				<elem name=44>Curved 4</elem>
+				<elem name=45>Curved 5</elem>
+				<elem name=46>Curved 6</elem>
+				<elem name=57>Curved 7</elem>
+				<elem name=31>Light-shaped, globe</elem>
+				<elem name=33>Light-shaped, shade</elem>
+				<elem name=32>Light-shaped, spotlight</elem>
+				<elem name=60>Ring 1</elem>
+				<elem name=61>Ring 2</elem>
+				<elem name=12>Straight, cone 1</elem>
+				<elem name=13>Straight, cone 2</elem>
+				<elem name=14>Straight, cone 3</elem>
+				<elem name=15>Straight, C-shaped</elem>
+				<elem name=16>Straight, L-shaped</elem>
+				<elem name=17>Straight, L-shaped diagonal</elem>
+				<elem name=11>Straight, vertical</elem>
+			</combobox>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=customshape href=customshape>
+			<bold>Modify custom shape</bold><br/>
+			If you have selected the "Custom" shape, this will allow you to change the
+			shape to whatever you want.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Revolution shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Revolution shape</bold> -
+			The shape of the path that the profile is revolved around.
+		</td>
+		<td><bold>
+			<combobox cbheight=150 width=100% name=path>
+				<elem name=0><font color=#800000><italic>Custom</italic></font></elem>
+				<elem name=21>Circular</elem>
+				<elem name=23>Circular, half</elem>
+				<elem name=22>Circular, corrugated</elem>
+				<elem name=14>Hexagon</elem>
+				<elem name=15>Octagon</elem>
+				<elem name=13>Pentagon</elem>
+				<elem name=11>Square</elem>
+				<elem name=31>Squre, half</elem>
+				<elem name=12>Triangle</elem>
+			</combobox>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=custompath href=custompath>
+			<bold>Modify custom path</bold><br/>
+			If you have selected the "Custom" path, this will allow you to change the
+			how the path curves and how flexible it is.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

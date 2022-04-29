@@ -1,0 +1,320 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Fur and eyebrows"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	This layer lets you add fur, eyebrows, and short beards/moustaches.
+	For fur to work well, you need a very high resolution image of the face,
+	with a pixel size of 0.5 mm to 0.1 mm.
+</p>
+
+<xChoiceButton style=x checkbox=true name=CoverageUse>
+	<bold>Use this</bold><br/>
+	Check this to use this fur layer.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Fur coverage</xtrheader>
+	<tr><td>
+		The coverage texture is an image that indicates where the fur, eyebrows, etc.
+		are located.
+		White means full coverage, while black is no coverage.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=CoverageButton>
+			<bold>Change the fur coverage texture</bold><br/>
+			Press this to change the texture used for coverage.
+		</xChoiceButton>
+		<<<$COVERAGEIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Coverageboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Coverageboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Coverageboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Coverageboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black coverage</bold> - Affects the frequency of individual hairs when
+			the texture is black. Use 1.0 to indicate that black is the
+			area where fur is full density, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White coverage</bold> - Affects the frequency of individual hairs when
+			the texture is white. Use 1.0 to indicate that white is the
+			area where fur is full density, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds coverage</bold> - How common hairs are in areas
+			not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny2/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Fur length</xtrheader>
+	<tr><td>
+		The fur-length texture is an image that affects how long each hair is.
+		White results in long hairs, while black is short hairs.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=LengthButton>
+			<bold>Change the fur-length texture</bold><br/>
+			Press this to change the texture used for fur length.
+		</xChoiceButton>
+		<<<$LENGTHIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Lengthboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Lengthboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Lengthboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Lengthboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=LengthMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=LengthMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black length</bold> - Length of the fur if the color
+			is black, in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=lenval0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White length</bold> - Length of the fur if the color
+			is white, in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=lenval1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds length</bold> - Length of the fur in areas
+			not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=lenval2/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Fur color</xtrheader>
+	<tr><td>
+		The fur-color texture is an image that affects how the color of the fur.
+		NOTE: The color texture is used to determine the "material" quality
+		of the fur, such as how shiny it is.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=ColorButton>
+			<bold>Change the fur-color texture</bold><br/>
+			Press this to change the texture used for fur color.
+		</xChoiceButton>
+		<<<$COLORIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Colorboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Colorboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Colorboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Colorboundary11/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+
+
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Individual hairs</xtrheader>
+	<tr>
+		<td>
+			<bold>Distance between hairs</bold> - Average distance between hairs,
+			in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=hair0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness of a hairs</bold> - Thickness of a hair,
+			in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=hair1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Angle</bold> - The average angle of the hair, where the
+			hair meets the skin surface. 0 causes hair that lies absolutely
+			flat, while 90 is hair that's absolutely perpendicular.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=hair2/></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Color variation</bold> - How much the color varies with
+			each hair. 1.0 is maximum variation. 0.0 is none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=variation0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length variation</bold> - How much the fur length varies with
+			each hair. 1.0 is maximum variation. 0.0 is none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=variation1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Direction variation</bold> - How much the fur direction varies with
+			each hair. 1.0 is maximum variation. 0.0 is none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=variation2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Angle-out variation</bold> - How much the fur's angle (from the surface
+			of the skin) varies with
+			each hair. 1.0 is maximum variation. 0.0 is none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=variation3/></bold></td>
+	</tr>
+	
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Hair/fur direction</xtrheader>
+	<tr><td>
+		Hair and fur tends to radiate outward from a central point on the face.
+		For example, on a dog, the fur's direction is always away from the tip of
+		the nose and the eyes. It works the same on people, although we only
+		have eyelashes.
+		<p/>
+		This section lets you control the "radiating" points where hair will
+		radiate from. "Center" is the center of the radiation point, with
+		values ranging from 0..1. "Width" and "Height" control the width and
+		height of the region, also with a range of 0..1. "Strength" lets
+		you increase the effect of one point over another.
+		<p/>
+		It's easiest to test this by creating a low-density fur that covers the
+		entire face, and doesn't have any random variations.
+	</td></tr>
+	<tr>
+		<td><bold>Point #1</bold></td>
+		<td><bold><align align=right>
+			<xChoiceButton style=x checkbox=true name=radoutuse0>Use this</xChoiceButton>
+			Center (X): <edit width=50% maxchars=32 name=radoutcent00/><br/>
+			Center (Y): <edit width=50% maxchars=32 name=radoutcent10/><br/>
+			Width: <edit width=50% maxchars=32 name=radoutsize00/><br/>
+			Height: <edit width=50% maxchars=32 name=radoutsize10/><br/>
+			Strength: <edit width=50% maxchars=32 name=radoutstrength0/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><bold>Point #2</bold></td>
+		<td><bold><align align=right>
+			<xChoiceButton style=x checkbox=true name=radoutuse1>Use this</xChoiceButton>
+			Center (X): <edit width=50% maxchars=32 name=radoutcent01/><br/>
+			Center (Y): <edit width=50% maxchars=32 name=radoutcent11/><br/>
+			Width: <edit width=50% maxchars=32 name=radoutsize01/><br/>
+			Height: <edit width=50% maxchars=32 name=radoutsize11/><br/>
+			Strength: <edit width=50% maxchars=32 name=radoutstrength1/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><bold>Point #3</bold></td>
+		<td><bold><align align=right>
+			<xChoiceButton style=x checkbox=true name=radoutuse2>Use this</xChoiceButton>
+			Center (X): <edit width=50% maxchars=32 name=radoutcent02/><br/>
+			Center (Y): <edit width=50% maxchars=32 name=radoutcent12/><br/>
+			Width: <edit width=50% maxchars=32 name=radoutsize02/><br/>
+			Height: <edit width=50% maxchars=32 name=radoutsize12/><br/>
+			Strength: <edit width=50% maxchars=32 name=radoutstrength2/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><bold>Point #4</bold></td>
+		<td><bold><align align=right>
+			<xChoiceButton style=x checkbox=true name=radoutuse3>Use this</xChoiceButton>
+			Center (X): <edit width=50% maxchars=32 name=radoutcent03/><br/>
+			Center (Y): <edit width=50% maxchars=32 name=radoutcent13/><br/>
+			Width: <edit width=50% maxchars=32 name=radoutsize03/><br/>
+			Height: <edit width=50% maxchars=32 name=radoutsize13/><br/>
+			Strength: <edit width=50% maxchars=32 name=radoutstrength3/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton name=NewSeed>
+			<bold>Generate a new wart/pore pattern</bold><br/>
+			Press this to generate a differnt wart/pore pattern. You'll
+			need to click on the image to see the changes.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

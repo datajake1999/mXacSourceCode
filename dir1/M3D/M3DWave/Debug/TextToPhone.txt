@@ -1,0 +1,103 @@
+a	aa ae ah ao ax ey
+aa	aa
+ae	ae
+ah	ah
+ao	ao
+ax	ax
+ai	ey
+ay	ay ey
+aw	aw ao
+
+b	b
+
+c	k s .
+ch	ch sh
+ck	k
+
+d	d
+dd	d
+dh	dh
+dg	jh
+
+e	eh iy .
+ea	iy
+eh	eh
+ee	iy
+er	er
+ey	ey iy
+ew	uw
+
+f	f
+ff	f
+
+g	g jh
+gh	f
+
+h	h
+
+i	ay ih
+ie	ay iy
+ih	ih
+iy	iy
+ing	iy,nx
+
+j	jh h
+jh	jh
+
+k	k
+
+l	l
+ll	l
+
+m	m
+mm	m
+
+n	n
+nn	n
+ng	nx
+nx	nx
+
+o	ow ao aa uw w,ah
+ou	aw
+ow	ow aw
+oy	oy
+oi	oy
+oo	uh uw
+
+p	p
+ph	f
+
+q	k,w
+qu	k,w
+
+r	r
+rr	r
+
+s	s zh z
+sh	s
+
+t	t sh
+th	th dh
+tion	sh,ah,n
+tch	ch
+tw	t
+
+u	ah ax uw y,uw
+ue	y,uw
+ur	er
+uw	uw
+
+v	v
+
+w	w
+wh	w
+
+x	z k,s
+
+y	y ay iy
+
+z	z zh
+zz	z
+zh	zh
+
+'	.

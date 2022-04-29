@@ -1,0 +1,78 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Attach objects"/>
+
+<xPageTitle>
+	Attach objects
+</xPageTitle>
+
+<p>
+	Sometimes you want to attach one object to another so that moving the main object
+	will also move the attached object. This is particulary useful when having a character
+	pick up another object.
+</p>
+
+<xsectiontitle>Attaching objects</xsectiontitle>
+
+<p>
+	To attach one object to another:
+</p>
+
+<ol>
+	<li>
+		Select the object you wish to attach using the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		Select the <xButtonObjAttach/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the object you wish to attach to. If the object has a
+		skeleton (such as a character) then click on the limb you want the object attached
+		to.
+	</li>
+	<p>
+		The attached object will now move along with the object you attached it to.
+	</p>
+</ol>
+
+<xsectiontitle>Detatching objects</xsectiontitle>
+
+<p>
+	To detach an attached object just follow the same steps as you did for attaching
+	it. <xSN/> will recognize that it's already attached and ask you if you wish
+	to detach it.
+</p>
+
+<xsectiontitle>Attaching an animation</xsectiontitle>
+
+<p>
+	When you're animating you may have scenes where a character picks up an object, causing
+	the object to first be detached (and perhaps sitting on a table) and then to attach
+	itself to the character's hand.
+</p>
+
+<p>
+	To handle this situation:
+</p>
+
+<ol>
+	<li>
+		<bold>Attach</bold> the object to the character's hand, as mentioned above.
+	</li>
+	<p>
+		If an object has others attached to it, the object will have one attribute
+		for each object (named "Attach to XYZ" where "XYZ" is the attached object's name).
+		You can use this attribute to temporarily turn off attachment.
+	</p>
+	<li>
+		For the segment of animation occuring <bold>before</bold> the character picks up
+		the object, set the "Attach to XYZ" to 0 (off).
+	</li>
+	<li>
+		When the character picks up the object, <bold>set</bold> the "Attach to XYZ" attribute
+		to 1 (on).
+	</li>
+	<li>
+		If the character puts the object down return the attribute to 0 (off).
+	</li>
+</ol>

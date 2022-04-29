@@ -1,0 +1,59 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Tracing paper"/>
+
+<p>
+	If you have a piece of paper (such as house plans) or photograph that you want
+	to use as a guide for your <xSN/> model, then this is the dialog for you.
+	"Tracing paper" allows you to load a scanned image or digital photograph and then
+	overlay it onto the 3D world while you're drawing, allowing you to see that
+	you're placing objects correctly with respect to the scanned image or photograph.
+</p>
+
+<p>
+	Note: Tracing paper <bold>only works in the flat (isometric) view</bold>.
+</p>
+
+<xChoiceButton name=add href=add>
+	<bold>Use a .jpg or .bmp file as tracing paper</bold><br/>
+	Press this if you have scanned in an image (or downloaded it from your digital
+	camera) and wish to "trace" off it.<p/><bold>Important:</bold> Make sure you
+	are in flat (isometric) view before pressing this <bold>and</bold> that the
+	virtual camera is looking at the same scene as your .jpg or .bmp file.
+</xChoiceButton>
+
+<!xListTracing>
+	<listbox sort=false tbmargin=16 macroattribute=1>
+	</listbox>
+</xListTracing>
+
+<xTableCenter width=100%>
+	<xtrHeader>Images already used for tracing</xtrHeader>
+	<tr><td>
+		<xListTracing name=loaded width=90% height=100% vscroll=lscroll/>
+		<scrollbar orient=vert height=100% width=8% name=lscroll/>
+		<p/>
+		<xChoiceButton href=edit>
+			<bold>Modify the selected tracing paper</bold><br/>
+			Click this to change the paper's size, position, and transparency in
+			the virtual world.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle name=showhide>
+			<bold>Show or hide the selected tracing paper</bold><br/>
+			If the selected entry is hidden it will be shown. If shown it will be hidden.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle name=remove>
+			<bold>Remove the selected tracing paper</bold><br/>
+			Remove the tracing paper overlay from your list.
+		</xChoiceButton>
+		<br/>
+		<xChoiceButton style=righttriangle name=showall>
+			<bold>Show all tracing papers</bold><br/>
+			Any hidden tracing papers will be shown.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle name=hideall>
+			<bold>Hide all tracing papers</bold><br/>
+			Any visible tracing papers will be hidden.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>

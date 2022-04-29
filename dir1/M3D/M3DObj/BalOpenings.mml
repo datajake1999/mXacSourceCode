@@ -1,0 +1,28 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Balustrade openings"/>
+
+<p>
+	This page lets you add or remove openings in the balustrade.
+	To insert an opening, click on the black balustrade. If you then
+	want to resize the opening, make sure the balustrade is selected under
+	"Which control points are displayed" and move the control point
+	in the main display.
+	To remove an opening, click
+	in the grey opening.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Add/remove openings</xtrheader>
+	<tr><td>
+		<p>
+			Click on a black balustrade to create an opening in the middle, or click on a grey
+			opening to remove it.
+		</p>
+		<threed width=100% height=90% name=edgeaddremove>
+			<shapeteapot/>
+		</threed>
+	</td></tr>
+</xtablecenter>
+
+

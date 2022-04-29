@@ -1,0 +1,17 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Finished with caves"/>
+
+<xPageTitle>
+	Tutorial - Finished with caves
+</xPageTitle>
+
+<p>
+	That's it for the caves tutorial. You can do lots more with caves; just
+	explore the "Cave settings" dialog for some ideas.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+

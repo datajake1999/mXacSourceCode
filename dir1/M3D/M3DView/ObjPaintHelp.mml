@@ -1,0 +1,108 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Help about color/texture schemes"/>
+
+<xsectiontitle>Colors vs. textures</xsectiontitle>
+<p>
+	Every object has a color or texture associated.
+</p>
+
+<xul>
+	<li>
+		<bold>Color</bold> - A "color" is just what it sounds like...
+		You could have a red teapot, a blue teapot, etc. To use a color, press the
+		"Solid color" radio button on the "Change color or texture" page, and click link
+		next to the button to change the color.
+	</li>
+	<li>
+		<bold>Texture</bold> - A "texture" is a pattern, as opposed to a "color" which is solid.
+		Texutures include wallpaper patterns, tile patterns, wood grain, and even bricks.
+		You can apply a texture to any object by selecting "Texture" under the "Change color or
+		texture" page. To change the texture click on the link next to the radio button.
+	</li>
+</xul>
+
+<p>
+	Most objects have more than one type of surface.
+	For example, a padded dining room chair has a wood surface and a cushion surface.
+	You'll be able to change these independently. To tell <xSN/> what
+	surface you want to modify, just click on it using the "Paint-brush" tool.
+	(You already know how to use that if you got this far.)
+</p>
+
+<xsectiontitle>Schemes</xsectiontitle>
+
+<p>
+	And now for the confusing part... Because people usually want objects of the same
+	type to have the same colors and textures, every surface can use the color/texture
+	of a scheme instead of its own color or texture.
+</p>
+
+<p>
+	For example: Back to the padded dining room chairs. If you specify the wood surface
+	to be "Wood grain number 3" for one chair then (without a scheme setup) you'll
+	have to specify it for every dining room chair, and the table, and the hutch.
+	However, if you add a new scheme called "Dining room wood" and specify the scheme
+	to be used by the chairs, dining room table, and hutch, then changing the wood grain
+	on one will change all of them. This saves you time.
+</p>
+
+<p>
+	When most objects are created they will automatically choose colors from a scheme.
+	This makes life easier for you since most of the time you want to use the scheme; it's
+	only when you want an object to be independent of a scheme (so you could have every
+	dining room chair use a different cushion color perhaps) that you need to do some work.
+</p>
+
+<p>
+	To change the scheme used by a surface:
+</p>
+
+<ol>
+	<li>
+		Go to the "Change color or texture" dialog. <italic>(You
+		can bring this up from the painting tool or by pressing "Back" on the current page.)</italic>
+	</li>
+	<li>
+		Click on the scheme's name in the list box. If you want to change the color
+		only for this object then select "Custom color or texture".
+	</li>
+	<li>
+		After you have selected the scheme, the object will be redrawn to use the new scheme
+		and the "Color or texture?" box will change to relect the color or texture in the scheme.
+	</li>
+	<li>
+		Any changes you make in the "Color or texture?" box will change not only the current
+		object, but all objects using that scheme.
+	</li>
+</ol>
+
+
+<p>
+	To add a new scheme:
+</p>
+
+<ol>
+	<li>
+		Go to the "Change color or texture" dialog. <italic>(You
+		can bring this up from the painting tool or by pressing "Back" on the current page.)</italic>
+	</li>
+	<li>
+		Press the "Add scheme..." button.
+	</li>
+	<li>
+		The "Add a color/texture scheme" page will appear.
+	</li>
+	<li>
+		Type in a new name and press "Add".
+	</li>
+	<li>
+		After you press "Add" you'll be brought back to the "Change color
+		or texture" page and be able to modify the new scheme.
+	</li>
+	<li>
+		Any changes you make in the "Color or texture?" box will change not only the current
+		object, but all objects using the new scheme.
+	</li>
+</ol>
+

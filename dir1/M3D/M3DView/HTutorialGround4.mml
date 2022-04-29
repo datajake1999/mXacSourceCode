@@ -1,0 +1,83 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Ground resolution"/>
+
+<xPageTitle>
+	Tutorial - Ground resolution
+</xPageTitle>
+
+<p>
+	Although you may not have noticed, when <xSN/> draws the ground in 3D, it does so with
+	less detail than is displayed in the ground editor. This is so that the ground
+	draws faster; when you save your image to a file, print it out, or generate an
+	animation, the ground will be drawn at full detail.
+</p>
+
+<p>
+	If you want to see what the ground looks like at full detail:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool in the main view.
+	</li>
+	<li>
+		<bold>Click on</bold> the ground object.
+	</li>
+	<li>
+		In the "Ground settings" dialog, <bold>un-check</bold> the <bold>"Draw
+		ground with less detail"</bold> button.
+	</li>
+	<p>
+		The ground will be redrawn with its full detail. You may wish to re-check
+		the dialog just so drawing won't be so slow.
+	</p>
+</ol>
+
+<xSectionTitle>Adjusting the scale</xSectionTitle>
+
+<p>
+	You have undoubtedly noticed another problem with your mountain: It's only
+	about 60m across and 20m-30m high. It looks rather strange and misproportioned.
+	To fix this:
+</p>
+
+<ol>
+	<li>
+		<bold>Switch back</bold> to the ground editor.
+	</li>
+	<li>
+		Press the <xButtonGroundSet/> button.
+	</li>
+	<li>
+		The "General settings" dialog provides a number of options for how to scale your
+		ground. The one to use now is <bold>"Scale the map"</bold>.
+	</li>
+	<li>
+		Type in a more appropraite <bold>width, height, and elevation.</bold>
+	</li>
+	<li>
+		Press <bold>Keep these changes</bold> to use them.
+	</li>
+	<li>
+		<bold>Close</bold> the "Scale the map" dialog.
+	</li>
+	<li>
+		Press <xButtonSave/> to save the changes to the ground and see them in the
+		main 3D view. You may need to set a new view scale if you change the size
+		of your landscape.
+	</li>
+</ol>
+
+<p>
+	You can also use the <xButtonGroundSet/> dialog to increase the resolution of
+	your topography. New ground objects start out with fairly low resolution (about 128 x
+	128 pixels) since most users don't need lots of detail. However, if you want
+	to draw an impressive landscape you may want more detail (such as 1000 x 1000, or higher).
+	The more detail you have the rougher the terrain can be.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:626><bold>Next</bold></button>
+</p>
+

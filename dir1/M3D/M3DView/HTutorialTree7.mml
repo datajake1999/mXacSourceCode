@@ -1,0 +1,76 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Combining branches into a tree"/>
+
+<xPageTitle>
+	Tutorial - Combining branches into a tree
+</xPageTitle>
+
+<p>
+	Creating a tree is very similar to creating a branch, except that instead of individual
+	leaves, you use the branch object you created:
+</p>
+
+<ol>
+	<li>
+		Use the <xButtonLibrary/> to create a new tree object. You will probably place
+		it under "Plants" and whatever minor category is approriate.
+	</li>
+	<li>
+		In the object editor, use <xButtonObjNew/> to add a new "Branch object" from
+		"Object pieces", "Branches" just like you did to create your branch. However,
+		this time you'll use your branch to create a trunk and limbs.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click on</bold> the branch.
+	</li>
+	<li>
+		In the "Branch settings" page, press <bold>"Add a new object"</bold>.
+	</li>
+	<li>
+		In the "Add a new object" page, <bold>select</bold> the branch you just added
+		underneath "Object pieces", "Branches". If you have created more than one
+		branch you may wish to add several objects.
+	</li>
+	<li>
+		Just as with the branch, you can either create the branch manually
+		using <xButtonObjControlNSEWUD/>, or you can press
+		the <bold>"Procedural branch/tree generator"</bold>. The only difference
+		with before is that instead of having leaves attached to your
+		branches you'll have your branch object.
+	</li>
+	<li>
+		You may wish to use the <bold>Thicknes</bold> setting to adjust how thick
+		the trunk is.
+	</li>
+	<li>
+		In the "Branch settings" page, you should check <bold>"This is a
+		tree with roots"</bold> so you can add roots to your tree, and so that
+		it widens at the base.
+	</li>
+	<li>
+		Your tree is finished. Use <xButtonSave/> in the object editor to save it.
+	</li>
+</ol>
+
+<p>
+	<bold>Faster drawing</bold>: You probably haven't noticed this yet, but as
+	you zoom futher away from your tree, less of it is drawn. The smaller portions
+	of it (such as leaf stems) are discard first, followed by gradually
+	larger segments. As a general rule you won't notice this because as it gets futher
+	away you can't see as much detail, so you don't really notice the missing stems.
+	Building the tree from leaves and branches allowed this to optimization to take place.
+</p>
+
+<p>
+	<bold>Even faster drawing</bold>: The more polygons a tree, the slower it will
+	draw. They way I have described has many polygons, at least one for each leaf.
+	You can make faster drawing trees by using the "Branch" procedural texture generator
+	to create a bitmap of a branch. Then, to create a branch, just use a very large
+	leaf object with the branch texture instead of an individual leaf texture.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:636><bold>Next</bold></button>
+</p>
+

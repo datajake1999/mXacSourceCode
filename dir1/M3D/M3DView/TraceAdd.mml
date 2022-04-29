@@ -1,0 +1,112 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add new tracing paper"/>
+
+<p align=center>
+	<image width=90% border=2 file="<<<TRACEFILE>>>"/><br/>
+	<<<WIDTH>>> x <<<HEIGHT>>> pixels
+</p>
+
+<p>
+	Please select fill in the scale information, transparency, and then
+	press "Next".
+</p>
+
+
+<xTableCenter width=100%>
+	<xtrHeader>Scale information</xtrHeader>
+	<tr><td>
+		It is important to know how large an area the image represents. While you
+		can always resize the image later on, you may already know how large it is,
+		especially if you scanned in a set of plans.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton radiobutton=true style=x group=siscan,siwidth,siheight,sidontknow name=siscan>
+			<bold>Scanned plans</bold><br/>
+			Check this if the image is a scanned set of plans (such as architectual drawings) where
+			you know the original scale of the drawings (such as 1cm = 1m) and you know the DPI (dots
+			per inch) that you scanned with.
+		</xChoiceButton>
+		<p align=right><table width=90%>
+			<tr>
+				<td>
+					<bold>DPI</bold> - Dots-per-inch that you scanned the image.
+				</td>
+				<td><edit width=100% maxchars=32 selall=true name=dpi/></td>
+			</tr>
+			<tr>
+				<td>
+					<bold>Scale on paper</bold> - Size if a unit on paper. For example:
+					If you want 1cm=1m then enter "1 cm" here.
+				</td>
+				<td><edit width=100% maxchars=32 selall=true name=onpaper/></td>
+			</tr>
+			<tr>
+				<td>
+					<bold>Scale in model</bold> - Size if a unit in the model (or real world). For example:
+					If you want 1cm=1m then enter "1 m" here.
+				</td>
+				<td><edit width=100% maxchars=32 selall=true name=inmodel/></td>
+			</tr>
+		</table></p>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton radiobutton=true style=x group=siscan,siwidth,siheight,sidontknow name=siwidth>
+			<bold>I know the width of the image</bold><br/>
+			Select this if you know how many meters (or feet) across the plans represent.
+		</xChoiceButton>
+		<p align=right><table width=90%>
+			<tr>
+				<td>
+					<bold>Width</bold>
+				</td>
+				<td><edit width=100% maxchars=32 selall=true name=width/></td>
+			</tr>
+		</table></p>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton radiobutton=true style=x group=siscan,siwidth,siheight,sidontknow name=siheight>
+			<bold>I know the height of the image</bold><br/>
+			Select this if you know how many meters (or feet) up/down the plans represent.
+		</xChoiceButton>
+		<p align=right><table width=90%>
+			<tr>
+				<td>
+					<bold>Height</bold>
+				</td>
+				<td><edit width=100% maxchars=32 selall=true name=height/></td>
+			</tr>
+		</table></p>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton radiobutton=true style=x group=siscan,siwidth,siheight,sidontknow name=sidontknow>
+			<bold>I don't know the scale of the image</bold><br/>
+			If you don't know how large the image is then it will be set to fill up the screen;
+			You can resize it later.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Transparency</xtrHeader>
+	<tr><td>
+		Please select the option that best describes the image: (This will control
+		what parts of the image can be seen through.)
+		<p/>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=tbonw>
+			<bold>Black(dark) lines drawn on white paper</bold>
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=twonb>
+			<bold>White(light) lines drawn on black paper</bold>
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=tcolor>
+			<bold>Color image or photograph</bold>
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+
+<p align=right>
+	<button style=rightarrow href=next>
+		<bold>Next</bold>
+	</button>
+</p>

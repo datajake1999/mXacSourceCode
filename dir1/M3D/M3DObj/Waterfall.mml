@@ -1,0 +1,109 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Waterfall settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Falls</xtrheader>
+	<tr>
+		<td>
+			<bold>Number of flows</bold> - The number of vertical divisions in the
+			waterfall. More flows will cause the waterfall to look larger, and like
+			more water is overflowing.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=flows/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth at top</bold> - Depth of the water at the top of the waterfall.
+			A small waterfall is cm deep, while Niagara falls is 2m deep.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=flowdepthtop/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth at base</bold> - How much the flows spread out (depth-wise)
+			by the time they get to the base of the waterfall.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=flowdepthbase/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Drawn before fall</bold> - This controls how much of the waterfall is
+			drawn <bold>before</bold> the water hits the edge and drops off. A higher number
+			will simulate the waterfall being forced over rocks on the edge, and will
+			make integration into a river smoother.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=timestart/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width of flow</bold> - Moving the slider to the right will cause the flows
+			to widen and overlap one another. To the left will produce narrow flows.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=flowwidth/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Pattern</xtrheader>
+	<tr><td>
+		Each flow of the waterfall alternates between a stream of water and then
+		a stream of "air". The
+		pattern is randomized so that is won't repeat. The more water than air in
+		a waterfall, the larger the volume of water that looks likes is flowing over.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Stream of water</bold> - Number of seconds that a stream of water
+			lasts before it finishs and a stream of "air" is drawn.
+		</td>
+		<td><align align=right>
+			Min: <edit width=50% maxchars=32 name=flowwater0/><br/>
+			Max: <edit width=50% maxchars=32 name=flowwater1/>
+		</align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stream of air</bold> - Number of seconds that a stream of "air"
+			lasts before it finishs and a stream of water is drawn.
+		</td>
+		<td><align align=right>
+			Min: <edit width=50% maxchars=32 name=flowair0/><br/>
+			Max: <edit width=50% maxchars=32 name=flowair1/>
+		</align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Random seed</bold> - Changing this number changes the random "seed" that's
+			used to create the waterfall, and affects the location of the flows.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=seed/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Gravitational constant</bold> - For earth this is 9.8 m. (Per second,
+			per second). Changing this value will simulate higher or lower gravity.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=g/>
+		</td>
+	</tr>
+</xtablecenter>
+
+

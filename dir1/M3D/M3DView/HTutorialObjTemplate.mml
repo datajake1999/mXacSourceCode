@@ -1,0 +1,80 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Template objects"/>
+
+<xPageTitle>
+	Tutorial - Template objects
+</xPageTitle>
+
+<xsectiontitle>Templates</xsectiontitle>
+
+<p>
+	The method of creating objects that I described is the most general technique.
+	There are times when a simpler method, called <bold>object templates</bold> is
+	easier and more useful.
+</p>
+
+<p>
+	Templates are a copy of an object that you have already placed in your house
+	and modified. The template is stored in the object list for easy access so that
+	you can very easily recreate the same object. It's just like copying it to
+	a special clipboard and pasting whenever you need that object.
+</p>
+
+<p>
+	You will probably find templates most useful for windows, doors, and plant species.
+	You often need to customize these objects with the <xButtonObjDialog/> tool, but
+	you want the same style of window (or door or tree) used several times throughout
+	your house. One approach is to create your first window as you like it, and then
+	copy and paste it whenever you need the same style. The other approach is to
+	create a template; then you can not only use it in the same house, but in other houses.
+</p>
+
+<p>
+	To create an object template:
+</p>
+
+<ol>
+	<li>
+		Create an instance of the object in your house and customize it as desired.
+	</li>
+	<li>
+		Using the <xButtonSelIndividual/> tool select the object you want to add
+		to the template. You can only add invidual objects as a template.
+	</li>
+	<li>
+		Press the <xButtonLibrary/> button and select the <bold>Objects</bold> menu item.
+	</li>
+	<li>
+		In the "Object library" page, press the <bold>Create a new template from
+		the current selection</bold> button.
+	</li>
+	<p>
+		The new object will be added to your library.
+	</p>
+	<li>
+		<bold>Rename</bold> the object as desired.
+	</li>
+</ol>
+
+<p>
+	Note: You cannot edit templates directly through the object editor. To change them,
+	create an instance in a house, modify it there, and re-add it. You might want to
+	delete the old version so you don't get confused.
+</p>
+
+
+<xSectionTitle>Other options in the "Object settings" dialog</xSectionTitle>
+
+<p>
+	The "Object settings" page contains other options not discussed in the tutorial.
+	You can use them to copy your object, go back and edit it, or to delete
+	an object. You cannot modify any objects built into <xSN/>, but you may be able
+	to copy them first and then modify them.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:422><bold>Next</bold></button>
+</p>
+

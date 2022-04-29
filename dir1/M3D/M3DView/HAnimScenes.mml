@@ -1,0 +1,26 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation scenes"/>
+
+<xPageTitle>
+	Animation scenes
+</xPageTitle>
+
+<p>
+	Every <xSN/> file can contain one or more animation scenes. In movie terms can think
+	of a <xSN/> file as a "movie set"; each movie set can be used in several scenes.
+	Each scenes consist of several "shots", which are movies taken of the scene from
+	different cameras, each with their own angles.
+</p>
+
+<p>
+	You can change, add, remove, and rename scenes using the <xButtonSceneMenu/> button.
+	Clicking on it will bring up a menu of options.
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:570>Starting attributes</a></li>
+</xul>

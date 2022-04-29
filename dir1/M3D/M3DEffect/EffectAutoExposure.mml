@@ -1,0 +1,71 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Autoexposure"/>
+
+<p>
+	Note: This works well for shadows and ray-tracing. It doesn't work very well for
+	the lower-quality renders because they don't store color as accurately.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Exposure range</xtrheader>
+	<tr>
+		<td>
+			<bold>Minimum and maximum exposure</bold> - This is the minimum and maximum
+			exposure that the "camera" is capable of. 0 is ideal for bright sunlight,
+			1 for overcast days, and 9 will make full moonlight as bright as the
+			day.
+			Human vision is 0 and 7, respectively.
+		</td>
+		<td><align align=right><bold>
+			Min: <edit maxchars=32 width=80% name=exposureminmax0/><br/>
+			Max: <edit maxchars=32 width=80% name=exposureminmax1/>
+		</bold></align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Light levels to attain</bold> - This is the level of the light in the
+			scene needed to attain the given levels.
+			Human vision is 0 and 11, respectively.
+		</td>
+		<td><align align=right><bold>
+			Min: <edit maxchars=32 width=80% name=exposurereallight0/><br/>
+			Max: <edit maxchars=32 width=80% name=exposurereallight1/>
+		</bold></align></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Low light effects</xtrheader>
+	<tr>
+		<td>
+			<bold>Greying</bold> - When the exposure gets to this level, the image
+			will start graying as the eye's color receptors stop
+			working. (Use the ranges from minimum to maximum.)
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=grayat/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise</bold> - In really dark conditions, eyes perceive noise.
+			This is the level (use the ranges from minimum to maximum) of the
+			noise level.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=noiseat/></bold></td>
+	</tr>
+</xtablecenter>
+

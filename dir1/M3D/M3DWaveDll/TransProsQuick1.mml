@@ -1,0 +1,114 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Transplanted prosody"/>
+
+<p>
+	Instructions below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Text to speak</xtrheader>
+	<tr><td>
+		Type in the text to speak and then press Next to record it:<br/>
+		<bold><edit width=100% height=50 maxchars=512 wordwrap=true defcontrol=true name=tospeak/></bold><br/>
+		<<<$WILDCARDWARNING>>>
+		<p align=right>
+			<button style=righttriangle accel=enter href=next><bold>Next</bold></button>
+		</p>
+	</td></tr>
+</xtablecenter>
+
+
+<xChoiceButton name=newsrfile>
+	<bold>Change speech recognition training</bold><br/>
+	If you haven't already done so, you need to select the speech recognition training to use.
+	It will identify where
+	the phonemes begin an end, a necessary step for transplanted prosody.
+	The speech recognition
+	training file should use the <bold>same language and lexicon</bold> as the text-to-speech voice
+	you wish to transplant onto. You can usually find default speech recognition
+	training in "c:\program files\mXac\3D Outside the Box".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=srfile/>
+
+<xChoiceButton name=newttsfile>
+	<bold>Change text-to-speech voice</bold><br/>
+	If you haven't already done so, you need to select the text-to-speech voice to
+	transplant onto.
+	The text-to-speech voice
+	should use the <bold>same language and lexicon</bold> as the
+	speech recognition training file.
+	You can usually find some text-to-speech voices in "c:\program files\mXac\CircumReality".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=ttsfile/>
+
+
+<xbr/>
+<xSectionTitle>Instructions</xSectionTitle>
+
+<p>
+	<bold>Transplanted prosody</bold> is a technique used to make text-to-speech sound
+	better.
+</p>
+
+<p>
+	One major reason why text-to-speech sounds so bad is that it gets the "prosody"
+	completely wrong. Prosody is the intonation, volume, and timing of a sentence.
+	TTS has a difficult time with prosody because in order to get it right, it needs
+	to actually understand the meaning of what is being spoken so it knows what
+	words to emphasize, and this isn't possible today.
+</p>
+
+<p>
+	Transplanted prosody solves this problem by transplanted the prosody from a recording
+	of a real person onto a text-to-speech voice. It uses the real person's intonation,
+	duration, and volume to guide the synthesized voice's. The net effect is a great
+	improvement in speech quality.
+</p>
+
+<p>
+	The downside of transplanted prosody is that someone must speak all the phrases that
+	TTS will speak so that the prosody can be extracted. This ends up being nearly
+	as much work as just recording all the voices and skipping the TTS entirely, <bold>except</bold>:
+</p>
+
+<xul>
+	<li>
+		Transplanted prosody data uses <bold>signficantly less disk space</bold> (and hence download time)
+		than even the best audio compression.
+	</li>
+	<li>
+		Transplanted prosody lets you <bold>transplant onto any voice</bold>. The person
+		that records the prosody can be anyone since only their prosody (and not their voice)
+		will be heard. You can even have a male speaker provide prosody for a female voice,
+		or vice versa.
+	</li>
+	<li>
+		Because transplanted prosody uses a TTS voice, <bold>intermixing</bold> sections of transplanted prosody
+		and completely synthesized prosody work well. For phrases where one portion
+		is always the same, such as "The phone number is 2353", you could use transplanted
+		prosody for the fixed portion, "The phone number is", and synthesized prosody for
+		the rest.
+	</li>
+</xul>
+
+<p>
+	To use transplanted prosody:
+</p>
+
+<ol>
+	<li>
+		<bold>Type in</bold> the text you wish to have TTS speak with the transplanted prosody.
+	</li>
+	<li>
+		Press <bold>Next</bold>.
+	</li>
+	<li>
+		<bold>Record</bold> someone speaking the real phrase.
+	</li>
+	<li>
+		<bold>Follow the instructions</bold> in the "Transplanted prosody review" page that appears.
+	</li>
+</ol>

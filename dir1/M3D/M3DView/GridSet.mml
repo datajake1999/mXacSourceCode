@@ -1,0 +1,23 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Grid settings"/>
+
+<p>
+	The "grid" does two things: 1) It can draw grid lines on your image so you can
+	more accurately judge distances. And, 2) whenever you move an object, rotate it,
+	or more one of its control points, they are automatically "snapped" to the nearest
+	grid point.
+</p>
+
+<xChoiceButton href=grid>
+	<bold>Display</bold><br/>
+	Use this to turn on/off a colored grid displayed over all the objects. It allows you
+	to easily see how large they are and their location relative to other objects.
+</xChoiceButton>
+
+
+<xChoiceButton href=values>
+	<bold>Hand-enter values</bold><br/>
+	This page lets you type in values for the grid's snap-to settings, center, and
+	orientation.
+</xChoiceButton>

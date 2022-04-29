@@ -1,0 +1,116 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify documentation"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<xtablecenter width=100%>
+	<xtrheader>Documentation</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the help topic.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<p/>
+			
+			<bold><a>Category
+				<xHoverHelp>
+					Type in the help category that this method should be placed under.
+					Leave this blank if you do not wish the method placed in a help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat0/></bold>
+			<p/>
+			
+			<bold><a>Category (alternate)
+				<xHoverHelp>
+					Type in the alternate help category that this method should be placed under.
+					Leave this blank if you do not wish the method placed in an alternate help category.
+					To place it in a sub-cateogy, use a slash "/" to separate categories,
+					like in a directory. For example: "Food/Fruit/Apples".
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=helpcat1/></bold>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Documentation</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description of the topic.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 <<<$LIBREADONLY>>> name=descshort/></bold>
+			<p/>
+			<bold><a>Help topic
+				<xHoverHelp>
+					Type in the help topic.
+				</xHoverHelp>
+			</a></bold><br/>
+			<p align=center>
+				<<<$DOCEDIT>>>
+				<scrollbar orient=vert height=40% name=desclongscroll/>
+			</p>
+			<p/>
+			
+			<xChoiceButton checkbox=true style=x <<<$LIBENABLE>>> name=usemml>
+				<bold>Use MML tags</bold><br/>
+				If this is checked, the text is interpreted as MML (a home-grown version of HTML).
+				This allows different text formatting and tables.
+			</xChoiceButton>
+			
+			<xChoiceButton name=testmml>
+				<bold>Test MML</bold><br/>
+				This checks for errors in the MML and then displays the help topic as if it were in help.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete documentation</bold><br/>
+	Deletes the documentation from the list.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this documentation entry</bold><br/>
+	After you duplicate the document entry, make sure to rename the new entry.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the documentation entry to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	The documentation entries in a library allow you to document features of the
+	library that are not specific to an object, method definition, or property
+	definition.
+</p>
+
+<p>
+	<bold>MML</bold> - The document can be written in a tag system very similar to HTML.
+	Most HTML tags are handles by the MML format. You can also look at existing documentation
+	for examples of the tags.
+</p>

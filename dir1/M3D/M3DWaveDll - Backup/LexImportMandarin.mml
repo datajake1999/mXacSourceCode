@@ -1,0 +1,108 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Import a Mandarin lexicon"/>
+
+
+
+<p>
+	Use this page to import a Mandarin lexicon. This is for the Blizzard 2008 challenge,
+	and uses the *.lbl files provided with the mandarin voice
+	to create a lexicon. Fill in the following information (defaults
+	entered for Mandarin) and press Next.
+</p>
+
+<p>
+	The typical *.lbl line format is:
+</p>
+
+<p><blockquote>
+	<italic>PHONETIC_LABEL_FILE<br/>
+	DataType ascii<br/>
+	version 1<br/>
+	PHONETIC_LABEL_Header_End<br/>
+	Utterance: 刚满十五岁的娜尔吉丝即在影片命运中担任了主角.<br/></italic>
+	PinYin stream:<br/>
+	1: name = gang1;<br/>
+	2: name = man3;<br/>
+	End of PinYin stream.<br/>
+	Initial\Final stream:<br/>
+	1: name = g;<br/>
+	2: name = ang;<br/>
+	3: name = m;<br/>
+	4: name = an;<br/>
+	End of Initial\Final stream.
+</blockquote></p>
+
+<p>
+	Parts in italic (above) are ignored by the current conversion implementation.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Files</xtrheader>
+	<tr>
+		<td>
+			<bold>Director</bold> - Directory that contains the *.lbl files,
+			such as "c:\Blizzard2008".
+		</td>
+		<td>
+			<bold><edit maxchars=256 width=100% name=dir/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Save utt.data file</bold> - An utt.data file is automatically created (same
+			format as the Blizzard 2008 Unisyn lexion's). This the the file
+			where it's saved, such as "c:\temp\Utt.data".
+		</td>
+		<td>
+			<bold><edit maxchars=256 width=100% name=uttdata/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Phone symbols</xtrheader>
+
+	<tr>
+		<td>
+			<bold>Initials</bold> - Phones that start the beginning of a syllable.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=phoneinitial/></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Finals</bold> - Phones that end a syllable.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=phonefinal/></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Number of tones</bold> - The number of tones. Tones numbers are appended to
+			each of the finals.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=numtones/></bold></td>
+	</tr>
+
+</xtablecenter>
+
+
+<xChoiceButton style=righttriangle name=next>
+	<bold>Next</bold><br/>
+	Press this once you have filled in all the above information.
+	<p/>
+	After importing the file, you may need to rename some phonemes (since some non-alphabetic symbols aren't allowed).
+	You will also need to match the phonemes to their English equivalent so that some algorithms (such
+	as lip sync) work properly.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton name=defaults>
+	<bold>Restore defaults</bold><br/>
+	Press this to restore the Chinese defaults.
+</xChoiceButton>
+

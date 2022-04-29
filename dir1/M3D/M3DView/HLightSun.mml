@@ -1,0 +1,64 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="The sun, moon, and weather"/>
+
+<xPageTitle>
+	The sun, moon, and weather
+</xPageTitle>
+
+
+<p>
+	When <xSN/> draws it takes into account the location of the sun, moon, and what
+	kind of weather you specify. The location and intensity of the sun and moon
+	are automagically calculated from the latitude, date, and time you enter.
+</p>
+
+<p>
+	To change the latitude:
+</p>
+<ol>
+	<li>
+		Press the <xButtonLocale/> button.
+	</li>
+	<li>
+		In the "Location settings" dialog, press the <bold>"Building information"</bold> button.
+	</li>
+	<li>
+		In the "Building site information" page, type a new latitude in
+		under the <bold>Latitude</bold> field. The latitude doesn't need to be accurate;
+		within 5 degrees will be good enough for most people. However, if you need
+		more accurate prediciton of the sun's position then you'll want to pull out a map
+		or GPS for a better number.
+	</li>
+</ol>
+
+<p>
+	To change the date, time of day, or weather conditions:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sky.
+	</li>
+	<li>
+		In the "Skydome settings" dialog, change the date and time; the sun and moon
+		will be respositioned to their location on the given date and time.
+	</li>
+</ol>
+
+<p>
+	Any changes you make will be visible in most quality settings. However, they will
+	be most noticable in the "Shadows" view quality because the shadows cast by
+	the building will greatly affect your perception of the time of day and year.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:403>Lighting exposure</a></li>
+	<li><a href=r:581>Sky-dome object</a></li>
+	<li><a href=r:399>Turning lights on and off</a></li>
+</xul>

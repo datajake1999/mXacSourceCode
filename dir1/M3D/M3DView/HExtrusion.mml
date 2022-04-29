@@ -1,0 +1,60 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Extrusion objects"/>
+
+<xPageTitle>
+	Extrusion objects
+</xPageTitle>
+
+<p>
+	An "extrusion" is a technical term for "noodle" - basically a longish strand of something
+	all with the same profile. (Sphagetti noodles have a round profile, while linguini
+	has rectangular.)
+</p>
+
+<p>
+	In <xSN/>, the extrusion object is used to create long pieces, such as 2"x4" studs,
+	lengths of wood, lengths of steel, rods, dowels, and table legs. Because extrusions can
+	also be bent, the list include chair legs, power cords, electric range burners,
+	springs, heaps more. Extrusions can even reconnect to themselves, forming picture
+	frames, doughnuts (with holes in the center), O-rings, etc.
+</p>
+
+<p>
+	You will find a collection of pre-defined extrusions under the "Extrusions" section
+	in "Object pieces".
+</p>
+
+<p>
+	If you want to make your own extrusion then:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined extrusion (under "Extrusions" in the "Object pieces"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Using the <xButtonObjDialog/> tool, click on the extrusion.
+	</li>
+	<li>
+		In the "Extrusion settings" button you'll find a number of ways you can customize
+		the extrusion. You can control how it bends, the size of the profile, it's shape,
+		and how the ends are bevelled. It's not that hard to understand, and with a bit
+		of experimentation you'll understand it all.
+	</li>
+	<li>
+		You may also wish to use <xButtonObjControlDialog/> on the extrusion objects to
+		display different control points.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:472>Framing (studs, beams, joists, purlins)</a></li>
+</xul>

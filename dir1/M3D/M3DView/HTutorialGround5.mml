@@ -1,0 +1,58 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Painting elevation"/>
+
+<xPageTitle>
+	Tutorial - Painting elevation
+</xPageTitle>
+
+<p>
+	You aren't just limited to creating mountains and craters in the ground editor.
+	You can also paint in topography with a "brush" that raises or lowers the
+	elevation.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonBrush32/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the topography and <bold>hold down</bold> the mouse button.
+	</li>
+	<p>
+		You will see a small mound form; the longer you hold the mouse down the higher
+		the mound will get.
+	</p>
+	<li>
+		<bold>Drag</bold> the mouse around to paint an area.
+	</li>
+	<li>
+		<xSN/> provides several brush sizes; <bold>Choose</bold> the most appropriate one.
+	</li>
+	<li>
+		You can also control the brush's strength by pressing the <xButtonBrushStrength/> button
+		and selecting a strength rating from the menu. Higher values will have more affect,
+		adding or removing ground quicker.
+	</li>
+	<li>
+		To control how "pointy" your brush is, press the <xButtonBrushShape/> button
+		and select from "Very pointy" to "Flat".
+	</li>
+	<li>
+		The <xButtonBrushShape/> menu also lets you select between "Airbrush", "Brush",
+		and "Pen". The <bold>"Airbrush"</bold> acts like an artist's airbrush (aka: a can
+		of spray paint); the longer you hold it in one area the more paint that is
+		applied. The <bold>"Brush"</bold> mode only applies "paint" when you drag it.
+		The <bold>"Pen"</bold> mode only applied paint when you drag the
+		the mouse <bold>and</bold> it adds the "paint" in an even consistency.
+	</li>
+	<li>
+		The <xButtonBrushEffect/> button lets you control how the elevation is changed,
+		such as raising or lowering the ground level, blurring it, etc.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:625><bold>Next</bold></button>
+</p>
+

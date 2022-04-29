@@ -1,0 +1,142 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Extrusion settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Path (bend)</xtrheader>
+	<tr>
+		<td>
+			<bold>Path</bold> -
+			The path of the extrusion determines how the extrusion (board,
+			tube, wire, rod) bends.
+		</td>
+		<td><bold>
+			<combobox cbheight=150 width=100% name=path>
+				<elem name=0><font color=#800000><italic>Custom</italic></font></elem>
+				<elem name=2>Circle/ellipse</elem>
+				<elem name=4>Coil</elem>
+				<elem name=3>Rectangle</elem>
+				<elem name=5>Spring</elem>
+				<elem name=1>Straight</elem>
+			</combobox>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=custompath href=custompath>
+			<bold>Modify custom path</bold><br/>
+			If you have selected the "Custom" path, this will allow you to change the
+			how the path curves and how flexible it is.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Profile shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> -
+			What the extrusion looks like in profile. A dowel is circluar, a
+			wood stud is rectangular, etc.
+		</td>
+		<td><bold>
+			<xComboShape2 width=100% name=shape/>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=customshape href=customshape>
+			<bold>Modify custom shape</bold><br/>
+			If you have selected the "Custom" shape, this will allow you to change the
+			shape to whatever you want.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Profile size</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the extrusion. (Not used if you have a custom size curve.)
+		</td>
+		<td><edit maxchars=32 width=100% name=size0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the extrusion. (Not used if you have a custom size curve.)
+		</td>
+		<td><edit maxchars=32 width=100% name=size1/></td>
+	</tr>
+	<tr><td>
+		By default, the size of the profile remains the same over the length of the extrusion.
+		However, you can have it vary to produce effects like laythe-spun legs on table.
+		<p/>
+		<xchoicebutton checkbox=true style=x name=scale>
+			<bold>Use custom size curve</bold><br/>
+			If checked the size of the extrusion's profile will change over its length. If not checked
+			then only one one size is used.
+		</xchoicebutton>
+		<xchoicebutton name=customscale href=customscale>
+			<bold>Modify custom size curve</bold><br/>
+			If you have selected the "Custom" size curve, this will allow you to change the
+			how the size changes over the length.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Profile front</xtrheader>
+	<tr><td>
+		Every extrusion as a "front", which determines how the profile shape is orientated.
+		You can have just one "front" for the path of the extrusion, or you can change
+		the front over the extrusion's length. This allows you to create spirals and other
+		effects.
+		<p/>
+		<xchoicebutton checkbox=true style=x name=front>
+			<bold>Use custom front curve</bold><br/>
+			If checked the "front" of the extrusion will change over its length. If not checked
+			then only one point for the front is used.
+		</xchoicebutton>
+		<xchoicebutton name=customfront href=customfront>
+			<bold>Modify custom front curve</bold><br/>
+			If you have selected the "Custom" front curve, this will allow you to change the
+			how the front direction curves and how flexible it is.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<!xComboBevel>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="1">Relative to extrusion direction</elem>
+		<elem name="2">Relative to object</elem>
+		<elem name="0">Square (90 degreee angle)</elem>
+	</combobox></bold>
+</xComboBevel>
+
+<xtablecenter width=100%>
+	<xtrheader>Ends</xtrheader>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=drawends>
+			<bold>Draw end caps</bold><br/>
+			If checked the ends will be capped on the extrusion, forming a solid object.
+			If not checked, ends will be left open and the object will become a tube
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Start bevel</bold> - The direction of the bevel at the
+			start of the extrusion.
+		</td>
+		<td><xcombobevel width=100% name=bevel0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>End bevel</bold> - The direction of the bevel at the
+			end of the extrusion.
+		</td>
+		<td><xcombobevel width=100% name=bevel1/></td>
+	</tr>
+</xtablecenter>
+

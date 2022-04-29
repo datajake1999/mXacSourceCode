@@ -1,0 +1,35 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Fireplaces"/>
+
+<xPageTitle>
+	Fireplaces
+</xPageTitle>
+
+<p>
+	The easiest way to create a fireplace is to use the "fireplace" object, which is
+	specifically designed for drawing the fireplace and chimney.
+</p>
+
+<p>
+	To add a fireplace to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined fireplace that most closely meets your
+		needs. You can find them in "Fireplaces" under "Interior decoration".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house by clicking on the wall where you
+		want the fireplace.
+	</li>
+	<li>
+		Resize and reshape the fireplace using <xButtonObjControlNSEWUD/> tool.
+	</li>
+</ol>
+
+

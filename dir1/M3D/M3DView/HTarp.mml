@@ -1,0 +1,57 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tarps and sails"/>
+
+<xPageTitle>
+	Tarps and sails
+</xPageTitle>
+
+<p>
+	Use the "tarp" object to create hanging (and sagging) tarps and sails, or any other
+	piece of rectangular or triangular cloth attached at its corners. This includes
+	tents and umbrellas.
+</p>
+
+<p>
+	To add a tarp to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined tarp that is closest to
+		your needs. Look under "Tarps" in "Outdoors".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Resize the tarp using <xButtonObjControlNSEWUD/> tool on the circular control points.
+	</li>
+	<li>
+		Move the tarp's corners to wherever they're fixed using <xButtonObjControlNSEWUD/> tool
+		on the square control points. (<bold>Tip:</bold> You may wish to use
+		the column object to create poles that the tarp can be affixed to.)
+	</li>
+	<li>
+		Change how much the tarp sags by using the <xButtonObjControlNSEWUD/> tool'
+		on the triangular control points. Raising or lowering the points will affect how much
+		the tarp sags.
+	</li>
+	<li>
+		If you want your <bold>one large tarp</bold> constructed of smaller triangles and rectangles
+		then create several tarp objects. Move the control points for connecting corners onto the
+		same spot. Likewise, move the sag control points for connecting edges onto
+		the same spot. You can use this technique to create complex tents and even umbrellas.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:432>Column objects</a></li>
+</xul>

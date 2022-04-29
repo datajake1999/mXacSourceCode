@@ -1,0 +1,41 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Film grain"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Film grain</xtrheader>
+	<tr>
+		<td>
+			<bold>Noise</bold> - Moving the slider to the right will increase the
+			amount of noise in the grain.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=noise/></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the film grain effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

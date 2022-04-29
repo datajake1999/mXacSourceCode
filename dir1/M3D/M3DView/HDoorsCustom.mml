@@ -1,0 +1,241 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Customized doors and windows"/>
+
+<xPageTitle>
+	Customized doors and windows
+</xPageTitle>
+
+<xsectiontitle>Theory</xsectiontitle>
+<p>
+	Doors and windows are, unforunately, a little bit complicated. The reason for this
+	is the tremendous number of door and window styles available to people in the real
+	world; I thought I should make a reasonable attempt at drawing them.
+</p>
+
+<p>
+	To understand doors and windows in <xSN/>, I need to go into a bit of theory...
+	or at least nomenclature...
+</p>
+
+<p>
+	First, <bold>doors, doorways, and windows are really the same thing.</bold> (They
+	are to the computer at least.) In non-technical terms they're openings in walls
+	with a frame (door/window-frame) and bits of material (wood, glass, etc.) hinged or
+	somehow attached to the frame. In the case of a doorway there's an opening with a frame,
+	but nothing attached.
+</p>
+
+<p>
+	All doors, windows, and doorways have a <bold>frame</bold>. The frame is made of
+	bits of wood or steal that attach to the studs in the wall. The frame, of course,
+	is visible. (Although for some doorways, the frame can be of "0" size and not really
+	be visible at all.)
+</p>
+
+<p>
+	Most frames that you encounter in real life are rectangles with one <bold>opening</bold>. However,
+	some frames have several openings, also known as sub-frames.
+	For example: Some home entry doors that have an a fixed glass to the left and right of the
+	door. The main frame is split into three openings, the central one for the door, and the left
+	and right openings for the two vertical windows.
+</p>
+
+<p>
+	Each opening has <bold>six possible locations</bold> for the door or window.
+	A door or window can be flush against the outside edge of the frame (for doors that
+	open outwards) or flush against the inside edge of the frame (for doors that
+	open inwards). That's two of the openings.
+	A door or window (usually window) can be centered in the frame; most
+	people would consider this only one opening, but because the door/window can open
+	either outwards or inwards from this point, the computer thinks of it as two
+	positions which are both in the middle. And finally, the door/window can be completely
+	outside the frame, on the outer side or the inner side. This is common for horizontal
+	sliding barn or shed doors.
+</p>
+
+<p>
+	Each location can be empty, or contain a door. For example: Many external usually have
+	a solid door on the inside of the frame which opens inwards, and a screen door flush with the
+	outside of the frame the opens outwards. However, the other four locations are left empty.
+</p>
+
+<p>
+	For reasons I'll explain in a moment, each location has a <bold>door set</bold> associated
+	with it, not just a door. The reason for this is simple: Double doors and bi-fold doors.
+	An opening can contain more than one door.
+</p>
+
+<p>
+	Each door set is divided into one or more <bold>doors</bold>. A door is a mostly-flat
+	panel that's attached to the doorframe at some point.
+</p>
+
+<p>
+	The collection of doors (aka the
+	door set) has a prescribed way of opening called its <bold>Movement</bold>. The obvious
+	form of movement is a hinge attached to the frame that allows the door to swing open - like
+	a standard door. However, other forms of movement are available: bi-fold, sliding, pocket,
+	garage, and roller.
+</p>
+
+<p>
+	The direction in which a door in a door set moves is called its <bold>Orientation</bold>. Doors
+	can open to the left side of the frame, the right, or both left and right (in the
+	case of French doors). They can also open up, down, or up and down, although those directions
+	are usually reserved for windows.
+</p>
+
+<p>
+	If things weren't complicated enough, doors are not monolithic slabs. Doors are built
+	from frames and sub-frames, subdiving the doors into <bold>sections</bold>. Each
+	section can further be subdivided, or can contain panels of wood, glass, or other
+	material.
+</p>
+
+<p>
+	And that's the gist. I have preprogrammed about a hundred doors and windows so, hopefully,
+	you'll find one of the preprogrammed ones that you like, but if you can't then
+	you'll need to understand some of this theory because, unlike other house
+	design packages, doors in <xSN/> are very customizable.
+</p>
+
+
+<xsectiontitle>Changing the frame</xsectiontitle>
+
+<p>
+	To change a door or window's frame:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the door.
+	</li>
+	<li>
+		In the "Door/window settings" page that appears, press
+		the <bold>Change frame shape</bold> button.
+	</li>
+	<li>
+		In the "Framing shape" page, <bold>click on</bold> one of the available
+		frame shapes. (I think I've covered most of the frame shapes out there.
+		If I'm missing one that you need E-mail me at <xMyEmail/>.)
+	</li>
+	<p>
+		The door's frame will be changed to the selected shape and you'll
+		return to the "Door/window settings" page.
+	</p>
+	<li>
+		You may need to <bold>enter some new measurements</bold> for the frame sizes at
+		the bottom of the page.
+	</li>
+</ol>
+
+<xsectiontitle>Adding door sets to openings</xsectiontitle>
+
+<p>
+	To add/remove a door set to an opening, or to modify the style or door set already
+	in an opening:
+</p>
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the door.
+	</li>
+	<li>
+		In the "Door/window settings" page that appears, <bold>click on the opening</bold> as
+		it appears in the "Door/window shape" section.
+	</li>
+	<p>
+		The "Door/window opening" page will appear. It is divided into one section per
+		location in the door frame. (Remember, there are up to six locations.)
+	</p>
+	<li>
+		At the bottom of the page are buttons (up to six of them) for adding a door set
+		into the specified location. <bold>Press one of these</bold> to add a door set.
+		Once you do this the page will refresh and you'll see a new section for the
+		newly added door set.
+	</li>
+</ol>
+
+
+<xsectiontitle>Modifying door sets</xsectiontitle>
+
+<p>
+	To change a door set (such as the type of movement it allows or appearance of
+	its doors):
+</p>
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the door.
+	</li>
+	<li>
+		In the "Door/window settings" page that appears, <bold>click on the opening</bold> as
+		it appears in the "Door/window shape" section.
+	</li>
+	<p>
+		The "Door/window opening" page will appear. It is divided into one section per
+		location in the door frame. (Remember, there are up to six locations.)
+	</p>
+	<li>
+		<bold>Find the door set</bold> you're interested in changing.
+	</li>
+	<li>
+		<bold>Change the values and settings</bold> for the door set as you like. A short
+		description of each setting is next to it. If that isn't good enough then experiment
+		to find out what the setting does.
+	</li>
+</ol>
+
+
+<xsectiontitle>Modifying door appearances</xsectiontitle>
+
+<p>
+	To change the appearance of an individual door (or all those in a door set):
+</p>
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the door.
+	</li>
+	<li>
+		In the "Door/window settings" page that appears, <bold>click on the opening</bold> as
+		it appears in the "Door/window shape" section.
+	</li>
+	<p>
+		The "Door/window opening" page will appear. It is divided into one section per
+		location in the door frame. (Remember, there are up to six locations.)
+	</p>
+	<li>
+		<bold>Find the door set</bold> you're interested in changing.
+	</li>
+	<li>
+		Press the <bold>Change the door/window's appearance</bold> button. If you want to just
+		change one of the doors then click on one of the numbers immediately below the button.
+		Each number corresponds to a door in the set.
+	</li>
+	<p>
+		The "Door/window selection" page will appear.
+	</p>
+	<li>
+		Scroll through the list box and <bold>select the door/window style</bold> you want to use.
+	</li>
+</ol>
+
+
+<xsectiontitle>Custom door appearances</xsectiontitle>
+
+<p>
+	If you can't find a door/window style that you like then you'll need to do even more work.
+	Basically, you'll need to <bold>make your way to the "Door/window selection" page</bold> (see above)
+	and <bold>select "Custom door or window"</bold>. The page will refresh and show you
+	all the sections that each door is subdivided into. The feature is somewhat
+	documented on the page, and while I could write tomes about it, I don't think the extra
+	words would make the process any clearer than it already is. (And it isn't very
+	clear.) My advice is to experiment. You'll figure it out quickly enough.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:448>Curtains, drapes, and blinds</a></li>
+	<li><a href=r:347>Door and window size</a></li>
+	<li><a href=r:348>Opening and closing doors and windows</a></li>
+</xul>

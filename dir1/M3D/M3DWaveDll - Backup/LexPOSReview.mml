@@ -1,0 +1,93 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review part-of-speech"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<p>
+	Instructions at the end of the page.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Word list</xtrheader>
+	<<<$WORDLIST>>>
+</xtablecenter>
+
+<xChoiceButton name=markreview>
+	<bold>Mark as reviewed and show more words</bold><br/>
+<<<$IFSTORELEX>>>
+	Press this when you have corrected all the mistakes in the current list. The
+	words will be marked as having been reviewed so you won't see them again,
+	and a new batch of words will be displayed.
+<<<$ENDIFSTORELEX>>>
+<<<$IFNSTORELEX>>>
+	Press this when you have set all of the parts-of-speech for words in the current
+	list. Any that you <bold>have not set</bold> will be changed to nouns (since nouns are most common).
+	A new batch of words will be displayed.
+<<<$ENDIFNSTORELEX>>>
+</xChoiceButton>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Parts of speech</xtrheader>
+	<tr><td><xul>
+		<li>
+			<bold>Noun (N)</bold> - Person, place, thing, quality, or action.
+		</li>
+		<li>
+			<bold>Pronoun (Pron)</bold> - An identifying word used in place of a noun, such
+				as I, you, he, she, it, we, and they.
+		</li>
+		<li>
+			<bold>Adjective (Adj)</bold> - Word that modifies or qualifies a word or noun.
+		</li>
+		<li>
+			<bold>Preposition (Prep)</bold> - Words that combine with a noun or pronoun to
+			form a phrase, such as "to" or "of".
+		</li>
+		<li>
+			<bold>Article (Art)</bold> - Word to signal a noun, such as "a" or "the".
+		</li>
+		<li>
+			<bold>Verb (V)</bold> - Word that expresses a form of action.
+		</li>
+		<li>
+			<bold>Adverb (Adv)</bold> - Word that modifies a verb, adjective, or another adverb.
+		</li>
+		<li>
+			<bold>Auxiliary verb (Aux v)</bold> - A word that forms the mood, tense, or aspect
+			of the main verb, such as "have", "can" or "will".
+		</li>
+		<li>
+			<bold>Conjunction (Conj)</bold> - These words connect sentences phrases, clauses,
+			or words, such as "and", "or", and "but".
+		</li>
+		<li>
+			<bold>Interjection (Interj)</bold> - Exclamation words such as "oh" and "wow".
+		</li>
+	</xul></td></tr>
+</xtablecenter>
+
+
+
+
+<xbr/>
+<xSectionTitle>Instructions</xSectionTitle>
+
+<p>
+	The listed words have not yet been reviewed. Once you have reviewed that their
+	pronunciations are correct, press "Mark as reviewed and show more words" to see more words that need
+	to be reviewed. Repeat the process until all words have been reviewed.
+</p>
+
+<p>
+	If a word can have more than one part of speech, then choose the most common part of speech.
+	At the moment, a word's part of speech is only used for text-to-speech prosody (pitch,
+	volume, and duration) so the using the most common part of speech will ensure that
+	most of the time the prosody is correct.
+</p>

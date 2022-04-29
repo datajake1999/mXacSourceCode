@@ -1,0 +1,1179 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "3D Outside the Box"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "M3DView.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""3D Outside the Box""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""M3DView.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "icon1.ico"
+IDI_BAYICON1            ICON                    "icon3.ico"
+IDI_GROUNDICON          ICON                    "appicon1.ico"
+IDI_ANIMICON            ICON                    "ico00001.ico"
+IDI_PAINTICON           ICON                    "ico00002.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PRINTER             BITMAP                  "bitmap1.bmp"
+IDB_CLOSE               BITMAP                  "bmp00001.bmp"
+IDB_MINIMIZE            BITMAP                  "close1.bmp"
+IDB_NEXTMONITOR         BITMAP                  "bmp00002.bmp"
+IDB_CLONEVIEW           BITMAP                  "nextmoni.bmp"
+IDB_SAVE                BITMAP                  "bmp00003.bmp"
+IDB_SAVEAS              BITMAP                  "bmp00004.bmp"
+IDB_NEW                 BITMAP                  "bmp00005.bmp"
+IDB_OPEN                BITMAP                  "bmp00006.bmp"
+IDB_HELP                BITMAP                  "bmp00007.bmp"
+IDB_CUT                 BITMAP                  "bmp00008.bmp"
+IDB_COPY                BITMAP                  "bmp00009.bmp"
+IDB_PASTE               BITMAP                  "bmp00010.bmp"
+IDB_UNDO                BITMAP                  "bmp00011.bmp"
+IDB_REDO                BITMAP                  "bitmap2.bmp"
+IDB_DELETE              BITMAP                  "bmp00012.bmp"
+IDB_VIEWFLAT            BITMAP                  "bmp00014.bmp"
+IDB_VIEW3D              BITMAP                  "bmp00015.bmp"
+IDB_VIEWWALKTHROUGH     BITMAP                  "bmp00016.bmp"
+IDB_DIALOGBOX           BITMAP                  "bmp00013.bmp"
+IDB_VIEWFLATLRUD        BITMAP                  "bmp00017.bmp"
+IDB_VIEWFLATSCALE       BITMAP                  "viewflat.bmp"
+IDB_VIEWFLATROTZ        BITMAP                  "bmp00018.bmp"
+IDB_VIEWFLATROTX        BITMAP                  "bmp00019.bmp"
+IDB_VIEW3DLRFB          BITMAP                  "bmp00020.bmp"
+IDB_VIEW3DROTY          BITMAP                  "bmp00021.bmp"
+IDB_VIEWWALKFBROTZ      BITMAP                  "bmp00022.bmp"
+IDB_VIEWWALKROTZX       BITMAP                  "viewwalk.bmp"
+IDB_VIEWWALKROTY        BITMAP                  "bmp00023.bmp"
+IDB_VIEWWALKLRFB        BITMAP                  "bmp00025.bmp"
+IDB_VIEWSETCENTER       BITMAP                  "bmp00026.bmp"
+IDB_VIEWFLATLOOKAT      BITMAP                  "bmp00027.bmp"
+IDB_CLIPLINE            BITMAP                  "bmp00028.bmp"
+IDB_CLIPPOINT           BITMAP                  "view3d1.bmp"
+IDB_CLIPSET             BITMAP                  "dialogbo.bmp"
+IDB_SELINDIVIDUAL       BITMAP                  "new1.bmp"
+IDB_SELREGION           BITMAP                  "selindiv.bmp"
+IDB_SELALL              BITMAP                  "bmp00029.bmp"
+IDB_MOVEUD              BITMAP                  "bmp00030.bmp"
+IDB_MOVEREFERENCE       BITMAP                  "movelrud.bmp"
+IDB_MOVENSEW            BITMAP                  "view3dlr.bmp"
+IDB_MOVEROTZ            BITMAP                  "bmp00031.bmp"
+IDB_MOVEROTY            BITMAP                  "view3dro.bmp"
+IDB_OBJCONTROLNSEW      BITMAP                  "movelrfb.bmp"
+IDB_OBJPAINT            BITMAP                  "objcontr.bmp"
+IDB_OBJNEW              BITMAP                  "objpaint.bmp"
+IDB_OBJDIALOG           BITMAP                  "bmp00033.bmp"
+IDB_VIEWFLATQUICK       BITMAP                  "bmp00034.bmp"
+IDB_OBJINTELADJUST      BITMAP                  "bmp00035.bmp"
+IDB_SELNONE             BITMAP                  "selall1.bmp"
+IDB_OBJDECONSTRUCT      BITMAP                  "objintel.bmp"
+IDB_CLIPLEVEL           BITMAP                  "clipline.bmp"
+IDB_LOCALE              BITMAP                  "World.bmp"
+IDB_VIEWQUALITY         BITMAP                  "bmp00036.bmp"
+IDB_SMALLWINDOW         BITMAP                  "minimize.bmp"
+IDB_ZOOMIN              BITMAP                  "cut1.bmp"
+IDB_ZOOMINDRAG          BITMAP                  "cutzoomi.bmp"
+IDB_ZOOMOUT             BITMAP                  "bmp00037.bmp"
+IDB_OBJONOFF            BITMAP                  "bmp00038.bmp"
+IDB_OBJOPENCLOSE        BITMAP                  "objonoff.bmp"
+IDB_GRIDSELECT          BITMAP                  "bmp00039.bmp"
+IDB_GRIDFROMPOINT       BITMAP                  "gridsele.bmp"
+IDB_OBJCONTROLUD        BITMAP                  "bmp00040.bmp"
+IDB_MOVEEMBED           BITMAP                  "moveud1.bmp"
+IDB_LIBRARY             BITMAP                  "library.bmp"
+IDB_ZOOMAT              BITMAP                  "zoomin1.bmp"
+IDB_OBJCONTROLDIALOG    BITMAP                  "bmp00032.bmp"
+IDB_THUMBNAIL           BITMAP                  "clipleve.bmp"
+IDB_OBJCONTROLNSEWUD    BITMAP                  "bmp00041.bmp"
+IDB_MOVENSEWUD          BITMAP                  "movensew.bmp"
+IDB_OBJEDITOR           BITMAP                  "moveembe.bmp"
+IDB_OBJMERGE            BITMAP                  "objdialo.bmp"
+IDB_TRACING             BITMAP                  "gridfrom.bmp"
+IDB_OBJCONTROLINOUT     BITMAP                  "bmp00024.bmp"
+IDB_OBJECTLIST          BITMAP                  "clonevie.bmp"
+IDB_ARROWRIGHT          BITMAP                  "bmp00042.bmp"
+IDB_ARROWDOWN           BITMAP                  "arrowrig.bmp"
+IDB_ARROWNONE           BITMAP                  "bmp00043.bmp"
+IDB_OBJATTRIB           BITMAP                  "bmp00044.bmp"
+IDB_ARROWUP             BITMAP                  "arrowdow.bmp"
+IDB_OBJATTACH           BITMAP                  "objmerge.bmp"
+IDB_ANIM                BITMAP                  "library1.bmp"
+IDB_NEWANIMKEYFRAME     BITMAP                  "bmp00045.bmp"
+IDB_ANIMMOVELR          BITMAP                  "bmp00046.bmp"
+IDB_ANIMMOVEUD          BITMAP                  "animmove.bmp"
+IDB_NEWANIMPATH         BITMAP                  "bmp00047.bmp"
+IDB_ANIMRESIZE          BITMAP                  "bmp00048.bmp"
+IDB_NEWANIMKEYFRAMELOC  BITMAP                  "bmp00050.bmp"
+IDB_NEWANIMKEYFRAMEROT  BITMAP                  "moveroty.bmp"
+IDB_GRAPHPOINTMOVE      BITMAP                  "bmp00051.bmp"
+IDB_GRAPHPOINTDELETE    BITMAP                  "graphpoi.bmp"
+IDB_SCENEFPS            BITMAP                  "bmp00052.bmp"
+IDB_SCENEBAYS           BITMAP                  "scenefps.bmp"
+IDB_ANIMPLAY            BITMAP                  "anim1.bmp"
+IDB_ANIMSTOP            BITMAP                  "animplay.bmp"
+IDB_ANIMPLAYLOOP        BITMAP                  "bmp00053.bmp"
+IDB_ANIMJUMPSTART       BITMAP                  "bmp00054.bmp"
+IDB_ANIMJUMPEND         BITMAP                  "animjump.bmp"
+IDB_ANIMJUMPNEXT        BITMAP                  "bmp00055.bmp"
+IDB_ANIMJUMPPREV        BITMAP                  "bmp00056.bmp"
+IDB_SCENEMENU           BITMAP                  "bmp00057.bmp"
+IDB_ANIMTIMEINSERT      BITMAP                  "bmp00058.bmp"
+IDB_ANIMTIMEREMOVE      BITMAP                  "animtime.bmp"
+IDB_ANIMDEFAULT         BITMAP                  "bmp00059.bmp"
+IDB_ANIMSELACTIVE       BITMAP                  "bmp00060.bmp"
+IDB_NEWANIMBOOKMARK1    BITMAP                  "bmp00061.bmp"
+IDB_NEWANIMBOOKMARK2    BITMAP                  "newanimb.bmp"
+IDB_SCENEBOOKMARK       BITMAP                  "scenebay.bmp"
+IDB_SCENECAMERA         BITMAP                  "bmp00062.bmp"
+IDB_NEWANIMCAMERA       BITMAP                  "bmp00063.bmp"
+IDB_GRIDTOPO            BITMAP                  "bmp00064.bmp"
+IDB_GROUNDSUN           BITMAP                  "gridtopo.bmp"
+IDB_GROUNDGENMTN        BITMAP                  "bmp00065.bmp"
+IDB_BRUSHSHAPE          BITMAP                  "groundge.bmp"
+IDB_BRUSHSTRENGTH       BITMAP                  "brushsha.bmp"
+IDB_BRUSHEFFECT         BITMAP                  "brushstr.bmp"
+IDB_BRUSH32             BITMAP                  "brush65.bmp"
+IDB_BRUSH16             BITMAP                  "brush33.bmp"
+IDB_BRUSH8              BITMAP                  "brush17.bmp"
+IDB_BRUSH4              BITMAP                  "brush9.bmp"
+IDB_BRUSH64             BITMAP                  "bmp00066.bmp"
+IDB_GROUNDWATER         BITMAP                  "groundsu.bmp"
+IDB_GROUNDGENVOLCANO    BITMAP                  "bmp00067.bmp"
+IDB_GROUNDGENHILL       BITMAP                  "bmp00068.bmp"
+IDB_GROUNDGENHILLROLL   BITMAP                  "bmp00069.bmp"
+IDB_GROUNDGENPLAT       BITMAP                  "bmp00070.bmp"
+IDB_GROUNDGENRAVINE     BITMAP                  "bmp00071.bmp"
+IDB_GROUNDGENCRATER     BITMAP                  "bmp00072.bmp"
+IDB_GROUNDGENRAISE      BITMAP                  "bmp00073.bmp"
+IDB_GROUNDGENLOWER      BITMAP                  "bmp00074.bmp"
+IDB_GROUNDGENFLAT       BITMAP                  "bmp00075.bmp"
+IDB_GROUNDAPPLYWIND     BITMAP                  "bmp00076.bmp"
+IDB_GROUNDAPPLYRAIN     BITMAP                  "groundap.bmp"
+IDB_VIEWFOREST          BITMAP                  "objedito.bmp"
+IDB_GROUNDPAINT         BITMAP                  "bmp00077.bmp"
+IDB_PAINTVIEW           BITMAP                  "bmp00049.bmp"
+IDB_PVALL               BITMAP                  "anim2.bmp"
+IDB_PVMONO              BITMAP                  "pvall1.bmp"
+IDB_PVCOLOR             BITMAP                  "bmp00078.bmp"
+IDB_PVGLOW              BITMAP                  "pvcolor1.bmp"
+IDB_PVSPEC              BITMAP                  "bmp00079.bmp"
+IDB_PVBUMP              BITMAP                  "bmp00080.bmp"
+IDB_PVTRANS             BITMAP                  "pvbump1.bmp"
+IDB_PVMIRROR            BITMAP                  "bmp00081.bmp"
+IDB_NEWANIMWAVE         BITMAP                  "newanimwave.bmp"
+IDB_ANIMPLAYAUDIO       BITMAP                  "playaudio.bmp"
+IDB_OBJSHOWEDITOR       BITMAP                  "ObjShowEditor.bmp"
+IDB_PMSHOWBACKGROUND    BITMAP                  "PMShowBackground.bmp"
+IDB_PMEDITVERT          BITMAP                  "PMEditPoint.bmp"
+IDB_PMEDITSIDE          BITMAP                  "pmeditside.bmp"
+IDB_PMEDITEDGE          BITMAP                  "pmeditedge.bmp"
+IDB_PMMODEPOLY          BITMAP                  "PMModePoly.bmp"
+IDB_PMMODECLAY          BITMAP                  "pmmodeClay.bmp"
+IDB_PMMODEBONE          BITMAP                  "pmmodeBone.bmp"
+IDB_PMMODEMORPH         BITMAP                  "pmmodeMorph.bmp"
+IDB_PMMODETEXTURE       BITMAP                  "pmmodeTexture.bmp"
+IDB_PMMODETAILOR        BITMAP                  "pmmodeTailor.bmp"
+IDB_PMMIRROR            BITMAP                  "pmmirror.bmp"
+IDB_OBJCONTROLNSEW1     BITMAP                  "bmp00082.bmp"
+IDB_PMMOVEPERP          BITMAP                  "PMMovePerp.bmp"
+IDB_PMMOVEPERPIND       BITMAP                  "pmmoveperpInd.bmp"
+IDB_PMMOVESCALE         BITMAP                  "pmmoveScale.bmp"
+IDB_PMMOVEROTPERP       BITMAP                  "PMMoveRotPerp.bmp"
+IDB_PMMOVEROTNONPERP    BITMAP                  "pmmoveRotNonPerp.bmp"
+IDB_PMEXTRA             BITMAP                  "PMExtrabmp.bmp"
+IDB_PMCOLLAPSE          BITMAP                  "pmmoveCollapse.bmp"
+IDB_PMTESSELATE         BITMAP                  "pmTesselate.bmp"
+IDB_PMEDGESPLIT         BITMAP                  "bmpPMEdgeSplit.bmp"
+IDB_PMSIDESPLIT         BITMAP                  "pmSideSplit.bmp"
+IDB_PMNEWSIDE           BITMAP                  "bmpPMNewSide.bmp"
+IDB_PMSIDEEXTRUDE       BITMAP                  "pmSideExtrude.bmp"
+IDB_PMSIDEINSET         BITMAP                  "pmsideInset.bmp"
+IDB_PMSIDEDISCONNECT    BITMAP                  "pmsideDisconnect.bmp"
+IDB_PMBEVEL             BITMAP                  "pmBevel.bmp"
+IDB_PMSTENCIL           BITMAP                  "bmpPMStencil.bmp"
+IDB_PMMAGSIZE           BITMAP                  "pmMagSize.bmp"
+IDB_PMMAGANY            BITMAP                  "pmmagAny.bmp"
+IDB_PMMAGNORM           BITMAP                  "bmpMagNorm.bmp"
+IDB_PMMAGVIEWER         BITMAP                  "pmmagViewer.bmp"
+IDB_PMMAGPINCH          BITMAP                  "pmmagPinch.bmp"
+IDB_PMTEXTTOGGLE        BITMAP                  "pmTextToggle.bmp"
+IDB_PMTEXTPLANE         BITMAP                  "pmtextPlane.bmp"
+IDB_PMTEXTCYLINDER      BITMAP                  "pmtextCylinder.bmp"
+IDB_PMTEXTSPHERE        BITMAP                  "pmtextSphere.bmp"
+IDB_PMTEXTMOVE          BITMAP                  "pmTextMove.bmp"
+IDB_PMTEXTROT           BITMAP                  "pmtextRot.bmp"
+IDB_PMTEXTMIRROR        BITMAP                  "bmpPMTextMirror.bmp"
+IDB_PMTAILORNEW         BITMAP                  "pmTailorNew.bmp"
+IDB_BONEDEFAULT         BITMAP                  "BoneDefault.bmp"
+IDB_BONEROTATE          BITMAP                  "BoneRotate.bmp"
+IDB_BONENEW             BITMAP                  "boneNew.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "..\\Macros.mml"
+IDR_MMLTEMPLATEBACK     MML                     "..\\TemplateBack.mml"
+IDR_MMLVIEWSET          MML                     "ViewSet.mml"
+IDR_MMLVIEWSETLIGHTING  MML                     "ViewSetLighting.mml"
+IDR_MMLVIEWSETMEASUREMENT MML                     "ViewSetMeasurement.mml"
+IDR_MMLVIEWSETPERSPECTIVE MML                     "ViewSetPerspective.mml"
+IDR_MMLVIEWFLAT         MML                     "ViewFlat.mml"
+IDR_MMLVIEW3D           MML                     "View3D.mml"
+IDR_MMLVIEWWALK         MML                     "ViewWalk.mml"
+IDR_MMLCLIPPOINT        MML                     "ClipPoint.mml"
+IDR_MMLCLIPSET          MML                     "ClipSet.mml"
+IDR_MMLCLIPSETHAND      MML                     "ClipSetHand.mml"
+IDR_MMLCLIPSETFLOORS    MML                     "ClipSetFloors.mml"
+IDR_MMLVIEWSETGRID      MML                     "ViewSetGrid.mml"
+IDR_MMLSELECT           MML                     "Select.mml"
+IDR_MMLSELECTCOLOR      MML                     "SelectColor.mml"
+IDR_MMLSELECTREGION     MML                     "SelectRegion.mml"
+IDR_MMLMOVESET          MML                     "MoveSet.mml"
+IDR_MMLOBJCONTROLPOINTMOVE MML                     "ObjControlPointMove.mml"
+IDR_MMLGROUNDWATER      MML                     "GroundWater.mml"
+IDR_MMLCLIPLEVELS       MML                     "ClipLevels.mml"
+IDR_MMLCLIPSHOW         MML                     "ClipShow.mml"
+IDR_MMLLOCALESET        MML                     "LocaleSet.mml"
+IDR_MMLLOCALEINFO       MML                     "LocaleInfo.mml"
+IDR_MMLQUALITY          MML                     "Quality.mml"
+IDR_MMLGRIDSET          MML                     "GridSet.mml"
+IDR_MMLGRIDVALUES       MML                     "GridValues.mml"
+IDR_MMLGRIDFROMPOINT    MML                     "GridFromPoint.mml"
+IDR_MMLLOCALELEVELS     MML                     "LocaleLevels.mml"
+IDR_MMLTEMPLATEHELP     MML                     "TemplateHelp.mml"
+IDR_HMAIN               MML                     "HMain.mml"
+IDR_HSEARCH             MML                     "HSearch.mml"
+IDR_HABOUT              MML                     "habout.mml"
+IDR_HTOC                MML                     "HTOC.mml"
+IDR_HTUTORIALSTART      MML                     "hTutorialStart.mml"
+IDR_HBUGS               MML                     "hBugs.mml"
+IDR_HHISTORY            MML                     "HHistory.mml"
+IDR_HSURFACECURVE       MML                     "HSurfaceCurve.mml"
+IDR_HSYSTEM             MML                     "hSYstem.mml"
+IDR_HPRODCOMAPRE        MML                     "HProdCompare.mml"
+IDR_HTUTORIALBUILDSITE  MML                     "HTutorialBuildSite.mml"
+IDR_HTUTORIALBUTTONS    MML                     "HTutorialButtons.mml"
+IDR_HVIEWSMALL          MML                     "HViewSmall.mml"
+IDR_HVIEWSCREEN         MML                     "HViewScreen.mml"
+IDR_HVIEWMULTIPLE       MML                     "HViewMultiple.mml"
+IDR_HTUTORIALBUILDBLOCK1 MML                     "HTutorialBuildBlock1.mml"
+IDR_HLOCALE             MML                     "HLocale.mml"
+IDR_HTUTORIALVIEWS      MML                     "HTutorialViews.mml"
+IDR_HTUTORIALBUILDBLOCK2 MML                     "HTutorialBuildBlock2.mml"
+IDR_HVIEWROTATING       MML                     "HViewRotating.mml"
+IDR_HVIEWGLASSES        MML                     "HViewGlasses.mml"
+IDR_HVIEWLIGHTING       MML                     "HViewLighting.mml"
+IDR_HVIEWOUTLINES       MML                     "HViewOutlines.mml"
+IDR_HVIEWPERSPECTIVE    MML                     "HViewPerspective.mml"
+IDR_HVIEWQUALITY        MML                     "HViewQuality.mml"
+IDR_HFOG                MML                     "HFog.mml"
+IDR_HTUTORIALBUILDBLOCK3 MML                     "HTutorialBuildBlock3.mml"
+IDR_HBBWALLS            MML                     "HBBWalls.mml"
+IDR_HBBELEVLIMIT        MML                     "HBBElevLimit.mml"
+IDR_HBBFOUNDATION       MML                     "HBBFoundation.mml"
+IDR_HBBLEVELS           MML                     "HBBLevels.mml"
+IDR_HBBROOF             MML                     "HBBRoof.mml"
+IDR_HBBVERANDAH         MML                     "HBBVerandah.mml"
+IDR_HBBCATHEDRAL        MML                     "HBBCathedral.mml"
+IDR_HTUTORIALCLIP       MML                     "HTutorialClip.mml"
+IDR_HOBJREFERENCE       MML                     "HObjReference.mml"
+IDR_HTUTORIALBUILDBLOCK4 MML                     "HTutorialBuildBlock4.mml"
+IDR_HTUTORIALBUILDBLOCK5 MML                     "HTutorialBuildBlock5.mml"
+IDR_HBBBYPASS           MML                     "HBBBypass.mml"
+IDR_HBBDECONSTRUCT      MML                     "HBBDeconstruct.mml"
+IDR_HTUTORIALSAVE       MML                     "HTutorialSave.mml"
+IDR_HTUTORIALTEXTURES   MML                     "HTutorialTextures.mml"
+IDR_HTUTORIALWALLS      MML                     "HTutorialWalls.mml"
+IDR_HBBOVERLAYS         MML                     "HBBOverlays.mml"
+IDR_HTUTORIALDOORS      MML                     "HTutorialDoors.mml"
+IDR_HGRIDSIZE           MML                     "HGridSize.mml"
+IDR_HGRIDDISPLAY        MML                     "HGridDisplay.mml"
+IDR_HGRIDCENTER         MML                     "HGridCenter.mml"
+IDR_HTUTORIALFINISHED   MML                     "HTutorialFinished.mml"
+IDR_HFUTURE             MML                     "HFuture.mml"
+IDR_HIFYOULIKE          MML                     "HIfYouLike.mml"
+IDR_HTUTORIALWALLS2     MML                     "HTutorialWalls2.mml"
+IDR_HSURFACETHICK       MML                     "HSurfaceThick.mml"
+IDR_HSURFACEEDGE        MML                     "HSurfaceEdge.mml"
+IDR_HSURFACEOVERLAY     MML                     "HSurfaceOverlay.mml"
+IDR_HBALINBB            MML                     "HBalInBB.mml"
+IDR_HDOORSCUSTOM        MML                     "HDoorsCustom.mml"
+IDR_HSTAIRSCUSTOM       MML                     "HStairsCustom.mml"
+IDR_HSTAIRSOBJECT       MML                     "HStairsObject.mml"
+IDR_HPIERCUSTOM         MML                     "HPierCustom.mml"
+IDR_HPIEROBJECT         MML                     "HPierObject.mml"
+IDR_HPIERINBB           MML                     "HPierInBB.mml"
+IDR_HBALCUSTOM          MML                     "hBalCustom.mml"
+IDR_HBALOBJECT          MML                     "hBalObject.mml"
+IDR_HBALINSTAIRS        MML                     "hBalInStairs.mml"
+IDR_HFENCING            MML                     "HFencing.mml"
+IDR_HDOORSSIZE          MML                     "HDoorsSize.mml"
+IDR_HDOORSOPEN          MML                     "HDoorsOpen.mml"
+IDR_HTUTORIALOUTSIDE    MML                     "HTutorialOutside.mml"
+IDR_HTUTORIALFINISHEDVIEW MML                     "HTutorialFinishedView.mml"
+IDR_HTUTORIALOPENSAMPLE MML                     "HTutorialOpenSample.mml"
+IDR_HTUTORIALVIEWS2     MML                     "HTutorialViews2.mml"
+IDR_HTUTORIALIMAGEQUALITY MML                     "HTutorialImageQuality.mml"
+IDR_HTUTORIALVIEWS3     MML                     "HTutorialViews3.mml"
+IDR_HTUTORIALVIEWS4     MML                     "HTutorialViews4.mml"
+IDR_MMLVIEWFAVORITE     MML                     "ViewFavorite.mml"
+IDR_HLIGHTONOFF         MML                     "HLightOnOff.mml"
+IDR_HLIGHTCUSTOM        MML                     "HLightCustom.mml"
+IDR_HLIGHTCREATE        MML                     "HLightCreate.mml"
+IDR_HLIGHTSUN           MML                     "HLightSun.mml"
+IDR_HVIEWEXPOSURE       MML                     "HViewExposure.mml"
+IDR_HTEXTURECREATE      MML                     "HTextureCreate.mml"
+IDR_HTEXTUREMODIFY      MML                     "HTextureModify.mml"
+IDR_HTEXTUREMATERIAL    MML                     "HTextureMaterial.mml"
+IDR_HTUTORIALINSIDE     MML                     "HTutorialInside.mml"
+IDR_HTHUMBNAIL          MML                     "HThumbnail.mml"
+IDR_MMLOBJEDITOR        MML                     "ObjEditor.mml"
+IDR_HTUTORIALOBJSTART   MML                     "HTutorialObjStart.mml"
+IDR_HTUTORIALOBJTHEORY  MML                     "HTutorialObjTheory.mml"
+IDR_HTUTORIALOBJCREATE  MML                     "HTutorialObjCreate.mml"
+IDR_HTUTORIALOBJEDIT    MML                     "HTutorialObjEdit.mml"
+IDR_HTUTORIALOBJEDIT2   MML                     "HTutorialObjEdit2.mml"
+IDR_HTUTORIALOBJSAVE    MML                     "HTutorialObjSave.mml"
+IDR_HTUTORIALFINISHED3  MML                     "HTutorialFinished3.mml"
+IDR_HTUTORIALOBJTEMPLATE MML                     "HTutorialObjTemplate.mml"
+IDR_HEXTRUSION          MML                     "HExtrusion.mml"
+IDR_HLATHE              MML                     "HLathe.mml"
+IDR_HCOLUMN             MML                     "HColumn.mml"
+IDR_HSPLINESURFACE      MML                     "HSplineSurface.mml"
+IDR_HPOLYHEDRON         MML                     "HPolyhedron.mml"
+IDR_HPAINTING           MML                     "HPainting.mml"
+IDR_HTABLECLOTH         MML                     "HTableCloth.mml"
+IDR_HCURTAIN            MML                     "HCurtain.mml"
+IDR_HCUSHION            MML                     "HCushion.mml"
+IDR_HBOOKS              MML                     "HBooks.mml"
+IDR_HCABINET            MML                     "HCabinet.mml"
+IDR_HCABINETPIECES      MML                     "HCabinetPieces.mml"
+IDR_HDRAWER             MML                     "HDrawer.mml"
+IDR_HPATHWAY            MML                     "HPathway.mml"
+IDR_HTARP               MML                     "HTarp.mml"
+IDR_HPOOL               MML                     "HPool.mml"
+IDR_HFIREPLACE          MML                     "HFireplace.mml"
+IDR_HTRUSS              MML                     "HTruss.mml"
+IDR_HTBBATH             MML                     "HTBBath.mml"
+IDR_HTBKITCHEN          MML                     "HTBKitchen.mml"
+IDR_HSURFACEMERGE       MML                     "HSurfaceMerge.mml"
+IDR_HBBMERGE            MML                     "HBBMerge.mml"
+IDR_MMLAPPSET           MML                     "AppSet.mml"
+IDR_HSURFACEFRAMING     MML                     "HSurfaceFraming.mml"
+IDR_HTBEXPOSEDEAVES     MML                     "HTBExposedEaves.mml"
+IDR_MMLPRINTTOFILE      MML                     "PrintToFile.mml"
+IDR_MMLPRINTTOPRINTER   MML                     "PrintToPrinter.mml"
+IDR_HSAVEIMAGE          MML                     "HSaveImage.mml"
+IDR_HPRINT              MML                     "HPrint.mml"
+IDR_MMLTRACEDIALOG      MML                     "TraceDialog.mml"
+IDR_MMLTRACEADD         MML                     "TraceAdd.mml"
+IDR_MMLTRACEEDIT        MML                     "TraceEdit.mml"
+IDR_HTRACE              MML                     "HTrace.mml"
+IDR_MMLREGISTER         MML                     "Register.mml"
+IDR_HRIGHTBUTTON        MML                     "HRightButton.mml"
+IDR_MMLOLNEWGROUP       MML                     "OLNewGroup.mml"
+IDR_MMLOLRENAMEOBJECT   MML                     "OLRenameObject.mml"
+IDR_MMLOBJATTRIB        MML                     "ObjAttrib.mml"
+IDR_MMLOBJEDITORSET     MML                     "ObjEditorSet.mml"
+IDR_MMLOBJEDITORATTRIB  MML                     "ObjEditorAttrib.mml"
+IDR_MMLOBJEDITORATTRIBSEL MML                     "ObjEditorAttribSel.mml"
+IDR_MMLOBJEDITORATTRIBEDIT MML                     "ObjEditorAttribEdit.mml"
+IDR_HOBJECTLIST         MML                     "HObjectList.mml"
+IDR_HATTRIBUTES         MML                     "HAttributes.mml"
+IDR_HTUTORIALOBJATTRIB  MML                     "HTutorialObjAttrib.mml"
+IDR_HPRODCOMPARE2       MML                     "HProdCompare2.mml"
+IDR_HBONESFACEFORWARDS  MML                     "HBonesFaceForwards.mml"
+IDR_HBONESMOVEREF       MML                     "HBonesMoveRef.mml"
+IDR_HBONESRIGID         MML                     "HBonesRigid.mml"
+IDR_HBONESCONVETIONS    MML                     "HBonesConventions.mml"
+IDR_HATTACH             MML                     "HAttach.mml"
+IDR_HHOWCHARACTERHOLD   MML                     "HHowCharacterHold.mml"
+IDR_HTUTORIALCONTENTS   MML                     "HTutorialContents.mml"
+IDR_HTUTORIALANIM1      MML                     "HTutorialAnim1.mml"
+IDR_HTUTORIALANIM2      MML                     "HTutorialAnim2.mml"
+IDR_HTUTORIALANIM3      MML                     "HTutorialAnim3.mml"
+IDR_HTUTORIALANIM4      MML                     "HTutorialAnim4.mml"
+IDR_HTUTORIALANIM5      MML                     "HTutorialAnim5.mml"
+IDR_HTUTORIALANIM6      MML                     "HTutorialAnim6.mml"
+IDR_HTUTORIALANIM7      MML                     "HTutorialAnim7.mml"
+IDR_HTUTORIALANIM8      MML                     "HTutorialAnim8.mml"
+IDR_HTUTORIALANIM9      MML                     "HTutorialAnim9.mml"
+IDR_HANIMBOOKMARK       MML                     "HAnimBookmarks.mml"
+IDR_HANIMDECONSTRUCT    MML                     "HAnimDeconstruct.mml"
+IDR_HANIMMERGE          MML                     "HAnimMerge.mml"
+IDR_HANIMSELCHANGE      MML                     "HAnimSelChange.mml"
+IDR_HANIMSCENES         MML                     "HAnimScenes.mml"
+IDR_HANIMFRAMERATE      MML                     "HAnimFramerate.mml"
+IDR_HANIMSTARTATTRIB    MML                     "HAnimStartAttrib.mml"
+IDR_HANIMRESIZE         MML                     "HAnimResize.mml"
+IDR_HSKYDOME            MML                     "HSkydome.mml"
+IDR_MMLGROUNDSET        MML                     "GroundSet.mml"
+IDR_MMLGROUNDELEV       MML                     "GroundElev.mml"
+IDR_MMLGROUNDDETAIL     MML                     "GroundDetail.mml"
+IDR_MMLGROUNDSIZE       MML                     "GroundSize.mml"
+IDR_MMLGROUNDSCALE      MML                     "GroundScale.mml"
+IDR_MMLGROUNDTEXT       MML                     "GroundText.mml"
+IDR_MMLGROUNDPAINT      MML                     "GroundPaint.mml"
+IDR_MMLGROUNDFOREST     MML                     "GroundForest.mml"
+IDR_HTUTORIALGROUND9    MML                     "HTutorialGround9.mml"
+IDR_HTUTORIALGROUND8    MML                     "HTutorialGround8.mml"
+IDR_HTUTORIALGROUND7    MML                     "HTutorialGround7.mml"
+IDR_HTUTORIALGROUND6    MML                     "HTutorialGround6.mml"
+IDR_HTUTORIALGROUND5    MML                     "HTutorialGround5.mml"
+IDR_HTUTORIALGROUND4    MML                     "HTutorialGround4.mml"
+IDR_HTUTORIALGROUND3    MML                     "HTutorialGround3.mml"
+IDR_HTUTORIALGROUND2    MML                     "HTutorialGround2.mml"
+IDR_HTUTORIALGROUND1    MML                     "HTutorialGround1.mml"
+IDR_HGROUNDWEATHER      MML                     "HGroundWeather.mml"
+IDR_HGROUNDPAINTELEV    MML                     "HGroundPaintElev.mml"
+IDR_HTUTORIALTREE8      MML                     "HTutorialTree8.mml"
+IDR_HTUTORIALTREE7      MML                     "HTutorialTree7.mml"
+IDR_HTUTORIALTREE6      MML                     "HTutorialTree6.mml"
+IDR_HTUTORIALTREE5      MML                     "HTutorialTree5.mml"
+IDR_HTUTORIALTREE3      MML                     "HTutorialTree3.mml"
+IDR_HTUTORIALTREE4      MML                     "HTutorialTree4.mml"
+IDR_HTUTORIALTREE2      MML                     "HTutorialTree2.mml"
+IDR_HTUTORIALTREE1      MML                     "HTutorialTree1.mml"
+IDR_MMLPAINTADD         MML                     "PaintAdd.mml"
+IDR_MMLPAINTTEXT        MML                     "PaintText.mml"
+IDR_MMLPAINTMOD         MML                     "PaintMod.mml"
+IDR_MMLPAINTDIALOG      MML                     "PaintDialog.mml"
+IDR_HTUTORIALPAINT8     MML                     "HTutorialPaint8.mml"
+IDR_HTUTORIALPAINT7     MML                     "HTutorialPaint7.mml"
+IDR_HTUTORIALPAINT6     MML                     "HTutorialPaint6.mml"
+IDR_HTUTORIALPAINT5     MML                     "HTutorialPaint5.mml"
+IDR_HTUTORIALPAINT4     MML                     "HTutorialPaint4.mml"
+IDR_HTUTORIALPAINT3     MML                     "HTutorialPaint3.mml"
+IDR_HTUTORIALPAINT2     MML                     "HTutorialPaint2.mml"
+IDR_HTUTORIALPAINT1     MML                     "HTutorialPaint1.mml"
+IDR_HANIMLIPSYNC        MML                     "HAnimLipSync.mml"
+IDR_HANIMPLAYAUDIO      MML                     "HAnimPlayAudio.mml"
+IDR_MMLPOLYMESHDIALOG   MML                     "PolyMeshDialog.mml"
+IDR_MMLPMMOVEVERT       MML                     "PMMoveVert.mml"
+IDR_MMLPOLYMESHTEXTURE  MML                     "PolyMeshTexture.mml"
+IDR_MMLPMTEXTMOVEVERT   MML                     "PMTextMoveVert.mml"
+IDR_MMLPMTEXTMIRROR     MML                     "PMTextMirror.mml"
+IDR_HTUTORIALPM21       MML                     "HTutorialPM21.mml"
+IDR_HTUTORIALPM1        MML                     "HTutorialPM1.mml"
+IDR_HTUTORIALPM2        MML                     "HTutorialPM2.mml"
+IDR_HTUTORIALPM3        MML                     "HTutorialPM3.mml"
+IDR_HTUTORIALPM4        MML                     "HTutorialPM4.mml"
+IDR_HTUTORIALPM5        MML                     "HTutorialPM5.mml"
+IDR_HTUTORIALPM6        MML                     "HTutorialPM6.mml"
+IDR_HTUTORIALPM7        MML                     "HTutorialPM7.mml"
+IDR_HTUTORIALPM8        MML                     "HTutorialPM8.mml"
+IDR_HTUTORIALPM9        MML                     "HTutorialPM9.mml"
+IDR_HTUTORIALPM10       MML                     "HTutorialPM10.mml"
+IDR_HTUTORIALPM11       MML                     "HTutorialPM11.mml"
+IDR_HTUTORIALPM12       MML                     "HTutorialPM12.mml"
+IDR_HTUTORIALPM13       MML                     "HTutorialPM13.mml"
+IDR_HTUTORIALPM14       MML                     "HTutorialPM14.mml"
+IDR_HTUTORIALPM15       MML                     "HTutorialPM15.mml"
+IDR_HTUTORIALPM16       MML                     "HTutorialPM16.mml"
+IDR_HTUTORIALPM17       MML                     "HTutorialPM17.mml"
+IDR_HTUTORIALPM18       MML                     "HTutorialPM18.mml"
+IDR_HTUTORIALPM19       MML                     "HTutorialPM19.mml"
+IDR_HTUTORIALPM20       MML                     "HTutorialPM20.mml"
+IDR_HTUTORIALBONE9      MML                     "HTutorialBone9.mml"
+IDR_HTUTORIALBONE1      MML                     "HTutorialBone1.mml"
+IDR_HTUTORIALBONE2      MML                     "HTutorialBone2.mml"
+IDR_HTUTORIALBONE3      MML                     "HTutorialBone3.mml"
+IDR_HTUTORIALBONE4      MML                     "HTutorialBone4.mml"
+IDR_HTUTORIALBONE5      MML                     "HTutorialBone5.mml"
+IDR_HTUTORIALBONE6      MML                     "HTutorialBone6.mml"
+IDR_HTUTORIALBONE7      MML                     "HTutorialBone7.mml"
+IDR_HTUTORIALBONE8      MML                     "HTutorialBone8.mml"
+IDR_HEYES               MML                     "HEyes.mml"
+IDR_HHAIRLOCK           MML                     "HHairLock.mml"
+IDR_HHAIRHEAD           MML                     "HHairHead.mml"
+IDR_HTOOTH              MML                     "HTooth.mml"
+IDR_HJAW                MML                     "HJaw.mml"
+IDR_HTUTORIALCHAR1      MML                     "HTutorialChar1.mml"
+IDR_HEFFECTS            MML                     "HEffects.mml"
+IDR_HGRASS              MML                     "HGrass.mml"
+IDR_HWATERFALL          MML                     "HWaterfall.mml"
+IDR_HRIVER              MML                     "HRiver.mml"
+IDR_HROCK               MML                     "HRock.mml"
+IDR_HTUTORIALCAVE1      MML                     "HTutorialCave1.mml"
+IDR_HTUTORIALCAVE2      MML                     "HTutorialCave2.mml"
+IDR_HTUTORIALCAVE3      MML                     "HTutorialCave3.mml"
+IDR_HTUTORIALCAVE4      MML                     "HTutorialCave4.mml"
+IDR_HTUTORIALCAVE5      MML                     "HTutorialCave5.mml"
+IDR_HTUTORIALCAVE6      MML                     "HTutorialCave6.mml"
+IDR_HTUTORIALCAVE7      MML                     "HTutorialCave7.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSORPASTE         CURSOR                  "cursor1.cur"
+IDC_CURSORPAINT         CURSOR                  "cursorpa.cur"
+IDC_CURSOROBJECTPASTE   CURSOR                  "cur00001.cur"
+IDC_CURSORDIALOG        CURSOR                  "cur00002.cur"
+IDC_CURSORINTELADJUST   CURSOR                  "cursordi.cur"
+IDC_CURSORDECONSTRUCT   CURSOR                  "cursorin.cur"
+IDC_CURSORZOOMIN        CURSOR                  "cur00003.cur"
+IDC_CURSORZOOMINDRAG    CURSOR                  "cursorzo.cur"
+IDC_CURSORZOOMOUT       CURSOR                  "cur00004.cur"
+IDC_CURSOROBJOPENCLOSE  CURSOR                  "cur00005.cur"
+IDC_CURSOROBJONOFF      CURSOR                  "cur00006.cur"
+IDC_CURSORGRIDFROMPOINT CURSOR                  "cur00007.cur"
+IDC_CURSORVIEWFLATLRUD  CURSOR                  "cur00008.cur"
+IDC_CURSORVIEW3DLRFB    CURSOR                  "cursorvi.cur"
+IDC_CURSORVIEWWALKFBROTZ CURSOR                  "cursorob.cur"
+IDC_CURSORVIEWWALKROTZX CURSOR                  "cur00009.cur"
+IDC_CURSORVIEWWALKLRUD  CURSOR                  "cur00010.cur"
+IDC_CURSORVIEWWALKLRFB  CURSOR                  "cur00011.cur"
+IDC_CURSORMOVENSEW      CURSOR                  "cur00012.cur"
+IDC_CURSORMOVEEMBED     CURSOR                  "cursormo.cur"
+IDC_CURSORMOVEUD        CURSOR                  "cur00013.cur"
+IDC_CURSORVIEWFLATSCALE CURSOR                  "cur00014.cur"
+IDC_CURSORVIEWFLATROTZ  CURSOR                  "cur00015.cur"
+IDC_CURSORVIEWWALKROTY  CURSOR                  "cur00016.cur"
+IDC_CURSORMOVEROTZ      CURSOR                  "cur00017.cur"
+IDC_CURSORVIEWFLATROTX  CURSOR                  "cur00018.cur"
+IDC_CURSORVIEW3DROTY    CURSOR                  "cur00019.cur"
+IDC_CURSORMOVEROTY      CURSOR                  "cur00021.cur"
+IDC_CURSORVIEWFLATLOOKAT CURSOR                  "cur00022.cur"
+IDC_CURSORCLIPLINE      CURSOR                  "cur00023.cur"
+IDC_CURSORSELREGION     CURSOR                  "cursorcl.cur"
+IDC_CURSORVIEWCENTERFLAT CURSOR                  "cur00024.cur"
+IDC_CURSORCLIPPOINT     CURSOR                  "cur00025.cur"
+IDC_CURSOROBJCONTROLNSEW CURSOR                  "cur00026.cur"
+IDC_CURSOROBJECTPASTEDRAG CURSOR                  "cur00027.cur"
+IDC_CURSORZOOMAT        CURSOR                  "cur00020.cur"
+IDC_CURSOROBJCONTROLDIALOG CURSOR                  "cur00028.cur"
+IDC_CURSORTHUMBNAIL     CURSOR                  "cur00029.cur"
+IDC_CURSOROBJCONTROLNSEWUD CURSOR                  "cur00030.cur"
+IDC_CURSOROBJCONTROLUD  CURSOR                  "cur00031.cur"
+IDC_CURSORMOVENSEWUD    CURSOR                  "cur00032.cur"
+IDC_CURSOROBJCONTROLINOUT CURSOR                  "cur00033.cur"
+IDC_CURSOROBJMERGE      CURSOR                  "cur00034.cur"
+IDC_CURSOROBJATTRIB     CURSOR                  "cur00035.cur"
+IDC_CURSOROBJATTACH     CURSOR                  "cur00036.cur"
+IDC_CURSORANIMMOVELR    CURSOR                  "cur00037.cur"
+IDC_CURSORANIMMOVEUD    CURSOR                  "cursoran.cur"
+IDC_CURSORANIMRESIZER   CURSOR                  "cur00038.cur"
+IDC_CURSORANIMRESIZEL   CURSOR                  "cur00039.cur"
+IDC_CURSOROBJCONTROLNSEW1 CURSOR                  "cur00041.cur"
+IDC_CURSORGRAPHPOINTMOVE CURSOR                  "cur00040.cur"
+IDC_CURSORGRAPHPOINTDELETE CURSOR                  "cursorgr.cur"
+IDC_CURSORANIMTIME      CURSOR                  "cur00042.cur"
+IDC_CURSORANIMDEFAULT   CURSOR                  "cur00043.cur"
+IDC_CURSORGROUNDSUN     CURSOR                  "cur00044.cur"
+IDC_CURSORBRUSH32       CURSOR                  "cursor2.cur"
+IDC_CURSORBRUSH16       CURSOR                  "cursorbr.cur"
+IDC_CURSORBRUSH8        CURSOR                  "cur00046.cur"
+IDC_CURSORBRUSH4        CURSOR                  "cur00047.cur"
+IDC_CURSORBRUSH64       CURSOR                  "cur00045.cur"
+IDC_CURSORPLAYAUDIO     CURSOR                  "playaudio.cur"
+IDC_CURSOROBJSHOWEDITOR CURSOR                  "ObjShowEditor.cur"
+IDC_CURSORPMMOVEPERP    CURSOR                  "PMMovePerp.cur"
+IDC_CURSORPMMOVEPERPIND CURSOR                  "cursorPMMovePerpInd.cur"
+IDC_CURSORPMMOVEROTNONPERP CURSOR                  "cursorPMMoveRotNonPerp.cur"
+IDC_CURSORPMMOVEROTPERP CURSOR                  "cursorPMMoveRotPerp.cur"
+IDC_CURSORPMMOVESCALE   CURSOR                  "cursorPMMoveScale.cur"
+IDC_CURSORPMCOLLAPSE    CURSOR                  "cursorpmCollapse.cur"
+IDC_CURSORPMEDGESPLIT   CURSOR                  "cursorpmEdgeSplit.cur"
+IDC_CURSORPMSIDESPLIT   CURSOR                  "cursorpmSideSplit.cur"
+IDC_CURSORPMNEWSIDE     CURSOR                  "cursorpmNewSide.cur"
+IDC_CURSORPMSIDEEXTRUDE CURSOR                  "cursorPMSideExtrude.cur"
+IDC_CURSORPMSIDEINSET   CURSOR                  "cursorpmSideInset.cur"
+IDC_CURSORPMSIDEDISCONNECT CURSOR                  "cursorpmSideDisconnect.cur"
+IDC_CURSORPMBEVEL       CURSOR                  "cursorpmBevel.cur"
+IDC_CURSORPMMAGANY      CURSOR                  "cursorpmMagAny.cur"
+IDC_CURSORPMMAGNORM     CURSOR                  "cursorpmMagNorm.cur"
+IDC_CURSORPMMAGVIEWER   CURSOR                  "cursorpmMagViewer.cur"
+IDC_CURSORPMMAGPINCH    CURSOR                  "cursorpmMagPinch.cur"
+IDC_CURSORPMTEXTMOVE    CURSOR                  "cursorpmTextMove.cur"
+IDC_CURSORPMTEXTROT     CURSOR                  "cursorpmTextRot.cur"
+IDC_CURSORPMTAILORNEW   CURSOR                  "cursorpmTailorNew.cur"
+IDC_CURSORBONEROTATE    CURSOR                  "cursorBoneRotate.cur"
+IDC_CURSORBONENEW       CURSOR                  "cursorBoneNew.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_EAGLEEYE            JPG                     "EagleEye.jpg"
+IDR_LOGO                JPG                     "Logo150.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUQUICK MENU 
+BEGIN
+    POPUP "Quick"
+    BEGIN
+        MENUITEM "From the &north",             ID_FROMTHENORTH
+        MENUITEM "From the &east",              ID_FROMTHEEAST
+        MENUITEM "From the &south",             ID_FROMTHESOUTH
+        MENUITEM "From the &west",              ID_FROMTHEWEST
+        MENUITEM SEPARATOR
+        MENUITEM "From the north-east",         ID_QUICK_NORTHEAST
+        MENUITEM "From the south-east",         ID_QUICK_SOUTHEAST
+        MENUITEM "From the south-west",         ID_QUICK_SOUTHWEST
+        MENUITEM "From the north-west",         ID_QUICK_NORTHWEST
+        MENUITEM SEPARATOR
+        MENUITEM "From &above",                 ID_TOP
+        MENUITEM "North (elevated)",            ID_QUICK_NORTHELEVATED
+        , MENUBREAK
+        MENUITEM "East (elevated)",             ID_QUICK_EASTELEVATED
+        MENUITEM "South (elevated)",            ID_QUICK_SOUTHELEVATED
+        MENUITEM "West (elevated)",             ID_QUICK_WESTELEVATED
+        MENUITEM SEPARATOR
+        MENUITEM "North-east (elevated)",       ID_QUICK_NORTHEASTELEVATED
+        MENUITEM "South-east (elevated)",       ID_QUICK_SOUTHEASTELEVATED
+        MENUITEM "South-west (elevated)",       ID_QUICK_SOUTHWESTELEVATED
+        MENUITEM "North-west (elevated)",       ID_QUICK_NORTHWESTELEVATED
+        MENUITEM "Add camera angle to favorites...", ID_QUICK_ADDTOFAVORITES
+        , MENUBREAK
+        MENUITEM "Remove camera angle from favorites", 
+                                                ID_QUICK_REMOVEFROMFAVORITES
+        MENUITEM SEPARATOR
+    END
+END
+
+IDR_MENULEVEL MENU 
+BEGIN
+    POPUP "Level"
+    BEGIN
+        MENUITEM "&Basement",                   ID_LEVEL_BASEMENT
+        MENUITEM "&Ground floor",               ID_LEVEL_GROUNDFLOOR
+        MENUITEM "&1st floor",                  ID_LEVEL_1STFLOOR
+        MENUITEM "&2nd floor",                  ID_LEVEL_2NDFLOOR
+        MENUITEM "&All",                        ID_LEVEL_ALL
+        MENUITEM SEPARATOR
+        POPUP "&More"
+        BEGIN
+            MENUITEM "&3rd floor",                  ID_LEVEL_3RDFLOOR
+            MENUITEM "&4th floor",                  ID_LEVEL_4THFLOOR
+            MENUITEM "&5th floor",                  ID_LEVEL_5THFLOOR
+            MENUITEM "&6th floor",                  ID_LEVEL_6THFLOOR
+            MENUITEM "&7th floor",                  ID_LEVEL_7THFLOOR
+            MENUITEM "&8th floor",                  ID_LEVEL_8THFLOOR
+            MENUITEM "&9th floor",                  ID_LEVEL_9THFLOOR
+        END
+    END
+END
+
+IDR_MENUQUALITY MENU 
+BEGIN
+    POPUP "Quality"
+    BEGIN
+        MENUITEM "Low resolution (fastest)",    ID_QUALITY_LOWRES
+        MENUITEM "Normal resolution",           ID_QUALITY_NORMALRES
+        MENUITEM "Antialiased (slowest)",       ID_QUALITY_HIGHRES
+        MENUITEM SEPARATOR
+        MENUITEM "Wireframe (fastest)",         ID_QUALITY_VERYLOW
+        MENUITEM "Monochromastic",              ID_QUALITY_LOW
+        MENUITEM "Solid colors",                ID_QUALITY_POOR
+        MENUITEM "Solid with shading",          ID_QUALITY_GOOD
+        MENUITEM "Textures",                    ID_QUALITY_HIGH
+        MENUITEM "Shadows (slowest)",           ID_QUALITY_BEST
+        MENUITEM SEPARATOR
+        POPUP "Lighting exposure"
+        BEGIN
+            MENUITEM "Bright sunlight",             ID_QUALITY_LIGHTINGEXPOSURE_UNDEREXPOSEDINSUNLIGHT
+
+            MENUITEM "Slightly overcast",           ID_QUALITY_LIGHTINGEXPOSURE_FULLSUNLIGHT
+
+            MENUITEM "Overcast",                    ID_QUALITY_LIGHTINGEXPOSURE_OVERCAST
+
+            MENUITEM "Daytime interior",            ID_LIGHTINGEXPOSURE_DAYTIMEINTERIOR
+
+            MENUITEM "Night-time interior",         ID_QUALITY_LIGHTINGEXPOSURE_DARKINDOORS
+
+            MENUITEM "Dark night-time interior",    ID_QUALITY_LIGHTINGEXPOSURE_DARKNIGHTTIMEINTERIOR
+
+            MENUITEM "Moonlight",                   ID_QUALITY_LIGHTINGEXPOSURE_MOONLIGHT
+
+        END
+    END
+END
+
+IDR_MENULIBRARY MENU 
+BEGIN
+    POPUP "Library"
+    BEGIN
+        MENUITEM "Objects...",                  ID_LIBRARY_OBJECTS
+        MENUITEM "Textures...",                 ID_LIBRARY_TEXTURES
+        MENUITEM "Effects...",                  ID_LIBRARY_EFFECTS
+    END
+END
+
+IDR_MENUTHUMBNAIL MENU 
+BEGIN
+    POPUP "Thumbnail"
+    BEGIN
+        MENUITEM "No thumbnails",               ID_THUMBNAIL_NOTHUMBNAILS
+        MENUITEM "Thumbnails on the right",     ID_THUMBNAIL_THUMBAILSONTHERIGHT
+
+        MENUITEM "Thumbnails on the bottom",    ID_THUMBNAIL_THUMBNAILSONTHEBOTTOM
+
+        MENUITEM SEPARATOR
+        MENUITEM "Setup thumbnails (tool)",     ID_THUMBNAIL_SETUPTHUMBNAILSTOOL
+
+    END
+END
+
+IDR_MENUPRINT MENU 
+BEGIN
+    POPUP "Print"
+    BEGIN
+        MENUITEM "&Print...",                   ID_PRINT_PRINT
+        MENUITEM "&Save image...",              ID_PRINT_SAVEIMAGE
+    END
+END
+
+IDR_MENUOLOBJECT MENU 
+BEGIN
+    POPUP "OLObject"
+    BEGIN
+        MENUITEM "Select/de-select",            ID_OLOBJECT_SELECTORDE
+        MENUITEM "Show/hide",                   ID_OLOBJECT_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Move to an existing group",   ID_OLOBJECT_MOVETOANEXISTINGGROUP
+
+        MENUITEM "Move out of this group",      ID_OLOBJECT_MOVEOUTOFTHISGROUP
+
+        MENUITEM "Move to a new group",         ID_OLOBJECT_MOVETOANEWGROUP
+        MENUITEM "Rename",                      ID_OLOBJECT_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "Reposition camera to view this", 
+                                                ID_OLOBJECT_REPOSITIONCAMERATOVIEWTHIS
+
+    END
+END
+
+IDR_MENUOLGROUP MENU 
+BEGIN
+    POPUP "Group"
+    BEGIN
+        MENUITEM "Select/de-select all objects", ID_GROUP_SELECT
+        MENUITEM "Show/hide all objects",       ID_GROUP_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Move to an existing group",   ID_GROUP_MOVETOANEXISTINGGROUP
+
+        MENUITEM "Move all objects out of this group", 
+                                                ID_GROUP_MOVEALLOBJECTSOUTOFTHISGROUP
+
+        MENUITEM "Move to a new group",         ID_GROUP_MOVETOANEWGROUP
+        MENUITEM "Rename group",                ID_GROUP_RENAMEGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "Reposition camera to view this", 
+                                                ID_GROUP_REPOSITIONCAMERATOVIEWTHIS
+
+    END
+END
+
+IDR_MENUANIM MENU 
+BEGIN
+    POPUP "Animation"
+    BEGIN
+        MENUITEM "Show timeline",               ID_ANIMATION_SHOWTIMELINE
+        MENUITEM "Animate to movie file",       ID_ANIMATION_CREATEMOVIE
+    END
+END
+
+IDR_MENUBRUSHSHAPE MENU 
+BEGIN
+    POPUP "BrushShape"
+    BEGIN
+        MENUITEM "Airbrush",                    ID_BRUSHSHAPE_AIRBRUSH
+        MENUITEM "Brush",                       ID_BRUSHSHAPE_BRUSH
+        MENUITEM "Pen",                         ID_BRUSHSHAPE_PEN
+        MENUITEM SEPARATOR
+        MENUITEM "Flat",                        ID_BRUSHSHAPE_FLAT
+        MENUITEM "Rounded",                     ID_BRUSHSHAPE_ROUNDED
+        MENUITEM "Pointy",                      ID_BRUSHSHAPE_POINTY
+        MENUITEM "Very pointy",                 ID_BRUSHSHAPE_VERYPOINTY
+    END
+END
+
+IDR_MENUBRUSHSTRENGTH MENU 
+BEGIN
+    POPUP "BrushStrength"
+    BEGIN
+        MENUITEM "10 (strongest)",              ID_BRUSHSTRENGTH_10
+        MENUITEM "9",                           ID_BRUSHSTRENGTH_9
+        MENUITEM "8",                           ID_BRUSHSTRENGTH_8
+        MENUITEM "7",                           ID_BRUSHSTRENGTH_7
+        MENUITEM "6",                           ID_BRUSHSTRENGTH_6
+        MENUITEM "5",                           ID_BRUSHSTRENGTH_5
+        MENUITEM "4",                           ID_BRUSHSTRENGTH_4
+        MENUITEM "3",                           ID_BRUSHSTRENGTH_3
+        MENUITEM "2",                           ID_BRUSHSTRENGTH_2
+        MENUITEM "1 (weakest)",                 ID_BRUSHSTRENGTH_1
+    END
+END
+
+IDR_MENUBRUSHEFFECT MENU 
+BEGIN
+    POPUP "BrushEffect"
+    BEGIN
+        MENUITEM "Add bumps",                   ID_BRUSHEFFECT_ADDB
+        MENUITEM "Sharpen",                     ID_BRUSHEFFECT_SHARPEN
+        MENUITEM "Blur",                        ID_BRUSHEFFECT_BLUR
+        MENUITEM "Raise to maximum",            ID_BRUSHEFFECT_RAISETOMAXIMUM
+
+        MENUITEM "Lower to minimum",            ID_BRUSHEFFECT_LOWERTOMINIMUM
+
+        MENUITEM "Raise",                       ID_BRUSHEFFECT_RAISE
+        MENUITEM "Lower",                       ID_BRUSHEFFECT_LOWER
+    END
+END
+
+IDR_MENUBRUSHEFFECTTEXT MENU 
+BEGIN
+    POPUP "BrushEffect"
+    BEGIN
+        MENUITEM "Add noise",                   ID_BRUSHEFFECT_ADDB
+        MENUITEM "Sharpen",                     ID_BRUSHEFFECT_SHARPEN
+        MENUITEM "Blur",                        ID_BRUSHEFFECT_BLUR
+        MENUITEM "Paint to maximum",            ID_BRUSHEFFECT_RAISETOMAXIMUM
+
+        MENUITEM "Remove paint to minimum",     ID_BRUSHEFFECT_LOWERTOMINIMUM
+
+        MENUITEM "Paint",                       ID_BRUSHEFFECT_RAISE
+        MENUITEM "Remove paint",                ID_BRUSHEFFECT_LOWER
+    END
+END
+
+IDR_MENUBRUSHEFFECTPAINT MENU 
+BEGIN
+    POPUP "BrushEffect"
+    BEGIN
+        MENUITEM "Sharpen",                     ID_BRUSHEFFECT_SHARPEN
+        MENUITEM "Blur",                        ID_BRUSHEFFECT_BLUR
+        MENUITEM "Paint using tracing paper",   ID_BRUSHEFFECT_LOWER
+    END
+END
+
+IDR_MENUPOLYMESHSYM MENU 
+BEGIN
+    POPUP "Symmetry"
+    BEGIN
+        MENUITEM "Left/right",                  ID_SYMMETRY_LEFT
+        MENUITEM "Front/back",                  ID_SYMMETRY_FRONT
+        MENUITEM "Top/bottom",                  ID_SYMMETRY_TOP
+    END
+END
+
+IDR_MENUPMEXTRA MENU 
+BEGIN
+    POPUP "PMExtra"
+    BEGIN
+        MENUITEM "Make the side planar",        ID_PMEXTRA_MAKETHESIDEPLANAR
+        MENUITEM "Flip the side's normal",      ID_PMEXTRA_FLIPTHESIDE
+        MENUITEM "Rotate the side's vertices (fix triangulation problems)", 
+                                                ID_PMEXTRA_ROTATETHESIDE
+    END
+END
+
+IDR_MENUPMTESSELATE MENU 
+BEGIN
+    POPUP "Tesselate"
+    BEGIN
+        MENUITEM "Divide quadrilaterals into triangles", 
+                                                ID_TESSELATE_DIVIDEQUADRILATERALSINTOTRIANGLES
+
+        MENUITEM "Divide using existing vertices", 
+                                                ID_TESSELATE_DIVIDEUSINGEXISTINGVERTICES
+
+        MENUITEM "Divide through the edge centers", 
+                                                ID_TESSELATE_DIVIDETHROUGHTHEEDGECENTERS
+
+    END
+END
+
+IDR_MENUBRUSHSHAPEPM MENU 
+BEGIN
+    POPUP "BrushShape"
+    BEGIN
+        MENUITEM "Flat",                        ID_BRUSHSHAPE_FLAT
+        MENUITEM "Rounded",                     ID_BRUSHSHAPE_ROUNDED
+        MENUITEM "Pointy",                      ID_BRUSHSHAPE_POINTY
+        MENUITEM "Very pointy",                 ID_BRUSHSHAPE_VERYPOINTY
+    END
+END
+
+IDR_MENUBRUSHEFFECTPM MENU 
+BEGIN
+    POPUP "Brush effect polymesh"
+    BEGIN
+        MENUITEM "Add height",                  ID_BRUSHEFFECTPOLYMESH_ADDHEIGHT
+
+        MENUITEM "Remove height",               ID_BRUSHEFFECTPOLYMESH_REMOVEHEIGHT
+
+        MENUITEM SEPARATOR
+        MENUITEM "Pull towards you",            ID_BRUSHEFFECTPOLYMESH_PULLTOWARDSYOU
+
+        MENUITEM "Push away from you",          ID_BRUSHEFFECTPOLYMESH_PUSHAWAYFROMYOU
+
+        MENUITEM SEPARATOR
+        MENUITEM "Smooth",                      ID_BRUSHEFFECTPOLYMESH_SMOOTH
+
+        MENUITEM "Roughen",                     ID_BRUSHEFFECTPOLYMESH_ROUGHEN
+
+    END
+END
+
+IDR_MENUPMSTENCIL MENU 
+BEGIN
+    POPUP "Stencil"
+    BEGIN
+        MENUITEM "No stenciling",               ID_STENCIL_NOSTENCILING
+        MENUITEM "Stencil based on texture's red", 
+                                                ID_STENCIL_STENCILBASEDONRED
+        MENUITEM "Stencil based on texture's green", 
+                                                ID_STENCIL_STENCILBASEDONGREEN
+
+        MENUITEM "Stencil based on texture's blue", 
+                                                ID_STENCIL_STENCILBASEDONBLUE
+
+        MENUITEM "Stencil based on texture's brightness", 
+                                                ID_STENCIL_STENCILBASEDONBRIGHTNESS
+
+        MENUITEM SEPARATOR
+        MENUITEM "Reverse stencil (darker colors affect more)", 
+                                                ID_STENCIL_REVERSESTENCIL
+    END
+END
+
+IDR_MENUPMMAGSIZE MENU 
+BEGIN
+    POPUP "MagSize"
+    BEGIN
+        MENUITEM "Flat",                        ID_BRUSHSHAPE_FLAT
+        MENUITEM "Rounded",                     ID_BRUSHSHAPE_ROUNDED
+        MENUITEM "Pointy",                      ID_BRUSHSHAPE_POINTY
+        MENUITEM "Very pointy",                 ID_BRUSHSHAPE_VERYPOINTY
+        MENUITEM SEPARATOR
+        MENUITEM "Extra large",                 ID_MAGSIZE_EXTRALARGE
+        MENUITEM "Large",                       ID_MAGSIZE_LARGE
+        MENUITEM "Medium",                      ID_MAGSIZE_MEDIUM
+        MENUITEM "Small",                       ID_MAGSIZE_SMALL
+        MENUITEM "Extra small",                 ID_MAGSIZE_EXTRASMALL
+    END
+END
+
+IDR_MENUPMORGEXTRA MENU 
+BEGIN
+    POPUP "Extra"
+    BEGIN
+        MENUITEM "Mirror from the right side to the left", 
+                                                ID_EXTRA_MIRRORFROMTHERIGHTSIDETOTHELEFT
+
+        MENUITEM "Mirror from the left side to the right", 
+                                                ID_EXTRA_MIRRORFROMTHELEFTSIDETOTHERIGHT
+
+        MENUITEM "Mirror from the back to the front", 
+                                                ID_EXTRA_MIRRORFROMTHEBACKTOTHEFRONT
+
+        MENUITEM "Mirror from the front to the back", 
+                                                ID_EXTRA_MIRRORFROMTHEFRONTTOTHEBACK
+
+        MENUITEM "Mirror from the top to the bottom", 
+                                                ID_EXTRA_MIRRORFROMTHETOPTOTHEBOTTOM
+
+        MENUITEM "Mirror from the bottom to the top", 
+                                                ID_EXTRA_MIRRORFROMTHEBOTTOMTOTHETOP
+
+        MENUITEM SEPARATOR
+        MENUITEM "Flip left and right",         ID_EXTRA_FLIPLEFTANDRIGHT
+        MENUITEM "Flip front and back",         ID_EXTRA_FLIPFRONTANDBACK
+        MENUITEM "Flip top and bottom",         ID_EXTRA_FLIPTOPANDBOTTOM
+        MENUITEM SEPARATOR
+        MENUITEM "Add more detail (subdivide polygons)", 
+                                                ID_EXTRA_ADDMOREDETAIL
+    END
+END
+
+IDR_MENUBRUSHEFFECTPMMORPH MENU 
+BEGIN
+    POPUP "Brush effect morph"
+    BEGIN
+        MENUITEM "Increase morph's strength",   ID_BRUSHEFFECTMORPH_INCREASEMORPH
+
+        MENUITEM "Decrease morph's strength",   ID_BRUSHEFFECTMORPH_DECREASEMORPH
+
+        MENUITEM SEPARATOR
+        MENUITEM "Erase morph",                 ID_BRUSHEFFECTMORPH_ERASEMORPH
+
+    END
+END
+
+IDR_MENUBRUSHEFFECTPMTAILOR MENU 
+BEGIN
+    POPUP "Brush effect tailor"
+    BEGIN
+        MENUITEM "Use the painted area for the clothing", 
+                                                ID_BRUSHEFFECTTAILOR_USETHEPAINTEDAREFORTHECLOTHING
+
+        MENUITEM "Remove the painted area from the clothing", 
+                                                ID_BRUSHEFFECTTAILOR_REMOVETHEPAINTEDAREAFROMTHECLOTHING
+
+    END
+END
+
+IDR_MENUPMBONEEXTRA MENU 
+BEGIN
+    POPUP "Bone extra"
+    BEGIN
+        MENUITEM "Mirror bone weights from right to left", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMRIGHTTOLEFT
+
+        MENUITEM "Mirror bone weights from left to right", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMLEFTTORIGHT
+
+        MENUITEM "Mirror bone weights from back to front", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMBACKTOFRONT
+
+        MENUITEM "Mirror bone weights from front to back", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMFRONTTOBACK
+
+        MENUITEM "Mirror bone weights from top to bottom", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMTOPTOBOTTOM
+
+        MENUITEM "Mirror bone weights from bottom to top", 
+                                                ID_BONEEXTRA_MIRRORBONEWEIGHTSFROMBOTTOMTOTOP
+
+        MENUITEM SEPARATOR
+        MENUITEM "Copy bone weights from right to left", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMRIGHTTOLEFT
+
+        MENUITEM "Copy bone weights from left to right", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMLEFTTORIGHT
+
+        MENUITEM "Copy bone weights from back to front", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMBACKTOFRONT
+
+        MENUITEM "Copy bone weights from front to back", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMFRONTTOBACK
+
+        MENUITEM "Copy bone weights from top to bottom", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMTOPTOBOTTOM
+
+        MENUITEM "Copy bone weights from bottom to top", 
+                                                ID_BONEEXTRA_COPYBONEWEIGHTSFROMBOTTOMTOTOP
+
+        MENUITEM SEPARATOR
+        MENUITEM "Restore automatic bone weights", 
+                                                ID_BONEEXTRA_RESTOREAUTOMATICBONEWEIGHTS
+
+    END
+END
+
+IDR_MENUBRUSHEFFECTPMBONE MENU 
+BEGIN
+    POPUP "Brush effect bone"
+    BEGIN
+        MENUITEM "Increase bone weight",        ID_BRUSHEFFECTBONE_INCREASEBONEWEIGHT
+
+        MENUITEM "Decrease bone weight",        ID_BRUSHEFFECTBONE_DECREASEBONEWEIGHT
+
+        MENUITEM SEPARATOR
+        MENUITEM "Set bone weight",             ID_BRUSHEFFECTBONE_SETBONEWEIGHT
+
+        MENUITEM "Clear bone weight",           ID_BRUSHEFFECTBONE_CLEARBONEWEIGHT
+
+    END
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

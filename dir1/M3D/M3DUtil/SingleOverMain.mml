@@ -1,0 +1,63 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Overlays"/>
+
+<p>
+	This page lets you add or remove overlays to the surface.
+	(Details below.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Overlays</xtrheader>
+	<tr><td>
+		<p>
+			Click on an overlay (colored) to modify it, or press the one of the
+			"Add overlay" buttons below.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xchoicebutton href=addcustom>
+	<bold>Add an overlay</bold><br/>
+	Add a new overlay. The edges over the overlay are hand-modified by you when
+	you drag control points around.
+</xchoicebutton>
+
+<xchoicebutton name=remove>
+	<bold>Remove an overlay</bold><br/>
+	To remove an overlay, first press this button. After that, click on the overlay
+	in the above display.
+</xchoicebutton>
+
+<xbr/>
+
+<p>
+	Initially, a surface is a solid color or texture. Sometimes you want a surface
+	to have more than one color/texture. For example: You might want the floor in the
+	kitchen to be tiled while the floor in the adjacent hallway is hardwood. Or, the
+	lower half of a wall might be painted a different color.
+</p>
+
+<p>
+	The different colors/textures on a surface are called "overlays". Each overlay
+	has a color (or texture) that can be different from the main color/texture on
+	the surface, and a shape. The color is changed by using the paint-brush tool
+	and clicking on the surface. The shape is modified by editing the overlay (click
+	on the overlay in the display above) or by visiting the "Which control points
+	are displayed" dialog, specifying that the control points for the overlay
+	should be displayed, and then dragging them into whatever position you wish. 
+</p>
+
+<p>
+	To add an overlay, pressthe "Add and overlay" buttons above
+	and follow the instructions from there.
+</p>
+

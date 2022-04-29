@@ -1,0 +1,49 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Grass, fast-drawing"/>
+
+<xPageTitle>
+	Grass, fast-drawing
+</xPageTitle>
+
+<p>
+	<xSN/> provides a fast-drawing "grass" object that draws a grass tussock
+	using two polygons and some partially-transparent textures. It can also be used to
+	quickly draw trees in the distance.
+</p>
+
+<p>
+	To draw a grass object:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the grass tussock that best meets your
+		needs. You can find them in "Grasses" under "Plants".
+	</li>
+	<li>
+		<bold>Add</bold> it to your landscape by clicking where you want it.
+	</li>
+	<li>
+		If you don't like the grass' texture, set it using
+		the <xButtonObjPaint/> tool. Make sure to use one of the grass textures.
+	</li>
+	<li>
+		Move the grass to the approriate placing using the <xButtonMoveNSEWUD/> tool.
+	</li>
+	<li>
+		Reshape the grass using the <xButtonObjControlNSEWUD/> tool to move its control point around.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:630>Showing the ground editor</a></li>
+	<li><a href=r:643>Theory behind trees</a></li>
+</xul>

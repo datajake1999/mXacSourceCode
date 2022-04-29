@@ -1,0 +1,161 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Future plans"/>
+
+<xPageTitle>
+	Future plans
+</xPageTitle>
+
+<p>
+	This is a list of planned features. Of course, the list will change.
+	If there's a feature you need that's not listed or is pushed off to late
+	in the schedule for you, please tell me. I may be able to do something about it.
+	See <a href=r:241>Bugs and features requests</a> for more information.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Pre-release 15</xtrheader>
+	<tr><td><xul>
+		<li>Not yet decided</li>
+	</xul></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>1.0 (Sometime in 2005)</xtrheader>
+	<tr><td><xul>
+		<li>Not yet decided</li>
+	</xul></td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Post 1.0</xtrheader>
+	<tr><td>
+	<p>
+		Below are a number of ideas that I have for post 1.0 features. Exactly which ones
+		I do depends upon user feedback. So, if there is any feature you need
+		them mail me at <xMyEmail/>. Also, if a feature you need isn't listed then
+		mail me those ideas too. I may not get to the feature for awhile (some of them take
+		months to years), but the votes will help me prioritize.
+	</p>
+	<xul>
+		<li>
+			<bold>APIs</bold> - I could place <xSN/> into a DLL and export functionality to
+			other C++ programmers who wish to incorporate <xSN/>'s 3D into their applications.
+			For example: <xSN/>'s 3D might be useful to virtual-reality adventure games.
+		</li>
+		
+		<li><bold>Animation</bold></li>
+		<ul>
+		<li>
+			<bold>Poses</bold>
+		</li>
+		<li>
+			<bold>Walk cycles</bold> - Make it easier to animate walking characters.
+		</li>
+		</ul>
+		
+		<li><bold>Objects</bold></li>
+		<ul>
+		<li>
+			<bold>Boolean operations on polygon meshes</bold>
+		</li>
+		<li>
+			<bold>Building blocks, medieval</bold> - The current building blocks more-or-less
+			assume that they are constructed with wood or steel framing. Medieval stone
+			construction techniques produce completely different structures because of the
+			overriding need to use arches and domes to distribute the immense weight
+			of the stone. Alternatively, I could do <bold>futuristic</bold> building blocks,
+			although I'm not sure what that would entail.
+		</li>
+		<li>
+			<bold>Caves and dungeons</bold> - Perfect for dungeon masters.
+		</li>
+		<li>
+			<bold>Deformers</bold> - Other than skeletons.
+		</li>
+		<li>
+			<bold>Export to (and import from) other 3D applications</bold> - You would be able
+			to save your <xSN/> house into a file format that other 3D programs could
+			load it in.
+		</li>
+		<li>
+			<bold>Metaballs</bold>
+		</li>
+		<li>
+			<bold>People</bold> - It is currently possible to create human characters using
+			the polygon mesh object. However, this is a lot of work. It would be easier
+			if you could dial-a-person and automatically create a human character from modifying
+			a few sliders.
+		</li>
+		<li>
+			<bold>Rocks, rivers, and waterfalls</bold> - For spectacular natural scenery.
+		</li>
+		<li>
+			<bold>Sweeps and extrusions, improved</bold> - Although already supported
+			to a limited extent, more could be done.
+		</li>
+		<li>
+			<bold>3D text</bold> - AKA: Flying logos
+		</li>
+		</ul>
+		
+		<li><bold>Rendering</bold></li>
+		<ul>
+		<li>
+			<bold>Hardware acceleration for walktrhoughs</bold> - At present I
+			don't use 3D accelerator cards because their quality is unpredictable.
+			However, the cards might be useful for accelerating real-time client walkthroughs.
+			The drawing speed will be 4x-8x as fast, but the quality may suffer.
+		</li>
+		<li>
+			<bold>Radiosity and beyond</bold> - These techniques make the
+			image look more realistic. Radiosity produces soft shadows and more
+			realistic diffusion. Other effects include out-of-focus blurring.
+			The only problem is the amount of time it takes to draw...
+		</li>
+		</ul>
+
+		<li><bold>Simulations</bold></li>
+		<ul>
+		<li>
+			<bold>Clothing</bold> - This is the only way to make clothing realistic.
+			It is very slow though.
+		</li>
+		<li>
+			<bold>Particles</bold> - Particle simulations are used to draw accurate
+			fire and smoke.
+		</li>
+		<li>
+			<bold>Physically based modelling</bold> - This simulation is useful for simulating
+			realstic collisions between objects, balls bouncing, etc.
+		</li>
+		</ul>
+
+		<li><bold>Textures</bold></li>
+		<ul>
+		<li>
+			<bold>Combined and layered textures</bold> - Instead of just applying one texture
+			to a surface, you can combine and overlay several textures.
+		</li>
+		<li>
+			<bold>Animated textures</bold> - The ability to animate a texture.
+		</li>
+		</ul>
+
+		<li>
+			<bold>Video tutorial</bold> - A number of applications include on-line video
+			tutorials of how to use their product. Others send a CD-ROM out with the videos. Personally,
+			I have found that watching a video tutorial works better than reading
+			a text one. The catch: Due to the 56 KBaud transfer rate and the fact that I
+			have to pay my ISP per megabyte of download, any tutorials on the Internet will
+			be short and of very low resolution. Those on CD-ROM would be longer, but I'd
+			have to physically mail them out... meaning I'd have to charge for it or
+			include the cost in the software purchase price.
+		</li>
+		<li>
+			<bold>Idea not listed here?</bold> - I'm open to suggestions.
+		</li>
+	</xul></td></tr>
+</xtablecenter>
+

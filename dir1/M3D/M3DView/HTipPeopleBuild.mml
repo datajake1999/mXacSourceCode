@@ -1,0 +1,53 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for people thinking about building a house"/>
+
+<xPageTitle>
+	Tips for people thinking about building a house
+</xPageTitle>
+
+<p>
+	I first thought of writing <xLN/> because I wanted to build a house
+	but I found that existing packages couldn't produce the designs I wanted.
+	Some tips:
+</p>
+
+<xul>
+	<li>
+		Experiment with a combination of building blocks first, before worrying about the
+		details.
+	</li>
+	<li>
+		Topography, major trees, and the neighbors' houses will signficantly affect
+		your design. I suggest you spend an hour getting the land topography, major
+		trees, and neighbors' houses into file and use that as a "template" - start
+		all your experiments by duplicating the template file and editing that.
+	</li>
+	<li>
+		To simulate your neighbors' houses, just build them using building blocks.
+	</li>
+	<li>
+		When you do decide to build, provide your architect or builder with a copy
+		of <xLN/> so they can see your design.
+	</li>
+</xul>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Is the template library large enough or do you
+	need more? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Is the door, window, fixture, and furnishings
+	library large enough or do you
+	need more? (I'd rather produce a wide variety of models (chairs, tables, swingsets)
+	and lots of models of a specific type of item (such as 50 styles of chairs).)
+	Email me at <xMyEmail/>.
+</xDefinition>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> How useful would it be to have more sample houses?
+	Email me at <xMyEmail/>.
+</xDefinition>
+

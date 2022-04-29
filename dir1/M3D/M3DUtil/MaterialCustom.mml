@@ -1,0 +1,146 @@
+<?Include resource=500?>
+<PageInfo index=false title="Custom material"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<xtrheader>Specularity (Glossiness)</xtrheader>
+		<tr>
+			<td width=30%>Diffuse</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=specexponent>
+				<xhoverhelp>If slid all the way to the right the specularity is very diffuse. Towards
+				the left causes it to become more point-like.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr>
+			<td width=30%>Intensity</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=specreflect>
+				<xhoverhelp>The further to the right, the better the brighter the glossy portions of the
+				surface.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr>
+			<td width=30%>Plastic</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=specplastic>
+				<xhoverhelp>As the slider is moved to the right its glossiness will look like plastic.
+				Towards the left will be more natural looking.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+	</table>
+	
+</td>
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<xtrheader>Transparency</xtrheader>
+		<tr>
+			<td width=30%>Transparency</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=transparency>
+				<xhoverhelp>Moving this slider to the right makes the material more transparent.
+				Transparent objects (even those slightly transparent) do not cause shadows in "Shadows" quality,
+				but they do in "Ray tracing".</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr>
+			<td width=30%>Angle</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=transangle>
+				<xhoverhelp>Some transparent materials (like fly screen) become opaque when looked
+				at side on, while others (like glass) do not. Moving the slider to the right will
+				cause transparency to decrease when looked at side-on.
+				Transparency angle only works in the "Shadows" and "Ray tracing" quality.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr>
+			<td width=30%>Light bending</td>
+			<td width=70%><bold><combobox width=100% cbheight=150 name=indexofrefract>
+				<xhoverhelp>Light bends when travelling through a thick transparent object.
+				Use this to control the amount of bend.
+				Light bending only works in "Ray tracing".</xhoverhelp>
+				<elem name=100>None</elem>
+				<elem name=102>Smoke</elem>
+				<elem name=130>Ice</elem>
+				<elem name=133>Water</elem>
+				<elem name=144>Glass</elem>
+				<elem name=153>Salt crystal</elem>
+				<elem name=155>Quartz</elem>
+				<elem name=177>Ruby</elem>
+				<elem name=200>Crystal</elem>
+				<elem name=242>Diamond</elem>
+			</combobox></bold></td>
+		</tr>
+	</table>
+	
+</td>
+</tr><tr>
+
+
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<xtrheader>Reflection</xtrheader>
+		<tr>
+			<td width=30%>Amount</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=reflectamount>
+				<xhoverhelp>Sliding to the right increases the reflectivity of the surface.
+				The coloration of the reflection depends upon the "Plastic" setting.
+				Reflection only works in "Ray tracing" quality.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr>
+			<td width=30%>Angle</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=reflectangle>
+				<xhoverhelp>Glass only reflects when you're looking at it from an angle, while mirrors
+				reflect in any direction. The further to the right, the more glass-like the reflection,
+				while left is mirror-like.
+				Reflection only works in "Ray tracing" quality.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+	</table>
+	
+</td>
+
+
+<td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<xtrheader>Miscellaneous</xtrheader>
+		<tr>
+			<td width=30%>Translucent</td>
+			<td width=70%><scrollbar orient=horz width=100% page=0 min=0 max=65535 name=translucent>
+				<xhoverhelp>Moving the slider to the right makes the surface more translucent.
+				Translucent objects only work in "Shadows" and "Ray tracing" mode.</xhoverhelp>
+			</scrollbar></td>
+		</tr>
+		<tr><td>
+			<button checkbox=true style=x name=noshadows>
+				<bold>Don't cast shadows</bold>
+				<xhoverhelp>
+					If checked, the the surface will not cast any shadows.
+				</xhoverhelp>
+			</button>
+		</td></tr>
+	</table>
+	
+</td>
+
+</tr>
+</table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+<p align=center><italic><small>
+	(Hover your mouse cursor over a control to learn more about what it does.
+	Some of these settings will only be visible using the "Shadows" and/or "Ray tracing" image quality.)
+</small></italic></p>
+
+</font>

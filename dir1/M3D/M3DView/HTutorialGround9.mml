@@ -1,0 +1,16 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Finished with the ground"/>
+
+<xPageTitle>
+	Tutorial - Finished with the ground
+</xPageTitle>
+
+<p>
+	That's the end of the ground object tutorial.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+

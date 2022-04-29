@@ -1,0 +1,79 @@
+<?Include resource=500?>
+<PageInfo index=false title="3D Outside the Box"/>
+
+<colorblend posn=background color=#000000/>
+<font color=#ffffff><table width=100% height=75% valign=center border=0 innerlines=0>
+	<tr><td>
+	
+<table width=100% border=0 innerlines=0>
+<tr><td width=60% valign=center>
+
+<p align=center><table width=90% bordercolor=#c0c0c0>
+<tr><td>
+<small>
+<xChoiceButton accel=O defcontrol=true name=open href=open>
+	<bold><u>O</u>pen a file</bold><br/>
+	Open one of the files that you saved.
+</xChoiceButton>
+
+<xChoiceButton href=new name=new accel=N>
+	<bold><u>N</u>ew 3D file</bold><br/>
+	Start with a blank 3D file.
+</xChoiceButton>
+
+<xChoiceButton href=newwave name=newwave>
+	<bold>New audio file</bold><br/>
+	Start with a blank audio file.
+</xChoiceButton>
+
+<xChoiceButton href=tutorial>
+	<bold>Tutorial</bold><br/>
+	Run the tutorial. Strongly recommended for new users.
+</xChoiceButton>
+
+<xChoiceButton href=sample name=sample>
+	<bold>Open a sample file</bold><br/>
+	<xSN/> is installed with several sample files that demonstrate its features.
+</xChoiceButton>
+
+<xChoiceButton href=nlp>
+	<bold>NLP Editor</bold><br/>
+	Train speech recognition, correct a pronunciation, or create a text-to-speech voice.
+</xChoiceButton>
+</small>
+</td><td>
+	<ol>
+		<<<$MRULIST>>>
+	</ol>
+</td></tr>
+<tr><td lrmargin=24 tbmargin=24>
+	<<<$QUOTE>>>
+</td></tr>
+</table></p>
+
+</td>
+
+<td valign=center width=35%>
+
+<p align=center>
+	<image jpgresource=300 href="http://www.mxac.com.au/m3d"/>
+	<p/>
+	<font color=#c0c0c0>
+		<italic>"Software for the human endeavor"</italic>
+	</font>
+</p>
+
+<p align=center><small><small>
+	Copyright (c) 2002-2009 by Mike Rozak (<font face=symbol>m</font>Xac). All rights reseved.<br/>
+	JPEG decompression is supplied by the Independent JPEG Group.<br/>
+	Pronunciation dictionary from Carnegie Mellon University.<br/>
+</small></small></p>
+
+</td>
+<td width=5%/>
+</tr>
+
+</table>
+
+</td></tr>
+</table></font>

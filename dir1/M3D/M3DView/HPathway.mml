@@ -1,0 +1,58 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Pathways, roads, and planting beds"/>
+
+<xPageTitle>
+	Pathways, roads, and planting beds
+</xPageTitle>
+
+<p>
+	The "pathway" object lets you create sidewalks, paths, roads, driveways,
+	and planting beds. It creates a long, raised strip of material that follows
+	a path.
+</p>
+
+<p>
+	To add a path to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined path that is closest to
+		your needs. Look under "Pathways and roads" in "Outdoors",
+		or "Planting beds" in "Plants".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house. Most pathway objects will allow you to click
+		at the start of the path, drag to where the path ends, creating a straight
+		path in-between.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool move the pathway's control points
+		around. You can change the direction that the path takes, it's width, or
+		even it's banking angle.
+	</li>
+	<li>
+		If you don't have enough control points to curve the path the way you wish,
+		use the <xButtonObjDialog/> tool and click on the path. In the "Pathway settings"
+		dialog box, press <bold>"Modify path shape"</bold> and add or remove control
+		points, or change the curvature of the path.
+	</li>
+	<li>
+		In the "Pathway settings" dialog you may also wish to control how rounded the
+		path's profile is (whether it's rectangular like a sidewalk, or curved down at
+		either end like a road or gravel pathway). Likewise, you can control how
+		rounded the path is at the start and beginning.
+	</li>
+	<li>
+		If you click on the pathway with the <xButtonObjIntelAdjust/> tool the path's
+		elevation will automatically be adjusted to the ground's countour. Depending
+		upon a setting in "Pathway settings", the pathway will also bank with the
+		ground contour.
+	</li>
+</ol>
+
+

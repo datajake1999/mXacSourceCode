@@ -1,0 +1,90 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Building block settings"/>
+
+<xSectionTitle>Surfaces</xSectionTitle>
+
+<xChoiceButton href=ceiling>
+	<bold>Ceiling</bold><br/>
+	Specify the thickness of the ceiling on the top level of the structure, and if it's
+	a cathedral ceiling or not.
+</xChoiceButton>
+
+<xChoiceButton href=floors>
+	<bold>Floors</bold><br/>
+	Adjust settings for the floors, including the thickness of the floors.
+</xChoiceButton>
+
+<xChoiceButton href=roof>
+	<bold>Roof</bold><br/>
+	Change the angle(s) and overhang(s) of the roof. You can also adjust the thickness
+	of the roof.
+</xChoiceButton>
+
+<xChoiceButton href=walls>
+	<bold>Walls</bold><br/>
+	Adjust settings for the walls, including the thickness of the walls.
+</xChoiceButton>
+
+<xChoiceButton href=overside name=overside>
+	<bold>Modify overlays</bold><br/>
+	Modify the overlays (regions of the surface with different coloration or textures)
+	on the side you clicked on.
+</xChoiceButton>
+
+<xChoiceButton href=framing name=framing>
+	<bold>Framing (for the surface you clicked on)</bold><br/>
+	Modify the framing in the surface you clicked on.
+</xChoiceButton>
+
+<xSectionTitle>Verandas</xSectionTitle>
+
+<xChoiceButton href=verandah>
+	<bold>Veranda</bold><br/>
+	Adjust settings for the veranda, which can be set up to run outside the walls but
+	under the roofline.
+</xChoiceButton>
+
+<xChoiceButton href=balappear name=balappear>
+	<bold>Balustrade appearance</bold><br/>
+	Change the style and appearance of the balustrade you clicked on.
+</xChoiceButton>
+
+<xChoiceButton href=balopenings name=balopenings>
+	<bold>Balustrade openings</bold><br/>
+	Add or remove openings in the balustrade you clicked on.
+</xChoiceButton>
+
+<xSectionTitle>Foundation</xSectionTitle>
+<xChoiceButton href=foundation>
+	<bold>Foundation</bold><br/>
+	Tell <xSN/> what type of foundation the building block is using and specify
+	other information about the foundation.
+</xChoiceButton>
+
+<xChoiceButton href=piersappear name=piersappear>
+	<bold>Pier appearance</bold><br/>
+	Change the style and appearance of the piers you clicked on. (This only works
+	if your foundation uses piers.)
+</xChoiceButton>
+
+<xChoiceButton href=piersopenings name=piersopenings>
+	<bold>Pier openings</bold><br/>
+	Add or remove openings in the piers you clicked on. (This only works if your
+	foundation uses piers.)
+</xChoiceButton>
+
+<xSectionTitle>Miscellaneous settings</xSectionTitle>
+
+<xChoiceButton href=intel>
+	<bold>Intelligent adjust</bold><br/>
+	Change the "Intelligent adjust" behavior.
+</xChoiceButton>
+
+<xChoiceButton href=levels>
+	<bold>Levels</bold><br/>
+	Specify the elevation of the levels (where one story begins and another ends).
+</xChoiceButton>
+
+
+

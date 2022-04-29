@@ -1,0 +1,7 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Polygon mesh (phase II) settings"/>
+
+<p>
+	To modify this polygon mesh, use the <xButtonObjShowEditor/> tool.
+</p>

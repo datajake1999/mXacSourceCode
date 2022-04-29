@@ -1,0 +1,19 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Selection settings"/>
+
+<xChoiceButton href=color>
+	<bold>Color</bold><br/>
+	Change the color and other visuals used to indicate a selection.
+</xChoiceButton>
+
+<xChoiceButton href=region>
+	<bold>Region selection options</bold><br/>
+	Control whether or not objects can be selected if they're partially outside the
+	selection region or if they're not visible.
+</xChoiceButton>
+
+<xChoiceButton href=manual enabled=false>
+	<bold>Select by critera</bold><br/>
+	Use this to select all the walls, or all the electrical components, etc.
+</xChoiceButton>

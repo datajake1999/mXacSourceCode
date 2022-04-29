@@ -1,0 +1,129 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Print the image"/>
+
+<p>
+	This page lets you print the image you're looking at.
+	Once you have selected your settings press the "Print" button.
+</p>
+
+<xChoiceButton name=print>
+	<bold>Print</bold><br/>
+	Prints the image created using the following settings.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr><td><table width=100% innerlines=0 border=0>
+	<tr>
+		<td>
+			<button radiobutton=true style=check group=landscape,portrait name=landscape>
+				<bold>Landscape</bold>
+			</button><br/>
+			<p align=center>
+				<colorblend color=#ffffff width=60% height=40%/>
+			</p>
+		</td>
+		<td>
+			<button radiobutton=true style=check group=landscape,portrait name=portrait>
+				<bold>Portrait</bold>
+			</button><br/>
+			<p align=center>
+				<colorblend color=#ffffff width=40% height=60%/>
+			</p>
+		</td>
+	</tr>
+	</table></td></tr>
+	<tr>
+		<td>
+			<bold>Left/right margin</bold>
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=lrmargin/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top/bottom margin</bold>
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=tbmargin/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Image quality</bold>
+		</td>
+		<td><xComboImageQuality width=100% name=quality/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Image detail</bold> - The approximate resolution to use. (The exact
+			resolution used depends upon the paper shape and margins.)
+		</td>
+		<td><bold><combobox cbheight=150 width=100% name=detail>
+			<elem name=0><bold>Low detail</bold> (fastest)</elem>
+			<elem name=1><bold>Medium detail</bold></elem>
+			<elem name=2><bold>High detail</bold> (slowest)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Anti-aliasing</bold> - The better the anti-aliasing the fewer
+			"jaggies" you'll see on the image.
+		</td>
+		<td>
+			<bold><combobox width=100% cbheight=150 name=anti>
+				<elem name=1><bold>None</bold> (fastest)</elem>
+				<elem name=2><bold>2x2</bold> (moderate)</elem>
+				<elem name=3><bold>3x3</bold> (slow)</elem>
+				<elem name=4><bold>4x4</bold> (slowest)</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Printing to scale</xtrheader>
+	<tr><td>
+		If you using the <bold>flat (isometric)</bold> view you can "print to scale", which will
+		zoom in or out such that the printout is to the specified scale, such as 1 cm = 1m,
+		or 1" = 1'. You can use this to print out floor plans to scale.
+		<p/>
+		<xChoiceButton style=x checkbox=true name=printtoscale>
+			<bold>Print to scale</bold><br/>
+			Check this to use the following scaling:
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Size on paper</bold> - Distances will be shrunk from "Size in model" (below)
+			to this size on the paper.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=onpaper/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size in model</bold> - Distance in model that will be converted to a
+			different size when printed on paper.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=inmodel/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeeffect>
+				<bold>Change effect</bold><br/>
+				Press this to change the effect used, such as fog, outlines, or make it
+				look like a painting.
+			</xChoiceButton>
+		</td>
+		<td align=center>
+			<image border=2 name=effectbit hbitmap=<<<EFFECTBITMAP>>>/>
+		</td>
+	</tr>
+</xtablecenter>

@@ -1,0 +1,95 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Edit a rule"/>
+
+<p>
+	A grammar rule controls acceptable word order within a sentence. For example, the "Sentence"
+	rule would allow "SubjectClause + VerbClause", "SubjectClause + VerbClause + ObjectClause", etc.
+	"VerbClause" might allow "verb" or "adverb + verb", etc.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Information</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - Type in a name for your rule, like "SubjectClause".
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=name/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Description</bold> - Type in a short description for your rule,
+			for your own references.
+		</td>
+		<td><bold><edit width=100% maxchars=256 multiline=true name=desc/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Score adjusment</bold> - If this rule is used, the score is adjusted
+			up/down by this much. The parse with the highest score wins. Leave this
+			as "0" for most rules.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=score/></bold></td>
+	</tr>
+</xtablecenter>
+
+<!xComboBoxElem>
+	<combobox width=100% cbheight=250 macroattribute=1>
+		<elem name=-1><italic>Not used</italic></elem>
+		<elem name=1>POS: <bold>Noun</bold></elem>
+		<elem name=2>POS: <bold>Pronoun</bold></elem>
+		<elem name=3>POS: <bold>Adjective</bold></elem>
+		<elem name=4>POS: <bold>Preposition</bold></elem>
+		<elem name=5>POS: <bold>Article</bold></elem>
+		<elem name=6>POS: <bold>Verb</bold></elem>
+		<elem name=7>POS: <bold>Adverb</bold></elem>
+		<elem name=8>POS: <bold>Auxiliary verb</bold></elem>
+		<elem name=9>POS: <bold>Conjunction</bold></elem>
+		<elem name=10>POS: <bold>Interjection</bold></elem>
+		<elem name=11>POS: <bold>Punctuation</bold></elem>
+		<<<$EXTRAELEM>>>
+	</combobox>
+</xComboBoxElem>
+
+<!xComboBoxRepeat>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>used only once</elem>
+		<elem name=1>used 1+ times</elem>
+		<elem name=2>used 0 or 1 times</elem>
+		<elem name=3>used 0+ times</elem>
+	</combobox></bold>
+</xComboBoxRepeat>
+
+<xtablecenter width=100%>
+	<xtrheader>Rule cases</xtrheader>
+	<tr><td>
+		Below is a list box showing all the word combinations that match the rule. Use the buttons to add or remove
+		possible cases.
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% sort=false vscroll=groupsscroll name=groups/>
+			<scrollbar orient=vert height=20% name=groupsscroll/>
+		</p>
+		<xChoiceButton name=groupadd>
+			<bold>Add a new case</bold><br/>
+			Select the word matches below and then press this button:
+		</xChoiceButton>
+		<p align=right>
+			<bold>1st word:</bold> <xComboBoxElem width=50% cursel=-1 name=caseword0/><xComboBoxRepeat width=25% name=caserepeat0/><br/>
+			<bold>2nd word:</bold> <xComboBoxElem width=50% cursel=-1 name=caseword1/><xComboBoxRepeat width=25% name=caserepeat1/><br/>
+			<bold>3rd word:</bold> <xComboBoxElem width=50% cursel=-1 name=caseword2/><xComboBoxRepeat width=25% name=caserepeat2/><br/>
+			<bold>4th word:</bold> <xComboBoxElem width=50% cursel=-1 name=caseword3/><xComboBoxRepeat width=25% name=caserepeat3/><br/>
+			<bold>5th word:</bold> <xComboBoxElem width=50% cursel=-1 name=caseword4/><xComboBoxRepeat width=25% name=caserepeat4/>
+		</p>
+		<xChoiceButton name=groupremove>
+			<bold>Remove the selected case</bold><br/>
+			Removes the selected case from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=deletegroup>
+	<bold>Delete this rule</bold><br/>
+	Press this to delete the entire rule with all its cases.
+</xChoiceButton>
+

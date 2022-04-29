@@ -1,0 +1,132 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Modifying a texture"/>
+
+<xPageTitle>
+	Modifying a texture
+</xPageTitle>
+
+<xsectiontitle>Some theory</xsectiontitle>
+
+<p>
+	<xSN/> has two types of textures:
+</p>
+
+<xul>
+	<li>
+		<bold>Images of real surfaces</bold> - These textures are created by taking
+		a digital photograph of a real surface (such as brick) and cutting out a
+		section of the photograph so that the cutout forms a repeating pattern.
+		If you want this sort of texture then see
+		the <a href=r:404>Creating a new texture</a> topic.
+	</li>
+	<li>
+		<bold>Procedural texture</bold> - These textures are created by a small
+		program that generates a reasonably good immitation of the real texture.
+		If you want to modify a procedural texture then read further.
+	</li>
+</xul>
+
+<p>
+	<bold>Procedural textures</bold> are textures that are created by a small
+	computer program that simlates the type of surface it's creating. For example:
+	To synthesize "tiles" procedurally, <xSN/> creates a rectangle (which is the usual
+	shape for most tiles) and elevated it just above the grout level. It then adds
+	some bumps to the rectangle because tiles are not perfectly flat, and colors the
+	tile.
+</p>
+
+<p>
+	<xSN/> primarily uses procedural textures because:
+</p>
+
+<xul>
+	<li>
+		They make for a much smaller download. If I included images of real surfaces
+		my download would be 50+ megabytes.
+	</li>
+	<li>
+		If you find a procedural texture that's close to what you want, you can modify
+		it, such as making it larger or changing the bumpiness. If I were to ship
+		images you wouldn't be able to do this.
+	</li>
+	<li>
+		Because the computer knows the elevation of the material, it uses this when
+		drawing to produce more realistic results. For example: Procedural bricks, when
+		drawn using the "Shadows" quality, will look much better than a photograph
+		of bricks. The reason is that the procedural bricks take into account the fact that
+		the bricks stick out of the mortar, and have lots of bumps. Using this information
+		when drawing produces a more realistic result.
+	</li>
+</xul>
+
+<p>
+	However, there are some downsides:
+</p>
+
+<xul>
+	<li>
+		Procedural textures will never look completely real.
+	</li>
+	<li>
+		Procedural textures can only be used to generate a handful of surfaces - such
+		as bricks, hardwood floors, striped fabric, etc. There are many textures (such
+		as floral wallpaper) and variations of textures (such as odd-shaped tiles) that
+		they can't do. If you can't make a procedural texture do what you
+		want to do then you'll need to use an image.
+	</li>
+</xul>
+
+<xsectiontitle>Modify an existing texture</xsectiontitle>
+
+<p>
+	To modify an existing texture:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select <bold>"Textures"</bold> in the menu that appears.
+	</li>
+	<li>
+		In the "Texture library" dialog box that appears, select
+		the <bold>"Major category"</bold> and <bold>"Minor category"</bold> that
+		best classifies your texture.
+	</li>
+	<li>
+		Find the texture to modify
+		and <bold>select</bold> it from the list.
+	</li>
+	<li>
+		Press the <bold>"Modify the selected texture"</bold> button.
+	</li>
+	<p>
+		The page will change so you can modify the texture. See below
+	</p>
+</ol>
+
+<xsectiontitle>The modification pages</xsectiontitle>
+
+<p>
+	When you modify a texture, the controls on the page will vary from texture to texture.
+	If I were to document them, I'd have to write about a hundred pages of documentation
+	which you would then have to read. Seeing as very few people would bother to read
+	so much, here's much suggestion: <bold>Change a value and see what happens.</bold> If
+	you don't like it you can always change the value back.
+</p>
+
+<p>
+	<bold>IMPORTANT:</bold> Because some textures take a long time to calculate, the image
+	of the texture (at the top of the page) is <bold>not</bold> automatically updated
+	when you change a value. To see what the texture looks like after changing the
+	setting, <bold>click on the image</bold>.
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:404>Creating a new texture</a></li>
+	<li><a href=r:406>Materials</a></li>
+</xul>

@@ -1,0 +1,23 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Rotating in fixed amounts"/>
+
+<xPageTitle>
+	Rotating in fixed amounts
+</xPageTitle>
+
+<p>
+	Most of the camera rotation commands only rotate by fixed amounts (initially
+	10 degree increments). To change the angles that the camera rotates:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGridSelect/> button.
+	</li>
+	<li>
+		A popup menu wil appear.
+		Select the angle (at the bottom of the menu) that you wish to use.
+	</li>
+</ol>
+

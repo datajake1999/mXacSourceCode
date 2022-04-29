@@ -1,0 +1,42 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Move polygon-mesh vertex"/>
+
+<p>
+	Type in the coordinates for the vertex. If you have symmetry turned on then
+	some fields may be disabled because changing them would break the symmetry.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Vertex location</xtrheader>
+	<tr>
+		<td>
+			<bold>Right/left</bold> - Position the object's control point relative to
+			the center of the mesh. Use negative numbers for left.
+		</td>
+		<td valign=center>
+			<bold><edit maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Back/front</bold> - Position the object's control point relative to
+			the center of the mesh. Use negative numbers for front.
+		</td>
+		<td valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top/bottom</bold> - Position the object's control point relative to
+			the center of the mesh. Use negative numbers for down.
+		</td>
+		<td valign=center>
+			<bold><edit maxchars=32 width=100% name=transz/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>

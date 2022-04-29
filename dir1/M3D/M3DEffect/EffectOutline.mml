@@ -1,0 +1,118 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Outlines"/>
+
+<p>
+	<xSN/> outlines objects for you so they're easier to distinguish from
+	other objects.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Draw lines around...</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x radiobutton=true group=off,out1,out2,out3 name=off>
+			<bold>Off</bold><br/>
+			Press this to turn outlining off.
+		</xChoiceButton>
+
+		<xChoiceButton style=x radiobutton=true group=off,out1,out2,out3 name=out1>
+			<bold>Objects only</bold><br/>
+			Draw an outline around objects only. Don't draw it around sub-objects (like
+			windows within walls) or to clarify corners.
+		</xChoiceButton>
+
+		<xChoiceButton style=x radiobutton=true group=off,out1,out2,out3 name=out2>
+			<bold>Objects and sub-objects</bold><br/>
+			Outlines are drawn around objects and sub-objects (like windows within
+			walls). Lines are not drawn to clarify corners.
+		</xChoiceButton>
+
+		<xChoiceButton style=x radiobutton=true group=off,out1,out2,out3 name=out3>
+			<bold>Objects, sub-objects, and corners</bold><br/>
+			Outline objects, sub-objects (like windows within walls), and corners.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Line thickness</xtrheader>
+	<tr><td>
+		Line thickness only affects the final image.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Object lines</bold> - Thickness of lines around objects, as a percent
+			of the width of the image. (Ex: Use "1" for a line that's 1% of the width of
+			the image.)
+		</td>
+		<td><bold><edit width=100% name=penwidth0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sub-object lines</bold> - As above
+		</td>
+		<td><bold><edit width=100% name=penwidth1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Corner lines</bold> - As above
+		</td>
+		<td><bold><edit width=100% name=penwidth2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variability</bold> - Moving this slider to the right causes
+			the line thickness to vary.
+		</td>
+		<td><scrollbar orient=horz min=0 max=200 name=noiseamount/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Detail</bold> - This affects how much detail there is to the
+			line-width variability. The further to the right the more detail
+			there is.
+		</td>
+		<td><scrollbar orient=horz min=5 max=200 name=noisedetail/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Color</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolor>
+				<bold>Outline color</bold><br/>
+				The color used to outline objects.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=color/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeselcolor>
+				<bold>Selection color</bold><br/>
+				Objects that are selected are outlined in this color.
+				Selection lines are not drawn for the final image.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=selcolor/>
+		</td>
+	</tr>
+</xtablecenter>

@@ -1,0 +1,83 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - doors and windows"/>
+
+<xPageTitle>
+	Tutorial - doors and windows
+</xPageTitle>
+
+<xSectionTitle>Embedded objects</xSectionTitle>
+
+<p>
+	Doors, windows, and a number of other objects are all categorized
+	as <bold>embedded objects</bold> because they are built into other
+	objects (like walls, roofs, floors). Embedded objects are a little
+	different than normal objects because when you create them
+	using <xButtonObjNew/> and click on an object that contain them (such
+	as a wall), the object will be embedded and can't be removed from
+	the object you embed it in (except by cutting or deleting it out.)
+</p>
+
+<xSectionTitle>Creating and embedding a door or window</xSectionTitle>
+
+<p>
+	To create and embed a door, doorway, or window into a wall, roof, floor, etc.:
+</p>
+
+<ol>
+	<li>
+		Move the camera so it's looking at the surface you want to embed into.
+	</li>
+	<li>
+		Click on <xButtonObjNew/> and select "Doors" or "Windows". You can
+		also choose "Openings" to insert a doorway.
+	</li>
+	<li>
+		Browse through the doors or windows and <bold>click on</bold> the one
+		you want.
+	</li>
+	<li>
+		Once you've selected the object, and the cursor has changed to a box with a 
+		start on it, click in the wall (or whatever) approximately where you want to place
+		the object.
+	</li>
+	<li>
+		The object should appear embedded in the wall. It will be selected.
+	</li>
+	<li>
+		Use the <xButtonMoveEmbed/> tool to move the object up or down within the
+		object. Just click on the object, and holding the mouse down, move it around.
+		You'll get the best results if the camera is looking directly at the surface (instead
+		of at an angle) so you may need to move the camera.
+	</li>
+	<li>
+		You can rotate the embedded object using <xButtonMoveRotY/>. It functions the same
+		as the other rotation commands. Windows and doors tradionally aren't rotated, but
+		sometimes there's a need.
+	</li>
+	<li>
+		You may want to resize the object by dragging its control
+		points with the <xButtonObjControlNSEW/> and <xButtonObjControlUD/> tools.
+	</li>
+	<li>
+		If you go into the door's (or window's) <xButtonObjDialog/> then you'll
+		find more settings for the appearance or the door/window than you'll
+		know what to do with.
+	</li>
+</ol>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:407><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:524>Attributes</a></li>
+	<li><a href=r:337>Customized doors and windows</a></li>
+	<li><a href=r:347>Door and window size</a></li>
+	<li><a href=r:348>Opening and closing doors and windows</a></li>
+</xul>

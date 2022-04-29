@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh objects - merging"/>
+
+<xPageTitle>
+	Polygon mesh objects - merging
+</xPageTitle>
+
+<p>
+	You can merge two polygon mesh objects together, just like you can attach two pieces
+	of clay together. Merging is useful when creating more complex polygon meshes
+	such as models of people. For example: To create a hand, make merge six polygon
+	mesh objects togehter, one for the palm and each of the fingers.
+</p>
+
+<p>
+	To merge two polygon mesh objects together:
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonSelIndividual/> tool select all of the objects you wish to merge
+		together except one. The un-selected one should be the "main" object, whatever that
+		might be. (In the case of a person this would be the "torso" and the selected objects
+		would be the head, arms, and leg meshes.)
+	</li>
+	<li>
+		Press the <xButtonObjMerge/> tool and all of the objects will be merged together.
+	</li>
+	<li>
+		Sometimes the merge will "go wrong" and not properly detect where the two obects
+		intersect. (In which case there will be a gap around their intersection point, or
+		an extreme twisting.) To fix this, use <xButtonUndo/>, add some more detail around
+		the contentious intersection using
+		the <xButtonObjDialog/> tool, and re-merge.
+	</li>
+	<li>
+		If the merge edge seems to hard and you want the intersection of the two objects
+		smoothed together more, then use the <xButtonUndo/> too. Go to the main polygon
+		mesh's object dialog using the <xButtonObjDialog/> tool. At the bottom of the Phase II
+		dialog, you'll find a checkbox for <bold>"Do extra smoothing when merge."</bold> Check
+		that and re-merge.
+	</li>
+	<li>
+		Merge can automatically merge in mirror versions of an object. This is particularly
+		useful when creating a model of a person; just create the torso, head, <bold>one</bold> arm,
+		and <bold>one</bold> leg. Using the <xButtonObjControlDialog/> tool, click
+		on the main object (the torso). In the "Which control points are displayed" dialog
+		you'll find an option for symmetry; turn on the <bold>Left and right symmetry</bold>.
+		When you merge the (right) arm in, the mirror (left) arm will automatically be created.
+		Likewise for the leg.
+	</li>
+	<li>
+		After merging the mesh's textures will probably be messed up around the intersections.
+		You will need to adjust the mesh's textures after a merge. See "See also".
+	</li>
+</ol>
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:442>Polygon mesh objects - basics</a></li>
+	<li><a href=r:522>Polygon mesh objects - morphs</a></li>
+	<li><a href=r:520>Polygon mesh objects - textures</a></li>
+</xul>

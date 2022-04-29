@@ -1,0 +1,59 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Halftone"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Halftoning</xtrheader>
+	<tr>
+		<td>
+			<bold>Size</bold> - This is the size of each half-tone pattern as
+			a percent of the screen size.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=size/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pattern</bold> - The halftone pattern to use.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=pattern>
+			<elem name=0>Circular</elem>
+			<elem name=1>Square</elem>
+			<elem name=2>Horizontal</elem>
+			<elem name=3>Vertical</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=color>
+			<bold>Color</bold><br/>
+			If checked then the halftone image will be in color. Otherwise it will be
+			grey-scale.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the halftone effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

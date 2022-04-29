@@ -1,0 +1,105 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Water level"/>
+
+<p>
+	If the house is built by an ocean, lake, pond, river, or large stream, use this
+	page to set the water level. <xSN/> will draw the water as a large sheet (at
+	the elevation you specify). Make sure the water level is higher than the low-points
+	in your ground or you won't actually see the water.
+</p>
+
+<xChoiceButton checkbox=true style=x name=wateron>
+	<bold>Draw the water</bold><br/>
+	Check this if you want the water to be drawn. Make sure to type in an elevation
+	below.
+</xchoicebutton>
+
+<xtablecenter width=100%>
+	<xtrheader>Water information</xtrheader>
+	<tr>
+		<td>
+			<bold>Elevation</bold> - Elevation for the water level. Make sure this is
+			higher than the ground's lowest elevation, or you won't see the water.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% name=level/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size</bold> - This is the size of the water "plane". It defaults to
+			a large number so the water continues to the horizon. If you just want the water
+			to be drawn underneath the land then set the size to 0.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% name=size/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Water color and texture</xtrheader>
+	<tr>
+		<td>
+			<bold>Shallow water depth</bold> - If the water is this depth or less then
+			the "shallow water" texture is used.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% name=waterelev0/></bold>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=watersurf0>
+			<bold>Change shallow water texture</bold><br/>
+			Click this to change the color and texture of shallow water.
+		</xChoiceButton>
+		<xChoiceButton name=watersurf3>
+			<bold>2nd shallow water texture</bold><br/>
+			Water is drawn using two overlapping textures with different sizes and rotations
+			so that any patterns caused by repeating texture won't be as visible.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Medium water depth</bold> - If the water is this depth or less then
+			the "medium water" texture is used.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% name=waterelev1/></bold>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=watersurf1>
+			<bold>Change medium water texture</bold><br/>
+			Click this to change the color and texture of medium-depth water.
+		</xChoiceButton>
+		<xChoiceButton name=watersurf4>
+			<bold>2nd medium water texture</bold><br/>
+			Water is drawn using two overlapping textures with different sizes and rotations
+			so that any patterns caused by repeating texture won't be as visible.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Deep water depth</bold> - If the water is this depth or less then
+			the "deep water" texture is used.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% name=waterelev2/></bold>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=watersurf2>
+			<bold>Change deep water texture</bold><br/>
+			Click this to change the color and texture of deep water.
+		</xChoiceButton>
+		<xChoiceButton name=watersurf5>
+			<bold>2nd deep water texture</bold><br/>
+			Water is drawn using two overlapping textures with different sizes and rotations
+			so that any patterns caused by repeating texture won't be as visible.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

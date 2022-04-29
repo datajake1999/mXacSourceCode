@@ -1,0 +1,14 @@
+<p>
+	To send:
+</p>
+
+<edit width=100% height=50% multiline=true name=tosend/><br/>
+<button name=send>Send</button>
+
+<p/>
+
+<p>
+	Received:
+</p>
+
+<edit width=100% height=50% multiline=true name=received/>

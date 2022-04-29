@@ -1,0 +1,28 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Theory behind caves"/>
+
+<xPageTitle>
+	Tutorial - Theory behind caves
+</xPageTitle>
+
+<p>
+	<xSN/> includes an object that makes cave creation easy. The object uses a graphics
+	technique known as "metaballs" to draw the caves. In the likely event that you don't
+	know what a metaball is, a metaball is like an air bubble in water. To create
+	a cave system, you create a whole series of air bubbles (metaballs) next to one
+	another, and they connect themselves to from a tunnel.
+</p>
+
+<p>
+	Metaballs have the neat property that when they're far apart they appear as spheres
+	(or other shapes), but when they get close together they're "attracted" to one
+	another and connect up. Place enough of them, and you can make any shape.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:935><bold>Next</bold></button>
+</p>
+
+

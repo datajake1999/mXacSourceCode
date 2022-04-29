@@ -1,0 +1,7 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Attributes"/>
+
+<table lrmargin=0 width=100% innerlines=0 border=0>
+<<<$TABLE>>>
+</table>

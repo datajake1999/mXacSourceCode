@@ -1,0 +1,648 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Plant settings"/>
+
+
+<!xListTreeType>
+	<listbox sort=false macroattribute=1>
+		<elem name=0><font color=#800000>
+			<italic><bold>Custom plant species</bold><br/>
+			If the plant species you want is not listed, select this
+			to create your own species.</italic>
+		</font></elem>
+		<elem name=304><bold>Cycad</bold></elem>
+		<elem name=408>Deciduous, <bold>Beech</bold></elem>
+		<elem name=404>Deciduous, <bold>Birch</bold></elem>
+		<elem name=406>Deciduous, <bold>Cherry</bold></elem>
+		<elem name=405>Deciduous, <bold>Dogwood</bold></elem>
+		<elem name=409>Deciduous, <bold>Magnolia</bold></elem>
+		<elem name=402>Deciduous, <bold>Maple, Japanese</bold></elem>
+		<elem name=401>Deciduous, <bold>Maple, sugar</bold></elem>
+		<elem name=403>Deciduous, <bold>Mimosa</bold></elem>
+		<elem name=407>Deciduous, <bold>Oak</bold></elem>
+		<elem name=410>Deciduous, <bold>Willow</bold></elem>
+		<elem name=102>Evergreen, conifer, <bold>Cedar</bold></elem>
+		<elem name=104>Evergreen, conifer, <bold>Cypress, Italian</bold></elem>
+		<elem name=103>Evergreen, conifer, <bold>Cypress, leyland</bold></elem>
+		<elem name=101>Evergreen, conifer, <bold>Fir</bold></elem>
+		<elem name=108>Evergreen, conifer, <bold>Fir, douglas</bold></elem>
+		<elem name=105>Evergreen, conifer, <bold>Juniper</bold></elem>
+		<elem name=107>Evergreen, conifer, <bold>Pine</bold></elem>
+		<elem name=109>Evergreen, conifer, <bold>Sequoia</bold></elem>
+		<elem name=106>Evergreen, conifer, <bold>Spruce</bold></elem>
+		<elem name=201>Evergreen, leafy, <bold>Acacia</bold></elem>
+		<elem name=206>Evergreen, leafy, <bold>Banyan (fig)</bold></elem>
+		<elem name=205>Evergreen, leafy, <bold>Boab</bold></elem>
+		<elem name=207>Evergreen, leafy, <bold>Citrus</bold></elem>
+		<elem name=202>Evergreen, leafy, <bold>Eucalypt, red river gum</bold></elem>
+		<elem name=203>Evergreen, leafy, <bold>Eucalypt, salmon gum</bold></elem>
+		<elem name=208>Evergreen, leafy, <bold>Eucalypt, small</bold></elem>
+		<elem name=204>Evergreen, leafy, <bold>Melaleuca</bold></elem>
+		<elem name=701>Ground cover, <bold>Blue flowers in summer</bold></elem>
+		<elem name=702>Ground cover, <bold>Red flowers in summer</bold></elem>
+		<elem name=502>Miscellaneous, <bold>Bamboo</bold></elem>
+		<elem name=501>Miscellaneous, <bold>Fern</bold></elem>
+		<elem name=503>Miscellaneous, <bold>Grass, ornamental 1</bold></elem>
+		<elem name=504>Miscellaneous, <bold>Grass, ornamental 2</bold></elem>
+		<elem name=301>Palm, <bold>Carpentaria</bold></elem>
+		<elem name=303>Palm, <bold>Date</bold></elem>
+		<elem name=302>Palm, <bold>Livistona</bold></elem>
+		<elem name=305>Palm, <bold>Sand</bold></elem>
+		<elem name=801>Potted, <bold>Conifer</bold></elem>
+		<elem name=805>Potted, <bold>Corn plant</bold></elem>
+		<elem name=804>Potted, <bold>Leafy</bold></elem>
+		<elem name=807>Potted, <bold>Pointsetia</bold></elem>
+		<elem name=802>Potted, <bold>Shaped 1</bold></elem>
+		<elem name=803>Potted, <bold>Shaped 2</bold></elem>
+		<elem name=806>Potted, <bold>Succulant</bold></elem>
+		<elem name=601>Shrub, <bold>Blueberry</bold></elem>
+		<elem name=602>Shrub, <bold>Boxwood</bold></elem>
+		<elem name=605>Shrub, <bold>Hibiscus</bold></elem>
+		<elem name=606>Shrub, <bold>Hydrangea</bold></elem>
+		<elem name=604>Shrub, <bold>Juniper, false</bold></elem>
+		<elem name=612>Shrub, <bold>Juniper 1</bold></elem>
+		<elem name=613>Shrub, <bold>Juniper 2</bold></elem>
+		<elem name=607>Shrub, <bold>Lilac</bold></elem>
+		<elem name=610>Shrub, <bold>Mugho pine</bold></elem>
+		<elem name=611>Shrub, <bold>Oleander</bold></elem>
+		<elem name=603>Shrub, <bold>Quince, flowering</bold></elem>
+		<elem name=609>Shrub, <bold>Rhododendron</bold></elem>
+		<elem name=608>Shrub, <bold>Rose</bold></elem>
+	</listbox>
+</xListTreeType>
+
+<!xComboPotShape>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=1>Round</elem>
+		<elem name=2>Square</elem>
+	</combobox></bold>
+</xComboPotShape>
+
+<xtablecenter width=100%>
+	<xtrheader>Age and appearance</xtrheader>
+	<tr>
+		<td>
+			<bold>Age as of today</bold> - Type in the number of years old the plant
+			is as of today. <bold>Plants grow</bold> in <xSN/>, so their appearance will
+			change over time.
+		</td>
+		<td><edit maxchars=32 width=100% name=age/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Show plants as they appear on this date</bold> - Use
+			this to see what the plants look like on a given date since they
+			grow, drop leaves, and flower at certain times of the year.
+		</td>
+		<td>
+			<bold><date name=sundate day=1 month=1 year=2001 width=100%/></bold>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=srandextra>
+			<bold>Try another plant</bold><br/>
+			Every plant drawn by <xSN/> is unique, with different leaves and branches, just
+			as in real life. If you don't like this plant's appeance, press this button
+			to try another one.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Pot</xtrheader>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=usepot>
+		<bold>The plant is potted</bold><br/>
+			Check this to draw a pot along with the plant.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td><bold>Pot style</bold></td>
+		<td><xcombopotshape name=potshape/></td>
+	</tr>
+	<tr>
+		<td><bold>Pot's top diameter</bold></td>
+		<td><edit maxchars=32 width=100% name=potsize0/></td>
+	</tr>
+	<tr>
+		<td><bold>Pot's base diameter</bold></td>
+		<td><edit maxchars=32 width=100% name=potsize1/></td>
+	</tr>
+	<tr>
+		<td><bold>Pot height</bold></td>
+		<td><edit maxchars=32 width=100% name=potsize2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Plant species</xtrheader>
+	<tr><td>
+		<xlisttreetype width=90% height=90% vscroll=lscroll name=treetype/>
+		<scrollbar orient=vert height=90% width=8% name=lscroll/>
+	</td></tr>
+</xtablecenter>
+
+
+<null>
+<<<$IFHELP>>>
+<xbr/>
+<xSectionTitle>Custom plant-style</xsectiontitle>
+
+<p>
+	Documentation is below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sapling, mature, full-grown</xtrheader>
+	<tr>
+		<td>
+			<bold>Sapling age</bold> - Enter the age of a "sapling" (as used later on for
+			plant heights, etc.) in years.
+		</td>
+		<td><edit maxchars=32 width=100% name=ages0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Mature age</bold> - Enter the age of a "mature plant" (as used later on for
+			plant heights, etc.) in years.
+		</td>
+		<td><edit maxchars=32 width=100% name=ages1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Full-grown age</bold> - Enter the age of a "full-grown" (as used later on for
+			plant heights, etc.) in years. (Plants do not grow once full grown.)
+		</td>
+		<td><edit maxchars=32 width=100% name=ages2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Plant height</xtrheader>
+	<tr>
+		<td width=40%></td>
+		<td width=20%><bold>Sapling</bold></td>
+		<td width=20%><bold>Mature</bold></td>
+		<td width=20%><bold>Full-grown</bold></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Typical height of plant</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=height0/></td>
+		<td width=20%><edit maxchars=32 width=100% name=height1/></td>
+		<td width=20%><edit maxchars=32 width=100% name=height2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height variability</bold> - How much the height varies from
+			one individual to the next.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=heightvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Canopy</xtrheader>
+	<tr>
+		<td width=40%></td>
+		<td width=14%><bold>Low</bold></td>
+		<td width=14%><bold>Mid</bold></td>
+		<td width=14%><bold>Upr</bold></td>
+		<td width=14%><bold>Top-most</bold></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Bottom of canopy</bold> - As a percentage of plant height</td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyz0/></td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyz1/></td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyz2/></td>
+		<td width=14%></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Width of canopy</bold> - As a percentage of plant height</td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyw0/></td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyw1/></td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyw2/></td>
+		<td width=14%><edit maxchars=32 width=100% name=canopyw3/></td>
+	</tr>
+</xtablecenter>
+
+<!xComboLGShape>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=1>Ball, bumpy</elem>
+		<elem name=0>Ball, smooth</elem>
+		<elem name=3>Flat, circular</elem>
+		<elem name=4>Flat, fan</elem>
+		<elem name=2>Flat, grass-blade</elem>
+		<elem name=3>Flat, tear drop</elem>
+		<elem name=6>Flat, triangular</elem>
+	</combobox></bold>
+</xComboLGShape>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Leaf groups</xtrheader>
+	<tr>
+		<td><bold>Leaf-group shape</bold></td>
+		<td><xcombolgshape name=lgshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf-group length</bold> - Typical leaf group length (as it radiates
+			out from the central trunk)
+		</td>
+		<td><edit maxchars=32 width=100% name=plgsize0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf-group width</bold> - Typical leaf group width
+		</td>
+		<td><edit maxchars=32 width=100% name=plgsize1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Leaf-group height</bold> - Typical leaf group height
+		</td>
+		<td><edit maxchars=32 width=100% name=plgsize2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance from the center of the tree</bold> - Use the slider to indicate
+			how far the leaf groups are from the central trunk of the tree.
+		</td>
+		<td><scrollbar width=100% min=-100 max=200 page=20 name=lgradius/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Angle leaf group up/down</bold> - In many trees (such as connifers) the
+			lighter leaf groups are angled up, while the heavier ones are angled down (because
+			of the weight of their branches). Adjust the sliders to the right to control how
+			much the lightest (on the left) and heaviest (on the right) leaf groups are angled.
+		</td>
+		<td align=center valign=center>
+			<scrollbar orient=vert height=100% min=-100 max=100 page=20 name=lgangleuplight/>
+			<scrollbar orient=vert height=100% min=-100 max=100 page=20 name=lgangleupheavy/>
+		</td>
+	</tr>
+	<xtrheader>Typical size by plant age and canopy</xtrheader>
+	<tr><td><p>
+		Leaf groups are enlarged or shrunk depending upon the canopy they're in and the
+		age of the tree. Enter the percentage of the typical size (above) that the leaf
+		is for each canopy level and tree age. Use "100" if you want the same size.
+	</p></td></tr>
+	<tr>
+		<td width=40%></td>
+		<td width=20%><bold>Sapling</bold></td>
+		<td width=20%><bold>Mature</bold></td>
+		<td width=20%><bold>Full-grown</bold></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Lower canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize00/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize10/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize20/></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Middle canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize01/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize11/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize21/></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Upper canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize02/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize12/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize22/></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Top-most canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize03/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize13/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgsize23/></td>
+	</tr>
+	<xtrheader>Typical number by plant age and canopy</xtrheader>
+	<tr><td><p>
+		Enter the typical number of leaf groups found at every canopy
+		level and and each tree age.
+	</p></td></tr>
+	<tr>
+		<td width=40%></td>
+		<td width=20%><bold>Sapling</bold></td>
+		<td width=20%><bold>Mature</bold></td>
+		<td width=20%><bold>Full-grown</bold></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Lower canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum00/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum10/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum20/></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Middle canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum01/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum11/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum21/></td>
+	</tr>
+	<tr>
+		<td width=40%><bold>Upper canopy</bold></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum02/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum12/></td>
+		<td width=20%><edit maxchars=32 width=100% name=lgnum22/></td>
+	</tr>
+	<xtrheader>Leaf group density by season</xtrheader>
+	<tr><td>
+		Many trees lose their leaves in winter, and have fewer leaves in spring and fall.
+		To simulate this, adjust the densities for the winter all the way to the left,
+		and reduce them for spring and fall.
+	</td></tr>
+	<tr>
+		<td><bold>Spring</bold></td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgdensbyseason0/></td>
+	</tr>
+	<tr>
+		<td><bold>Summer</bold></td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgdensbyseason1/></td>
+	</tr>
+	<tr>
+		<td><bold>Fall</bold></td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgdensbyseason2/></td>
+	</tr>
+	<tr>
+		<td><bold>Winter</bold></td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgdensbyseason3/></td>
+	</tr>
+	<xtrheader>Leaf group color by season</xtrheader>
+	<tr><td>
+		Click on the color box to change the color for each season, and
+		variation in the leaf colors.
+	</td></tr>
+	<tr>
+		<td width=50%><bold>Spring</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor00 href=lgcolor00/></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor01 href=lgcolor01/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Summer</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor10 href=lgcolor10/></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor11 href=lgcolor11/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Fall</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor20 href=lgcolor20/></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor21 href=lgcolor21/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Winter</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor30 href=lgcolor30/></td>
+		<td width=25%><colorblend width=100% height=50% name=lgcolor31 href=lgcolor31/></td>
+	</tr>
+	<xtrheader>Variability</xtrheader>
+	<tr>
+		<td>
+			<bold>Size variability</bold> - How much the leaf group size varies from
+			one to another.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgsizevar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number variability</bold> - How much the number of leaf groups varies from
+			one individual to another.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgnumvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Orientation variability</bold> - By default, leaf groups point away from
+			the main trunk, are level, and aren't tilted. If you increase the variability,
+			individual leaf groups will have more randomness in their orientation.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=lgorientvar/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Trunk and branches</xtrheader>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - How thick the branches and trunk are. Thickness
+			is also affected by the number are volume of the leaves feeding into
+			the branch/trunk.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=10 name=trunkthickness/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Trunk affinity</bold> - If all the way to the left, branches will head
+			straight for the ground - like many shrubs. If all the way to the right, branches head
+			straight for the main trunk and then down - like a connifer.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=trunktightness/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Branch merging</bold> - If all the way to the left, branches will remain
+			individual members unless they're very close to one another. As the knob is
+			moved to the right, braches further apart will combine together into larger
+			branches.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=trunkstickiness/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Wobble</bold> - Controls how bendy the branches and main trunk are.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=trunkwobble/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Trunk angled</bold> - This is the amount that the main trunk
+			can be angled. If the species always has a vertical main trunk then
+			slide the knob all the way to the left. If the species often leans,
+			slide to the right.
+		</td>
+		<td><scrollbar width=100% min=0 max=50 page=10 name=trunkskewvar/></td>
+	</tr>
+	<xtrheader>Trunk color by season</xtrheader>
+	<tr><td>
+		Click on the color box to change the color for each season, and
+		variation in the leaf colors.
+	</td></tr>
+	<tr>
+		<td width=50%><bold>Spring</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor00 href=trunkcolor00/></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor01 href=trunkcolor01/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Summer</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor10 href=trunkcolor10/></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor11 href=trunkcolor11/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Fall</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor20 href=trunkcolor20/></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor21 href=trunkcolor21/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Winter</bold></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor30 href=trunkcolor30/></td>
+		<td width=25%><colorblend width=100% height=50% name=trunkcolor31 href=trunkcolor31/></td>
+	</tr>
+</xtablecenter>
+
+<!xComboFlowerPeak>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=11>Early spring</elem>
+		<elem name=0>Mid spring</elem>
+		<elem name=1>Late spring</elem>
+		<elem name=2>Early summer</elem>
+		<elem name=3>Mid summer</elem>
+		<elem name=4>Late summer</elem>
+		<elem name=5>Early fall</elem>
+		<elem name=6>Mid fall</elem>
+		<elem name=7>Late fall</elem>
+		<elem name=8>Early winter</elem>
+		<elem name=9>Mid winter</elem>
+		<elem name=10>Late winter</elem>
+	</combobox></bold>
+</xComboFlowerPeak>
+
+<!xComboFlowerShape>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=4>Bowl</elem>
+		<elem name=2>Cone</elem>
+		<elem name=3>Cone, double</elem>
+		<elem name=1>Sphere</elem>
+		<elem name=0>Sphere, flattened</elem>
+	</combobox></bold>
+</xComboFlowerShape>
+
+<xtablecenter width=100%>
+	<xtrheader>Flowers or fruit</xtrheader>
+	<tr>
+		<td><bold>Shape</bold></td>
+		<td><xcomboflowershape name=flowershape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Flowers per leaf group</bold> - Typical number of flowers per leaf group.
+		</td>
+		<td><edit maxchars=32 width=100% name=flowersperlg/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Flower size</bold> - Typical diameter of a flower (or fruit).
+		</td>
+		<td><edit maxchars=32 width=100% name=flowersize/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Flower size variability</bold> - How much the size varies from
+			flower to flower.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=20 name=flowersizevar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance from leaf group</bold> - Typical distance the flower is
+			from the leaf group.
+		</td>
+		<td><scrollbar width=100% min=0 max=200 page=20 name=flowerdist/></td>
+	</tr>
+	<tr>
+		<td><bold>Season</bold> - The time of year when the flowers/fruit are at their peak.</td>
+		<td><xcomboflowerpeak name=flowerpeak/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Duration</bold> - Percent of the year that flowers/fruit are around.
+		</td>
+		<td><scrollbar width=100% min=0 max=100 page=5 name=flowerduration/></td>
+	</tr>
+	<tr>
+		<td width=50%><bold>Flower color</bold> - Click on the color to change it.</td>
+		<td width=50%><colorblend width=100% height=50% name=cflower href=cflower/></td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+<xsectiontitle>Custom plant-style help</xsectiontitle>
+
+<p>
+	Custom plants look very difficult because there are lots of numbers and knobs you
+	can control. They're actually not that difficult.
+</p>
+
+<p>
+	The basic structure of a plant (in <xSN/>) is that:
+</p>
+<xul>
+	<li>
+		Every plant has a canopy.
+	</li>
+	<li>
+		The canopy is divided into three sections: low, middle, and high.
+	</li>
+	<li>
+		For each part of the canopy you control it's elevation (relative to the plant's
+		height), width (also relative to the plant's height), and the number of "leaf
+		groups" in the section.
+	</li>
+	<li>
+		A "leaf group" is a cluster of leaves. <xSN/> doesn't draw individual leaves (except
+		for plants with very large leaves) because it would be too slow.
+	</li>
+	<li>
+		Each leaf group has a shape (whether it's round and fluffy like in dissiduous trees,
+		or a long blade such as in palms) and size. Leaf groups also have coloration,
+		distance from the main trunk (some plants have leaves only at the periphery of the canopy
+		while others fill up the entire volume), and a few other settings.
+	</li>
+	<li>
+		Each leaf group has an associated branch that runs from the leaf group to the ground.
+		Depending upon the type of tree, the branches can run in a straight line towards the
+		ground (as is common with many shrubs) or veer towards the main trunk (such as connifers).
+		Branches can also have a wobble added so they're no so straight.
+	</li>
+	<li>
+		When two branches get close together they combine into a single thicker branch.
+		Eventually, all the branches in the tree combine at some point to form the main
+		trunk. You can control how much the branches like to combine.
+	</li>
+	<li>
+		Plants can have flowers or fruits, which occur near leaf groups.
+	</li>
+</xul>
+
+<p>
+	The best way to make a new plant species in <xSN/> is to:
+</p>
+
+<ol>
+	<li>
+		Start with a built-in plant species that is close to the one you want.
+	</li>
+	<li>
+		Switch it to a "Custom" style using this dialog.
+	</li>
+	<li>
+		Play with various numbers and knobs. You can always undo your changes.
+	</li>
+	<li>
+		Don't forgest to test your settings for various <bold>plant
+		ages</bold> and <bold>seasons</bold>.
+	</li>
+	<li>
+		Since every individual plant is different in <xSN/>, don't forget to press
+		"Try another plant" once in awhile.
+	</li>
+	<li>
+		If you want to reuse your new species, use <xButtonSelIndividual/> to
+		select it. Press the <xButtonLibrary/> button and in the
+		"Object library" dialog, press the <bold>"Create a new template
+		from the current selection"</bold> button. This will add
+		the tree to the object list.
+	</li>
+</ol>
+
+
+<<<$ENDIFHELP>>>
+</null>

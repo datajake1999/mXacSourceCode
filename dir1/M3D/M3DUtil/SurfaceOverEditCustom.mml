@@ -1,0 +1,59 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify an overlay's shape"/>
+
+<p>
+	Use this page to change an overlay's shape.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Shape</xtrheader>
+	<tr><td>
+		<p>
+			What shape do you want the overlay to be? <italic>(After selecting a shape
+			click on "Change shape" button.)</italic>
+		</p>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=rect>
+			<bold>Rectangular</bold><br/>
+			The overlay is box shaped.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=ellipse>
+			<bold>Elliptical</bold><br/>
+			It is either circular or elliptical.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=below>
+			<bold>From the specified point and below</bold><br/>
+			Use this to paint (or texture) everything below this point a different color.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=above>
+			<bold>From the specified point and above</bold><br/>
+			Use this to paint (or texture) everything below this point a different color.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=left>
+			<bold>Left of the specified point</bold><br/>
+			Paint (or texture) everything left of the point a specific color.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=right>
+			<bold>Right of the specified point</bold><br/>
+			Paint (or texture) everything right of the point a specific color.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=hband>
+			<bold>Horizontal band</bold><br/>
+			Apply the color/texture in a horizontal band between two points.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=vband>
+			<bold>Vertical band</bold><br/>
+			Apply the color/texture in a vertical band between two points.
+		</xChoiceButton>
+		<xChoiceButton style=x radiobutton=true group=rect,ellipse,below,above,left,right,hband,vband,any name=any>
+			<bold>Any shape</bold><br/>
+			Use a collection of points that can be arranged to form any shape you wish. (To add or
+			remove control points click on the overlay in the "Overlays" page.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xchoicebutton name=changeshape>
+	<bold>Change shape</bold><br/>
+	Use the new shape for the overlay.
+</xchoicebutton>

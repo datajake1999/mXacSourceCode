@@ -1,0 +1,68 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Spyglass"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Size and shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Scale</bold> - This scales down the circular openings of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=scale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blur</bold> - Move this to control the amount of blurring around the
+			edge of the spyglass.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=blur/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - The shape to use.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=shape>
+			<elem name=0>Circular</elem>
+			<elem name=1>Elliptical</elem>
+			<elem name=2>Binocular</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Near-objects stick out</bold> - Any object that is closer to
+			the camera than this distance will "stick out" of the spyglass area,
+			and won't be affected by the masking.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=stickout/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Color</xtrheader>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changecolor>
+				<bold>Background color</bold><br/>
+				The color used outside the spyglass.
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=color/>
+		</td>
+	</tr>
+</xtablecenter>
+

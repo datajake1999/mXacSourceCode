@@ -1,0 +1,32 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Add a new library"/>
+
+<p>
+	What kind of library do you wish to add?
+</p>
+
+<xChoiceButton name=newlib>
+	<bold>New library file</bold><br/>
+	Create a new library file and add it to the project's library list.
+	Pressing this will ask you for the name of the new file.
+</xChoiceButton>
+
+<xChoiceButton name=existlib>
+	<bold>Existing library file</bold><br/>
+	Add an existing library file to the project's library list.
+	Pressing this will ask you for the name of the new file.
+</xChoiceButton>
+
+<null><<<$BUILTIN>>></null>
+
+<xbr/>
+
+<xChoiceButton name=mergelib>
+	<bold>Merge all libraries</bold><br/>
+	This rarely used feature merges all the libraries in a project into one library.
+	This is most useful as a means of finding compile problems since when you compile
+	a project, all its libraries are first merged together. Sometimes the merging
+	will expose problems that aren't obvious when looking at separate libraries.
+</xChoiceButton>
+

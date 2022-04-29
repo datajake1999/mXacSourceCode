@@ -1,0 +1,54 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Generate sine wave effect"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Generate sine wave</xtrheader>
+	<tr><td>
+		Use this effect to generate a sine, saw-tooth, triangle, or square wave
+		of a given pitch.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Starting pitch</bold> - This is the starting pitch, in Hz.
+		</td>
+		<td><edit width=100% maxchars=32 name=start/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ending pitch</bold> - This is the ending pitch, in Hz.
+		</td>
+		<td><edit width=100% maxchars=32 name=end/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Channel</bold> - Use "1" for the left channel,
+			"2" for right, etc. "0" will write the sine wave to
+			all channels.
+		</td>
+		<td><edit width=100% maxchars=32 name=channel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Wave shape to generate.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=shape>
+			<elem name=0>Sine</elem>
+			<elem name=1>Triangle</elem>
+			<elem name=2>Sawtooth</elem>
+			<elem name=3>Square</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

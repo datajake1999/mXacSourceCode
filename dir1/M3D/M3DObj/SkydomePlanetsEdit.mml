@@ -1,0 +1,178 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify a sun, planet, or moon"/>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - Name of the sun, moon, or planet
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=62 name=name/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Azimuth</bold> - Location of the object along the horizon.
+			0 is north, 90 is east, 180 south, and -90 west.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=azimuth/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Altitude</bold> - Location of the object above the horizon.
+			0 is right on the horizon, 90 is directly overhead.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=altitude/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=visible>
+			<bold>Object is visible</bold><br/>
+			Un-check this to hide the sun, moon, or planet.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Emitted light</xtrheader>
+	<tr><td>
+		These settings affect the light emitted from the sun, or in the case of a
+		planet or moon, the amount reflected onto the scene.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Brightness</bold> - The amount of light emitted from the object.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=lumens/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changedirect>
+				<bold>Change color</bold><br/>
+				This is the color of the light from the sun, planet, or moon.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=directcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Ambient light</xtrheader>
+	<tr><td>
+		These settings affect the ambient from the sun, planet, or moon. As a general
+		rule the ambient light is dimmer and picks up some of the color of the sky.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Brightness</bold> - The amount of ambient light emitted from the object.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=ambientlumens/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeambient>
+				<bold>Change color</bold><br/>
+				This is the color of the ambient light from the sun, planet, or moon.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=ambientcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Solar light</xtrheader>
+	<tr><td>
+		This light is used by suns (not planets or moons) to light other planets
+		and moons (not suns). The intensity and color are different because
+		the "emitted light" settings will include atmospheric attenuation and
+		discoloration which don't happen when the planet/moon is lit.
+		Changing the solar light for the sun will affect the appearence of
+		the moon (and other planets) but nothing else in the scene.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Brightness</bold> - The amount of solar light emitted from the object.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=solarlumens/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changesolar>
+				<bold>Change color</bold><br/>
+				This is the color of the light from the sun.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=solarcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Appearance</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=usetexture>
+			<bold>Draw an image for the object</bold><br/>
+			Normally, <xSN/> just displays a ball of light for a sun, planet, or moon. If
+			you have an image, you can scan it in and then add it as a texture. Then, check
+			this box and press the "Change texture" button below.
+		</xchoicebutton>
+		<xchoicebutton name=changetexture>
+			<bold>Change texture</bold><br/>
+			Changes the texture or image used for the sun, planet, or moon.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Image brightness</bold> - If the object is drawn using an image (see above)
+			then this controls how bright the image is.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=100 name=brightness/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=emitlight>
+			<bold>This is a sun</bold><br/>
+			If checked the object is a sun and does not have any shadows. If unchecked,
+			the object is a planet or moon, and has shadows.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Size</bold> - Size of the sun, planet, or moon in the sky.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=150 name=sizerad/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance</bold> - Distance of the object from the scene. This mainly affects
+			the order in which planets are drawn and obscure one another.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=15000 name=dist/>
+		</td>
+	</tr>
+</xtablecenter>
+

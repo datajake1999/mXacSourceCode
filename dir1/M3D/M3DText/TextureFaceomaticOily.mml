@@ -1,0 +1,89 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Oily skin"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Oily skin texture</xtrheader>
+	<tr><td>
+		A face's skin is oilier on the forehead, cheeks, and around the mouth, producing
+		more of a shine. Face-o-matic simulates oily skin by adjusting the specularity
+		(shinyness) of the face based on grey-scale texture where oily regions are white.
+		The oily texture is a low resolution image of the face (about
+		100 x 50 pixels).
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=OilyUse>
+			<bold>Use this</bold><br/>
+			Check this to use the oily skin layer.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=OilyButton>
+			<bold>Change the oily-skin texture</bold><br/>
+			Press this to change the texture used for oily skin.
+		</xChoiceButton>
+		<<<$OILYIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Oilyboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Oilyboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Oilyboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Oilyboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=OilyMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=OilyMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black shinyness</bold> - The amount of light reflected in
+			the specularity (shinyness) when
+			the texture is black. Use 1.0 to reflect all of it, 0.0 for none.
+			0.1 is a good value for dry skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White shinyness</bold> - The amount of light reflected in
+			the specularity (shinyness) when
+			the texture is white. Use 1.0 to reflect all of it, 0.0 for none.
+			0.5 is a good value for oily skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds shinyness</bold> - How shiny the skin is when
+			it's not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny2/></bold></td>
+	</tr>
+</xtablecenter>
+

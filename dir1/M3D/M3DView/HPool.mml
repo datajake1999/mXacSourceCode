@@ -1,0 +1,55 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Pools, ponds, sinks, and bathtubs"/>
+
+<xPageTitle>
+	Pools, ponds, sinks, and bathtubs
+</xPageTitle>
+
+<p>
+	The "pool" object is used to create pools, ponds, sinks, bathtubs, hottubs, or anything
+	else that holds water.
+</p>
+
+<p>
+	To add a pool, pond, sink, bathtub, or hot tub to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined pool object that most closely meets your
+		needs. You can find them in "Bathtubs", "Bathroom sinks", "Kitchen sinks",
+		and "Laundry sinks" under "Plumbing". You can also look under "Pools and spas"
+		or "Water" in "Outdoors".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house. Since pool-objects are embeddable, they will
+		be placed in whatever cabinet-top, floor, or ground you place them in.
+		Note: <bold>For an above ground pool</bold> you
+		will want to hold the control button down while adding so that the pool isn't embedded
+		into the ground. You will also need to raise the pool up using
+		the <xButtonMoveUD/> tool.
+	</li>
+	<li>
+		Resize the pool using <xButtonObjControlNSEWUD/> tool on the circular control points.
+		All of the control points are obvious except two: At the center of the bottom of the
+		pool is a control point that lets you control how deep it is and where the pool
+		walls angle in towards. It is also the location of the drain (if the pool has one).
+		Moving the center point is useful for creating bathtubs. Above the center point
+		is the "Bottom tilt" control point - moving this one will angle the bottom of the
+		pool, creating a deep and shallow end.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:454>Cabinets</a></li>
+	<li><a href=r:466>How to build a bathroom</a></li>
+	<li><a href=r:467>How to build a kitchen</a></li>
+</xul>

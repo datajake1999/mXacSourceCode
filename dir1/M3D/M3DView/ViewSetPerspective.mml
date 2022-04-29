@@ -1,0 +1,50 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Perspective"/>
+
+<p>
+	You can use this page to adjust the "field of view" that is used when rendering. (It doesn't
+	affect the "flattened" view.) In photography terms, you can adjust how wide an angle the
+	camera is using. Either enter a number for the "field of view" or in the second table,
+	type in your monitor's width and the distance you're sitting away from it.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Field of view</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Field of view in degrees</bold> - If you had eyes on either side of your
+			head and could see entirely around you, you'd have
+			a field of view of 360 degrees. Because both our eyes face forwards,
+			humans have a field of view of bout 160 degrees.
+			If you enter that value in the image will look very distorted, though, because
+			your monitor only occupies about 1/4 of your 160 degree field of view, or
+			about 45 degrees.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=64 width=100% name=fov/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Monitor width and distance</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Monitor width</bold> - Enter the width of your monitor.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=64 width=100% name=width/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Distance from the monitor</bold> - As you sit in your chair,
+			how far are your eyes from your monitor?
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=64 width=100% name=distance/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+

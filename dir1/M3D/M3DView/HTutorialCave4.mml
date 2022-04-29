@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Texturing"/>
+
+<xPageTitle>
+	Tutorial - Texturing
+</xPageTitle>
+
+<p>
+	You have probably already noticed a texturing problem that merged cave
+	segments have. <bold>The border</bold> between cave segments usually
+	doesn't match up properly, and looks jagged.
+</p>
+
+<p>
+	The easiest way to explain why this happens is... Imagine trying to wallpaper
+	a cave. There will always be at least a few places where the curvature of the
+	walls means you can't get the wallpaper to line up properly. Computer
+	texturing of the caves has the same problems.
+</p>
+
+<p>
+	You can use several different solutions to solve (or minimize) this problem:
+</p>
+
+<xul>
+	<li>
+		<bold>Drag the blue triangle</bold> control points of each cave segment to
+		rotate and align the cave segment with other cave segments. This helps for
+		tunnels.
+	</li>
+	<li>
+		Click on the cave segment using the <xButtonObjDialog/> tool. In the
+		"Cave settings" dialog, press the <bold>Modify this texture</bold> button.
+		Try adjusting the <bold>Two dimensional textures</bold> settings to
+		see if you can produce a better technique for "wallpapering".
+	</li>
+	<p>
+		One trick is to set the <bold>Horizontal texture</bold> to "E/W location" and
+		the <bold>Vertical texture</bold> to "N/S location". This looks great from
+		above, but from within the cave you'll see that the texture on the walls is
+		stretched.
+	</p>
+	<li>
+		The solution that worlks best is to use a <bold>volumetic texture</bold> that
+		simulates 3-dimensional rock. Use the <xButtonObjPaint/> tool to change
+		the cave's texture. You can find some volumetric textures under
+		the "Outside" major category, and "Stone" minor categories. The
+		problem with volumetic textures is that they're <bold>very slow</bold> to draw,
+		and don't anti-alias well at a distance.
+	</li>
+</xul>
+
+
+<p>
+	As long as I'm discussing textures, I'll point out that you can apply different
+	textures to different cave segments. You find an option for <bold>New texture</bold> in
+	the "Cave settings" dialog box, accessed with the <xButtonObjDialog/> tool.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:938><bold>Next</bold></button>
+</p>
+
+

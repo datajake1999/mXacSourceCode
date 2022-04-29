@@ -1,0 +1,44 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Attributes"/>
+
+<p>
+	This page lets you add, remove, and modify attributes that your object supports.
+	Providing attributes allows your object to be internally animated - such as
+	lights within the object turning on and off, or drawers opening and closing.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Attributes</xtrheader>
+	<tr><td>
+		<listbox sort=false vscroll=lscroll height=85% width=85% name=attrib>
+		</listbox>
+		<scrollbar orient=vert height=85% name=lscroll/>
+		<p/>
+
+		<xchoicebutton href=add>
+			<bold>Add a new attribute</bold><br/>
+			Create a new attribute in the list.
+		</xchoicebutton>
+
+		<xchoicebutton name=edit>
+			<bold>Modify selected attribute</bold><br/>
+			Lets you change the selected attribute's name, range, description, and
+			what objects it affects. <italic>(You cannot edit "Automatic" attributes.)</italic>
+		</xchoicebutton>
+
+		<xchoicebutton name=remove>
+			<bold>Remove selected attribute</bold><br/>
+			Deletes the attribute.
+		</xchoicebutton>
+		
+		
+		<xchoicebutton name=restoreauto>
+			<bold>Restore automatic attributes attribute</bold><br/>
+			If you have deleted any automatic attributes and you want to get them
+			back, press this. It will restore all of the deleted automatic attributes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

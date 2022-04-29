@@ -1,0 +1,37 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="If you like 3D Outside the Box..."/>
+
+<xPageTitle>
+	If you like <xLN/>...
+</xPageTitle>
+
+<p>
+	I am a one person operation; I do all the design, development, testing, documentation,
+	and <bold>marketing</bold> myself. I suck at marketing. Therefore, I need
+	as much word-of-mouth advertising as possible.
+</p>
+
+<p>
+	If you like <xLN/>...
+</p>
+
+<xul>
+	<li>
+		<bold>Tell your friends.</bold>
+	</li>
+	<li>
+		<bold>Please fill in a "User feedback/rating" form</bold> on the
+		download web-site where
+		you found <xSN/>. That way other users will hear about <xSN/>.
+	</li>
+	<li>
+		<a href=r:486>Register</a> and pay for your copy of <xSN/>. I need to pay
+		the bills too.
+	</li>
+</xul>
+
+<p>
+	If you don't like <xSN/>, please tell me. I may be able to fix the problem.
+	Send E-mail to <xMyEmail/>. See <a href=r:241>Bugs and feature requests</a> for more details.
+</p>

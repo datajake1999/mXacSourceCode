@@ -1,0 +1,238 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Reshaping the audio"/>
+
+<!xComboViewHow>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Waveform</elem>
+		<elem name=1>Spectrogram</elem>
+		<elem name=2>Features</elem>
+	</combobox></bold>
+</xComboViewHow>
+
+<xtablecenter width=80%>
+	<xtrheader>Reshaping the audio</xtrheader>
+	<tr>
+		<td width=2>
+			<align align=center><bold>Stretch the octave</bold></align><br/>
+			<table width=100% border=0 innerlines=0>
+				<tr>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband0/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband1/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband2/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband3/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband4/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband5/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=100 name=octaveband6/></td>
+				</tr>
+				<tr>
+					<td align=center>Octave 1</td>
+					<td align=center>Octave 2</td>
+					<td align=center>Octave 3</td>
+					<td align=center>Octave 4</td>
+					<td align=center>Octave 5</td>
+					<td align=center>Octave 6</td>
+					<td align=center>Octave 7</td>
+				</tr>
+			</table>
+			<p/>
+			
+			<align align=center><bold>Volume</bold></align><br/>
+			<table width=100% border=0 innerlines=0>
+				<tr>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale0/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale1/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale2/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale3/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale4/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale5/></td>
+					<td align=center><scrollbar orient=vert height=150 min=-24 max=24 name=scale6/></td>
+				</tr>
+				<tr>
+					<td align=center>Octave 1</td>
+					<td align=center>Octave 2</td>
+					<td align=center>Octave 3</td>
+					<td align=center>Octave 4</td>
+					<td align=center>Octave 5</td>
+					<td align=center>Octave 6</td>
+					<td align=center>Octave 7</td>
+				</tr>
+			</table>
+			<br/>
+			<xChoiceButton style=x checkbox=true name=scalevoiced>
+				<bold>Adjusting voiced volumes</bold><br/>
+				If checked, the volume adjustment will affect "voiced" sounds, which include vowels,
+				and most consonants except for "s", "sh", "f", "t", "k", "th", etc. If you uncheck this then the
+				volume will adjust the "unvoiced" sounds of "s", "sh", "f", "t", "k", "th", etc.
+				You should only adjust the unvoiced sounds if your markers have been placed on
+				unvoiced phonemes.
+			</xChoiceButton>
+			<p/>
+			
+			
+			<align align=center><bold>Emphasize peaks and valleys</bold></align><br/>
+			<table width=100% border=0 innerlines=0>
+				<tr>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak0/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak1/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak2/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak3/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak4/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak5/></td>
+					<td align=center><scrollbar orient=vert height=150 min=0 max=200 name=peak6/></td>
+				</tr>
+				<tr>
+					<td align=center>Octave 1</td>
+					<td align=center>Octave 2</td>
+					<td align=center>Octave 3</td>
+					<td align=center>Octave 4</td>
+					<td align=center>Octave 5</td>
+					<td align=center>Octave 6</td>
+					<td align=center>Octave 7</td>
+				</tr>
+			</table>
+			<p/>
+			
+			<xbr/>
+			
+			<p>
+				Use this page to <bold>shape your voice samples (in black) to look as close as possible
+				to the mimic voice samples (in white).</bold>
+			</p>
+			
+			<p>
+				First, <bold>adjust the sliders in the "Stretch the octave" section</bold>, which
+				will horizontally stretch or shrink an octave. You'll see the bands and black wave
+				stretch or shrink on the right.
+			</p>
+			
+			<p>
+				Next, <bold>adjust the "Volume" sliders</bold> to raise or lower the black line
+				in the octave.
+			</p>
+			
+			<p>
+				Use the <bold>"Emphasize peaks and valleys"</bold> sliders to make the peaks
+				and valleys match more closely.
+			</p>
+			
+			<p>
+				Of course, <bold>you won't get an exact match.</bold> You probably won't even get
+				very close, since some adjustments will improve one graph but hurt another.
+				Just try to adjust the sliders so "on average" the black curve is as close to the
+				white curve as possible.
+			</p>
+			
+			<p>
+				As you adjust the sliders, you may wish to play the <bold>modified recording
+				of your voice</bold> to see how close you're getting.
+			</p>
+			
+		</td>
+		
+		<td width=1>
+			<table width=100% innerlines=0 border=0>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature0/></td>
+					<td width=1>
+						<bold><<<PHONENAME0>>></bold><br/>
+						<a href=po:0>Orig</a><br/>
+						<a href=pd:0>Disg.</a><br/>
+						<a href=pm:0>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature1/></td>
+					<td width=1>
+						<bold><<<PHONENAME1>>></bold><br/>
+						<a href=po:1>Orig</a><br/>
+						<a href=pd:1>Disg.</a><br/>
+						<a href=pm:1>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature2/></td>
+					<td width=1>
+						<bold><<<PHONENAME2>>></bold><br/>
+						<a href=po:2>Orig</a><br/>
+						<a href=pd:2>Disg.</a><br/>
+						<a href=pm:2>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature3/></td>
+					<td width=1>
+						<bold><<<PHONENAME3>>></bold><br/>
+						<a href=po:3>Orig</a><br/>
+						<a href=pd:3>Disg.</a><br/>
+						<a href=pm:3>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature4/></td>
+					<td width=1>
+						<bold><<<PHONENAME4>>></bold><br/>
+						<a href=po:4>Orig</a><br/>
+						<a href=pd:4>Disg.</a><br/>
+						<a href=pm:4>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature5/></td>
+					<td width=1>
+						<bold><<<PHONENAME5>>></bold><br/>
+						<a href=po:5>Orig</a><br/>
+						<a href=pd:5>Disg.</a><br/>
+						<a href=pm:5>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature6/></td>
+					<td width=1>
+						<bold><<<PHONENAME6>>></bold><br/>
+						<a href=po:6>Orig</a><br/>
+						<a href=pd:6>Disg.</a><br/>
+						<a href=pm:6>Mimic</a>
+					</td>
+				</tr>
+				<tr>
+					<td width=4><srfeatureview width=100% height=25% name=srfeature7/></td>
+					<td width=1>
+						<bold><<<PHONENAME7>>></bold><br/>
+						<a href=po:7>Orig</a><br/>
+						<a href=pd:7>Disg.</a><br/>
+						<a href=pm:7>Mimic</a>
+					</td>
+				</tr>
+			</table>
+			<p/>
+			<xbr/>
+			<xChoiceButton style=righttriangle href=p:2080>
+				<bold>Next</bold><br/>
+				Press this <bold>after</bold> you have adjusted all the sliders.
+				The next page lets you fine-tune the adjustments
+				for each phoneme.
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=playmimic>
+				<bold>Play the voice to mimic</bold><br/>
+				Plays a recording of the voice you're trying to mimic.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

@@ -1,0 +1,33 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Object outlines"/>
+
+<xPageTitle>
+	Object outlines
+</xPageTitle>
+
+<p>
+	<xLN/> (by default) outlines all objects in a black line, and
+	selected objects in a red line. The outlines make it easier to see the edges
+	of the objects. However, they aren't visually realistic, so you may want to
+	turn them off in some cases.
+</p>
+
+<p>
+	To turn the outlines on or off:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonViewSettings/> button.
+	</li>
+	<li>
+		In the "View settings" dialog press the <bold>"Outlines"</bold> button.
+	</li>
+	<li>
+		Once in the "Outlines" page you can turn the outlines on or off, or change
+		their color.
+	</li>
+</ol>
+
+

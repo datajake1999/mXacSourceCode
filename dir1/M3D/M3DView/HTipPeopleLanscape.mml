@@ -1,0 +1,57 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for people thinking about landscaping their yard"/>
+
+<xPageTitle>
+	Tips for people thinking about landscaping their yard
+</xPageTitle>
+
+<p>
+	Here are some ideas for using <xSN/> to design your own landscaping:
+</p>
+
+<xul>
+	<li>
+		Your house, topography, major trees, and the neighbors' houses will signficantly affect
+		your design. I suggest you spend an hour getting your house, the land topography, major
+		trees, and neighbors' houses into file and use that as a "template" - start
+		all your experiments by duplicating the template file and editing that.
+	</li>
+	<li>
+		To simulate your neighbors' houses, just build them using building blocks.
+	</li>
+</xul>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Around the world there are hundreds of thousands
+	of plant varieties that are used in people's gardens. I'm not going to program
+	them all in. I'm assuming some sort of plant editor... what is the best
+	way to handle this? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Is the library of outdoors objects (fences,
+	swingsetc, etc.) large enough? What's missing? Email me at <xMyEmail/>.
+</xDefinition>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> How useful would it be to have more sample houses?
+	Email me at <xMyEmail/>.
+</xDefinition>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> At least one competitor has the ability to draw
+	the plants at different ages so users can see how the garden will grow over the
+	years. Is this useful? Email me at <xMyEmail/>.
+</xDefinition>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> <xSN/> (in future version) could potentially
+	calculate how much sun and wind exposure plants would get. It might even
+	be able to calculate how water-logged the soil would get (assuming you enter
+	all the topography accurately and some sort of soil composition information).
+	Would this be useful? Or is it just easier to use your intuition? Email me at <xMyEmail/>.
+</xDefinition>

@@ -1,0 +1,114 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - model view"/>
+
+<xPageTitle>
+	Tutorial - model view
+</xPageTitle>
+
+<p>
+	The "Model view" draws the house using perspective. When moving or rotating the camera,
+	it treats the 3D world like a model held in your hand. So, rather than moving or
+	rotating the camera, the entire world is moved or rotated.
+</p>
+
+<p>
+	The "Model view" is mostly used for:
+</p>
+
+<xul>
+	<li>
+		<bold>Looking at the outside of the house.</bold> It can be used to look inside or
+		at specific details,
+		but it's not as easy as the walkthrough view.
+	</li>
+</xul>
+
+<xsectiontitle>Using the model view</xsectiontitle>
+
+<ol>
+	<li>
+		Click on the <xButtonView3D/> button.
+		The movement buttons (to the right of the view selection buttons) will change.
+	</li>
+	<li>
+		Press the <xButtonViewFlatQuick/> button.
+	</li>
+	<li>
+		<bold>Select "North-east (elevated)"</bold>. You're now looking at the
+		house from the north east, elevated position of course.
+	</li>
+	<p>
+		Even though you're looking from the same angle as you did with the flattened view,
+		the image is different because it includes perspective. If you want, you can flip
+		back to the flattened view and look from the north-east (elevated) and see the difference.
+		Just remember to flip back to the model view.
+	</p>
+</ol>
+
+<xsectiontitle>Similarities to the flattened view</xsectiontitle>
+
+<p>
+	The model view is very similar to the flattened view. Most of the controls and buttons
+	are the same. The only difference is that this time there's perspective.
+</p>
+
+<ol>
+	<li>
+		Try playing with the <xButtonZoomIn/> and <xButtonZoomOut/> tools like
+		you did in the flattened view. Clicking on the image zooms in or out depending upon
+		which tool you selected. (Alternatively, you can use the <bold>left scrollbar or
+		mouse wheel</bold> to zoom.)
+	</li>
+	<p>
+		Notice a few important differences: For one, there's perspective, and the closer you
+		zoom in the more noticable it becomes. Second, the amount you zoom in/out depends upon
+		where you click. If you click on something far away, you zoom in/out a lot. If it's
+		nearby the zoom isn't as far.
+	</p>
+	<li>
+		Experiemnt with <xButtonView3DLRUD/> tool like you just did with the flattened view.
+	</li>
+	<p>
+		Again, the behavior is just a bit different. This tool actually "grabs ahold" of the
+		surface you click on and moves it along with the mouse. Objects behind it will appear
+		to move more slowely, and those in front more quickly... because of the perspective.
+	</p>
+	<li>
+		<xButtonView3DROTZ/>, <xButtonView3DROTX/>, <xButtonView3DROTY/>, and <xButtonViewSetCenter3D/> behave
+		virtually identially to their cousins in flattened view.
+	</li>
+</ol>
+
+<xsectiontitle>Differences</xsectiontitle>
+
+<p>
+	Model view is missing a view of the zoom tools because they're not practical once
+	you include perspective. It has one tool that the flattened view doesn't:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonView3DLRFB/> tool. This replaces one of the zoom tools
+		in the flattened view.
+	</li>
+	<li>
+		<bold>Click on the image, and move the mouse (while still holding
+		the button down).</bold> Moving the mouse left and right moves the world left and right.
+		Moving up and down moves the house away from you and towards you.
+	</li>
+</ol>
+
+<p>
+	In the model view, the <bold>left scrollbar</bold> zooms in and out just like
+	the isometric view. However, unlike the isometric view,
+	the <bold>other scrollbars</bold> rotate the model. None of the scrollbars
+	in model view pan; you'll have to use a tool for that functionality.
+</p>
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:355><bold>Next</bold></button>
+</p>
+

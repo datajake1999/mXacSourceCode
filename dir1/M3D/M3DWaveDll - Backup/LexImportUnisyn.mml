@@ -1,0 +1,200 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Import a UniSyn lexicon"/>
+
+
+
+<p>
+	Use this page to import a UniSyn lexicon. Fill in the following information (defaults
+	entered for English) and press Next.
+</p>
+
+<p>
+	The typical UniSyn line format is:
+</p>
+
+<p><blockquote>
+	zimbabwe's:<italic>1</italic>:NNP|POS/NNP|VBZ: { z i m . b * aa b . w iy }&gt; z &gt; :<italic>{zimbabwe}&gt;'s&gt;:8</italic><br/>
+	zimbabwe:<italic>1</italic>:NNP: { z i m . b * aa b . w iy } :<italic>{zimbabwe}:751</italic>
+</blockquote></p>
+
+<p>
+	Parts in italic (above) are ignored by the current conversion implementation.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Phone symbols</xtrheader>
+	<tr>
+		<td>
+			<bold>File</bold> - Type in the UniLex file name (full path), or press "Dialog".
+		</td>
+		<td>
+			<bold><edit maxchars=256 width=100% name=file/></bold><br/>
+			<button name=filedialog>Dialog</button>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Phone symbols</xtrheader>
+
+	<tr>
+		<td>
+			<bold>Phones that accept a stress</bold> - List all of the phones that accept a stress
+			on the right, with a new phone per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=phonestress/></bold></td>
+	</tr>
+
+
+
+	<tr>
+		<td>
+			<bold>Phones that have NO stress</bold> - List all of the phones that have NO stress
+			on the right, with a new phone per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=phonenostress/></bold></td>
+	</tr>
+	
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=phonespaces>
+			<bold>Expect space after phones</bold><br/>
+			If checked, phones will need to have a space (or non-phone symbol) after them. If unchecked,
+			phones can run together without spaces.
+		</xChoiceButton>
+
+		<xChoiceButton style=x checkbox=true name=stresssyllable>
+			<bold>Stress affects the entire syllable</bold><br/>
+			If checked, a stress mark affects all the vowels in the syllable. If unchecked,
+			the stress mark only affects the next vowel.
+		</xChoiceButton>
+	</td></tr>
+
+	<tr>
+		<td>
+			<bold>Primary stress symbol</bold> - Vowels (or phones that accept stress) occurring after
+			this sumbol will be marked as stressed.
+		</td>
+		<td><bold><edit maxchars=64 multiline=true width=100% name=stress0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Secondary stress symbol</bold> - Vowels (or phones that accept stress) occurring after
+			this sumbol will be marked with a secondary stress.
+		</td>
+		<td>
+			<bold><edit maxchars=64 multiline=true width=100% name=stress1/></bold><br/>
+			<button checkbox=true style=x name=stressremap>Remap to primary stress</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tertiary stress symbol</bold> - Vowels (or phones that accept stress) occurring after
+			this sumbol will be marked with a tertiary stress. (They are always remapped to secondary
+			stress, or primary if that's not available.)
+		</td>
+		<td>
+			<bold><edit maxchars=64 multiline=true width=100% name=stress2/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Syllable boundary symbol</bold> - Marks the start of a new syllable (and clearing the
+			stress flag).
+		</td>
+		<td><bold><edit maxchars=64 multiline=true width=100% name=stress3/></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Symbols to ignore</bold> - Ignore these symbols, such as morph boundaries (which aren't
+			used at the moment). One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=symbolignore/></bold></td>
+	</tr>
+
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Parts of speech</xtrheader>
+	<tr>
+		<td>
+			<bold>Nouns</bold> - Part-of-speech symbols converted to nouns. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSNoun/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pronouns</bold> - Part-of-speech symbols converted to pronouns. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSPronoun/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Adjectives</bold> - Part-of-speech symbols converted to adjectives. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSAdjective/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Preposition</bold> - Part-of-speech symbols converted to prepositions. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSPreposition/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Articles</bold> - Part-of-speech symbols converted to articles. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSArticle/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Verbs</bold> - Part-of-speech symbols converted to verbs. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSVerb/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Adverbs</bold> - Part-of-speech symbols converted to adverbs. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSAdverb/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Auxiliary verbs</bold> - Part-of-speech symbols converted to auxiliary verbs. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSAuxVerb/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Conjunctions</bold> - Part-of-speech symbols converted to conjunctions. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSConjunction/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Interjections</bold> - Part-of-speech symbols converted to interjections. One symbol per line.
+		</td>
+		<td><bold><edit maxchars=10000 width=100% multiline=true name=POSInterjection/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xChoiceButton style=righttriangle name=next>
+	<bold>Next</bold><br/>
+	Press this once you have filled in all the above information.
+	<p/>
+	After importing the file, you may need to rename some phonemes (since some non-alphabetic symbols aren't allowed).
+	You will also need to match the phonemes to their English equivalent so that some algorithms (such
+	as lip sync) work properly.
+</xChoiceButton>
+
+<xbr/>
+
+<xChoiceButton name=defaults>
+	<bold>Restore defaults</bold><br/>
+	Press this to restore the English defaults.
+</xChoiceButton>
+

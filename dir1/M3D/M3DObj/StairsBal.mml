@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase balustrades"/>
+
+<p>
+	A staircase can have balustrades on the left, right, and center. To add or
+	remove a balustrade click on its checkbox. To edit, press the edit button.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Balustrades</xtrheader>
+	<tr>
+		<td width=20% align=center>
+			<button style=x checkbox=true name=balon0/>
+		</td>
+		<td width=80%>
+			<xchoicebutton valign=center name=edit0 href=edit0>Modify the <bold>left</bold> balustrade</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td width=20% align=center>
+			<button style=x checkbox=true name=balon1/>
+		</td>
+		<td width=80%>
+			<xchoicebutton valign=center name=edit1 href=edit1>Modify the <bold>center</bold> balustrade</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td width=20% align=center>
+			<button style=x checkbox=true name=balon2/>
+		</td>
+		<td width=80%>
+			<xchoicebutton valign=center name=edit2 href=edit2>Modify the <bold>right</bold> balustrade</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>

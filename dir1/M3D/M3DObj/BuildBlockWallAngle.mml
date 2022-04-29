@@ -1,0 +1,30 @@
+<?Include resource=500?>
+<PageInfo index=false title="Change the wall angle"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+
+<td>
+	<p>
+		Please type in an <bold>angle</bold> for the wall (or veranda). Positive numbers cause the wall
+		section to lean outwards while negative numbers are inwards.
+	</p>
+	<font color=#000000><xEditOneLine selall=true defcontrol=true name=angle/></font>
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

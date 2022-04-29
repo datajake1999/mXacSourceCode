@@ -1,0 +1,31 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Animation scene and camera"/>
+
+<button posn=edgeright style=rightarrow href=next><bold>Next</bold></button>
+
+<p>
+	Select the scene and camera within the scene. Press "Next" when you have done
+	so.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Scene and camera</xtrheader>
+	<tr>
+		<td>
+			<bold>Scene</bold> - Select the scene to animate:<br/>
+			<listbox width=85% height=50% vscroll=scenescroll name=scene>
+			</listbox>
+			<scrollbar orient=vert height=50% name=scenescroll/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Camera</bold> - Select the camera to shoot the scene from:<br/>
+			<listbox width=85% height=50% vscroll=camerascroll name=camera>
+			</listbox>
+			<scrollbar orient=vert height=50% name=camerascroll/>
+		</td>
+	</tr>
+</xtablecenter>

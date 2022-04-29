@@ -1,0 +1,22 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Selection color"/>
+
+<p>
+	<xSN/> changes the color and appearance of selected objects so that you
+	know they're selected. Use this page to choose their appearnace.
+</p>
+
+<xChoiceButton style=x checkbox=true name=bound>
+	<bold>Show bounding box</bold><br/>
+	If this is checked then the objects' bounding boxes will be displayed if they're
+	selected. The bounding box lets you see how large they are, even if part of the
+	object is hidden.
+</xChoiceButton>
+
+<xChoiceButton style=righttriangle name=changeselcolor>
+	<bold>Selection color</bold><br/>
+	Objects that are selected are outlined in this color and are tinted using it.
+</xChoiceButton>
+<p align=right><xStatusColor width=33% name=selcolor/></p>
+

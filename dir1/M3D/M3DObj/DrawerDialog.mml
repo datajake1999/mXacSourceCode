@@ -1,0 +1,110 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Drawer settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Drawer</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=opening0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=opening1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - How long the drawer is. The cabinet must be at least
+			this depth.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=opening2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend the drawer face</bold> - Use this to extend the drawer's face beyond
+			the opening. If any of these values are non-zero the draw will no longer sit
+			flush with the cabinet front.
+		</td>
+		<td align=right><bold>
+			L: <edit maxchars=32 width=80% name=extend0/><br/>
+			R: <edit maxchars=32 width=80% name=extend1/><br/>
+			T: <edit maxchars=32 width=80% name=extend2/><br/>
+			B: <edit maxchars=32 width=80% name=extend3/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Face thickness</bold> - How thick the drawer face is.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=thick0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tray thickness</bold> - Thickeness of the drawer's tray
+			and walls.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=thick1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tray height</bold> - The height of the drawer's tray as a percentage
+			of the opening size.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=opening3/></td>
+	</tr>
+</xtablecenter>
+
+
+
+<!xComboKnobType>
+	<combobox cbheight=150 width=100% sort=false macroattribute=1>
+		<elem name=30><bold>Cabinet handle 1</bold></elem>
+		<elem name=31><bold>Cabinet handle 2</bold></elem>
+		<elem name=32><bold>Cabinet handle 3</bold></elem>
+		<elem name=33><bold>Cabinet handle 4</bold></elem>
+		<elem name=34><bold>Cabinet handle 5</bold></elem>
+		<elem name=35><bold>Cabinet handle 6</bold></elem>
+		<elem name=36><bold>Cabinet handle 7</bold></elem>
+		<elem name=0><font color=#800000><italic><bold>None</bold></italic></font></elem>
+	</combobox>
+</xComboKnobType>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Handle settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Select the handle's style.
+		</td>
+		<td><xcomboknobtype name=knobstyle/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>From the top</bold> - Distance of the handle from the top of
+			the drawer.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=knobfromtop/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rotation</bold> - Rotate the knob by this many degrees.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=knobrotate/></bold></td>
+	</tr>
+</xtablecenter>

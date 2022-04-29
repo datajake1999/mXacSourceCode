@@ -1,0 +1,84 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Scanning in a leaf"/>
+
+<xPageTitle>
+	Tutorial - Scanning in a leaf
+</xPageTitle>
+
+<p>
+	We'll start with leaves:
+</p>
+
+<ol>
+	<li>
+		Go out in the yard and <bold>pick a leaf</bold> off the tree you wish to create.
+	</li>
+	<li>
+		Place it on your scanner and <bold>scan in the image of the leaf.</bold> (Make sure not to get any sap
+		on your scanner's glass plate.) Use your favorite scanning software.
+	</li>
+	<li>
+		In your favorite scanning software, <bold>save the image</bold> as a
+		small (approximately 100 x 100 pixel) JPEG image.
+	</li>
+	<li>
+		In <xSN/>, press the <xButtonLibrary/> button.
+	</li>
+	<li>
+		Select the <bold>"Textures"</bold> menu item.
+	</li>
+	<li>
+		In the "Textures library" page, <bold>switch to</bold> the "Images" category, and
+		"Leaves" sub-category.
+	</li>
+	<li>
+		Press the <bold>"Create a new texture from scratch"</bold> button.
+	</li>
+	<li>
+		In the "Create a new texture from scratch" page, press the <bold>"Use
+		a .BMP or .JPG file"</bold> button.
+	</li>
+	<li>
+		The "Bitmap or JPEG image" dialog will appear. Under the "General" ground,
+		press the <bold>"Browse"</bold> button and load in your image.
+	</li>
+	<li>
+		To test that your image is loaded, <bold>click on</bold> the white box
+		under the "Sample" group.
+	</li>
+	<li>
+		In the "Transparency" group, <bold>check the "Use transparency"</bold> button.
+		When your leaf texture is drawn this will cause the white areas to be transparent.
+		If the background is not white, then make sure to set the appropriate color
+		in using the <bold>"Change transparency color"</bold> button.
+	</li>
+	<li>
+		You may wish to <bold>change the "Material" settings</bold> for the leaf; some leaves are glossy
+		like "Paint, gloss" while others are "Matte".
+	</li>
+	<li>
+		Press the <bold>"Back"</bold> button.
+	</li>
+	<li>
+		When asked if you wish to save your texture, press <bold>"Yes"</bold>.
+	</li>
+	<li>
+		Back in the "Texture library" page, you may wish to rename your texture
+		by pressing the <bold>"Rename selected texture"</bold> button.
+	</li>
+	<li>
+		When you're all done, <bold>close</bold> the "Texture library" dialog.
+		You now have the beginnings of a leaf.
+	</li>
+</ol>
+
+<p>
+	Alternatively, you can always use a leaf image that's already there; just
+	look in the "Images", "Leaves" section of your textures.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:640><bold>Next</bold></button>
+</p>
+

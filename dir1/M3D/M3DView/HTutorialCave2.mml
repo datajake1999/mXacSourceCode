@@ -1,0 +1,51 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating cave segments"/>
+
+<xPageTitle>
+	Tutorial - Creating cave segments
+</xPageTitle>
+
+<p>
+	To create a cave segment (a metaball):
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		In the "Add a new object" dialog, <bold>switch to</bold> the "Caves" major category,
+		and "Cave" minor category.
+	</li>
+	<li>
+		Select the <bold>"Cave 1"</bold> object; it looks a sphere.
+	</li>
+	<li>
+		<bold>Add it</bold> to the landscape.
+	</li>
+	<li>
+		<bold>Repeat,</bold> and add another copy of the cave nearby, so they're touching.
+	</li>
+	<li>
+		Use <xButtonSelRegion/> to select both cave segments.
+	</li>
+	<li>
+		Press <xButtonObjMerge/> to combine the two cave segments into one object.
+	</li>
+	<p>
+		You'll notice that the two spheres have combined into one object.
+		You can combine as many cave segments together as you wish.
+	</p>
+</ol>
+
+<p>
+	If you use <xButtonObjDeconstruct/>, you will break the cave back up into
+	its individual cave segments.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:936><bold>Next</bold></button>
+</p>
+
+

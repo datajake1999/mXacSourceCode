@@ -1,0 +1,60 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Stalagtites"/>
+
+<xPageTitle>
+	Tutorial - Stalagtites
+</xPageTitle>
+
+<p>
+	Adding stalagtites to your cave is easy:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click</bold> on a cave segment.
+	</li>
+	<li>
+		In the "Cave settings" page, click on <bold>Modify this texture</bold>.
+	</li>
+	<li>
+		In the "Texture settings" page, click on <bold>Stalagtites (ceiling)</bold>.
+	</li>
+	<li>
+		In the "Canopy" page, press the <bold>Add new object</bold>.
+	</li>
+	<li>
+		This brings up the standard "Add a new object" page. Look under the
+		"Caves" major category, followed by the "Stalagmites" minor category and
+		add a stalagmite. (Stalagmites come from the ground upwards.)
+	</li>
+	<li>
+		You'll see a number of stalagmites drawn on the ceiling of your cave,
+		pointing upwards. To make them point downwards, <bold>check the
+		"Rotate objects down"</bold> button in the "Canopy" page. Now
+		they're stalagtites.
+	</li>
+	<li>
+		Add a few more objects to the stalagtites list using
+		the <bold>Add new object</bold> button.
+	</li>
+	<li>
+		To add "Stalagmites", return to the "Texture settings" page and
+		click on the <bold>Stalagmites (ground)</bold> button.
+	</li>
+	<li>
+		It works just like the "Stalagtites" page except it adds stalagmites
+		to the ground, <bold>directly underneath</bold> the stalagtites.
+	</li>
+	<li>
+		If you don't want stalagmites directly underneath stalagmites, or you
+		want rocks scattered about, etc. then add objects to some of the
+		other "canopies".
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:940><bold>Next</bold></button>
+</p>
+
+

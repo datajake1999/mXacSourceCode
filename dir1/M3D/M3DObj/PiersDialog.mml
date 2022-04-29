@@ -1,0 +1,18 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Pier settings"/>
+
+<xChoiceButton href=balappear name=balappear>
+	<bold>Appearance</bold><br/>
+	Change the style and appearance of the pier.
+</xChoiceButton>
+
+<xChoiceButton href=corners>
+	<bold>Corners</bold><br/>
+	Use this to add or remove corners to your pier perimeter, or to curve it.
+</xChoiceButton>
+
+<xChoiceButton href=balopenings name=balopenings>
+	<bold>Openings</bold><br/>
+	Add or remove openings in the pier perimeter.
+</xChoiceButton>

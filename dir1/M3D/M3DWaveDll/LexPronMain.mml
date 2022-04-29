@@ -1,0 +1,180 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify pronunciations"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Word list (<<<NUMWORDS>>> entries)</xtrheader>
+	<tr><td>
+		<<<$WORDLIST>>>
+		<p/><italic>Click on a word to modify it.</italic>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<xChoiceButton href=add>
+	<bold>Add a new word</bold><br/>
+	Press this to add a new word to your lexicon.
+</xChoiceButton>
+
+<xChoiceButton href=recommend>
+	<bold>Recommend words that need pronunciations</bold><br/>
+	This tool reads in a text file and identifies words that appear in the text file
+	but which do not occur in the lexicon. It shows you this list of words and lets
+	you edit their pronunciations.
+	<p/>
+	Tip: It's best to have a TTS voice around to review pronunciations since then
+	your can hear the mispronunciations.
+</xChoiceButton>
+
+<xbr/>
+
+<xSectionTitle>Less commonly used options</xSectionTitle>
+
+<xChoiceButton href=reviewpron>
+	<bold>Review word pronunciations</bold><br/>
+	If you're creating your own language, or using someone else's lexicon but it seems
+	to have a lot of mistakes then this tool is for you.
+	The "review word pronunciation" tool lets you quickly (or as quickly as possible) listen
+	to all the pronunciations in a lexicon and correct the bad ones.
+	<p/>
+	You can either review the entire lexicon, or just the words appearing in a text
+	file. When you press this button a dialog will appear asking you for a text file
+	to read. If you select a file then only those words appearing in the file will
+	be reviewed (so you don't need to waste your time on words that won't be used).
+	If you press cancel then the entire lexicon will be reviewed.
+	<p/>
+	Tip: It's best to have a TTS voice around to review pronunciations since then
+	your can hear the mispronunciations.
+</xChoiceButton>
+
+<xChoiceButton href=reviewpronlist>
+	<bold>Review word pronunciations starting at the current word list</bold><br/>
+	This review tool lets you review all words starting with the top word in
+	the word list (above).
+</xChoiceButton>
+
+<xChoiceButton href=reviewfix>
+	<bold>Review words based on pre/suffix</bold><br/>
+	This review tool lets you review all words starting with a prefix, containing
+	a root, or ending with a suffix. It's a useful tool for ensuring consistency
+	in your lexicon. For example: You call review all words ending in "ing" to make
+	sure that all the "ing" portions of the word are pronounced the same.
+	<p/>
+	Make sure to type in the text you're looking for along with its position in
+	the word below:
+</xChoiceButton>
+<p align=right>
+	Look for <edit maxchars=32 width=33% name=find/>
+	<bold><combobox width=33% cbheight=150 name=findloc>
+		<elem name=-1>at the start of the word</elem>
+		<elem name=0>anywhere in the word</elem>
+		<elem name=1>at the end of the word</elem>
+	</combobox></bold>
+</p>
+
+
+<xChoiceButton href=changefix>
+	<bold>Change pre/suffix in bulk</bold><br/>
+	Many dialects vary unfiormly in their prefixes or suffixes. For eample: In Enligh
+	the suffix "ing" can be pronounced as "eeng", "in", "een", or "ih-ng" depending upon
+	the dialect. You can use this tool to change all prefixes or suffixes with
+	a given pronunciation to a new pronunciation.
+	<p/>
+	<bold>Warning:</bold> Before running this back up the lexicon just in case you
+	make a mistake. After running it review your changes.
+	<p/>
+	Make sure to type in the text you're looking for along with its position in
+	the word below:
+</xChoiceButton>
+<p align=right>
+	Look for the text: <edit maxchars=32 width=33% name=textbulk/><br/>
+	Using the phonemes: <edit maxchars=32 width=33% name=phonebulk/><br/>
+	Where: <bold><combobox width=33% cbheight=150 name=locbulk>
+		<elem name=0>at the start of the word</elem>
+		<elem name=1>at the end of the word</elem>
+	</combobox></bold><br/>
+	Convert to the phonemes: <edit maxchars=32 width=33% name=phonetobulk/>
+</p>
+
+<xChoiceButton href=generatefix>
+	<bold>Generate prefix in bulk</bold><br/>
+	Loops through all the words in the lexicon, and tries to reduce the word to
+	a prefix plus zero or more phonemes. To determine a prefix, this looks at all
+	words that have the same starting string, and tries to find an exact
+	pronunciation match.
+	<p/>
+	For example: "walker's" would find "walker" and create the pronuncation
+	"|walker z".
+	<p/>
+	<bold>Warning:</bold> Before running this back up the lexicon just in case you
+	make a mistake. After running it review your changes.
+</xChoiceButton>
+
+<xChoiceButton href=reviewPOS>
+	<bold>Review word part-of-speech</bold><br/>
+	Use this to review the part-of-speech for words in bulk.
+	<p/>
+	You can either review the entire lexicon, or just the words appearing in a text
+	file. When you press this button a dialog will appear asking you for a text file
+	to read. If you select a file then only those words appearing in the file will
+	be reviewed (so you don't need to waste your time on words that won't be used).
+	If you press cancel then the entire lexicon will be reviewed.
+</xChoiceButton>
+
+<xChoiceButton href=reviewPOSlist>
+	<bold>Review word parts-of-speech starting at the current word list</bold><br/>
+	This review tool lets you review all words starting with the top word in
+	the word list (above).
+</xChoiceButton>
+
+<xChoiceButton href=reviewPOSfix>
+	<bold>Review word part-of-speech based on pre/suffix</bold><br/>
+	This review tool lets you review all words starting with a prefix, containing
+	a root, or ending with a suffix. It's a useful tool for ensuring consistency
+	in your lexicon. For example: You call review all words ending in "ly" to make
+	sure they're all adverbs.
+	<p/>
+	Make sure to type in the text you're looking for along with its position in
+	the word below:
+</xChoiceButton>
+<p align=right>
+	Look for <edit maxchars=32 width=33% name=POSfind/>
+	<bold><combobox width=33% cbheight=150 name=POSfindloc>
+		<elem name=-1>at the start of the word</elem>
+		<elem name=0>anywhere in the word</elem>
+		<elem name=1>at the end of the word</elem>
+	</combobox></bold>
+</p>
+
+<xChoiceButton href=changePOSfix>
+	<bold>Change part-of-speech based on pre/suffix in bulk</bold><br/>
+	The part-of-speech of many words can be detected by their word endings.
+	For example: In English, words ending in "ly" tend to be adverbs.
+	You can use this tool to change all words with matching prefixes or suffixes
+	to a new part-of-speech.
+	<p/>
+	<bold>Warning:</bold> Before running this back up the lexicon just in case you
+	make a mistake. After running it review your changes.
+	<p/>
+	Make sure to type in the text you're looking for along with its position in
+	the word below:
+</xChoiceButton>
+<p align=right>
+	Look for the text: <edit maxchars=32 width=33% name=POStextbulk/><br/>
+	Where: <bold><combobox width=33% cbheight=150 name=POSlocbulk>
+		<elem name=0>at the start of the word</elem>
+		<elem name=1>at the end of the word</elem>
+	</combobox></bold><br/>
+	Convert to part-of-speech: <scrollbar width=25% orient=horz min=0 max=10 name=posScroll/><status width=25% height=30 name=posStat/>
+</p>
+
+<xChoiceButton href=clearall>
+	<bold>Clear all words</bold><br/>
+	This permenantly removes all words from the lexicon.
+</xChoiceButton>
+

@@ -1,0 +1,250 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Hair and fur"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture width</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Texture height</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Hair vs. fur</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=fur>
+			<bold>Draw as fur</bold><br/>
+			If this is checked the texture will be drawn as fur. In unchecked it will be
+			drawn as hair. When drawing fur, the "Hair only" settings will be ignored,
+			and when drawing hair, the "Fur only" settings will be ignored.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Hairs (Both hair and fur)</xtrheader>
+	<tr>
+		<td>
+			<bold>Number of hairs</bold> - The number of hairs to draw.
+		</td>
+		<td><edit maxchars=64 width=100% name=numhairs/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum hair thickness</bold> - Minimum thickness of a hair, in meters.
+		</td>
+		<td><edit maxchars=64 width=100% name=hairthick0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum hair thickness</bold> - Maximum thickness of a hair, in meters.
+		</td>
+		<td><edit maxchars=64 width=100% name=hairthick1/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton0>
+				<bold>Hair color 1</bold><br/>
+				Click this to change the color of the hair.
+			</xChoiceButton>
+		</td>
+		<td><xStatusColor width=100% name=colorcolor0/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton1>
+				<bold>Hair color 2</bold><br/>
+				Click this to change the color of the hair.
+			</xChoiceButton>
+		</td>
+		<td><xStatusColor width=100% name=colorcolor1/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton2>
+				<bold>Hair color (odd hairs)</bold><br/>
+				Click this to change the color of the hair. This affects the color of "odd" hairs,
+				such as occasional grey hairs.
+			</xChoiceButton>
+		</td>
+		<td><xStatusColor width=100% name=colorcolor2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Likelihood of odd hairs</bold> - Use odd hairs to create the occasional grey
+			hair. The further to the right, the more likely that an odd hair will be drawn.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=hairoddprob/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Background</xtrheader>
+	<tr><td>
+		Unless you draw a lot of hairs, they won't completely cover the background. You should
+		specify a background color that represents the "norm" for the hair colors. You
+		might want to make it a bit darker to make it look shadowed.
+		<p/>
+		<xChoiceButton style=x checkbox=true name=transparent>
+			<bold>Background is transparent</bold><br/>
+			Use this if you wish to draw a thin layer of hairs which can be seen through.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton3>
+				<bold>Background color</bold><br/>
+				Click this to change the color of the background.
+			</xChoiceButton>
+		</td>
+		<td><xStatusColor width=100% name=colorcolor3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Blend deep hairs with background color</bold> - This setting causes
+			the lower hairs to be blended with the background color, simulating shadowing.
+			The further to the right, the more that lower hairs will be blended.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=blendbackground/></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Fur only</xtrheader>
+	<tr>
+		<td>
+			<bold>Minimum length</bold> - Minimum length of the hairs in meters/feet.
+		</td>
+		<td><edit maxchars=64 width=100% name=furlength0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum length</bold> - Maximum length of the hairs in meters/feet.
+		</td>
+		<td><edit maxchars=64 width=100% name=furlength1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum vertical angle</bold> - Minimum angle of hairs in degrees. 0 is lying
+			parallel to the skin, 90 is perpendicular.
+		</td>
+		<td><edit maxchars=64 width=100% name=furangleud0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum vertical angle</bold> - Maximum angle of hairs in degrees.
+		</td>
+		<td><edit maxchars=64 width=100% name=furangleud1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal angle range</bold> - Number of degrees left/right that
+			the fur can be. The larger the number the more disordered the fur looks.
+		</td>
+		<td><edit maxchars=64 width=100% name=furanglelr/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Hair only</xtrheader>
+	<tr>
+		<td>
+			<bold>Hair per layer</bold> - When the hairs are drawn they are grouped together
+			into layers and laid down as a group. Hairs in a layer tend to lie flat.
+			The more hairs you have per layer the
+			more regular the hairs will look. They will also have less depth.
+		</td>
+		<td><edit maxchars=64 width=100% name=hairperlayer/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Points of waviness</bold> - The more points of waviness, the shorter the
+			kinks in the hairs. You must have at least 1 point.
+		</td>
+		<td><edit maxchars=64 width=100% name=hairwavepoint/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance of waviness</bold> - This controls how much a point of waviness
+			can vary left/right, in meters/feet. The larger this number the more wavy the
+			hair.
+		</td>
+		<td><edit maxchars=64 width=100% name=hairwaviness/></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=flatten>
+			<bold>Flatten this texture</bold><br/>
+			If checked, any bump-mapping (roughness) to the text will be pre-rendered.
+			This reduces quality somewhat, but significantly speeds up drawing times.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

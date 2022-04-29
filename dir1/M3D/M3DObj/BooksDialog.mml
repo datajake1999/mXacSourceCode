@@ -1,0 +1,111 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Row-of-books settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Standard book</xtrheader>
+	<tr>
+		<td>
+			<bold>Thickness</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=booksize0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Length</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=booksize1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold>
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=booksize2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Page indent</bold> - Amount the pages are indented from the book's cover.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=pageindent/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Binging bulge</bold> - Move the slider to the right to make the binding
+			bulge out (as in hard-cover books), or to the left to make the binding
+			bulge in (as in paperbacks).
+		</td>
+		<td><scrollbar orient=horz width=100% min=-25 max=25 pos=0 name=bindout/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Variation amongst books</xtrheader>
+	<tr>
+		<td>
+			<bold>Thickness</bold>
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=80 pos=0 name=bookvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size</bold>
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=0 name=bookvar1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Variation in the ratio of the length to the height
+			of the book.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=50 pos=0 name=bookvar2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Indent</bold> - How evenly the books are aligned with the edge
+			of the shelf.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=300 pos=0 name=bookvar3/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolor0>
+				<bold>Color variation 1</bold><br/>
+				Click on the button to change the color.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=color0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolor1>
+				<bold>Color variation 2</bold><br/>
+				Click on the button to change the color.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=color1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecolor2>
+				<bold>Color variation 3</bold><br/>
+				Click on the button to change the color.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=color2/>
+		</td>
+	</tr>
+</xtablecenter>
+

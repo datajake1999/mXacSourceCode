@@ -1,0 +1,58 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Bevelling"/>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Surface bevelling</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Left-edge bevel</bold> - In degrees.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=left/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Right-edge bevel</bold> - In degrees.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=right/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Top-edge bevel</bold> - In degrees.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=top/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Bottom-edge bevel</bold> - In degrees.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=bottom/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<p>
+	Surfaces can be bevelled on the left, right, top, and bottom edges. (The
+	relative terms right, left, up, and down are assuming that you're looking
+	at side A. If you're looking at side B then swap left with right.)
+	For a right
+	angle enter "0" degrees. Positive numbers (between 0 and 89) will bevel the
+	surface inwards (looking at side A), while negative numbers (between -1 and -89)
+	will bevel the surface outwards.
+</p>
+
+<p>
+	Side "A" is usually the external side. If you're uncertain which side is
+	"A" and which is "B" then type in some numbers and see if they make the changes
+	you wish. If not, try the opposite.
+</p>

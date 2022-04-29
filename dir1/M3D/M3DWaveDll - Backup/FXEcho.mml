@@ -1,0 +1,74 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Echo and reverb"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<p align=center>
+	<image width=304 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+	Echo and reverb graph
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Echo and reverb</xtrheader>
+	<tr>
+		<td>
+			<bold>Number of surfaces</bold> - The more surfaces the echo can reflect
+			off, the muddier it will be (and the more it becomes reverb).
+		</td>
+		<td><scrollbar orient=horz width=100% min=1 max=7 name=surfaces/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average delay</bold> - Average delay between the sound and a reflection.
+		</td>
+		<td><scrollbar orient=horz width=100% min=1 max=200 name=delay/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation in delay</bold> - Amount that the delay times vary from
+			one to another. Further to the right results in more variation.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 name=delayvar/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Decay</bold> - Amount that the echo's volume decays with each echo.
+			Futher to the right causes more decay.
+		</td>
+		<td><scrollbar orient=horz width=100% min=1 max=99 name=decay/></td>
+	</tr>
+	<comment><tr>
+		<td>
+			<bold>Sharpness</bold> - How sharp the echo is off a surface. Further to
+			the right results in sharper echos.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 name=sharpness/></td>
+	</tr></comment>
+	<tr>
+		<td>
+			<bold>Echo limit</bold> - In seconds. Maximum amount of time to calculate the echo for.
+			The larger the number the more realistic the echo but the longer it takes
+			to compute the echo.
+		</td>
+		<td><edit width=100% maxchars=32 name=time/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Version</bold> - Typing in a different number will produce a slightly
+			different echo.
+		</td>
+		<td><edit width=100% maxchars=32 name=seed/></td>
+	</tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

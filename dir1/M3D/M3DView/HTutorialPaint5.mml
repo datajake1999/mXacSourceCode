@@ -1,0 +1,93 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Painting beyond colors"/>
+
+<xPageTitle>
+	Tutorial - Painting beyond colors
+</xPageTitle>
+
+<p>
+	You may have noticed that when you paint the bricks onto your surface the color
+	is traferred, but they still don't look quite right; they appear flat. This is
+	because the surface of a brick is pitted. In 3D graphics terms this is called
+	a "bump map"... "bump" means that the surface isn't flat, "map" means that the surface's
+	bumps are determined by an image.
+</p>
+
+<p>
+	When you created the texture you only checked the "Color map" option, which means
+	that the texture only has color. It doesn't remember anything about bumps.
+	To paint a brick texture properly, you need to change this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonPVDialog/> tool in the Painting view.
+	</li>
+	<li>
+		<bold>Click on</bold> the object you're painting.
+	</li>
+	<li>
+		In the "Texture settings" dialog that appears, <bold>check "Use a bump map"</bold>.
+		You could check some of the other maps too, but for the purpose of this tutorial
+		you won't need them. (If you don't need a map then don't add it. Each map uses
+		valuable memory and disk space.)
+	</li>
+	<li>
+		Scroll down to the bottom of the dialog and change the <bold>"Bump range"</bold> to
+		about 50mm (or 2"). This setting controls how deep the bumps can be. Because the
+		distance between the front of the brick and the mortar can be quite steep, a large
+		distance is called for here. If you were painting bumps for a leather texture you'd
+		want something less, like 5mm, because leather is fairly smooth.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog box.
+	</li>
+	<li>
+		Select the <xButtonBrush32/> tool and <bold>paint</bold> again. This time
+		the bricks won't look so flat.
+	</li>
+</ol>
+
+<p>
+	Now that you have a texture with a bump map, you might want to add a few more items
+	to your palette:
+</p>
+
+<ol>
+	<li>
+		<bold>Double click</bold> the "Double-click to add a new tracing paper" entry in
+		the palette.
+	</li>
+	<li>
+		In "Add a new tracing paper" press the <bold>"Bump (increase height)"</bold> button.
+	</li>
+	<p>
+		The dialog will close with "Bump (increase height)" added to the palette.
+	</p>
+	<li>
+		<bold>Double-click</bold> the "Double-click to add.." option
+		again and then press <bold>"Bump (decrease height)"</bold>.
+	</li>
+	<li>
+		Select a smaller brush, such as <xButtonBrush8/>.
+	</li>
+	<li>
+		With either "Bump (increase height)" or "Bump (decrease height)" selected in
+		the palette, <bold>paint</bold> onto the object.
+	</li>
+	<p>
+		You may not notice at first, but instead of painting colors, you're actually
+		painting "bumps", adding or removing to the height of the surface. The bumps
+		will be most noticable in the highlights (shiny spot) of your object.
+	</p>
+	<li>
+		You can move the highlight around by selecting the <xButtonGroundSun/> tool,
+		and <bold>clicking</bold> on different locations in the painting area.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:809><bold>Next</bold></button>
+</p>
+

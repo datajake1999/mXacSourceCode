@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Bone association 1"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Bone association 1
+</xPageTitle>
+
+<p>
+	Polygon meshes, like any other object, can be attached to bones. However,
+	polygon meshes have a special feature that allows you to control
+	the "bone weighting" at each vertex. The bone weighting controls how
+	how much a given bone affects the surface. The bone weighting for the
+	portion of the polygon mesh in the middle of a bone (such as on the arm) is
+	fairly obvious - it's 100% affected by the arm bone. Weighting is more
+	difficult at the joints, like the shoulder. It's in these places that
+	the polygon mesh's bone association mode becomes useful.
+	The computer graphics term for this is "skinning".
+</p>
+
+<p>
+	To procede with this tutorial you need to create a simple skeleton and
+	position it so its envelopes cover the polygon mesh.
+	(If you haven't gone through the <a href=r:914>bones tutorial</a> you should do so before
+	proceeding futher.)
+	Once you have done that, continue with the following steps:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPMModeBone/> button to switch to the bone association
+		mode.
+	</li>
+	<li>
+		The first time you enter the bone association mode <xSN/> will automatically
+		generate a bone weight map from the bones in the object. If you entered this
+		mode before you properly placed the bone then
+		press the <xButtonPMSideExtra/> button and
+		select <bold>"Restore automatic bone weights"</bold> from the menu. This
+		will rebuild the bone weights from the bones.
+	</li>
+	<li>
+		If the list item "Click to display all bones" is not highlighted
+		then <bold>select</bold> it.
+	</li>
+</ol>
+
+<p>
+	The main display of the polygon mesh editor should not be showing a colored
+	version of your polygon mesh. The colors indicate which bones affect what
+	regions of the polygon mesh. Looking at the list on the right side of the screen
+	will show you the bone names.
+</p>
+
+<p>
+	Any black areas are completely unaffected by the bones. You will need to paint
+	these regions in so that the entire polygon mesh is affected by the bones.
+</p>
+
+<p>
+	If you wish to see what areas are affected by bone, exclusive of the other bones,
+	just <bold>click on</bold> the bone name in the list.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:911><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:914>Bones tutorial</a></li>
+</xul>

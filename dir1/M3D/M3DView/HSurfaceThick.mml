@@ -1,0 +1,28 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Wall, roof, and floor thickness"/>
+
+<xPageTitle>
+	Wall, roof, and floor thickness
+</xPageTitle>
+
+<p>
+	To control the thickness (including the framing and cladding) of a wall, floor, or roof:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the surface.
+	</li>
+	<li>
+		In the "Surface settings" page press the <bold>"Thickness"</bold> button.
+	</li>
+	<li>
+		The "Thickness" page will appear. Type in numbers for the structure thickness,
+		and cladding thickness.
+	</li>
+</ol>
+

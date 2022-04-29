@@ -1,0 +1,33 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Looking more like caves"/>
+
+<xPageTitle>
+	Tutorial - Looking more like caves
+</xPageTitle>
+
+<p>
+	The caves object provides some other settings that you can use to make your
+	cave look more like a cave:
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonObjDialog/> tool and clicking on a cave segment, you'll
+		find an option for <bold>Rough wall</bold> near the bottom of the dialog.
+		Fiddling with thse settings will roughen up the cave segments (metaballs)
+		and make them look a lot more cave-like.
+	</li>
+	<li>
+		You can associate <bold>stalagtites, stalagmites, rocks, mushrooms,</bold> or any other
+		objects with texture groups in a cave. This will cause the objects to
+		be randomly placed and automatically drawn. For more information see the next
+		page.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:939><bold>Next</bold></button>
+</p>
+
+

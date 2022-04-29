@@ -1,0 +1,40 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<p>
+	Balustrades have several different types of control points. Displaying all of
+	them at once would make the balustrade too busy, so only one type of control
+	point is displayed at a time. Use this page to select which one.
+</p>
+
+<xChoiceButton style=check radiobutton=true group=corner,openings name=corner>
+	<bold>Corner</bold><br/>
+	This lets you move the corners/ends of the balustrade around.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=corner,openings name=openings>
+	<bold>Openings</bold><br/>
+	If you have any openings in the balustrade then you can move and resize them.
+</xChoiceButton>
+
+<xbr/>
+
+<p>
+	Below are some options that affect the movement of <bold>corner</bold> control
+	points.
+</p>
+
+<xChoiceButton style=x checkbox=true name=forcevert>
+	<bold>Always vertical</bold><br/>
+	If this is checked, the top of the balustrade is always aligned over the bottom.
+	If not, you can move the top and bottom independently, creating skewed balustrades.
+</xChoiceButton>
+
+<xChoiceButton style=x checkbox=true name=forcelevel>
+	<bold>Always level</bold><br/>
+	If this is checked, the bottom of the balustrade always stays level with the
+	floor/ground.
+	If not, you can move the the bottom control points up/down to allow for ramps
+	or other non-level floors.
+</xChoiceButton>

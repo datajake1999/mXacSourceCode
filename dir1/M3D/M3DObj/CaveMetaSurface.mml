@@ -1,0 +1,111 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Texture settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Info</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - Texture's name, for your own uses.
+		</td>
+		<td>
+			<edit width=100% maxchars=60 name=name/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<!xComboApplication>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Around the axis, repeat</elem>
+		<elem name=1>Along the axis, repeat</elem>
+		<elem name=10>Around the axis, no repeat</elem>
+		<elem name=11>Along the axis, no repeat</elem>
+		<elem name=12>E/W location</elem>
+		<elem name=13>N/S location</elem>
+		<elem name=14>U/D location</elem>
+	</combobox></bold>
+</xComboApplication>
+
+<xtablecenter width=100%>
+	<xtrheader>Two dimensional textures</xtrheader>
+	<tr><td>
+		Three dimensional (volumetric) textures work very well with caves. However, if
+		you use a two-dimensional texture, you'll run into problems with seems. (Just
+		imagine trying to wall-paper a cave, and you'll understand why.) This section
+		lets you customize how two-dimensional textures wrap around cave segments
+		using this texture.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Axis</bold> - A two dimensional texture can be wrapped around an imaginary
+			axis through the tunnel section. This axis is usually in the longest tunnel
+			direction.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=axis>
+			<elem name=0>East-west</elem>
+			<elem name=1>North-south</elem>
+			<elem name=2>Up-down</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal texture</bold> - The horizontal texture can be calculated using the
+			one of the following methods.
+			<p/>
+			If a "repeat" method is used, then also fill in the edit box with the number
+			of times the texture repeats, such as "5". Non-repeating methods don't use
+			the edit field, but may have a seam.
+		</td>
+		<td>
+			<xComboApplication name=method0/><br/>
+			<edit width=100% maxchars=32 name=repeat0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical texture</bold> - Same as horizontal.
+		</td>
+		<td>
+			<xComboApplication name=method1/><br/>
+			<edit width=100% maxchars=32 name=repeat1/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Canopy</xtrheader>
+	<tr><td>
+		Caves can have a "canopy" of randomly selected objects on the ground, walls,
+		and ceiling. You can use these to randomly place rocks, fungus, stalgtites,
+		and stalagmites.
+		<p/>
+		
+		<xChoiceButton href=canopy0>
+			<bold>Ground</bold><br/>
+			Control random items that might appear on the ground, except for stalagmites.
+		</xChoiceButton>
+		
+		<xChoiceButton href=canopy1>
+			<bold>Walls</bold><br/>
+			Objects attached to the walls of the cave.
+		</xChoiceButton>
+		
+		<xChoiceButton href=canopy2>
+			<bold>Ceiling</bold><br/>
+			Objects attached to the ceiling of the cave, except for stalagtites.
+		</xChoiceButton>
+		
+		<xChoiceButton href=canopy3>
+			<bold>Stalagtites (ceiling)</bold><br/>
+			Various stalagtites in the cave. The algorithms ensure that a stalagtite
+			will always appear over a stalagmite. Stalagtites occur more at angled
+			roof areas than flat ones.
+		</xChoiceButton>
+		
+		<xChoiceButton href=canopy4>
+			<bold>Stalagmites (ground)</bold><br/>
+			Various stalagmites in the cave. A stalagmite will only appear underneath
+			a stalagtite.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

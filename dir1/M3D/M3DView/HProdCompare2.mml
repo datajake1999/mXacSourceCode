@@ -1,0 +1,71 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Product comparison"/>
+
+<xPageTitle>
+	Product comparison
+</xPageTitle>
+
+<p>
+	The fundamental differences between <xLN/> and its competitors is:
+</p>
+
+<xul>
+	<li>
+		<bold>Targeted at amateurs</bold> - I have designed 3DOB with average people in mind;
+		it is not intended for professional 3D artists, but people whole either
+		have an occasional need for 3D or who want to create their own 3D movie/world.
+	</li>
+	<li>
+		<bold>Shareware</bold> - 3DOB is a shareware application written by a one
+		person company. This has advantages and disadvantages.
+	</li>
+	<li>
+		<bold>Price</bold> - 3DOB, being shareware, has a very competitive price.
+	</li>
+</xul>
+
+<p>
+	For those of you familiar with other 3D applications, the functionality
+	in <xSN/> is a summary of a few popular applications. Since many are targeted
+	at professionals, <xSN/> doesn't incorporate their full functionality, just enough
+	for average people:
+</p>
+
+<xul>
+	<li>
+		<bold>Topography and landscape design</bold> - Such as exists in Corel's Bryce
+		and E-on Software's Vue d'Esprit.
+	</li>
+	<li>
+		<bold>House and building construction</bold> - Like Broderbund's 3D Home Design.
+	</li>
+	<li>
+		<bold>Human and animal characters</bold> - As in Curious Lab's Poser product.
+		(BUGBUG - Feature not yet implimented)
+	</li>
+	<li>
+		<bold>General purpose modeller</bold> - Most 3D programs include a general purpose modeller.
+	</li>
+	<li>
+		<bold>Animation</bold> - Most 3D programs include animation.
+	</li>
+	<li>
+		<bold>Wave editor</bold> - While they're a dime-a-dozen, <xSN/>'s wave
+		editor includes functionality useful to animation, such as phoneme recognition
+		for lip sync purposes.
+	</li>
+	<li>
+		<bold>3D paint</bold> - Like in Right Hemisphere's Deep Paint.
+	</li>
+</xul>
+
+<p>
+	For a list of competitors (just in case you want to check them out),
+	see my web site at <a href="http://www.mXac.com.au/m3d/comparison.htm">http://www.mXac.com.au/m3d/comparison.htm</a>.
+</p>
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:297>Future plans</a></li>
+</xul>

@@ -1,0 +1,196 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Custom pier appearance"/>
+
+<p>
+	Use this page to enter dimensions to customize your pier.
+</p>
+
+
+<p>
+		Each pier is constructed of several elements.
+</p>
+		<ol>
+			<li>
+				<bold>Main column</bold> - The majority of the pier. This is usually
+				a long (1m+) length of circular or rectangular profiled wood or steel.
+			</li>
+			<li>
+				<bold>Base</bold> - (Optional) A footing for the pier. Often this is a
+				concrete footing that the column rests on.
+			</li>
+			<li>
+				<bold>Cap</bold> - Caps the top of the pier.
+			</li>
+			<li>
+				<bold>Bracing</bold> - Optionally used to brace the floor against the pier.
+				The bracing extends at a 45 degree angle from about 0.75m below the top
+				of the post to the ceiling. This stabalizes the pier and the structure above
+				from sheer stresses.
+			</li>
+		</ol>
+
+<xTableCenter width=100%>
+	<xtrheader>Main column</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=PostShape4/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the column in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize40/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the column in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize41/>
+		</td>
+	</tr>
+</xtablecenter>
+	
+<xTableCenter width=100%>
+	<xtrheader>Base</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse0>
+			<bold>Use the base</bold><br/>
+			Check this to include a base on all the columns. If it's not checked then the
+			column runs straight to the ground.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the base looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=PostTaper0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize00/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize02/>
+		</td>
+	</tr>
+</xtablecenter>
+	
+<xTableCenter width=100%>
+	<xtrheader>Cap</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse2>
+			<bold>Use the cap</bold><br/>
+			Check this to include a cap the columns.
+			If it's not checked then the column just runs into the floor above.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the cap looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=PostTaper2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize20/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize21/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize22/>
+		</td>
+	</tr>
+</xtablecenter>	
+<xTableCenter width=100%>
+	<xtrheader>Bracing</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse3>
+			<bold>Use bracing</bold><br/>
+			Check this to use bracing underneath the pier.
+			If it's not checked then no bracing is used.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the bracing in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize30/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the bracing in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize31/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height below ceiling</bold> - The bracing begins this many
+			meters (or feet) below the ceiling/roof.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracebelow/>
+		</td>
+	</tr>
+</xTableCenter>
+

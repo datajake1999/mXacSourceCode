@@ -1,0 +1,37 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Overview of ground editor"/>
+
+<xPageTitle>
+	Tutorial - Overview of ground editor
+</xPageTitle>
+
+<p>
+	The Ground Editor window looks similar to the main view, with buttons on the outer
+	edge of the screen and the working space inside. You can easily identify the ground
+	editor because its border is brown.
+</p>
+
+<p>
+	When you first start the ground editor you'll be in the "Topography view". This
+	lets you control the elevation of your landscape. Other views exist, and they will
+	be covered later in the tutorial.
+</p>
+
+<p>
+	The topography view's main workspace is a square area which initially shows up
+	as a solid slab of green - this is your ground elevation. You can use the scrollbars
+	to move around, and the zoom buttons (<xButtonZoomIn/> and <xButtonZoomOut/>).
+	The mouse wheel will also zoom.
+</p>
+
+<p>
+	To the right is a key
+	so you can correlate the color to an elevation. Initially the ground has an
+	elevation of 0 m.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:628><bold>Next</bold></button>
+</p>
+

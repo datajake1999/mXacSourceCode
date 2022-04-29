@@ -1,0 +1,130 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Jaw object"/>
+
+<xPageTitle>
+	Jaw
+</xPageTitle>
+
+
+<p>
+	The "jaw" object makes it easy to create a jaw (lower or upper) with gums, teeth,
+	and a tongue. The tongue supports the attributes, "LipSyncMusc:TongueUp" and
+	"LipSyncMusc:TongueForward", which are useful for lip synchronization.
+</p>
+
+
+<xsectiontitle>Creating a jaw</xsectiontitle>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Teeth" section under "Object pieces".
+	</li>
+	<li>
+		<bold>Click</bold> on one of the jaws to add it.
+	</li>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to reshape and resize the jaw.
+	</li>
+	<li>
+		Once you have the correct shape, you can add teeth.
+		Press the <xButtonObjDialog/> tool and <bold>click on</bold> the jaw object.
+	</li>
+	<li>
+		In the "Jaw settings" dialog that appears, <bold>scroll down</bold> to the
+		"Individual teeth" section. You can modify the teeth here.
+	</li>
+	<p>
+		If you want to swap the jaw between being a lower jaw and an upper jaw,
+		check or uncheck the <bold>"This is a lower jaw"</bold> button.
+	</p>
+	<li>
+		To move a tooth, drag the <bold>position</bold> slider.
+	</li>
+	<li>
+		Notice that when you move a tooth, it's mirror on the opposite side will also
+		move. If you don't wish this to happen
+		then uncheck the <bold>"Symmetry"</bold> checkbox.
+	</li>
+	<li>
+		You can dislocate a tooth, or rotate it, using
+		the <bold>"Offset"</bold> and <bold>"Rotation"</bold> settings.
+	</li>
+	<li>
+		To modify the shape of the tooth, click on <bold>"Modify tooth shape"</bold>.
+	</li>
+</ol>
+
+
+<xsectiontitle>The tongue</xsectiontitle>
+
+<p>
+	The jaw object can also draw a tongue for you. This tongue supports the
+	attributes, "LipSyncMusc:TongueUp" and
+	"LipSyncMusc:TongueForward", which are useful for lip synchronization.
+</p>
+
+<p>
+	To use the tongue:
+</p>
+<ol>
+	<li>
+		Press the <xButtonObjDialog/> tool and <bold>click on</bold> the jaw object.
+	</li>
+	<li>
+		In the "Jaw settings" dialog that appears, <bold>scroll down</bold> to the
+		"Tongue" settings.
+	</li>
+	<li>
+		Check the <bold>"Draw the tongue"</bold> checkbox. The tongue should only
+		be drawn on the lower jaw.
+	</li>
+	<li>
+		<bold>Adjust</bold> the tongue settings as necessary.
+	</li>
+	<li>
+		You will need to <bold>pay attention</bold> to the "Roof-of-mouth height" and
+		"Tongue back" settings. These affect how far the tongue can move when speaking.
+		You should use the <xButtonObjAttrib/> button to test the "LipSyncMusc:TongueUp" and
+		"LipSyncMusc:TongueForward" at the extremes to make sure the tongue is positioned
+		correctly. Further tests can be done by actually animating based on a wave file.
+	</li>
+</ol>
+
+
+<xsectiontitle>Animating the jaws</xsectiontitle>
+
+<p>
+	The best way to animate the jaws is to have them moved using bones. To learn
+	how to use bones, see the "Bones tutorial".
+</p>
+
+<p>
+	The top jaw
+	should be <bold>attached to the main head bone</bold>, since the top jaw is firmly attached
+	to the skull.
+</p>
+
+<p>
+	The bottom jaw should have its <bold>own bone</bold> to rotate it. You should
+	also <bold>create an attribute</bold> for the character object
+	named <bold>LipSyncMusc:VertOpen</bold>. It should range from 0 to 1, with 0
+	causing the lower jaw to shut, and 1.0 will cause it to open as far as
+	the jaw will open when the character speaks an "ah" sound. Make sure
+	the <bold>"Type of value"</bold> is set to "Number", <bold>not</bold> angle. This will cause the
+	jaw to open and close properly for lip synchronization. (You will also need to
+	create an equivalent morph for the polygon mesh you are using to draw the face.
+	If you don't the lower jaw will open, but the skin won't move.)
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+	<li><a href=r:914>Bone tutorial</a></li>
+	<li><a href=r:925>Tooth or claw object</a></li>
+</xul>

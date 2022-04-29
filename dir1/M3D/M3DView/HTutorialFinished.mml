@@ -1,0 +1,52 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Finished building a house"/>
+
+<xPageTitle>
+	Tutorial - finished building a house
+</xPageTitle>
+
+
+<p>
+	Congratulations. You finished the building section of the
+	tutorial.
+</p>
+
+<p>
+	From here, I have several recommendations:
+</p>
+
+<xul>
+	<li>
+		<bold>Play around</bold> and experiment with <xLN/>.
+	</li>
+	<li>
+		<bold>Open some of the samples.</bold> <xSN/> is loaded with features. The
+		samples will give you a glimpse into what it's capable of. They don't
+		go nearly far enough since <xSN/> provides so many possibilities for
+		building materials and styles.
+	</li>
+	<li>
+		If this was your first time reading the tutorial, <bold>go through it again</bold> but
+		spend time reading the "See also" links.
+	</li>
+	<li>
+		<bold>Continue</bold> further with the tutorial and lean how to make your
+		own objects. Making your own objects (such as customized furniture and appliances)
+		is a more advanced feature that
+		you may eventually want to explore. Just press the "Next" button below.
+	</li>
+</xul>
+
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:481>Printing</a></li>
+	<li><a href=r:480>Saving JPEG and bitmap images</a></li>
+</xul>

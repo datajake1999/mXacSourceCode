@@ -1,0 +1,42 @@
+<?Include resource=500?>
+<PageInfo index=false title="Pre-release"/>
+
+<colorblend posn=background color=#000000/>
+<font color=#ffffff><table width=100% height=75% border=0 innerlines=0>
+	<tr><td>
+
+<button posn=edgeright defcontrol=true style=righttriangle href=next><bold>Continue</bold></button><p/>
+
+<table width=100% border=0 innerlines=0 height=60%><tr>
+	<td valign=center><align align=center>
+		<font color=#ff0000><big><big><big><big><big><italic><bold>ALPHA</bold></italic></big></big></big></big></big></font><br/>
+		Pre-Release
+		<p/>
+		This is an early version of <xLN/>, so early that it's not even worthy of the name
+		"Beta". Many features are <bold>not implimented</bold>, there are <bold>lots of bugs</bold>, <bold>crashes</bold> will
+		happen, and <bold>file formats may change</bold>.
+		<p/>
+		Do not use this version of <xSN/> for serious work. It's fine to play around with
+		but it's not stable enough for much more than that.
+	</align></td>
+	<td valign=center>
+		This release is fully featured and free to use.
+		It will <bold>expire on 1 Jan 2009</bold>.
+		The shipping version (whenever that might be) will cost about as much
+		as a game.
+		<p/>
+		You are free to use this pre-release <bold>on the condition</bold> that you E-mail
+		me feedback at <xMyEmail/>. I am particularly interested in the following issues:
+		<p/>
+		<xul>
+			<li>Overall workflow and ease of use.</li>
+			<li>Features that don't work the way they're supposed to.</li>
+			<li>Features that don't work the way you'd expect them to.</li>
+			<li>Features which aren't supported but that should be.</li>
+			<li>Crashes.</li>
+		</xul>
+	</td>
+</tr></table>
+
+</td></tr>
+</table></font>

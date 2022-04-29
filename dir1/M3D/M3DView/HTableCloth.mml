@@ -1,0 +1,64 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="tablecloth"/>
+
+<xPageTitle>
+	Tablecloth
+</xPageTitle>
+
+<p>
+	The "tablecloth" object draws a tablecloth draped over a table. Because <xSN/> is
+	not actually calculating all of the physics involved for draping cloth, the
+	tables are limited to rectangular, circular and elliptical, and rounded tables -
+	which covers 99% of the tables out there.
+</p>
+
+<p>
+	To add a tablecloth to a table:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined tablecloth that is closest to
+		your needs. Look under "Tablecloths" in "Interior decoration".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house by clicking on the center-top of the table.
+		(You don't really need a table at all; it's perfectly possible for a
+		tablecloth to float in mid air.)
+	</li>
+	<p>
+		A tablecloth will be added. Undoubtedly it will be too small or large for
+		your table.
+	</p>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click</bold> on the
+		new tablecloth.
+	</li>
+	<li>
+		In the "Tablecloth settings" dialog, select the <bold>shape</bold> that
+		describes your table.
+	</li>
+	<li>
+		Type in the <bold>width and length</bold> of
+		your table. You may want to type in a number a few centimeters larger then the
+		table to make sure the cloth doesn't go through the table-top as the cloth
+		bends inwards.
+	</li>
+	<li>
+		Type in a <bold>width and length</bold> for the cloth. <xSN/> only handles rectangular
+		tablecloths that are larger than they table they rest on.
+	</li>
+	<li>
+		<bold>Close</bold> the "Tablecloth settings" dialog.
+	</li>
+	<li>
+		You may also want to use the <xButtonObjPaint/> tool to change the color or
+		texture of the cloth.
+	</li>
+</ol>
+
+

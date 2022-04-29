@@ -1,0 +1,202 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Create a new texture from scratch"/>
+
+<p>
+	Select the type of texture you wish to create.
+</p>
+
+<xChoiceButton href=XXXimagefile>
+	<bold>Use a .BMP or .JPG file</bold><br/>
+	The texture will come from a .BMP or .JPG file you supply. You can use it
+	for coloration, bumps, transparency, and/or shininess. (For future reference:
+	It's easier to create a texture this way by painting a texture to an object and
+	choosing the option to create a new paintable-texture there.)
+</xChoiceButton>
+
+<xbr/>
+
+<p>
+	You can also create new images using the following procedural texture
+	generators. However, if you want to use one of these I suggest you go
+	back and select "Copy and modify" from a procedural texture that's close.
+</p>
+
+<null>
+<<<$IFDEBUG>>>
+<xChoiceButton href=XXXbmpresource>
+	<bold>Bitmap resource</bold><br/>
+</xChoiceButton>
+
+<xChoiceButton href=XXXjpgresource>
+	<bold>JPEG resource</bold><br/>
+</xChoiceButton>
+<<<$ENDIFDEBUG>>>
+</null>
+
+
+<xChoiceButton href=XXXbloodvessels>
+	<bold>Blood vessels</bold><br/>
+	This texture can be used for drawing the blood vessels on a mammalian eye.
+</xChoiceButton>
+
+<xChoiceButton href=XXXboardbatten>
+	<bold>Board and batten</bold><br/>
+	Create board and batten cladding.
+</xChoiceButton>
+
+<xChoiceButton href=XXXbranch>
+	<bold>Branch</bold><br/>
+	Draws a branch with leaves. Using this texture with a tree reduces
+	the number of polygons, and causes trees to draw more quickly.
+</xChoiceButton>
+
+<xChoiceButton href=XXXchainmail>
+	<bold>Chainmail</bold><br/>
+	This texture creates a chainmail pattern.
+</xChoiceButton>
+
+<xChoiceButton href=XXXclapboards>
+	<bold>Clapboards and shutter slats</bold><br/>
+	The texture generator lets you create clapboards (and the fake vinyl clapboard), along
+	with shutter slats.
+</xChoiceButton>
+
+<xChoiceButton href=XXXcorrogated>
+	<bold>Corrogated generator</bold><br/>
+	Create various forms of corrogated iron with this generator.
+</xChoiceButton>
+
+<xChoiceButton href=XXXfabric>
+	<bold>Fabric or wallpaper</bold><br/>
+	Create striped fabrics or wallpaper.
+</xChoiceButton>
+
+<xChoiceButton href=XXXfaceomatic>
+	<bold>Face-o-matric</bold><br/>
+	Creates face textures.
+</xChoiceButton>
+
+<xChoiceButton href=XXXgrass>
+	<bold>Grass tussock</bold><br/>
+	Draws a grass tussock to be used with the fast-darwing grass object.
+</xChoiceButton>
+
+<xChoiceButton href=XXXhair>
+	<bold>Hair or fur</bold><br/>
+	Used to create hair or fur textures.
+</xChoiceButton>
+
+<xChoiceButton href=XXXiris>
+	<bold>Iris</bold><br/>
+	This texture can be used for drawing the iris of a mammalian eye.
+</xChoiceButton>
+
+<xChoiceButton href=XXXlattice>
+	<bold>Lattice</bold><br/>
+	Generate a wood lattice.
+</xChoiceButton>
+
+<xChoiceButton href=XXXleaflitter>
+	<bold>Leaf litter</bold><br/>
+	Procedural texture used to create leaf-covered ground.
+</xChoiceButton>
+
+<xChoiceButton href=XXXmarble>
+	<bold>Marble</bold><br/>
+	This will create a solid slab or marble or granite.
+</xChoiceButton>
+
+<xChoiceButton href=XXXmix>
+	<bold>Mix textures</bold><br/>
+	Mixes two or more textures together.
+</xChoiceButton>
+
+<xChoiceButton href=XXXnoise>
+	<bold>Noise generator</bold><br/>
+	Use this to create surfaces that are random colorations or bumps - like stucco
+	walls, grass, water, etc.
+</xChoiceButton>
+
+<xChoiceButton href=XXXparquet>
+	<bold>Parquet tiles</bold><br/>
+	Make parquet tiles from either wood planks or ceramic tiles. You can also
+	create the herringbone and box patterns.
+</xChoiceButton>
+
+<xChoiceButton href=XXXpavers>
+	<bold>Pavers</bold><br/>
+	This procedure will generate non-rectangular pavers, such as hexagons.
+</xChoiceButton>
+
+<xChoiceButton href=XXXshingles>
+	<bold>Shingles</bold><br/>
+	For making wood, tiles, or asphalt shingles.
+</xChoiceButton>
+
+<xChoiceButton href=XXXstonesrandom>
+	<bold>Stone wall, random</bold><br/>
+	Use this to create a stone wall or pathway of random-sized stones.
+</xChoiceButton>
+
+<xChoiceButton href=XXXstones>
+	<bold>Stone wall, stacked</bold><br/>
+	Use this to create a stone wall or pathway using stacked stones.
+</xChoiceButton>
+
+<xChoiceButton href=XXXtestpattern>
+	<bold>Test pattern</bold><br/>
+	Create the test-pattern texture.
+</xChoiceButton>
+
+<xChoiceButton href=XXXtext>
+	<bold>Text</bold><br/>
+	Overlay text over a texture.
+</xChoiceButton>
+
+<xChoiceButton href=XXXtiles>
+	<bold>Tile and brick generator</bold><br/>
+	Allows you to create tiles and bricks.
+</xChoiceButton>
+
+<xChoiceButton href=XXXtreebark>
+	<bold>Tree bark</bold><br/>
+	Procedurally generated tree bark.
+</xChoiceButton>
+
+<xChoiceButton href=XXXVolMarble>
+	<bold>Volumetic marble</bold><br/>
+	Use this to create volumetric textures for objects that are cut out of a single
+	piece of material(such as marbling or wood grain).
+</xChoiceButton>
+
+<xChoiceButton href=XXXVolNoise>
+	<bold>Volumetic noise</bold><br/>
+	Use this to create volumetric textures for objects that are cut out of a single
+	piece of material(such as marbling or wood grain). The noise texture can be
+	used for creating rock.
+</xChoiceButton>
+
+<xChoiceButton href=XXXVolWood>
+	<bold>Volumetic wood</bold><br/>
+	Use this to create volumetric textures for objects that are cut out of a single
+	piece of material(such as marbling or wood grain).
+</xChoiceButton>
+
+<xChoiceButton href=XXXVolSandstone>
+	<bold>Volumetic sandstone (or layered rock)</bold><br/>
+	Use this to create volumetric textures for objects that are cut out of a single
+	piece of material(such as marbling or wood grain).
+</xChoiceButton>
+
+<xChoiceButton href=XXXwicker>
+	<bold>Wicker and chain-mesh fencing</bold><br/>
+	Create a texture out of a thick woven material.
+</xChoiceButton>
+
+<xChoiceButton href=XXXwood>
+	<bold>Wood planks</bold><br/>
+	Any surface composed of wood planks, such as hardwood flooring, decking,
+	and panelled walls.
+</xChoiceButton>
+

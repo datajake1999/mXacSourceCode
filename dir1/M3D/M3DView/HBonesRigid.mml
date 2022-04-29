@@ -1,0 +1,48 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - Rigid surfaces"/>
+
+<xPageTitle>
+	Bones - Rigid surfaces
+</xPageTitle>
+
+<p>
+	When a bone is first created it assumes that it will be affecting a polygon mesh
+	or other type of object to simulate flesh; that means that at the joints between
+	two bones the flesh is smoothly bent.
+</p>
+
+<p>
+	If you want to create a robot made of rigid pieces, or a person wearing armor,
+	or wearing any other type of rigid object (like a ring, motorcycle helmet, etc.)
+	then you will need to tell the bone to affect the rigid object differently.
+	(If you don't your animation will be reminiscent of Salvadore Dali's "Melting Watches"
+	painting.)
+</p>
+
+<p>
+	To have a rigid object affected by a bone:
+</p>
+
+<ol>
+	<li>
+		<bold>In the object editor</bold> (not the bone editor), select
+		the rigid object using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		<bold>In the bone editor</bold>, select the <xButtonBoneEdit/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the bone that you wish to affect the rigid object.
+	</li>
+	<li>
+		In the "Modify a bone" page that appears, find the "Envelope" section.
+		Press the <bold>"Affect the selected objects uniformly"</bold> button.
+	</li>
+	<p>
+		The object will be added to the list. From now on, when you move the bone,
+		the entire object will move as one piece.
+	</p>
+</ol>
+
+

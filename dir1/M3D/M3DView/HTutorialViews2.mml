@@ -1,0 +1,228 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - flattened (isometric) views"/>
+
+<xPageTitle>
+	Tutorial - flattened (isometric) view
+</xPageTitle>
+
+<p>
+	The "Flattened view" draws the house <bold>without any perspective.</bold> That means
+	that objects are drawn the same relative size, regardless of how far they are from
+	the camera. In perspective, more distant objects are smaller.
+</p>
+
+<p>
+	The flattened view is most useful for:
+</p>
+
+<xul>
+	<li>
+		<bold>Adding and moving objects</bold> - Because there's no perspective distorting
+		the image, it's easier to move an object around. While you can still add and move
+		objects in the model and walkthrough views, you'll find it much easier
+		to do in the flat view.
+	</li>
+	<li>
+		<bold>Drawing elevations</bold> - Architectural plans typically come with "elevations"
+		of the building, which are illustrations of what the building looks like from the
+		side. These are almost always drawn with isometric perspective (aka: flattened view).
+	</li>
+</xul>
+
+<p>
+	Try using the flattend (isometric) view:
+</p>
+
+<ol>
+	<li>
+		If the flattened view isn't already selected (the view is selected if it's icon is
+		surrounded by a white box with a light blue background) then
+		click on the <xButtonViewFlat/> button.
+		The movement buttons (to the right of the view selection buttons) will change.
+	</li>
+</ol>
+
+<xSectionTitle>Quick view</xSectionTitle>
+<ol>
+	<li>
+		Press the <xButtonViewFlatQuick/> button. (This button is available for the
+		model and walkthrough views as well.)
+	</li>
+	<li>
+		Clicking this brings up a popup menu. <bold>Select the "From above"</bold> menu item.
+	</li>
+	<p>
+		Whatever you were looking at will disappear and be replaced by a view of the
+		house from above.
+	</p>
+	<li>
+		Try looking from a different angle... Press the <xButtonViewFlatQuick/> button
+		again and <bold>select "North-east (elevated)"</bold>. You're now looking at the
+		house from the north east, elevated position of course.
+	</li>
+	<p>
+		At this point you'll notice the distinctive appearance of the isometric view;
+		it doesn't look right. There's no perspective.
+	</p>
+</ol>
+
+<xsectiontitle>Scrollbars</xsectiontitle>
+
+<p>
+	The scrollbars are the easiest way to maneuver around:
+</p>
+
+<xul>
+	<li>
+		<bold>Left scrollbar or mouse wheel</bold> - Drag this up and down to zoom in and out.
+		(Note: The <bold>mouse wheel may not work properly</bold> on Windows 95, 98, and ME. It does
+		work properly on Windows XP.)
+	</li>
+	<li>
+		<bold>Bottom and right scrollbars</bold> - These pan the image from left to right,
+		and top to bottom.
+	</li>
+	<li>
+		<bold>Top scrollbar</bold> - Not used in the isometric view.
+	</li>
+</xul>
+
+<xsectiontitle>Zooming with tools</xsectiontitle>
+
+<p>
+	Now try zooming in to the house using the movement tools: You'll use the scrollbars
+	most of the time, there are times when the movement tools are better suited for
+	the task.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonZoomIn/> tool.
+	</li>
+	<li>
+		<bold>Click on a corner or edge
+		of the house.</bold> As the tools name suggests, the image zooms in.
+		You can click as often as you want; each time you'll zoom in a bit closer.
+		Zoom-in is also available
+		in all the views (flat, model, and walkthrough).
+	</li>
+	<li>
+		To zoom out select the <xButtonZoomOut/> tool and click someplace on the house.
+		(Available for all views.)
+	</li>
+	<li>
+		If you have a specific area that you want to zoom in to and want to save yourself
+		from three or four clicks, select the <xButtonZoomInDrag/> tool.
+	</li>
+	<li>
+		Just <bold>click on a point in the world, hold down the mouse button, and
+		drag it.</bold> A red box, drawn between the point where you first clicked
+		and the current mouse location, shows up. Releasing the mouse button zooms into
+		the region you selected.
+	</li>
+	<li>
+		There's a fourth button for zooming: Select <xButtonViewFlatScale/>.
+	</li>
+	<li>
+		<bold>Click on the image, and move the mouse (while still holding
+		the button down).</bold> Moving the mouse to the right zooms in while moving the mouse
+		left zooms out.
+	</li>
+	<li>
+		And finally, if you want to see the same object but from a different angle,
+		select <xButtonZoomAt/>.
+	</li>
+	<li>
+		<bold>Click on</bold> the object in the image.
+	</li>
+	<p>
+		A menu will appear with three columns: "Flat", "Object", and "Walkthrough".
+		Under each column are the directions "North", "South", "East", "West", "Up", and "Down".
+		Selecting an item from the "Flat" column will view the object from that direction.
+		Using a direction from another column will also view the object from the
+		direction, <bold>but</bold> it will also switch to a different camera model.
+		(This is an easy wasy of switching between perspective and isometric views of the same
+		object.)
+	</p>
+	<li>
+		<bold>Select the "East" menu item</bold> and the view will now show the
+		object looking from the east.
+	</li>
+</ol>
+
+
+<xSectionTitle>Moving and rotating with tools</xSectionTitle>
+<ol>
+	<li>
+		To pan the image around using tools, select the <xButtonViewFlatLRUD/>.
+	</li>
+	<li>
+		<bold>Click on the image, and move the mouse (while still holding
+		the button down).</bold> The entire image will pan to the left, right, top, or bottom.
+	</li>
+	<li>
+		You can also rotate the image. Select
+		either <xButtonViewFlatRotZ/>, <xButtonViewFlatRotX/>, or <xButtonViewFlatRotY/>.
+	</li>
+	<li>
+		Once you have selected the tool, <bold>click on the 3D image
+		and drag the mouse;</bold> the house will rotate as you move the mouse.
+	</li>
+	<p>
+		Use these three tools to rotate the house around either the up/down axis, east/west
+		axis, or north/south axis. Rotation in the flat view behaves as if you were holding
+		a model of the house at arms length.
+	</p>
+	<p>
+		If you experiment with the rotation tools long enough you'll
+		noticed that while it rotates the house around, it always seems to rotate
+		around the center of the house. Sometimes you want it to rotate around some other point,
+		like the corner of the house. To do this, select the <xButtonViewSetCenterFlat/> tool
+		and click someplace on the house (or the ground, or any other object).
+		Select one of the rotation tools. From then on,
+		any rotation will occur around that point.
+	</p>
+</ol>
+
+<xdefinition>
+	<bold>Tip:</bold> You can use the <bold>arrow keys</bold> instead of the
+	mouse <bold>in most tools</bold>. Just select the tool and press the left, right,
+	up, or down arrow keys. If you hold down the <bold>control</bold> key when you
+	press the arrow key, the movement or rotation will be greater.
+</xdefinition>
+
+
+<xsectiontitle>Other tools</xsectiontitle>
+<p>
+	Below are some other tools specific to the isometric view. You don't try them now.
+	I'm just listing them so you'll know they exist.
+</p>
+
+<xul>
+	<li>
+		<xButtonViewFlatLookAt/> - This tool moves the location of the "Walkthrough" camera.
+		First, click on the <xButtonViewFlatQuick/> button and select "From above" to see the
+		house from above. Then, choose the <xButtonViewFlatLookAt/> tool. Click on a point
+		on the ground, away from the house and drag the mouse pointer towards the house.
+		You'll see a few concentric red circles around the point where you click and a line
+		pointing towards the current mouse location. The red circles indicate the new
+		location of the walkthrough camera and the line is the direction in which it will look.
+		Let go of the mouse and the view will automagically change to "Walkthrough", using the
+		camera location and direction that you chose.
+	</li>
+	<li>
+		<xButtonViewFlatSettings/> - If you want to control the view exactly, press this
+		button and you'll be presented with a dialog box asking you to enter all sorts of
+		numbers for the camera's location and direction.
+	</li>
+</xul>
+
+
+
+
+<p align=right>
+	<button style=rightarrow href=r:353><bold>Next</bold></button>
+</p>
+
+

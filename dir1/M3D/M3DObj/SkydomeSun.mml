@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Sun and moon"/>
+
+<p>
+	This page lets you adjust the brightness and size of the sun and moon.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Sun and moon</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=showsun>
+			<bold>Draw sun</bold><br/>
+			Check this to draw the sun. You may want not wish to draw the sun if you
+			have created your own sun.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=showmoon>
+			<bold>Draw moon</bold><br/>
+			Check this to draw the moon. You may want not wish to draw the moon if you
+			have created your own moon(s).
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=dimclouds>
+			<bold>Clouds obscure sunlight</bold><br/>
+			If checked, the more clouds in the sky, the dimmer the sun and moon are.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Draw sun and moon larger</bold> - In reality the sun and moon are fairly
+			small against the sky. For artistic purposes you may want them larger.
+			Move the slider to the right to enlarge them. All the way to the left is
+			their real size.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=10 max=200 name=moonsize/>
+		</td>
+	</tr>
+</xtablecenter>

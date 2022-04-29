@@ -1,0 +1,97 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating a texture to paint on"/>
+
+<xPageTitle>
+	Tutorial - Creating a texture to paint on
+</xPageTitle>
+
+<p>
+	Most of the time when applying a texture or color, you will use <xButtonObjPaint/> and
+	select one of the built-in textures. You might even go to the texture library
+	using the <xButtonLibrary/> tool. However, there are times when the standard textures
+	are not good enough and you need to paint your own.
+</p>
+
+<p>
+	For example: If you build character you will want to paint a face (eyebrows, beard,
+	skin tones) onto the character. The standard textures certainly wouldn't do.
+</p>
+
+<p>
+	To paint your own texture, you first need to create a texture that can be painted onto:
+</p>
+
+<ol>
+	<li>
+		<bold>Position</bold> the camera so it's looking at the object you wish to
+		paint. If you don't have on in mind, just create a "polygon mesh" object for now.
+	</li>
+	<li>
+		Select the <xButtonObjPaint/> tool and <bold>click on</bold> the object.
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog, <bold>switch to</bold> the
+		texture category you wish to place your new texture in. (If you wish to add a texture
+		category you will need to do so by later renaming your texture in
+		by using the <xButtonLibrary/> tool and visiting the "Textures" dialog.)
+	</li>
+	<li>
+		Press the <bold>"Blank texture for painting"</bold> label, appearing along
+		with the texture thumbnails.
+	</li>
+	<li>
+		Under "Maps to use" <bold>check</bold> all the texture maps you wish to be
+		able to paint. For now, check only "Use a color map".
+	</li>
+	<li>
+		Under "General", press the <bold>"Browse"</bold> button and select the file where
+		the texture will be saved.
+	</li>
+	<p>
+		<xSN/> saves the texture as either a bitmap (.bmp) or JPEG (.jpg) file. Bitmaps
+		save with a better image quality but use a lot of disk space because they don't use any compression.
+		JPEG images use much less disk space but will be of lower quality. JPEG images
+		will also degrade slightly in quality every time you edit them; <xSN/> has a feature
+		that usually eliminates this degredation, but it may still occur.
+	</p>
+	<li>
+		Type in a <bold>"Name"</bold> for your texture.
+	</li>
+	<li>
+		You can enter a <bold>"Width (pixels)"</bold> and <bold>"Height (pixels)"</bold>, or
+		leave the default values. The higher the number the crisper the texture will be, but
+		the more memory and disk it will use.
+	</li>
+	<li>
+		The <bold>"Width (distance)"</bold> setting affects how often your texture repeats.
+		For example, if it's set to 1m, then it will repeat every meter. Repetition is
+		good for textures such as bricks, but not for painting human heads. Some objects will
+		ignore this setting and just wrap the texture completely around itself only once,
+		eliminating any repetition.
+	</li>
+	<li>
+		Press <bold>"Default color"</bold> to change the texture's starting color.
+	</li>
+	<li>
+		If you are creating a <xSN/> file that will be given to other people then check
+		the <bold>"Store the image..."</bold> button. If you do so, you may want to save
+		your texture as .jpg instead of .bmp so that your <xSN/> files don't become
+		really huge.
+	</li>
+	<li>
+		Finally, select the properties of the texture's material under <bold>"Change
+		Material"</bold>.
+	</li>
+	<li>
+		Press <bold>"Add texture"</bold>.
+	</li>
+	<p>
+		Your new texture will be added and assigned to your object.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:813><bold>Next</bold></button>
+</p>
+

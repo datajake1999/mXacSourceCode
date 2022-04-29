@@ -1,0 +1,115 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Walls"/>
+
+<p>
+	This page lets you specify information about the walls.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Wall shape</xtrheader>
+	<tr><td align=center>
+		<listbox width=85% height=85% sort=false vscroll=listscroll tbmargin=16 name=wallshape>
+			<elem name=7>
+				<bold>Any shape</bold><br/>
+				You can add/remove any number of walls and choose a different curve
+				for each wall.
+			</elem>
+			<elem name=5>
+				<bold>Circle</bold><br/>
+				Four walls join to make a circle or ellipse.
+			</elem>
+			<elem name=4>
+				<bold>Hexagon</bold><br/>
+				Six walls.
+			</elem>
+			<elem name=1>
+				<bold><italic>None</italic></bold><br/>
+				No walls are drawn.
+			</elem>
+			<elem name=3>
+				<bold>Pentagon</bold><br/>
+				Five walls.
+			</elem>
+			<elem name=0>
+				<bold>Rectangle</bold><br/>
+				Four walls meeting at 90 degree angles.
+			</elem>
+			<elem name=6>
+				<bold>Semicircle</bold><br/>
+				Two curved walls and one flat one form half of a circle.
+			</elem>
+			<elem name=2>
+				<bold>Triangle</bold><br/>
+				Three walls forming an equilateral triangle.
+			</elem>
+		</listbox>
+		<scrollbar width=10% height=85% orient=vert name=listscroll/>
+		<p/>
+		<xchoicebutton name=anyshape href=anyshape>
+			<bold>Add/remove wall panels in "Any shape"</bold><br/>
+			This lets you add or remove wall panels (either straight or curved) if
+			you have the "Any shape" wall style selected.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>External wall thickness</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>External cladding thickness</bold> - Thickness of the cladding on the
+			on the outside.
+			For example: If it's 8mm thick plywood nailed onto the stud, enter "8mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Internal cladding thickness</bold> - Thickness of the cladding on the inside
+			the building block.
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Wall angles</xtrheader>
+	<tr><td>
+		<p>
+			This section lets you angle walls in or out.
+			To change an angle, click on a grey wall section.
+		</p>
+		<p>
+			Note: If you angle a wall so that it doesn't meet the roof or the floor, you may
+			get strange results. You should adjust the wall's corners so that the wall remains
+			under the roof.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=wallangle>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+

@@ -1,0 +1,25 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - finished maneuvering around"/>
+
+<xPageTitle>
+	Tutorial - finished maneuvering around
+</xPageTitle>
+
+
+<p>
+	Congratulations. You've learned how to move the camera around <xSN/>.
+</p>
+
+<p>
+	If you're only using <xSN/> to do a walkthrough of a house designed given to
+	you by your architect then you can stop here; you've learned enough to make
+	your way around the design. However, if you still want to learn how to build
+	a house in <xSN/> then press "Next".
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+

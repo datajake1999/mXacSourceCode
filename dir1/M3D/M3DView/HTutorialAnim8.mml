@@ -1,0 +1,85 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Animating cameras"/>
+
+<xPageTitle>
+	Tutorial - Animating cameras
+</xPageTitle>
+
+<p>
+	You may have noticed that whenever you play back your animation the camera
+	stays fixed and one place. It doesn't follow the motion, and you may want this.
+	Animating the camera is just like animating any other object:
+</p>
+
+<ol>
+	<li>
+		In the main view, click on the <xButtonObjNew/> tool.
+	</li>
+	<li>
+		<bold>Find</bold> the "Cameras" section under neath "(Animation)".
+	</li>
+	<li>
+		<bold>Click on</bold> the "Animation camera" and add it to your world.
+	</li>
+	<li>
+		Use <xButtonMoveNSEWUD/> and <xButtonMoveRotZ/> to move and rotate the camera
+		around.
+	</li>
+	<li>
+		In the animation timeline window click on the <xButtonSceneCamera/> button
+		and select the camera you just created from the menu. (Assuming you haven't
+		renamed it, the camera will be called "Animation camera".)
+	</li>
+	<p>
+		When you select the camera, the main view will be redrawn from the animation
+		camera's view.
+	</p>
+	<li>
+		Since the camera's position and orientation are probably off, use the <bold>main view's
+		camera movement tools</bold> to reposition the camera so you're looking at what
+		you want the camera to look at. You <bold>cannot</bold> use <xButtonViewFlat/> for this
+		though.
+	</li>
+	<li>
+		<bold>Switch</bold> back to the animation timeline window and
+		press the <xButtonNewAnimCamera/> button.
+	</li>
+	<p>
+		Your animation camera will automatically be moved so it's "filming" from the same
+		position and direction as the view camera.
+	</p>
+	<li>
+		To animate your camera move, just adjust the <bold>playback time</bold>, and move
+		the camera as above. Repeat as needed.
+	</li>
+</ol>
+
+<xsectiontitle>Advanced camera techniques</xsectiontitle>
+
+<xul>
+	<li>
+		<bold>Multiple animation cameras</bold> - Just as in real life, you may wish to
+		film the same scene from multiple angles. To do so just create several cameras.
+		Unlike real life though, when you animate the other cameras won't be visible.
+	</li>
+	<li>
+		<bold>Coloring the cameras</bold> - You can use <xButtonObjPaint/> to set a unique
+		color for each camera so you know which is which.
+	</li>
+	<li>
+		<bold>Field of view and exposure brightness</bold> - You can adjust the field of
+		view and exposure for each camera individually. Just use <xButtonObjAttrib/> to
+		click on the camera and adjust the "FOV" and "Exposure" attributes. You can
+		also animate these attributes.
+	</li>
+	<li>
+		<bold>First-person cameras</bold> - You can use <xButtonObjAttach/> to attach a
+		camera to character's head, allowing you to see what the character sees.
+	</li>
+</xul>
+
+<p align=right>
+	<button style=rightarrow href=r:563><bold>Next</bold></button>
+</p>
+

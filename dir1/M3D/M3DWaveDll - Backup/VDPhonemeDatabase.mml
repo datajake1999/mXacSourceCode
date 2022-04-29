@@ -1,0 +1,101 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Phoneme database"/>
+
+<!xComboViewHow>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Waveform</elem>
+		<elem name=1>Spectrogram</elem>
+		<elem name=2>Features</elem>
+	</combobox></bold>
+</xComboViewHow>
+
+<xtablecenter width=80%>
+	<xtrheader>Phoneme database</xtrheader>
+	<tr>
+		<td width=2>
+			<p>
+				All of the <bold>phonemes</bold> you were just working on have been added
+				to the <bold>phoneme database</bold>.
+			</p>
+			
+			<p>
+				All the twiddling with sliders you
+				just did has told MIF how to change your voice into another voice.
+				Because some of the changes depend upon what phoneme you speak, a
+				different set of changes is stored for each phoneme.
+			</p>
+			
+			<p>
+				<bold>English has about 45 phonemes.</bold> If this is your first time through, you
+				have just added eight phonemes to the database. <bold>The more phonemes (of
+				different sorts) you add, the better the voice disguise.</bold> Don't worry if you
+				don't get all the phonemes. Eight should be plenty, but more will
+				always help, particularly for vowels (a, e, i, o, u) and voiced consonants (l, m, n, r).
+				Some long unvoiced consonants (s, f, th, sh, ch) would also help.
+			</p>
+			
+			<p>
+				You can add more phonemes by selecting one of the options to the right.
+			</p>
+			
+			<p>
+				Warning: <bold>If you add too many phonemes</bold> then the computer may spend a
+				long time disguising your voice while it tries to figure out which
+				phoneme to use. I suggest you limit yourself to around 50 phonemes (which is
+				more than the number of phonemes in English). <bold>You can
+				delete an unwanted phoneme</bold> by clicking on its name below.
+			</p>
+			
+			
+			<xbr/>
+			
+			<p>
+				Click on the name of the phoneme to <bold>delete</bold> it from the database.
+			</p>
+			
+			<table width=100% border=0 innerlines=0>
+				<<<$PHONELIST>>>
+			</table>
+		</td>
+		
+		<td width=1>
+			<xChoiceButton style=righttriangle href=p:2100>
+				<bold>Next, I'm finished adding phonemes</bold><br/>
+				This will procede to extra voice disguise settings.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle href=p:2060>
+				<bold>Extract more phonemes from the speech I just recorded</bold><br/>
+				If you can get more phonemes out of the speech you just recorded,
+				press this. You will go back to the page that lets you move the markers.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle href=p:2010>
+				<bold>Extract more phonemes from a new recording</bold><br/>
+				Pressing this will let you load in a new file to mimic, as well as make
+				a new recording.
+			</xChoiceButton>
+			
+			<xbr/>
+			
+			<xChoiceButton style=righttriangle name=playorig>
+				<bold>Play the unmodified recording of your voice</bold><br/>
+				This plays the unmodified version of your voice, without any
+				pitch adjustments.
+			</xChoiceButton>
+
+			<xChoiceButton style=righttriangle name=playmod>
+				<bold>Play the modified recording of your voice</bold><br/>
+				This plays an example of what your voice disguise currently
+				sounds like.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=playmimic>
+				<bold>Play the voice to mimic</bold><br/>
+				Plays a recording of the voice you're trying to mimic.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

@@ -1,0 +1,30 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Change the elevation range"/>
+
+<p>
+	Use this page to adjust the limits of how high or low your topography can go.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Elevation</xtrheader>
+	<tr>
+		<td>
+			<bold>Maximum elevation</bold> - Highest point in your terrain.
+		</td>
+		<td><edit maxchars=32 width=100% name=max/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum elevation</bold> - Lowest point in your terrain.
+		</td>
+		<td><edit maxchars=32 width=100% name=min/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle href=keep>
+			<bold>Keep these changes</bold><br/>
+			Press this after you have typed in a value for the maximum and minimum elevation.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

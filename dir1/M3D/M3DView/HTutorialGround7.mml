@@ -1,0 +1,107 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Painting ground textures"/>
+
+<xPageTitle>
+	Tutorial - Painting ground textures
+</xPageTitle>
+
+<p>
+	When <xSN/> first creates a ground object it assumes it's covered with an
+	overly-lush carpet of manacured lawn. Not only might you not want this, but
+	you may wish to have some areas covered with sand, others with gravel, and still
+	others bare soil. You can do this:
+</p>
+
+<xSectionTitle>Changing the ground's texture</xSectionTitle>
+
+<ol>
+	<li>
+		In the ground editor page, select the <xButtonViewTopo/>.
+	</li>
+	<p>
+		The ground editor window will change slightly. Some of the buttons will change.
+		The main workspace will show the topography, but it will all be green, and the
+		elevation key will transform into a list showing only one item, "Grass".
+	</p>
+	<li>
+		To change the texture used for the ground, <bold>double-click</bold> the
+		"Grass" texture in the listbox.
+	</li>
+	<p>
+		The "Modify a texture" dialog will appear. This dialog lets you
+		change the texture displayed, what color it's displayed on the map as, or
+		delete it.
+	</p>
+	<li>
+		Press the <bold>"Change the texture"</bold> button.
+	</li>
+	<li>
+		The "Change an object's color or texture" dialog button will appear. Use this
+		to <bold>select a new texture,</bold> such as a darker variety of grass.
+	</li>
+	<li>
+		<bold>Close</bold> the "Modify a texture" dialog.
+	</li>
+	<li>
+		Press <xButtonSave/> to save your changes to the ground object.
+	</li>
+	<li>
+		<bold>Switch to</bold> the main 3D view to see the darker variety of grass.
+	</li>
+</ol>
+
+<xsectiontitle>Painting in multiple textures</xsectiontitle>
+
+<p>
+	You can cover your mountain with more than just one texture. For example, you
+	may wish steep portions of your mountain to have rock textures, and other areas
+	to be sandy. To do this:
+</p>
+
+<ol>
+	<li>
+		In the ground editor, <bold>double click</bold> on "Double-click to add a
+		new texture."
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog that
+		appears, <bold>select</bold> a new texture, such as one of the sand textures.
+	</li>
+	<li>
+		<bold>Click on</bold> the sand texture in the list box if it is not already selected.
+	</li>
+	<li>
+		Select the <xButtonBrush32/> tool (or another brush).
+	</li>
+	<li>
+		<bold>Paint</bold> the sand onto the map in the same way that you painted
+		elevations earlier in the tutorial.
+	</li>
+	<li>
+		As usual, to see the changes you'll need to press <xButtonSave/>.
+	</li>
+	<li>
+		<bold>Add</bold> as many textures as you like.
+	</li>
+</ol>
+
+<p>
+	<bold>Tip:</bold> All the textures eventually repeat. If your camera is close to
+	the texture the viewer may not realize this. However, if it sees a large area of
+	textures from the distance the pattern becomes evident. You can mask this pattern
+	by creating several textures with different sizes and rotations and painting a patch
+	of ground with a bit of each of these textures.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:623><bold>Next</bold></button>
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:632>Paint based on elevation and slope</a></li>
+</xul>

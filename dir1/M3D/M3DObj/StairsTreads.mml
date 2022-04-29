@@ -1,0 +1,131 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase treads"/>
+
+<p>
+	This page lets you control settings for the treads and risers of the stairs.
+</p>
+
+<xTableCenter width=100%>
+	<xtrHeader>Treads</xtrHeader>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the tread.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadthickness/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend tread depth</bold> - Extend the tread's depth this
+			distance beyond the front of the next tread.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadextendback/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum tread depth</bold> - A tread must be this deep (on both
+			the left and right sides). If not, it is extended back.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadmindepth/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend left</bold> - Extend the left side of the tread
+			this distance beyond the left end of the staircase/balustrade.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadextendleft/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend right</bold> - Extend the right side of the tread
+			this distance beyond the right end of the staircase/balustrade.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadextendright/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Risers</xtrHeader>
+	<tr>
+		<td>
+			<bold>Riser height</bold> - Distance from the top of one tread to the next.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=riser/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Kickboards</xtrHeader>
+	<tr><td>
+		<xChoiceButton name=kickboard checkbox=true style=x>
+			<bold>Use kickboards</bold><br/>
+			Staircases can have a "kickboard" that closes off the gap between treads.
+			Kickboards make the stairs look cleaner and prevent things from slipping
+			through the tread gaps.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Kickboard indent</bold> - Kickboards are placed from the back of the bottom
+			tread to the front of the top tread. This setting indents the kickboard the specified
+			distance from the front of the top tread.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=kickboardindent/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Tread lip</xtrHeader>
+	<tr><td>
+		<xChoiceButton name=treadlip checkbox=true style=x>
+			<bold>Treads have a lip</bold><br/>
+			Treads are drawn as flat boards. If you wish to have a lip (small piece of wood
+			just underneath the front bottom of the tread) then check this.
+		</xChoiceButton>
+		<p>
+			Tip: You can also use lips to depict external stairways made of gravel
+			held behind railroad sleepers. Just use the lip to represent the sleeper,
+			and the main tread for the gravel.
+		</p>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the lip.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadlipthickness/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - How for the lip goes into the tread.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadlipdepth/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical offset</bold> - Distance that the top of the lip
+			is <bold>above</bold> the top of the tread. To have the lip below
+			the tread use negative numbers.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=treadlipoffset/>
+		</td>
+	</tr>
+</xTableCenter>

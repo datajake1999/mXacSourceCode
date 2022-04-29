@@ -1,0 +1,86 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify an attribute"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Name</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - The name of the attribute. This must be
+			unique.
+		</td>
+		<td><edit width=100% maxchars=60 selall=true name=name/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Description</bold> - Description of what the attribute does.
+		</td>
+		<td><edit width=100% wordwrap=true multiline=true maxchars=256 name=desc/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=deflowrank>
+			<bold>Initially displayed at the bottom of the attribute list</bold><br/>
+			If the attribute is not likely to be changed that often then check this
+			button; that way when the list of attributes are displayed this attribute
+			will be near the bottom.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=defpassup>
+			<bold>Automatically used by container object</bold><br/>
+			If you place this object within another object, and this button is checked,
+			then this attribute will automatically be supported by the container
+			object.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Values</xtrheader>
+	<tr>
+		<td>
+			<bold>Type of value</bold> - Specify if the attribute is a measurement,
+			angle, number, or on/off switch.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 cursel=2 name=infotype>
+			<elem name=2>Angle</elem>
+			<elem name=1>Measurement (m. or ft.)</elem>
+			<elem name=0>Number (no specific units)</elem>
+			<elem name=3>On/off switch</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum value</bold> - Lowest value that the attribute can be.
+		</td>
+		<td><edit width=100% maxchars=32 selall=true name=min/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum value</bold> - Highest value that the attribute can be.
+		</td>
+		<td><edit width=100% maxchars=32 selall=true name=max/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Starting value</bold> - When an instance of the object
+			is first creating, the attribute's initial value will be this.
+		</td>
+		<td><edit width=100% maxchars=32 selall=true name=defvalue/></td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xSectionTitle>Which objects and attributes it affects</xSectionTitle>
+
+<p>
+	Whenever you change an attribute in a custom object it just ends up changing
+	one or more attributes in the objects that make up the custom object.
+	(For example: If a dresser custom object supports the "Open drawer" attribute, this
+	gets translated into "Opened" for each of the drawer objects contained
+	within.) Below are a list of the objects and their attributes that are
+	affected when this attribute is changed.
+</p>
+
+<null>
+	<<<$ATTRIBLIST>>>
+</null>

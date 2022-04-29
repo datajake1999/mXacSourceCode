@@ -1,0 +1,44 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - start building"/>
+
+<xPageTitle>
+	Tutorial - start building
+</xPageTitle>
+
+<p>
+	Now that you have learned how to maneuver around <xSN/>, it's time to build
+	your own house.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonNew/> button now.
+	</li>
+	<p>
+		This will create a new file to work on, containing only a flat piece of land to
+		begin with. If you made any changes to the previous file, you'll be asked if you
+		want to save them or not; That's up to you.
+	</p>
+</ol>
+
+<xsectiontitle>Building site</xsectiontitle>
+
+<p>
+	<xLN/> starts out with the world containing only a flat piece of ground
+	about 100m x 100m. It can be enlarged, shrunk, or have elevations applied to suit the
+	real building site. However, for the purpose of the tutorial, we'll assume a flat building
+	site. (For more information, look at the "See also" section.)
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:251><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:256>Building location and style</a></li>
+	<li><a href=r:485>Tracing paper</a></li>
+</xul>

@@ -1,0 +1,80 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Depth of field"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Blurring</xtrheader>
+	<tr>
+		<td>
+			<bold>Blurriness</bold> - This controls how blurry the image will appear.
+			(Technically it's the width of the standard deviation as a percentage of
+			the screen width, but most people won't know what this means.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurwidth/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Accuracy</bold> - Usually use "2", but if you want to create a
+			"glow" around bright highlights and reflections, set this to "10" or
+			greater, but make sure to have "Blurriness" be very small, like 0.1.
+			(Technically, this is the number of standard deviations in radius
+			before the gaussian is clipped to 0.)
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blursize/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Blurring of nearby objects</xtrheader>
+	<tr>
+		<td>
+			<bold>Starts getting less blurry</bold> - This distance from the camera
+			where objects get less blurry. Use "0 m" for both the start and
+			end if you don't wish nearby objects to be blurry.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurnearmin/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>No blurring</bold> - Distance from the camera where nearby objects
+			are no longer blurry.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurnearmax/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Blurring of far-away objects</xtrheader>
+	<tr>
+		<td>
+			<bold>Starts getting blurry</bold> - This distance from the camera
+			where objects start getting blurry blurry. Use "0 m" for both the start and
+			end if you don't wish distant objects to be blurry.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurdistmin/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Completely blurred</bold> - Distance from the camera where distance
+			objects are completely blurred.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=blurdistmax/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+

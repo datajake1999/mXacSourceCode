@@ -1,0 +1,22 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Location settings"/>
+
+<p>
+	This page lets you tell <xSN/> where the building site is located and some information
+	about the area that will make house designing easier. Most of these settings are
+	best set before you start building your house in <xSN/>.
+</p>
+
+<xChoiceButton href=info>
+	<bold>Building information</bold><br/>
+	You should enter the information requested by this page when you start a new
+	building. It will help you design it quicker.
+</xChoiceButton>
+
+
+<xChoiceButton href=levels>
+	<bold>Levels/floors</bold><br/>
+	Use this to adjust the height for the ground, first, etc. floor for building blocks.
+</xChoiceButton>
+

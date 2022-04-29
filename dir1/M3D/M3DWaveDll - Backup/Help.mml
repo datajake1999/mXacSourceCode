@@ -1,0 +1,12 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Help"/>
+
+<p>
+	At the moment the wave editor doesn't have any help. If you think it
+	needs some documentation, please mail me at <xMyEMail/>.
+</p>
+
+<p>
+	The <xSN/> Wave Editor is copyright 2003-2009 by Mike Rozak. All rights reserved.
+</p>

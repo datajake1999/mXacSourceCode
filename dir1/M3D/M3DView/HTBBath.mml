@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="How to build a bathroom"/>
+
+<xPageTitle>
+	How to build a bathroom
+</xPageTitle>
+
+<p>
+	This is a little mini-tutorial about how you can build a bathroom.
+</p>
+
+<ol>
+	<li>
+		Assuming you already have a house, build the walls. If you
+		want a refresher on how to build walls, see <a href=r:282>Internal walls (1)</a>.
+	</li>
+	<li>
+		Add any doors and windows that will open into the bathroom.
+		For a refresher, see <a href=r:284>Doors and windows</a>.
+	</li>
+	<li>
+		Determine where the bathtub will go and <bold>create a cabinet</bold> that
+		is large enough to hold the tub, just like a carpenter would create a box
+		to set the tub in. For information on cabinets,
+		see <a href=r:454>Cabinets</a>.
+	</li>
+	<li>
+		Select a bathtub object from "Bathtubs" under "Plumbing"
+		and <bold>place it in the top of the cabinet.</bold> For more
+		information on this, see <a href=r:462>Pools, ponds, sinks, and bathtubs</a>.
+	</li>
+	<li>
+		You may need to rotate and position the bathub using
+		the <xButtonMoveEmbed/> and <xButtonMoveRotZ/> tools.
+	</li>
+	<li>
+		If you want to create a shower curtain, visit the "Curtains" section under
+		the "Interior decoration" category. Select the curtain you wish. Be aware,
+		when you add it make sure to hold down the control key so it doesn't get
+		"embedded" into a wall; you want the curtain free standing so it can be
+		placed above the tub. You can also create a curtain rod using
+		a tube from "Object pieces".
+	</li>
+	<li>
+		If you want sliding tub doors then find a sliding door under the "Doors" objects.
+		(You can also use bi-fold doors, or whatever is appropriate for your bath.)
+		When placing the new door in your bathroom, hold down the control key so the
+		door isn't embedded into the wall. You will need to move it around, as well
+		as resze the doors, so it
+		rests on the lip of the tub.
+	</li>
+	<li>
+		Use the <xButtonObjPaint/> tool to change the bathrub cabinet's texture to a tile.
+	</li>
+	<li>
+		Creating a vanity is similar. <bold>Create a cabinet</bold> and place
+		it in the room. See <a href=r:454>Cabinets</a> for more information.
+	</li>
+	<li>
+		Select a sink object from "Sinks" under "Plumbing"
+		and <bold>place it in the top of the cabinet.</bold> For more
+		information on this, see <a href=r:462>Pools, ponds, sinks, and bathtubs</a>.
+	</li>
+	<li>
+		Under the "Cabinets" objects, select some cabinet draws and doors. <bold>Place
+		these</bold> on the front of the vanity.
+		For more information see <a href=r:457>Drawers</a>.
+	</li>
+	<li>
+		The rest is a matter of placing lights, mirrors, and other decorations.
+	</li>
+</ol>
+

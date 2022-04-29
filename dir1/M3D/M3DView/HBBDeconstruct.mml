@@ -1,0 +1,64 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Deconstructing building blocks"/>
+
+<xPageTitle>
+	Deconstructing building blocks
+</xPageTitle>
+
+<p>
+	All building blocks are really made up of foundations, floors, walls, roofs,
+	and verandas. <xSN/>'s user interface wrap these all up into one object to
+	make them easier to deal with since the pieces are usually shaped together.
+	(It's not very common to have a wall without a floor underneath or roof
+	above.)
+</p>
+
+<p>
+	However, sometimes building blocks don't provide enough functionality, or they
+	provide enough but you just want to tweak a few bits. To get around this problem
+	you can either design part (or all) of your house using basic
+	structires (see <a href=r:278>Bypassing building blocks and using "Basic structures"</a>),
+	or you can create it using building blocks and then <bold>"Deconstruct"</bold> the
+	building blocks into walls, floors, etc. once the building block
+	conglomerations has outlived its usefulness.
+</p>
+
+<p>
+	To deconstruct a building block (or anything other object):
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDeconstruct/> tool.
+	</li>
+	<li>
+		Click on the object you want to deconstruct. If the object can't be reduced to
+		smaller bits then the pointer will change to a circle with a slash through it.
+	</li>
+	<li>
+		After the object has been deconstructed it'll be replaced by its constituent
+		parts. It should (if all goes well with the computer program) look exactly the
+		same as the original object, except...
+	</li>
+	<li>
+		If you choose the <xButtonSelIndividual/> tool and click on part of the object
+		you'll find that only part of the old object is selected. You'll now be able
+		to manipulate the individual parts of the original object using all
+		the <xSN/> tools.
+	</li>
+	<li>
+		<bold>WARNING:</bold> Once you deconstruct there's no going back (except
+		using <xButtonUndo/>). A deconstructed building block cannot be "reconstructed"
+		back into a building block.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:344>Balustrades</a></li>
+	<li><a href=r:341>Piers</a></li>
+	<li><a href=r:469>Removing joints from building block intersections</a></li>
+</xul>

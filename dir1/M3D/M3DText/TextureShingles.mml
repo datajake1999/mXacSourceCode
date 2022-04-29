@@ -1,0 +1,205 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Shingles"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture width</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Texture height</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=seed>
+			<bold>New random variation</bold><br/>
+			This texture is generated using some random numbers to make it look more
+			natural. Press this button to use a new set of random numbers, creating
+			a slightly different looking texture. You'll need to refresh the image
+			to see your changes.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Shingles</xtrheader>
+	<tr>
+		<td>
+			<bold>Across, minimum</bold> - Minimum number of shingles in the pattern,
+			from left to right.
+		</td>
+		<td><edit maxchars=64 width=100% name=acrossmin/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Across, maximum</bold> - Maximum number of shingles in the pattern,
+			from left to right.
+		</td>
+		<td><edit maxchars=64 width=100% name=acrossmax/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Up and down</bold> - Number of rows of shingles
+		</td>
+		<td><edit maxchars=64 width=100% name=updown/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shingle spacing</bold> - Gap between shingles.
+		</td>
+		<td><edit maxchars=64 width=100% name=shinglespacing/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shingle thickness</bold> - How thick each shingle is so that one sits
+			ontop the other.
+		</td>
+		<td><edit maxchars=64 width=100% name=shinglethick/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variability in width</bold> - If all the way to the left, all the shingles
+			will be the same width. To the right causes more variation.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variability in height</bold> - If all the way to the left, all the shingles
+			will be the same height. To the right causes more variation.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=spacingbutton>
+				<bold>Void color</bold><br/>
+				Click this to select what color will be shown if no shingles cover the spot.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=spacingcolor/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Shingle Appearance</xtrheader>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=usetiles>
+			<bold>Use tiles</bold><br/>
+			Check this to use tiles (such as ceramic, slate, or asphalt). If unchecked,
+			wood shingles will be used.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=plank>
+			<bold>Wood shingle appearance</bold><br/>
+			Bring up a page letting you specify what the planks look like.
+			(This only works if "Use tiles" is unchecked.)
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=tile>
+			<bold>Tile appearance</bold><br/>
+			Bring up a page letting you specify what the tiles look like.
+			(This only works if "Use tiles" is checked.)
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton href=dirtpaint>
+			<bold>Dirt or paint</bold><br/>
+			Bring up a dialog letting you either add dirt into the cracks, or
+			to paint the planks.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Cut off corners</xtrheader>
+	<tr>
+		<td>
+			<bold>Cut off corners</bold> - Amount of the corner to cut off.
+			Use "0" to keep square corners.
+		</td>
+		<td><edit maxchars=64 width=100% name=cutcorner/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Ceramic tile roof humps</xtrheader>
+	<tr><td>
+		Use the following settings to add humps to your roofing tiles. Two humps are added
+		per tile so they overlap properly. If you use these, you should make sure the tiles
+		are all evenly spaced and that the gap is set to "0".
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Hump height</bold> - How much higher the hump is than the flat part of
+			the tile. Set this to "0" if you don't want the humps.
+		</td>
+		<td><edit maxchars=64 width=100% name=humpheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hump width</bold> - Width of the hump as a percentage of the tile's width.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=humpwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Perspective effect</bold> - Slide this to the right to apply some perspective
+			effects to the texture so it looks more realistic when drawn on a roof.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=humppersp/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

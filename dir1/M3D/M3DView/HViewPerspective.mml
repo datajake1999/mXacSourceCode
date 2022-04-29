@@ -1,0 +1,39 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Perspective"/>
+
+<xPageTitle>
+	Perspective
+</xPageTitle>
+
+<p>
+	The <xButtonView3d/> and <xButtonViewWalkthrough/> use perspective. They both
+	use a setting called <bold>"field of view"</bold> which is the amount of the world
+	you can see in one glance.
+</p>
+
+<p>
+	Human vision has about a 170 degree field of view, meaning that we can see anything
+	happening in front of us, but nothing behind, Horses have a 340 degree field of view,
+	so they can see practically all around them. Cameras also have a field of view;
+	lenses with a large field of view are called wide angle lenses.
+</p>
+
+<p>
+	The initial field of view for <xSN/> is 90 degrees, which means
+	that the computer screen displays only one quarter of the potential 360 degree field
+	of view. If you want to change this value:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonViewSettings/> button.
+	</li>
+	<li>
+		In the "View settings" page press the <bold>"Perspective"</bold> button.
+	</li>
+	<li>
+		The "Perspective" page will appear. Either enter the <bold>"Field of
+		view in degrees"</bold> or the <bold>"Monitor width and distance"</bold> settings.
+	</li>
+</ol>

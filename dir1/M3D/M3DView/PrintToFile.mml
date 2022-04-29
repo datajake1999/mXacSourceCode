@@ -1,0 +1,65 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Save the image"/>
+
+<p>
+	This page lets you save the image you're looking at as either a bitmap (.bmp) or
+	JPEG (.jpg) image. Once you have selected your settings press the "Save" button.
+</p>
+
+<xChoiceButton name=save>
+	<bold>Save</bold><br/>
+	Saves the image created using the following settings.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Image quality</bold>
+		</td>
+		<td><xComboImageQuality width=100% name=quality/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Anti-aliasing</bold> - The better the anti-aliasing the fewer
+			"jaggies" you'll see on the image.
+		</td>
+		<td>
+			<bold><combobox width=100% cbheight=150 name=anti>
+				<elem name=1><bold>None</bold> (fastest)</elem>
+				<elem name=2><bold>2x2</bold> (moderate)</elem>
+				<elem name=3><bold>3x3</bold> (slow)</elem>
+				<elem name=4><bold>4x4</bold> (slowest)</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixels across</bold> - Horizontal resultion.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=width/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixels up/down</bold> - Vertical resultion.
+		</td>
+		<td>
+			<bold><edit maxchars=32 width=100% selall=true name=height/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changeeffect>
+				<bold>Change effect</bold><br/>
+				Press this to change the effect used, such as fog, outlines, or make it
+				look like a painting.
+			</xChoiceButton>
+		</td>
+		<td align=center>
+			<image border=2 name=effectbit hbitmap=<<<EFFECTBITMAP>>>/>
+		</td>
+	</tr>
+</xtablecenter>

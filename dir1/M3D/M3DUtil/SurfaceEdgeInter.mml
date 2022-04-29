@@ -1,0 +1,35 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Specify the edge through intersections"/>
+
+<p>
+	With this page you can change the edge of the surface using intersections
+	of this surface with other surfaces as a guide. This page is useful for trimming
+	walls against walls (so they don't pass through one another), walls against
+	ceilings, and floors against outside walls.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Intersections</xtrheader>
+	<tr><td>
+		<p>
+			Click on the edges that enclose the area you wish to keep.
+			When you've completely enclosed an area, press "Change edges."
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+		<br/>
+		<italic>If you only see the edge of the surface drawn then there may not be
+		any other surfaces that intersect it.</italic>
+	</td></tr>
+</xtablecenter>
+
+
+<xchoicebutton name=add>
+	<bold>Change edges</bold><br/>
+	Change the edge of the surface based upon the edges selected above.
+</xchoicebutton>

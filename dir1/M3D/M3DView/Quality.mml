@@ -1,0 +1,118 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Drawing quality"/>
+
+<xtablecenter width=100%>
+<xtrheader>Lighting model</xtrheader>
+<tr><td>
+<p>
+	Please choose the "lighting model" that <xSN/> uses to display colors:
+</p>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture,shadow name=mono>
+	<bold>Monochromatic</bold><br/>
+	All objects in <xSN/> are displayed using the same color. <italic>See below to
+	change this color.</italic> Lighting is not taken into account. <italic>This
+	option draws slightly faster than "Shaded".</italic>
+</xChoiceButton>
+
+
+<p align=right><table width=80% border=0 innerlines=0>
+	<tr>
+		<td width=66%>
+			<xChoiceButton style=righttriangle name=changemono>
+				<bold>Change monochromatic object color</bold>
+			</xChoiceButton>
+		</td>
+		<td width=33% valign=center>
+			<xStatusColor width=100% name=monocolor/>
+		</td>
+	</tr>
+</table></p>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture,shadow name=solid>
+	<bold>Solid</bold><br/>
+	Objects are displayed using their original color without any shading from
+	the light sources. <italic>This
+	option draws slightly faster than "Shaded".</italic>
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture,shadow name=shaded>
+	<bold>Shaded</bold><br/>
+	Objects are displayed using their original color <bold>and including shading</bold> from
+	the sun.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture,shadow name=texture>
+	<bold>Shaded with textures</bold><br/>
+	Objects are displayed using <bold>textures and including shading</bold> from
+	the sun. This lighting model is the fairly realistic.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=mono,solid,shaded,texture,shadow name=shadow>
+	<bold>Shadows</bold><br/>
+	Objects are drawn using <bold>shadows, multiple light sources, transparency</bold>, and
+	everything else from above.
+	This lighting model is the most realistic. <italic>This
+	is the slowest form of drawing.</italic>
+</xChoiceButton>
+
+</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+<xtrheader>Solid or wireframe</xtrheader>
+<tr><td>
+
+<p>
+	<xSN/> can draw objects either as solid or wireframe skeletons. Please
+	select which one you want:
+</p>
+
+<xChoiceButton style=x radiobutton=true group=wire,soliddraw name=wire>
+	<bold>Wireframe</bold><br/>
+	Display wireframe versions of the objects. This will draw faster than
+	the solid objects and let you see through them. A way to get an effect
+	similar to wireframes, but where you can't see through the object, is
+	to use an outline and make use monochromatic coloring.
+</xChoiceButton>
+
+<xChoiceButton style=x radiobutton=true group=wire,soliddraw name=soliddraw>
+	<bold>Solid</bold><br/>
+	Display objects as solids.
+</xChoiceButton>
+
+</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous settings</xtrheader>
+
+	<tr>
+		<td width=66%>
+			<bold>Back-face culling</bold> - If this is on then portions of objects
+			facing away from the viewer won't even be drawn. Normally this optimization
+			is never noticed. However, you'll see it if you draw the image as wire-frame,
+			walk inside an object, or adjust the clipping plane so you can see inside
+			an object.
+		</td>
+		<td width=33% valign=center>
+			<bold><button style=x checkbox=true name=backface>On</button></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Desired detail (in pixels)</bold> - <xSN/> can really only draw flat
+			surfaces, so when it draws a curved object it breaks it into many small,
+			flat ones. It keeps dividing the object up until the flat sections are
+			about this many pixels across. Typing in a low number will make a smooth
+			looking image but decrease drawing speed.
+		</td>
+		<td width=33% valign=center>
+			<edit maxchars=32 width=100% name=detail/>
+		</td>
+	</tr>
+
+</xtablecenter>

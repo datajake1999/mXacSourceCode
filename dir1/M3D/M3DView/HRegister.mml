@@ -1,0 +1,25 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Registration"/>
+
+<xPageTitle>
+	Registration
+</xPageTitle>
+
+<p>
+	Because this is a <bold>pre-release</bold> version of <xLN/>,
+	there is not registration free. The only limitation to this version is that:
+</p>
+
+<xul>
+	<li>Only 25% of the functionality works.</li>
+	<li>It expires in a few months.</li>
+</xul>
+
+<p>
+	When I do come out with a final version, (see <a href=r:297>Future plans</a>),
+	it will be priced to compete.
+	Users don't have to pay for it <bold>unless they want the ability to save their
+	work</bold>; this will enable architects and builders to distribute the application
+	to their clients to preview the house.
+</p>

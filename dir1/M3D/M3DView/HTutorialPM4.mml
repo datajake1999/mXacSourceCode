@@ -1,0 +1,78 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Vertices 1"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Vertices 1
+</xPageTitle>
+
+<p>
+	The first part of the tutorial on the polygon mesh editor will be how to modify
+	vertices (corners) of the polygons.
+</p>
+
+<ol>
+	<li>
+		If not already highlighted on the right side of the screen,
+		click the <xButtonPMModePoly/> button.
+	</li>
+	<li>
+		If not already highlighted on the lower left side of the screen,
+		click the <xButtonPMEditVert/> button. I will explain the edge and side
+		manipulation modes later.
+	</li>
+	<p>
+		The buttons on the bottom of the screen will switch to those buttons
+		specific to modifying vertices.
+	</p>
+</ol>
+
+
+<xSectionTitle>Selection</xSectionTitle>
+
+<p>
+	Under the world buttons, the selection buttons
+	(<xButtonSelIndividual/>, <xButtonSelRegion/>, etc.) let you select different objects
+	you wish to modify. In the polygon mesh editor, they let you select which vertices
+	(corners) you wish to modify. Or, if you are in edge mode, edges, etc.
+</p>
+
+<p>
+	Unlike the world view, <bold>most tools will work without a selection</bold>. As
+	a general rule with the tools in the polygon mesh editor, if you have selected specific
+	vertices, edges, or sides, using the tool will affect all the selected vertices,
+	edges, or sides. <bold>If nothing is selected</bold> when you use the tool then
+	the vertex, edge, or side that you clicked on will be modified. This makes it very
+	easy to modify one element at a time since you never need to use the selection tools
+	unless you want to move multiple elements.
+</p>
+
+<p>
+	Just to see how selection works:
+</p>
+
+<ol>
+	<li>
+		Choose the <xButtonSelIndividual/> tool and click on a vertex. You'll see a red
+		dot drawn over the selected vertex.
+	</li>
+	<li>
+		Holding down the <bold>control</bold> key will let you select multiple vertices.
+	</li>
+	<li>
+		Alternatively, the <xButtonSelRegion/> tool will select several vertices.
+	</li>
+	<li>
+		By default, vertices must be entirely with the selected region and visible in order
+		to be selected. If you want to select vertices that aren't visible you need to
+		change options using the <xButtonSelSet/> button.
+	</li>
+	<li>
+		Finally, press <xButtonSelNone/> to clear your selection.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:897><bold>Next</bold></button>
+</p>
+

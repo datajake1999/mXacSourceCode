@@ -1,0 +1,66 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Posterize"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Hue, lightness, saturation</xtrheader>
+	<tr>
+		<td>
+			<bold>Hue palette</bold> - The number of colors used for the
+			poster. For example: If this is "3" then only red, green, and blue
+			will be used. If it's "6" then red, yellow, green, cyan, blue, and
+			magenta will be used.
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=palette0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Hue shift</bold> - Shifts all the colors in the color
+			wheel. For example: If you have "3" colors for the "Hue palette" then
+			normally the colors will be red, green, and blue. You can adjust the
+			shift so the basic colors are cyan, yellow, and magenta.
+		</td>
+		<td><scrollbar orient=horz min=-50 max=50 name=colorhueshift/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Lightness shades</bold> - The number of shades used for
+			lightness (how bright/dark the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=palette1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Saturation shades</bold> - The number of shades used for
+			saturation (how colorful the colors are).
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=palette2/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the posterization effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

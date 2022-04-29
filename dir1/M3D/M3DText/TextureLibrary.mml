@@ -1,0 +1,100 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Texture library"/>
+
+<p>
+	Select the texture you want to modify from the list, and then press
+	one of the buttons below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Texture to modify</xtrheader>
+	<tr><td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<tr>
+			<td width=30%>Major category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=major>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30%>Minor category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=minor>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30% valign=top>Texture</td>
+			<td>
+				<font color=#000000><bold><listbox sort=true vscroll=lbscroll width=85% height=150 name=name>
+					<elem name=1><small>Test elem</small></elem>
+					<elem name=2><small>Test elem2</small></elem>
+				</listbox></bold></font>
+				<scrollbar height=150 width=15% orient=vert name=lbscroll/>
+			</td>
+		</tr>
+	</table>
+	
+	<p/>
+	<p align=center>
+		Sample
+		<br/>
+		<image width=204 height=204 border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=edit href=edit>
+	<bold>Modify the selected texture</bold><br/>
+	Brings up a dialog that lets you modify the texture. <italic>(You cannot modify
+	built-in textures directly, but you can "Copy and modify" them. See below.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=copyedit>
+	<bold>Copy and modify the selected texture</bold><br/>
+	Copies the texture and then modified the copy. This is useful if you want
+	to create a new texture based upon an old one.
+</xChoiceButton>
+
+<xChoiceButton name=newtext href=newtext>
+	<bold>Create a new texture from scratch</bold><br/>
+	Create a new texture that is not based on an existing one. While "Copy and
+	modify" is generally recommended, use this for <bold>creating textures
+	from bitmaps and JEPGs</bold>.
+</xChoiceButton>
+
+<xChoiceButton name=rename>
+	<bold>Rename the selected texture</bold><br/>
+	Changes the texture's name or moves it to another category. <italic>(You cannot rename
+	built-in textures.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=remove>
+	<bold>Delete the selected texture</bold><br/>
+	Deletes the texture. <italic>(You cannot delete
+	built-in textures.)</italic>
+</xChoiceButton>
+
+
+<xbr/>
+
+<xsectiontitle>Documentation</xsectiontitle>
+
+<p>
+	Once you press the "Modify" button, there isn't much documentation. Don't worry;
+	just experiment with the different knobs and numbers and see what happens to
+	the texture. If you like the change, keep it, otherwise return the setting to
+	its previous value.
+</p>
+
+<p>
+	<bold>Tip:</bold> Make sure to test your textures both other the "Texture" quality
+	and the "Shadows" quality. Because "Shadows" more accurately simulates the bumps
+	and shininess, the two may look slightly different.
+</p>

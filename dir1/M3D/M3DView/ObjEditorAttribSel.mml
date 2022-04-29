@@ -1,0 +1,15 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Select object and attribute"/>
+
+<p>
+	Look through the list and find what sub-object you wish to affect with the
+	new attribute. Click on the attribute in the sub-object that will be modified
+	when you modify the current attribute.
+	(If you click on the object name the object will be selected, so you can see
+	which object you're using.)
+</p>
+
+<null>
+<<<$OBJECTS>>>
+</null>

@@ -1,0 +1,29 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Resizing animation objects"/>
+
+<xPageTitle>
+	Resizing animation objects
+</xPageTitle>
+
+<p>
+	Some animation objects cover a timespan. You can resize these objects, changing
+	their start or end time.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonAnimResize/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on either end of the object until its start or end
+		are positioned where you wish.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:564>Bookmarks</a></li>
+</xul>

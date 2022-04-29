@@ -1,0 +1,36 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Waterfalls"/>
+
+<xPageTitle>
+	Waterfalls
+</xPageTitle>
+
+<p>
+	If you wish to add waterfalls to your scenery, add the "Waterfall" object.
+</p>
+
+<p>
+	To add a waterfall to your scenery:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined waterfall that most closely meets your
+		needs. You can find them in "Water" under "Outdoors".
+	</li>
+	<li>
+		<bold>Add</bold> it to your scenery by clicking where you want the waterfall.
+	</li>
+	<li>
+		Resize and reshape the waterfall using <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		The <xButtonObjDialog/> tool lets you change the look of your waterfall even more.
+	</li>
+</ol>
+
+

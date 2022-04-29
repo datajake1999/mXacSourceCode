@@ -1,0 +1,206 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for architects"/>
+
+<xPageTitle>
+	Tips for architects
+</xPageTitle>
+
+<p>
+	I am assuming (perhaps incorrectly) that architects will find <xSN/> most valuable
+	for experimenting with ideas and presenting them to clients. As such, here are
+	some suggestions:
+</p>
+
+<xul>
+	<li>
+		If you draw you sketches out on paper before hand, scan them into your computer
+		and import them into <xSN/> using XXX. When using the <xButtonViewFlat/> and have
+		the camera positioned at the proper angle you'll see your sketch superimposed
+		on the 3D world. This will make it easier to size, rotate, and position the
+		objects according to your sketch.
+	</li>
+	<li>
+		When you want to present an idea to your clients, provide them with a copy
+		of <xLN/> and a the <xSN/> files with your ideas. Not haviing
+		paid for <xSN/> they will be able to use all of <xSN/>'s features <bold>except</bold> they
+		won't be able to save any changes. They'll still be able to do 3D walkthroughs
+		and experiment with different colors and textures.
+	</li>
+</xul>
+
+<xDefinition>
+	<bold>Feedback question:</bold> What kind of plan generation features do
+	I need to impliment?
+	<p/>
+	Here's my initial take on the problem: Architects produce plans for a) the builder
+	to read, and b) legal documentation.
+	<p/>
+	My problem is this: Computers are stupid creatures and sometimes take reality
+	too literally. Plans, not actually true-to-life representations of the building,
+	cause problems for the computer because while it knows were all the walls are, doesn't
+	actually know (with any expertiese) how to draw the walls, measurements, etc.
+	so humans can easily understand them. (Nor does it know about all the local
+	legal requirements.)
+	<p/>
+	Put it another way: A painting (such as the Mona Lisa) is a human's interpretation
+	of an actual scene. Computers cannot produce paintings. They can only produce photographs,
+	which accurately reproduce a view of the scene. The difference between the photograph
+	and the painting (even if the painting is trying to be ultra realistic) is that the
+	painting is an altered view of what is actually seen. Often this is unconscious, but
+	it's still there. A good portrait painting is "better" (from a human standpoint) than
+	a photograph because it translates the unseen (emotion, thoughts) and somehow
+	makes them visible (maybe at a subconsious level) in the painting.
+	<p/>
+	Or, if you're a musician: Have you ever played with computer music printing? Especially
+	ones that take MIDI straight from the keyboard and produce a score? The results, while
+	technically correct, are very difficult to read.
+	<p/>
+	If I have <xSN/> produce plans from the 3D model the plans will be 100% accurate but
+	they will also be very difficult to understand. As a result, <bold>any plan information
+	than <xSN/> produces will have to be sent to another application</bold> and you (the
+	architect) will have to spend hours refining the plan (originall written by <xSN/>) so
+	that it's readable by humans.
+	<p/>
+	And as for having <xSN/> produce elevations and details... it can draw them
+	exactly, but you end up with the same problem. <xSN/> will provide you with a
+	"photograph" of the detail when you just want a schematic. In the end you'll need to rework
+	them to make them intelligable.
+	<p/>
+	So, I've come up with a few ways to solve the plans issue. (More may exist.) I'd
+	like you input:
+	<p/>
+	<xul>
+		<li>
+			<xSN/> provides the ability to print the flat (isometric) view at 1:100 (or whatever)
+			scale. You print it out, get out the tracing paper, and use the printed
+			image as a guide for your plans.
+		</li>
+		<li>
+			<xSN/> produces a file that can be read by AutoCAD 2D (or another application?). It will
+			have all the lines for walls, doors, etc., and maybe even some measurements.
+			You'll need to use AutoCAD 2D to manipulate the plans.
+		</li>
+		<li>
+			<xSN/> includes its own plan editor. (It will take me 3-6 months to write.) Instead
+			of using AutoCAD you'll use <xSN/>'s plan editor to modify the plan. The only
+			difference between this and the AutoCAD solution is that you don't have
+			to buy AutoCAD if you don't already have it, and if you do have AutoCAD, you'll
+			need to learn yet another application.
+		</li>
+	</xul>
+	Ideas? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> You're going to use <xSN/> to produce quality 3D
+	images to show your clients.
+	<p/>
+	My current plans are to have the 3D produce the following effects: (I mention if
+	the competitors do it because words are often a poor substitute for seeing the
+	effect, and seeing what the competitors produce will give you an idea what
+	<xSN/> will be able to do.)
+	<p/>
+	<xul>
+		<li>
+			Textures - I expect to have several hundred with the ability to import .jpeg or .bmp
+			files. (Which is what my competitors have, although they may have about 1000
+			initial textures. See below for my solution.)
+		</li>
+		<li>
+			Textures - I also plan to allow you to
+			make your own variety of bricks, tiles, etc. by starting with built-in ones
+			and adjusting parameters such as the variation in color across the brick,
+			variability from brick to brick, size, depth, etc. There will be hundreds of parameters.
+		</li>
+		<li>
+			Textures - Textures will include transparency (so you can see through the openings
+			in decks) and specularity (so that tile textures have shiny highlights where they
+			bend down into the grout). I haven't seen any competitors with this.
+		</li>
+		<li>
+			Shadows - Not only will you get the sun's shadow, but also from all the lights.
+			Shadows will be "hard" and will not have any softness to them. Of the architectual
+			CAD programs I've seen, some have shadows. (See below for
+			one of the potential rendering options.)
+		</li>
+		<li>
+			Specularity - Basically, the blurred reflection of a light on a shiny surface,
+			such as gloss paint. Most competitors have specularity.
+		</li>
+		<li>
+			Transparency - Glass, fly screen, etc. Some competitors have transparency.
+		</li>
+		<li>
+			Antialiasing - Smoothing of edges. All of the competitors do this.
+		</li>
+	</xul>
+	
+	It will take a few minutes for the computer to draw an image using the above
+	rendering techniques.
+	<p/>
+	Here's the question: I could potentially do more to improve the realism of
+	an image. Which of this (is any) would be most useful?
+	<p/>
+	<xul>
+		<li>
+			Ray tracing - (Much overhyped) This will allow mirrors, perfectly calm
+			reflecting pools, perfectly shiny granite counters, and mirroring seen
+			in glass if you look at it from an angle. A ray traced image will take
+			a couple of hours to draw.
+		</li>
+		<li>
+			Soft shadows, and blurry reflections - Instead of shadows being hard,
+			they will have soft edges (technically called the umbra and penumbra). I will
+			also be able to do blurred reflections (such as the reflection of furniture
+			on hardwood flooring). The only problem here: It will take the computer
+			about a week to draw a picture.
+		</li>
+		<li>
+			Grass and carpet - The reason grass and carpet look lousy when drawn by
+			a CAD program is because they're not simulated right. To do them properly I
+			need to simulate all of the blads of grass with a technique called "fur".
+			Drawing grass and carpet properly will probably take several hours.
+		</li>
+		<li>
+			More textures - If instead of spending a few weeks on ray tracing (or whatever) I spent
+			a few weeks and produced a few hundred more textures you might end up
+			with a better quality image.
+		</li>
+		<li>
+			More models - If instead of spending a few weeks on ray tracing (or whatever) I
+			produced more furniture (etc.) models.
+		</li>
+	</xul>
+	Any suggestions? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> If you distribute <xSN/> to clients, would you want
+	a simplified-looking version that only deals with moving the camera around and
+	(maybe) changing colors/textures? Send me E-mail at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Would some sort of cost estimating feature
+	be useful?
+	<p/>
+	If so, how far do I go?
+	<p/>
+	<xul>
+		<li>
+			Calculate the floor area and that's it.
+		</li>
+		<li>
+			Calculate the floor area, wall area, roof area, deck area, and window area?
+		</li>
+		<li>
+			Calculate every piece of steel, wood, tile, etc. that goes into building the
+			house, export it to a spreadsheet, and let you enter the prices?
+		</li>
+		<li>
+			Something else?
+		</li>
+	</xul>
+	Ideas? Send me E-mail at <xMyEmail/>.
+</xDefinition>

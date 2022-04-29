@@ -1,0 +1,175 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Text-to-speech"/>
+
+<p>
+	Text-to-speech allows the computer to speak, reading directly from text.
+	Although it doesn't sound natural, it saves
+	you the work of recording thousands of dialogue segments. You can either
+	use text-to-speech to completely replace recordings of a character, or
+	as a temporary placeholder.
+</p>
+
+<p>
+	Two types of text-to-speech voices exist:
+</p>
+
+<xul>
+	<li>
+		<bold>Modified TTS</bold> - This TTS voice uses a "Master TTS voice" and modifies
+		it to change the basic sound of the voice. The underlying voice is still the same,
+		so there's a limited amount of flexibility here. A modified TTS voice is easy to
+		create. You can load a <bold>prosody model</bold> into a modified TTS voice to
+		adjust the prosody (pitch, timing, volume) the voice use to speak sentences and
+		phrases.
+	</li>
+	<li>
+		<bold>Master TTS</bold> - A master TTS voice is a recording of a real person, and
+		sounds (reasonably) like the person. A master TTS voice is a <bold>lot</bold> of
+		work to create; see below.
+	</li>
+</xul>
+
+<xbr/>
+
+<xSectionTitle>Modified TTS voice</xSectionTitle>
+
+<xChoiceButton href=newex>
+	<bold>Create a new Modified TTS Voice</bold><br/>
+	Press this to create a new modified TTS voice.
+</xChoiceButton>
+
+<xChoiceButton href=editex>
+	<bold>Modify an existing Modified TTS Voice</bold><br/>
+	Lets you edit an existing modified TTS voice.
+</xChoiceButton>
+
+<xSectionTitle>Master TTS Voice and Prosody model</xSectionTitle>
+
+<xChoiceButton href=newmaster>
+	<bold>Create a new Master TTS Voice, or a new Prosody model</bold><br/>
+	Use this to create an entirely new master TTS Voice or Prosody model. For more
+	information see below.
+</xChoiceButton>
+
+<xChoiceButton href=editmaster>
+	<bold>Modify an existing Master TTS Voice, or an existing Prosody model</bold><br/>
+	This modifies an existing master TTS voice or Prosody model.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>The work to create a Master TTS Voice</xSectionTitle>
+
+<p>
+	A "Master TTS Voice" is a synthesized voiced based on a real person.
+	As such you need a lot (400 to 3000 or more) sentence-long recordings of
+	the person speaking. This is a <bold>lot</bold> of work, and will take a minimum
+	of 10 hours to get something running, and 40-80 hours of work for a full
+	voice.
+</p>
+
+<p>
+	If you just need a TTS voice that sounds different than the one currently
+	available, but which doesn't need to sound like a specific person, then I
+	suggest using a "Modified TTS Voice" since it will only take 15-30 minutes
+	to make.
+</p>
+
+<p>
+	Below is the work you need to do to create a master text-to-speech voice.
+</p>
+
+<ol>
+	<li>
+		<bold>Lexicon</bold> - You will need a lexicon in the language whose text-to-speech
+		you plan to use. <xSN/> comes with an American English one installed, but if you
+		need another language you will either need to produce your own lexicon (just imaging
+		typing in 10,000 word pronunciations), or find one on the internet. (Check out
+		my web site to see if I have found any other lexicons.)
+	</li>
+	<li>
+		<bold>Numbers to words</bold> - Text-to-speech needs to know how to speak numbers,
+		such as "52"; in Enlgish it's "fifty two". I have done this work for English; if you
+		want another language you may need to E-mail me at <xMyEmail/> the instructions for converting
+		number to words in the given language.
+	</li>
+	<li>
+		<bold>Sample text</bold> - You will need about 1 MB (100,000 words) of sample text
+		that you expect your TTS voice to speak. This is about one novel's worth. If you are
+		going to have TTS read a specific novel (or set of novels) then just combine them
+		into one large text file and you're done. TTS uses this to determine the most common words
+		and phoneme combinations; they're recorded first so that TTS will sound the best
+		when reading the given text.
+	</li>
+	<li>
+		<bold>Good microphone and a quiet room</bold> - You will need a quiet room to record
+		in, along with a good microphone. A headset microphone with noise-cancellation will
+		work best; they retail for about US$50.00. A headset microphone without noise-cancellation
+		is next best at around US$25.00. Other microphones are not recommended, although
+		you can experiment with them.
+	</li>
+	<li>
+		<bold>Train speech recognition</bold> - You will need to train speech recognition to
+		your voice so it does a better job determining where phonemes begin and end (for your
+		voice). This takes about an hour.
+	</li>
+	<li>
+		<bold>Record 400 to 3000+ sentences</bold> - To get a voice working you will need
+		to record at least 400 sentences. To get the voice sounding decent you will need
+		3000 or more sentence recordings. In my experience, you can record and review about 100
+		sentences per hour.
+	</li>
+</ol>
+
+<p>
+	The net result will be a 10 MB to 40 MB file that synthesizes a voice that sounds
+	similar to yours. It won't sound exactly the same though; computers aren't good
+	enough at TTS yet.
+</p>
+
+<xbr/>
+
+<xSectionTitle>The work to create a Prosody Model</xSectionTitle>
+
+<p>
+	You may wish to create a <bold>prosody model</bold> to fine-tune the prosody of
+	either a master or modified TTS voice. The prosody model ensures that the text-to-speech
+	engine will use the right (or at least better) prosody (timing, volume, inflection)
+	for a given set of sentences that you record. The prosody is determined by
+	the timing, volume, and inflection you use in the recording.
+</p>
+
+<p>
+	Creating a prosody model is virtually identical to creating a master TTS voice,
+	except:
+</p>
+
+<ul>
+	<li>
+		<bold>Lexicon</bold> - The lexicon must already exist, since the prosody model
+		is only used to modify an existing TTS voice, which must already have a lexicon.
+	</li>
+	<li>
+		<bold>Sample text</bold> - You need to provide a list of sentence whose
+		prosody should be "gotten right". Then sentences are written in a text file, one
+		sentence per line. For example: To ensure that text-to-speech speaks "How's it going?"
+		with the right inflection, instead of sounding bored out of its mind, you'd need
+		to inclued "How's it going?" in your sample text.
+	</li>
+	<li>
+		<bold>Train speech recognition</bold> - You <bold>don't</bold> need to train
+		speech recognition.
+	</li>
+	<li>
+		<bold>Record sentences</bold> - You need to record whatever sentences are in your
+		sample text.
+	</li>
+	<li>
+		<bold>Create a modified TTS voice</bold> - To use your prosody model with a text-to-speech
+		voice, you will need to create a modified text-to-speech voice based off of whatever
+		text-to-speech voice you chose. The modified TTS voice will need to load in
+		the prosody model.
+	</li>
+</ul>

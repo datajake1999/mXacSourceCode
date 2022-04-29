@@ -1,0 +1,57 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Pathway settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>General settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - The amount that the pathway rises above the ground level.
+		</td>
+		<td><bold>
+			<edit maxchars=32 width=100% name=width1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Profile roundness</bold> - If all the way to the left, the profile of
+			the pathway will be boxy, like poured concrete. To the right it becomes
+			smoother, like a dirt pathway.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=width2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Start/end roundness</bold> - Controls how the pathway starts and ends. All the way to
+			the left causes a sharp start/end, while to the right is a rounded start/end.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=0 name=width3/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Path settings</xtrheader>
+	<tr><td>
+		<xchoicebutton name=custom href=custom>
+			<bold>Modify path shape</bold><br/>
+			Displays a dialog that lets you control how the path curves between the
+			control points.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=keepsamewidth>
+			<bold>Keep the same width</bold><br/>
+			When you move the control points for the pathway width, the entire pathway
+			will use the same width. If unchecked, you can change the width at each point
+			in the path.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=keeplevel>
+			<bold>No banking angle</bold><br/>
+			If checked, the pathway won't bank to the left or right with the countour of
+			the land.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

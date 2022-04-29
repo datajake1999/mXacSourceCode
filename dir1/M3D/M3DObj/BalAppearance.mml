@@ -1,0 +1,260 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Balustrade appearance"/>
+
+<!xListBalAppear>
+	<listbox sort=false tbmargin=16 macroattribute=1>
+		<elem name="252">
+			<bold>Balustrade, fancy wood</bold><br/>
+			<small>Balustrade built with wood, slightly fancier than the others.</small>
+		</elem>
+		<elem name="250">
+			<bold>Balustrade, greek columns</bold><br/>
+			<small>Posts and columns are circular with rectangular bases. No handrail.</small>
+		</elem>
+		<elem name="251">
+			<bold>Balustrade, greek columns</bold><br/>
+			<small>Posts and columns are circular with rectangular bases.
+			Includes a handrail.</small>
+		</elem>
+		<elem name="51">
+			<bold>Balustrade, horizontal beams</bold><br/>
+			<small>Thin, rectangular horizontal members enclose the balustrade.</small>
+		</elem>
+		<elem name="50">
+			<bold>Balustrade, horizontal boads</bold><br/>
+			<small>Large horizontal wood boards enclose the balustade.</small>
+		</elem>
+		<elem name="54">
+			<bold>Balustrade, horizontal poles</bold><br/>
+			<small>The ballusters are horizontal 50mm-diameter poles.</small>
+		</elem>
+		<elem name="4">
+			<bold>Balustrade, log-cabin style</bold><br/>
+			<small>Large round posts, handrails, and balusters.</small>
+		</elem>
+		<elem name="150">
+			<bold>Balustrade, open</bold><br/>
+			<small>The balustrade is open with only a handrail.</small>
+		</elem>
+		<elem name="151">
+			<bold>Balustrade, open with middle rail</bold><br/>
+			<small>The balustrade is open with a handrail and a middle pole.</small>
+		</elem>
+		<elem name="152">
+			<bold>Balustrade, open poles</bold><br/>
+			<small>The balustrade is open with only a handrail.
+			It is constructed of 50mm steel poles.</small>
+		</elem>
+		<elem name="100">
+			<bold>Balustrade, panel</bold><br/>
+			<small>A thin panel (such as glass or wire) is suspended between the
+			posts.</small>
+		</elem>
+		<elem name="101">
+			<bold>Balustrade, solid</bold><br/>
+			<small>The balustrade is solid, such as gyprock or brick.</small>
+		</elem>
+		<elem name="52">
+			<bold>Balustrade, stainless steel cables</bold><br/>
+			<small>Horizontal stainless-steel cables enclose the space.</small>
+		</elem>
+		<elem name="53">
+			<bold>Balustrade, stainless steel cables with handrail</bold><br/>
+			<small>Horizontal stainless-steel cables enclose the space.
+			Includes a handrail.</small>
+		</elem>
+		<elem name="6">
+			<bold>Balustrade, steel</bold><br/>
+			<small>75mm x 75mm posts with thin steel balusters.</small>
+		</elem>
+		<elem name="1">
+			<bold>Balustrade, vertical wood balusters</bold><br/>
+			<small>100mm x 100m posts with 50mm x 50mm vertical balusters.
+			The posts remain below the handrail.</small>
+		</elem>
+		<elem name="2">
+			<bold>Balustrade, vertical wood balusters 2</bold><br/>
+			<small>100mm x 100m posts with 50mm x 50mm vertical balusters.
+			Posts extend above the handrail</small>
+		</elem>
+		<elem name="3">
+			<bold>Balustrade, vertical wood balusters 3</bold><br/>
+			<small>100mm x 100m posts with 50mm x 50mm vertical balusters
+			that extend down to the floor.</small>
+		</elem>
+		<elem name="5">
+			<bold>Balustrade, wrought iron</bold><br/>
+			<small>Thin members made of solid iron.</small>
+		</elem>
+		<elem name="200">
+			<bold>Balustrade, X-brace</bold><br/>
+			<small>The balustrade contains an X-brace instead of vertical or horizontal members.</small>
+		</elem>
+		<elem name="0">
+			<font color=#800000><bold>Custom</bold><br/>
+			<small>If you select this the "Modify custom balustrade" buttons is enabled, providing
+			for a much larger variety of balustrades.</small></font>
+		</elem>
+		<elem name="601">
+			<bold>Fence, chain mesh</bold><br/>
+			<small>A fence made of a panel (such as chain mesh) supported by 50mm poles.</small>
+		</elem>
+		<elem name="552">
+			<bold>Fence, horizontal boards</bold><br/>
+			<small>Large horizontal boards are held up by the posts.</small>
+		</elem>
+		<elem name="550">
+			<bold>Fence, log</bold><br/>
+			<small>Large round posts are used to support three horizontal beams.</small>
+		</elem>
+		<elem name="551">
+			<bold>Fence, log 2</bold><br/>
+			<small>Large round posts are used to support many small horizontal beams.</small>
+		</elem>
+		<elem name="600">
+			<bold>Fence, masonry</bold><br/>
+			<small>Stone, brick, or concrete wall.</small>
+		</elem>
+		<elem name="500">
+			<bold>Fence, picket</bold><br/>
+			<small>Standard picket fence.</small>
+		</elem>
+		<elem name="503">
+			<bold>Fence, picket, thin</bold><br/>
+			<small>Picket fence constructed of thin vertical members.</small>
+		</elem>
+		<elem name="501">
+			<bold>Fence, steel</bold><br/>
+			<small>Fence using steel verticals between a top and bottom beam.</small>
+		</elem>
+		<elem name="504">
+			<bold>Fence, vertical boards</bold><br/>
+			<small>Verticals boards are held up by the top and bottom rails.</small>
+		</elem>
+		<elem name="502">
+			<bold>Fence, wrought iron</bold><br/>
+			<small>Wrought iron fence with spikes.</small>
+		</elem>
+		<elem name="553">
+			<bold>Fence, wire</bold><br/>
+			<small>Thin wire is stretched between small steel pickets.</small>
+		</elem>
+		<elem name="700">
+			<bold>Fence, X</bold><br/>
+			<small>A top and bottom rail with an X-brace in between.</small>
+		</elem>
+	</listbox>
+</xListBalAppear>
+
+<xTableCenter width=100%>
+	<xtrHeader>Balustrade style</xtrHeader>
+	<tr><td>
+		<xListBalAppear name=appear width=90% height=90% vscroll=lscroll/>
+		<scrollbar orient=vert height=90% width=8% name=lscroll/>
+		<p/>
+		<xChoiceButton enabled=false name=modify href=modify>
+			<bold>Modify custom balustrade</bold><br/>
+			If you have selected a "Custom" balustrade or fence, press this to modify
+			the settings for it.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Balustrade</xtrHeader>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the balustrade above the floor/ground.
+		</td>
+		<td>
+			<edit name=height maxchars=32 width=100%/>
+		</td>
+	</tr>
+		<tr><td>
+		<xChoiceButton style=x checkbox=true name=swapsides>
+			<bold>Swap sides</bold><br/>
+			Some balustrade styles have handles that are on the inside of the balustrade.
+			However, at times (such as with staircases) the handrail is put on the wrong
+			side. Check this to switch it to the other side.
+		</xChoiceButton>
+		</td></tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Columns (Posts extended to the ceiling/roof)</xtrHeader>
+	<tr><td>
+		When balustrades are constructed underneath a floor or roof, some of the
+		posts are extended up to the level above to make the balustrade more rigid and
+		to support the floor/roof. This table allows you to change some of these settings.
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=nocolumns>
+				<bold>No columns</bold><br/>
+				If checked, columns will <bold>not</bold> be used in the balustrade, and
+				hence will not extend to the ceiling. Posts will be used in their place.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=atcutouts>
+				<bold>Use columns at edges</bold><br/>
+				Normally, posts at the edge (or opening) of a balustrade are extended to the
+				roof/ceiling to make the balustrade more rigid.
+				If checked, posts at edges will
+				be extended to the roof/ceiling. If not, edge posts will be normal height.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=x checkbox=true name=enablecolumns>
+				<bold>Extra columns</bold><br/>
+				If this is checked, and the distance between columns is too great (see below), then
+				extra columns will be added between the existing columns. If
+				it's unchecked then posts will be limited in height.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Distance between columns</bold> - If two columns (extended to the roof/ceiling)
+			are further apart than this then one or more columns will be placed between
+			these.
+		</td>
+		<td>
+			<edit name=maxbigdist maxchars=32 width=100%/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Posts</xtrHeader>
+	<tr>
+		<td>
+			<bold>Distance between posts</bold> - Posts are placed at intervals no more
+			than this far apart.
+		</td>
+		<td>
+			<edit name=maxsmalldist maxchars=32 width=100%/>
+		</td>
+	</tr>
+		<tr><td>
+		<xChoiceButton style=x checkbox=true name=hidefirst>
+			<bold>Hide the first post</bold><br/>
+			This hides the first post in the balustrade. Hiding the first/last post is
+			useful when two balustrades meet up with one another; hiding one of the posts
+			prevent the same post from being drawn twice.
+		</xChoiceButton>
+		</td></tr>
+		<tr><td>
+		<xChoiceButton style=x checkbox=true name=hidelast>
+			<bold>Hide the last post</bold><br/>
+			This hides the last post in the balustrade. Hiding the first/last post is
+			useful when two balustrades meet up with one another; hiding one of the posts
+			prevent the same post from being drawn twice.
+		</xChoiceButton>
+		</td></tr>
+</xTableCenter>

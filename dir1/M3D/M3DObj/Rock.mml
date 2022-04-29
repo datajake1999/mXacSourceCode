@@ -1,0 +1,97 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Rock settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Detail</bold> - This is the number of divisions in one hemisphere. The
+			higher the number, the more detail the rock will have, and the slower it will
+			be to draw. Use numbers that are multiples of 2 or 3 for best
+			results.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=size/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bumpiness #1</bold> - How bumpy the rock is, affecting large-scale bumps.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=noise0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bumpiness #2</bold> - How bumpy the rock is, affecting smaller bumps.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=noise1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bumpiness #3</bold> - How bumpy the rock is, affecting small bumps.
+			If the rock doesn't have much detail, chaning this may not have any affect.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=noise2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bumpiness #4</bold> - How bumpy the rock is, affecting very small bumps.
+			If the rock doesn't have much detail, chaning this may not have any affect.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=noise3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Random seed</bold> - Changing this number changes the random "seed" that's
+			used to create the rock, affecting its shape.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=seed/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Square L/R</bold> - Moving the slider further to the right causes the
+			left and right edges to become square.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=superquad0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Square F/B</bold> - Front and back.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=superquad1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Square T/B</bold> - Top and bottom.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=superquad2/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=stretchtofit>
+			<bold>Stretch 2D textures to fit</bold><br/>
+			If checked, 2D textures will be stretched to cover the entire rock. Otherwise
+			they will be tiled.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

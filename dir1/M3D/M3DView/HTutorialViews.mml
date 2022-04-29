@@ -1,0 +1,39 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - views"/>
+
+<xPageTitle>
+	Tutorial - views
+</xPageTitle>
+
+<xSectionTitle>Different views</xSectionTitle>
+
+<p>
+	<xLN/> has three different styles of 3D. Each has a different use:
+</p>
+
+<xul>
+	<li>
+		<xButtonViewFlat/> - (Technically known as "isometric" view.) This view is best
+		used for moving object and
+		drawing plan elevations as are typical in blueprints.
+	</li>
+	<li>
+		<xButtonView3D/> - When using this view, <xSN/> treats the house like a model held in
+		your hand. Any movement or rotation of the camera is treated as if you're holding
+		the model at arms length and moving your arm around or rotating the object with
+		your wrist.
+	</li>
+	<li>
+		<xButtonViewWalkthrough/> - In this viewing mode the movement and rotation behaves
+		as if you're walking through the house.
+	</li>
+</xul>
+
+<p>
+	Over the next view pages the tutorial will guide you through the three views.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:352><bold>Next</bold></button>
+</p>

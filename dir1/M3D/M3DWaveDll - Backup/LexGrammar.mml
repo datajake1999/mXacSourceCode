@@ -1,0 +1,132 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Change grammar rules"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Word groups/classes</xtrheader>
+	<tr><td>
+		You may wish to specify a number of different word groups/classes for the language, and what
+		words belong to them. For example: In English, almost all words ending in "`s" and "s`" are
+		possessive. You might make a word group called "possessive" that you can later include in
+		a rule for a possessed noun, which might be "possessive noun".
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% sort=false vscroll=groupsscroll name=groups/>
+			<scrollbar orient=vert height=20% name=groupsscroll/>
+		</p>
+		<xChoiceButton name=groupadd>
+			<bold>Add a new group</bold><br/>
+			Press this to add a new word group to the list.
+		</xChoiceButton>
+		<xChoiceButton name=groupedit>
+			<bold>Edit the selected group</bold><br/>
+			Select a group and press this to edit it.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Rules</xtrheader>
+	<tr><td>
+		You need to provide a list of "rules" that define the syntax of your language.
+		For example: In English you would need to define a rule for "Noun phrase",
+		"Verb phrase", "Prepositional phrase", etc. (If you don't understand what this
+		means then you might want to ask someone who knows more about grammar and
+		linguistics, or research it on the internet.)
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% sort=false vscroll=rulesscroll name=rules/>
+			<scrollbar orient=vert height=20% name=rulesscroll/>
+		</p>
+		<xChoiceButton name=ruleadd>
+			<bold>Add a new rule</bold><br/>
+			Press this to add a new rule to the list.
+		</xChoiceButton>
+		<xChoiceButton name=ruleedit>
+			<bold>Edit the selected rule</bold><br/>
+			Select a rule and press this to edit it.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Testing your groups and rules</xtrheader>
+	<tr><td>
+		To test how well your groups and rules work:
+		<p/>
+		<ol>
+			<li>
+				<button name=textscan><bold>Scan a text file</bold></button> with thousands of sentences, such as on online book.
+				You might want to download from free E-books from Project Gutenberg.
+			</li>
+			<p>
+				The list (below) will be filled with all the sentences in the text file.
+			</p>
+			<li>
+				<bold>Browse</bold> through the following list, looking for sentences that weren't parsed properly.
+				Sentences that are likely to be misparsed are included at the top of the list.
+			</li>
+			<li>
+				<bold>Fine tune</bold> your groups and rules to fix any parse problems, and
+				then <bold>re-scan</bold> the file to see what changes they made.
+			</li>
+			<li>
+				<bold>Repeat</bold> the process until the rules get most sentences correct. They'll
+				never be 100% accurate.
+			</li>
+		</ol>
+		
+		<p align=center>
+			<listbox width=80% height=40% sort=false vscroll=textscroll name=textlist/>
+			<scrollbar orient=vert height=40% name=textscroll/>
+		</p>
+	</td></tr>
+	
+	<xtrheader>Color codes for parts of speech</xtrheader>
+	<tr>
+		<td align=center><font color=#4040ff><bold>Noun</bold></font></td>
+		<td align=center><font color=#4040c0><bold>Pronoun</bold></font></td>
+		<td align=center><font color=#4080c0><bold>Adjective</bold></font></td>
+		<td align=center><font color=#8040c0><bold>Preposition</bold></font></td>
+		<td align=center><font color=#404080><bold>Article</bold></font></td>
+	</tr>
+	<tr>
+		<td align=center><font color=#ff0000><bold>Verb</bold></font></td>
+		<td align=center><font color=#c04000><bold>Adverb</bold></font></td>
+		<td align=center><font color=#804040><bold>Auxiliary verb</bold></font></td>
+		<td/>
+		<td/>
+	</tr>
+	<tr>
+		<td align=center><font color=#00ff00><bold>Conjunction</bold></font></td>
+		<td align=center><font color=#ffff00><bold>Interjection</bold></font></td>
+		<td align=center><font color=#808080><bold>Punctuation</bold></font></td>
+		<td/>
+		<td/>
+	</tr>
+</xtablecenter>
+
+
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Probabalisitic grammar</xtrheader>
+	<tr><td>
+		In addition to the rules you specify above, you should also scan in a large
+		(1+ megabyte) text file with samples of the language, such as a few E-books worth
+		of text.
+		This will allow the
+		grammar to learn how common some word parts-of-speech are. You only
+		need to do this once.
+		<p/>
+		<xChoiceButton name=grammar>
+			<bold>Scan large text file</bold><br/>
+			Press this to scan in a large text file.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

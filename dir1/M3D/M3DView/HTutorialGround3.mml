@@ -1,0 +1,84 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating a mountain"/>
+
+<xPageTitle>
+	Tutorial - Creating a mountain
+</xPageTitle>
+
+<p>
+	To start out, the tutorial will show you how to create a mountain:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonGroundGenMtn/> tool. (You could select any of the other
+		tools in the same group; they all behave the same except that they produce
+		different varities of mountains, canyons, and craters.)
+	</li>
+	<li>
+		<bold>Click on</bold> the center of the ground and <bold>drag</bold> the mouse to
+		the right.
+	</li>
+	<li>
+		As you drag the mouse right you will notice the mountain grow larger. Keep
+		on <bold>dragging</bold> the mouse to the right until it is the right size.
+	</li>
+	<li>
+		Then, <bold>drag</bold> the mouse up or down. Moving it up will increase the
+		mountain's height (as seen by topography lines). Moving it down will
+		decrease the mountain's height.
+	</li>
+	<li>
+		While the mouse button is still down, <bold>scroll the mousewheel</bold> to
+		change the version of the mountain drawn. Use this for more artistic control
+		of what your mountain looks like.
+	</li>
+	<li>
+		<bold>Lift</bold> the mouse button up. <xSN/> will do a bit of processing and
+		draw the final mountain.
+	</li>
+</ol>
+
+<xSectionTitle>Saving your mountain</xSectionTitle>
+
+<p>
+	Changes that you make in the ground editor do not immediately affect the ground
+	in the main view. To do this, you must first "save" your changes in the ground
+	editor:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonSave/> button in the ground editor.
+	</li>
+	<li>
+		<bold>Switch back</bold> to the main 3D view to see the mountain.
+	</li>
+	<li>
+		<xSN/> initially begins assuming you want to work on a house, and won't allow
+		you to zoom out far enough to see the entire mointain. To change this,
+		press the <xButtonViewSettings/> button in the main view.
+	</li>
+	<li>
+		Change the <bold>"View scale"</bold> value to a larger number, such as "200 m".
+	</li>
+	<li>
+		<bold>Close</bold> the view settings.
+	</li>
+	<li>
+		Use <xButtonViewFlatQuick/> to view your landscape from a distance, such as
+		"North-east (elevated)".
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:627><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:631>Rain and wind erosion</a></li>
+</xul>

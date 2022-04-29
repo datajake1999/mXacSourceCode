@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Subdivision"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Subdivison
+</xPageTitle>
+
+<p>
+	As you can see, <xSN/> provides you with plenty of ways to move vertices, edges,
+	and sides around. You can use these simple tools to make any shape... assuming
+	you have enough time.
+</p>
+
+<p>
+	Many real world objects are curved, and while you can create a curved-looking object
+	out of thousands of tiny flat ones, this could become very tedious to do one
+	polygon at a time.
+</p>
+
+<p>
+	<xSN/> has two solutions for this. The first is technically called "subdivison
+	surfaces". What this means is that <xSN/> takes the shape that you hand modify
+	using the vertex, edge, and side tools, and then does some automatic smoothing
+	on it.
+</p>
+
+<p>
+	Using it is easy:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonGroundSet/> button on the right side of the screen.
+	</li>
+	<p>
+		The "Polygon mesh settings" dialog will appear.
+	</p>
+	<li>
+		Change the <bold>"Smoothing (while working)"</bold> list box
+		from "Faceted" to "2 divisions".
+	</li>
+	<p>
+		You'll see the cube suddenly become rounded. You can control how smooth the
+		rounding is by controlling the number of subdivisions; the more subdivions, the
+		smoother it will look, <bold>and</bold> the slower it will draw.
+	</p>
+	<p>
+		Because you usually want drawing to be as fast as possible when you're working
+		on an object, the <bold>"Smoothing (while working)"</bold> subdivisions should be fairly low.
+		However, since you probably want the object to be rendered smoothly in your
+		final image/animation, then the <bold>"Smoothing (final render)"</bold> setting should
+		be higher.
+	</p>
+	<li>
+		If you <bold>close</bold> the dialog and modify the polygon mesh you'll notice that
+		all the tools still work. The only difference is this time the cube is slightly
+		rounded.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:902><bold>Next</bold></button>
+</p>
+

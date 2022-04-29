@@ -1,0 +1,104 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify a resource"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<xTableCenter width=100%>
+	<xtrheader>Resource entry</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the resource entry. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold>
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBREADONLY>>> name=name/></bold>
+			<br/>
+			<status border=0 width=100% height=20 name=isunique>(Unique)</status>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					The short description is displayed in the list of resources.
+				</xHoverHelp>
+			</a></bold>
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=1000 <<<$LIBREADONLY>>> wordwrap=true multiline=true name=descshort/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold><a>Resource type
+				<xHoverHelp>
+					This shows the type of resource and its description.
+				</xHoverHelp>
+			</a></bold>
+		</td>
+		<td><bold><<<RESTYPE>>></bold> - <<<RESTYPEDESC>>></td>
+	</tr>
+	<xtrheader>Supported languages</xtrheader>
+	<<<$STRINGLANG>>>
+</xTableCenter>
+
+
+
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this resource entry</bold><br/>
+	Permenantly delete the resource entry.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this resource entry</bold><br/>
+	After you duplicate the resource entry, make sure to rename the new resource entry or
+	you won't be able to compile properly.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the resource entry to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>View as text</xtrheader>
+	<tr><td>
+		You can view a resource as text to see exactly what information is stored in the
+		resource. This is useful if you want your application to dynamically create resources
+		since looking at the text lets you see the data format and then write code
+		to create similar text before converting it into a resource.
+		<p/>
+		To view a resource as text, press one of the "Text" buttons above.
+		<p/>
+		<p align=center>
+			<font face="courier new"><edit width=80% maxchars=2000000 height=40% readonly=true multiline=true wordwrap=true vscroll=viewtextscroll name=viewtext/></font>
+			<scrollbar orient=vert height=40% name=viewtextscroll/>
+		</p>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Type in the resource's name. Press the "Add" or "Modify" buttons to change the resource
+	that is used for each language. If the resource is language independent then use
+	only the resource for the top-most language and leave all the others empty.
+</p>

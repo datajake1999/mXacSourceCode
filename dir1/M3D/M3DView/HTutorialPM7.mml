@@ -1,0 +1,55 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Edges"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Edges
+</xPageTitle>
+
+<p>
+	You can also use the polygon mesh editor to modify edges. To switch to the
+	edge editing mode:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPMEditEdge/> button.
+	</li>
+	<p>
+		The buttons at the bottom of the screen will change to show functionality
+		specific to editing edges.
+	</p>
+</ol>
+
+<p>
+	Most of the buttons are the same as those in <xButtonPMEditVert/>. The only
+	difference is that they modify edges instead of vertices.
+</p>
+
+<p>
+	The <xButtonPMEdgeSplit/> tool is new though. It inserts a vertex in the middle
+	of an edge. To use it:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonPMEdgeSplit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> and edge.
+	</li>
+	<p>
+		You probably won't notice any changes since adding a vertex half way between the
+		two vertices of the edge won't change the object (much) visually.
+	</p>
+	<li>
+		To see the effect you need to move one of the edges, such as by
+		selecting the <xButtonPMMoveAnyDir/> tool and <bold>dragging</bold> part
+		of the newly-split edge.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:900><bold>Next</bold></button>
+</p>
+

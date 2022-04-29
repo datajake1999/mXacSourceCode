@@ -1,0 +1,16 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Object settings"/>
+
+<xChoiceButton href=misc>
+	<bold>Location and embedding</bold><br/>
+	Visit this page to change the object's typical location (on the ground, on a wall,
+	or on the ceiling), and whether or not it can be embedded in other objects.
+</xChoiceButton>
+
+<xChoiceButton href=attrib>
+	<bold>Attributes</bold><br/>
+	This page lets you control which attributes the object provides. Using this you
+	can animate portions of the object (such as turning on/off lights, or opening and
+	closing drawers in a cabinet).
+</xChoiceButton>

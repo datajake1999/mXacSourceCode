@@ -1,0 +1,92 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Intoduction"/>
+
+<xPageTitle>
+	Bones - Intoduction
+</xPageTitle>
+
+<p>
+	"Bones" are objects that help you draw and animate people, animals, and other characters.
+	Although they don't look like skeletal bones (and aren't drawn in the final image), they
+	act like a skeleton, allowing the character's limbs to bend.
+</p>
+
+<p>
+	When you build a character in <xSN/> you create a new object
+	using the <xButtonLibrary/> button, mold the polygon mesh object
+	into the human, animal, or alien shape you wish, and then build a virtual
+	skeleton using the <bold>bones</bold> object.
+</p>
+
+<p>
+	The bones, even though they don't look exactly like skeletal bones, are arranged to
+	create a skeleton underneath the polygon mesh shape. The polygon mesh (and other
+	nearby objects) is then attached to the nearest bone so that when the bone is
+	moved, the shape goes along with it; your character can move its limbs.
+</p>
+
+<xsectiontitle>Creating the first bone</xsectiontitle>
+
+<p>
+	To start creating a skeleton:
+</p>
+
+<ol>
+	<li>
+		While you can create a skeleton in your main world, they don't actually do anything
+		there. For a skeleton to be useful, it must be created in an object. Since you
+		use objects to create character, this is no problem. Using
+		the <xButtonLibrary/> tool, either <bold>create a new object or edit an existing one.</bold>
+	</li>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		Switch to the <bold>"Object pieces"</bold> section, and look under <bold>"Bones"</bold>.
+	</li>
+	<li>
+		You will find a variety of different bones you can start out with, including
+		human hand, arm, leg, and torso skeletons. For this example, being with the simplest
+		bone, the "Single bone" object. <bold>Click on it and add it to the object you're editing.</bold>
+	</li>
+	<p>
+		The bone looks like a long stick with a buldge on one end. If the bone is selected,
+		it also contains a set of yellow
+		lines on one end, and some purple lines encircling it.
+	</p>
+	<p>
+		The "stick" is the actual bone. The bulging end the the base of the bone, where it
+		rotates from. If this bone were the upper leg bone, the bulge would be at the hip. If it
+		were the upper arm-bone it would be at the shoulder. The thin end is where other bones
+		are attached to it; such as the lower leg bone, or the lower-arm bone. (You can have more
+		than one bone attached to the end, such as the back bone being attached to two shoulder
+		bones and a neck bone.) The "top" of the bone is blue, bottom is black, right is red,
+		left is green; these are useful for seeing how the bone will rotate/swivel in its socket.
+	</p>
+	<p>
+		If the bone is selected, the yellow lines on the end indicate the extent of the freedom of motion of the bone, how much it
+		can move up and down, or side to side.
+	</p>
+	<p>
+		If the bone is selected, the purple cage around the bone is called its "envelope"; it indicates what portions
+		of the polygon mesh or other objects are affected by the bone.
+	</p>
+	<li>
+		<bold>Move and orient</bold> the bone so that it is lined up with the backbone of your character.
+		The based of the bone (bulging end) should be placed at the hips, and the end of the
+		bone at the top of the back, between the shoulders.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:915><bold>Next</bold></button>
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:893>Polygon mesh tutorial</a></li>
+</xul>

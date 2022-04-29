@@ -1,0 +1,120 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Customized staircases"/>
+
+<xPageTitle>
+	Customized staircases
+</xPageTitle>
+
+
+<xsectiontitle>Changing a staircase's balustrade</xsectiontitle>
+
+<p>
+	To change a staircase's balustrade:
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonObjDialog/> tool, <bold>click on the staircase.</bold>
+	</li>
+	<li>
+		In the "Staircase settings" dialog that appears,
+		press the <bold>Balustrades</bold> dialog.
+	</li>
+	<p>
+		In the "Staircase balustrades" page...
+	</p>
+	<li>
+		<bold>Check or uncheck</bold> the balustrades that you want for the staircase.
+	</li>
+	<li>
+		<bold>Press</bold> the "Modify left/right/center balustrade" to change the
+		balustrade style.
+	</li>
+</ol>
+
+<xsectiontitle>Changing a staircase's path</xsectiontitle>
+
+<p>
+	All staircases have a path they follow. Usually the path is a striaght line,
+	but sometimes it has 90 degree turns in it, or is even curved.
+	To change a staircase's path:
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonObjDialog/> tool, <bold>click on the staircase.</bold>
+	</li>
+	<li>
+		In the "Staircase settings" dialog that appears,
+		press the <bold>Path</bold> dialog.
+	</li>
+	<p>
+		In the "Staircase path" page...
+	</p>
+	<li>
+		<bold>Select</bold> the path from the "Path style" list box.
+	</li>
+	<li>
+		As you change the path, different settings will become available at the bottom
+		of the page. You can type in new values and change the staircase.
+	</li>
+</ol>
+
+<p>
+	If the standard paths don't meet your needs then you can customize your path.
+</p>
+<ol>
+	<li>
+		<bold>Select one of the "Custom"</bold> path style in the "Staircase path"
+		dialog. You can select "Custom - center" if your staircase is always the same
+		width, or "Custom - edges" if the width of your staircase varies.
+	</li>
+	<p>
+		Once you have selected one of the "Custom" options, new settings will be available
+		to you at the bottom of the page.
+	</p>
+	<li>
+		Under "Add/remove control points" you can insert bends in your staircase.
+		Just <bold>click</bold> on the grey staircase section to split it, or the
+		red cylinder to delete a section. You can move the control points around
+		using the <xButtonObjControlNSEWUD/>, <xButtonObjControlNSEW/> and <xButtonObjControlUD/> tools.
+	</li>
+	<li>
+		By <bold>clicking on the segments</bold> in "Curve the staircase" you can
+		change the type of curvature used.
+	</li>
+</ol>
+
+
+<xsectiontitle>Changing a staircase's appearance</xsectiontitle>
+
+<p>
+	You can change the stair's appearance, such as the size of the treads, what
+	kind of supporting rails are used, and whether there are walls around the staircase.
+	To do so:
+</p>
+
+<ol>
+	<li>
+		Using the <xButtonObjDialog/> tool, <bold>click on the staircase.</bold>
+	</li>
+	<li>
+		In the "Staircase settings" dialog that appears,
+		<bold>press the Rails, Treads, or Walls and Stringers button.</bold> Select
+		whichever is appropriate.
+	</li>
+	<li>
+		Follow the instructions on the page. If you don't understand exactly what
+		a setting or button does, try it out. You can always "Undo" your changes.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:343>Customized balustrades</a></li>
+	<li><a href=r:339>Staircases</a></li>
+</xul>

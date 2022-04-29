@@ -1,0 +1,48 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Movement and rotation reference points"/>
+
+<xPageTitle>
+	Movement and rotation reference points
+</xPageTitle>
+
+<p>
+	Every object has one or more places on the object that can be used
+	as <bold>"reference points"</bold>. This typically include the obvious
+	corners and centers of the object. For example: A box might support a
+	reference points at it's 8 corners.
+</p>
+
+<p>
+	Whenever you move an object (using <xButtonMoveNSEWUD/>, <xButtonMoveNSEW/> or <xButtonMoveUD/>)
+	the position of the object shown (and which is used for the grid) is
+	based on one of the object's reference points. Since the grid also uses the
+	refernce point, having the proper one selected is important for exact
+	placement of the object.
+</p>
+
+<p>
+	When you rotate an object (
+	using <xButtonMoveRotZ/> or <xButtonMoveRotY/>) the
+	rotation occurs around the reference point. Rotating around different reference
+	points will produce markedly different behaviors.
+</p>
+
+<p>
+	To change an object's reference point:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		Click on the object to select it.
+	</li>
+	<li>
+		Press the <xButtonMoveReference/> button.
+	</li>
+	<li>
+		A menu will pop up showing the different reference points. Choose one.
+	</li>
+</ol>

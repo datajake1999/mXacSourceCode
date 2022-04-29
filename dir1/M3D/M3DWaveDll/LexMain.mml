@@ -1,0 +1,136 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lexicon main page"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<null>
+<<<$IFDEFEXPECTIONS>>>
+<xSectionTitle>Master lexicon</xSectionTitle>
+
+<xChoiceButton href=newmaster>
+	<bold>Change master lexicon</bold><br/>
+	If you haven't already set the exception lexicon's master lexicon, you need to press
+	this button. You will be able to select the lexicon that is used if a word does
+	not appear in the exceptions lexicon.
+	<p/>
+	Important: You can use another exceptions lexicon as a master lexicon.
+	However, make sure that the exception lexicon's master is not itself, or that
+	somewhere up the chain it doesn't become its own master.
+	<p/>
+	The current master lexicon is <bold><<<MASTERLEX>>></bold>.
+</xChoiceButton>
+<<<$ENDIFDEFEXPECTIONS>>>
+</null>
+
+
+<null>
+<<<$IFNDEFEXPECTIONS>>>
+<xSectionTitle>Basic information about the language</xSectionTitle>
+
+<xChoiceButton href=langid>
+	<bold>Change language</bold><br/>
+	If you haven't already set the lexicon's language then you should do so. It
+	needs to know what language to use so it can convert numbers, like "123" to
+	words, "one hundred twenty three".
+</xChoiceButton>
+
+<xChoiceButton href=phonemes>
+	<bold>Modify phonemes</bold><br/>
+	Use this to specify the list of phonemes supported by your lexicon. You
+	need to do this because every language uses different phonemes.
+</xChoiceButton>
+
+<<<$ENDIFNDEFEXPECTIONS>>>
+</null>
+
+<xSectionTitle>Words</xSectionTitle>
+
+<xChoiceButton href=pronmain>
+	<bold>Modify pronunciations</bold><br/>
+	Press this to modify (or see) the pronunciations stored within the lexicon.
+</xChoiceButton>
+
+<null>
+<<<$IFNDEFEXPECTIONS>>>
+<xChoiceButton href=grammar>
+	<bold>Change grammar rules</bold><br/>
+	Every language has a grammar that says what words are allowed to follow which other
+	words, based on the part-of-speech. Knowledge of this grammar is used by text-to-speech
+	to improve prosody (pitch, timing, and volume) and pronunciations (ex: "invalid" could
+	be "in-valid" or "in-vuh-lid" depending upon the part of speech).
+	<p/>
+	This tool lets you teach the lexicon the basics of the grammar for your language.
+	<comment>	
+	Use it for the <bold>first time</bold> once you have entered word part-of-speech for <bold>all</bold> of your words,
+	or if you <bold>change part-of-speech</bold> for a large number of words.
+	<p/>
+	When you press this button you will be asked for a text file to scan. This needs
+	to be a large text file such as book. It should be at least 1 megabyte of text, or 200,000 words.
+	The text file will be analyzed to learn what types of words (part of speech) typically
+	follow what other parts of speech.
+	</comment>
+</xChoiceButton>
+
+<xChoiceButton href=lts>
+	<bold>Learn pronunciation rules</bold><br/>
+	Once you have entered a few thousand pronunciations, you should use this tool so
+	that the lexicon learns basic pronunciation rules, allowing it to guess the pronunciation
+	of word. As you add more words, make sure to press this button to keep the
+	lexicon's pronunciation code up-to-date with the words in the lexicon.
+	<p/>
+	When you first press this button you will be shown <bold>a few hundred words.</bold> For each
+	word you'll be asked to identify which letters produce which sounds (phonemes).
+	After the first lengthy pass, subsequent learning of the pronunciation
+	rules will only occasionally aske you to provide such
+	information.
+</xChoiceButton>
+<<<$ENDIFNDEFEXPECTIONS>>>
+</null>
+
+
+
+
+
+<null>
+<<<$IFNDEFEXPECTIONS>>>
+<xSectionTitle>Import lexicon</xSectionTitle>
+<xChoiceButton href=scan>
+	<bold>Scan words from text lexicon - CMU format</bold><br/>
+	This reads in a text file that contains a list of words an their pronunciations.
+	If you happen to have such a file (such as a public-domain source for word pronunciatons)
+	then it's a fast way of adding pronunciations to the lexicon.
+	<p/>
+	The file must be a text file with one word per line. Each word is followed by its
+	pronunciations. Example: A line could be "Hello h eh l oe". A word can also have a (2)
+	or (3) after it to indicate alternative pronunciations, such as "Hello(2) h ae l oe".
+	A line can be commented out by starting with a "#".
+	<p/>
+	If any new phonemes are referenced then you will be asked if you wish to add them.
+	This can be a handy way of filling in a lexicon's phoneme list as well as its word pronunciations.
+</xChoiceButton>
+
+<xChoiceButton href=scanunisyn>
+	<bold>Scan words from text lexicon - Unisyn format</bold><br/>
+	This reads in a text file that contains a list of words an their pronunciations.
+	If you happen to have such a file (such as a public-domain source for word pronunciatons)
+	then it's a fast way of adding pronunciations to the lexicon.
+	<p/>
+	The file must be a text file with one word per line. Each word is followed by its
+	pronunciations. Example: A line could be "zimbabwe::NNP: { z i m . b * aa b . w iy }".
+</xChoiceButton>
+
+<xChoiceButton href=scanmandarin>
+	<bold>Scan words from .lbl files for Mandarin generation (for Blizzard 2008)</bold><br/>
+	Reads in a series of .lbl files for Mandarin (for Blizzard 2008) and fills in the lexicon.
+</xChoiceButton>
+
+<xChoiceButton href=scanmandarin2>
+	<bold>Scan words from a cedict_ts.u8 (from CEDICT) file for Mandarin generation (for Blizzard 2009)</bold><br/>
+	Creates a lexicon from a cedict_ts.u8 file.
+</xChoiceButton>
+
+<<<$ENDIFNDEFEXPECTIONS>>>
+</null>

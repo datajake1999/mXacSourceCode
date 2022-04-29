@@ -1,0 +1,10 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="List of functions"/>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Functions</xtrheader>
+	<<<$LIBLIST>>>
+</xtablecenter>
+

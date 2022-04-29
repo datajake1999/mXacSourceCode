@@ -1,0 +1,116 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Framing (studs, beams, joists, purlins)"/>
+
+<xPageTitle>
+	Framing (studs, beams, joists, purlins)
+</xPageTitle>
+
+<p>
+	Both building blocks and basic structural surfaces (like walls and roofing) have an
+	options to automatically draw in framing. (You can also building individual
+	framing items using the <a href=r:427>Extrusion object</a>.)
+</p>
+
+<p>
+	The framing options automatical draw studs, rafters, joists, beams, and other structural
+	members in a wall, floor, ceiling, or roof. Automatic framing is a series if members
+	running vertically (or horizontally) against side A or B of the surface,
+	and equally spaced. The members are cut around openings for windows
+	and doors. A surface can have up to three "levels" of framing, each one being perpendicular
+	to the level next to it.
+</p>
+
+<p>
+	Automatic framing is <bold>not</bold> accurate enough to build from since it does
+	not take any engineering into account. It is, however, a useful tool to explore
+	how exposed framing members (such as exposed eaves and roof beams) will affect
+	the look of a structure.
+</p>
+
+<p>
+	To add or modify automatic framing in a building block or surface:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the surface you wish to modify. In the
+		case of <bold>building blocks</bold> you must click on the specific wall, roof,
+		or floor whose framing you wish to modify.
+	</li>
+	<li>
+		In the options dialog, press the <bold>"Framing" button</bold>.
+	</li>
+	<p>
+		The "Framing" page that appears provides many choices for framing, allowing
+		you to control it's direction (vertical or horizontal), the minimum distance between
+		members, width and distance of the framing members, and their shape (rectangular
+		for wood joists, circular for logs, C and Z-shaped for steel). For those
+		who need more control you can also bevel the ends of the framing members (for
+		exposed framing such as roof purlins), or even extend them beyond the edge of
+		the surface.
+	</p>
+	<li>
+		<bold>Change the parameters</bold> as necessary. Because the definition of
+		left, right, top, and bottom can be confusion once a surface has been rotated
+		around, you may end up chaning some values only to realize they affect the
+		other side of the framing. Just undo the changes and modify the other side's values.
+	</li>
+</ol>
+
+
+<p>
+	Some of the settings can be a bit
+	confusing because their exact effect depends upon the direction of framing (rafters, etc.)
+	in the surface... and of course, the direction changes depending upon
+	the "level" of the framing.
+</p>
+
+<p>
+	Each surface has up to three "levels" of framing. A level is a depth in the surface
+	where all the framing members go in one direction. The next level is rotated 90 degrees,
+	and the one after than a further 90 degrees. A typical stud wall only uses one of the levels
+	to include vertical framing members (called studs) in the wall. A roof surface will typically
+	two levels: The first level includes horizontal purlins that run horizontally,
+	and onto which are fixed the roof sheeting. The next level includes diangonal beams,
+	perpendicular to the purlins. The beams are larger and support the purlins, although
+	they are not spaced as closely. If the house has a cathedral ceiling the beams are often
+	visible.
+</p>
+
+<p>
+	There are three locations for the levels:
+</p>
+
+<ol>
+	<li>
+		Inside the walls interior and exterior cladding, but closest to side A.
+	</li>
+	<li>
+		Inside the cladding, but closest to side B.
+	</li>
+	<li>
+		External to the cladding, on side B of the surface.
+	</li>
+</ol>
+
+<p>
+	Using the framing dialog you can use (or not use) each of these levels. By chooising
+	the levels to use, the direction their members go (vertical or horizontal), and
+	the size and shape of the members, you can draw most framing systems. The framing
+	will not be accurate enough to build from though because it doesn't take into
+	account any engineering.
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:473>Exposed eaves</a></li>
+	<li><a href=r:465>Trusses</a></li>
+</xul>
+

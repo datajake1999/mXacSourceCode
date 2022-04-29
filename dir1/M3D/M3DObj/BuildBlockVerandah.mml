@@ -1,0 +1,108 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Verandas"/>
+
+<p>
+	This page lets you specify information about the verandas. <bold>Verandas
+	are drawn outside the walls,</bold> so if your veranda's shape/size is entirely
+	within the wall shape, you won't see a veranda. To display a veranda make sure
+	to reduce the wall size (using the wall control points) so it's smaller than the
+	veranda, and select a veranda shape.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Veranda shape</xtrheader>
+	<tr><td align=center>
+		<listbox width=85% height=85% sort=false vscroll=listscroll tbmargin=16 name=wallshape>
+			<elem name=7>
+				<bold>Any shape</bold><br/>
+				You can add/remove any number of veranda eges and choose a different curve
+				for each edge.
+			</elem>
+			<elem name=5>
+				<bold>Circle</bold><br/>
+				Four edges join to make a circle or ellipse.
+			</elem>
+			<elem name=4>
+				<bold>Hexagon</bold><br/>
+				Six edges.
+			</elem>
+			<elem name=1>
+				<bold><italic>None</italic></bold><br/>
+				No veranda is drawn.
+			</elem>
+			<elem name=3>
+				<bold>Pentagon</bold><br/>
+				Five edges.
+			</elem>
+			<elem name=0>
+				<bold>Rectangle</bold><br/>
+				Four edges meeting at 90 degree angles.
+			</elem>
+			<elem name=6>
+				<bold>Semicircle</bold><br/>
+				Two curved edges and one flat one form half of a circle.
+			</elem>
+			<elem name=2>
+				<bold>Triangle</bold><br/>
+				Three edges forming an equilateral triangle.
+			</elem>
+		</listbox>
+		<scrollbar width=10% height=85% orient=vert name=listscroll/>
+		<p/>
+		<xchoicebutton name=anyshape href=anyshape>
+			<bold>Add/remove veranda panels in "Any shape"</bold><br/>
+			This lets you add or remove veranda panels (either straight or curved) if
+			you have the "Any shape" veranda style selected.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Veranda and balustrade location</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=check name=everyfloor>
+			<bold>Place a veranda on every floor</bold><br/>
+			If this is checked then a veranda will be placed on every floor level. Otherwise,
+			it will only appear on the ground floor.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton radiobutton=true style=x group=balall,balabove,balnone name=balall>
+			<bold>Draw the balustrade on every floor</bold><br/>
+			Every floor, including the ground floor, will have a balustrade.
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=balall,balabove,balnone name=balabove>
+			<bold>Draw the balustrade on every floor except the ground floor</bold><br/>
+			Check this to have the balustrade drawn on every floor except the ground floor.
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=balall,balabove,balnone name=balnone>
+			<bold>No balustrades</bold><br/>
+			Don't include any balustrades on the verandas.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Veranda angles</xtrheader>
+	<tr><td>
+		<p>
+			This section lets you angle veranda sections in or out. This not only angles
+			out the ballistrade and support columns, but extends the veranda on higher floors.
+			To change an angle, click on a grey veranda section.
+		</p>
+		<p>
+			Note: If you angle an edge so that it doesn't meet the roof or the floor, you may
+			get strange results. You should adjust the veranda's corners so that the veranda remains
+			under the roof.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=wallangle>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+

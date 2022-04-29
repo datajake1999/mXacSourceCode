@@ -1,0 +1,111 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Canopy"/>
+
+<p>
+	This lets page lets you modify a "canopy" in a cave, controlling what types
+	of objects (rocks, stalagtites, stalagmites, etc.) are found on the floor,
+	walls, or ceiling of the cave.
+</p>
+
+<null><<<$IFDISTANCE>>>
+<xtablecenter width=100%>
+	<xtrheader>Density</xtrheader>
+	<tr>
+		<td>
+			<bold>Distance</bold> - Average distance between objects, in meters.
+		</td>
+		<td><edit width=100% maxchars=32 name=distance/></td>
+	</tr>
+</xtablecenter>
+<<<$ENDIFDISTANCE>>></null>
+
+<xtablecenter width=100%>
+	<xtrheader>Canopy objects</xtrheader>
+	<tr><td>
+		<p>
+			Click on "Add new object" to add another object to the canopy, or click on one
+			of the objects to remove it from the canopy.
+		</p>
+		<p align=center>
+			<<<$CANOPY>>>
+		</p>
+		<xchoicebutton name=add>
+			<bold>Add new object</bold><br/>
+			Click this to add a new object to the canopy. If you add the
+			same object more than once it will become more common.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Rotation</xtrheader>
+	<tr><td>
+		When the objects are drawn they are rotated randomly. To make natural looking objects
+		you may want to set the amount of Z rotation all the way to the right, but keep
+		X and Y rotation fairly small (since this will cause the trees to lean).
+	</td></tr>
+	<tr>
+		<td>
+			<bold>X rotation</bold> - Positioning the slider to the right
+			causes the object to lean.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Y rotation</bold> - Positioning the slider to the right
+			causes the object to lean.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Z rotation</bold> - Rotates the object around its vertical axis.
+			Move this all the way to the right for natural positioning.
+			<p/>
+			You may want to set this to 0 (slider to the left) for objects on
+			the walls so they're rotated as if attached to the walls.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=rotationvar2/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=rotatedown>
+			<bold>Rotate objects down</bold><br/>
+			If this is checked, objects will automatically be rotated down. You might
+			wish to use this for stalagmites so the same objects can be used for
+			both stalagmites and stalagtites.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Size</xtrheader>
+	<tr><td>
+		Use these sliders to provide more variation in the objects' sizes. The further to
+		the right the larger the variation in size.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>General size variation</bold> - Adjust this to control the over-all amount
+			of variation in the width, depth, and height of a object. Use the EW, NS, and UD
+			sliders to adjust one of the dimensions independently.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar3/></td>
+	</tr>
+	<tr>
+		<td><bold>EW size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar0/></td>
+	</tr>
+	<tr>
+		<td><bold>NS size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar1/></td>
+	</tr>
+	<tr>
+		<td><bold>UD size variation</bold></td>
+		<td><scrollbar orient=horz min=0 max=100 name=scalevar2/></td>
+	</tr>
+</xtablecenter>
+

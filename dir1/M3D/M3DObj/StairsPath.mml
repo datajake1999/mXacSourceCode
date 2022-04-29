@@ -1,0 +1,350 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase path"/>
+
+<p>
+	This page lets you change the path that the staircase follows. A number
+	of pre-defined paths (such as straight, spiral, stairwell, etc.) exist,
+	or you can use a custom path to shape the staircase in any way that you
+	like.
+</p>
+
+
+<!xListStairsPath>
+	<listbox sort=false tbmargin=16 macroattribute=1>
+		<elem name="6">
+			<font color=#800000><bold>Custom - center</bold><br/>
+			<small>Full control of the path and its curvature. The staircase width is fixed.</small></font>
+		</elem>
+		<elem name="7">
+			<font color=#800000><bold>Custom - edges</bold><br/>
+			<small>Full control of the path and its curvature. The staircase width can vary along the path.</small></font>
+		</elem>
+		<elem name="1">
+			<bold>Landing</bold><br/>
+			<small>Straight staircase with a landing in the middle where the staircase turns
+			to the right or left.</small>
+		</elem>
+		<elem name="4">
+			<bold>Spiral</bold><br/>
+			<small>Either a spiral staircase around a pole, or a wider one around the edge
+			of a circular tower.</small>
+		</elem>
+		<elem name="2">
+			<bold>Strairwell, style 1</bold><br/>
+			<small>Stairs winding back and forth up a stairwell. Two landings on either end.</small>
+		</elem>
+		<elem name="3">
+			<bold>Stairwell, style 2</bold><br/>
+			<small>Stairs winding around the edge of a stairwell with four
+			landings, one in each corner.</small>
+		</elem>
+		<elem name="0">
+			<bold>Straight</bold><br/>
+			<small>Straight up and down with no turns. A landing mid-way up is possible.</small>
+		</elem>
+		<elem name="5">
+			<bold>Winding</bold><br/>
+			<small>Stairway that meanders to the left and right a bit.</small>
+		</elem>
+	</listbox>
+</xListStairsPath>
+
+<xTableCenter width=100%>
+	<xtrHeader>Path style</xtrHeader>
+	<tr><td>
+		<xListStairsPath name=path width=90% height=90% vscroll=lscroll/>
+		<scrollbar orient=vert height=90% width=8% name=lscroll/>
+	</td></tr>
+</xTableCenter>
+
+
+<xTableCenter width=100%>
+	<xtrHeader>Settings</xtrHeader>
+	<<<$IFSTAIRWELL>>>
+	<tr>
+		<td>
+			<bold>Number of floors/levels</bold> - Number of floors/levels that
+			the staircase climbs.
+		</td>
+		<td><edit width=100% maxchars=32 name=riserlevel/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Floor/level height</bold> - Distance between floors/levels.
+		</td>
+		<td><edit width=100% maxchars=32 name=levelheight/></td>
+	</tr>
+	<<<$ENDIFSTAIRWELL>>>
+	<<<$IFSHOWHEIGHT>>>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the staircase, from the ground/floor
+			where it starts to the floor that climbs to.
+		</td>
+		<td><edit width=100% maxchars=32 name=totalrise/></td>
+	</tr>
+	<<<$ENDIFSHOWHEIGHT>>>
+	<<<$IFSHOWWIDTH>>>
+	<tr>
+		<td>
+			<bold>Staircase width</bold> - Width of the staircase.
+		</td>
+		<td><edit width=100% maxchars=32 name=width/></td>
+	</tr>
+	<<<$ENDIFSHOWWIDTH>>>
+	<<<$IFSHOWLENGTH>>>
+	<tr>
+		<td>
+			<bold>Length</bold> - Length of the staircase.
+		</td>
+		<td><edit width=100% maxchars=32 name=length/></td>
+	</tr>
+	<<<$ENDIFSHOWLENGTH>>>
+	
+	<<<$IFSHOWCLOCKWISE>>>
+	<tr>
+		<td>
+			<bold>Direction</bold> - Select whether the staircase turns to the
+			right (clockwise) or left (counterclockwise) when being
+			climbed.
+		</td>
+		<td>
+			<button style=x radiobutton=true group=clock,counter name=clock><bold>Clockwise</bold></button><br/>
+			<button style=x radiobutton=true group=clock,counter name=counter><bold>Counter-clockwise</bold></button>
+		</td>
+	</tr>
+	<<<$ENDIFSHOWCLOCKWISE>>>
+	
+	<<<$IFSTAIRWELL>>>
+	<tr>
+		<td>
+			<bold>Stairwell length</bold> - Length of the stairwell.
+			This must at least twice the "Stairwell landing width".
+		</td>
+		<td><edit width=100% maxchars=32 name=stairwellwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stairwell width</bold> - Width of the stairwell.
+			This must be at least twice the staircase width.
+		</td>
+		<td><edit width=100% maxchars=32 name=stairwelllength/></td>
+	</tr>
+	<<<$ENDIFSTAIRWELL>>>
+	
+	<<<$IFSHOWSPIRAL>>>
+	<tr>
+		<td>
+			<bold>Diameter</bold> - Diameter of the spiral staircase. This
+			must be at least twice the staircase width
+		</td>
+		<td><edit width=100% maxchars=32 name=spiraldiameter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Revolutions</bold> - Number of times the staircase loops
+			around. "1.0" is a full 360 degree revolution. "2.0" is 720 degrees.
+			Etc. Use fractional numbers, like ".50" to go 180 degrees.
+		</td>
+		<td><edit width=100% maxchars=32 name=spiralrevolutions/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Central column diameter</bold> - Many spiral staircases include
+			a central column. Enter the diameter of the column here. If you don't
+			want a column type in "0".
+		</td>
+		<td><edit width=100% maxchars=32 name=spiralpostdiameter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Central column height</bold> - Number of meters that the central
+			column rises <bold>above</bold> the staircase's top tread.
+		</td>
+		<td><edit width=100% maxchars=32 name=spiralpostheight/></td>
+	</tr>
+	<<<$ENDIFSHOWSPIRAL>>>
+
+	
+	<<<$IFSTAIRWELL>>>
+	<tr>
+		<td>
+			<bold>Stairwell landing width</bold> - Width of the landing that occurs
+			at both ends of the stairwell.
+		</td>
+		<td><edit width=100% maxchars=32 name=stairwelllanding/></td>
+	</tr>
+	<<<$ENDIFSTAIRWELL>>>
+	<<<$IFSHOWPERLEVEL>>>
+	<tr>
+		<td>
+			<bold>Number of landings per level</bold> - This must either be "1" or
+			"2".
+		</td>
+		<td><edit width=100% maxchars=32 name=stairwelltwoperlevel/></td>
+	</tr>
+	<<<$ENDIFSHOWPERLEVEL>>>
+	<<<$IFSHOWMIDPOINT>>>
+	<tr>
+		<td>
+			<bold>Mid-point landing</bold> - Length of the landing mid-way
+			up the steps. This is used to keep a constant rise-to-run and
+			to give the climbers a rest. Use "0" if you don't want one.
+		</td>
+		<td><edit width=100% maxchars=32 name=restlanding/></td>
+	</tr>
+	<<<$ENDIFSHOWMIDPOINT>>>
+	
+	<<<$IFSHOWTOPLANDING>>>
+	<tr>
+		<td>
+			<bold>Top-landing length</bold> - To include a landing at the top
+			of your staircase, type its length in here. Use "0" if you
+			don't want a landing.
+		</td>
+		<td><edit width=100% maxchars=32 name=landingtop/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top-landing direction</bold> - Select the direction that
+			the top landing leaves the staircase.
+		</td>
+		<td>
+			<button style=x radiobutton=true group=lleft,lstraight,lright name=lleft><bold>To the left</bold></button><br/>
+			<button style=x radiobutton=true group=lleft,lstraight,lright name=lstraight><bold>Straight ahead</bold></button><br/>
+			<button style=x radiobutton=true group=lleft,lstraight,lright name=lright><bold>To the right</bold></button><br/>
+		</td>
+	</tr>
+	<<<$ENDIFSHOWTOPLANDING>>>
+	
+</xTableCenter>
+
+<null>
+<<<$IFSHOWCONTROL>>>
+
+<xtablecenter width=100%>
+	<xtrheader>Add/remove control points</xtrheader>
+	<tr><td>
+		<p>
+			Click on a grey staircase section to split into two, or click on a red line to
+			delete it and merge the adjacent sections.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=edgeaddremove>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Curve the staircase</xtrheader>
+	<tr><td>
+		<p>
+			Click on a length to cycle the curvature through: <font color=#c0c0c0>
+			Straight,</font> <font color=#8080ff>Curved,</font> <font color=#ffc0c0>
+			Semi-circle (next),</font> <font color=#c04040>Semi-circle (previous),
+			</font> <font color=#40c040>Semi-ellipse (next),</font> <font color=#004000>
+			Semi-ellipse (previous)</font>. <italic>The coloration tells you what kind of
+			curve is used.</italic>
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollrowx scrollroty=scrollrowy name=edgecurve>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollrowx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollrowy height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+<p>
+	The path that the staircase takes is controled by a number of "control points"
+	along its length. Moving the control points changes the direction of the staircase
+	at that location.
+</p>
+
+<p>
+	To add/remove control points:
+</p>
+
+<xul>
+	<li>
+		Look for an staircase section in the 3D display above that's roughly where you want to make
+		your changes. Click on it (the grey part) and a new control point will be
+		inserted.
+	</li>
+	<li>
+		Every time you add or remove a control point in this dialog you should
+		also see the control point appear in the staircase. If you don't then the staircase object
+		may not be selected (try doing this).
+	</li>
+	<li>
+		Close this dialog and drag the contro point(s) around until you have
+		the desired shape for the staircase.
+	</li>
+	<li>
+		You may need to return to this page to add more control points.
+	</li>
+</xul>
+
+<p>
+	By default, all the lengths will be "straight". If you want them curved then
+	use the "Curve the staircase" section on this page. Click on an edge until it uses
+	the type of curve you want. The curves are color-coded so you know which one
+	you're using.
+</p>
+
+<p>
+	The types of curves are:
+</p>
+
+<xul>
+	<li>
+		<bold>Straight</bold> - The "curve" really isn't a curve, but is a straight line.
+	</li>
+	<li>
+		<bold>Curved</bold> - Technically it's called a Hermite bi-cubic patch, but just
+		think of it as being a curve that isn't circular.
+	</li>
+	<li>
+		<bold>Semi-circle (next)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the edge
+		are used, and a third one is also included, the next point over. The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-circle (previous)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the edge
+		are used, and a third one is also included, the previous point. The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (next)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		edge, and the next point over.
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (previous)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		edge, and the previous point.
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+</xul>
+
+<<<$ENDIFSHOWCONTROL>>>
+</null>

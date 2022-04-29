@@ -1,0 +1,68 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Polygon mesh (phase I) settings"/>
+
+<p>
+	A polygon mesh goes through two stages (phease I and II) of creation.
+	When you first create them (phase I) they are mathematical shapes that you can
+	resize and do limited shaping. Once you have them the correct size and general
+	shape then press the "Convert to phase II" button, which will allow you to deform
+	the shapes just like clay.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Detail</xtrheader>
+	<tr><td>
+		Each "polygon mesh" is combined of hundreds of <bold>control points</bold> with triangles drawn
+		between each control point. The amount of detail the polygon mesh can have is
+		limited to the number of control points in a region - the more control points the
+		more detail. If you need more detail (and hence more control points), press one of the following buttons.
+		Be aware that <bold>the more control points, the more memory the object takes and
+		the longer it takes to drawn.</bold>
+		<p/>
+		The triangles between the control points are <bold>smoothed</bold> out even more base
+		upon the amount of smoothing.
+		<p/>
+		You <bold>cannot modify individual control points in phase I</bold>, but will be able to do so
+		when the object is converted to phase II. If your object will need lots of detail when
+		you begin to deform it then make sure you have plenty of control points. If not, use
+		fewer control points. The best way to judge if you have the right number of control
+		points is to set the "Smoothing" to "None" and see if the shape has enough detail.
+		(You can always adjust the "Smoothing" in phase II.)
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Control points</bold> - The number of control points (and amount of detail
+			in phase II) in the object.
+		</td>
+		<td>
+			<scrollbar width=100% min=1 max=50 orient=horz name=points/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Smoothing (while working)</bold> - The higher the smoothing the better the curved
+			sections of the polygon mesh will look, but the slower the object will be to
+			draw. This affects how smooth the object is while you're working on it.
+		</td>
+		<td><xComboPolyMeshSub name=SubWork/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Smoothing (final render)</bold> - Same as above, except this affects
+			how smooth the object will be drawn when you save an image or animate. Usually
+			this is higher than the "while working" setting since you want a better quality
+			for the final result.
+		</td>
+		<td><xComboPolyMeshSub name=SubFinal/></td>
+	</tr>
+</xtablecenter>
+
+
+<xChoiceButton href=convert>
+	<bold>Convert to phase II</bold><br/>
+	This will allow you to deform the polygon mesh as though using clay. Once you
+	have converted to phase II you cannot go back to phase I, so make sure all the
+	sizing is complete.
+</xChoiceButton>
+

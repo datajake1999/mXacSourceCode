@@ -1,0 +1,50 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Ground settings"/>
+
+<xChoiceButton name=excavate href=excavate>
+	<bold>Excavation cutouts</bold><br/>
+	Use this page to delete excavations automatically created by building blocks with
+	basements.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Fast drawing</xtrheader>
+	<tr><td>
+		While you're editing a landscape, <xSN/> will usually draw a low-detail
+		version of the landscape so it draws faster. Only when you draw the final
+		image (by saving to file, printing, or animating) will the full image be
+		drawn. You can override this if you wish:
+		<p/>
+		<xChoiceButton style=x checkbox=true name=lessdetail>
+			<bold>Draw ground with less detail when working on it</bold><br/>
+			If checked, then the ground will be drawn with less detail while you're working
+			on your scene.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=forestboxes>
+			<bold>Draw forest trees as boxes</bold><br/>
+			When checked, forest trees will be drawn as boxes (rather than fully detailed
+			trees) so they take less time to draw.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=savecompressed>
+			<bold>"Compress" the ground information to save space, but with some loss</bold><br/>
+			Using this option will cause the ground information to take up signficantly less
+			space. However, it will "cut corners" and change the data somewhat in order to
+			fit in as small a memory/disk size as possible. For the most part, such
+			losses shouldnt be noticable.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=dontdrawneartrees>
+			<bold>Don't draw trees that potentially block the camera</bold><br/>
+			If checked, any forest-generated trees that would potentially intersect with
+			the camera aren't drawn. This ensures that the camera never has branches
+			right in front of it.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

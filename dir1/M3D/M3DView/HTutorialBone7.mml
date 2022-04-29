@@ -1,0 +1,93 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones tutorial - Moving other objects"/>
+
+<xPageTitle>
+	Bones tutorial - Moving other objects
+</xPageTitle>
+
+
+<xSectionTitle>Binding the skeleton</xSectionTitle>
+
+<p>
+	Now that you have built your skeleton (or at least one that you can play with), it's
+	time to see how it affects other objects (aka: the character's skin) around it.
+</p>
+
+<ol>
+	<li>
+		<bold>You must do this in the object editor.</bold> If you have not created your
+		bone in the object editor then you should create a new object
+		using <xButtonLibrary/> and place your skeleton inside it.
+	</li>
+	<li>
+		Just for the sake of demonstration, use <xButtonObjNew/> to create a few simple
+		shapes that you can pretend are your character. (To create something that actually
+		looks like a character see the <a href=r:893>Polygon mesh tutorial</a>.) Use some of the objects
+		from "Object pieces", probably from "Simple shapes" or "Extrusions".
+		Do <bold>not</bold> use "Polygon meshes"; I'll explain why
+		later. Arrange your shapes around the skeleton so it creates something with arms.
+		Make sure they overlap at the joints or you won't see how bending works.
+	</li>
+	<li>
+		Once you have created your improptu character, press <xButtonSave/>.
+	</li>
+	<li>
+		<bold>Return</bold> to the main <xSN/> world view.
+	</li>
+	<li>
+		Press <xButtonObjNew/>, and <bold>add your new object</bold> into the world.
+	</li>
+	<li>
+		If it isn't selected then use <xButtonSelIndividual/> to select it.
+	</li>
+	<p>
+		You'll notice that your selected character shows a purple control point at each
+		joint. Or you may not, since your joints may be completely covered by the character.
+		These control points let you move your skeleton, and with it, the hacked-together
+		character you created.
+	</p>
+	<li>
+		Select <xButtonObjControlNSEWUD/> (or similar tool).
+	</li>
+	<li>
+		<bold>Click and drag</bold> on the control points. Watch your character animate.
+		This is called "Inverse kinematics", explained next.
+	</li>
+	<li>
+		Alternatively, you can select the <xButtonObjAttrib/> tool and modify the angles.
+	</li>
+	<li>
+		If some parts of your character don't move when you move the bone then you'll
+		need to return to the object editor and <bold>enlarge the envelopes</bold>.
+	</li>
+</ol>
+
+<xSectionTitle>Polygon meshes</xSectionTitle>
+
+<p>
+	The reason why I asked you not to include polygon meshes in your hack character
+	is because polygon meshes get a bit more complicated to connect. This complication,
+	however, provides a lot more flexibility.
+</p>
+
+<p>
+	For more information, see the <a href=r:893>Polygon mesh tutorial</a>.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:519><bold>Next</bold></button>
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:922>Eyes objects</a></li>
+	<li><a href=r:926>Jaw object</a></li>
+	<li><a href=r:893>Polygon mesh tutorial</a></li>
+	<li><a href=r:535>Rigid surfaces</a></li>
+</xul>
+

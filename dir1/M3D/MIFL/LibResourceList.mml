@@ -1,0 +1,30 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="List of resources"/>
+
+<xTableCenter width=100%>
+	<xtrheader>Search options</xtrheader>
+	<tr>
+		<td>
+			<a><bold>Containing text</bold>
+				<xHoverHelp>
+					Only those entries with the given text will be shown. If the line is blank
+					then all resources will be shown.
+				</xHoverHelp>
+			</a>
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 name=filtertext/><br/>
+			<p align=right><button name=runsearch>Search...
+				<xHoverhelpShort>Press this after typing in a search resource.</xHoverhelpshort>
+			</button></p></bold>
+		</td>
+	</tr>
+</xTableCenter>
+
+
+<xTableCenter width=100%>
+	<xtrheader>Found</xtrheader>
+	<<<$LIBLIST>>>
+</xTableCenter>
+

@@ -1,0 +1,103 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Stripes"/>
+
+<p>
+	Unforuntately, the technique for creating marble is a bit too complicated to explain.
+	Just play with the values and see what happens.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Use this effect</bold><br/>
+			This effect will only be used if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=vertical>
+			<bold>Stripe is vertical</bold><br/>
+			If checked the stripe is vertical, otherwise it's horizontal.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Stripe groups</xtrheader>
+	<tr>
+		<td>
+			<bold>Number of stripes groups</bold> - Set this to a number geater than 1
+			if you want to repeat the same pattern multiple times in one texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=sgnum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stripe group center</bold> - Center of the stripe group.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=sgcenter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stripe group width</bold> - How wide the group is as a percentage of
+			the pattern width.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=sgwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Number of stripes per group</bold>
+		</td>
+		<td><edit maxchars=64 width=100% name=stripenum/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Stripe width</bold>
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=stripewidth/></td>
+	</tr>
+</xtablecenter>
+
+<!xComboStripe>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0"><bold>Overwrite</bold></elem>
+		<elem name="1"><bold>Average</bold></elem>
+		<elem name="2"><bold>Add</bold></elem>
+		<elem name="3"><bold>Subtract</bold></elem>
+	</combobox></bold>
+</xComboStripe>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Color</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=cbutton>
+				<bold>Color</bold><br/>
+				Click this to change the color of the stripe.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=cstatus/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Interaction with colors underneath</bold> - When this color is
+			overlaid, how does it "mix" with colors underneath.
+		</td>
+		<td><xComboStripe width=100% name=interact/></td>
+	</tr>
+</xtablecenter>

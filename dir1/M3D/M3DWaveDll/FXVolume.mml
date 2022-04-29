@@ -1,0 +1,36 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Volume effect"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Volume</xtrheader>
+	<tr>
+		<td>
+			<bold>Increase volume at start</bold> - Type in a number for how much to increase
+			(or decrease) the volume by. 1.0 means no change, 2.0 is twice as loud,
+			0.5 is half as loud, etc. This affects the start of the selection.
+		</td>
+		<td><edit width=100% maxchars=32 name=start/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Increase volume at end</bold> - Type in a number for how much to increase
+			(or decrease) the volume by. 1.0 means no change, 2.0 is twice as loud,
+			0.5 is half as loud, etc. This affects the end of the selection, with
+			a transition in volume chane from the start to the end.
+		</td>
+		<td><edit width=100% maxchars=32 name=end/></td>
+	</tr>
+</xtablecenter>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Editing a custom object (2)"/>
+
+<xPageTitle>
+	Tutorial - Editing a custom object (2)
+</xPageTitle>
+
+<p>
+	Editing an object is <bold>the same as editing a house.</bold> All the controls work the
+	same. Some things to look out for though are:
+</p>
+
+<xul>
+	<li>
+		You can use <bold>any objects</bold> from the <xButtonObjNew/> dialog. However, most
+		often you'll be using the ones from the <bold>"Object pieces" category.</bold>
+	</li>
+	<li>
+		If you are building an object that <bold>sits on the floor</bold> make sure its pieces rest
+		on the ground plane. If the object rests <bold>against a wall</bold>, it's pieces should
+		meet up with the wall plane. Likewise, if it <bold>hangs from the ceiling</bold>, it
+		should be built underneath the ceiling plane and its pieces should meet it.
+	</li>
+	<li>
+		Make sure the <bold>object is centered</bold> around the 0,0 location (where the crosshairs
+		meet). When you add the object to the house using <xButtonObjNew/> the object
+		will be positioned such that the crosshairs (although not visible) will be
+		where you clicked.
+	</li>
+	<li>
+		When you add an object to your house it will use the same colors and textures that
+		you set using the object editor. If you want to be able to use the same custom object
+		multiple times in your house (such as a custom chair) but want to <bold>vary the coloration
+		on each object</bold> then you have to do the following:
+	</li>
+	<p>
+		For any color or texture you
+		want to be changable on the custom object, make sure it is painted (through
+		the <xButtonObjPaint/> tool) using a "Color/texture scheme". If it is marked
+		as "Not in a scheme" then the color/texture won't be customizable.
+	</p>
+	<li>
+		<bold>Do not include the object in itself.</bold> It's OK to have your object contain
+		other custom objects, but having it contain itself has a way of cufusing <xSN/>, just
+		as it confuses most philosophers.
+	</li>
+</xul>
+
+<p>
+	For the purposes of this tutorial, <bold>add some pieces (other objects) to
+	your new custom object.</bold>
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:421><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:914>Bones</a></li>
+	<li><a href=r:454>Cabinets</a></li>
+	<li><a href=r:455>Cabinet pieces</a></li>
+	<li><a href=r:450>Cushions and pillows</a></li>
+	<li><a href=r:427>Extrusion objects</a></li>
+	<li><a href=r:431>Lathe objects</a></li>
+	<li><a href=r:893>Polygon mesh objects</a></li>
+	<li><a href=r:439>Polyhedron objects (simple shapes)</a></li>
+	<li><a href=r:437>Spline surface objects</a></li>
+	<li><a href=r:460>Tarps and sails</a></li>
+	<li><a href=r:485>Tracing paper</a></li>
+</xul>

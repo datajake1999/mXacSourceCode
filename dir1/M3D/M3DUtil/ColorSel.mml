@@ -1,0 +1,67 @@
+<?Include resource=500?>
+<PageInfo index=false title="Color selection"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<!xcbtable>
+	<td tbmargin=0 lrmargin=0>
+		<colorblend width=100% height=100% macroattribute=1/>
+	</td>
+</xcbtable>
+
+<font color=#ffffff><table width=100% lrmargin=32 bordercolor=#c0c0c0 innerlines=0 valign=top>
+<tr>
+	<td><p align=center>
+		<bold>Current color</bold><br/>
+		<colorblend width=100% height=50% color=#0000ff name=cbmain href=cbmain/>
+	</p></td>
+	<td/>
+	<td valign=center>
+		<button accel=enter name=ok>
+			<bold>Use current color</bold>
+		</button><br/>
+		<button accel=escape href=cancel>
+			<bold>Cancel</bold>
+		</button>
+	</td>
+</tr>
+
+<tr><td><small>
+	Click on the color that most closely matches what you want. The color palette will
+	change to narrow in on your choice. Keep clicking until you're satisfied then
+	press "Use current color".
+</small></td></tr>
+<tr><td><br/></td></tr>
+
+<<<$COLORLIST>>>
+
+<tr><td><br/></td></tr>
+<tr>
+<td>
+	<small><xChoiceButton style=righttriangle name=morecolors>
+		<bold>Show a larger variety of colors</bold><br/>
+		Every time you click on a color the choice of colors narrows down towards what
+		you clicked on. If you need more choice, click this button and it will increase
+		the variety of colors shown.
+	</xChoiceButton></small>
+</td><td/></tr>
+
+<tr><td>
+	<table width=100% valign=center innerlines=0 bordercolor=#c0c0c0>
+		<tr><td>
+			For those technically minded people out there, you can also type in
+			red, green, and blue values below:
+		</td></tr>
+		<tr>
+			<td align=right>Red:</td>
+			<td aligh=left><font color=#000000><bold><edit maxchars=16 width=50% name=red/></bold></font></td>
+			<td align=right>Green:</td>
+			<td aligh=left><font color=#000000><bold><edit maxchars=16 width=50% name=green/></bold></font></td>
+			<td align=right>Blue:</td>
+			<td aligh=left><font color=#000000><bold><edit maxchars=16 width=50% name=blue/></bold></font></td>
+		</tr>
+	</table>
+</td></tr>
+</table>
+
+</font>

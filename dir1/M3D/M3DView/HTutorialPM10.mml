@@ -1,0 +1,60 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Organic modelling 1"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Organic modelling 1
+</xPageTitle>
+
+<p>
+	The other way to make rounded objects using polygon meshes is called "Organic
+	modelling". (Note: Organic modelling can be used along with subdivision surfaces.)
+	This sub-section will take you through the organic modelling tools.
+</p>
+
+<p>
+	While you can do organic modelling on your cube, it's not the best starting point.
+	Spheres or other rounded shapes tend to work better:
+</p>
+
+<ol>
+	<li>
+		Back in the main view, create a new polygon mesh using <xButtonObjNew/>.
+	</li>
+	<li>
+		Instead of using the cube under "Polygon meshes" in "Object pieces",
+		choose a <bold>Sphere</bold>.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click</bold> on the sphere.
+	</li>
+	<li>
+		In the "Polygon mesh (phase I) settings" dialog, drag
+		the <bold>"Control points"</bold> to about the half way mark.
+	</li>
+	<li>
+		Set the <bold>"Smoothing (while working)"</bold> combobox to "None" so
+		that drawing will be faster. (Because you have increased the number of control
+		points you don't really need any extra smoothing either.)
+	</li>
+	<li>
+		Press the <bold>"Convert to Phase II"</bold> button.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjShowEditor/> tool and <bold>click on</bold> the sphere to
+		bring up the polygon mesh editor.
+	</li>
+	<li>
+		In the polygon mesh editor (for the sphere) click on
+		the <xButtonPMModeClay/> button to switch to the organic editing mode.
+	</li>
+</ol>
+
+
+<p align=right>
+	<button style=rightarrow href=r:903><bold>Next</bold></button>
+</p>
+

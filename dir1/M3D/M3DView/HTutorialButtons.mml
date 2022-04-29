@@ -1,0 +1,125 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - buttons"/>
+
+<xPageTitle>
+	Tutorial - buttons
+</xPageTitle>
+
+<xDefinition>
+	<bold>Suggestion:</bold> Most tutorial pages contain a number of links (often in <italic>See Also</italic>)
+	to other help topics. If it's your first time through the tutorial, I suggest you
+	ignore these but remember which ones interest you. Going through the tutorial once will
+	give you a general idea how <xSN/> works. Then, run the tutorial a second time
+	and visit any links that interest you, delving into areas that interest you more.
+</xDefinition>
+
+<xSectionTitle>What you're looking at</xSectionTitle>
+
+<p>
+	<xSN/> initially opens with a window occupying the entire screen. This is called the
+	"View window" since it shows a view into the world. Right now you're view is looking
+	down on a green field of grass.
+</p>
+
+<xSectionTitle>Buttons</xSectionTitle>
+<p>
+	Around the edge of the view window are various buttons for moving the view, adding
+	and manipulating objects, and other wonderful things. (To be explained later in this
+	tutorial.) Here are some important tips about the buttons (in general.)
+</p>
+<xul>
+	<li>
+		If you <bold>move the mouse pointer over a button</bold> it displays a tooltip explaining what it
+		does.
+	</li>
+	<li>
+		You can not only click on a button with your mouse, but you can type in the <bold>keyboard
+		accelerator</bold> (as displayed in the help tooltip) to access it.
+	</li>
+</xul>
+
+<p>
+	There are four types of buttons:
+</p>
+<xul>
+	<li>
+		<bold>Display a menu</bold> - Clicking on these will bring up a menu
+		of more options. These buttons have a small red arrow on them.
+	</li>
+	<li>
+		<bold>Show the current view mode</bold> - These three buttons (in the upper-left
+		portion of the screen) are visually grouped by an outline. The
+		currently selected view mode is shown brighter than the other two.
+		Clicking one of these buttons selects it
+		and de-selects the other. The view mode will be described in detail later.
+	</li>
+	<li>
+		<bold>Tools</bold> - These buttons appear in a tab attached to the 3D display
+		window. Only one tool can be selected at a time, and it is drawn brighter than
+		the other tools.
+		Clicking one of these buttons selects it
+		and de-selects the other. Tools affects how <xSN/> interpret a mouse click on
+		the main display (which is grass right now.) These will be described in detail later.
+	</li>
+	<li>
+		<bold>Basic buttons</bold> - They don't have a red arrow or outline. Basic buttons
+		just perform an action.
+	</li>
+</xul>
+
+<xSectionTitle>Tools</xSectiontitle>
+
+<p>
+	Clicking on a "Tool button" selects it. Trying licking on the <xButtonZoomIn/> tool.
+	You'll notice that it's image and background become brighter and the tab looks like
+	it is attached to the 3D display section.
+	If you move the mouse pointer over the world display (the
+	grass) you will also notice that the icon looks like the tool.
+</p>
+
+<p>
+	To select a tool, you can either click on it or:
+</p>
+
+<xul>
+	<li>
+		<bold>"Tab"</bold> moves the selection
+		from the top edge of the screen to the right edge, bottom edge, and left edge. (Or if you
+		have "shift" down while pressing "tab" the direction is reversed. You can try this now.
+	</li>
+	<li>
+		Pressing <bold>"escape"</bold> will switch back to the previous tool.
+	</li>
+</xul>
+
+<xSectionTitle>
+	Miscellaneous
+</xSectionTitle>
+
+<xul>
+	<li>
+		Don't do this now (unless you really want to), but if you press the <xButtonClose/> button
+		the view will close down, and so will <xLN/>.
+	</li>
+	<li>
+		You can also press the <xButtonMinimize/> button to minimize the window.
+	</li>
+	<li>
+		The <xButtonHelp/> button bring up help or the tutorial.
+	</li>
+</xul>
+
+
+<p align=right>
+	<button style=rightarrow href=r:351><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:248>Small view windows</a></li>
+	<li><a href=r:250>Multiple view windows</a></li>
+	<li><a href=r:249>Move a view window to another monitor</a></li>
+	<li><a href=r:489>Right and middle mouse buttons</a></li>
+</xul>

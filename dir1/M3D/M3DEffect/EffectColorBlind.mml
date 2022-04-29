@@ -1,0 +1,55 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Color blindness"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Red, green, blue</xtrheader>
+	<tr>
+		<td>
+			<bold>Red</bold> - Select the colors that contribute to the final
+			red color.
+		</td>
+		<td align=center>
+			<button style=x checkbox=true name=red0><bold>Red</bold></button>
+			<button style=x checkbox=true name=red1><bold>Green</bold></button>
+			<button style=x checkbox=true name=red2><bold>Blue</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Green</bold> - Select the colors that contribute to the final
+			green color.
+		</td>
+		<td align=center>
+			<button style=x checkbox=true name=green0><bold>Red</bold></button>
+			<button style=x checkbox=true name=green1><bold>Green</bold></button>
+			<button style=x checkbox=true name=green2><bold>Blue</bold></button>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<bold>Blue</bold> - Select the colors that contribute to the final
+			blue color.
+		</td>
+		<td align=center>
+			<button style=x checkbox=true name=blue0><bold>Red</bold></button>
+			<button style=x checkbox=true name=blue1><bold>Green</bold></button>
+			<button style=x checkbox=true name=blue2><bold>Blue</bold></button>
+		</td>
+	</tr>
+</xtablecenter>

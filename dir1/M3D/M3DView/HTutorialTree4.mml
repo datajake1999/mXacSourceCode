@@ -1,0 +1,95 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Creating branches"/>
+
+<xPageTitle>
+	Tutorial - Creating branches
+</xPageTitle>
+
+<p>
+	The next step is to create a "typical" branch for the tree. You will construct your
+	final tree from a trunk and major limbs, with several copies of your typical branch
+	coming out. You may end up creating a few different branches for each tree so that
+	the pattern of repeating branches doesn't become obvious.
+</p>
+
+<p>
+	To create a branch:
+</p>
+
+<ol>
+	<li>
+		Using <xButtonLibrary/> create a new object under "Object pieces", "Branches"
+		just like you did for your leaf.
+	</li>
+	<li>
+		Instead of adding a "Leaf object" to your new object, use <xButtonObjNew/> and
+		add a <bold>"Branch object"</bold> into your object. At first it looks just like a stick.
+		Make sure to place it at 0 EW, 0 NS, and 0 UD.
+	</li>
+	<li>
+		Use <xButtonSelIndividual/> to select the branch object (currently a vertical stick)
+		if you haven't already.
+	</li>
+	<p>
+		When you select the branch, you'll notice several control points appear. The are
+		what you use to sculpt the branch.
+	</p>
+	<li>
+		The first thing to to is split the branch in two; using the <xButtonObjControlNSEWUD/> tool,
+		click on the <bold>yellow triangle</bold> half way up the branch.
+	</li>
+	<p>
+		The yellow triangle splits a branch in two. If you ever forget this, just
+		remember that when you have the <xButtonObjControlNSEWUD/> tool selected, if you
+		hover your mouse over the triangle <xSN/>'s tooltip will show the
+		control point's name. In this case it's "Click to split".
+	</p>
+	<p>
+		When you split the branch, the branch won't look any differnt, but some
+		new control points will appear indicating that it's now split into two sections.
+	</p>
+	<li>
+		<bold>Click and drag</bold> the <bold>purple circle</bold> around; notice how it
+		bends the branch, allowing you to scult it's location.
+	</li>
+	<li>
+		<bold>Click on</bold> the <bold>brown triangle</bold>.
+	</li>
+	<p>
+		When you click on the brown triangle, a new branch is added. It too has control points
+		that allow you to split or move it around. Using the yellow triangle to split branches,
+		purple circle to move them, and brown triangle to add branches, you can create
+		an entire tree (if you have lots of spare time) or a branch of the tree.
+	</p>
+	<li>
+		So that there aren't too many control points cluttering the screen, the
+		branch object only draws manipulation control points for the selected
+		branch segment. For all the other ones it displays a white
+		triangle. <bold>Click</bold> the <bold>white triangle</bold> to select it
+		for editing; you'll notice that the maniuplation control points (for movement,
+		splitting, and branch creation) all move.
+	</li>
+	<li>
+		You can use the <bold>red triangle</bold> to delete branches.
+	</li>
+	<li>
+		Use the control points to <bold>create a simple branch,</bold> with enough
+		branches of its own to hold a few leaves. <bold>Make sure</bold> to orient the
+		branch at the angle (up or down) that it would typically be attached to the
+		tree. Also make sure to point the branch northwards with its thickest end
+		at 0 EW, 0 NS, 0 UD, just like the leaf.
+	</li>
+	<li>
+		You may wish to use <xButtonObjPaint/> to texture your branch. You can
+		find bark textures under "Outside", "Bark". If you're really ambitious
+		you can create your own bark texture from a photograph of the tree's bark.
+		You may want to use a different texture for your branches than your main
+		tree trunk.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:639><bold>Next</bold></button>
+</p>
+

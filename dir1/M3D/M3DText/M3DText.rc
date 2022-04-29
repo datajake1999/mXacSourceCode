@@ -1,0 +1,275 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "3D Outside the Box"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "M3DText.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""3D Outside the Box""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""M3DText.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CUT                 BITMAP                  "bmp00008.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_PHOTOLETCHWORTH     JPG                     "PhotoLetchworth.jpg"
+IDR_PAINTINGMITCH       JPG                     "PaintingMitch.jpg"
+IDR_EAGLEEYE            JPG                     "EagleEye.jpg"
+IDR_PAINTINGKITE        JPG                     "PaintingKite.jpg"
+IDR_PAINTINGPUGGLE      JPG                     "PaintingPuggle.jpg"
+IDR_PAINTINGQUOLL       JPG                     "PaintingQuoll.jpg"
+IDR_PHOTOKAKADU         JPG                     "PhotoKakadu.jpg"
+IDR_PHOTOMINDIL         JPG                     "PhotoMindil.jpg"
+IDR_PHOTOPAYASO         JPG                     "PhotoPayaso.jpg"
+IDR_PHOTOULURU          JPG                     "PhotoUluru.jpg"
+IDR_PHOTOMOON           JPG                     "moon.jpg"
+IDR_LEAFACACIA          JPG                     "LeafAcacia.jpg"
+IDR_LEAFUMBRELLA        JPG                     "LeafUmbrella.jpg"
+IDR_LEAFSANDPALM        JPG                     "LeafSandPalm.jpg"
+IDR_LEAFKAPOCK          JPG                     "LeafKapock.jpg"
+IDR_LEAFKAKADUPLUM      JPG                     "LeafKakaduPlum.jpg"
+IDR_LEAFIRONWOOD        JPG                     "LeafIronwood.jpg"
+IDR_LEAFGRASS           JPG                     "LeafGrass.jpg"
+IDR_LEAFEUCALYPT        JPG                     "LeafEucalypt.jpg"
+IDR_LOGO                JPG                     "Logo150.jpg"
+IDR_FACEWRINKLESLIPS2   JPG                     "WrinklesLips2.jpg"
+IDR_FACEACNE1           JPG                     "Acne.jpg"
+IDR_FACEBEARD1          JPG                     "Beard1.jpg"
+IDR_FACEBEARD2          JPG                     "Beard2.jpg"
+IDR_FACEBEARDSHADOW1    JPG                     "BeardShadow1.jpg"
+IDR_FACEEYEBROWS1       JPG                     "Eyebrows1.jpg"
+IDR_FACEEYEBROWS2       JPG                     "Eyebrows2.jpg"
+IDR_FACEEYEBROWS3       JPG                     "Eyebrows3.jpg"
+IDR_FACEEYELINER1       JPG                     "Eyeliner1.jpg"
+IDR_FACEEYELINER2       JPG                     "Eyeliner2.jpg"
+IDR_FACEEYESHADOW1      JPG                     "EyeShadow1.jpg"
+IDR_FACEFACE1           JPG                     "Face1.jpg"
+IDR_FACEFACE2           JPG                     "Face2.jpg"
+IDR_FACEFACE3           JPG                     "Face3.jpg"
+IDR_FACEFACE4           JPG                     "Face4.jpg"
+IDR_FACEFRECKLES        JPG                     "Freckles.jpg"
+IDR_FACELIPSTICK1       JPG                     "Lipstick1.jpg"
+IDR_FACEOILYSKIN        JPG                     "OilySkin.jpg"
+IDR_FACEROUGE1          JPG                     "Rouge1.jpg"
+IDR_FACESCAREYES1       JPG                     "ScarEyes1.jpg"
+IDR_FACESCAREYES2       JPG                     "ScarEyes2.jpg"
+IDR_FACESCARMOUTH1      JPG                     "ScarMouth1.jpg"
+IDR_FACETATOO1          JPG                     "Tatoo1.jpg"
+IDR_FACETATOO2          JPG                     "Tatoo2.jpg"
+IDR_FACETATOO3          JPG                     "Tatoo3.jpg"
+IDR_FACEWRINKLESEYES1   JPG                     "WrinklesEyes1.jpg"
+IDR_FACEWRINKLESEYES2   JPG                     "WrinklesEyes2.jpg"
+IDR_FACEWRINKLESLIPS1   JPG                     "WrinklesLips1.jpg"
+IDR_GRASSMISSION        JPG                     "GrassMission.jpg"
+IDR_LEAFMAPLE           JPG                     "LeafMaple.jpg"
+IDR_LEAFOAK             JPG                     "LeafOak.jpg"
+IDR_FLOWERKAPOCK        JPG                     "FlowerKapock.jpg"
+IDR_POSSUMFURLENGTH     JPG                     "PossumFurLength.jpg"
+IDR_POSSUMEARS          JPG                     "PossumEars.jpg"
+IDR_POSSUMFURCOLOR1     JPG                     "PossumFurColor1.jpg"
+IDR_POSSUMFURCOLOR2     JPG                     "PossumFurColor2.jpg"
+IDR_POSSUMFURCOLOR3     JPG                     "PossumFurColor3.jpg"
+IDR_POSSUMFURCOLOR4     JPG                     "PossumFurColor4.jpg"
+IDR_POSSUMFURCOLOR5     JPG                     "PossumFurColor5.jpg"
+IDR_POSSUMFURCOLOR6     JPG                     "PossumFurColor6.jpg"
+IDR_POSSUMSKIN          JPG                     "PossumSkin.jpg"
+IDR_ROOSKINCOLOR3       JPG                     "RooSkinColor3.jpg"
+IDR_ROOEARS1            JPG                     "RooEars1.jpg"
+IDR_ROOEARS2            JPG                     "RooEars2.jpg"
+IDR_ROOEARS3            JPG                     "RooEars3.jpg"
+IDR_ROOEARS4            JPG                     "RooEars4.jpg"
+IDR_ROOFURCOLOR1        JPG                     "RooFurColor1.jpg"
+IDR_ROOFURCOLOR2        JPG                     "RooFurColor2.jpg"
+IDR_ROOFURCOLOR3        JPG                     "RooFurColor3.jpg"
+IDR_ROOFURCOLOR4        JPG                     "RooFurColor4.jpg"
+IDR_ROOFURCOLOR5        JPG                     "RooFurColor5.jpg"
+IDR_ROOFURCOLOR6        JPG                     "RooFurColor6.jpg"
+IDR_ROOFURCOLOR7        JPG                     "RooFurColor7.jpg"
+IDR_ROOFURCOLOR8        JPG                     "RooFurColor8.jpg"
+IDR_ROOFURCOLOR9        JPG                     "RooFurColor9.jpg"
+IDR_ROOFURCOLOR10       JPG                     "RooFurColor10.jpg"
+IDR_ROOFURLENGTH        JPG                     "RooFurLength.jpg"
+IDR_ROOSKINCOLOR1       JPG                     "RooSkinColor1.jpg"
+IDR_ROOSKINCOLOR2       JPG                     "RooSkinColor2.jpg"
+IDR_RATSKINCOLOR2       JPG                     "RatSkinColor2.jpg"
+IDR_RATFURCOLOR1        JPG                     "RatFurColor1.jpg"
+IDR_RATFURCOLOR2        JPG                     "RatFurColor2.jpg"
+IDR_RATFURCOLOR3        JPG                     "RatFurColor3.jpg"
+IDR_RATFURCOLOR4        JPG                     "RatFurColor4.jpg"
+IDR_RATFURCOLOR5        JPG                     "RatFurColor5.jpg"
+IDR_RATFURCOLOR6        JPG                     "RatFurColor6.jpg"
+IDR_RATFURLENGTH        JPG                     "RatFurLength.jpg"
+IDR_RATSKINCOLOR1       JPG                     "RatSkinColor1.jpg"
+IDR_THYLACINEFURCOLOR1  JPG                     "ThylacineFurColor1.jpg"
+IDR_THYLACINEFURCOLOR2  JPG                     "ThylacineFurColor2.jpg"
+IDR_THYLACINEFURCOLOR3  JPG                     "ThylacineFurColor3.jpg"
+IDR_THYLACINEFURCOLOR4  JPG                     "ThylacineFurColor4.jpg"
+IDR_THYLACINEFURCOLOR5  JPG                     "ThylacineFurColor5.jpg"
+IDR_THYLACINEFURCOLOR6  JPG                     "ThylacineFurColor6.jpg"
+IDR_THYLACINEFURLENGTH1 JPG                     "ThylacineFurLength.jpg"
+IDR_THYLACINESKINCOLOR1 JPG                     "ThylacineSkinColor1.jpg"
+IDR_THYLACINESKINCOLOR2 JPG                     "ThylacineSkinColor2.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "..\\Macros.mml"
+IDR_MMLTEMPLATEBACK     MML                     "..\\TemplateBack.mml"
+IDR_MMLTEXTURESEL       MML                     "TextureSel.mml"
+IDR_MMLTEXTURELIBRARY   MML                     "TextureLibrary.mml"
+IDR_MMLTEXTURERENAME    MML                     "TextureRename.mml"
+IDR_MMLTEXTURENEW       MML                     "TextureNew.mml"
+IDR_MMLTEXTUREWOODPLANKS MML                     "TextureWoodPlanks.mml"
+IDR_MMLTEXTUREDIRTPAINT MML                     "TextureDirtPaint.mml"
+IDR_MMLTEXTUREGENERATEPLANK MML                     "TextureGeneratePlank.mml"
+IDR_MMLTEXTUREGENERATETREE MML                     "TextureGenerateTree.mml"
+IDR_MMLTEXTURENOISE     MML                     "TextureNoise.mml"
+IDR_MMLTEXTURECRNOISE   MML                     "TextureCrNoise.mml"
+IDR_MMLTEXTURECORR      MML                     "TextureCorr.mml"
+IDR_MMLTEXTURETILES     MML                     "TextureTiles.mml"
+IDR_MMLTEXTUREMAKETILE  MML                     "TextureMakeTile.mml"
+IDR_MMLTEXTURECHIP      MML                     "TextureChip.mml"
+IDR_MMLTEXTUREGROUT     MML                     "TextureGrout.mml"
+IDR_MMLTEXTUREBMP       MML                     "TextureBMP.mml"
+IDR_MMLTEXTUREIMAGEFILE MML                     "TextureImageFile.mml"
+IDR_MMLTEXTUREPARQUET   MML                     "TextureParquet.mml"
+IDR_MMLTEXTUREMAKESTONE MML                     "TextureMakeStone.mml"
+IDR_MMLTEXTURESTONES    MML                     "TextureStones.mml"
+IDR_MMLTEXTURESTONESRANDOM MML                     "TextureStonesRandom.mml"
+IDR_MMLTEXTUREPAVERS    MML                     "TexturePavers.mml"
+IDR_MMLTEXTUREMARBLING  MML                     "TextureMarbling.mml"
+IDR_MMLTEXTUREMARBLE    MML                     "TextureMarble.mml"
+IDR_MMLTEXTURECLAPBOARDS MML                     "TextureClapboards.mml"
+IDR_MMLTEXTUREBOARDBATTEN MML                     "TextureBoardBatten.mml"
+IDR_MMLTEXTURESHINGLES  MML                     "TextureShingles.mml"
+IDR_MMLTEXTURELATTICE   MML                     "TextureLattice.mml"
+IDR_MMLTEXTUREWICKER    MML                     "TextureWicker.mml"
+IDR_MMLTEXTURETHREADS   MML                     "TextureThreads.mml"
+IDR_MMLTEXTUREFABRIC    MML                     "TextureFabric.mml"
+IDR_MMLTEXTURESTRIPES   MML                     "TextureStripes.mml"
+IDR_MMLOBJPAINTADDSCHEME MML                     "ObjPaintAddScheme.mml"
+IDR_MMLTEXTFROMFILE     MML                     "TextFromFile.mml"
+IDR_MMLTEXTBLANK        MML                     "TextBlank.mml"
+IDR_MMLTEXTURETESTPATTERN MML                     "TextureTestPattern.mml"
+IDR_MMLVOLWOOD          MML                     "VolWood.mml"
+IDR_MMLVOLMARBLE        MML                     "VolMarble.mml"
+IDR_MMLVOLNOISE         MML                     "VolNoise.mml"
+IDR_MMLVOLSANDSTONE     MML                     "VolSandstone.mml"
+IDR_MMLTEXTUREIRIS      MML                     "TextureIris.mml"
+IDR_MMLTEXTUREBLOODVESSELS MML                     "TextureBloodVessels.mml"
+IDR_MMLTEXTUREHAIR      MML                     "TextureHair.mml"
+IDR_MMLTEXTUREGRASS     MML                     "TextureGrass.mml"
+IDR_MMLTEXTUREBRANCH    MML                     "TextureBranch.mml"
+IDR_MMLTEXTUREFACEOMATIC MML                     "TextureFaceomatic.mml"
+IDR_MMLTEXTUREFACEOMATICBASE MML                     "TextureFaceomaticBase.mml"
+IDR_MMLTEXTUREFACEOMATICOILY MML                     "TextureFaceomaticOily.mml"
+IDR_MMLTEXTUREFACEOMATICMAKEUP MML                     "TextureFaceomaticMakeup.mml"
+IDR_MMLTEXTUREFACEOMATICWARTS MML                     "TextureFaceomaticWarts.mml"
+IDR_MMLTEXTUREFACEOMATICSCARS MML                     "TextureFaceomaticScars.mml"
+IDR_MMLTEXTUREFACEOMATICFUR MML                     "TextureFaceomaticFur.mml"
+IDR_MMLTEXTURECHAINMAIL MML                     "TextureChainmail.mml"
+IDR_MMLTEXTURETREEBARK  MML                     "TextureTreeBark.mml"
+IDR_MMLTEXTUREMIX       MML                     "TextureMix.mml"
+IDR_MMLTEXTURETEXT      MML                     "TextureText.mml"
+IDR_MMLTEXTUREEFFECTTEXT MML                     "TextureEffectText.mml"
+IDR_MMLLEAFFORTEXTURE   MML                     "LeafForTexture.mml"
+IDR_MMLTEXTURELEAFLITTER MML                     "TextureLeafLitter.mml"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

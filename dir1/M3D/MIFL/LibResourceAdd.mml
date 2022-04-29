@@ -1,0 +1,10 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Add a resource"/>
+
+
+<p>
+	Click on the type of resource you wish to add.
+</p>
+
+<null><<<$LIBLIST>>></null>

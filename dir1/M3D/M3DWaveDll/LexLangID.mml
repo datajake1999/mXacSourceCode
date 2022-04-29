@@ -1,0 +1,162 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Lexicon language"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<p>
+	The lexicon needs to know what language it's for so that when numbers (such
+	as "123") appear in text, they can be converted to words ("one hundred twenty three").
+	At the moment, I only have English conversions entered. However, if you need another
+	language and can provide me the necessary rules about how numbers, dates, times,
+	and currencies are spoken, I can add other languages.
+</p>
+
+<p>
+	<bold>Language</bold> - Please select the language below:
+</p>
+
+<p align=right><bold><combobox cbheight=300 width=75% name=langid>
+	<elem name=0><italic>Not listed</italic></elem>
+	<elem name=1078>Afrikaans</elem>
+	<elem name=1052>Albanian</elem>
+	<elem name=1025>Arabic (Saudi Arabia)</elem>
+	<elem name=2049>Arabic (Iraq)</elem>
+	<elem name=3073>Arabic (Egypt)</elem>
+	<elem name=4097>Arabic (Libya)</elem>
+	<elem name=5121>Arabic (Algeria)</elem>
+	<elem name=6145>Arabic (Morocco)</elem>
+	<elem name=7169>Arabic (Tunisia)</elem>
+	<elem name=8193>Arabic (Oman)</elem>
+	<elem name=9217>Arabic (Yemen)</elem>
+	<elem name=10241>Arabic (Syria)</elem>
+	<elem name=11265>Arabic (Jordan)</elem>
+	<elem name=12289>Arabic (Lebanon)</elem>
+	<elem name=13313>Arabic (Kuwait)</elem>
+	<elem name=14337>Arabic (U.A.E.)</elem>
+	<elem name=15361>Arabic (Bahrain)</elem>
+	<elem name=16385>Arabic (Quatar)</elem>
+	<elem name=1068>Armenian</elem>
+	<elem name=1068>Azeri (Latin)</elem>
+	<elem name=2092>Azeri (Cyrillic)</elem>
+	<elem name=1069>Basque</elem>
+	<elem name=1059>Belarusian</elem>
+	<elem name=1026>Bulgarian</elem>
+	<elem name=1109>Burmese</elem>
+	<elem name=1027>Catlan</elem>
+	<elem name=1028>Chinese (Taiwan)</elem>
+	<elem name=2052>Chinese (PRC)</elem>
+	<elem name=3076>Chinese (Hong Kong SAR, PRC)</elem>
+	<elem name=4100>Chinese (Singapore)</elem>
+	<elem name=5124>Chinese (Macau SAR)</elem>
+	<elem name=1050>Croatian</elem>
+	<elem name=1029>Czech</elem>
+	<elem name=1030>Danish</elem>
+	<elem name=1125>Divehi</elem>
+	<elem name=1043>Dutch (Netherlands)</elem>
+	<elem name=2067>Dutch (Belgium)</elem>
+	<elem name=1033>English (United States)</elem>
+	<elem name=2057>English (United Kinddom)</elem>
+	<elem name=3081>English (Australian)</elem>
+	<elem name=4105>English (Canadian)</elem>
+	<elem name=5129>English (New Zealand)</elem>
+	<elem name=6153>English (Ireland)</elem>
+	<elem name=7177>English (South Africa)</elem>
+	<elem name=8201>English (Jamaica)</elem>
+	<elem name=9225>English (Caribbean)</elem>
+	<elem name=10249>English (Belize)</elem>
+	<elem name=11273>English (Trinidad)</elem>
+	<elem name=12297>English (Zimbabwe)</elem>
+	<elem name=13321>English (Philippines)</elem>
+	<elem name=1061>Estonian</elem>
+	<elem name=1081>Faeroese</elem>
+	<elem name=1065>Farsi</elem>
+	<elem name=1045>Finnish</elem>
+	<elem name=1036>French (Standard)</elem>
+	<elem name=2060>French (Belgian)</elem>
+	<elem name=3084>French (Canadian)</elem>
+	<elem name=4108>French (Switzerland)</elem>
+	<elem name=5132>French (Luxembourg)</elem>
+	<elem name=6156>French (Monaco)</elem>
+	<elem name=1110>Galician</elem>
+	<elem name=1079>Georgian</elem>
+	<elem name=1031>German (Standard)</elem>
+	<elem name=2055>German (Switzerland)</elem>
+	<elem name=3079>German (Austria)</elem>
+	<elem name=4103>German (Luxembourg)</elem>
+	<elem name=5127>German (Liechtenstein)</elem>
+	<elem name=1032>Greek</elem>
+	<elem name=1095>Gujarati</elem>
+	<elem name=1037>Hebrew</elem>
+	<elem name=1081>Hindi</elem>
+	<elem name=1038>Hungarian</elem>
+	<elem name=1039>Icelandic</elem>
+	<elem name=1057>Indonesian</elem>
+	<elem name=1040>Italian (Standard)</elem>
+	<elem name=2064>Italian (Switzerland)</elem>
+	<elem name=1041>Japanese</elem>
+	<elem name=1099>Kannada</elem>
+	<elem name=1111>Konkani</elem>
+	<elem name=1042>Korean</elem>
+	<elem name=2066>Korean (Johab)</elem>
+	<elem name=1088>Kyrgyz</elem>
+	<elem name=1062>Latvian</elem>
+	<elem name=1063>Lithuanian</elem>
+	<elem name=2087>Lithuanian (Classic)</elem>
+	<elem name=1071>Macedonian</elem>
+	<elem name=1086>Malay (Malaysian)</elem>
+	<elem name=2110>Malay (Bruinei Darussalam)</elem>
+	<elem name=1102>Marathi</elem>
+	<elem name=1104>Mongolian</elem>
+	<elem name=1044>Norwegian (Bokmal)</elem>
+	<elem name=2068>Norwegian (Nynorsk)</elem>
+	<elem name=1045>Polish</elem>
+	<elem name=1046>Portuguese (Brazil)</elem>
+	<elem name=2070>Portuguese (Portugal)</elem>
+	<elem name=1094>Punjabi</elem>
+	<elem name=1048>Romanian</elem>
+	<elem name=1049>Russian</elem>
+	<elem name=1103>Sanskrit</elem>
+	<elem name=3098>Serbian (Cyrillic)</elem>
+	<elem name=2074>Serbian (Latin)</elem>
+	<elem name=1051>Slovak</elem>
+	<elem name=1060>Slovenian</elem>
+	<elem name=1034>Spanish (Spain, Traditional Sort)</elem>
+	<elem name=2058>Spanish (Mexican)</elem>
+	<elem name=3082>Spanish (Spain, International Sort)</elem>
+	<elem name=4106>Spanish (Guatemala)</elem>
+	<elem name=5130>Spanish (Costa Rica)</elem>
+	<elem name=6154>Spanish (Panama)</elem>
+	<elem name=7178>Spanish (Dominican Republic)</elem>
+	<elem name=8202>Spanish (Venezuela)</elem>
+	<elem name=9226>Spanish (Colombia)</elem>
+	<elem name=10250>Spanish (Peru)</elem>
+	<elem name=11274>Spanish (Argentina)</elem>
+	<elem name=12298>Spanish (Ecuador)</elem>
+	<elem name=13322>Spanish (Chile)</elem>
+	<elem name=14346>Spanish (Uruguay)</elem>
+	<elem name=15370>Spanish (Paraguay)</elem>
+	<elem name=16394>Spanish (Bolivia)</elem>
+	<elem name=17418>Spanish (El Salvador)</elem>
+	<elem name=18442>Spanish (Honduras)</elem>
+	<elem name=19466>Spanish (Nicaragua)</elem>
+	<elem name=20490>Spanish (Puerto Rico)</elem>
+	<elem name=1072>Sutu</elem>
+	<elem name=1089>Swahili (Kenya)</elem>
+	<elem name=1053>Swedish</elem>
+	<elem name=2077>Swedish (Findland)</elem>
+	<elem name=1114>Syriac</elem>
+	<elem name=1097>Tamil</elem>
+	<elem name=1092>Tatar (Tatarstan)</elem>
+	<elem name=1098>Telugu</elem>
+	<elem name=1054>Thai</elem>
+	<elem name=1055>Turkish</elem>
+	<elem name=1058>Ukranian</elem>
+	<elem name=1046>Urdu (Pakistan)</elem>
+	<elem name=2080>Urdu (India)</elem>
+	<elem name=1091>Uzbek (Latin)</elem>
+	<elem name=2115>Uzbek (Cyrillic)</elem>
+	<elem name=1066>Vietnamese</elem>
+</combobox></bold></p>

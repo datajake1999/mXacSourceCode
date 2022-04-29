@@ -1,0 +1,139 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Sky-dome object"/>
+
+<xPageTitle>
+	Sky-dome object
+</xPageTitle>
+
+
+<p>
+	The "sky-dome" object draws the sky for you, including the sun, moon, clouds,
+	and any extra suns or planets you might wish to add. It does this by creating
+	a large dome 10km+ in size (in the computer of course) and painting the sky on
+	it, just like fake skies painted on building ceilings.
+</p>
+
+<xsectiontitle>Creating a skydome</xsectiontitle>
+<p>
+	Normally, a skydome is automatically created when you create a new file. But,
+	you may delete the sky. To create a skydome:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Sky" section under "Outdoors".
+	</li>
+	<li>
+		<bold>Click</bold> on the "Skydome" object to add it. Place the skydome anywhere;
+		since it's so large the exact placement won't matter.
+	</li>
+</ol>
+
+
+<xsectiontitle>Changing the date and time</xsectiontitle>
+
+<p>
+	You can change the date and time by:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sky.
+	</li>
+	<li>
+		In the "Skydome settings" dialog, change the date and time; the sun and moon
+		will be respositioned to their location on the given date and time.
+	</li>
+	<p>
+		The position of the sun and moon are also affected by the latitude you set.
+		To change the latitude see <a href=r:256>Building location and style</a>.
+	</p>
+</ol>
+
+<xsectiontitle>Clouds</xsectiontitle>
+
+<p>
+	To change the cloud cover:
+</p>
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sky.
+	</li>
+	<li>
+		In the "Skydome settings" dialog, press the button for the type of clouds
+		you wish to change: <bold>"Cumulus clouds", "Altocumulus clouds", or "Cirrus
+		clouds"</bold>
+	</li>
+	<li>
+		<bold>Change</bold> the settings for the cloud as you wish.
+	</li>
+	<p>
+		<bold>Tip:</bold> Every time you change a setting in the skydome the entire
+		sky is redrawn. This can take awhile, especially if you have set the sky to
+		draw at a higher resolution. To make adjustments faster, lower the
+		resolution (under the <bold>"Atmosphere"</bold>) page, fine-tune your
+		settings, and then restore the resolution.
+	</p>
+</ol>
+
+
+<xsectiontitle>Adding your own sun, moon, or planet(s)</xsectiontitle>
+
+<p>
+	The skydome lets you add a second sun to the sky, or a new moon, or even your own planets.
+	Alternatively, if the mathematically placed sun or moon is not where it should be artistically,
+	you can can create a copy of the sun or moon and place it where you wish - hiding
+	the original, of course.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the sky.
+	</li>
+	<li>
+		In the "Skydome settings" dialog, press the <bold>"Suns,
+		planets, and moons"</bold> button.
+	</li>
+	<li>
+		Inf the "Suns, planets, and moons" dialog, press one of
+		the <bold>"Add a new..."</bold> buttons to add either a new sun or moon.
+	</li>
+	<li>
+		The "Modify a sun, planet, or moon" page will appear letting you control
+		the celestial body's location, brightness, color, and
+		appearance. <bold>Change</bold> the settings as appropriate.
+	</li>
+	<p>
+		<bold>Tip:</bold> Every time you change a setting in the skydome the entire
+		sky is redrawn. This can take awhile, especially if you have set the sky to
+		draw at a higher resolution. To make adjustments faster, lower the
+		resolution (under the <bold>"Atmosphere"</bold>) page, fine-tune your
+		settings, and then restore the resolution.
+	</p>
+	<li>
+		If you don't want to see the mathematically calculated sun or moon anymore
+		you can hide it by pressing the <bold>"Sun and moon"</bold> button
+		in the "Skydome settings" page.
+	</li>
+</ol>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:256>Building location and style</a></li>
+	<li><a href=r:403>Lighting exposure</a></li>
+	<li><a href=r:402>The sun, moon, and weather</a></li>
+</xul>

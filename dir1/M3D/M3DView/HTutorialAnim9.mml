@@ -1,0 +1,114 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Making a movie"/>
+
+<xPageTitle>
+	Tutorial - Making a movie
+</xPageTitle>
+
+<p>
+	Once you have your animation all finished (or even before that) you can
+	have <xSN/> generate a movie file (.AVI) for you. To do this:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonAnim/> button.
+	</li>
+	<li>
+		Select <bold>"Animate to movie file"</bold>.
+	</li>
+	<li>
+		In the "Animation scene and camera" page that appears, <bold>select</bold> the scene you
+		wish to animate as well as the camera to animate it with.
+	</li>
+	<li>
+		Press <bold>"Next"</bold>.
+	</li>
+	<li>
+		In the "Animation timespan" page, <bold>select</bold> the timespan you wish to
+		use. The page defaults to animating the entire scene, but sometimes you only want
+		part of a scene animated, especially if you have multiple cameras tracking the
+		scene.
+	</li>
+	<li>
+		Press <bold>"Next"</bold>.
+	</li>
+	<p>
+		The "Animation quality" page will appear. Use this to control the resolution and
+		framerate of your animation.
+	</p>
+	<li>
+		Adjust the <bold>"Image quality"</bold> setting to the type of image you want;
+		wireframe and monochrome draw the quickest. The further down the list the longer
+		each frame will take, but the better the quality.
+	</li>
+	<li>
+		Change the <bold>pixels across</bold> and <bold>pixels up/down</bold> to control
+		the resolution. Because of slow modem speeds, most movies for the internet are
+		produced at around 320 x 240 resolution. Television resolution is around 640 x 480.
+		Movie resolution is around 2000 x 1125.
+	</li>
+	<li>
+		The <bold>Anti-aliasing</bold> will remove the "jaggies" you see at object edges.
+		More anti-aliasing means slower draing times though.
+	</li>
+	<li>
+		If you selected a framerate within the scene using the <xButtonSceneFPS/> button
+		then that framerate will be displayed under <bold>"Frames per second".</bold> You can
+		keep the same value or change it.
+	</li>
+	<li>
+		The <bold>"Motion blur"</bold> settings allow you add blurring that results from
+		objects moving very quickly. Adding motion blur slows down the time it takes
+		for <xSN/> to generate a movie.
+	</li>
+	<li>
+		At the bottom of the page is the <bold>"Movie compression format"</bold>. If you
+		don't understand what this means then just select the "Microsoft video" or
+		"Intel Indeo". I am not going to explain image compression here. Look on the Internet
+		for more information.
+	</li>
+	<li>
+		Press <bold>"Next"</bold>.
+	</li>
+	<li>
+		A dialog called "Save movie file" will appear. Type in the <bold>filename</bold>
+		for the movie file. Most users will want to save the file as ".avi" (which is the
+		default setting). If you select .bmp (bitmap) or .jpg (JPEG), which are still image
+		files, <xSN/> will save a series of files, one image per frame.
+	</li>
+	<li>
+		Press <bold>"Save"</bold>.
+	</li>
+	<p>
+		The "Animating" window will appear and begin drawing each frame. Depending upon the
+		number of frames and the quality settings, it could take anywhere between a few
+		minutes to a few weeks to animate your scene. When the animation is
+		finished <xSN/> will play a chime and close the "Animating" window.
+	</p>
+</ol>
+
+<p>
+	Tip: You may want to load your animations into "Windows Movie Maker" (part of
+	Windows) and splice them together into one large movie. You can also use
+	Windows Movie Maker to add an audio track.
+</p>
+
+<p>
+	That's the end of the animation tutorial.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+	<li><a href=r:929>Effects</a></li>
+	<li><a href=r:816>Playing audio objects</a></li>
+	<li><a href=r:568>Scenes</a></li>
+</xul>

@@ -1,0 +1,117 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="New texture from file"/>
+
+<p>
+	This page lets you load in a .bmp or .jpg image and use it as a texture.
+	You can either create the texture yourself (from a digital camera, scanner, or
+	your own illustrations) or download textures from various sites on the Internet.
+	(Just search on the internet for "3D textures" or "CAD textures".)
+</p>
+
+<p>
+	Please fill in the following information and press "Add texture".
+</p>
+
+
+
+
+<p align=right>
+	<button name=ok><bold>Add texture</bold></button>
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>File name</bold> - Type in the file name of the image or press "Browse"
+			to see a list of files. Leave this blank if you wish to use the default
+			color.
+		</td>
+		<td>
+			<edit maxchars=250 width=100% name=file/><br/>
+			<button name=browse><bold>Browse...</bold></button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Name</bold> - Name of the texture as it will appear in your list.
+		</td>
+		<td>
+			<edit maxchars=64 width=100% name=name/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - How wide the image is, in meters.
+		</td>
+		<td><edit maxchars=64 width=100% name=width/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=cached>
+			<bold>Store the image in every <xSN/> file that uses it</bold><br/>
+			If this <bold>is checked</bold> then the texture will be stored in every <xSN/> file that uses
+			it. Anyone that you give the file to will be able to see the texture. However, this
+			will make the <xSN/> files larger - sometimes by several hundred K per image texture.
+			<p/>
+			If this <bold>isn't checked</bold>, then your <xSN/> files will be smaller, but
+			the texture won't display on other computers.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency.
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency from the color image</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=transuse>
+			<bold>Use transparency</bold><br/>
+			If checked, then any color in the image that matches the following color will
+			be made transparent. Usually this color will be a white or black background.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetrans>
+				<bold>Change transparency color</bold><br/>
+				This is the color that is turned transparent.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=transcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color match</bold> - The further to the left, the more exact the color
+			match must be for it to be made transparent. Moving the slider to the right
+			will allow close matches to be made transparent.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=transdist/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button name=ok><bold>Add texture</bold></button>
+</p>

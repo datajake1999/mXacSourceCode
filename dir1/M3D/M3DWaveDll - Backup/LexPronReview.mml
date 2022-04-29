@@ -1,0 +1,122 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review pronunciations"/>
+
+<p align=right>
+	<big><bold><<<LEXFILE>>></bold></big>
+</p>
+
+<p>
+	Instructions at the end of the page.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Word list</xtrheader>
+	<<<$WORDLIST>>>
+</xtablecenter>
+
+<xChoiceButton accel=alt-M name=markreview>
+	<bold><underline>M</underline>ark as reviewed and show more words</bold><br/>
+	Press this when you have corrected all the mistakes in the current list. The
+	words will be marked as having been reviewed so you won't see them again,
+	and a new batch of words will be displayed.
+</xChoiceButton>
+
+<xChoiceButton name=clearreview>
+	<bold>Clear "reviewed" list</bold><br/>
+	The lexicon remembers what words you have reviewed so that when you review
+	again they won't be shown. Pressing this clears the list.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Available phonemes</xtrheader>
+	<<<$PHONELIST>>>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Voice file</xtrheader>
+	<tr><td>
+		To use text-to-speech you must specify a text-to-speech voice. <xSN/> doesn't
+		come with one, but you may be able to download a text-to-speech voice or
+		create your own using the "mXac NLP Editor".
+		<p/>
+		The current TTS file is:<br/>
+		<xeditoneline enabled=false name=ttsfile/>
+		<p/>
+		To change the file, click the following:
+		<p/>
+		<xChoiceButton name=opentts>
+			<bold>Load in a different text-to-speech voice</bold><br/>
+			Press this to open a TTS voice file.
+			You can create a voice using the "mXac
+			NLP Editor".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+<xSectionTitle>Instructions</xSectionTitle>
+
+<p>
+	The listed words have not yet been reviewed. Once you have reviewed that their
+	pronunciations are correct, press "Mark as reviewed and show more words" to see more words that need
+	to be reviewed. Repeat the process until all words have been reviewed.
+</p>
+
+<p>
+	You can hear a the word sounds like by pressing the teapot. The word pronunciation
+	can either be a list of phonemes seperated by spaces or a "sounds like" sentence.
+	For example, a sounds-like version of the word "hello" would be "hell oh". If
+	you change the pronunciation make sure to listen to the new version.
+</p>
+
+<p>
+	If you wish the pronunciation to be based on another word, such as "likeable" to
+	automatically use the pronunciation for "like" and the "_able" suffix, then
+	type "|like |_able". The "|" indicates that the pronunciation comes from a word.
+	If you use ":like" then the like's pronunciation will be used, but any stressed
+	phonemes will be unstressed.
+</p>
+
+<p>
+	If you blank out a pronunciation then the form of the word will be deleted. If it's
+	the only form left then the word will be deleted.
+</p>
+
+<p>
+	The most important things to watch out for in pronunciation is:
+</p>
+
+<ol>
+	<li>
+		<bold>Right pronunciation</bold> - Make sure it's pronounced the way you speak it.
+	</li>
+	<li>
+		<bold>Consistency</bold> - Words with the same root should (almost always) have the
+		same root pronunciation. For example: "walk", "walked", "walking", "walker", "walkie", etc.
+		should all begin with the same pronunciation "w aa1 k". Furthermore, every time
+		an "ed", "ing", etc. appears at the end of the word it should be the same
+		pronunciation. Consistency will greatly improve the accuracy of speech recognition
+		and text-to-speech.
+	</li>
+	<li>
+		<bold>Phoneme stress</bold> - Getting the correct stress level on the vowels is
+		important. As a general rule, if there's only one vowel it should always be
+		stressed. If there are two, one should have a primary stress and the other no
+		stress. If there are three or more, one should have pimary stress, one none,
+		and the other's stress will depend upon the word.
+	</li>
+	<p>
+		<bold>Avoid secondary stress phonemes</bold> in your lexicon and text-to-speech. When
+		secondary stress phonemes are supported by a lexicon then there are 3 different
+		stress levels, making phoneme selection more difficult and (in general) lowering
+		the quality of TTS.
+	</p>
+</ol>

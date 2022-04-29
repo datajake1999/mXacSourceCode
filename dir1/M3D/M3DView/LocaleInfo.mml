@@ -1,0 +1,133 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Building site information"/>
+
+<p>
+	Whenever you create a new <xSN/> file you should fill out the information in this page.
+	It sets up some default preferencs that make designing the house easier. Many of these
+	settings will not affect your existing design, but will affect defaults for new objects.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Site location</xtrheader>
+	<tr><td>
+		Enter the <bold>latitude</bold> in degrees for the house site.
+		Use a negative number to indicate a southern latitude. <xSN/> uses thise
+		to calculate the location of the sun. <italic>(This only needs to be
+		accurate to about 10 degrees unless the sun's exact position is
+		very important.)</italic>
+		<p/>
+		<xeditoneline name=latitude/>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Climate</xtrheader>
+	<tr><td>
+		Climate affects a house in a number of ways: Roofs are steeper in areas with more
+		snow, overhangs larger in more sun, rooms taller in tropical regions, and roof
+		overhangs larger in warmer climates.
+		<p/>
+		Please select the <bold>climate</bold> that the house is built in: <bold>(Warning:
+		Don't change the climate setting once you have started building. </bold>Changing
+		the climate will cause floor levels to be changed in
+		existing building blocks.)
+		<p/>
+		<listbox width=85% height=85% sort=false vscroll=listscroll tbmargin=16 name=climate>
+			<elem name=0>
+				<bold>Tropical</bold><br/>
+				Warm and humid.
+			</elem>
+			<elem name=1>
+				<bold>Sub-tropical</bold><br/>
+				Warm and humid during the summers, but cool (without snow) in the winter.
+			</elem>
+			<elem name=5>
+				<bold>Arid</bold><br/>
+				Hot and dry summers. Moderate winters with little rain.
+			</elem>
+			<elem name=6>
+				<bold>Mediterranean</bold><br/>
+				Warm and dry during the summers. Moderate winters with some rain.
+			</elem>
+			<elem name=2>
+				<bold>Temperate</bold><br/>
+				Warm and dry during the summers. Cold (with snow) during the winters.
+			</elem>
+			<elem name=3>
+				<bold>Alpine</bold><br/>
+				Cool summers. Colder winters with plenty of snow.
+			</elem>
+			<elem name=7>
+				<bold>Tundra</bold><br/>
+				Cool summers. Very cold winters without much snow.
+			</elem>
+		</listbox>
+		<scrollbar width=10% height=85% orient=vert name=listscroll/>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Roofing material</xtrheader>
+	<tr><td>
+		What kind of <bold>roofing material</bold> will be used?
+		<p/>
+		<p align=right><bold>
+			<combobox width=80% cbheight=150 name=roofmaterial>
+				<elem name=3>Asphalt shingles</elem>
+				<elem name=0>Corrugated iron</elem>
+				<elem name=1>Wood shingles</elem>
+				<elem name=4>Thatching</elem>
+				<elem name=2>Tiles</elem>
+			</combobox>
+		</bold></p>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>External walls</xtrheader>
+	<tr><td>
+		What kind of construction is used in the <bold>external walls</bold>?
+		<p/>
+		<p align=right><bold>
+			<combobox width=80% cbheight=150 name=externalwalls>
+				<elem name=4>Bricks (sold, not veneer)</elem>
+				<elem name=6>Cement block</elem>
+				<elem name=7>Hay bale</elem>
+				<elem name=1>Framing with brick veneer</elem>
+				<elem name=2>Framing with clapboards</elem>
+				<elem name=0>Framing with corrugated iron</elem>
+				<elem name=3>Framing with stucco</elem>
+				<elem name=8>Logs</elem>
+				<elem name=5>Stone</elem>
+			</combobox>
+		</bold></p>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Foundation</xtrheader>
+	<tr><td>
+		How is the <bold>foundation</bold> constructed?
+		<p/>
+		<p align=right><bold>
+			<combobox width=80% cbheight=150 name=foundation>
+				<elem name=4>Basement</elem>
+				<elem name=2>Pad</elem>
+				<elem name=3>Perimeter (foundation wall)</elem>
+				<elem name=1>Piers or support posts</elem>
+			</combobox>
+		</bold></p>
+		
+		<p>
+			<bold>Warning:</bold> Even though chaging the foundation here won't affect the
+			foundation of existing building blocks, if you change to/from a pad the floor elevations for
+			building blocks will change. Ground floor levels for pads must be very close to the ground
+			(about 10 cm), while ground floor levels for all other foundations are about 1m off the ground.
+		</p>
+	</td></tr>
+</xtablecenter>

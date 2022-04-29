@@ -1,0 +1,182 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify prosody"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>>, <<<SUBVOICE>>></bold></big>
+</p>
+
+<p>
+	Use this page to alter a voice's prosody, it's timing, pitch, and volume.
+</p>
+
+<xtablecenter width=100%>	
+	<xtrheader>Basics</xtrheader>
+	<tr>
+		<td>
+			<bold>Pitch</bold> - The average speaking pitch of the voice in Hz.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=avgpitch/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Speaking rate</bold> - The number of words-per-minute that the voice
+			typically speaks.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=wpm/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Short pauses between words</bold> - People naturally place short pauses
+			between some words to indicate parts of speech and other meaning.
+			You can adjust this setting to control how frequently those short
+			pauses are put it. Use 0.5 for a normal value. Numbers as high as 1.0 reduce
+			the number of short breaks, and as low as 0.0 increase the number of breaks.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=micropausethreshhold/></bold></td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Prosody from another TTS voice (.tts) or Prosody model (.mpm)</bold> -
+			You may wish to add prosody (word
+			emphasis) information from a custom prosody model that you created. This
+			will cause the voice to take on some of the inflection of another voice,
+			and can improve the quality of text-to-speech if you know basically what
+			phrases will be spoken, and create a prosody model from those phrases.
+			<p/>
+			<bold>Note:</bold> - The prosody model is "rebuilt" whenever you select
+			"Open". If the prosody file is changed, the changes won't be reflected
+			for this voice until you press "Open" and re-add the file.
+		</td>
+		<td>
+			<edit readonly=true maxchars=256 width=100% name=prosodytts0/><br/>
+			<p align=right><bold><button name=prosodyttsopen0>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts1/><br/>
+			<p align=right><bold><button name=prosodyttsopen1>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts2/><br/>
+			<p align=right><bold><button name=prosodyttsopen2>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts3/><br/>
+			<p align=right><bold><button name=prosodyttsopen3>Open...</button></bold></p>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>	
+	<xtrheader>Prosody for words</xtrheader>
+	<tr>
+		<td>
+			<bold>Emphasis by part-of-speech</bold> - Words are emphasized or de-emphasized
+			based on their part-of-speech and the words that surround them. You can
+			use these settings to accentuate or diminish this emphasis. 1.0 will use the
+			speaker's natural emphasis, while higher numbers will accentuate it, and
+			numbers between 0 and 1 will diminish it.
+		</td>
+		<td>
+			<p align=right>
+				Pitch: <bold><edit width=50% maxchars=32 name=posacc0/></bold><br/>
+				Volume: <bold><edit width=50% maxchars=32 name=posacc1/></bold><br/>
+				Duration: <bold><edit width=50% maxchars=32 name=posacc2/></bold>
+			</p>
+		</td>
+	</tr>
+	<comment><tr>
+		<td>
+			<bold>Emphasis by punctuation</bold> - Words are emphasized or de-emphasized
+			based on neighboring punctuation.. You can
+			use these settings to accentuate or diminish this emphasis. 1.0 will use the
+			speaker's natural emphasis, while higher numbers will accentuate it, and
+			numbers between 0 and 1 will diminish it.
+		</td>
+		<td>
+			<p align=right>
+				Pitch: <bold><edit width=50% maxchars=32 name=punctacc0/></bold><br/>
+				Volume: <bold><edit width=50% maxchars=32 name=punctacc1/></bold><br/>
+				Duration: <bold><edit width=50% maxchars=32 name=punctacc2/></bold>
+			</p>
+		</td>
+	</tr></comment>
+	<tr>
+		<td>
+			<bold>Smooth pitch</bold> - When the speaking pitch for words is first
+			generated it has very abrupt changes from word to word. This is smoothed
+			out to make it more natural. Use this setting to control how much smoothing
+			is done, the larger the number the more smoothing. (For technical minded people,
+			this is the size of the smoothing window in seconds.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=blurpitch/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Smooth volume</bold> - Like "Smooth pitch", but this affects the speaking
+			volume.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=blurvolume/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>	
+	<xtrheader>Prosody for phonemes</xtrheader>
+	<tr>
+		<td>
+			<bold>Phoneme pitch accentuate</bold> - In speech, some phonemes are emphasized
+			by increasing or decreasing their pitch beyond what is typical for the word.
+			This setting will accentuate (numbers larger than 1) or diminish (0..1) this
+			emphasis. Use 1.0 for the normal emphasis for the speaker.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=phonepitch/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Phoneme rise accentuate</bold> - Often, when phonemes are spoken, the
+			speaker subconsciously includes a rapid pitch rise or fall over the phoneme.
+			This setting will accentuate (numbers larger than 1) or diminish (0..1) this
+			rise/fall. Use 1.0 for the normal rise/fall for the speaker.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=phonerise/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Phoneme duration at the word's start</bold> - This lets you lengthen or
+			shorten the duration of phonemes appearing at the start of a word. Use
+			1.0 for the default value, higher numbers to lengthen the phoneme, and
+			numbers between 0 and 1 to shorten the length.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=durwordstart/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Phoneme duration at the word's end</bold> - Like "word start" but
+			for phonemes at the end of the word.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=durwordend/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>	
+	<xtrheader>Prosody per phoneme</xtrheader>
+	<tr><td>
+		Following is a list of all the phonemes. Each phoneme has a setting for duration,
+		enabling you to lengthen or shorten the phoneme when it is spoken. Use 1.0
+		for the speaker's phoneme length, larger numbers to elongate the phoneme,
+		and shorter numbers (0..1) to shorten it.
+	</td></tr>
+	<<<$PHONEDUR>>>
+</xtablecenter>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Test the voice</xtrheader>
+	<tr><td>
+		Type in some text below and press "Test" to hear what your modified voice
+		sounds like.
+		<p/>
+		<edit width=100% maxchars=250 name=testspeak/><br/>
+		<p align=right><button name=test><bold>Test</bold></button></p>
+	</td></tr>
+</xtablecenter>
+

@@ -1,0 +1,83 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Edit a word group"/>
+
+<p>
+	Word groups are used to identify groups of related words, such as "possessive nouns" or
+	"noun/verb contractions" like "who's" or "I'm". These groups can be used in the rules
+	section to limit rules to specific groups of words, other than parts-of-speech.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Information</xtrheader>
+	<tr>
+		<td>
+			<bold>Name</bold> - Type in a name for your group, like "possessive".
+		</td>
+		<td><bold><edit width=100% maxchars=64 name=name/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Description</bold> - Type in a short description for your group,
+			for your own references.
+		</td>
+		<td><bold><edit width=100% maxchars=256 multiline=true name=desc/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Part of speech</bold> - Some groups only apply to words from a
+			specific part of speech. For example: "Possessive" words like "Mike's"
+			are always adjectives. If the words in a group are specific to a part
+			of speech then select the part of speech to the right.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=pos>
+			<elem name=-1><italic>Any part of speech</italic></elem>
+			<elem name=1>Noun</elem>
+			<elem name=2>Pronoun</elem>
+			<elem name=3>Adjective</elem>
+			<elem name=4>Preposition</elem>
+			<elem name=5>Article</elem>
+			<elem name=6>Verb</elem>
+			<elem name=7>Adverb</elem>
+			<elem name=8>Auxiliary verb</elem>
+			<elem name=9>Conjunction</elem>
+			<elem name=10>Interjection</elem>
+			<elem name=11>Punctuation</elem>
+		</combobox></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Words in the group</xtrheader>
+	<tr><td>
+		Below is a list box showing all the words in the group. Use the buttons to add or remove
+		words.
+		<p/>
+		<p align=center>
+			<listbox width=80% height=20% sort=false vscroll=groupsscroll name=groups/>
+			<scrollbar orient=vert height=20% name=groupsscroll/>
+		</p>
+		<xChoiceButton name=groupadd>
+			<bold>Add a new word</bold><br/>
+			Type in the word name and comparison information, below. Then, press this button.
+		</xChoiceButton>
+		<p align=right><bold>
+			Name: <edit width=50% maxchars=64 name=wordname/><br/>
+			Comparison: <combobox width=50% cbheight=150 name=wordcompare>
+				<elem name=0>Exact match</elem>
+				<elem name=1>Match words starting with the name</elem>
+				<elem name=2>Match words ending with the name</elem>
+			</combobox>
+		</bold></p>
+		<xChoiceButton name=groupremove>
+			<bold>Remove the selected word</bold><br/>
+			Removes the selected word from the list.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=deletegroup>
+	<bold>Delete this group</bold><br/>
+	Press this to delete the entire group.
+</xChoiceButton>
+

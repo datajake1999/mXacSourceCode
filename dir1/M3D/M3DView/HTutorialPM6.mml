@@ -1,0 +1,118 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Vertices 3"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Vertices 3
+</xPageTitle>
+
+<p>
+	And now for the final page on vertices:
+</p>
+
+<xSectionTitle>Deleting and collapsing vertices</xSectionTitle>
+
+<ol>
+	<li>
+		To delete a vertex, select the <xButtonPMDelete/> and click on the vertex you
+		wish to delete. If you have more than one vertex selected they will all be deleted.
+	</li>
+	<p>
+		Notice that deleting a vertex often leaves a hole in the object. If you want to remove
+		a vertex without producing a hole then you should use the collapse feature.
+	</p>
+	<li>
+		<bold>Select two or more adjacent</bold> vertices; collapse requires several
+		vertices.
+	</li>
+	<li>
+		Select the <xButtonPMCollapse/> button.
+	</li>
+	<li>
+		<bold>Click on</bold> the polygon mesh; all the vertices will be collapsed into
+		one. The polygons will still remain sewn together though and no holes will appear.
+	</li>
+</ol>
+
+<xSectionTitle>Creating new sides</xSectionTitle>
+
+<p>
+	It's easy to create a new side (polygon):
+</p>
+
+<ol>
+	<li>
+		First, use <xButtonPMDelete/> to delete one or more verices so you have a hole
+		in your object. You can only create a new side where there's a hole.
+	</li>
+	<li>
+		Select the <xButtonPMNewSide/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on one of the vertices around the newly created hole.
+	</li>
+	<p>
+		Once you have clicked on the vertex a red (or black) line will follow your
+		move cursor around. The line will turn red when your cursor is over a vertex
+		and black when it's not.
+	</p>
+	<li>
+		<bold>Move</bold> your cursor over the next vertex in the hole. Try to go in a
+		clockwise direction.
+	</li>
+	<li>
+		When the cursor is over the next vertex, and the color of the line is
+		red, <bold>click</bold> on the vertex.
+	</li>
+	<p>
+		The line between the first and second vertices will stick showing you what
+		sides you have selected. A new line will follow your mouse around.
+	</p>
+	<li>
+		Continue <bold>clicking</bold> on vertices until you have selected all the ones
+		you wish to use in your polygon.
+	</li>
+	<li>
+		<bold>Click on</bold> the first vertex to finish off the side.
+	</li>
+	<p>
+		A new polygon will be created.
+	</p>
+</ol>
+
+<xSectionTitle>Splitting polygons</xSectionTitle>
+
+<p>
+	At some point (and probably often) you will need to split on polygon into several
+	polygons. To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonPMSideSplit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> a vertex (or edge) on the side you wish to split. Make sure
+		to keep the mouse button down.
+	</li>
+	<li>
+		<bold>Drag</bold> the mouse an opposide vertex (or edge).
+	</li>
+	<p>
+		A line will draw from
+		the original vertex (or edge) to your cursor as you move it. If you can split the
+		side there then the line will turn red.
+	</p>
+	<li>
+		<bold>Lift up</bold> the mouse button when you have positioned the cursor over
+		the vertex (or edge) that will be the end of the split.
+	</li>
+	<p>
+		The side will be split along the line you drew.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:899><bold>Next</bold></button>
+</p>
+

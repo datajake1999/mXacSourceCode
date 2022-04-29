@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Column objects"/>
+
+<xPageTitle>
+	Column objects
+</xPageTitle>
+
+<p>
+	The column object is an easy way of creating columns that support a floor, roof,
+	or other structure.
+</p>
+
+<p>
+	The column object consists of three parts:
+</p>
+
+<xul>
+	<li>
+		<bold>Main column</bold> - This is the the long vertical member that transfers the
+		weight from above down to the ground. Modern columns are wood or steel.
+	</li>
+	<li>
+		<bold>Column base</bold> - A wider element than the main column; it distributes
+		the weight over a larger piece of ground. Most modern column bases are made of
+		concrete.
+	</li>
+	<li>
+		<bold>Column cap</bold> - A wider element at the top of the column which provides
+		a larger area to rest the weight. This isn't common in modern buildings but commonly
+		appears in Greek columns.
+	</li>
+	<li>
+		<bold>Braces</bold> - The braces are diagonal members that radiate from near the
+		top of the column up to the weight supported above. They help strengthen the column
+		against sheer.
+	</li>
+</xul>
+
+<p>
+	You will find a collection of pre-defined extrusions under the "Columns" section
+	in "Basic Structure".
+</p>
+
+<p>
+	If you want to make your own column then:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined column (under "Columns" in the "Basic structure"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Using the <xButtonObjDialog/> tool, click on the extrusion.
+	</li>
+	<li>
+		In the "Column settings" dialog you'll find a number of ways you can customize
+		the column. It's not that hard to understand, and with a bit
+		of experimentation you'll understand it all.
+	</li>
+</ol>

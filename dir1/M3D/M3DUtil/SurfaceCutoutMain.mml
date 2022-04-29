@@ -1,0 +1,52 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Cutouts"/>
+
+<p>
+	This page lets you add or remove cutouts to the surface.
+	(Details below.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Cutouts</xtrheader>
+	<tr><td>
+		<p>
+			Click on an cutout (colored) to delete it, or press the one of the
+			"Add cutout" buttons below. If the arrows in the cutout run clockwise then
+			the area inside the line is removed; if the arrows are counterclockwise then
+			the outside area is removed.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xchoicebutton href=addinter>
+	<bold>Add a cutout based on intersections</bold><br/>
+	Add a new cutout. The edge of the overlay is based on other surfaces (such as walls)
+	intersecting with this surface.
+</xchoicebutton>
+
+
+<xbr/>
+
+<p>
+	Cutouts are generated when a surface is intersected with another surface, often
+	using the intelligent adjust feature. Walls will intersect with walls and roofs,
+	roofs with other roofs, and building blocks with other building blocks.
+</p>
+
+<p>
+	You can use this page to modify and adjust these cutouts. You are shown a list
+	of intersections of the object with other objects and are allowed to choose which
+	intersections make the cutout. You cannot maniupulate
+	individual points. If you need to control the edge of an object manually (not with
+	intersections but with control points) then use the edge functionality in
+	the previous page.
+</p>

@@ -1,0 +1,63 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Customizing balustrades"/>
+
+<xPageTitle>
+	Customizing balustrades
+</xPageTitle>
+
+<p>
+	While <xSN/> comes with a number of predefined balustrade styles, the balustrades
+	available may not be what you're looking for. <xSN/> allows you to customize balustrades
+	creating thousands of different styles. You can add or remove rails, posts, and panels
+	to your balustrade design.
+</p>
+
+<p>
+	To customize a balustrade:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and click on the balustrade.
+	</li>
+	<li>
+		Switch to the "Balustrade appearance" page.
+	</li>
+	<p>
+		If you're modifying the style in a balustrade object, press the <bold>"Appearance"</bold> button
+		in the "Balustrade settings" dialog.
+	</p>
+	<p>
+		If the balustrade is part of a staircase, press the <bold>"Balustrades"</bold> button
+		and in the "Staircase balustrades" page <bold>press the button</bold> for the
+		balustrade you want to modify.
+	</p>
+	<p>
+		From a building block, press the <bold>"Balustrade appearance"</bold> button.
+	</p>
+	<li>
+		In the "Balustrade appearance" dialog, <bold>select "Custom"</bold> in the
+		"Balustrade style" list box.
+	</li>
+	<p>
+		The "Modify custom balustrade" button will be enabled.
+	</p>
+	<li>
+		<bold>Press the "Modify custom balustrade" button.</bold>
+	</li>
+	<li>
+		<bold>Follow the directions</bold> in the "Custom balustrade appearance" page
+		that appears. Customizing a balustrade will take some practice, so the best
+		way to learn is to experiment with the settings and see what they do.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:344>Balustrades</a></li>
+	<li><a href=r:343>Customized balustrades</a></li>
+	<li><a href=r:346>Fencing</a></li>
+</xul>

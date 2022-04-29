@@ -1,0 +1,99 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Object list"/>
+
+<xPageTitle>
+	Object list
+</xPageTitle>
+
+<p>
+	The "Object list" shows you a list of all the objects in the model. It's useful for
+	selecting all objects of a specific category or showing and hiding objects.
+</p>
+
+<p>
+	To view the object list.
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonObjectList/> button.
+	</li>
+	<p>
+		The object list will appear, at first showing only the object categories, but
+		no actual objects.
+	</p>
+	<li>
+		To view the objects within a category, <bold>click on the arrow</bold> next to the category
+		name.
+	</li>
+</ol>
+
+<xsectiontitle>Other features</xsectiontitle>
+
+<p>
+	The object list lets you do more than just view the objects. To access these features
+	click on the category or object name and select the item from the menu.
+</p>
+
+<xSectionTitle>Objects</xsectiontitle>
+<xul>
+	<li>
+		<bold>Select or de-select</bold> - Selects (or de-selectes) the object.
+	</li>
+	<li>
+		<bold>Show/hide</bold> - Use this to hide objects that you don't wish to draw.
+		Hiding is particularly useful for animations where objects may need to remain
+		invisible until a specific time in the animation.
+	</li>
+	<li>
+		<bold>Move to an existing group</bold> - Move the object to a group that already exists.
+	</li>
+	<li>
+		<bold>Move out of this group</bold> - The object is moved out of this group
+		and up one level.
+	</li>
+	<li>
+		<bold>Move to a new group</bold> - Asks for the name of the new group and moves
+		the object into it.
+	</li>
+	<li>
+		<bold>Rename</bold> - Renames the object. Objects are named for your own convenience.
+	</li>
+	<li>
+		<bold>Reposition camera to view this</bold> - Moves and the camera so it's looking
+		at the object.
+	</li>
+</xul>
+
+<xSectionTitle>Groups</xsectiontitle>
+<xul>
+	<li>
+		<bold>Select or de-select all objects</bold> - This is an easy way to select all objects
+		in a category, such as all lights or all trees.
+	</li>
+	<li>
+		<bold>Show or hide all objects</bold> - Use this to hide objects that you either don't
+		want to work with now or which you don't want drawn.
+	</li>
+	<li>
+		<bold>Move to an existing group</bold> - Moves this group and all its objects into
+		a new group.
+	</li>
+	<li>
+		<bold>Move all objects out of this group</bold> - Moves all objects out of the selected
+		group (and into the group above), while removing the group.
+	</li>
+	<li>
+		<bold>Move to a new group</bold> - Creates a new group and makes the selected
+		group a sub-group of the new one.
+	</li>
+	<li>
+		<bold>Rename group</bold> - Renames the group.
+	</li>
+	<li>
+		<bold>Reposition camera to view this</bold> - Moves and the camera so it's looking
+		at the objects in the group.
+	</li>
+</xul>
+

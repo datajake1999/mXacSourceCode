@@ -1,0 +1,77 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Under-roof verandas"/>
+
+<xPageTitle>
+	Under-roof verandas
+</xPageTitle>
+
+<p>
+	There are two ways to add porch or veranda to your house. One is
+	to add an extra building block specially designed as a porch
+	veranda. (Covered elsewhere.) Using that technique you'll get another roof
+	line added to your house. Sometimes you want to keep the same roof for both
+	the inside of the house and the porch or veranda. To do this:
+</p>
+
+<ol>
+	<li>
+		Select the building block using <xButtonSelIndividual/> and clicking on it.
+	</li>
+	<li>
+		Switch to the <xButtonObjControlDialog/> tool and click on the building block.
+	</li>
+	<li>
+		In the "Which control points are displayed" page check
+		the <bold>"Walls"</bold> button.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEW/> tool and move the control points for the wall
+		inward on the side(s) where you want the veranda. You need to do this to make
+		space for the veranda. If you want a 2m veranda you need to move the walls
+		in 2m, etc.
+	</li>
+	<li>
+		Use the <xButtonObjDialog/> tool and click on the building block again.
+	</li>
+	<li>
+		In the "Building block settings" page, press the <bold>"Veranda"</bold> button.
+	</li>
+	<li>
+		The displayed page will switch to "Verandas". In the "Veranda shape" section
+		is a list box of different veranda shapes. Click the one you want,
+		probably <bold>"Rectangle"</bold>. You'll see the veranda appear in the
+		3D display.
+	</li>
+	<li>
+		In the same "Verandas" page you can also set the angle of the veranda
+		ballistrade (so it's angled out or in) and tell <xSN/> whether you want a
+		verndah generated for every floor or just the bottom one.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlDialog/> tool and click on the object.
+	</li>
+	<li>
+		In the "Which control points are displayed" page, check
+		the <bold>"Veranda"</bold> checkbox.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Using the <xButtonObjControlNSEW/> you can adjust the extend of your veranda.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+		<li><a href=r:334>Balustrades in building blocks</a></li>
+</xul>

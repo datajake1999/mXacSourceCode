@@ -1,0 +1,98 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Relief"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td><align align=center>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/><br/>
+		<button style=x checkbox=true name=alleffects>
+			<bold>Show all effects combined</bold>
+			<xHoverHelp>
+				Checking this will show you all the effects combined together, so you
+				can see how changing this effect will modify the final image.
+			</xHoverHelp>
+		</button>
+	</align></td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Relief</xtrheader>
+	<tr>
+		<td>
+			<bold>Image width</bold> - The image width (in meters or feet). The wider
+			the image, the more times the texture will be repeated and the less
+			evident the shading.
+		</td>
+		<td><bold><edit width=100% name=width/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=changetext>
+			<bold>Change texture</bold><br/>
+			Press this to change the texture to use for the background. <bold>Only the
+			bump-map</bold> portion of the texture will be used.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Light source</xtrheader>
+	<tr>
+		<td>
+			<bold>Direction</bold> - This is the angle from which the light is coming.
+			Use 0 for from above, 90 for right, 180 for below, and 270 for left.
+		</td>
+		<td><bold><edit width=100% name=direction/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Incidence</bold> - Controls at what angle the light strikes the surface.
+			The lower the incidence, the bigger the shadows.
+		</td>
+		<td><bold><edit width=100% name=incidence/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shininess</bold> - How bright the highlights are.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=spec/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ambient</bold> - The amount of ambient light. More ambient light
+			(to the right) will reduce the effects of the shadows.
+		</td>
+		<td><scrollbar orient=horz min=0 max=100 name=ambient/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=transparent>
+			<bold>Material is transparent</bold><br/>
+			If checked, then the material is transparent glass, and the image is seen
+			through the material.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Distance</bold> - Distance of the image behind the material. The
+			further back, the more any ripples in the surface will affect what
+			you see.
+		</td>
+		<td><bold><edit width=100% name=transdist/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=ignorebackground>
+			<bold>Don't affect the background</bold><br/>
+			If checked the relief effects won't affect the background (regions of the image
+			not covered by an object.)
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

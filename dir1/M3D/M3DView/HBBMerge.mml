@@ -1,0 +1,68 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Removing joints from building block intersections"/>
+
+<xPageTitle>
+	Removing joints from building block intersections
+</xPageTitle>
+
+<p>
+	Whenever you create two overlapping building blocks and "clean them up" using
+	the <xButtonObjIntelAdjust/> tool you will end up with "joints" between the
+	building blocks. These joints are most noticable where parallel surfaces
+	intersect one another, such as the floor and ceiling. (Although sometimes the
+	walls will also be parallel.) Textures (such as wood grains and tiles) don't
+	meet up properly and you can't have an embedded object cross over the joint.
+</p>
+
+<p>
+	The joints occur because even though the floor/ceiling is conceptually one
+	large surface, <xSN/> keeps the surface as separate pieces, one in one
+	building block, and the other part in the other building block.
+</p>
+
+<p>
+	You can get rid of the joints using the following procedure: (<bold>Warning:</bold> Getting
+	rid of the joints involves "deconstructing" the building blocks. Once you
+	have done this moving the walls in the structure will become much more tedious.
+	You should only deconstruct a building block after you're completely finished
+	adjusting it.)
+</p>
+
+
+<ol>
+	<li>
+		Select the <xButtonObjDeconstruct/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the building blocks that have joints between them.
+	</li>
+	<li>
+		Using the <xButtonSelIndividual/> tool select the floors, wall, or ceiling
+		that exhibit a joint, and which you wish to merge in with another floor,
+		wall, or ceiling. (You can select multiple objects to merge several at once go.
+		You will need to hold the <bold>control</bold> key down while selecting them.)
+	</li>
+	<li>
+		Once you have selected all the objects with joints in-between them,
+		select the <xButtonObjMerge/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the object you wish to merge the select objects
+		with. The separate floor surfaces, ceiling surfaces,
+		and wall surfaces will be merged together, eliminating the joints.
+	</li>
+	<p>
+		<bold>Caution:</bold> Merging two surfaces will sometimes rotate the textures
+		in overlays and may get the bevelling setting wrong. You should look over the merged
+		surface to look for changes and fix any that need it.
+	</p>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:279>Deconstructing building blocks</a></li>
+	<li><a href=r:468>Merging walls, floors, and roofs</a></li>
+</xul>

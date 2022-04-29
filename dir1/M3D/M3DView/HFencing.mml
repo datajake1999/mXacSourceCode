@@ -1,0 +1,55 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Fencing"/>
+
+<xPageTitle>
+	Fencing
+</xPageTitle>
+
+<xSectionTitle>Creating a fence</xSectiontitle>
+
+<p>
+	To create a fence:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button and select the <bold>Outdoors</bold> menu
+		item.
+	</li>
+	<li>
+		Underneath that click on the <bold>Fencing</bold> menu
+		item.
+	</li>
+	<li>
+		Look through the fence selections and chose one.
+	</li>
+	<p>
+		The dialog will close and the cursor will change to indicate that you're
+		inserting an object by dragging a line.
+	</p>
+	<li>
+		<bold>Click</bold> on the area of the ground where the fence starts
+		and while still holding the mouse down, <bold>drag</bold> the mouse to
+		where the fence ends.
+	</li>
+	<p>
+		A new fence object will appear covering the area you clicked on.
+	</p>
+</ol>
+
+<xSectionTitle>Fencing and balustrades</xsectiontitle>
+
+<p>
+	Believe it or not, fences are the same as balustrades - at least to <xSN/>. To
+	learn other features of fences, you should read the balustrade documentation
+	listed in "See also..."
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:344>Balustrades</a></li>
+	<li><a href=r:343>Customized balustrades</a></li>
+</xul>

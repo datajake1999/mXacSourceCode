@@ -1,0 +1,49 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tips for landscape designers"/>
+
+<xPageTitle>
+	Tips for landscape designers
+</xPageTitle>
+
+<p>
+	As a landscape designer (I assume) you'd use <xSN/> to experiment with potential
+	layouts, to use for presentation, and to generate plans.
+</p>
+
+<xDefinition>
+	<bold>Feedback question:</bold> At least one competitor has the ability to draw
+	the plants at different ages so users can see how the garden will grow over the
+	years. Is this useful? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> My current plans for drawing trees is <bold>not</bold> to
+	draw individual leaves but draw a cluster of leaves togeher as one "lump" - the
+	way painters will paint trees, with one brush stroke representing hundreds of
+	leaves. I'm doing this because it drawing one lump instead of 1000 leaves takes
+	1/1000th the time to draw. If I were to draw every leaf, drawing a scene might
+	take days. Is this an acceptable solution or is detailed leaf drawing necessary
+	for presentation? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> What kind of plan generation functionality do you
+	need? Is it acceptable to print out a flat (isometric) view from above at 1:100
+	scale? Or do the plans need to be more abstract? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Around the world there are hundreds of thousands
+	of plant varieties that are used in people's gardens. I'm not going to program
+	them all in. I'm assuming some sort of plant editor... what is the best
+	way to handle this? Email me at <xMyEmail/>.
+</xDefinition>
+
+<xDefinition>
+	<bold>Feedback question:</bold> <xSN/> (in future version) could potentially
+	calculate how much sun and wind exposure plants would get. It might even
+	be able to calculate how water-logged the soil would get (assuming you enter
+	all the topography accurately and some sort of soil composition information).
+	Would this be useful? Or is it just easier to use your intuition? Email me at <xMyEmail/>.
+</xDefinition>

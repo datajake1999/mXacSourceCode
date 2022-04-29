@@ -1,0 +1,161 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Planks"/>
+
+<p>
+	Use this page to change the appearance of a board.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Bevel height</bold> - Height of the bevel at the edge of the board.
+		</td>
+		<td><edit maxchars=64 width=100% name=bevelheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bevel width</bold> - Width of the bevel around the edge of the board.
+		</td>
+		<td><edit maxchars=64 width=100% name=bevelwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shininess</bold> - Select a material whose shininess is closest to
+			the board's.
+		</td>
+		<td><xcombomaterial2 width=100% name=material/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Variation across the board</xtrheader>
+	<tr><td>
+		Every board has variation in it. For examples, some boards are lighter at one end
+		and darker at the other.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Bend</bold> - Height variation across the length of the board.
+			Use this to simulate old wood that has warped.
+		</td>
+		<td><edit maxchars=64 width=100% name=boardbend/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brightness (minimum)</bold> - Min/max brightness(lightness) of the wood
+			at either end of the board.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=200 pos=100 name=brightmin/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brightness (maximum)</bold> - Min/max brightness(lightness) of the wood
+			at either end of the board.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=200 pos=100 name=brightmax/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton href=noise>
+			<bold>Discoloring</bold><br/>
+			Apply discoloring to the board.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tree rings</xtrheader>
+	<tr><td>
+		Tree rings, laid down one a year, are what give wood it's appearance. This table
+		lets you adjust the coloration of the rings. The coloration of the ring transitions
+		from lightest (spring growth) to darkest (fall/winter growth). Adjusting these
+		colors will emphasize or de-emphasize the rings.
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton0>
+				<bold>Ring color, 1 (lightest)</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton1>
+				<bold>Ring color, 2</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton2>
+				<bold>Ring color, 3</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton3>
+				<bold>Ring color, 4</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton4>
+				<bold>Ring color, 5 (darkest)</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor4/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=transbutton>
+				<bold>Transition color (darkest)</bold><br/>
+				Color laid down over the winter.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=transcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Ring bump</bold> - Height of a tree ring above the normal level. Use
+			this to simulate old wood that has swelled.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringbump/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton href=tree>
+			<bold>Tree</bold><br/>
+			Specify information about the tree, such as the tree ring density.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

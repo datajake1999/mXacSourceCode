@@ -1,0 +1,24 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Basement/excavation cutouts"/>
+
+<p>
+	When you add a building block with a basement it will exacavate part of the
+	ground away. This page allows you to remove that excavation.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Excavations</xtrheader>
+	<tr>
+		<td>
+			<listbox width=85% height=50% vscroll=exscroll name=ex>
+			</listbox>
+			<scrollbar orient=vert height=50% name=exscroll/><br/>
+			
+			<xchoicebutton name=remove>
+				<bold>Delete the selected excavation</bold><br/>
+				Removes the excavation you have selected above.
+			</xchoicebutton>
+		</td>
+	</tr>
+</xtablecenter>

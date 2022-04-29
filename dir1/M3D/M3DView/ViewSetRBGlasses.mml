@@ -1,0 +1,42 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Red/blue colored glasses"/>
+
+<p>
+	If you can find an red/blue colored glasses (the type they use for 3D horror films)
+	you can have <xSN/> draw images for those glasses. The added 3D perception might
+	make manipulating objects in three dimensions easier.
+</p>
+
+<xChoicebutton name=threedon style=x checkbox=true>
+	<bold>Use red/blue 3D glasses</bold><br/>
+	Check this to enable the 3D glasses feature.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Glasses options</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Distance between eyes</bold> - Measure the distance between your eyes
+			and enter the number here. If you want to accentuate the 3D experience then
+			increase this number.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=64 width=100% name=distance/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Dominant eye</bold> - Select your dominant eye. Because the mouse pointer
+			is only in 2D, you need to click on objects as visible by the dominant eye
+			to manipulate them.
+		</td>
+		<td width=33% valign=center>
+			<bold><combobox width=100% cbheight=75 name=eye>
+				<elem name=0>Left</elem>
+				<elem name=1>Right</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+</xtablecenter>
+

@@ -1,0 +1,61 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Materials"/>
+
+<xPageTitle>
+	Materials
+</xPageTitle>
+
+<p>
+	A number of dialogs in <xSN/>, such as the paint selection dialog and texture modify
+	dialogs, provide a drop-down listbox for <bold>"Materials"</bold> and a
+	button for <bold>"Modify custom material"</bold>. This requires some explanation.
+</p>
+
+<p>
+	The "Materials" listbox allows you to control more than just the coloration of
+	a surface. It allows you to adjust how <bold>shiny</bold> (technical term
+	is "specular") a surface is. You can also set the surface's <bold>transparency</bold> (such
+	as with glass), and if it is <bold>translucent</bold> or <bold>self illuminating</bold> (such
+	as neon signs.)
+</p>
+
+<p>
+	In all the display quality <bold>except</bold> "Shadows" the surface of an
+	image is just a straght color or a texture. The "Materials" setting has little
+	or no effect.
+</p>
+
+<p>
+	When you draw using the "Shadows" quality, the materials setting will greatly
+	affect your perception of the surface. For example: Ceramic tiles are normally
+	very shiny due to the glaze. If you set the material to "Matte" (which means
+	no shininess whatsoever) then they won't quite look right - unless you have
+	ceramic tiles without any glaze on them.
+</p>
+
+<p>
+	To use the materials setting:
+</p>
+
+<ol>
+	<li>
+		Look through the listbox's chouces and <bold>select</bold> the choice that
+		is the closest match (visually) to your surface.
+	</li>
+	<p>
+		As soon as you select a new material the main 3D image should be redrawn (unless
+		you're modifyin a texture) so you can see the effects. NOTE: You'll only
+		see them if you are using the "Shadows" mode.
+	</p>
+	<li>
+		If none of the predefined materials meet you needs
+		then <bold>select "Custom"</bold> from the materials list and
+		press the <bold>"Modify custom material"</bold> button. A dialog box will
+		appear with sliders to adjust the material. If you let the mouse hover over
+		the control you will be presented with a short description of what it does.
+	</li>
+</ol>
+
+<p>
+</p>

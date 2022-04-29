@@ -1,0 +1,66 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Animating movement"/>
+
+<xPageTitle>
+	Tutorial - Animating movement
+</xPageTitle>
+
+<p>
+	Making the table move across the room is easy:
+</p>
+
+<ol>
+	<li>
+		Click on the <bold>playback bar</bold> just above the "10s" mark. (This
+		tells <xSN/> that you wish to modify the scene as it will appear 10 seconds
+		into the animation.)
+	</li>
+	<p>
+		You will see the pointer move to the 10-second mark as well as a dashesh red
+		line below it.
+	</p>
+	<li>
+		<bold>Switch</bold> to the main 3D view.
+	</li>
+	<li>
+		Using <xButtonMoveNSEW/>, <bold>move</bold> the table.
+	</li>
+	<p>
+		Back in the animation timeline you will see two small boxes appear, one with a
+		graph axis, and the other with a circular arrow. The graph axis indicates that
+		the object has a new position at 10 seconds, while the circular arrow shows
+		it has a new rotation. These are called "animation objects".
+	</p>
+	<li>
+		To verify the animation has worked, <bold>drag</bold> the playback time pointer (down arrow)
+		slowly back to 0 seconds.
+	</li>
+	<p>
+		As you drag the pointer the table should move back to where it started.
+	</p>
+	<li>
+		Add some more animation: <bold>Drag</bold> the playback time to 20 seconds.
+	</li>
+	<li>
+		Using <xButtonMoveNSEW/> and <xButtonMoveRotZ/> move and rotate the table some more.
+	</li>
+	<li>
+		<bold>Drag</bold> the playback time pointer slowly around and watch the table
+		move and rotate. Notice how it moves smoothly between the times where you
+		moved it (also called "keyframes"). <xSN/> automatically creates smooth curves
+		for all times/frames between the keyframes.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:558><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:569>Framerate</a></li>
+	<li><a href=r:570>Starting attributes</a></li>
+</xul>

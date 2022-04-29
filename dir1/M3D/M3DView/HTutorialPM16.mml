@@ -1,0 +1,179 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Texture editing 2"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Texture editing 2
+</xPageTitle>
+
+<xSectionTitle>The texture grid</xSectionTitle>
+
+<p>
+	The tricky part about textures and polygon meshes is the "texture mapping"... or
+	how the 2-dimension texture is applied to your 3-dimensional object.
+</p>
+
+<p>
+	The <bold>blue grid</bold> that's drawn on top of your image is a depiction of
+	the 2-dimensional texture. As you <bold>move your cursor over a vertex</bold> the
+	blue texture grid will redraw so that the representation of the vertex in the 2-dimemsional
+	texture grid will be directly over the vertex as drawn in the 3-dimensional scene.
+</p>
+
+<p>
+	Example: Assume you have a sphere with a texture map of the world painted on it.
+	When the cursor is moved over a vertex corresponding to Sydney, Australia on the
+	sphere, the
+	blue texture grid would be redrawn so the vertex in corresponding to Sydney, Australia
+	in the 2-dimensional map will be directly over the vertex on the sphere.
+</p>
+
+<p>
+	If this doesn't make sense, then try the following:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPMEditVert/> button to switch to vertex selection mode.
+	</li>
+	<li>
+		Select the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		<bold>Click on a vertex</bold>.
+	</li>
+	<p>
+		Two red squares will appear, one over the selected vertex on your 3D image, and
+		the other on your selected vertex on the 2D texture. This may not be clear
+		at first because the two rectangles will be over one another.
+		If you move your cursor
+		over a neighboring vertex you'll see them more clearly since the 3D vertex selection
+		will stay in the same place but because the 2D texture map is reoriented so its
+		aligned with the vertex your mouse cursor is over, you'll see the the red 2D vertex
+		moved.
+	</p>
+	<li>
+		If you don't want to see the blue texture map then just
+		press <xButtonPMTextToggle/>. Press it again to turn the grid back on.
+	</li>
+</ol>
+
+<p>
+	By the way, a more technical term for the texture map is a "UV map". "U" stands
+	for horizontal, and "V" for vertical.
+</p>
+
+<xSectionTitle>Planar, cylindrical, and spherical mapping</xSectionTitle>
+
+<p>
+	Assuming that you started with the sphere polygon mesh, the texture map you're
+	using is known as "spherical texture mapping". That means that the 2-dimensional
+	texture is squashed and stretched the same way you'd squash and stretch a map
+	of the world onto a globe. (If your sphere has been reshaped in the course of the
+	tutorial then this isn't quite correct anymore.)
+</p>
+
+<p>
+	Two other forms of texture mapping exist:
+</p>
+
+<xul>
+	<li>
+		<bold>Planar</bold> - "Planar" is a technical term for flat. It's effectively the
+		same as if you had a slide projector and projected the 2-dimensional texture on
+		your curved surface. If you looked from the slide project's point-of-view the texture
+		would look completely flat. However, as soon as you move away you can see the
+		distortions.
+	</li>
+	<li>
+		<bold>Cylindrical</bold> - This is a combination of spherical and flat. It's as if
+		you took the texture and rolled it up into a tube.
+	</li>
+</xul>
+
+<p>
+	You can easily rebuild the texture mapping using one of these three methods:
+</p>
+
+<ol>
+	<li>
+		Before doing anything, I suggest you use a test pattern as a texture so you can
+		more easily see the mapping. Select the <xButtonObjPaint/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the currently selected texture.
+	</li>
+	<li>
+		In the "Change an object's color or texture" dialog that appears,
+		select <bold>"Test pattern 1"</bold>. It's found under "Test patterns" in
+		the "Images" section.
+	</li>
+	<p>
+		The test pattern is an 8 by 8 grid of colored patches. Each patch as a letter
+		and number that help you identify what patch its from. Once the texture is applied
+		to your object you can more easily see how a texture is stretched over the object.
+	</p>
+	<li>
+		Press the <xButtonPMTextSphere/>, <xButtonPMTextCylinder/>, or <xButtonPMTextPlane/> button.
+	</li>
+	<p>
+		The texture mapping will be changed.
+	</p>
+	<li>
+		<bold>Look at</bold> the polygon mesh from different angles to fully appreciate the
+		differences between spherical, cylindrical, and planar texture mapping.
+	</li>
+	<li>
+		The camera orientation used when you press the "Rebuild texture map..." button affects
+		how it's rebuild. Try <bold>rebuilding</bold> the texture map from different camera angles.
+	</li>
+</ol>
+
+<p>
+	One more item affects rebuilding texture maps:
+</p>
+<xul>
+	<li>
+		There are some textures (like bricks) that
+		you want to apply in a patterned and evenly measured manner. After all, bricks should
+		be about 20cm x 10cm, repeating evenly over the entire object.
+	</li>
+	<li>
+		And then there are other textures, like maps of the earth, that you want want to
+		stretch over the entire object. It doesn't make sense to tile/repeat the earth's
+		map.
+	</li>
+</xul>
+
+<p>
+	To tell <xSN/> how to treat a texture:
+</p>
+
+<ol>
+	<li>
+		<bold>Double-click</bold> on the name in the texture list.
+	</li>
+	<p>
+		The "Modify the texture" dialog will appear.
+	</p>
+	<li>
+		If you want your texture to tile like bricks then check <bold>"Texture
+		is applied using its original scale"</bold>. If the texture should be stretched
+		to fit the object then uncheck it.
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+	<li>
+		Press the <xButtonPMTextSphere/>, <xButtonPMTextCylinder/>, or <xButtonPMTextPlane/> button.
+	</li>
+	<p>
+		The texture will be reapplied with the new settings. If you had unchecked the "Texture
+		is applied..." item, then your texture will be stretched to fit your shape.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:909><bold>Next</bold></button>
+</p>
+

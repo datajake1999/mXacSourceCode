@@ -1,0 +1,21 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="About mXac NLP Editor"/>
+
+<p>
+	You are running <bold>mXac NLP Editor</bold> version <bold><<<DFVERSION>>></bold>.
+	If you wish to download the latest version of <xLN/>, please
+	see <a href="http://www.mxac.com.au">www.mxac.com.au</a>.
+</p>
+
+<p>
+	<xLN/> is copyright (c) 2002-2009 by Mike Rozak. All rights reserved.
+	JPEG decompression is supplied by the Independent JPEG Group.
+	The American english lexicon is supplied by CMU.
+</p>
+
+<p>
+	<xSN/>'s user interface was written using the Escarpment SDK for C++. If you wish
+	to learn more about Escarpment then
+	see <a href="http://www.mxac.com.au">www.mxac.com.au</a>.
+</p>

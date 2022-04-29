@@ -1,0 +1,101 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Painting only one object or map"/>
+
+<xPageTitle>
+	Tutorial - Painting only one object or map
+</xPageTitle>
+
+<p>
+	You may have noticed that the <xButtonPVAll/> button in the upper-left corner
+	of the painting view is highlighted, and that other similar buttons are
+	to the right of it. These buttons control what maps you see.
+</p>
+
+<p>
+	The <xButtonPVAll/> mode shows you all of the texture maps combined, using the
+	light source from <xButtonGroundSun/>. This is (more or less) how you'll see
+	the texture when it's drawn under "Shadows" mode. (Transparency is ignored in
+	the <xButtonPVAll/> mode though.)
+</p>
+
+<p>
+	The painting view contains several other modes that you can try out:
+</p>
+
+<xul>
+	<li>
+		<xButtonPVMono/> - This is like <xButtonPVAll/> except that the object's color and
+		glow are ignored, and the object is drawn monochromatic. Use this to more easily
+		see the bump maps and specularity maps. When you paint in the mode, only bump and
+		specularity information will be painted, <bold>not</bold> color and glow. So, if
+		you select your brick texture from the palette and paint, the bumps will be transferred,
+		but the color won't be.
+	</li>
+	<li>
+		<xButtonPVColor/> - This mode only draws the texture's color, without any glow, bumps,
+		or specularity. It doesn't use any shading effects so you can see the exact color.
+		When you paint in this mode only colors will be transferred.
+	</li>
+	<li>
+		<xButtonPVBump/> - When selected, this mode shows you only the texture's bump
+		map as a grey-scale image; lighter colors are higher. No shading is used.
+		Painting will only affect the bump map.
+	</li>
+	<li>
+		<xButtonPVGlow/> - This is like <xButtonPVColor/> except that only "glow-map" colors
+		are shown. A glow map lets the object illuminate light, such as a television screen.
+	</li>
+	<li>
+		<xButtonPVSpec/> - Sometimes objects will be shinier in some areas than others. For
+		example: Foreheads (being more oily) are shinier than the rest of the face. You
+		can use this mode to see how shiny (specular) a region is. Shinier areas are displayed
+		with lighter colors, while matte areas are darker. Painting will only affect
+		specularity.
+	</li>
+	<li>
+		<xButtonPVTrans/> - This lets you paint exclusively to the transparency map.
+		More transparent areas will have a ligher color, while opaque regions will be black.
+		Painting will only affect transparency.
+	</li>
+</xul>
+
+<p>
+	Whenever you are in a mode that limits what bump maps you can see, your painting
+	will also be limited to those same bitmaps. You can use this, for example, to
+	paint only the bumps from the brick texture and not the brick color, or vice versa.
+</p>
+
+<p>
+	<xSN/> provides one other tool to limit what will get painted. Often times a scene
+	will contain more than one paintable texture. When you display the scene in the
+	painting view you will be able to paint on all the visible paintable textures.
+	You can even run a brush stroke from one object and onto another.
+</p>
+
+<p>
+	While this is often useful (especially if you are painting a character whose body
+	is covered by several different textures), you may not want it. To paint to
+	only one texture:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonPVLimit/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the texture you wish to paint.
+	</li>
+	<p>
+		All the other textures will be greyed out.
+	</p>
+	<li>
+		To paint all textures again, select the <xButtonPVLimit/> tool and <bold>click on</bold> an
+		object that cannot be painted.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:808><bold>Next</bold></button>
+</p>
+

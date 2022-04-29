@@ -1,0 +1,76 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Sides"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Sides
+</xPageTitle>
+
+<p>
+	The polygon mesh editor also lets you modify sides. To switch to the
+	side editing mode:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPMEditSide/> button.
+	</li>
+	<p>
+		The buttons at the bottom of the screen will change to show functionality
+		specific to editing sides.
+	</p>
+</ol>
+
+<p>
+	Most of the buttons are the same as those
+	in <xButtonPMEditVert/> and <xButtonPMEditEdge/>. The only
+	difference is that they modify sides instead of vertices or edges.
+</p>
+
+<p>
+	A few new tools are added though:
+</p>
+
+<xul>
+	<li>
+		<xButtonPMSideExtrude/> - This will "extrude" a side (or a group of selected sides)
+		from the object. To use it, just click on the side and drag to the right to extrude
+		outwards, or to the left to extrude inwards.
+		It's fairly common to do a <xButtonPMBevel/> after an extrusion.
+		The best way to understand what this does is
+		to just experiment with it.
+	</li>
+	<li>
+		<xButtonPMSideInset/> - This will "inset" a side (or a group of selected sides)
+		from the object. To use it, just click on the side and drag to the right.
+		It's fairly common to combine insets with <xButtonPMSideExtrude/>.
+		The best way to understand what this does is to just experiment with it.
+	</li>
+	<li>
+		<xButtonPMSideDisconnect/> - This disconnected (un-sews) the selected sides from
+		the rest of the polygon mesh. Normally, when you move a side all the adjacent
+		sides will also move because they're "sewed" together.
+		Use this tool if you wish to move these sides indepently
+		from the rest of the sides. Just click on the side(s). When you next move the side
+		it will be cut out from the rest of the mesh.
+	</li>
+	<p>
+		You can "re-sew" the polygon back into the rest of the mesh by using
+		the <xButtonPMCollapse/> tool. Go through vertex by vertex and collapse the
+		vertices that need to be sewn together.
+	</p>
+	<li>
+		<xButtonPMSideTesselate/> - When you press this a menu will appear that lets you
+		tell <xSN/> how you with to divide up the selected sides. This is a faster way
+		of subdividng sides than <xButtonPMSideSplit/>.
+	</li>
+	<li>
+		<xButtonPMSideExtra/> - This menu provides some less-used functionality for making
+		sides completely flat, or flipping their direction.
+	</li>
+</xul>
+
+<p align=right>
+	<button style=rightarrow href=r:901><bold>Next</bold></button>
+</p>
+

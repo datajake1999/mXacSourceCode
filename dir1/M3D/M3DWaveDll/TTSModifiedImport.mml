@@ -1,0 +1,49 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Import sub-voices"/>
+
+<!xComboBoxSub>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0><italic>Don't import</italic></elem>
+		<elem name=1><italic>Append</italic></elem>
+		<<<$COMBOBOXSUB>>>
+	</combobox></bold>
+</xComboBoxSub>
+
+<p align=right>
+	<big><bold><<<SRFILE>>></bold></big>
+</p>
+
+<p>
+	Below are listed the sub-voices in the imported TTS voice. Select how they will
+	be imported and press "Import".
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sub-voices to import</xtrheader>
+	<tr>
+		<td>
+			Sub-voice to import
+		</td>
+		<td>
+			Where to import it to
+		</td>
+		<td>
+			Copy synthesis settings
+		</td>
+		<td>
+			Copy prosody
+		</td>
+		<td>
+			Copy pronunciation
+		</td>
+	</tr>
+	<<<$SUBVOICES>>>
+</xtablecenter>
+
+
+<xChoiceButton name=import>
+	<bold>Import the sub-voices with the given settings</bold><br/>
+	Imports the sub-voices using the above settings.
+</xChoiceButton>
+

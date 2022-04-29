@@ -1,0 +1,181 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Warts and pores"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<p>
+	This layer lets you add warts, freckles, acne, and pores to your character's skin.
+</p>
+
+<xChoiceButton style=x checkbox=true name=CoverageUse>
+	<bold>Use this</bold><br/>
+	Check this to use this warts/pores layer.
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Warts/pores coverage</xtrheader>
+	<tr><td>
+		The coverage texture is an image that indicates where the warts, freckles,
+		acne, or pores are located.
+		White means full coverage, while black is no coverage.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=CoverageButton>
+			<bold>Change the warts/pores coverage texture</bold><br/>
+			Press this to change the texture used for coverage.
+		</xChoiceButton>
+		<<<$COVERAGEIMAGE>>>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Coverage</bold> - Use this to control the upper-left
+			and lower-right corners of the sub-texture over the main
+			texture. Values of 0.0 are in the upper-left, while
+			1.0 is in the lower right.
+		</td>
+		<td><bold><align align=right>
+			Left (x): <edit width=50% maxchars=32 name=Coverageboundary00/><br/>
+			Right (x): <edit width=50% maxchars=32 name=Coverageboundary10/><br/>
+			Top (y): <edit width=50% maxchars=32 name=Coverageboundary01/><br/>
+			Bottom (y): <edit width=50% maxchars=32 name=Coverageboundary11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror0>
+			<bold>Mirror right to left</bold><br/>
+			Causes the texture to be mirrored from right to left.
+		</xChoiceButton></td>
+		<td><xChoiceButton style=x checkbox=true name=CoverageMirror1>
+			<bold>Mirror left to right</bold><br/>
+			Causes the texture to be mirrored from left to right.
+		</xChoiceButton></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Black coverage</bold> - Affects the frequency of warts/pores when
+			the texture is black. Use 1.0 to indicate that black is the
+			area where lots of warts/pores occur, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>White coverage</bold> - Affects the frequency of warts/pores when
+			the texture is white. Use 1.0 to indicate that black is the
+			area where lots of warts/pores occur, 0.0 for none.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Out-of-bounds coverage</bold> - How common warts/pores
+			are in areas
+			not covered by the texture. (This only takes effect if
+			you change the texture coverage.)
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=shiny2/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Warts/pores</xtrheader>
+	<tr>
+		<td>
+			<bold>Average distance</bold> - This is the average distance between
+			warts and pores, in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=size0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average diameter</bold> - Average diameter of a wart/pore
+			in meters.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=size1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation</bold> - Amount of variation in a wart's/pore's
+			size, height, and coloration. 0.0 is no variation. 1.0 is maximum.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=size2/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average height</bold> - Average height of a wart/pore
+			in meters. Use negative numbers to cause pores to recede
+			into the skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=height0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height pointyness</bold> - Use fractional numbers (such as 0.2)
+			to make a very rounded height/depth for the wart/port. Large numbers (like
+			5.0) to make spikey warts/pores.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=height1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Average coloration blend</bold> - At its center, how much
+			of the wart's/pore's color (see below) is used. Use 1.0 for
+			full discoloration. Mild affects, such as freckles, should use
+			a lower number, like 0.3. Pores should use 0.0 since they don't
+			discolor the skin.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=coloration0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Coloration pointyness</bold> - Controls how much the wart/pore
+			blends in with the surrounding skin. Use fractional numbers (like 0.2)
+			to produce a hard edge, while large numbers (like 5.0) will create
+			a strong center point that's slowly blended in.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=coloration1/></bold></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Wart/pore color/texture</xtrheader>
+	<tr><td>
+		This controls the actual color/texture of an individual wart/pore.
+		A solid color is usually sufficient, but you can include textures too.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=DiscolorButton>
+			<bold>Change the wart/pore texture</bold><br/>
+			Press this to change the texture used for warts/pores.
+		</xChoiceButton>
+		<<<$DISCOLORIMAGE>>>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=AffectSpecularity>
+			<bold>Warts/pores affects specularity (shinyness)</bold><br/>
+			Leave this unchecked if a wart/pore uses the same shinyness
+			as the skin it's on.
+		</xChoiceButton>
+		
+		<xChoiceButton name=NewSeed>
+			<bold>Generate a new wart/pore pattern</bold><br/>
+			Press this to generate a differnt wart/pore pattern. You'll
+			need to click on the image to see the changes.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

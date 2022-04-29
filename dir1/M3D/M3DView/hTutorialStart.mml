@@ -1,0 +1,239 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial (start)"/>
+
+<xPageTitle>
+	Tutorial (start)
+</xPageTitle>
+
+<xtablecenter width=100%>
+	<tr><td>
+		IMPORTANT: This is a <bold>pre-release</bold> version of <xLN/>.
+		It represents about 18 months of work, out of 24-36 estimated months, needed to
+		produce a 1.0 product. This means:
+		<p/>
+		<xul>
+			<li>
+				<bold>Most features are not implimented.</bold>
+			</li>
+			<li>
+				It has <bold>lots of bugs</bold>, some of which will cause application crashes and
+				data loss.
+			</li>
+		</xul>
+		
+		Basically, it's good enough to play around with for an hour, but <bold>not good enough
+		to do any real work with.</bold> I'm distributing it at such an early stage to get
+		feedback about the basic premise and functionality of the application early on so that
+		I can more easily correct problems. (Fixing design flaws when an application is mostly
+		finished is a difficult and lengthy task.) If you find any bugs or have feature
+		requests, look in the <a href=r:241>Bugs and feature requests.</a> For a list of
+		upcoming features, see the <a href=r:297>Future plans</a> page.
+	</td></tr>
+</xtablecenter>
+
+<xSectionTitle>Welcome</xSectionTitle>
+
+<p>
+	If this is the first time you're using <xLN/>,
+	I <bold>strongly suggest</bold> you read the introduction (this page)
+	and follow the tutorial. Because of <xSN/>'s huge feature set and unusual
+	design, you'll be a lot better off to spend half an hour of reading first,
+	instead of diving off the deep end.
+</p>
+
+<p>
+	<xSN/> uses lots of 3D drawings so it requires a relatively fast
+	computer. <bold>500 mHz and 128 MB RAM is minimum,</bold> with 2 gHz and 256 MB RAM recommended.
+	For more information see <a href=r:243>System requirements</a>.
+</p>
+
+
+<xSectionTitle>What <xLN/> does</xSectionTitle>
+
+<p>
+	<xLN/> (aka "3D for Mere Mortals") is a 3D modelling application
+	designed for people who want to create quality 3D images and
+	animations without having to get a degree in a 3D application. <xSN/> specializes in:
+</p>
+
+<blockquote><xul>
+	<li><bold>Houses and buildings</bold></li>
+	<li><bold>Interiors</bold></li>
+	<li><bold>Landscapes</bold></li>
+	<li><bold>Animations</bold></li>
+</xul></blockquote>
+
+<p>
+	<xLN/> is designed to be:
+</p>
+
+<blockquote><xul>
+	<li><bold>Easy to use</bold></li>
+	<li><bold>Flexible</bold> enough to allow you to experiment with different ideas.</li>
+	<li><bold>Fast to use,</bold> allowing you to produce scenes and animations in hours not days.</li>
+</xul></blockquote>
+
+<p>
+	To learn how <xSN/> is different from CAD, house-design applications, and
+	3D modeller's, click <a href=r:526>here</a>.
+</p>
+
+<p>
+	<xLN/> is intended to be used by a number of different professions.
+	Find a description (below)
+	which categorizes you best. Hold your mouse over it and a tooltip will
+	provide you with some ideas about how you might use <xSN/>:
+</p>
+
+<table width=100% innerlines=0 border=0>
+	<tr>
+		<td><xul>
+			<li><a>Architect
+				<xHoverHelp>
+					Use <xSN/> as a replacement for cardboard and glue. You can play with
+					ideas using <xSN/> or quickly (time is money) generate a model to show
+					clients. You can even provide clients with a copy of <xSN/> so they
+					can view your 3D model from their own home.
+					<p/>
+					<xSN/> can also be used for solar orientation.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Cabinet maker
+				<xHoverHelp>
+					Use <xSN/> to experiment with different cabinet designs using
+					the built-in object editor. Place them into a quickly constructed
+					model of your client's house or building to make sure the cabinets
+					work well in the room. Show the completed model to your clients,
+					reducing the chance that they'll change their minds after the
+					cabinet has already been built.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Furniture designer
+				<xHoverHelp>
+					Use <xSN/> to prototype your furniture in the object editor before
+					physically building it. Provide the custom object to potential clients
+					so they can see if it will fit in their house and what it will look
+					like.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Interior designer
+				<xHoverHelp>
+					Experiment with design ideas using <xSN/>. Build unique furniture and other
+					improvements using the built-in object editor.
+					When your ideas are mature, use <xSN/> to show them to your
+					clients. You can even provide clients with a copy of <xSN/> so they
+					can view your 3D model from their own home.
+					<p/>
+					<xSN/> can also be used for solar orientation and nighttime lighting.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Landlords and real-estate agents
+				<xHoverHelp>
+					Create a 3D model of your rental property so potential tennants can first look
+					at the 3D model before arranging for a walkthrough - the fewer walkthroughs
+					you have to do to get a tennant, the better.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Landscape architect
+				<xHoverHelp>
+					Use <xSN/> as a quick way to see the site topography, and add vegetation,
+					walkways, and other features. You can even provide clients with a copy
+					of <xSN/> so they can view your 3D model from their home.
+					<p/>
+					<xSN/> can also be used for solar orientation, viewing the foliage during
+					different seasons, and seeing what the property will look like in the
+					future when the trees and shrubs have grown.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Thinking about contacting an architect or builder?
+				<xHoverHelp>
+					Use <xSN/> to play with ideas for your dream home. When you do talk
+					to the professionals, walk them through your <xSN/> house so they
+					can better understand what you're looking for.
+				</xHoverHelp>
+			</a></li>
+		</xul></td>
+		<td><xul>
+			<li><a>Animators, amateur
+				<xHoverHelp>
+					<xSN/> doesn't do animations yet, but I'd like to know what features you need.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Archeologist
+				<xHoverHelp>
+					<xSN/> can be used to visualize the locations of pottery, bones, masonry,
+					and other artifacts as your find them. Place them in 3-dimensional space
+					so a clearer time-line can be seen.
+					<p/>
+					Or, if you're up to it, rebuild the exavation site as it appeared,
+					rebuilding the structures and landscaping as it once was.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Game master
+				<xHoverHelp>
+					Use <xSN/> to create illustrations of your world (such as houses, castles,
+					dungeons, and scenery) that you can show to your players.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Graphic novel authors
+				<xHoverHelp>
+					Use <xSN/> to model a scene and generate the right perspective. Print out
+					the <xSN/> scene and trace it onto your animation cell.
+					<p/>
+					Eventually I'd like <xSN/> to be good enough so that amateur graphic-novel
+					authors could produce fully rendered books. It's a long way off. I'd
+					like to hear what features you need though.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Law enforcement
+				<xHoverHelp>
+					User <xSN/> for crime-scene visualization in court rooms.
+				</xHoverHelp>
+			</a></li>
+			<li><a>Painters (on canvas)
+				<xHoverHelp>
+					If you want to paint an imaginary scene, use <xSN/> to prototype the scene
+					first, ensuring that all the perspective is correct. Print out the scene
+					from <xSN/> and sketch it onto your canvas. (You can also use my other product,
+					"Oil Painting Assistant" to help.)
+				</xHoverHelp>
+			</a></li>
+			<li><a>Software developers
+				<xHoverHelp>
+					While I haven't implimented an "export models as polygons" feature, it shouldn't
+					be that hard. If you want to use <xSN/> to create polygon models that you can
+					then pass into DirectX or OpenGL, please tell me.
+				</xHoverHelp>
+			</a></li>
+		</xul></td>
+	</tr>
+</table>
+
+<p>
+	<xLN/> is a <bold>work in progress.</bold> It is continually evolving
+	based on <bold>user feedback</bold>.
+	I have included a list of features that I'm considering for upcoming versions
+	under the <a href=r:297>Future plans</a> page. The more people (such as yourself) that
+	tell me what they need from <xSN/>, the better I can meet their needs.
+</p>
+
+<p>
+	<italic>(To
+	read a lengthy description of what <xSN/> is trying to
+	accomplish see, <a href=r:244>Theory</a>.)</italic>
+</p>
+
+<xSectionTitle>
+	Enough theory
+</xSectionTitle>
+
+<p>
+	To begin the tutorial, press "Next."
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+

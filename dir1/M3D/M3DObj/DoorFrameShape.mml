@@ -1,0 +1,55 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Framing shape"/>
+
+<p>
+	Click on the frame shape you wish to use, or press "Back" to leave the shape as it is.
+</p>
+
+<!threedstyle>
+	<threed width=25% height=25% border=0 macroattribute=1>
+		<shapeteapot/>
+	</threed>
+</threedstyle>
+
+<xSectionTitle>Rectangular</xSectionTitle>
+<threedstyle name=door0 href=door0/>
+<threedstyle name=door2 href=door2/>
+<threedstyle name=door1 href=door1/>
+<threedstyle name=door4 href=door4/>
+<threedstyle name=door3 href=door3/>
+<threedstyle name=door65539 href=door65539/>
+<threedstyle name=door6 href=door6/>
+<threedstyle name=door5 href=door5/>
+<threedstyle name=door7 href=door7/>
+<threedstyle name=door8 href=door8/>
+
+
+<xSectionTitle>Arched</xSectionTitle>
+<threedstyle name=door100 href=door100/>
+<threedstyle name=door110 href=door110/>
+<threedstyle name=door101 href=door101/>
+<threedstyle name=door103 href=door103/>
+<threedstyle name=door102 href=door102/>
+<threedstyle name=door104 href=door104/>
+<threedstyle name=door109 href=door109/>
+<threedstyle name=door111 href=door111/>
+
+<xSectionTitle>Unusual</xSectionTitle>
+<threedstyle name=door200 href=door200/>
+<threedstyle name=door201 href=door201/>
+<threedstyle name=door202 href=door202/>
+<threedstyle name=door65738 href=door65738/>
+<threedstyle name=door203 href=door203/>
+<threedstyle name=door204 href=door204/>
+<threedstyle name=door65740 href=door65740/>
+<threedstyle name=door205 href=door205/>
+<threedstyle name=door206 href=door206/>
+<threedstyle name=door207 href=door207/>
+<threedstyle name=door208 href=door208/>
+<threedstyle name=door105 href=door105/>
+<threedstyle name=door65641 href=door65641/>
+<threedstyle name=door106 href=door106/>
+<threedstyle name=door65642 href=door65642/>
+<threedstyle name=door107 href=door107/>
+<threedstyle name=door108 href=door108/>

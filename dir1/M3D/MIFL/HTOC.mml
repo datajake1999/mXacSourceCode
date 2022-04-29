@@ -1,0 +1,11 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Table of contents"/>
+
+<xPageTitle>
+	Table of contents
+</xPageTitle>
+
+<p>
+	Not used.
+</p>

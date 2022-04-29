@@ -1,0 +1,23 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Move a view window to another monitor"/>
+
+<xPageTitle>
+	Move a view window to another monitor
+</xPageTitle>
+
+<p>
+	<xLN/> supports multiple monitors if you have them installed
+	and working. (To find out more search in Windows Help for "Multiple monitors" or
+	talk to your local computer guru.)
+</p>
+
+<p>
+	To move a view window to the next monitor:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonNextMonitor/> button.
+	</li>
+</ol>

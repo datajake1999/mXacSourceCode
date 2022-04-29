@@ -1,0 +1,212 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Cave settings"/>
+
+<p>
+	These settings affect the segment of the cave that you just clicked on.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Cave segment size and shape</xtrheader>
+	<tr>
+		<td>
+			<bold>Center</bold> - Center of the cave segment (relative to the object.)
+		</td>
+		<td><align align=right>
+			EW: <edit width=80% maxchars=32 name=center0/><br/>
+			NS: <edit width=80% maxchars=32 name=center1/><br/>
+			UD: <edit width=80% maxchars=32 name=center2/>
+		</align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size</bold> - Width, height, and depth, in meters.
+		</td>
+		<td><align align=right>
+			EW: <edit width=80% maxchars=32 name=size0/><br/>
+			NS: <edit width=80% maxchars=32 name=size1/><br/>
+			UD: <edit width=80% maxchars=32 name=size2/>
+		</align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Rotation</bold> - Rotation of the segment, in degrees.
+		</td>
+		<td><align align=right>
+			EW: <edit width=80% maxchars=32 name=llt0/><br/>
+			NS: <edit width=80% maxchars=32 name=llt1/><br/>
+			UD: <edit width=80% maxchars=32 name=llt2/>
+		</align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Squareness</bold> - The further to the left, the more square the cave
+			section will be.
+		</td>
+		<td><align align=right>
+			EW: <scrollbar width=80% orient=horz min=0 max=100 name=power0/><br/>
+			NS: <scrollbar width=80% orient=horz min=0 max=100 name=power1/><br/>
+			UD: <scrollbar width=80% orient=horz min=0 max=100 name=power2/>
+		</align></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Texture</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture</bold> - Texture to assign to this segment of the cave.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=texture>
+			<<<$TEXTURE>>>
+		</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton href=textureedit>
+			<bold>Modify this texture</bold><br/>
+			Press this to display a dialog that lets you edit the current texture.
+		</xChoiceButton>
+		<xChoiceButton name=texturedelete>
+			<bold>Delete this texture</bold><br/>
+			Deletes the current texture. Any cave sections using the texture will use
+			another one.
+		</xChoiceButton>
+		<xChoiceButton name=texturenew>
+			<bold>New texture</bold><br/>
+			Creates a new texture for this cave section.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Strength</bold> - Cave sections blend into one another. If you make this
+			number larger or smaller, it affects how "strongly" this cave section affects
+			the blending. If this is negative, such as -1.0, then the cave section won't
+			actually be drawn (other than a blue marker) but will negatively influence other
+			sections.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=strength/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=invisible>
+			<bold>Invisible</bold><br/>
+			You can use this to make the section of the cave invisible, and effectively
+			make an opening in the cave. While working on the cave, an invisible
+			section will be drawn in red.
+		</xChoiceButton>
+		<xChoiceButton name=deconstruct>
+			<bold>Deconstruct this cave section from the whole</bold><br/>
+			This will remove the current cave section from the whole, setting it up as
+			a different object.
+		</xChoiceButton>
+		<xChoiceButton name=delete>
+			<bold>Delete this cave section</bold><br/>
+			Deletes this section of the cave.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<p>
+	These settings affect the entire cave.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Rough walls</xtrheader>
+	<tr><td>
+		These settings let you control how rough the surface as by adding "noise"
+		to the polygon locations.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Noise #1</bold> - Move the slider to the right to increase the effect
+			of the noise. Change the edit field to the "size" of the noise, such as 1 m;
+			don't make the noise smaller than the "detail" distance, below.
+		</td>
+		<td>
+			<scrollbar orient=horz min=0 max=100 name=noisestrength0/><br/>
+			<edit width=100% maxchars=32 name=noisedetail0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise #2</bold> - The size of the noise should be different than
+			previois noise sizes.
+		</td>
+		<td>
+			<scrollbar orient=horz min=0 max=100 name=noisestrength1/><br/>
+			<edit width=100% maxchars=32 name=noisedetail1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise #3</bold>
+		</td>
+		<td>
+			<scrollbar orient=horz min=0 max=100 name=noisestrength2/><br/>
+			<edit width=100% maxchars=32 name=noisedetail2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Noise #3</bold>
+		</td>
+		<td>
+			<scrollbar orient=horz min=0 max=100 name=noisestrength3/><br/>
+			<edit width=100% maxchars=32 name=noisedetail3/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Detail</bold> - This is the amount of "detail" in the cave, and
+			controls how many polygons are used to draw the cave. A smaller detail
+			distance results in a smoother surface, but more polygons and a longer
+			drawing time.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=lod/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Version</bold> - Changing this number causes a new "version" of
+			random elements of the cave, such as noise and roughness.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=seed/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=seenfrominside>
+			<bold>Usually seen from the inside</bold><br/>
+			If checked, the cave will be seen from the inside, so textures and backface
+			(see below) will be set up accordingly. If unchecked, the cave will be
+			seen from the outside.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=backface>
+			<bold>Backface culling</bold><br/>
+			If checked, portions of the cave facing away from the camera won't be drawn.
+			For example: If "seen from the inside" is checked, along with this, looking
+			at the cave from above will draw its floor, but not its roof. This sometimes makes
+			editing easier. (Having this checked also causes the caves to draw faster.)
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=boxes>
+			<bold>Draw texture objects as boxes</bold><br/>
+			When checked, texture objects (like stalagtites) will be drawn as boxes
+			(rather than fully detailed
+			objects) so they take less time to draw. This only has an effect during
+			editing; final renders include the full objects.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

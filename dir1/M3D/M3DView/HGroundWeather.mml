@@ -1,0 +1,13 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Rain and wind erosion"/>
+
+<xPageTitle>
+	Rain and wind erosion
+</xPageTitle>
+
+<p>
+	You can use <xSN/> to automatically simulate rain and wind erosion on a landscape
+	using the <xButtonGroundApplyWind/> or <xButtonGroundApplyRain/>.
+</p>
+

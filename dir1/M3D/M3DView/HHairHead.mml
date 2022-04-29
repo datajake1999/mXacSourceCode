@@ -1,0 +1,233 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Head-of-hair object"/>
+
+<xPageTitle>
+	Head-of-hair object
+</xPageTitle>
+
+
+<p>
+	The "head-of-hair" object lets you easily create a virtual wig for your characters.
+	It works by providing a three dimensional ellipsoid (called an ellipsoid) that
+	you can draw lengths of hair out of. The lengths are not individual hairs (which
+	are too slow to draw), but clusters of tens-of-thousands of hairs, like one of
+	the strands of a braid.
+</p>
+
+<p>
+	You can lengthen and arrange each length of hair. Adjacent lengths of hair
+	can be modified in a group for places where you don't need as fine of a control.
+	To make the head-of-hair look like hair, you can have each length drawn with
+	a semi-transparent hair texture.
+</p>
+
+<xsectiontitle>Creating a head-of-hair</xsectiontitle>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Hair" section under "Object pieces".
+	</li>
+	<li>
+		<bold>Click</bold> on one of the heads-of-hair to add it.
+	</li>
+	<li>
+		You will need to adjust the size of the ellipsoid to match your character's head.
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the head-of-hair object.
+	</li>
+	<li>
+		In the "Head-of-hair settings" dialog that appears, adjust
+		the <bold>Width</bold>, <bold>Depth</bold>, and <bold>Height</bold> settings
+		so that the ellipsoid fits within the skull of the character. It should be
+		just small enough that it doesn't show through. (If it does show through this
+		isn't a problem since you can hide the ellipsoid and only display the hair
+		lengths. However, the hair lengths are only drawn to just below the ellipsoid's
+		surface, so if the ellipsoid sticks out too much then the hair won't appear
+		to be anchored to the skin.)
+	</li>
+	<li>
+		<bold>Close</bold> the dialog.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>Adding new hair lengths</xsectiontitle>
+
+<p>
+	To add new hair lengths to the head:
+</p>
+
+<ol>
+	<li>
+		Select the head-of-hair object using <xButtonSelIndividual/>.
+	</li>
+	<p>
+		When the object is selected you'll see it covered by hundreds to thousands of
+		grey, triangular control points. Clicking on one of these causes a hair to
+		grow in that location.
+	</p>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> on a grey triangle. You'll see a small nub of hair grow
+		where you clicked. (And due to symmetry, a nub on the opposite side of the head.)
+	</li>
+	<p>
+		The "symmetry" feature of the head-of-hair may be turned on. If it is any
+		change you make to one side of the head will also affect the others. If
+		you don't want this you can turn if off in the "Head-of-hair settings" dialog.
+	</p>
+	<li>
+		Use the <xButtonObjControlNSEWUD/> tool to <bold>click and drag</bold> the
+		yellow circular control-point that appeared over the hair you clicked on.
+		This will lengthen the hair.
+	</li>
+	<p>
+		If the lengthening process doesn't feel fluid, it may be that you have the
+		grid turned on. Use <xButtonGridSelect/> menu to turn off the grid.
+	</p>
+	<li>
+		When you lengthened your hair, the neighboring hairs may also have lengthened.
+		This happens because the head-of-hair automatically applies your changes to
+		all nearby hair-lengths. You can enlarge or shrink this area-of-effect by
+		selecting the <xButtonObjControlDialog/> tool and <bold>clicking on</bold> the
+		head-of-hair. The <bold>"Brush size"</bold> setting lets you control the area.
+	</li>
+	<li>
+		If you made your hair too long, you can <bold>click on</bold> the
+		red triangle control-point to delete part of the length. If you keep on
+		deleting down to the root then the hair will be removed.
+	</li>
+</ol>
+
+
+<xSectionTitle>Arranging your hair</xSectionTitle>
+
+<p>
+	Now that you have grown some hair lengths, you can style them:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		<bold>Click on and drag</bold> the blue-green circular control points. This
+		simulates grabbind the hair at that location and moving it. Nearby hairs
+		will be moved in a similar manner based upon the size of your brush (discussed
+		above).
+	</li>
+	<li>
+		If you're having a difficult time seeing all the control points then
+		visit the <bold>"Head-of-hair settings"</bold> and
+		reduce the <bold>"Diameter"</bold> of the hair to almost nothing.
+		The lengths of hair will become very thin, allowing you to see between them.
+	</li>
+	<li>
+		You can twist the lengths of hair by <bold>dragging</bold> the blue square
+		control points. You will only notice the twist if your hair's shape (as
+		set in the "Head-of-hair settings" dialog) is elliptical, or if you have a
+		texture drawn on your hair. Applying slight twists will make your hair
+		look a lot more realistic.
+	</li>
+	<li>
+		To modify a different length of hair, <bold>click on</bold> the white
+		square control-points.
+	</li>
+</ol>
+
+<xDefinition>
+	<bold>Tip:</bold> If <xSN/> is sluggish while editing hair, try:
+	<p/>
+	<xul>
+		<li>
+			Setting <xButtonViewQuality/> to a non-textured mode.
+		</li>
+		<li>
+			In "Head-of-hair settings", change the <bold>"Number of tubes"</bold> to "one".
+		</li>
+		<li>
+			In "Head-of-hair settings", move the <bold>"Diameter"</bold> to the left to make
+			the hairs thinner.
+		</li>
+		<li>
+			In "Head-of-hair settings", turn on <bold>"Use backface culling"</bold>.
+		</li>
+		<li>
+			Do most of your editing using a low density of hair-lengths. Only when are mostly
+			done to you use <bold>"Density, 4x or 2x"</bold> in "Head-of-hair settings" to
+			increase the density.
+		</li>
+	</xul>
+</xDefinition>
+
+
+<xsectiontitle>Making your hair look realistic</xsectiontitle>
+
+<p>
+	The most realistic way for a 3D modeller to draw hair is to draw one individual
+	strand of hair at a time. Many do this, but because the human head has so many hairs
+	(hundreds of thousands to millions), this can take quite a long time.
+</p>
+
+<p>
+	The head-of-hair is a compromise, since it draws a length of hair (strand of thousands
+	of hairs) at once. This makes the hair look less realistic. However, there are some
+	tricks that will make the hair look more realistic:
+</p>
+
+<xul>
+	<li>
+		Use one of the <bold>hair textures</bold> from "Hair and fur" under the "Animal" textures.
+	</li>
+	<li>
+		Each hair length is normally drawn as single tube. Under the "Head-of-hair
+		settings" dialog, you'll find the <bold>"Hair layers"</bold> section. Set
+		the <bold>"Number of tubes"</bold> to "three". This will cause three tubes to
+		be drawn for every length of hair, one inside the other. Once you have done
+		this, apply semi-transpreant textures to the two outer tubes, and maybe
+		even the innermost tube. Your hair will suddlenly look much more realistic; it will
+		also take longer to draw.
+	</li>
+	<li>
+		If you have semi-transparent hair you may want turn turn
+		off <bold>"Use backface culling"</bold> in the "Head-of-hair settings".
+	</li>
+	<li>
+		The thinner your lengths of hair (and consequently the more you have), the
+		more realistic your head of hair. To increase the number of hairs, visit
+		the "Head-of-hair settings" dialog. Under the "Effects" section
+		press the <bold>"Density, 4x"</bold> or <bold>"Density, 2x"</bold> to increase
+		your hair density. (There is a limit to the number of hair lengths though.)
+		Alternatively, you can adjust the <bold>"Density of hairs"</bold> slider, but
+		this will wipe out any hairs you have already created.
+	</li>
+	<li>
+		Add twists to your hair. You can do this manually by dragging individual
+		control points, or by pressing the <bold>"Twist along the
+		length"</bold> and <bold>"Twist at the root"</bold> buttons in the
+		"Head-of-hair settings" tool. (Make sure to adjust their sliders first.)
+	</li>
+	<li>
+		Mess up the hair using <bold>"Mess up the hair"</bold> button in the
+		"Head-of-hair settings" tool. You can also vary the size of the hair
+		using the <bold>"Variation"</bold> scrollbar under "Shape over the length
+		of hair".
+	</li>
+</xul>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:923>Length-of-hair object</a></li>
+</xul>

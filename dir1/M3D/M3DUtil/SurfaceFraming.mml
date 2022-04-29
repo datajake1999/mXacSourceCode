@@ -1,0 +1,341 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Surface framing"/>
+
+<p>
+	(Information on framing at the end of the page.)
+</p>
+
+<!xComboInsetTL>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="0">End 1 (bottom or right)</elem>
+		<elem name="1">End 2 (top or left)</elem>
+	</combobox></bold>
+</xComboInsetTL>
+
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=showonlywhenvisible>
+			<bold>Draw the framing only when it would be visible</bold><br/>
+			The surface framing will only be drawn if you hide the cladding on either the
+			internal or external side, or you have <xsn/> hide the wall, roof, and/or floors
+			but still show the framing. The only reason you would uncheck this is if you made
+			the walls transparent (such as perforated corrogated iron) and wanted to see
+			the framing through the transparency.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=rotate>
+			<bold>Rotate the framing 90 degrees</bold><br/>
+			If your framing is going in the wrong direction then check (or uncheck) this
+			and it will be rotated 90 degrees into the right direction.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Level 1 (inside cladding, against side A)</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=show0>
+			<bold>Use level 1</bold><br/>
+			Select this to use this level of framing.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Framing distance</bold> -
+			Minimum distance between the centers of the beams.
+		</td>
+		<td><bold>
+			<edit width=100% maxchars=32 selall=true name=mindist0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile size</bold> -
+			The width and depth (but not length) of the framing members. Example: If you
+			use 2x4 studs, this will be 2" and 4" respectively. (If the
+			sum of the depths of level 1 and level 2 do not equal the thickness of the wall
+			the framing member depths will be adjusted so that they fit in
+			between the cladding.)
+		</td>
+		<td><bold><align align=right>
+			W: <edit width=80% maxchars=32 selall=true name=scale00/><br/>
+			D: <edit width=80% maxchars=32 selall=true name=scale01/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile shape</bold> -
+			What the framing like in profile. A wood stud is rectangular, steel
+			stud is C or Z shaped, etc.
+		</td>
+		<td><bold>
+			<xComboShape width=100% name=shape0/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset measured from end 1 or end 2</bold> -
+			This is only important if you have a curved or skewed surface where the framing
+			members will be bent or angled to intersect one another. Changing which end the
+			inset is measured from will affect how large the inset is.
+		</td>
+		<td>
+			<xcomboinsettl width=100% name=insettl0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend beyond surface</bold> -
+			The distance to extend the framing beyond the surface, making the framing visible
+			from outside the claddings, such as in medieval buildings.
+		</td>
+		<td><bold><align align=right>
+			A-side: <edit width=80% maxchars=32 selall=true name=extthick00/><br/>
+			B-side: <edit width=80% maxchars=32 selall=true name=extthick01/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset</bold> -
+			The distance from the edge of the surface (perpendicular to the framing direction)
+			where the framing first starts.
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=inset00/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=inset01/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member bevel</bold> -
+			The angle of bevel at the either end of the members. Use 0 for a cut perpendicular
+			to the surface, or any angle between 90 degrees and -90 degrees. Bevelling is most
+			common for the ends of roof purlins.
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=bevel00/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=bevel01/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member extension</bold> -
+			Extend the member beyond the surface edge by this distance.
+			Extensions are most common for the ends of roof beams.
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=extend00/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=extend01/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Level 2 (inside cladding, against side B)</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=show1>
+			<bold>Use level 2</bold>
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Framing distance</bold>
+		</td>
+		<td><bold>
+			<edit width=100% maxchars=32 selall=true name=mindist1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile size</bold>
+		</td>
+		<td><bold><align align=right>
+			W: <edit width=80% maxchars=32 selall=true name=scale10/><br/>
+			D: <edit width=80% maxchars=32 selall=true name=scale11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile shape</bold>
+		</td>
+		<td><bold>
+			<xComboShape width=100% name=shape1/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset measured from end 1 or end 2</bold>
+		</td>
+		<td>
+			<xcomboinsettl width=100% name=insettl1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend beyond surface</bold>
+		</td>
+		<td><bold><align align=right>
+			A-side: <edit width=80% maxchars=32 selall=true name=extthick10/><br/>
+			B-side: <edit width=80% maxchars=32 selall=true name=extthick11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=inset10/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=inset11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member bevel</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=bevel10/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=bevel11/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member extension</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=extend10/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=extend11/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Level 3 (outside the cladding, against side B)</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=show2>
+			<bold>Use level 3</bold>
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Framing distance</bold>
+		</td>
+		<td><bold>
+			<edit width=100% maxchars=32 selall=true name=mindist2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile size</bold>
+		</td>
+		<td><bold><align align=right>
+			W: <edit width=80% maxchars=32 selall=true name=scale20/><br/>
+			D: <edit width=80% maxchars=32 selall=true name=scale21/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member profile shape</bold>
+		</td>
+		<td><bold>
+			<xComboShape width=100% name=shape2/>
+		</bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset measured from end 1 or end 2</bold>
+		</td>
+		<td>
+			<xcomboinsettl width=100% name=insettl2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Extend beyond surface</bold>
+		</td>
+		<td><bold><align align=right>
+			A-side: <edit width=80% maxchars=32 selall=true name=extthick20/><br/>
+			B-side: <edit width=80% maxchars=32 selall=true name=extthick21/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Inset</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=inset20/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=inset21/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member bevel</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=bevel20/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=bevel21/>
+		</align></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Framing member extension</bold>
+		</td>
+		<td><bold><align align=right>
+			TL: <edit width=80% maxchars=32 selall=true name=extend20/><br/>
+			BR: <edit width=80% maxchars=32 selall=true name=extend21/>
+		</align></bold></td>
+	</tr>
+</xtablecenter>
+
+<p>
+	The framing options automatically draw studs, rafters, joists, beams, and other structural
+	members in a wall, floor, ceiling, or roof. Some of the settings can be a bit
+	confusing because their exact effect depends upon the direction of framing (rafters, etc.)
+	in the surface... and of course, the direction changes depending upon
+	the "level" of the framing.
+</p>
+
+<p>
+	Each surface has up to three "levels" of framing. A level is a depth in the surface
+	where all the framing members go in one direction. The next level is rotated 90 degrees,
+	and the one after than a further 90 degrees. A typical stud wall only uses one of the levels
+	to include vertical framing members (called studs) in the wall. A roof surface will typically
+	two levels: The first level includes horizontal purlins that run horizontally,
+	and onto which are fixed the roof sheeting. The next level includes diangonal beams,
+	perpendicular to the purlins. The beams are larger and support the purlins, although
+	they are not spaced as closely. If the house has a cathedral ceiling the beams are often
+	visible.
+</p>
+
+<p>
+	There are three locations for the levels:
+</p>
+
+<ol>
+	<li>
+		Inside the walls interior and exterior cladding, but closest to side A.
+	</li>
+	<li>
+		Inside the cladding, but closest to side B.
+	</li>
+	<li>
+		External to the cladding, on side B of the surface.
+	</li>
+</ol>
+
+<p>
+	Using the framing dialog you can use (or not use) each of these levels. By chooising
+	the levels to use, the direction their members go (vertical or horizontal), and
+	the size and shape of the members, you can draw most framing systems. The framing
+	will not be accurate enough to build from though because it doesn't take into
+	account any engineering.
+</p>
+
+
+
+

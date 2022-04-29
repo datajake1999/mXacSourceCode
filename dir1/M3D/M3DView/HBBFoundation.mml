@@ -1,0 +1,47 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Foundations"/>
+
+<xPageTitle>
+	Foundations
+</xPageTitle>
+
+<p>
+	Building blocks can support different types of foundations (pad, piers, perimeter,
+	or basement). The type of foundation initially used is determined by
+	your settings in the <xButtonLocale/> button.
+</p>
+
+<p>
+	If a building block's foundation needs changing:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the building block.
+	</li>
+	<li>
+		In the "Building block settings" dialog that appears, press
+		the <bold>"Foundation"</bold> button.
+	</li>
+	<li>
+		Select the foundation you want to use and the foundation wall thickness.
+	</li>
+	<p>
+		Note: Most of the foundations (perimeter, piers, basement) require that the
+		ground floor is signficantly elevated above the ground (1.0 m default).
+		Cement pads (unless you magically invent a floating cement pad) require that
+		the ground floor is only about 10 cm above the ground. If you switch
+		to/from a cement pad you may need to change the building block's floor
+		elevations, see <a href=r:270>Floor elevations</a>.
+	</p>
+</ol>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:342>Piers in building blocks</a></li>
+</xul>

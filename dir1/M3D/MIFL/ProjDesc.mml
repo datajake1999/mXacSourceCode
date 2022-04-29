@@ -1,0 +1,80 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Project settings"/>
+
+<p align=right><bold><big><big><big><<<PROJFILE>>></big></big></big></bold></p>
+
+<xtablecenter width=100%>
+	<xtrheader>Project Description</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Short description
+				<xHoverHelp>
+					Type in a short (one-line) description for the project.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% maxchars=128 name=descshort/></bold>
+			<p/>
+			<bold><a>Long description
+				<xHoverHelp>
+					Type in a long (multi-line) description for the project.
+				</xHoverHelp>
+			</a></bold><br/>
+			<bold><edit width=100% height=200 maxchars=20000 wordwrap=true multiline=true name=desclong/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Languages</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Languages
+				<xHoverHelp>
+					These are the languages supported by the project. The language at the top
+					of the list is chosen if the user's language is not supported.
+				</xHoverHelp>
+			</a></bold>
+			<p/>
+			<blockquote>
+			<button style=righttriangle name=langadd>
+				<bold>Add language</bold>
+				<xHoverhelp>
+					Adds a new language to the bottom of the list. You must select the language
+					from the drop-down listbox below.
+				</xHoverhelp>
+			</button>
+			</blockquote>
+			<br/>
+			<p align=right><bold><combobox width=66% cbheight=300 name=langid><<<$LANGLIST>>></combobox></bold></p>
+
+			<blockquote>
+			<button style=lefttriangle name=langremove>
+				<bold>Remove language</bold>
+				<xHoverhelp>
+					Removes the selected language from the list.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button style=uparrow name=langmoveup>
+				<bold>Increase language priority</bold>
+				<xHoverhelp>
+					Pressing this increases the priority of the currently selected language.
+				</xHoverhelp>
+			</button>
+			<br/>
+			<button style=downarrow name=langmovedown>
+				<bold>Decrease language priority</bold>
+				<xHoverhelp>
+					Pressing this decreases the priority of the currently selected language.
+				</xHoverhelp>
+			</button>
+			</blockquote>
+		</td>
+		<td align=center>
+			<bold><listbox width=80% height=200 vscroll=langlistscroll name=langlist/></bold>
+			<scrollbar orient=vert height=200 name=langlistscroll/>
+		</td>
+	</tr>
+</xtablecenter>

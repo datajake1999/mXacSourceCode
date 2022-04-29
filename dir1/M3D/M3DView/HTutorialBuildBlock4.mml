@@ -1,0 +1,89 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - building blocks (4)"/>
+
+<xPageTitle>
+	Tutorial - building blocks (4)
+</xPageTitle>
+
+<xSectionTitle>Intelligent adjust</xSectionTitle>
+
+<p>
+	The two building blocks intersect one another, and from the outside it looks like
+	there's no problem. If you look inside, however, you'll see that the building
+	blocks literally go right through one another, forming a small rectangular room
+	where their walls overlap. To see this:
+</p>
+
+<ol>
+	<li>
+		In <xButtonViewFlatQuick/> choose "North-west (elevated)".
+	</li>
+	<li>
+		Press <xButtonClipLevel/> and select "Ground floor".
+	</li>
+</ol>
+
+<p>
+	To fix this, use the "Intelligent adjust" tool:
+</p>
+
+<ol>
+	<li>
+		Select <xButtonObjIntelAdjust/>.
+	</li>
+	<li>
+		Click on one of the building blocks. You'll see its inside walls disappear.
+	</li>
+	<li>
+		Click on the other building block. Its inside walls will also disappear
+		and you'll get a smooth join.
+	</li>
+</ol>
+
+<p>
+	To get a closer look at the changes:
+</p>
+<ol>
+	<li>
+		Switch to the <xButtonViewFlat/> view.
+	</li>
+	<li>
+		In <xButtonViewFlatQuick/> choose "From above".
+	</li>
+	<li>
+		Select the <xButtonViewFlatLookAt/> tool.
+	</li>
+	<li>
+		Click on a point in the middle of the floor where the two building blocks intersect.
+		Drag the mouse towards one of the intersected corners so you can see it.
+	</li>
+	<li>
+		The view mode will switch to "Walthrough view" so you can see the walls.
+	</li>
+	<li>
+		You might want to click on <xButtonClipLevel/> and select "All" so that your
+		walkthrough includes the ceiling and roof.
+	</li>
+	<li>
+		Use the <xButtonViewWalkRotZX/> tool to look around. Notice how the edges between
+		the two intersections are neatly joined together. That's what
+		the <xButtonObjIntelAdjust/> tool did.
+	</li>
+</ol>
+
+<p>
+	Many objects other than building blocks support <xButtonObjIntelAdjust/>. Usually,
+	the tool modifies the object so it takes into account neighboring objects.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:277><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:469>Removing joints from building block intersections</a></li>
+</xul>

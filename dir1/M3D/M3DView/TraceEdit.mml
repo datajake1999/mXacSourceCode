@@ -1,0 +1,90 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify tracing paper"/>
+
+<p>
+	This page works best if you can see the transparency being edited on the main
+	3D display. Press the buttons to change the size, position, or transparency of it.
+</p>
+
+<xTableCenter width=100%>
+	<xtrHeader>Position</xtrHeader>
+	<tr><td>
+		Use the arrows to reposition the image. Larger arrows move the tracing paper
+		greater distances.
+		<p/>
+		<table width=100% innerlines=0 border=0>
+			<tr><td><align align=center>
+				<button style=uptriangle margintopbottom=4 buttonwidth=32 buttonheight=32 name=moveud3/><br/>
+				<button style=uptriangle margintopbottom=4 buttonwidth=24 buttonheight=24 name=moveud2/><br/>
+				<button style=uptriangle margintopbottom=4 buttonwidth=16 buttonheight=16 name=moveud1/>
+			</align></td></tr>
+			<tr><td><align align=center>
+				<button style=lefttriangle margintopbottom=4 buttonwidth=32 buttonheight=32 name=movelr-3/>
+				<button style=lefttriangle margintopbottom=4 buttonwidth=24 buttonheight=24 name=movelr-2/>
+				<button style=lefttriangle margintopbottom=4 buttonwidth=16 buttonheight=16 name=movelr-1/>
+				<button style=sphere margintopbottom=4 buttonwidth=32 buttonheight=32 enabled=false/>
+				<button style=righttriangle margintopbottom=4 buttonwidth=16 buttonheight=16 name=movelr1/>
+				<button style=righttriangle margintopbottom=4 buttonwidth=24 buttonheight=24 name=movelr2/>
+				<button style=righttriangle margintopbottom=4 buttonwidth=32 buttonheight=32 name=movelr3/>
+			</align></td></tr>
+			<tr><td><align align=center>
+				<button style=downtriangle margintopbottom=4 buttonwidth=16 buttonheight=16 name=moveud-1/><br/>
+				<button style=downtriangle margintopbottom=4 buttonwidth=24 buttonheight=24 name=moveud-2/><br/>
+				<button style=downtriangle margintopbottom=4 buttonwidth=32 buttonheight=32 name=moveud-3/>
+			</align></td></tr>
+		</table>
+	</td></tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Size</xtrHeader>
+	<tr><td>
+		Use the boxes to resize the image, the size of the box representing the relative size
+		increase or decrease. You can also type in a size below.
+		<p/>
+		<p align=center>
+			<button style=beveled buttonwidth=12 buttonheight=12 name=scale-3/>
+			<button style=beveled buttonwidth=18 buttonheight=18 name=scale-2/>
+			<button style=beveled buttonwidth=23 buttonheight=23 name=scale-1/>
+			<button style=beveled buttonwidth=24 buttonheight=24 enabled=false/>
+			<button style=beveled buttonwidth=25 buttonheight=25 name=scale1/>
+			<button style=beveled buttonwidth=32 buttonheight=32 name=scale2/>
+			<button style=beveled buttonwidth=48 buttonheight=48 name=scale3/>
+		</p>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width across the image in meters or feet.
+		</td>
+		<td><edit width=100% maxchars=32 selall=true name=width/></td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Transparency</xtrHeader>
+	<tr><td>
+		Please select the option that best describes the image: (This will control
+		what parts of the image can be seen through.)
+		<p/>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=tbonw>
+			<bold>Black(dark) lines drawn on white paper</bold>
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=twonb>
+			<bold>White(light) lines drawn on black paper</bold>
+		</xChoiceButton>
+		<xChoiceButton radiobutton=true style=x group=tbonw,twonb,tcolor name=tcolor>
+			<bold>Color image or photograph</bold>
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Transparency</bold> - Move the slider to the right to make the tracing
+			paper more transparent.
+		</td>
+		<td>
+			<scrollbar width=100% min=0 max=100 orient=horz name=transparency/>
+		</td>
+	</tr>
+</xTableCenter>
+

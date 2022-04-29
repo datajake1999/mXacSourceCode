@@ -1,0 +1,54 @@
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+//
+// Copyright (c) Microsoft Corporation. All rights reserved
+
+/*****************************************************************************
+* CircumSAPI.idl *
+*------------*
+*   Description:
+*       This idl file is for the sample SAPI5 Text To Speech Engine.
+*
+*****************************************************************************/
+//--- Import base idl
+import "oaidl.idl";
+import "ocidl.idl";
+import "sapiddk.idl";
+
+//=== Forward References ======================================================
+
+//=== Constants ===============================================================
+
+//=== Interface definitions ===================================================
+typedef struct VOICEITEM
+{
+    LPCWSTR pText;
+    ULONG   ulTextLen;
+    ULONG   ulNumAudioBytes;
+    BYTE*   pAudio;
+} VOICEITEM;
+
+
+//=== CoClass definitions =====================================================
+[
+	uuid(A3BA21EC-15A4-4d42-8939-39E25F647854),
+	version(1.0),
+	helpstring("CircumSAPI Engine 1.0 Type Library")
+]
+library SAMPLETTSENGLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(76D2054C-8841-4fe0-93BA-4EBA0C2C4D00),
+		helpstring("CircumSAPI Class")
+	]
+	coclass CircumSAPI
+	{
+		[default] interface ISpTTSEngine;
+        interface ISpObjectWithToken;
+	};
+};

@@ -1,0 +1,175 @@
+<!xMenuButton>
+   <button showbutton=false margintopbottom=3 marginleftright=3 MACROATTRIBUTE=1>
+      <?MACROCONTENT?>
+   </button><br/>
+</xMenuButton>
+
+<!xMenuSeperator>
+   <hr color=#404080 width=15%/><br/>
+</xMenuSeperator>
+
+<!xMenuText>
+   <menutext>
+      <font color=#c0c0ff>
+      <?MACROCONTENT?>
+      </font>
+   </menutext>
+</xMenuText>
+
+<!xMenuContents>
+   <menucontents><small>
+      <pageinfo lrmargin=0 tbmargin=0/>
+      <colorblend tcolor=#000000 bcolor=#101030 posn=background/>
+      <font color=#c0c0ff><?MACROCONTENT?></font>
+   </small></menucontents>
+</xMenuContents>
+
+
+<colorblend posn=background tcolor=#e0ffe0 bcolor=#b0e0b0/>
+<small><table width=100% innerlines=0 border=0 tbmargin=2>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=25% valign=center align=left>
+		<font color=#8080ff><button style=leftarrow href=back accel=escape>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=16>
+		<big>
+			<<<$LIBNAME>>>
+		</big>
+	</td>
+	<td width=50% valign=center align=right lrmargin=16>
+		<font color=#c0c0c0><big><big><italic>
+			<<<$PAGETITLE>>>
+		</italic></big></big></font>
+	</td>
+</tr>
+<<<$ERRLIST>>>
+<tr><td>
+	<menu accel=alt-n>
+		<xMenutext>
+			<u>N</u>ew object
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUNEWOBJECT>>>
+		</xMenucontents>
+	</menu>
+	
+	<menu accel=alt-l>
+		<xMenutext>
+			<u>L</u>ibraries
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENULIB>>>
+			<xMenuButton accel=s href=proj:libsave><u>S</u>ave libraries</xMenuButton>
+			<xMenuButton accel=l href=proj:liblist><u>L</u>ist of libraries</xMenuButton>
+			<xMenuButton accel=a href=proj:libadd><u>A</u>dd new library</xMenuButton>
+			<xMenuSeperator/>
+			<xMenuButton accel=x href=exit>E<u>x</u>it</xMenuButton>
+		</xMenucontents>
+	</menu>
+	
+	<menu accel=alt-o>
+		<xMenutext>
+			<u>O</u>bjects
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUOBJECT>>>
+			<<<$IFMENULIBRO>>><xMenuButton accel=a href=menuobjadd><u>A</u>dd new object</xMenuButton><<<$ENDIFMENULIBRO>>>
+		</xMenucontents>
+	</menu>
+	
+	<menu accel=alt-f>
+		<xMenutext>
+			<u>F</u>unctions
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUFUNC>>>
+			<<<$IFMENULIBRO>>><xMenuButton accel=a href=menufuncadd><u>A</u>dd new function</xMenuButton><<<$ENDIFMENULIBRO>>>
+		</xMenucontents>
+	</menu>
+	
+	<menu accel=alt-v>
+		<xMenutext>
+			<u>V</u>ariables (global)
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUGLOBAL>>>
+			<<<$IFMENULIBRO>>><xMenuButton accel=a href=menuglobaladd><u>A</u>dd new variable</xMenuButton><<<$ENDIFMENULIBRO>>>
+		</xMenucontents>
+	</menu>
+	
+	
+	<menu accel=alt-m>
+		<xMenutext>
+			<u>M</u>ethod defs
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUMETH>>>
+			<<<$IFMENULIBRO>>><xMenuButton accel=a href=menumethadd><u>A</u>dd new method</xMenuButton><<<$ENDIFMENULIBRO>>>
+		</xMenucontents>
+	</menu>
+	
+	
+	<menu accel=alt-p>
+		<xMenutext>
+			<u>P</u>roperty defs
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUPROP>>>
+			<<<$IFMENULIBRO>>><xMenuButton accel=a href=menupropadd><u>A</u>dd new property</xMenuButton><<<$ENDIFMENULIBRO>>>
+		</xMenucontents>
+	</menu>
+	
+	
+	<menu accel=alt-i>
+		<xMenutext>
+			M<u>i</u>sc
+		</xMenutext>
+		<xMenucontents>
+			<<<$MENUMISC>>>
+			<xMenuButton href=miflundo accel=u><u>U</u>ndo</xMenuButton>
+			<xMenuButton href=miflredo accel=u><u>R</u>edo</xMenuButton>
+			<xMenuSeperator/>
+			<xMenuButton href=compall accel=c><u>C</u>ompile</xMenuButton>
+			<<<$TESTMENUSHOW>>>
+			<xMenuSeperator/>
+			<<<$IFMENULIBRO>>><xMenuButton href=menumiscstring accel=a><u>A</u>dd new string</xMenuButton><<<$ENDIFMENULIBRO>>>
+			<xMenuButton href=menumiscstringlist accel=s>List of <u>s</u>trings</xMenuButton>
+			<xMenuSeperator/>
+			<<<$IFMENULIBRO>>><xMenuButton href=menumiscresource accel=a>A<u>d</u>d new resource</xMenuButton><<<$ENDIFMENULIBRO>>>
+			<xMenuButton href=menumiscresourcelist accel=o>List of res<u>o</u>urces</xMenuButton>
+			<xMenuSeperator/>
+			<xMenuButton href=menumiscdoc accel=d>Modify <u>d</u>ocumentation</xMenuButton>
+			<xMenuButton href=proj:desc accel=p><u>P</u>roject settings</xMenuButton>
+			<xMenuSeperator/>
+			<xMenuButton href=menumischelp accel=h><u>H</u>elp</xMenuButton>
+		</xMenucontents>
+	</menu>
+	
+	<<<$MENUOBJSPECIFIC>>>
+	
+</td></tr>
+<<<$MIFLTABS>>>
+</table>
+<br/>
+<?TemplateSubst?>
+<br/>
+<table width=100% innerlines=0 border=0 tbmargin=2>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=33% valign=center align=left>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+			<xHoverHelpShort>Return to the previous page.</xHoverHelpShort>
+		</button></font>
+	</td>
+	<td width=66% valign=center align=center>
+	</td>
+</tr>
+<tr><td align=center>
+<font color=#808080><italic><small>Copyright 2002-2009 Mike Rozak (<font face=symbol>m</font>Xac). All rights reserved.</small></italic></font>
+</td></tr>
+</table></small>

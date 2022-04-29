@@ -1,0 +1,32 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Opening and closing doors and windows"/>
+
+<xPageTitle>
+	Opening and closing doors and windows
+</xPageTitle>
+
+<p>
+	When you create a new door or window it is drawn partially opened. If you want
+	to draw it completel opened, closed, or somewhere in between then:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the door or window.
+	</li>
+	<li>
+		In the "Attributes" dialog that appears, find the <bold>"Opened"</bold> setting
+		and move the adjacent slider to open and close the door/window.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:337>Customized doors and windows</a></li>
+</xul>

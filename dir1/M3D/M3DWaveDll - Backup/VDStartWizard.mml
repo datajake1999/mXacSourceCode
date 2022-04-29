@@ -1,0 +1,84 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice disguising"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Voice disguising</xtrheader>
+	<tr>
+		<td>
+			<<<$IFENTIREWIZARD>>>
+			<p>
+				MIF supports <bold>"voice chat"</bold>, which allows you to speak to other players
+				in the world using a microphone attached to your sound card.
+			</p>
+			
+			<p>
+				This wizard will help you get voice chat working, but guiding you
+				through the following steps:
+			</p>
+			<<<$ENDIFENTIREWIZARD>>>
+			
+			<ol>
+				<<<$IFENTIREWIZARD>>>
+				<li>
+					<bold>Make sure your microphone is plugged in and working
+					properly. </bold> If you don't have a microphone, this will
+					suggest a microphone
+					to get.
+				</li>
+				<<<$ENDIFENTIREWIZARD>>>
+				<li>
+					<bold>Let you change your voice to sound like someone else;</bold> many
+					people prefer to stay as anonymous as possible in a world.
+					Voice disguising is one way to stay anonymous.
+				</li>
+				<li>
+					<bold>Save (or load) your voice disguise settings.</bold> This
+					is useful when you wish to play in a different world but
+					wish to sound the same.
+				</li>
+				<<<$IFENTIREWIZARD>>>
+				<li>
+					<bold>Provide a brief tutuorial</bold> on how to use voice
+					chat. <bold>You won't be allowed to use voice chat</bold> until
+					you've seen this tutorial.
+				</li>
+				<<<$ENDIFENTIREWIZARD>>>
+			</ol>
+			
+			<p>
+				Please select on of the options to the right.
+			</p>
+		</td>
+		<td>
+			<<<$IFENTIREWIZARD>>>
+			<xChoiceButton style=righttriangle href="p:1000">
+				<bold>Guide me through the whole process</bold><br/>
+				Select this option if you've never used voice chat, or haven't
+				used it on this computer yet.
+			</xChoiceButton>
+			<<<$ENDIFENTIREWIZARD>>>
+			<xChoiceButton style=righttriangle href="p:2000">
+				<bold>Go right to voice disguising</bold><br/>
+				This skips the microphone setup and takes you directly
+				into the voice disguising options.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle name=save>
+				<bold>Save my current disguise</bold><br/>
+				Select this to save your current voice disguise.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle name=load>
+				<bold>Load in a new disguise</bold><br/>
+				This options loads in a voice diguise that was previously saved.
+			</xChoiceButton>
+			<<<$IFENTIREWIZARD>>>
+			<xChoiceButton style=righttriangle href="p:3000">
+				<bold>Skip to the voice-chat tutorial</bold><br/>
+				Press this to just view the voice-chat tutorial.
+			</xChoiceButton>
+			<<<$ENDIFENTIREWIZARD>>>
+		</td>
+	</tr>
+</xtablecenter>
+
+

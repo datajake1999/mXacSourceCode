@@ -1,0 +1,40 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Limiting building block elevations to stories"/>
+
+<xPageTitle>
+	Limiting building block elevations to stories
+</xPageTitle>
+
+<p>
+	When most building blocks are created they have two switches turned on:
+	One requires that their bottom is always in-line with a floor level. (This
+	makes sure that all the floors are even.) The other requires that their
+	height is in-line with a floor level. (Causing building blocks to be the same
+	height.)
+</p>
+
+<p>
+	If these restrictions are hampering your design then you can turn them off:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the building block.
+	</li>
+	<li>
+		In the "building block settings" dialog, press the <bold>"Intelligent
+		adjust"</bold> button.
+	</li>
+	<li>
+		Find the check-boxes for <bold>"Restrict building block elevation"</bold> and <bold>"Restrict
+		building block height to floors"</bold>. Check or uncheck them as desired.
+	</li>
+	<li>
+		You may also want to change the floor elevations. See <a href=r:270>Floor elevations</a>.
+	</li>
+</ol>
+

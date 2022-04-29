@@ -1,0 +1,110 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Forests"/>
+
+<xPageTitle>
+	Tutorial - Forests
+</xPageTitle>
+
+<p>
+	Ground objects also come with the ability to easily add a "forest". This
+	can be a bunch of trees, bushes, grasses, or even non-plant objects like rocks.
+	Adding a forest lets you easily populate your landscape with thousands of
+	trees (or other objects), turning it from a baren mountain of grass into
+	one covered with trees.
+</p>
+
+<p>
+	Adding a forest to a portion of your landscape is very similar to painting in
+	a texture:
+</p>
+
+<ol>
+	<li>
+		In the ground editor, select the <xButtonViewForest/>.
+	</li>
+	<li>
+		<bold>Double-click</bold> the "Double-click to add a new forest..." entry
+		in the list box.
+	</li>
+	<p>
+		The "Modify the forest" dialog will appear. It lets you change the forest's name,
+		what color it's displayed on in the map, and most importantly, the composition
+		of the forest's different layers.
+	</p>
+	<p>
+		A forest is divided into multiple "canopies". The main canopy consits of all the
+		tallest trees. Below that are shorter trees in the "under-canopy"
+		that require less light. Still below that are various bushes and shrubs. And at
+		the bottom of the canopies are the grasses and ferns that cover the forest floor.
+		Trees in the main canopy are usually 10m-20m apart, getting closer together (and shorter)
+		in the lower canopy. Grasses and ferns (the lowest canopy) are only 30cm apart.
+	</p>
+	<li>
+		Press the <bold>Change the canopy</bold> button to modify the canopy where the largest
+		trees reside.
+	</li>
+	<li>
+		Each canopy consists of a variety of types of trees. Press
+		the <bold>Add a new object</bold> button in the "Canopy" dialog to add tree
+		to the canopy.
+	</li>
+	<p>
+		You can (and probably will) add more than one type of tree to ensure a good
+		variety of foliage.
+	</p>
+	<li>
+		<bold>Close</bold> the "Canopy" dialog.
+	</li>
+	<li>
+		Your newly created forest will be shown in the forest list box to the right
+		of the map. <bold>Select</bold> your forest if it is not already selected.
+	</li>
+	<li>
+		Use <xButtonBrush32/> to paint in regions where your forest will be drawn, just
+		like you painted in textures. (You can also paint in multiple forests just like
+		you painted in multiple textures.)
+	</li>
+	<li>
+		To see your forest, press <xButtonSave/> and <bold>switch to</bold> the main 3d
+		view.
+	</li>
+	<p>
+		Instead of drawing trees, <xSN/> will draw a bunch of green boxes. It draws the
+		boxes instead of the trees because drawing several thousand highly-detailed trees
+		takes a long time. If you save the image as a file, print it, or create an animation,
+		the trees will be drawn correctly.
+	</p>
+	<li>
+		If you want to see the trees drawn correctly while you're working, select
+		the <xButtonObjDialog/> tool in the main 3D view.
+	</li>
+	<li>
+		<bold>Click on</bold> the ground.
+	</li>
+	<li>
+		In the "Ground settings" page <bold>un-check</bold> the <bold>draw forest trees
+		as boxes</bold> button. The ground will be redrawn with trees instead of boxes.
+	</li>
+</ol>
+
+<p>
+	<bold>Tip:</bold> You don't have to use all the canopies if you don't want to, and you can always
+	"re-define" their meaning, such as using the "Grasses" canopy to draw randomly
+	scattered rocks.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:622><bold>Next</bold></button>
+</p>
+
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:930>Grass, fast-drawing</a></li>
+	<li><a href=r:632>Paint based on elevation and slope</a></li>
+	<li><a href=r:932>Rivers and streams</a></li>
+</xul>

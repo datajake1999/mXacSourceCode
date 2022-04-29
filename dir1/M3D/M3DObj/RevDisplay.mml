@@ -1,0 +1,21 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Which control points are displayed"/>
+
+<xChoiceButton style=check radiobutton=true group=path,shape,scale name=path>
+	<bold>Revolution shape</bold><br/>
+	Change the shape of the revolution. You must have specified "Custom" for this
+	to work.
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=path,shape,scale name=shape>
+	<bold>Profile shape</bold><br/>
+	This lets you control the shape of the lathe object's profile. It will only display control
+	points if you have specified the shape to be "Custom".
+</xChoiceButton>
+
+<xChoiceButton style=check radiobutton=true group=path,shape,scale name=scale>
+	<bold>Size</bold><br/>
+	Use this to control the size of the extrusion's profile.
+</xChoiceButton>
+

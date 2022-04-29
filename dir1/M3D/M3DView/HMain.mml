@@ -1,0 +1,46 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="3D Outside the Box Help"/>
+
+<p><font color=#800000><bold><big>
+	WARNING: This is a pre-release version of <xSN/>. It is only partially working, will crash,
+	and should not be relied upon for work.
+</big></bold></font></p>
+
+<xPageTitle>
+	<xLN/> Help
+</xPageTitle>
+
+<xchoicebutton href=r:240>
+	<bold>Tutorial</bold><br/>
+	Strongly recommended for new users, this will walk through using <xSN/> step by step.
+</xchoicebutton>
+
+<xchoicebutton href=r:237>
+	<bold>Search</bold><br/>
+	Use this page to search through <xSN/>'s help for keywords.
+</xchoicebutton>
+
+<xchoicebutton href=r:239>
+	<bold>Table of contents</bold><br/>
+	This shows you a list of all the help topics.
+</xchoicebutton>
+
+<xbr/>
+
+<xchoicebutton href=r:486>
+	<bold>Register</bold><br/>
+	Tells you how to register and pay for your copy of <xLN/>.
+</xchoicebutton>
+
+<xchoicebutton href=r:241>
+	<bold>Bugs and feature requests</bold><br/>
+	If you find a bug (or
+	have a feature request) check out this page for information on mailing it to me.
+</xchoicebutton>
+
+<xchoicebutton href=r:238>
+	<bold>About <xLN/></bold><br/>
+	Provides copyright and version information.
+</xchoicebutton>
+

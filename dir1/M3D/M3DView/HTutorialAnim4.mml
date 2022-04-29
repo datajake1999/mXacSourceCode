@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Playing animations"/>
+
+<xPageTitle>
+	Tutorial - Playing animations
+</xPageTitle>
+
+<p>
+	Whenever you work on an animation you'll need to repeatedly watch the animation and
+	then make changes to see how well the changes worked. You can play the animation by
+	dragging the time pointer in the animation time bar. This doesn't give you very
+	accurate timing though. For more accurate timing:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonAnimPlay/> button. This will play from the current time to
+		the end of the scene (or the end of the playback range.)
+	</li>
+	<li>
+		Of course, pressing <xButtonAnimStop/> will stop playback.
+	</li>
+	<li>
+		The animation is drawn as quickly as the computer can. If the animation is too
+		jump, just lower the drawing quality using <xButtonViewQuality/>. Wireframe and/or
+		monochromatic will draw the fastest.
+	</li>
+</ol>
+
+<xsectiontitle>Looped playback</xsectiontitle>
+
+<p>
+	If you have a portion of the animation that you're working on and which to make
+	perfect, just use the looped playback mode:
+</p>
+
+<ol>
+	<li>
+		<bold>Click on and drag</bold> the two playback range indicators so they mark out
+		the section of the scene you wish to view. The playback range indicators are two
+		small boxes on the playback bar. Initially the start playback range is all
+		the way to the left, at 0 seconds, end the end playback is at the end of the
+		scene. (Scenes start out at 60 seconds long.)
+	</li>
+	<li>
+		Press <xButtonAnimPlayLoop/>.
+	</li>
+	<p>
+		The animation will play from the current playback time to the end of the playback
+		range. It will then jump back to the start of the playback range and continue
+		playing, repeating until you hit <xButtonAnimStop/>.
+	</p>
+	<li>
+		<xButtonAnimJumpStart/> and <xButtonAnimJumpEnd/> will jump to the start and
+		end of the playback range.
+	</li>
+	<li>
+		<xButtonAnimJumpPrev/> and <xButtonAnimJumpNext/> will move the play position to
+		the previous and next keyframe in the animation. If you have animated more than
+		one object, it may end up jumping to the next keyframe in one of the other objects.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:559><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:816>Playing audio objects</a></li>
+</xul>

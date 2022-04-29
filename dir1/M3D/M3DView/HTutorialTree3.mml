@@ -1,0 +1,85 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Leaf object"/>
+
+<xPageTitle>
+	Tutorial - Leaf object
+</xPageTitle>
+
+<p>
+	Creating a leaf object is just like creating any other object.
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLibrary/> button and select the <bold>"Objects"</bold> menu.
+	</li>
+	<li>
+		In the "Object library" page set the <bold>major category</bold> to "Object pieces",
+		and the <bold>minor category</bold> to "Leaves".
+	</li>
+	<li>
+		Press the <bold>"Create a new object from scratch"</bold> button.
+	</li>
+	<p>
+		An object-editor window will appear, letting you edit your leaf object.
+		Although you can create your leaf in any way you wish, <xSN/> provides
+		an object specially designed for drawing leaves. Use this for now.
+	</p>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		In the "Add a new object" dialog, <bold>switch to</bold> the "Object pieces" major category,
+		and "Leaves" minor category.
+	</li>
+	<li>
+		Select the <bold>"Leaf object"</bold> object; it looks like a square, floppy leaf.
+	</li>
+	<li>
+		<bold>Add it</bold> to the object you're creating. <bold>Make sure</bold> that the end of it's
+		stem is exactly at 0 EW, 0 NS, and 0 UD and that the leaf is pointing north.
+		You need to do this because when your leaf object is used later, the branch object
+		attache the leaf from the 0 ES, 0 NS, and 0 UD position.
+	</li>
+	<li>
+		Select the <xButtonObjPaint/> tool, and <bold>click on</bold> the leaf. <bold>Select</bold> the
+		texture (image of the leaf you just scanned in).
+	</li>
+	<p>
+		Assuming the <xButtonViewQuality/> is set to "Textures", you'll see your leaf image
+		appear (somewhat squashed) over the leaf.
+	</p>
+	<li>
+		You should also <xButtonObjPaint/> the stem of the leaf.
+	</li>
+	<li>
+		To change the leaf's size and floppiness, select the <xButtonObjDialog/> tool
+		and <bold>click on</bold> the leaf.
+	</li>
+	<li>
+		In the "Leaf settings" page, <bold>change</bold> the leaf's width, length, detail, crease,
+		etc. until your leaf looks correct.
+	</li>
+	<li>
+		You may also wish to use <xButtonObjControlNSEWUD/> to control the length of the stem
+		and it's angle. Even though in your trees leaves will be rotated up and down for
+		variation, you should orient this leaf so it is rotated the same as a "typical" leaf
+		in your tree. Likewise, it should be a "typically sized" leaf.
+	</li>
+	<li>
+		<xButtonSave/> your leaf.
+	</li>
+	<li>
+		<xButtonClose/> the object editor window.
+	</li>
+</ol>
+
+<p>
+	Alternatively, you can always use an existing leaf from "Object pieces", "Leaves".
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:641><bold>Next</bold></button>
+</p>
+

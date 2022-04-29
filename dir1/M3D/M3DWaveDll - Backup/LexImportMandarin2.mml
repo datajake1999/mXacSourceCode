@@ -1,0 +1,63 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Import a Mandarin lexicon - 2009"/>
+
+
+
+<p>
+	Use this page to import a Mandarin lexicon. This is for the Blizzard 2009 challenge.
+	It reads in a file, cedict_ts.u8 (from the CEDICT organization). Part-of-speech
+	is determined (as much as possible) by using the English lexicon to guess what parts
+	of speech the word definitions are implying.
+</p>
+
+<p>
+	The typical cedict_ts.u8 line format is:
+</p>
+
+<p><blockquote>
+	<italic>(Chinese chars)</italic> [yi1 xia4 zi5] /in a short while/all at once/all of a sudden/
+</blockquote></p>
+
+<p>
+	Parts in italic (above) are ignored by the current conversion implementation.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Files</xtrheader>
+	<tr>
+		<td>
+			<bold>cedict_ts.u8 file</bold> - Full path for the cedict_ts.u8 file,
+			such as "c:\Blizzard2009\cedict_ts.u8".
+		</td>
+		<td>
+			<bold><edit maxchars=256 width=100% name=u8file/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>English lexicon</bold> - Full path for the English lexicon,
+			such as "c:\program files\mxac\3D Outside the box\EnglishInstalled.mlx".
+		</td>
+		<td>
+			<bold><edit maxchars=256 width=100% name=englishlex/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+
+<xChoiceButton style=righttriangle name=next>
+	<bold>Next</bold><br/>
+	Press this once you have filled in all the above information.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xChoiceButton name=defaults>
+	<bold>Restore defaults</bold><br/>
+	Press this to restore the Chinese defaults.
+</xChoiceButton>
+

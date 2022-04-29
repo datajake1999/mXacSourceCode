@@ -1,0 +1,34 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Save settings"/>
+
+<!xComboViewHow>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Waveform</elem>
+		<elem name=1>Spectrogram</elem>
+		<elem name=2>Features</elem>
+	</combobox></bold>
+</xComboViewHow>
+
+<xtablecenter width=80%>
+	<xtrheader>Save settings</xtrheader>
+	<tr>
+		<td>
+			You might wish to <bold>save your voice disguise settings</bold> to disk
+			just to make sure they're not accidentally overwritten.
+		</td>
+		
+		<td>
+			<xChoiceButton style=righttriangle name=save>
+				<bold>Save</bold><br/>
+				Press this to save your settings to disk.
+			</xChoiceButton>
+			
+			<xChoiceButton style=righttriangle name=nextnosave>
+				<bold>Next</bold><br/>
+				Skip the save and continue to the next page.
+			</xChoiceButton>
+		</td>
+		
+	</tr>
+</xtablecenter>

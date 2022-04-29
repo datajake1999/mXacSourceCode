@@ -1,0 +1,42 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - Keeping feet on the ground"/>
+
+<xPageTitle>
+	Bones - Keeping feet on ground
+</xPageTitle>
+
+<p>
+	When a custom object includes a skeleton, the movement reference points for the custom
+	object are set the the joint locations. This is very useful since it allows you to easily
+	keep the object's feet tied to the ground (unless you want a flying character).
+</p>
+
+<p>
+	To keep a character's foot on the ground: (Assuming it has a skeleton.)
+</p>
+
+<ol>
+	<li>
+		Select the object using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Press the <xButtonMoveReference/> button.
+	</li>
+	<li>
+		In the menu that appears, <bold>select the bone</bold> whose end you wish to keep
+		on the ground. This is usually the foot or the toes. Notice that the bones are sorted
+		such that the lower bones appear first in the list.
+	</li>
+	<li>
+		Select the <xButtonMoveUD/> tool.
+	</li>
+	<li>
+		While <bold>holding the shift button down</bold>, click on the character
+		and <bold>move</bold> it up or down. The vertical position of the character will
+		automatically snap to the ground (or any other objects directly under/over the
+		bone).
+	</li>
+</ol>
+
+

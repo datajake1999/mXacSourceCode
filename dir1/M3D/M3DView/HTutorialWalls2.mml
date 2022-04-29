@@ -1,0 +1,122 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - internal walls (2)"/>
+
+<xPageTitle>
+	Tutorial - internal walls (2)
+</xPageTitle>
+
+<xSectionTitle>Moving walls</xSectionTitle>
+
+<p>
+	To move a wall:
+</p>
+
+<ol>
+	<li>
+		Choose the <xButtonSelIndividual/> tool and click on the wall.
+	</li>
+	<li>
+		The wall will be selected and should display a blue control point at each
+		corner. If <bold>the control points aren't blue</bold> then:
+	</li>
+	<ol>
+		<li>
+			Select the <xButtonObjControlDialog/> tool.
+		</li>
+		<li>
+			Click on the wall.
+		</li>
+		<li>
+			In the "Which control points are displayed" page,
+			check the <bold>"Rotation"</bold> box. You'll see
+			the blue control points appear.
+		</li>
+		<li>
+			Close the dialog.
+		</li>
+	</ol>
+	
+	<li>
+		Switch to the <xButtonObjControlNSEW/> tool.
+	</li>
+	
+	<li>
+		Click on the control points and drag them around. The corner of the wall
+		will move with them.
+	</li>
+	
+	<p>
+		If any other walls ended at the same point, they also will move. If you
+		don't want them to then "yank" the wall out of the way using
+		the <xButtonMoveNSEW/> tool.
+	</p>
+	
+</ol>
+
+<xSectionTitle>Intelligent adjust and walls</xSectionTitle>
+
+<p>
+	Two problems exist with the walls you just created: They are 4 meters high and probably
+	go through the ceiling into the next floor, and where their edges meet is a very
+	messy corner. To see this:
+</p>
+
+<ol>
+	<li>
+		Assuming you're in the <xButtonViewFlat/>, select the <xButtonViewFlatLookAt/> tool.
+	</li>
+	<li>
+		Click and drag so the walkthrough camera will be looking at one of the corners.
+		(This will only work if you created two walls whose corners met.)
+	</li>
+	<p>
+		You'll notice that intersection of the two walls is messy, as though they don't
+		quite meet.
+	</p>
+	<li>
+		Show all the floors using <xButtonClipLevel/>.
+	</li>
+	<li>
+		If you use the <xButtonViewWalkLRUD/> tool and move the walkthrough view up
+		one floor (or onto the roof) you'll see the walls you just created sticking out.
+	</li>
+</ol>
+
+<p>
+	To fix both of these problems:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjIntelAdjust/> tool.
+	</li>
+	<li>
+		Click on the walls you created using the tool.
+	</li>
+	<p>
+		Each wall you click on will readjust the bevelling on its edge so that its
+		edge meets nicely with other walls, and the wall will trim it's top
+		down to the ceiling.
+	</p>
+</ol>
+
+<p>
+	You'll need to use <xButtonObjIntelAdjust/> on the wall whenever you move it.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:284><bold>Next</bold></button>
+</p>
+
+<xbr/>
+
+<xSectionTitle>See also...</xSectionTitle>
+
+<xul>
+	<li><a href=r:305>Curved walls, roofs, and floors</a></li>
+	<li><a href=r:304>Overlaying textures on walls, roofs, and floors</a></li>
+	<li><a href=r:303>Wall, roof, and floor edges</a></li>
+	<li><a href=r:302>Wall, roof, and floor thickness</a></li>
+</xul>

@@ -1,0 +1,99 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Creating"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Creating
+</xPageTitle>
+
+<p>
+	There are two ways to create a polygon mesh: Directly or indirectly. Creating one
+	directly lets you being with a simple shape (such as a sphere) that you modify
+	into whatever shape you wish (such as a head). To create a polygon mesh indirectly
+	you first create another <xSN/> object, such as a fence, and then <xButtonObjDeconstruct/> it
+	into a polygon mesh.
+</p>
+
+<xSectionTitle>Direct creation</xSectionTitle>
+
+<p>
+	For the purpose of this tutorial we'll create the polygon mesh directly:
+</p>
+
+<ol>
+	<li>
+		Press <xButtonObjNew/>.
+	</li>
+	<li>
+		In the "Add a new object" dialog, <bold>switch</bold> to "Polygon meshes"
+		under "Object pieces".
+	</li>
+	<li>
+		<bold>Select</bold> the "cube" polygon mesh and <bold>add it</bold> to your world.
+	</li>
+	<li>
+		If you use the <xButtonViewQuality/> menu and switch to <bold>Wireframe</bold> you'll
+		see that the cube is built from on rectangle (polygon) on a side.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click on</bold> the wireframe cube.
+	</li>
+	<p>
+		The "Polygon mesh (phase I) settings" dialog will appear.
+	</p>
+	<li>
+		<bold>Drag</bold> the "control points" slider to the right; you'll see the cube's
+		faces divided into two or more rectangles. <bold>Drag the slider</bold> until
+		each side is 3x3 rectangles.
+	</li>
+	<p>
+		Underneath the "Control points" slider are options for smoothing. I'll explain
+		what they're for later.
+	</p>
+	<li>
+		<bold>Close</bold> the dialog box and return the <xButtonViewQuality/> to "Textures".
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool and move the cube's control points around
+		to reshape and resize it.
+	</li>
+	<p>
+		If you want to add control points, or resize a polygon mesh, it's easiest to do
+		while it's in "Phase I", where the object is treated as a simple shape (cube, sphere,
+		etc.) Once you convert to "Phase II" so you can hand-modify the points, adding extra
+		vertices and/or resizing becomes a bit more difficult.
+	</p>
+	<li>
+		Once you have finished sizing your shape, return the the dialog
+		using <xButtonObjDialog/>.
+	</li>
+	<li>
+		Press <bold>"Convert the Phase II"</bold>.
+	</li>
+	<li>
+		The page will change to indicate it's converted. <bold>Close</bold> the dialog.
+	</li>
+</ol>
+
+
+<xSectionTitle>Indirect creation</xSectionTitle>
+
+<p>
+	The other way you can create a polygon mesh it
+	to create a different type of object, such as an extrusion, bathtub, or even
+	a building block. Select the <xButtonObjDeconstruct/> tool and click on the object.
+	Some objects will deconstruct into objects that are not polygon meshes (such as
+	building blocks), but if you then deconstruct those pieces, you'll eventually
+	end up with a polygon mesh.
+</p>
+
+<p>
+	<bold>Warning:</bold> Deconstructing complex objects, like trees, is not always
+	a wise thing to do. Trees are built from 10,000 to 1,000,000 polygons. If you
+	deconstruct a tree into a polygon mesh the new object will be very large.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:895><bold>Next</bold></button>
+</p>
+

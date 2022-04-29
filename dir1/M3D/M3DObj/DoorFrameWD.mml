@@ -1,0 +1,99 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Frame width and depth"/>
+
+<xTableCenter width=100%>
+	<xtrheader>Width</xtrheader>
+	<tr>
+		<td>
+			<bold>Main framing</bold> - Width of the framing for
+			the entire opening.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=framing0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sub-framing</bold> - Width of the framing items
+			that divide the main framing up.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=subframing0/></bold></td>
+	</tr>
+</xtableCenter>
+
+<xTableCenter width=100%>
+	<xtrheader>Depth</xtrheader>
+	<tr>
+		<td>
+			<bold>Main framing</bold> - Depth of the framing for
+			the entire opening. (<bold>See below.</bold>)
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=framing1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Sub-framing</bold> - Depth of the framing items
+			that divide the main framing up.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=subframing1/></bold></td>
+	</tr>
+</xtableCenter>
+
+<xTableCenter width=100%>
+	<xtrheader>Automatic framing depth</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=autodepth>
+			<bold>Always make frames as deep as the walls</bold><br/>
+			If checked, the framing depth is set to the wall thickness plus or minus
+			the following adjustment.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Auto adjust</bold> - Make the framing depth this much more than the
+			wall thickness. (Negative numbers make is smaller.)
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=autoadjust/></bold></td>
+	</tr>
+</xtableCenter>
+
+<xTableCenter width=100%>
+	<xtrheader>Bevelling</xtrheader>
+	<tr><td>
+		If the wall is thicker than the framing then it will be bevelled. This section
+		lets you set the amount of bevelling. (Note: Bevelling does <bold>not</bold> occur
+		if the frame is centered.)
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Side</bold> - Which side of the wall the framing is on.
+		</td>
+		<td>
+			<bold><combobox cbheight=150 width=100% name=side>
+				<elem name=0>Outside</elem>
+				<elem name=1>Center</elem>
+				<elem name=2>Inside</elem>
+			</combobox></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left/right bevel</bold> - In degrees. 0 for perpendicular. Positive
+			numbers bevel outwards.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=bevel0/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top bevel</bold> - In degrees. 0 for perpendicular. Positive
+			numbers bevel upwards.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=bevel1/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom bevel</bold> - In degrees. 0 for perpendicular. Positive
+			numbers bevel downards.
+		</td>
+		<td><bold><edit maxchars=32 width=100% name=bevel2/></bold></td>
+	</tr>
+</xtablecenter>

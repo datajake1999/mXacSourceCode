@@ -1,0 +1,64 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Animation bookmarks"/>
+
+<xPageTitle>
+	Animation bookmarks
+</xPageTitle>
+
+<p>
+	The animation timeline allows you to add objects other than keyframes.
+	One type of object it allows you to add are bookmarks. Bookmarks don't affect
+	the animation, but they provide convenient markers for finding a segment
+	of animation, and for specifying what shots should be animated from
+	which cameras.
+</p>
+
+<p>
+	To create a bookmark:
+</p>
+
+<ol>
+	<li>
+		If you want a bookmark for a specific time (but no timespan) then
+		use the <xButtonNewAnimBookmark1/> tool. If you want a bookmark than
+		spans a period of time, use the <xButtonNewAnimBookmark2/> tool.
+	</li>
+	<li>
+		The mouse pointer will change to indicate that you are adding a bookmark.
+		<bold>Click on</bold> the object timeline where you wish the bookmark added.
+		If you have selected <xButtonNewAnimBookmark2/> you will need to <bold>drag</bold> the
+		mouse to indicate the duration of the bookmark.
+	</li>
+	<li>
+		You can rename the bookmark using the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Durational bookmarks can be resized using <xButtonAnimResize/>.
+	</li>
+</ol>
+
+<p>
+	Bookmarks are useful in the following circumstances:
+</p>
+
+<xul>
+	<li>
+		If you press the <xButtonSceneBookmark/> button you will be shown a list
+		of bookmarks in a menu. Clicking on one will move the timeline and current
+		playback time to that time.
+	</li>
+	<li>
+		When you animate a scene you can have the animation limited to the time within
+		a durational bookrmark, or between two 0-duration bookmarks. This is especially
+		useful when you have a scene shot by different cameras; each shot can have
+		a bookmark assigned so it can easily be animated without manually entering
+		the start and stop time.
+	</li>
+</xul>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:571>Resizing animation objects</a></li>
+</xul>

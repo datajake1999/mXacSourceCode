@@ -1,0 +1,77 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Paint based on elevation and slope"/>
+
+<p>
+	Use this page to paint a texture or forest that is elevation or
+	slope dependent. Example: This page lets you paint snow at high elevations,
+	or specific types of trees on steep slopes.
+</p>
+
+<p>
+	Adjust the sliders to change what elevations and slopes are to be selected.
+	The affected area will be highlighted in red.
+	Then press the "Paint" button below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Elevation and slope</xtrheader>
+	<tr>
+		<td>
+			<bold>Elevation</bold> - Move the slider to affect the elevation that is
+			selected. The right is higher elevations.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=elev/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Elevation range</bold> - Controls how much elevation is affected.
+			The further to the right, the larger band.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=elevrange/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Slope</bold> - Move the slider to affect what slopes are
+			selected. All the way to the left are flat areas, while to the right
+			are steep slopes.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=slope/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Slope range</bold> - This controls how much variation in slope
+			is selected. Further to the right selects a larger variation.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=sloperange/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Amount</bold> - Amount to paint, the further to the right the heavier
+			the paint.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=amount/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=paint>
+			<bold>Paint</bold><br/>
+			Press this to paint the selected texture or forest in the highlighted area.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle name=unpaint>
+			<bold>Un-paint (Remove texture or forest)</bold><br/>
+			Press this to remove the current texture or forest from
+			the highlighted area.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

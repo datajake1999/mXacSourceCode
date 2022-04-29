@@ -1,0 +1,210 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Door/window selection"/>
+
+
+<!xListDoorType>
+	<listbox sort=false macroattribute=1>
+		<elem name=203>Cabinet door, <bold>Glass</bold></elem>
+		<elem name=202>Cabinet door, <bold>Lites</bold></elem>
+		<elem name=204>Cabinet door, <bold>Louver</bold></elem>
+		<elem name=201>Cabinet door, <bold>Panel</bold></elem>
+		<elem name=200>Cabinet door, <bold>Solid</bold></elem>
+		<elem name=51>Door, <bold>Braced 1</bold></elem>
+		<elem name=52>Door, <bold>Braced 2</bold></elem>
+		<elem name=61>Door, <bold>Garage 1</bold></elem>
+		<elem name=62>Door, <bold>Garage 2</bold></elem>
+		<elem name=63>Door, <bold>Garage 3</bold></elem>
+		<elem name=71>Door, <bold>Gate</bold></elem>
+		<elem name=11>Door, <bold>Glass, circle</bold></elem>
+		<elem name=9>Door, <bold>Glass, commercial</bold></elem>
+		<elem name=5>Door, <bold>Glass, divided</bold></elem>
+		<elem name=15>Door, <bold>Glass, fancy</bold></elem>
+		<elem name=8>Door, <bold>Glass, Japanese</bold></elem>
+		<elem name=4>Door, <bold>Glass, lites</bold></elem>
+		<elem name=6>Door, <bold>Glass, lites 2</bold></elem>
+		<elem name=7>Door, <bold>Glass, lites 3</bold></elem>
+		<elem name=13>Door, <bold>Glass, narrow</bold></elem>
+		<elem name=3>Door, <bold>Glass, no lites</bold></elem>
+		<elem name=10>Door, <bold>Glass, oval</bold></elem>
+		<elem name=12>Door, <bold>Glass, semi-circle</bold></elem>
+		<elem name=14>Door, <bold>Glass, square</bold></elem>
+		<elem name=31>Door, <bold>Louver 1</bold></elem>
+		<elem name=32>Door, <bold>Louver 2</bold></elem>
+		<elem name=33>Door, <bold>Louver 3</bold></elem>
+		<elem name=21>Door, <bold>Panel 1</bold></elem>
+		<elem name=22>Door, <bold>Panel 2</bold></elem>
+		<elem name=23>Door, <bold>Panel 3</bold></elem>
+		<elem name=24>Door, <bold>Panel 4</bold></elem>
+		<elem name=25>Door, <bold>Panel 5</bold></elem>
+		<elem name=26>Door, <bold>Panel 6</bold></elem>
+		<elem name=27>Door, <bold>Panel 7</bold></elem>
+		<elem name=41>Door, <bold>Panel with glass 1</bold></elem>
+		<elem name=42>Door, <bold>Panel with glass 2</bold></elem>
+		<elem name=43>Door, <bold>Panel with glass 3</bold></elem>
+		<elem name=44>Door, <bold>Panel with glass 4</bold></elem>
+		<elem name=45>Door, <bold>Panel with glass 5</bold></elem>
+		<elem name=2>Door, <bold>Screen</bold></elem>
+		<elem name=1>Door, <bold>Slab</bold></elem>
+		<elem name=0><font color=#800000><italic><bold>Custom door or window</bold></italic></font></elem>
+		<elem name=153>Window, <bold>Bars, diagonal</bold></elem>
+		<elem name=151>Window, <bold>Bars, horizontal</bold></elem>
+		<elem name=152>Window, <bold>Bars, vertical</bold></elem>
+		<elem name=111>Window, <bold>Lites</bold></elem>
+		<elem name=112>Window, <bold>Lites, radial 1</bold></elem>
+		<elem name=113>Window, <bold>Lites, diamond</bold></elem>
+		<elem name=114>Window, <bold>Lites, radial 2</bold></elem>
+		<elem name=115>Window, <bold>Lites, radial 3</bold></elem>
+		<elem name=116>Window, <bold>Lites, radial 4</bold></elem>
+		<elem name=117>Window, <bold>Lites, fancy</bold></elem>
+		<elem name=118>Window, <bold>Lites, Japanese</bold></elem>
+		<elem name=141>Window, <bold>Louver blade, horizontal</bold></elem>
+		<elem name=142>Window, <bold>Louver blade, vertical</bold></elem>
+		<elem name=101>Window, <bold>Plain</bold></elem>
+		<elem name=102>Window, <bold>Plain, aluminum frame</bold></elem>
+		<elem name=104>Window, <bold>Plain, frosted</bold></elem>
+		<elem name=103>Window, <bold>Plain, wood frame</bold></elem>
+		<elem name=131>Window, <bold>Screen</bold></elem>
+		<elem name=121>Window, <bold>Shutter, traditional</bold></elem>
+		<elem name=122>Window, <bold>Shutter, braced</bold></elem>
+		<elem name=154>Window, <bold>Slats, horizontal</bold></elem>
+		<elem name=155>Window, <bold>Slats, vertical</bold></elem>
+	</listbox>
+</xListDoorType>
+
+<xtablecenter width=100%>
+	<tr><td>
+		<p>
+			Select the door/window style you wish to use.
+		</p>
+		<xlistdoortype width=90% height=90% vscroll=lscroll name=doortype/>
+		<scrollbar orient=vert height=90% width=8% name=lscroll/>
+	</td></tr>
+</xtablecenter>
+
+<!xComboDivType>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=12>Bracing</elem>
+		<elem name=7>Divider, horizontal</elem>
+		<elem name=8>Divider, vertical</elem>
+		<elem name=5>Dividers, horizontal</elem>
+		<elem name=6>Dividers, vertical</elem>
+		<elem name=0>Frame, around entire section</elem>
+		<elem name=3>Frame, on left and right</elem>
+		<elem name=2>Frame, on top and bottom</elem>
+		<elem name=11>Glass</elem>
+		<elem name=4>Open</elem>
+		<elem name=9>Panel, raised</elem>
+		<elem name=1>Panel, solid</elem>
+		<elem name=10>Panel, with cutout</elem>
+	</combobox></bold>
+</xComboDivType>
+
+<!xComboDDCUT>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Circle</elem>
+		<elem name=2>Hemi-circle, bottom flat</elem>
+		<elem name=4>Hemi-circle, left flat</elem>
+		<elem name=5>Hemi-circle, right flat</elem>
+		<elem name=3>Hemi-circle, top flat</elem>
+		<elem name=1>Square/rectangle</elem>
+	</combobox></bold>
+</xComboDDCUT>
+
+<!xComboDDMS>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=2>Diamond</elem>
+		<elem name=1>Horizontal and vertical</elem>
+		<elem name=0>No mullions</elem>
+		<elem name=3>Radiating</elem>
+	</combobox></bold>
+</xComboDDMS>
+
+<!xComboDDCB>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>Z</elem>
+		<elem name=1>/</elem>
+		<elem name=2>&gt;</elem>
+	</combobox></bold>
+</xComboDDCB>
+
+<!xComboDDSURF>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=512>Bracing</elem>
+		<elem name=256>Door handle</elem>
+		<elem name=64>Flyscreen</elem>
+		<elem name=1>Glass, clear</elem>
+		<elem name=1024>Glass, frosted</elem>
+		<elem name=2048>Framing, aluminum</elem>
+		<elem name=2>Framing, external</elem>
+		<elem name=4>Framing, internal</elem>
+		<elem name=128>Louvers</elem>
+		<elem name=0><italic>Nothing</italic></elem>
+		<elem name=8>Panel, external</elem>
+		<elem name=16>Panel, internal</elem>
+		<elem name=32>Shutter</elem>
+	</combobox></bold>
+</xComboDDSURF>
+
+<!xComboBAngle>
+	<bold><combobox width=100% cbheight=150 macroattribute=1>
+		<elem name=0>0 degrees</elem>
+		<elem name=1>90 degrees</elem>
+		<elem name=2>180 degrees</elem>
+		<elem name=3>270 degrees</elem>
+	</combobox></bold>
+</xComboBAngle>
+
+<null>
+	<<<$THEPAGE>>>
+</null>
+
+<null>
+<<<$IFHELP>>>
+<xbr/>
+<xsectiontitle>Custom door help</xsectiontitle>
+
+<p>
+	The custom door and window settings require some explanation before you can understand
+	how they work...
+</p>
+
+<p>
+	A door (or window) begins with a shape that's the size of the entire opening.
+	That shape needs to be "filled" with something, such as a solid panel, raised
+	panel, or glass. You can select what type of material is used to fill the shape
+	using the drop-down list right under "Main section" and select "Panel, solid", "Panel, raised", or
+	"Glass".
+</p>
+
+<p>
+	Doing so will create a solid door without any framing. Many doors have framing,
+	especially glass ones. To create a frame, select "Frame, around entire section"
+	from the top-most drop-down list (right under "Main section"). Someplace down the
+	page will appear a box with "Sub-section" listed. Try selecting "Glass" in that
+	drop-down; you'll see the opening in the frame get filled with a pane of glass.
+</p>
+
+<p>
+	If you want the first frame subdivided into 3 vertical sections, change "Glass",
+	under the
+	"Sub-section" list-box, to "Dividers, horizontal". You'll see the frame divided
+	up into sub-frames but the glass disappears. To put the flass back in, find the
+	next "Sub-section" under "Dividers, horizontal" and select "Glass". The glass
+	reappears in each of the frames.
+</p>
+
+<p>
+	What you've done is divide the door (or window) into multiple frames, and placed
+	glass in each of the frames. Each custom door begins as one "section", which has
+	some sort of appearance. You can select the
+	style for the section to change it. Some styles include one or more sections.
+	Likewise, you can change the style and subsections in those.
+</p>
+
+<p>
+	If this explanation doesn't make much sense (which it probably doesn't) then just
+	experiment with the different settings. You can always undo the changes later.
+</p>
+<<<$ENDIFHELP>>>
+</null>

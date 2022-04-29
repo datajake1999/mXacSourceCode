@@ -1,0 +1,52 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Start recording my voice"/>
+
+<p>
+	Before you can start recording your voice, please enter the following information:
+</p>
+
+<xTableCenter>
+	<xtrHeader>Personal information</xtrHeader>
+	<tr>
+		<td>
+			<bold>Voice name</bold> - Type in the name that your voice will be called.
+			You can type in your own name, but please use your full name. There are a LOT
+			of text-to-speech voices called "Mike" and "Amy", so yet another "Mike" or "Amy"
+			would only confuse matters more.
+		</td>
+		<td><bold><edit width=100% maxchars=128 name=voicename/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Language</bold> - Select the language to record in.
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=language/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Gender</bold>
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=gender>
+			<elem name=1>Female</elem>
+			<elem name=0>Male</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Approximate age</bold>
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=age>
+			<elem name=0>Child</elem>
+			<elem name=1>Teenager</elem>
+			<elem name=2>Adult</elem>
+			<elem name=3>Senior</elem>
+		</combobox></bold></td>
+	</tr>
+</xTableCenter>
+
+
+<xChoiceButton name=newvoice>
+	<bold>I typed in all the information</bold><br/>
+	Press this once you have entered all the information, and your voice will be created.
+</xChoiceButton>

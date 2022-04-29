@@ -1,0 +1,210 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Audio object settings"/>
+
+<p>
+	When you include audio objects your animation will play the sound. If the
+	object you associate the audio with has a mouth, the lips will synchronize
+	with what's spoken (assuming you used the <xSN/> audio editor to mark out
+	the phoneme locations.)
+</p>
+
+<xTableCenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>File name</bold> - You must type in a .wav filename (or
+				use the "Browse..." option.
+		</td>
+		<td>
+			<edit maxchars=196 width=100% name=file/><br/>
+			<align align=right><button name=browse><bold>Browse...</bold></button></align>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Mix volume</bold> - This controls how much the volume will be increased
+			when the audio is mixed into the other audio in the animation.
+			Use 1.0 for no change. Larger number (like 2.0) will make it louder,
+			while smaller ones quieter. (If it's too loud the audio may "clip" and become
+			distorted.)
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=mixvol/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Preferred display</bold> - Select what kind of information you'd like
+			displayed in the audio object. (If the .wav file isn't loaded, or doesn't contain
+			the necessary information then your choice may not be used.)
+		</td>
+		<td><combobox width=100% cbheight=150 name=prefdisp>
+			<elem name=0><bold>File name</bold></elem>
+			<elem name=1><bold>Transcription</bold></elem>
+			<elem name=2><bold>Phonemes</bold></elem>
+			<elem name=3><bold>Waveform</bold></elem>
+			<elem name=4><bold>Spectrogram</bold></elem>
+		</combobox>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=loop>
+			<bold>Loop</bold><br/>
+			Normally, the audio will stop playing at the end of the wave file,
+			even if you extend the object's length past it. If this is checked, the audio
+			will loop until the marked end of the object; this is useful for creating
+			background sounds like waves lapping against a shore.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=cutshort>
+			<bold>Cut short</bold><br/>
+			Normally, the audio will play it's full length, even if you shorten the
+			audio object's length. If this is checked, the audio will stop where the
+			object ends; you can use this to play only the beginning of a wave file.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+
+<xChoiceButton name=edit>
+	<bold>Edit the wave</bold><br/>
+	Press this to bring up <xSN/>'s audio editor and modify the wave.
+</xChoiceButton>
+
+<xChoiceButton name=refresh>
+	<bold>Refresh</bold><br/>
+	Press this reload the wave file. Do this if the wave has been edited recently and
+	those changes aren't visible.
+</xChoiceButton>
+
+<xTableCenter width=100%>
+	<xtrheader>Lip synchronization</xtrheader>
+	<tr><td>
+		<xSN/> uses the phoneme information stored in the wave file to animate the lips
+		of the object. This is done by using the phonemes to fill in specific attributes
+		(see below) that are animated based on the phonemes. If your object supports
+		the attributes with the right names(either as polygon mesh deformations or bones that
+		move the lips)
+		then the lips will animate. If not, nothing will happen.
+		<p/>
+		Please select how the attributes to animate will be chosen:
+		<p/>
+		<xChoiceButton style=check radiobutton=true group=lipauto,liponoff,lipnone name=lipauto>
+			<bold>Automatic detection of attributes</bold><br/>
+			This automatically detects what type of lip synchronization the object supports.
+			See below for details.
+		</xChoiceButton>
+		<xChoiceButton style=check radiobutton=true group=lipauto,liponoff,lipnone name=liponoff>
+			<bold>Mouth opens and closes only</bold><br/>
+			Only the mouth opening and closing will be supported. Select the attribute to
+			"open and close" from the combo box. The attribute will vary from 0 (closed) to 1 (open).
+		</xChoiceButton>
+		<p align=right><bold><combobox width=66% cbheight=150 name=onoffcombo>
+		</combobox></bold></p>
+		<xChoiceButton style=check radiobutton=true group=lipauto,liponoff,lipnone name=lipnone>
+			<bold>No lip sync</bold><br/>
+			Don't do lip sync for this object; just play the audio. You only need to check this
+			if the object <bold>does</bold> support lip sync attributes but you don't want its
+			lips to synchronize to this audio.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Accentuate lip movement</bold> - This controls how much
+			the lips move. If 1.0 they move the normal amount. You can increase to a
+			higher number (like 1.5) to make the lip movement pronounced, or
+			decrease to reduce movement.
+		</td>
+		<td>
+			<edit maxchars=32 width=100% name=lipscale/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xSectionTitle>Automatic lip synchronization</xSectionTitle>
+
+<p>
+	<xSN/> uses the phonemes stored in the wave file to animate the lips of your
+	character. (If your wave file doesn't have any phonemes you will need to
+	run the audio editor and add them.)
+	Since <xSN/> doesn't really know the lips from any other part of an
+	object it does this by manipulating object attributes based upon the phonemes
+	spoken.
+</p>
+
+<p>
+	These attributes are either connected to a polygon mesh's deformations (morphing)
+	or a bones system, depending upon the object was created.
+	The number and name of the attributes will also vary depending upon the quality
+	of lip sync needed (and hence supported by the object). Most animators use only 6 to
+	8 shapes to represent all the phonemes. Others, especially if attempting realistic
+	closeups, may design their object with many more.	
+</p>
+
+<p>
+	The audio animation object will automatically determine which method
+	an object uses based upon which attributes are supported by the object. If you
+	are designing an object and wish to use automatic lip sync, your
+	object <bold>must</bold> support one of the following sets of attributes:
+</p>
+
+<xul>
+	<li>
+		<bold>One attribute per phoneme</bold> - <xSN/> will use a different attribute for
+		each phoneme (around 40 of them). The attributes must be
+		named <bold>LipSyncPhone:<italic>phoneme</italic></bold>, such
+		as <bold>LipSyncPhone:aa</bold> and <bold>LipSyncPhone:ae</bold>, etc.
+		When the phoneme is not spoken it's value will be 0. This will be changed to
+		1 when the phoneme is spoken.
+	</li>
+	<li>
+		<bold>8 mouth shapes</bold> - From the "Digital Character Animation 2"
+		book (<a href="http://www.newriders.com">http://www.newriders.com</a>) this
+		groups the phonemes into 8 categories: <bold>LipSyncPhone8:MBP</bold> for
+		"m", "b", and "p" phonemes. <bold>LipSyncPhone8:AI</bold> for wide open vowels such
+		as "aa" and "ay". <bold>LipSyncPhone8:E</bold> for the "iy"
+		phoneme. <bold>LipSyncPhone8:O</bold> for "ow". <bold>LipSyncPhone8:OO</bold> for
+		"uh" and "uw". <bold>LipSyncPhone8:LDTH</bold> for "l", "d", "th", and
+		"dh". <bold>LipSyncPhone8:FV</bold> for "f" and
+		"v". <bold>LipSyncPhone8:Rest</bold> for all the other mouth shapes.
+		Attribute values range from 0 (phoneme not spoken) to 1 (phoneme spoken).
+	</li>
+	<li>
+		<bold>6 mouth shapes</bold> - From a "3D World" magazine article (
+		<a href="http://www.3dworldmag.com">http://www.3dworldmag.com</a> by
+		Stepfan Marjoram. This groups phonemes into 6
+		categories: <bold>LipSyncPhone6:MBP</bold>, <bold>LipSyncPhone6:AI</bold>,
+		<bold>LipSyncPhone6:FV</bold>, <bold>LipSyncPhone6:E</bold>, and <bold>LipSyncPhone6:OO</bold> are
+		the same as the 8-mouth shapes. All the others are combined
+		into <bold>LipSyncPhone6:Rest</bold>.
+	</li>
+	<li>
+		<bold>Muscle-based attributes</bold> - Instead of selecting mouth shapes based on
+		attributes, the shape is determined by the amount of pulling and pushing on the mouth.
+		To use this an object must support 7 attributes, all of which range between 0 and
+		1: <bold>LipSyncMusc:LatTension</bold> pulls the mouth out to the left and right;
+		0 is a relaxed position, while 1 is the most stretched. <bold>LipSyncMusc:LatPucker</bold> is
+		the reverse of lateral tension, causing the lips to pucker; 0 is relaxed, while 1 is
+		fully puckered. <bold>LipSyncMusc:VertOpen</bold> indicates if the mouth is open, from
+		0 being closed to 1 fully open. <bold>LipSyncMusc:TeethUpper</bold> controls how much the
+		upper lip is raised above the teeth, where 0 keeps the upper teeth hidden, and 1 exposes
+		them. <bold>LipSyncMusc:TeethLower</bold> likewise affects the lower
+		teeth. <bold>LipSyncMusc:TongueForward</bold> controls how far forward the tip of
+		the tongue is; 0 is back at the soft palate, while 1 is touching the tips of the
+		teeth. <bold>LipSyncMusc:TongueUp</bold> controls the vertical position of the
+		tongue; 0 keeps the tongue against the base of the mouth, .5 level with the bottom
+		of the upper teeth, and 1 with the roof of the mouth.
+	</li>
+	<li>
+		<bold>Others?</bold> - Email me at <xMyEmail/> if you have any suggestions.
+	</li>
+</xul>
+
+<p>
+	<bold>Tip:</bold> Using automatic phonemes will create completely symmetrical mouth
+	shapes that are not entirely realistic. To get a-symmetrical mouth shapes, you may
+	wish to "Deconstruct" the wave object to expose all the attributes and then hand
+	modify them slightly to make them more realistic and/or visually interesting.
+</p>

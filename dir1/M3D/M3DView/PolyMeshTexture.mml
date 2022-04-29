@@ -1,0 +1,30 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify the texture"/>
+
+<xchoicebutton name=change>
+	<bold>Change the texture</bold><br/>
+	Displays the texture selection dilaog and lets you pick a new texture to display.
+</xchoicebutton>
+
+<xchoicebutton style=x checkbox=true name=inmeters>
+	<bold>Texture is applied using its original scale</bold><br/>
+	If this is checked then any texture applied will be scaled so it maintains the correct
+	size in relationship to the original texture. If unchecked the texture is stretched
+	over the surface.
+	<p/>
+	Example: If you apply a brick texture and this is checked then the bricks will be
+	scaled to standard brick size. If unchecked then the brick textures (a few bricks)
+	will be stretched over the surface ignoring their scale. Usually, if you were using
+	a brick texture this would be checked. If it were an texture-map of a face it would
+	be unchecked.
+</xchoicebutton>
+
+<xchoicebutton name=delete>
+	<bold>Delete the texture</bold><br/>
+	Deletes the selected texture. When this texture is deleted, all the sides using
+	this texture will be converted to using:
+</xchoicebutton>
+
+<p align=right><combobox width=75% cbheight=150 name=combodel/></p>
+

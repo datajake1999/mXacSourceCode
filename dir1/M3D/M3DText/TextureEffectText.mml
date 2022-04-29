@@ -1,0 +1,159 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Text to display"/>
+
+<!xComboLRAlign>
+	<bold><combobox width=100% cbheight=100 macroattribute=1>
+		<elem name=0>Left</elem>
+		<elem name=1>Center</elem>
+		<elem name=2>Right</elem>
+	</combobox></bold>
+</xComboLRAlign>
+
+<!xComboTBAlign>
+	<bold><combobox width=100% cbheight=100 macroattribute=1>
+		<elem name=0>Top</elem>
+		<elem name=1>Center</elem>
+		<elem name=2>Bottom</elem>
+	</combobox></bold>
+</xComboTBAlign>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Show this text</bold><br/>
+			This text will only be drawn if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Text</bold> - This is the text that will be displayed.
+		</td>
+		<td><bold><edit width=100% multiline=true wordwrap=true maxchars=1024 name=titletext/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Location</bold> - This is the left, right, top, bottom location of the text.
+			Values range from 0.0 (all the way on the left or top) to 100.0 (all the
+			way on the right or bottom).
+		</td>
+		<td><align align=right><bold>
+			Left: <edit width=50% maxchars=32 name=titleposn0/><br/>
+			Top: <edit width=50% maxchars=32 name=titleposn1/><br/>
+			Right: <edit width=50% maxchars=32 name=titleposn2/><br/>
+			Bottom: <edit width=50% maxchars=32 name=titleposn3/>
+		</bold></align></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left/right alignment</bold> - Controls how the text is aligned.
+		</td>
+		<td><bold><xComboLRAlign name=titlelr/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top/bottom alignment</bold> - Controls how the text is aligned.
+		</td>
+		<td><bold><xComboTBAlign name=titletb/></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=titlefont>
+			<bold>Change the font</bold><br/>
+			Press this to change the font and its size.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Applying the text to the texture</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton>
+				<bold>Color of the text</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Text-color opacity</bold> - Controls how much the text color is blended
+			in with the texture color underneath it.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=coloropacity/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=glowbutton>
+				<bold>Glow color of the text</bold><br/>
+				Click this to change the color that the text glows.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=glowcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Glow-color opacity</bold> - Controls how much the text glow-color is blended
+			in with the texture glow-color underneath it.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=glowopacity/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Glow-color brightness</bold> - Controls how bright the glow is. 1.0 is the
+			default glow, but use higher numbers for brighter glow, or 0.0 for no glow.
+		</td>
+		<td><edit maxchars=64 width=100% name=glowscale/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Raised text</bold> - This is the number of meters the text is raised above
+			the texture below.
+		</td>
+		<td>
+			<edit maxchars=64 width=100% name=textraise/><br/>
+			<xChoiceButton style=x checkbox=true name=textraiseadd>
+				<bold>Add this value</bold><br/>
+				If checked, the value is added to the existing bump map. If unchecked, the
+				existing bump map is completely replaced by this value.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Material (of the text)</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

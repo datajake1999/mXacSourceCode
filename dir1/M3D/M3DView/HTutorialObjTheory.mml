@@ -1,0 +1,30 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Theory"/>
+
+<xPageTitle>
+	Tutorial - Theory
+</xPageTitle>
+
+<p>
+	This part of the tutorial discusses how to create an
+	object using the <bold>Object editor</bold>. I will
+	call objects created using the object editor <bold>custom objects</bold> for
+	clarity.
+</p>
+
+<p>
+	A custom object, whether it's a window, door, piece of furniture, automobile,
+	or anything else, is really just a collection of pieces. After all, in real
+	life you make a chair by glueing together several pieces of wood and adding
+	a cushion or two. In <xSN/>, each piece is an object. (And that piece could be
+	made up of even more pieces.) So basically, every custom object is made up
+	from one or more other objects, much like real life. The only difference is
+	that no glue, nails, or screws are required because in <xSN/> the pieces stay
+	where you put them.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:418><bold>Next</bold></button>
+</p>
+

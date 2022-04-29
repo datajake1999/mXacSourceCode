@@ -1,0 +1,74 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Staircase rails"/>
+
+<p>
+	You can have <xSN/> draw rails underneath the staircase tread. The rails support the
+	treads. (You can also offset the rails to the right and next to the treads to create
+	marine steps.)
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Show/hide rails</xtrheader>
+	<tr><td>
+		<p>
+			Click on a checkbox to show or hide a rail.
+		</p>
+		<xchoicebutton checkbox=true valign=center style=x name=balon0>
+			Show the <bold>left</bold> rail
+		</xChoiceButton>
+		<xchoicebutton checkbox=true valign=center style=x name=balon1>
+			Show the <bold>center</bold> rail
+		</xChoiceButton>
+		<xchoicebutton checkbox=true valign=center style=x name=balon2>
+			Show the <bold>right</bold> rail
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Select the shape to use for each of the rails.
+		</td>
+		<td>
+			L: <xComboShape width=80% name=shape0/><br/>
+			C: <xComboShape width=80% name=shape1/><br/>
+			R: <xComboShape width=80% name=shape2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - With of the rail.
+		</td>
+		<td><edit width=100% maxchars=32 name=railsize0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the rail.
+		</td>
+		<td><edit width=100% maxchars=32 name=railsize1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Indent</bold> - How much the rail is intented from the right or
+			left edge of the treads.
+		</td>
+		<td><edit width=100% maxchars=32 name=railoffset0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Below</bold> - How much the rail is below (or negative numbers
+			for above) the bottom of the treads.
+		</td>
+		<td><edit width=100% maxchars=32 name=railoffset1/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=railextend>
+			<bold>Extend the rail</bold><br/>
+			If checked, the rail is extended to the ground and the floor that the stair
+			leads up to.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>

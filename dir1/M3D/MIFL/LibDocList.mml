@@ -1,0 +1,28 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Documentation list"/>
+
+
+<xTableCenter width=100%>
+	<xtrheader>Documentation</xtrheader>
+	<<<$LIBLIST>>>
+</xTableCenter>
+
+
+<xChoiceButton name=docadd>
+	<bold>Add documentation entry</bold><br/>
+	Press this to add a new entry for help.
+	Use this for topics that aren't specific to
+	an object, function, method, variable, or property.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	This page allows you add or modify documentation topics that aren't specific to
+	an object, function, method, variable, or property. For example: Use this to
+	document tutorials.
+</p>

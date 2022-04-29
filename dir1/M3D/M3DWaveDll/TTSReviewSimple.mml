@@ -1,0 +1,19 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review and save TTS voice"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Text-to-speech</xtrheader>
+	<tr><td>
+		Type in the sentence you wish to synthesize and then
+		press <button name=synthnow><bold>Speak this</bold></button>:
+		<xEditOneLine maxchars=126 name=synthtext text="This is a test of my text-to-speech voice."/>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=makevoice>
+	<bold>Save the text-to-speech voice</bold><br/>
+	Press this to save your text-to-speech voice to a file that can be used
+	by SAPI application, and/or given to friends.
+</xChoiceButton>
+

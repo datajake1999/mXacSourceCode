@@ -1,0 +1,172 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Texture settings"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Maps</xtrheader>
+	<tr><td>
+		Every texture is composed of several "maps" that control its appearence.
+		These are the color map (coloration of the object), glow map (self-illuminating
+		color like a TV), bump map (for bumps and wrinkles), transparency map (for
+		transparency that changes across the texture), and specularity map (how the
+		glossiness of the surface changes across the texture).
+		<p/>
+		If you wish to paint onto the map (color, glow, etc.) you need
+		to check the box below so <xSN/> keeps track of the map.
+		<p/>
+		<xChoiceButton checkbox=true style=x name=mapcolor>
+			Use a <bold>color map</bold><br/>
+			This allows you to paint colors onto to the object.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapglow>
+			Use a <bold>glow map</bold><br/>
+			This allows you to paint self-illuminating colors onto to the object.
+			Use this portions of the object that emit light, such as television screens,
+			or phosophorescence.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapbump>
+			Use a <bold>bump map</bold><br/>
+			Bump maps allow you to add bumps, wrinkles, scratches, and other changes
+			in surface height.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=maptrans>
+			Use a <bold>transparency map</bold><br/>
+			With a transparency map, different portions of your texture will contain
+			different amounts of transparency.
+		</xChoiceButton>
+		<xChoiceButton checkbox=true style=x name=mapspec>
+			Use a <bold>specularity map</bold><br/>
+			With a specularity map, different portions of your texture will contain
+			different amounts of glossiness. This is particularly useful for faces since
+			foreheads tend to be more oily (and hence more specular) than the rest of
+			the face.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Resolution</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - In pixels. The
+			greater the width the better the texture looks but the more memory it
+			uses.
+		</td>
+		<td><edit width=100% maxchars=32 name=width/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - In pixels. The
+			greater the height the better the texture looks but the more memory it
+			uses.
+		</td>
+		<td><edit width=100% maxchars=32 name=height/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=usewidth>
+			<bold>Use the new width and height</bold><br/>
+			Press this to use the new width and height for the image.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, and translucency.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency from the color image</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=transuse>
+			<bold>Use transparency</bold><br/>
+			If checked, then any color in the image that matches the following color will
+			be made transparent. Usually this color will be a white or black background.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetrans>
+				<bold>Change transparency color</bold><br/>
+				This is the color that is turned transparent.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=transcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color match</bold> - The further to the left, the more exact the color
+			match must be for it to be made transparent. Moving the slider to the right
+			will allow close matches to be made transparent.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=transdist/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Miscellaneous</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - In meters. Controls how large the texture will be
+			drawn on the object. Changes to this won't be noticable until you
+			save your texture and then reload a new scene into the paint window.
+		</td>
+		<td><edit width=100% maxchars=32 name=widthmeters/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bump range</bold> - The distance between the highest and lowest
+			possible bumps. Increasing this will make bumps more noticable.
+		</td>
+		<td><edit width=100% maxchars=32 name=bumpheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changedef>
+				<bold>Change default color</bold><br/>
+				This color will be used if the texture does not include a "color map".
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=defcolor/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=cached>
+			<bold>Store the image in every <xSN/> file that uses it</bold><br/>
+			If this <bold>is checked</bold> then the texture will be stored in every <xSN/> file that uses
+			it. Anyone that you give the file to will be able to see the texture. However, this
+			will make the <xSN/> files larger - sometimes by several hundred K per image texture.
+			<p/>
+			If this <bold>isn't checked</bold>, then your <xSN/> files will be smaller, but
+			the texture won't display on other computers.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+
+<xChoiceButton href=discard>
+	<bold>Discard changes to the texture</bold><br/>
+	Press this if you wish to discard any changes you have made to the texture since
+	you last saved.
+</xChoiceButton>

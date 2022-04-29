@@ -1,0 +1,182 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Wall, roof, and floor edges"/>
+
+<xPageTitle>
+	Wall, roof, and floor edges
+</xPageTitle>
+
+<p>
+	When you create a new surface (wall, floor, roof), the edge starts out
+	rectangular. Often times you want a non-rectangular shape, such as bits cut
+	out of the wall, or maybe you need a circular roof.
+</p>
+
+<xSectionTitle>Edge shape using control points</xSectionTitle>
+<p>
+	To modify the edge control points by hand: (Assume it's a wall for
+	purposes of the help topic.)
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjControlDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Which control points are displayed" page that appears,
+		check the <bold>"Edge"</bold> option.
+	</li>
+	<li>
+		Close the dialog.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEW/> or <xButtonObjControlUD/> tool.
+	</li>
+	<li>
+		Click on the control points and drag them around to their desired location.
+	</li>
+</ol>
+
+<p>
+	Given that you probably just created the wall, you'll only have four control
+	points, one at each corner. This may not be enough to create the shape
+	you need.
+</p>
+
+<p>
+	To add more control points:
+</p>
+
+<xul>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" dialog, press the <bold>"Modify
+		edge control points"</bold> button.
+	</li>
+	<p>
+		The "Modify edge control points" dialog will appear. In the "Add/remove
+		control points section" you'll see an outline of the current edge with red
+		balls to indicate the location of the control points.
+	</p>
+	<li>
+		Click on one of the grey lines (between the balls) to add a control point.
+		Keep clicking until you have enough control points in (appoximately) the
+		right place.
+	</li>
+	<li>
+		If you accidentally add a control point that you don't want, click on a
+		red ball to remove it.
+	</li>
+	<li>
+		Close the window and move the control points around as desired.
+	</li>
+</xul>
+
+<p>
+	The edge you've been modifying has been composed entirely of straight line
+	segments between control points. To make a curved edge:
+</p>
+
+<xul>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" dialog, press the <bold>"Modify
+		edge control points"</bold> button.
+	</li>
+	<p>
+		The "Modify edge control points" dialog will appear. In the "Curve the
+		edge" you'll see an outline of the current edge. The outline
+		is colored based upon the type of curve.
+	</p>
+	<li>
+		Click on one of the edge segments to change the color (and type
+		of curve). Keep clicking on it until you get the curve you desire.
+	</li>
+	<p>
+		More comprehensive instructions are given at the bottom of the page.
+	</p>
+	<li>
+		Close the window and move the control points around as desired.
+	</li>
+</xul>
+
+<xSectionTitle>Edge shape through intersections</xSectionTitle>
+<p>
+	To cut out pieces of the surface based on its intersection with other surfaces:
+	(For purposes of this help topic assume you're trimming down a wall.)
+</p>
+
+<ol>
+	<li>
+		Make sure one or more other surfaces intersect the surface whose edge you wish
+		to trim down. Using this technique you can only cut out pieces if the intersecting
+		surfaces manages to draw a line from one end of the wall. If the intersecting
+		surfaces only cut part way into the wall, but not all the way through, you
+		won't be able to use the intersection as an edge.
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" dialog, press the <bold>"Specify the edge
+		through intersections"</bold> button.
+	</li>
+	<p>
+		The "Specify the edge through intersections" page will appear. In it
+		is a section called "Intersections". It displays grey lines where all of
+		the intersections occur, including the outline of the entire wall.
+	</p>
+	<li>
+		Click on the part of the grey line that borders the area you want to keep.
+		It will turn red.
+	</li>
+	<li>
+		Continue clicking until the area you want to keep is outlined entirel in red.
+	</li>
+	<li>
+		Press the <bold>"Change edges"</bold> button.
+	</li>
+	<li>
+		The surface will be cut down to the edge you specified. Close the dialog.
+	</li>
+</ol>
+
+
+<xSectionTitle>Edge bevelling</xSectionTitle>
+
+<p>
+	Initially, surfaces begin with square (90 degree) angles at the top, bottom,
+	left, and right edges. If you want to bevel the edges, then:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Click on the wall.
+	</li>
+	<li>
+		In the "Surface settings" dialog, press the <bold>"Bevelling"</bold> button.
+	</li>
+	<li>
+		The "Bevelling" page will appear. Type in the angles you wish to use.
+		You'll see the bevelling on the surface change as you type the values in.
+	</li>
+</ol>

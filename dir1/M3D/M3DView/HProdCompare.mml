@@ -1,0 +1,177 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Theory"/>
+
+<xPageTitle>
+	Theory
+</xPageTitle>
+
+<xsectiontitle>The impetus</xsectiontitle>
+
+<p>
+	<image jpgresource=245 posn=edgeright/>I came
+	up with the idea for <xLN/> when I was building my house.
+	(See photo. For more information, visit
+	my web site at <a href="http://www.mxac.com.au/EagleEye">http://www.mxac.com.au/EagleEye</a>.)
+	When <a href="http://www.troppo.net.au">Troppo architects</a> were designing it for me,
+	I did try to visualize
+	it using Broderbund's 3D Home Architect; it didn't work too well. That got me
+	thinking about writing an application that would be flexible enough to design
+	unique houses, but easier to use than a full-featured 3D modeller.
+</p>
+
+<xsectiontitle>Existing software</xsectiontitle>
+
+<p>
+	3D Home Architect is one application in a category
+	of "<bold>home and building design applications</bold>".
+	They are designed to design and illustrate houses and other buildings.
+	Most of them work by having the user first draw the walls, roof, doors, windows, and
+	other elements. From that they produce a virtual-reality model of the house so
+	the people can see what the house would look like.
+	Prices range from US$25.00 to US$5000.00.
+</p>
+
+<p>
+	<bold>Full-featured 3D modellers</bold> are applications that can produce a virtual-reality model
+	of anything, from houses to toasters to spaceships. They are very flexible and also very
+	difficult to use. Prices range from US$200.00 to US$20,000.00. The higher end ones
+	are used to produce 3D movies.
+</p>
+
+<p>
+	3D Home Architect couldn't handle my unusual house because the application is
+	designed to make it as easy as possible to design the most common houses. For them
+	it's the standard North-American subdivision house. My house's warped roofing,
+	elevation, angled walls, and lack of walls went well beyond 3D Home Architect's scope.
+	And (in my opinion) the other US$50.00 home-design packages did much worse.
+</p>
+
+<p>
+	More expensive house design packages, such as Archicad, could produce a much more accurate 3D model
+	of my house, but they are thousands of dollars and geared at Architects.
+</p>
+
+
+<xsectiontitle>The solution</xsectiontitle>
+
+<p>
+	If I found the affordable house-design packages insufficient, other people probably
+	did also. Most people (obviously) want a standard North-American subdivision house,
+	and they can visit their local computer store and purchase a copy of Broderbund 3D Home
+	Architect, or equivalent.
+</p>
+
+<p>
+	<xSN/> was designed for those people wanting something just a bit different.
+	As a result, it's primary design goals are:
+</p>
+
+<xul>
+	<li>
+		<bold>Flexiblity of design</bold> - <xSN/> can't visualize every structure, bit it goes infinitely
+		further than the other low-end packages, and beyond many of the high end
+		packages; they too are geared towards standard North-American subdivision housing.
+	</li>
+	<li>
+		<bold>Easy to use</bold> - If you really want to be able to design anything, you
+		can always purchase a full 3D modeller for a few thousand dollars.
+		However, you had better be prepared to read
+		a few tomes, take a few courses, and then spend a couple of weeks programming
+		your building into the modeller. <xSN/>, on the other hand,
+		is designed to be used by mere mortals. It is slightly more difficult to use than
+		the low-end house design applications because of its increased flexibility, but it
+		is infinitely more comprehendable than a general-purpose 3D modeller.
+	</li>
+	<li>
+		<bold>Time is money</bold> - My expectation is that most people will be willing
+		to spend 4-8 hours entering their house into <xSN/>. In this amount of time they
+		won't have every little detail entered, but the model should be good enough to
+		give them an idea of what the final product will look like.
+	</li>
+</xul>
+
+<p>
+	<xLN/> is <bold>not</bold> trying to be all things though.
+</p>
+
+<xul>
+	<li>
+		<bold><xSN/> is not a plan editor</bold> - When people think of designing houses they
+		often think of blueprints. <xSN/> does not do blueprints. The reason for this is:
+		If you're a non-architect desgining your dream house then having a set of plans
+		printed out by an application is impressive looking. But, when you take your
+		plans to a builder or architect, you'll learn that they're not directly usable
+		by the professionals. Building plans are technical and legal documents that need
+		to be produced by professionals because if there's anything wrong in them
+		you'll discover that the local building board won't approve them, or your
+		builder will build what you've drawn, not what you wanted. There is no way <xSN/>,
+		or any other affordable program, can produce certifiably correct plans by itself.
+	</li>
+	<li>
+		<bold><xSN/> is not a full-featured 3D modeller</bold> - I'll get into <xSN/>'s 3D
+		modelling abilities in a minute, but I thought I'd put this here since I am
+		covering what <xSN/> does not do. Most people will find <xSN/> is all they
+		need to producing 3D models of houses,
+		buildings, gardens, and other scenes. However, professional animators and
+		model designers used to high end packages like Maya, Lightwave, and SoftImage,
+		won't find <xSN/> nearly flexible enough for their needs.
+	</li>
+</xul>
+
+<xsectiontitle>3D modelling</xsectiontitle>
+
+<p>
+	Once I began working on <xLN/> I realized that the program
+	could be used by more than just people designing their dream homes. For example:
+</p>
+
+<xul>
+	<li>
+		<bold>Amateur animators</bold> will find that <xSN/> makes it easy to build
+		scenes and characters, and then animate them.
+	</li>
+	<li>
+		<bold>Cabinet makers and furniture designers</bold> can model their cabinets
+		and furniture in <xSN/> first, not because
+		they need it for their design though, but for the clients. The 3D images of the
+		cabinet or furniture give the client a better idea about what they're getting, and (hopefully)
+		reduces the chance they'll see the final product and immediately declare,
+		"That's not what I wanted."
+	</li>
+	<li>
+		<bold>Game/dungeon masters</bold> can create models of environments in their
+		fantasy world and print them out to show players as they enter the region.
+	</li>
+	<li>
+		<bold>Interior designers and landscape architects</bold> can likewise use <xSN/>
+		to generate images to show to their clients before the work begins. Or the images,
+		with mathematically correct perspective and solar orientation, can be used as
+		a guide for a more friendly hand-drawn sketch.
+	</li>
+	<li>
+		<bold>Painters (on canvas)</bold> can program a scene into <xSN/> and easily
+		play with lighting and camera angles. The computer-generated image can then be used
+		as a guide for the painting, prodividing more accurate perspective and lighting.
+	</li>
+	<li>
+		<bold>Others?</bold> - I'm sure other potential uses exist. Crime scene visualization,
+		graphic novel authors, etc.
+	</li>
+</xul>
+
+<p>
+	Consequently, I've added quite a few of the features that you'd find in
+	a general-purpose 3D modelling application, except that I've tried
+	to make them easy enough that mere mortals can use
+	them. <xLN/> is <bold>half way between a house design package and a full-featured
+	3D modeller.</bold>
+</p>
+
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:297>Future plans</a></li>
+	<li><a href=r:526>Product comparison</a></li>
+</xul>

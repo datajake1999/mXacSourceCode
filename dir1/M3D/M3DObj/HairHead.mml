@@ -1,0 +1,345 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Head-of-hair settings"/>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Head</xtrheader>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the head in meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=radius0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=radius1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - In meters/feet.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=radius2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Density of hairs</bold> - Move the slider to the right to increase the density
+			of the hair-lengths. <bold>Warning:</bold> Changing this slider will erase <bold>all</bold> existing
+			hair-lengths.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=1 max=20 name=density/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=showellipse>
+			<bold>Draw ellipsoid for head</bold><br/>
+			While you're editing the hair it's best to draw the ellipsoid, but make sure to
+			hide it when you're finished with the hair.
+		</xchoicebutton>
+		<xchoicebutton checkbox=true style=x name=symmetry>
+			<bold>Automatic symmetry</bold><br/>
+			If this is checked then any modifications to the hair will automatically be
+			mirrored to the other side of the head.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General hair-length settings</xtrheader>
+	<tr>
+		<td>
+			<bold>Size of "segments"</bold> - <xSN/> breaks a length of hair into smaller
+			segments. The more segments, the more flexible the hair - which allows more control
+			over its path, but also makes it more difficult to control. Choose a length best
+			suited for the amount of control you'll need, usually between 1cm and 3 cm.
+		</td>
+		<td>
+			<edit width=100% maxchars=32 name=lengthperpoint/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Diameter</bold> - Diameter of the length of hair.
+			<p/>
+			<bold>Tip:</bold> Editing individual hairs is easier if you shrink the hairs' diameter so they're very thin.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=diameter/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Brush size</bold> - When you change a hair-length (by shaping it, lengthening it,
+			or deleting it), adjacent hair-lengths will also be affected. This slider affects
+			low large this affect is. Moving the slider to the right will increase the area of effect.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=brushsize/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>End hair weight</bold> - This affects the hair's ends when you pull the roots of
+			the hair. If all the way to the right, the hair ends act like they're stiff wires, while
+			to the left they act like they're stuck in space.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=endhairweight/>
+		</td>
+	</tr>
+	<tr><td>
+		<xchoicebutton checkbox=true style=x name=backfacecull>
+			<bold>Use backface culling (speed optimization)</bold><br/>
+			Normally, the portion of a length of hair that is facing away from the user (and
+			thus should not be visible) isn't drawn, speeding up drawing times. However,
+			if the hair texture is <bold>partially transparent</bold> then you may wish to uncheck
+			this option so the back side of the hair will be drawn.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Shape over the length of hair</xtrheader>
+	<tr><td>
+		The shape and size of a length of hair often changes between its roots and tip.
+		Use these sliders to control this change.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Root</bold> - These sliders adjust the width/height of the length of
+			hair at its roots where it attaches to the skin.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile00/><br/>
+			<scrollbar orient=horz min=0 max=100 name=profile01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Just after the root</bold> - These sliders affect the shape just
+			after the roots.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile10/><br/>
+			<scrollbar orient=horz min=0 max=100 name=profile11/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Middle of the lock</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile20/><br/>
+			<scrollbar orient=horz min=0 max=100 name=profile21/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Just before the end</bold> - These affect the lock of hair just
+			before it's end.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile30/><br/>
+			<scrollbar orient=horz min=0 max=100 name=profile31/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>End/tip</bold> - Controls the shape at the end/tip of the lock.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=profile40/><br/>
+			<scrollbar orient=horz min=0 max=100 name=profile41/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variation</bold> - The further to the right, the more the hair's
+			thickness will vary.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=variation/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Hair layers</xtrheader>
+	<tr><td>
+		When <xSN/> draws a length of hair, it usually draws a tube and applies a hair
+		texture. It can, however, draw a series of tubes inside one another. If the outer
+		tubes are semi-transparent, this will provide some depth to the hair. (It will
+		also slow down drawing speeds.)
+		<p/>
+		Tip: You can set the texture for the inner tubes by first shrinking the size of the
+		outer tube(s) so that they're smaller then the inner ones. This will expose the
+		inner tubes, allowing you to texture them. When finished, enlarge the outer tube(s)
+		back to normal size.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Number of tubes</bold> - Select the number of tubes to use. The more tubes
+			the slower drawing will be.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=hairlayers>
+			<elem name=0>One</elem>
+			<elem name=1>Two</elem>
+			<elem name=2>Three</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #1 size</bold> - The further to the right, the larger the tube.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=hairlayerscale0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #1 texture repeats</bold> - To prevent seems in the textures
+			on the tube, the texture is repeated a fixed number of times around the
+			tube. Type in a number that's 1 or higher.
+		</td>
+		<td><edit width=100% maxchars=32 name=hairlayerrepeat0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #2 size</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=hairlayerscale1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #2 texture repeats</bold>
+		</td>
+		<td><edit width=100% maxchars=32 name=hairlayerrepeat1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #3 size</bold>
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=hairlayerscale2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Tube #3 texture repeats</bold>
+		</td>
+		<td><edit width=100% maxchars=32 name=hairlayerrepeat2/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Effects</xtrheader>
+	<tr><td>
+		<xchoicebutton style=righttriangle name=density4>
+			<bold>Density, 4x</bold><br/>
+			Quadruples the density of the hairs, while keeping existing hairs.
+			After changing the density you may wish to reduce the number of times the
+			texture repeats.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=density2>
+			<bold>Density, 2x</bold><br/>
+			Doubles the density of the hairs, while keeping existing hairs.
+			After changing the density you may wish to reduce the number of times the
+			texture repeats.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=density12>
+			<bold>Density, 1/2x</bold><br/>
+			Halves the density of the hairs, while keeping existing hairs.
+			After changing the density you may wish to increase the number of times the
+			texture repeats.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=density14>
+			<bold>Density, 1/4x</bold><br/>
+			Quarters the density of the hairs, while keeping existing hairs.
+			After changing the density you may wish to increase the number of times the
+			texture repeats.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=doublecheck>
+			<bold>Double-check that hair isn't going through head</bold><br/>
+			Sometimes when you resize a head of hair, the hair locks will end up going through
+			the head (represented by the ellipsoid). Press this button to double-check
+			all the hair-lengths and adjust them if they do go through the head.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=gravity>
+			<bold>Gravity</bold><br/>
+			Simulates gravity, pulling the hairs down.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=grow>
+			<bold>Grow hair</bold><br/>
+			Every time you click this the hair will grow slightly longer.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=messup>
+			<bold>Mess up the hair</bold><br/>
+			Messes up the hair, reshaping and rotating individual hair lengths.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=mirrorltor>
+			<bold>Mirror (copy left to right)</bold><br/>
+			Copies the hair-lengths on the left side of the head to the right.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=mirrorrtol>
+			<bold>Mirror (copy right to left)</bold><br/>
+			Copies the hair-lengths on the right side of the head to the left.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=mirror>
+			<bold>Mirror (swap left with right)</bold><br/>
+			Mirrors the hair arrangement.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=straighten>
+			<bold>Straighten the hair</bold><br/>
+			Straightens the hair perpendicular to the head.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=twistlength>
+			<bold>Twist along the length</bold><br/>
+			This twists all the hair-lengths along their lengths. (You will only notice this
+			affect with long hairs.) To control the angle of the twist
+			adjust the slider below.
+		</xchoicebutton>
+		<p align=right><scrollbar width=66% orient=horz min=-50 max=50 name=twistlengths/></p>
+		
+		<xchoicebutton style=righttriangle name=twistroot>
+			<bold>Twist at the roots</bold><br/>
+			This twists all the hair-lengths at their roots. To control the angle of the twist
+			adjust the slider below.
+		</xchoicebutton>
+		<p align=right><scrollbar width=66% orient=horz min=-50 max=50 name=twistroots/></p>
+		
+		<xchoicebutton style=righttriangle name=ungravity>
+			<bold>Un-gravity</bold><br/>
+			Simulates anti-gravity, pulling the hairs up.
+		</xchoicebutton>
+		
+		<xchoicebutton style=righttriangle name=ungrow>
+			<bold>Un-Grow hair</bold><br/>
+			Every time you click this the hair will grow slightly shorter.
+		</xchoicebutton>
+		
+	</td></tr>
+</xtablecenter>

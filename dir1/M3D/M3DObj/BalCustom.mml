@@ -1,0 +1,761 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Custom balustrade appearance"/>
+
+<p>
+	Use this page to enter dimensions to customize your balustrade.
+</p>
+<p>
+	Each
+	balustrade is composed of several different parts:
+</p>
+
+<!xComboBrace>
+	<bold><combobox macroattribute=1 cbheight=150>
+		<elem name="4">A-brace</elem>
+		<elem name="2">Diagonal-brace</elem>
+		<elem name="3">V-brace</elem>
+		<elem name="1">X-brace</elem>
+	</combobox></bold>
+</xComboBrace>
+
+<ol>
+	<li>
+		<bold>Posts</bold> - These thick vertical members extend from the floor to
+		either the balustrade height, or the ceiling/roof above. They give strength
+		to the balustrade.
+	</li>
+	<li>
+		<bold>Horizontal rails</bold> - Horizontal rails running between the posts.
+		A balustrade can contain up to three: The handrail, and two horizontals that
+		support the vertal balusters.
+	</li>
+	<li>
+		<bold>Automatic horizontal rails</bold> - Some balustrades use horizontal stainless
+		steel wire or wood boards instead of vertical members. If selected, the automatic
+		horizontal rails will be equally spaced over the height of the balustrade.
+	</li>
+	<li>
+		<bold>Automatic verticals</bold> - If used, these are placed at equal distances
+		between the posts. Usually the verticals from from the bottom rail to the top,
+		although they can extend beyond the bottom or top.
+	</li>
+	<li>
+		<bold>Panel</bold> - Some balustrades just contain a solid panel (often of glass or
+		chain-mesh) between the posts and the horizontal rails.
+	</li>
+	<li>
+		<bold>Bracing</bold> - Although more common in fencing, many balustrades contain
+		bracing (diagons or X) for strength.
+	</li>
+</ol>
+
+
+<xTableCenter width=100%>
+	<xtrHeader>Posts</xtrHeader>
+	<tr><td>
+		"Posts" are the thick vertical members of a balustrade that provide its strength.
+		They begin at the floor and rise to balustrade height. If possible, they
+		are extended to the ceiling or roof above for extra strength.
+		<p/>
+		Each post is constructed of several elements.
+		<p/>
+		<ol>
+			<li>
+				<bold>Main column</bold> - The majority of the post. This is usually
+				a long (1m+) length of circular or rectangular profiled wood or steel.
+			</li>
+			<li>
+				<bold>Base</bold> - (Optional) A footing for the post. Often this is a
+				small (10 cm high) footing that the post rests on.
+			</li>
+			<li>
+				<bold>Cap for balustrade-height posts</bold> - This caps the top of the
+				post. Often it's ornamental, such as a ball on top the post.
+			</li>
+			<li>
+				<bold>Cap for ceiling-height posts</bold> - Caps the top of the post when
+				it rises up to the ceiling or roof. Often this is an upside-down version
+				of the base.
+			</li>
+			<li>
+				<bold>Bracing</bold> - Optionally used when a post extends to the ceiling or
+				roof. The bracing extends at a 45 degree angle from about 0.75m below the top
+				of the post to the ceiling. This stabalizes the post and the structure above
+				from sheer stresses.
+			</li>
+		</ol>
+	</td></tr>
+	<xtrheader>General post settings</xtrheader>
+	<tr>
+		<td>
+			Post <bold>extends above balustrade height</bold> - The distance (in meters or feet)
+			that the post extends above the balustrade/fence height. This can be negative
+			to have a post lower than the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postheightabovebalustrade/>
+		</td>
+	</tr>
+	<xtrheader>Main column</xtrheader>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=PostShape4/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the column in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize40/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the column in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize41/>
+		</td>
+	</tr>
+	
+	<xtrheader>Base</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse0>
+			<bold>Use the base</bold><br/>
+			Check this to include a base on all the posts. If it's not checked then the
+			post runs straight to the floor.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the base looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=PostTaper0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize00/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the base in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize02/>
+		</td>
+	</tr>
+	
+	<xtrheader>Cap for balustrade-height posts</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse1>
+			<bold>Use the cap</bold><br/>
+			Check this to include a cap on all the posts that are balustrade height.
+			If it's not checked then the post is just cut off.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the cap looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=PostTaper1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize10/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize11/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize12/>
+		</td>
+	</tr>
+	
+	<xtrheader>Cap for ceiling-height posts</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse2>
+			<bold>Use the cap</bold><br/>
+			Check this to include a cap on all the posts that are ceiling height.
+			If it's not checked then the post is just cut off.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the cap looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=PostTaper2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize20/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize21/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the cap in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize22/>
+		</td>
+	</tr>
+	
+	<xtrheader>Bracing</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=PostUse3>
+			<bold>Use bracing</bold><br/>
+			Check this to use bracing where ceiling-height posts meet the ceiling.
+			If it's not checked then no bracing is used.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+			when seen from above.
+		</td>
+		<td><xComboShape width=100% name=PostShape3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the bracing in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize30/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the bracing in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=postsize31/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height below ceiling</bold> - The bracing begins this many
+			meters (or feet) below the ceiling/roof.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracebelow/>
+		</td>
+	</tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrheader>Horizontal rails</xtrheader>
+	
+	<xtrheader>Handrail</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=horzrailuse0>
+			<bold>Use handrail</bold><br/>
+			If checked, the balustrade will include a handrail.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=horzrailshape0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the handrail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize00/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the handrail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical offset</bold> - Number of meters (or feet) the handrail
+			is above (or negative numbers for below) the balustrade height.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset02/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the handrail
+			is placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset01/>
+		</td>
+	</tr>
+	
+	<xtrheader>Top rail</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=horzrailuse1>
+			<bold>Use the top rail</bold><br/>
+			If checked, the balustrade will include a top rail (usually just below the
+			handrail).
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=horzrailshape1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the top rail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize10/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the top rail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize11/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical offset</bold> - Number of meters (or feet) the top rail
+			is above (or negative numbers for below) the balustrade height.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset12/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the top rail
+			is placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset11/>
+		</td>
+	</tr>
+	
+	<xtrheader>Bottom rail</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=horzrailuse2>
+			<bold>Use the bottom rail</bold><br/>
+			If checked, the balustrade will include a bottom rail (usually 10cm above
+			the floor).
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether it's rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=horzrailshape2/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the bottom rail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize20/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the bottom rail in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize21/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Vertical offset</bold> - Number of meters (or feet) the bottom rail
+			is above the floor/ground.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset22/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the bottom rail
+			is placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset21/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Automatic horizontal rails</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=horzrailuse3>
+			<bold>Use the automatic rails</bold><br/>
+			If checked, the balustrade will include a automatic horizontal rails.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether they're rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=horzrailshape3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the automatic rails in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize30/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the automatic rails in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailsize31/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the automatic rails
+			are placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailoffset31/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Topmost rail</bold> - Number of meters (or feet) the topmost of
+			the automatic rails is above (or negative numbers for below) the top
+			of the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailauto1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom-most rail</bold> - Number of meters (or feet) the bottom-most of
+			the automatic rails is above the floor.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailauto0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spacing</bold> - Number of meters (or feet) of gap allowed between the
+			automatic rails. Enough rails will be created so the gap is less than or equal
+			to this value.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=horzrailauto2/>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Automatic vertical rails</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=vertuse>
+			<bold>Use the automatic rails</bold><br/>
+			If checked, the balustrade will include a automatic vertical rails.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether they're rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=vertshape0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the automatic rails in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertsize00/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the automatic rails in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertsize01/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the automatic rails
+			are placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertoffset/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top</bold> - Number of meters (or feet) the top of
+			the automatic rails is above (or negative numbers for below) the top
+			of the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertauto1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom</bold> - Number of meters (or feet) the bottom of
+			the automatic rails is above the floor.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertauto0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Spacing</bold> - Number of meters (or feet) of gap allowed between the
+			automatic rails. Enough rails will be created so the gap is less than or equal
+			to this value.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertauto2/>
+		</td>
+	</tr>
+	
+	<xtrheader>Spike on the verticals</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=vertusepoint>
+			<bold>Include a spike on the top of the verticals</bold><br/>
+			If checked, a small spike, or some other ornamentation, will be added to the
+			top of the verticals.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether they're rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=vertshape1/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Taper</bold> - The appearance of the spike looking straight on.
+		</td>
+		<td><xComboTaper width=100% name=vertpointtaper/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the spike in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertsize10/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the spike in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertsize11/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the spike in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=vertsize12/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Panel</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=panelused>
+			<bold>Include a panel</bold><br/>
+			If checked, the balustrade will include a panel spanning the posts.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the panel
+			is placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=paneloffset/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - How thick (in meters or feet) the panel is.
+			Use "0" for a thin panel, like glass or chain-mesh. A stone wall might
+			use "200 mm".
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=panelthickness/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top</bold> - Number of meters (or feet) the top of the panel
+			is above the balustrade height. Use negative numbers for the panel's top
+			to be below.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=panelinfo1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom</bold> - Number of meters (or feet) the bottom of the panel
+			is above the floor.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=panelinfo0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Left/right</bold> - Number of meters (or feet) distance the left and right
+			sides are from the posts.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=panelinfo2/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Bracing</xtrheader>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=braceused>
+			<bold>Include bracing</bold><br/>
+			If checked, the balustrade will include bracing, either diagonals or cross-bracing.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Configuration</bold> - What type of brace is used.
+		</td>
+		<td><xComboBrace width=100% name=brace/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Shape</bold> - Whether the bracing members are rectangular, circular, etc.
+		</td>
+		<td><xComboShape width=100% name=braceshape/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width</bold> - Width of the brace members in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracesize0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Depth</bold> - Depth of the brace members in meters or feet.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracesize1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top</bold> - Number of meters (or feet) the top of the bracing
+			is above the balustrade height. Use negative numbers for the bracing's top
+			to be below.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracetbv/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bottom</bold> - Number of meters (or feet) the bottom of the bracing
+			is above the floor.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=bracetbh/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Horizontal offset</bold> - Number of meters (or feet) the brace
+			is placed inside (or negative numbers for outside) the balustrade.
+		</td>
+		<td>
+			<edit width=100% marchars=32 selall=true name=braceoffset/>
+		</td>
+	</tr>
+</xtablecenter>

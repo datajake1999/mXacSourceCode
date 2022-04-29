@@ -1,0 +1,30 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="How to have a character hold something"/>
+
+<xPageTitle>
+	How to have a character hold something
+</xPageTitle>
+
+<p>
+	Sometimes you want to have a character hold an object, such as a pen or a sword.
+	There are two ways to go about this:
+</p>
+
+<xul>
+	<li>
+		<bold>Build the object into the character</bold> - When you build the character as
+		a custom object, add the object(s) that the character can hold into the custom object.
+		Assign a one of the hands in the bone to move the object uniformly. If you
+		sometimes want to draw the character not holding the object then add an attribute
+		to the custom object that allows you to show or hide the held object.
+		See <a href=r:535>Bones - Rigid surfaces</a> and <a href=r:525>Custom object attributes</a>.
+	</li>
+	<li>
+		<bold>Attach the object to the character's hand</bold> - Alternatively, if your animation
+		shows the character picking up or putting down the object, you can make the
+		object part of the world. Then, use <xButtonObjAttach/> to attach to object
+		to the character's hand.
+		See <a href=r:537>Attach objects</a>.
+	</li>
+</xul>

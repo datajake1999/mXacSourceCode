@@ -1,0 +1,67 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="No sound card"/>
+
+<xtablecenter width=80%>
+	<xtrheader>No sound card</xtrheader>
+	<tr>
+		<td>
+			<p>
+				According to the operating system, you don't have a sound
+				card installed. This isn't necessarily the case. Here
+				are some possibilities which you'll need to investigate.
+			</p>
+			
+			<ul>
+				<li>
+					<bold>You might not have a sound card installed in
+					your computer.</bold> If you haven't heard any sounds coming
+					from your computer this might be a possibility.
+				</li>
+				<li>
+					<bold>Your sound card drivers might not be installed
+					properly.</bold> If you haven't heard any sounds coming
+					from your computer this might be a possibility.
+					Consult your sound card manuals (if you have them) for
+					information on installing/updating drivers.
+				</li>
+				<li>
+					<bold>You may have a sound card, but it might not be able
+					to record.</bold> This is very unlikely.
+				</li>
+				<li>
+					<bold>You may have more than one sound card</bold> (which may
+					include a MODEM) installed on your computer, and
+					record is trying to use the wrong one.
+				</li>
+				<p>
+					You can
+					test this by running the Windows <bold>control
+					panel</bold>, go to <bold>"Sounds, Speech, and Audio
+					Devices"</bold>. Click on <bold>"Sounds and audio
+					devices"</bold>. Select the <bold>"Audio"</bold> tab.
+					Under the "Sound recording" section, set
+					the <bold>Default device</bold> to your sound card, and
+					try again.
+				</p>
+				<li>
+					<bold>Your sound card may not be able to record and play
+					sound at the same time.</bold> If your sound card can play
+					sound, this is a possibility. Make sure to try the
+					previous step and make sure that sound is coming from
+					the right device. If you're still having problems,
+					you may need to buy a new sound card, or buy a USB
+					noise-cancelling headset microphone.
+				</li>
+			</ul>
+			
+		</td>
+		<td>
+			<xChoiceButton style=lefttriangle href="back">
+				<bold>Back</bold><br/>
+				Return to the previous page.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+

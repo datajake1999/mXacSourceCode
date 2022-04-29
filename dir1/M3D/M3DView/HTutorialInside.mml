@@ -1,0 +1,36 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - inside"/>
+
+<xPageTitle>
+	Tutorial - inside
+</xPageTitle>
+
+<p>
+	Once you have all the doors and windows in place, it's time to place all the bits
+	inside the house. Adding objects inside the house is exactly the same as adding objects
+	anywhere else, so while this page could have you make some cabinets, put
+	in a shower, furniture, and paintings, that won't really teach you anything new.
+	Therefore, just browse through the following list and pick the topics that
+	interest you.
+</p>
+
+<xul>
+	<li><a href=r:454>Cabinets</a></li>
+	<li><a href=r:432>Column objects</a></li>
+	<li><a href=r:448>Curtains, drapes, and blinds</a></li>
+	<li><a href=r:450>Cushions and pillows</a></li>
+	<li><a href=r:463>Fireplaces</a></li>
+	<li><a href=r:466>How to build a bathroom</a></li>
+	<li><a href=r:467>How to build a kitchen</a></li>
+	<li><a href=r:401>Lights</a></li>
+	<li><a href=r:462>Pools, ponds, sinks, and bathtubs</a></li>
+	<li><a href=r:452>Row of books or videos</a></li>
+	<li><a href=r:339>Staircases</a></li>
+	<li><a href=r:446>Tablecloth</a></li>
+	<li><a href=r:465>Trusses</a></li>
+</xul>
+
+<p align=right>
+	<button style=rightarrow href=r:349><bold>Next</bold></button>
+</p>

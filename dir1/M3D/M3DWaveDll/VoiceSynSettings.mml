@@ -1,0 +1,30 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Voice synthesis settings"/>
+
+<p>
+	This page lets you "resynthesize" the recorded voice, changing its sound.
+	Using resynthesis you can make the voice sound like a different person.
+	Adjust the settings and then press "Do effect".
+	(The best way to learn is to just experiment with numbers and see how they affect
+	the voice.)
+</p>
+
+<xChoiceButton style=righttriangle href=disguise>
+	<bold>Change the disguise</bold><br/>
+	Press this to change the voice disguise, either loading in a new disguise or making
+	your own.
+</xChoiceButton>
+
+
+<xChoiceButton style=righttriangle name=test>
+	<bold>Test effect</bold><br/>
+	Tests the effect on the current wave.
+</xChoiceButton>
+
+<xChoiceButton style=righttriangle href=doeffect>
+	<bold>Do effect</bold><br/>
+	Apply the current voice disguise effect to the current wave and exits.
+</xChoiceButton>
+
+

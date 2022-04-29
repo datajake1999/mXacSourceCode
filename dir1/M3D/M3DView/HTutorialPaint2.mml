@@ -1,0 +1,59 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - The painting view"/>
+
+<xPageTitle>
+	Tutorial - The painting view
+</xPageTitle>
+
+<p>
+	The next step is to display the painting view:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonPaintView/> button.
+	</li>
+	<p>
+		The "Painting view" window will appear and display the scene from the same
+		camera angle you were just using in the main display.
+	</p>
+</ol>
+
+<p>
+	Here are some things you should notice about the painting view:
+</p>
+
+<ul>
+	<li>
+		<bold>Only one painting view</bold> - You can only have one "Painting view" window visible at a time. If you click
+		on the <xButtonPaintView/> button a second time, the painting view will take
+		on the camerea angle from the 3d view that you were using. This is a useful
+		feature since by rotating your object in the 3d view and
+		pressing the <xButtonPaintView/> you can paint different portions of your
+		object.
+	</li>
+	<li>
+		<bold>Similar behaviour</bold> - Although the buttons at the screen's edge are different than the main 3d view,
+		the buttons work in essentially the same way.
+	</li>
+	<li>
+		<bold>Palette</bold> - The right side of the painting view window contains a list of colors (and
+		eventually textures). This is your palette. Clicking on one of these colors will
+		select it for your current brush.
+	</li>
+	<li>
+		<bold>Tracing-blend scrollbar</bold> - Underneath the palette is a horizontal scrollbar that shows you how the
+		color or texture is positioned. Don't worry about this for now; leave it
+		scrolled all the way to the left.
+	</li>
+	<li>
+		<bold>Grey objects</bold> - If an object can't be painted on it's drawn as just
+		grey. You can only paint on objects using the right type of texture.
+	</li>
+</ul>
+
+<p align=right>
+	<button style=rightarrow href=r:812><bold>Next</bold></button>
+</p>
+

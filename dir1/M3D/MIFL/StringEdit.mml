@@ -1,0 +1,78 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify a string"/>
+
+<null><<<$READONLY>>></null>
+<null><<<$OVERRIDES>>></null>
+
+<xTableCenter width=100%>
+	<xtrheader>String entry</xtrheader>
+	<tr>
+		<td>
+			<bold><a>Name
+				<xHoverHelp>
+					This is the name of the string entry. It cannot contain any spaces or symbols,
+					just letter and numbers.
+				</xHoverHelp>
+			</a></bold>
+		</td>
+		<td>
+			<bold><edit width=100% maxchars=64 <<<$LIBENABLE>>> name=name/></bold>
+			<br/>
+			<status border=0 width=100% height=20 name=isunique>(Unique)</status>
+		</td>
+	</tr>
+	<xtrheader>Text</xtrheader>
+	<tr><td>
+		<<<$STRINGLANG>>>
+	</td></tr>
+</xTableCenter>
+
+
+
+
+<null><<<$IFMENULIBRO>>>
+<xChoiceButton name=delete>
+	<bold>Delete this string entry</bold><br/>
+	Permenantly delete the string entry.
+</xChoiceButton>
+
+<xChoiceButton name=duplicate>
+	<bold>Duplicate this string entry</bold><br/>
+	After you duplicate the string entry, make sure to rename the new string entry or
+	you won't be able to compile properly.
+</xChoiceButton>
+<<<$ENDIFMENULIBRO>>></null>
+
+<xChoiceButton name=move>
+	<bold>Move the string entry to a different library</bold><br/>
+	Before pressing this button, select the library:
+</xChoiceButton>
+
+<p align=right><bold><combobox width=50% cbheight=150 name=movelib>
+	<elem name=0>Move lib</elem>
+</combobox></bold></p>
+
+
+<xbr/>
+
+<null>
+<<<$IFTRANSPROSQUICK>>>
+<xChoiceButton name=newttsfile>
+	<bold>Change text-to-speech voice</bold><br/>
+	Press this to change the text-to-speech voice used for hearing the sentence
+	and spell checking.
+	You can usually find some text-to-speech voices in "c:\program files\mXac\CircumReality".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=ttsfile/>
+
+<xbr/>
+<<<$ENDIFTRANSPROSQUICK>>>
+</null>
+
+<xSectionTitle>Documentation</xSectionTitle>
+
+<p>
+	Type in the string's name, along with the text used for the supported languages.
+</p>

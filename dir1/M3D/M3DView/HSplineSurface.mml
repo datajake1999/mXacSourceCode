@@ -1,0 +1,65 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Spline surface objects"/>
+
+<xPageTitle>
+	Spline surface objects
+</xPageTitle>
+
+<p>
+	An "spline surface" is a surface that can be bent and have a custom
+	edge cut around it, much like a stiff piece of cloth.
+	The surface can also be attached to itself at either end, as if sewing
+	the pieces together.
+</p>
+
+<p>
+	Technical definition: Many 3D modellers call such surfaces NURBS for "non-uniform
+	rational B-Splines." The spline surfaces are <bold>not</bold> technically NURBS
+	because they don't have "rational" B-splines. (If you don't understand this then
+	ignore it.)
+</p>
+
+<p>
+	The spline surface object is most commonly used in objects created by the object
+	editor. It is useful for creating: fabrics, odd-shaped cushions, tarps, sails,
+	and pressed metals such as kitchen sinks.
+</p>
+
+<p>
+	Spline surface objects are more <bold>memory and CPU</bold> intensive than the
+	lathe, extrusion, and simple-shapes objects. Therefore, if you need a shape that
+	can be produced using one of those other objects then use them instead of the
+	spline surface.
+</p>
+
+<p>
+	You will find a collection of pre-defined spline surface objects under the "Spline surfaces" section
+	in "Object pieces".
+</p>
+
+<p>
+	If you want to make your own spline surface object then:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined lathe object (under "Spline surfaces" in the "Object pieces"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Using the <xButtonObjDialog/> tool, click on the surface object.
+	</li>
+	<li>
+		In the "Surface settings" button you'll find a number of ways you can customize
+		the surface. You can control whether or not its edges connect, how they're
+		curved, and the type of curve used.
+	</li>
+	<li>
+		You will also need to use <xButtonObjControlDialog/> on the surface objects to
+		display the different control points for resizing, curvature, and the edge.
+	</li>
+</ol>

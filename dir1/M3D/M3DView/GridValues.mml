@@ -1,0 +1,117 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Grid values"/>
+
+<p>
+	Use this page to hand-enter the grid values.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Snap-to grids</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Distance grid</bold> - The distance between
+			grid lines. For example: If you want all objects to be aligned to 10 cm just
+			type in "10 cm".
+			Typing in "0" will remove the grid.
+		</td>
+		<td width=33% valign=center>
+			<edit maxchars=64 width=100% name=grid/>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Rotation grid</bold> - The distance between
+			angular grids, in degrees. For example: If you want all angles to be right
+			angles type in "90". Type in "0" to remove the grid.
+		</td>
+		<td width=33% valign=center>
+			<edit maxchars=64 width=100% name=gridangle/>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Grid center</xtrheader>
+	<tr><td>
+		If you want your grid offset (with a different center) then type in the NS, EW,
+		and UD offsets here. For example: If you want all objects to be placed at
+		5 cm, 15cm, 25 cm, etc. then enter "10 cm" for the grid size, and "5 cm" for the NS (or
+		whichever) center.
+	</td></tr>
+
+	<tr>
+		<td width=66%>
+			<bold>East/west center</bold> - Center of the grid along the east/west axis.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>North/south center</bold> - Center of the grid along the north/south axis.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=transy/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Up/down center</bold> - Center of the grid up/down.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=transz/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Grid orientation</xtrheader>
+	<tr><td>
+		Usually you'll want the grid aligned with NSEW. If you don't want this, type
+		in a new orientation for the grid's "north" below. (All the other directions are
+		calculated from the grid's north.)
+		<p/>
+		Tip: The easiest way to enter these numbers and get them right is to a) use the
+		"Grid from point" tool or b) display the grid first, and then modify the values;
+		as you change the numbers you'll see their affects in the image.
+	</td></tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Longitude</bold> - Longitude (in degrees) of north. "0" is north (in the world's
+			coordinates), "90" causes the grid's north to be west, etc.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=rotz/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=66%>
+			<bold>Latitude grid</bold> - Rotates north up or down. Only change this if you
+			want your grid to be inclined along the grid's north and south.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=rotx/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Tilt grid</bold> - Tilts the grid east and west. Only use this if you
+			want your grid to included along east and west.
+		</td>
+		<td width=33% valign=center>
+			<bold><edit maxchars=32 selall=true width=100% name=roty/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>

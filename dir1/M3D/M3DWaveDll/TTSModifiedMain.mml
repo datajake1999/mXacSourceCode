@@ -1,0 +1,309 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modified TTS Voice page"/>
+
+<p align=right>
+	<big><bold><<<SRFILE>>></bold></big>
+</p>
+
+<p>
+	To modify a master TTS voice you must:
+</p>
+
+<ol>
+	<li>
+		Select the <bold>master TTS voice</bold> to use.
+	</li>
+	<li>
+		Add one or more sub-voices using the <bold>Add a new sub-voice</bold>.
+	</li>
+	<li>
+		<bold>Customize</bold> each sub-voice.
+	</li>
+</ol>
+
+<xbr/>
+
+<xsectiontitle>Master TTS Voice</xsectiontitle>
+
+<xChoiceButton name=newtts>
+	<bold>Change Master TTS Voice</bold><br/>
+	If you haven't already, you should select the master TTS voice to use.
+	Your modified TTS voice will be based off this master; it will initially
+	sound like the master voice, but as you change the settings below the
+	voice will change.
+	<p/>
+	The master TTS voice is <bold><<<MASTERTTS>>></bold>.
+</xChoiceButton>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Prosody affecting all sub-voices</xtrheader>
+	<tr>
+		<td>
+			<bold>Prosody from another TTS voice (.tts) or Prosody model (.mpm)</bold> -
+			You may wish to add prosody (word
+			emphasis) information from a custom prosody model that you created. This
+			will cause the voice to take on some of the inflection of another voice,
+			and can improve the quality of text-to-speech if you know basically what
+			phrases will be spoken, and create a prosody model from those phrases.
+			<p/>
+			<bold>Note:</bold> - The prosody model is "rebuilt" whenever you select
+			"Open". If the prosody file is changed, the changes won't be reflected
+			for this voice until you press "Open" and re-add the file.
+		</td>
+		<td>
+			<edit readonly=true maxchars=256 width=100% name=prosodytts0/><br/>
+			<p align=right><bold><button name=prosodyttsopen0>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts1/><br/>
+			<p align=right><bold><button name=prosodyttsopen1>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts2/><br/>
+			<p align=right><bold><button name=prosodyttsopen2>Open...</button></bold></p>
+
+			<edit readonly=true maxchars=256 width=100% name=prosodytts3/><br/>
+			<p align=right><bold><button name=prosodyttsopen3>Open...</button></bold></p>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Subvoices</xtrheader>
+	<<<$SUBVOICES>>>
+</xtablecenter>
+
+
+<xChoiceButton name=add>
+	<bold>Add a new sub-voice</bold><br/>
+	Press this to add a new sub-voice. You should have at least one sub-voice.
+</xChoiceButton>
+
+<xChoiceButton name=import>
+	<bold>Import sub-voices from another modified TTS voice</bold><br/>
+	This will import one or more sub-voices from another modified TTS voice.
+	After pressing the button, you will be asked for the modified TTS voice file,
+	and then for which sub-voices to import.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xtablecenter width=100%>
+	<xtrheader>Test the voice</xtrheader>
+	<tr><td>
+		Type in some text below and press "Test speak" (above, in subvoices) to hear what your modified voice
+		sounds like.
+		<p/>
+		<edit width=100% maxchars=250 name=testspeak/>
+	</td></tr>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>SAPI settings</xtrheader>
+	<tr>
+		<td>
+			<bold>SAPI Token String</bold> - Used to identify the engine to SAPI. Use a name
+			that's unique to the voice, not just "Mike", since lots of text-to-speech engines
+			are named after their first name.
+		</td>
+		<td><bold><edit width=100% maxchars=256 name=sapitoken/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>SAPI Name</bold> - This is the name displayed to the user.
+		</td>
+		<td><bold><edit width=100% maxchars=256 name=sapiname/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>SAPI Vendor</bold> - Name of the company that created this voice.
+		</td>
+		<td><bold><edit width=100% maxchars=256 name=sapivendor/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Version number</bold> - Version number.
+		</td>
+		<td><bold><edit width=20% maxchars=256 name=versionmajor/> . <edit width=20% maxchars=256 name=versionminor/> . <edit width=40% maxchars=256 name=versionbuild/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Speaker age</bold> - Roughly how old the speaker is.
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=age>
+			<elem name=0>Child</elem>
+			<elem name=1>Teenager</elem>
+			<elem name=2>Adult</elem>
+			<elem name=3>Senior</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Speaker gender</bold>
+		</td>
+		<td><bold><combobox width=100% cbheight=300 name=gender>
+			<elem name=1>Female</elem>
+			<elem name=0>Male</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Language</bold> - Language.
+		</td>
+<td><bold><combobox cbheight=300 width=100% name=langid>
+	<elem name=0><italic>Not listed</italic></elem>
+	<elem name=1078>Afrikaans</elem>
+	<elem name=1052>Albanian</elem>
+	<elem name=1025>Arabic (Saudi Arabia)</elem>
+	<elem name=2049>Arabic (Iraq)</elem>
+	<elem name=3073>Arabic (Egypt)</elem>
+	<elem name=4097>Arabic (Libya)</elem>
+	<elem name=5121>Arabic (Algeria)</elem>
+	<elem name=6145>Arabic (Morocco)</elem>
+	<elem name=7169>Arabic (Tunisia)</elem>
+	<elem name=8193>Arabic (Oman)</elem>
+	<elem name=9217>Arabic (Yemen)</elem>
+	<elem name=10241>Arabic (Syria)</elem>
+	<elem name=11265>Arabic (Jordan)</elem>
+	<elem name=12289>Arabic (Lebanon)</elem>
+	<elem name=13313>Arabic (Kuwait)</elem>
+	<elem name=14337>Arabic (U.A.E.)</elem>
+	<elem name=15361>Arabic (Bahrain)</elem>
+	<elem name=16385>Arabic (Quatar)</elem>
+	<elem name=1068>Armenian</elem>
+	<elem name=1068>Azeri (Latin)</elem>
+	<elem name=2092>Azeri (Cyrillic)</elem>
+	<elem name=1069>Basque</elem>
+	<elem name=1059>Belarusian</elem>
+	<elem name=1026>Bulgarian</elem>
+	<elem name=1109>Burmese</elem>
+	<elem name=1027>Catlan</elem>
+	<elem name=1028>Chinese (Taiwan)</elem>
+	<elem name=2052>Chinese (PRC)</elem>
+	<elem name=3076>Chinese (Hong Kong SAR, PRC)</elem>
+	<elem name=4100>Chinese (Singapore)</elem>
+	<elem name=5124>Chinese (Macau SAR)</elem>
+	<elem name=1050>Croatian</elem>
+	<elem name=1029>Czech</elem>
+	<elem name=1030>Danish</elem>
+	<elem name=1125>Divehi</elem>
+	<elem name=1043>Dutch (Netherlands)</elem>
+	<elem name=2067>Dutch (Belgium)</elem>
+	<elem name=1033>English (United States)</elem>
+	<elem name=2057>English (United Kinddom)</elem>
+	<elem name=3081>English (Australian)</elem>
+	<elem name=4105>English (Canadian)</elem>
+	<elem name=5129>English (New Zealand)</elem>
+	<elem name=6153>English (Ireland)</elem>
+	<elem name=7177>English (South Africa)</elem>
+	<elem name=8201>English (Jamaica)</elem>
+	<elem name=9225>English (Caribbean)</elem>
+	<elem name=10249>English (Belize)</elem>
+	<elem name=11273>English (Trinidad)</elem>
+	<elem name=12297>English (Zimbabwe)</elem>
+	<elem name=13321>English (Philippines)</elem>
+	<elem name=1061>Estonian</elem>
+	<elem name=1081>Faeroese</elem>
+	<elem name=1065>Farsi</elem>
+	<elem name=1045>Finnish</elem>
+	<elem name=1036>French (Standard)</elem>
+	<elem name=2060>French (Belgian)</elem>
+	<elem name=3084>French (Canadian)</elem>
+	<elem name=4108>French (Switzerland)</elem>
+	<elem name=5132>French (Luxembourg)</elem>
+	<elem name=6156>French (Monaco)</elem>
+	<elem name=1110>Galician</elem>
+	<elem name=1079>Georgian</elem>
+	<elem name=1031>German (Standard)</elem>
+	<elem name=2055>German (Switzerland)</elem>
+	<elem name=3079>German (Austria)</elem>
+	<elem name=4103>German (Luxembourg)</elem>
+	<elem name=5127>German (Liechtenstein)</elem>
+	<elem name=1032>Greek</elem>
+	<elem name=1095>Gujarati</elem>
+	<elem name=1037>Hebrew</elem>
+	<elem name=1081>Hindi</elem>
+	<elem name=1038>Hungarian</elem>
+	<elem name=1039>Icelandic</elem>
+	<elem name=1057>Indonesian</elem>
+	<elem name=1040>Italian (Standard)</elem>
+	<elem name=2064>Italian (Switzerland)</elem>
+	<elem name=1041>Japanese</elem>
+	<elem name=1099>Kannada</elem>
+	<elem name=1111>Konkani</elem>
+	<elem name=1042>Korean</elem>
+	<elem name=2066>Korean (Johab)</elem>
+	<elem name=1088>Kyrgyz</elem>
+	<elem name=1062>Latvian</elem>
+	<elem name=1063>Lithuanian</elem>
+	<elem name=2087>Lithuanian (Classic)</elem>
+	<elem name=1071>Macedonian</elem>
+	<elem name=1086>Malay (Malaysian)</elem>
+	<elem name=2110>Malay (Bruinei Darussalam)</elem>
+	<elem name=1102>Marathi</elem>
+	<elem name=1104>Mongolian</elem>
+	<elem name=1044>Norwegian (Bokmal)</elem>
+	<elem name=2068>Norwegian (Nynorsk)</elem>
+	<elem name=1045>Polish</elem>
+	<elem name=1046>Portuguese (Brazil)</elem>
+	<elem name=2070>Portuguese (Portugal)</elem>
+	<elem name=1094>Punjabi</elem>
+	<elem name=1048>Romanian</elem>
+	<elem name=1049>Russian</elem>
+	<elem name=1103>Sanskrit</elem>
+	<elem name=3098>Serbian (Cyrillic)</elem>
+	<elem name=2074>Serbian (Latin)</elem>
+	<elem name=1051>Slovak</elem>
+	<elem name=1060>Slovenian</elem>
+	<elem name=1034>Spanish (Spain, Traditional Sort)</elem>
+	<elem name=2058>Spanish (Mexican)</elem>
+	<elem name=3082>Spanish (Spain, International Sort)</elem>
+	<elem name=4106>Spanish (Guatemala)</elem>
+	<elem name=5130>Spanish (Costa Rica)</elem>
+	<elem name=6154>Spanish (Panama)</elem>
+	<elem name=7178>Spanish (Dominican Republic)</elem>
+	<elem name=8202>Spanish (Venezuela)</elem>
+	<elem name=9226>Spanish (Colombia)</elem>
+	<elem name=10250>Spanish (Peru)</elem>
+	<elem name=11274>Spanish (Argentina)</elem>
+	<elem name=12298>Spanish (Ecuador)</elem>
+	<elem name=13322>Spanish (Chile)</elem>
+	<elem name=14346>Spanish (Uruguay)</elem>
+	<elem name=15370>Spanish (Paraguay)</elem>
+	<elem name=16394>Spanish (Bolivia)</elem>
+	<elem name=17418>Spanish (El Salvador)</elem>
+	<elem name=18442>Spanish (Honduras)</elem>
+	<elem name=19466>Spanish (Nicaragua)</elem>
+	<elem name=20490>Spanish (Puerto Rico)</elem>
+	<elem name=1072>Sutu</elem>
+	<elem name=1089>Swahili (Kenya)</elem>
+	<elem name=1053>Swedish</elem>
+	<elem name=2077>Swedish (Findland)</elem>
+	<elem name=1114>Syriac</elem>
+	<elem name=1097>Tamil</elem>
+	<elem name=1092>Tatar (Tatarstan)</elem>
+	<elem name=1098>Telugu</elem>
+	<elem name=1054>Thai</elem>
+	<elem name=1055>Turkish</elem>
+	<elem name=1058>Ukranian</elem>
+	<elem name=1046>Urdu (Pakistan)</elem>
+	<elem name=2080>Urdu (India)</elem>
+	<elem name=1091>Uzbek (Latin)</elem>
+	<elem name=2115>Uzbek (Cyrillic)</elem>
+	<elem name=1066>Vietnamese</elem>
+</combobox></bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton name=sapiregister>
+			<bold>Register this voice with SAPI</bold><br/>
+			Press this to register this voice with SAPI so you can use it from
+			any SAPI compliant application.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

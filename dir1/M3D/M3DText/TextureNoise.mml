@@ -1,0 +1,104 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Noise"/>
+
+<p>
+	"Noise" is the mathematical term for "randomness". The noise effect adds random discoloration
+	and/or bumps to your texture.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Use this effect</bold><br/>
+			This effect will only be used if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Left/right size</bold> - Typical size of a "blob"
+			of noise from left to right.
+		</td>
+		<td><edit maxchars=64 width=100% name=noisex/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Top/bottom size</bold> - Typical size of a "blob"
+			of nouse from top to bottom.
+		</td>
+		<td><edit maxchars=64 width=100% name=noisey/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Bumps</xtrheader>
+	<tr><td>
+		The bumps section applies the noise/randomness to the height of the surface.
+		Subtle changes in height can signficantly affect a texture's appearance.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Maximum height</bold> - Add this much to the height, maximum.
+		</td>
+		<td><edit maxchars=64 width=100% name=zdeltamax/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum height</bold> - Add this much to the height, minimum.
+			This can be negative.
+		</td>
+		<td><edit maxchars=64 width=100% name=zdeltamin/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Discoloration</xtrheader>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=maxbutton>
+				<bold>Color at maximum</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=maxcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=minbutton>
+				<bold>Color at minimum</bold><br/>
+				Click this to change the color.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=mincolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency at maximum</bold> - The colors can be blended in with the
+			colors underneath. If the color is maximum (above), this is the transparency
+			of it when blended in.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=transmax/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency at minimum</bold>
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=transmin/></td>
+	</tr>
+</xtablecenter>

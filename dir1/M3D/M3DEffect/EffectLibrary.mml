@@ -1,0 +1,91 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Effects library"/>
+
+<p>
+	Select the effect you want to modify from the list, and then press
+	one of the buttons below.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Effect to modify</xtrheader>
+	<tr><td>
+	<table width=100% innerlines=0 border=0 valign=center>
+		<tr>
+			<td width=30%>Major category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=major>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30%>Minor category</td>
+			<td>
+				<bold><combobox width=100% sort=true cbheight=200 name=minor>
+					<elem name=1>Test elem</elem>
+				</combobox></bold>
+			</td>
+		</tr>
+
+		<tr>
+			<td width=30% valign=top>Effect</td>
+			<td>
+				<font color=#000000><bold><listbox sort=true vscroll=lbscroll width=85% height=150 name=name>
+				</listbox></bold></font>
+				<scrollbar height=150 width=15% orient=vert name=lbscroll/>
+			</td>
+		</tr>
+	</table>
+	
+	<p/>
+	<p align=center>
+		Sample
+		<br/>
+		<image width=100% border=2 hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=edit href=edit>
+	<bold>Modify the selected effect</bold><br/>
+	Brings up a dialog that lets you modify the effect. <italic>(You cannot modify
+	built-in effects directly, but you can "Copy and modify" them. See below.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=copyedit>
+	<bold>Copy and modify the selected effect</bold><br/>
+	Copies the effect and then modified the copy. This is useful if you want
+	to create a new effect based upon an old one.
+</xChoiceButton>
+
+<xChoiceButton name=newtext href=newtext>
+	<bold>Create a new effect from scratch</bold><br/>
+	Create a new effect that is not based on an existing one.
+</xChoiceButton>
+
+<xChoiceButton name=rename>
+	<bold>Rename the selected effect</bold><br/>
+	Changes the effect's name or moves it to another category. <italic>(You cannot rename
+	built-in effects.)</italic>
+</xChoiceButton>
+
+<xChoiceButton name=remove>
+	<bold>Delete the selected effect</bold><br/>
+	Deletes the effect. <italic>(You cannot delete
+	built-in effects.)</italic>
+</xChoiceButton>
+
+
+<xbr/>
+
+<xsectiontitle>Documentation</xsectiontitle>
+
+<p>
+	Once you press the "Modify" button, there isn't much documentation. Don't worry;
+	just experiment with the different knobs and numbers and see what happens to
+	the effect. If you like the change, keep it, otherwise return the setting to
+	its previous value.
+</p>
+

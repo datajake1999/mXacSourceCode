@@ -1,0 +1,9 @@
+<?template resource=510?>
+<?Include resource=500?>
+<PageInfo index=false title="List of objects"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Objects</xtrheader>
+	<<<$LIBLIST>>>
+</xtablecenter>
+

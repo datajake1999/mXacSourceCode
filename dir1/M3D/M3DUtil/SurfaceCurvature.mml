@@ -1,0 +1,148 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Specify curvature"/>
+
+<p>
+	This page lets you control how each row and column in the surface is curved.
+	(Details below.)
+</p>
+
+<!xComboDetail>
+	<bold><combobox MACROATTRIBUTE=1 cbheight=150 width=100%>
+		<elem name=0>Straight</elem>
+		<elem name=1>Curved</elem>
+		<elem name=2>Semi-circle (next)</elem>
+		<elem name=3>Semi-circle (previous)</elem>
+		<elem name=4>Semi-ellipse (next)</elem>
+		<elem name=5>Semi-ellipse (previous)</elem>
+	</combobox></bold>
+</xComboDetail>
+
+<xtablecenter width=100%>
+	<xtrheader>By column (vertical strip)</xtrheader>
+	<<<$COLUMN>>>
+</xtablecenter>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>By row (horizontal strip)</xtrheader>
+	<<<$ROW>>>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Constraints</xtrheader>
+	<tr><td>
+		<p>
+			If you aren't allowed to move a control point to a location you'd like
+			to then you might shut one or more of these constraints off.
+		</p>
+		<xChoiceButton style=x checkbox=true name=bottom>
+			<bold>Flat bottom</bold><br/>
+			All bottom points must be at 0 ft/m relative height. Check this
+			to make sure walls don't go below the floor.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=rectangle>
+			<bold>Rectangle</bold><br/>
+			When one of the corners is moved the other three automagically adjust so that
+			the corners form a rectangle. This prevents the outline of the surface from
+			being distorted into a parallelogram or other quadrilateral.
+		</xChoiceButton>
+		<xChoiceButton style=x checkbox=true name=above>
+			<bold>Vertical</bold><br/>
+			Any control points on the top row must be over the bottom row.
+			If an object is rotated, then this is relative to the pre-rotated location.
+			Check this for most surfaces (especially walls) to make sure that they're
+			always vertical.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xbr/>
+
+<p>
+	Every surface is divided into a number of rows and columns. At the intersection
+	of each row/column is a "control point" that can be used to bend/warp the surface.
+	The control points appear when you select the surface.
+</p>
+
+<p>
+	This page allows you to specify how the surface bends in-between the control
+	points. Each surface has two directions of bending, from one column to the next, and
+	from one row to the next. (Columns are vertical strips, and rows horizontal.)
+	You can control the type of bend for each tow and column.
+</p>
+
+<p>
+	For example: If you want a wall that's straight up and down, but is circular
+	as you walk along it, then the "by column" settings should all be "Circular"
+	and the "by row" should be "Straight". If you want the wall to be curved up and down,
+	but straight left and right, then do the opposite.
+</p>
+
+<p>
+	Of course, things are more complicated than that, because not only can you control
+	the bend shape by column and row, you can control it for each column and row.
+	You can make a wall which is straight, then curves in a semicircle, is straight for a bit,
+	and then curves again. You probably won't do this for most walls, but some walls
+	will need it.
+</p>
+
+<p>
+	The types of curves are:
+</p>
+
+<xul>
+	<li>
+		<bold>Straight</bold> - The "curve" really isn't a curve, but is a straight line.
+	</li>
+	<li>
+		<bold>Curved</bold> - Technically it's called a Hermite bi-cubic patch, but just
+		think of it as being a curve that isn't circular.
+	</li>
+	<li>
+		<bold>Semi-circle (next)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the row/column
+		are used, and a third one is also included, the next point over. (If you set the
+		last column/row to this you'll just get a straight line.) The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-circle (previous)</bold> - The curve is part of a circle. Because three
+		points are needed to define a circle, the points on either side of the row/column
+		are used, and a third one is also included, the previous point. (If you set the
+		first column/row to this you'll just get a straight line.) The
+		circle is drawn so that all three points end up being on it. Typically, you
+		will alternate between "Semi-circle (next)" and "Semi-circle (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (next)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points (by column or row) arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		row/column, and the next point over. (If you set the
+		last column/row to this you'll just get a straight line.)
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+	<li>
+		<bold>Semi-ellipse (previous)</bold> - This draws 1/8th of an ellpse - kind of.
+		You need to have three sequential control points (by column or row) arranged
+		to form a 90 degree angle to get an eigth of an ellipse. If the angle between the 1st
+		and the 2nd, and the 2nd and the 3rd point is not 90 degrees you'll get
+		a kind of squashed ellipse. The points used are the ones on either side of the
+		row/column, and the previous point. (If you set the
+		first column/row to this you'll just get a straight line.)
+		Typically, you
+		will alternate between "Semi-ellipse (next)" and "Semi-ellipse (previous)".
+	</li>
+</xul>
+
+<p>
+	Tip: To add more control points, go to the <a href=controlpoints>Add or remove
+	control points</a> page.
+	Make sure the curvature control points are showing in
+	the <xButtonObjControlDialog/> button.
+</p>

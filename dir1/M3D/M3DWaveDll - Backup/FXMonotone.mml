@@ -1,0 +1,29 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Make the voice monotone"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Monotone</xtrheader>
+	<tr><td>
+		Use this effect to make the voice monotone. It <bold>does</bold> change
+		the duration of the wave.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Pitch</bold> - The pitch to end up at, in Hz.
+		</td>
+		<td><edit width=100% maxchars=32 name=pitch/></td>
+	</tr>
+</xtablecenter>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

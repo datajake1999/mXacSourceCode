@@ -1,0 +1,69 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Skydome settings"/>
+
+<p>
+	Use this page to change the way the sky looks.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Automatic sun and moon</xtrheader>
+	<tr><td>
+		Select the date and time you wish to display using the sky. The sun, moon,
+		and sky will automatically be adjusted based on the time.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Date</bold> - Select the day of the year.
+		</td>
+		<td valign=center>
+			<bold><date name=sundate day=1 month=1 year=2001 width=100%/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Time</bold> - Select the time. <italic>Note:
+			This is not 100% accurate because in the calculations 12:00 PM is assumed to
+			be high noon, when the sun is at its highest. Because of time zones and
+			daylight savings, high noon really occurs sometime between 11:30 AM and 1:30 PM.</italic>
+		</td>
+		<td valign=center>
+			<bold><time name=suntime hour=1 minute=1 width=100%/></bold>
+		</td>
+	</tr>
+</xtablecenter>
+
+
+<xbr/>
+
+<xchoicebutton href=cumulus>
+	<bold>Cumulus clouds</bold><br/>
+	Change the low level clouds.
+</xchoicebutton>
+
+<xchoicebutton href=cirrus2>
+	<bold>Altocumulus clouds</bold><br/>
+	Change the middle level clouds.
+</xchoicebutton>
+
+<xchoicebutton href=cirrus>
+	<bold>Cirrus clouds</bold><br/>
+	Change the high level clouds.
+</xchoicebutton>
+
+<xchoicebutton href=atmosphere>
+	<bold>Atmosphere</bold><br/>
+	Change the color of the atmophere.
+</xchoicebutton>
+
+<xchoicebutton href=sun>
+	<bold>Sun and moon</bold><br/>
+	This page lets you change the sun and moon's brightness, or even hide them.
+</xchoicebutton>
+
+<xchoicebutton href=planets>
+	<bold>Suns, planets, and moons</bold><br/>
+	Press this button to add or modify your own suns, planets, and moons.
+</xchoicebutton>
+

@@ -1,0 +1,103 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="System requirements"/>
+
+<xPageTitle>
+	System requirements
+</xPageTitle>
+
+<xtablecenter width=100%>
+	<tr>
+		<td bgcolor=#004000></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><bold>Minimum</bold></font></td>
+		<td bgcolor=#004000 align=center><font color=#ffffff><bold>Recommended</bold></font></td>
+	</tr>
+	<tr>
+		<td>Processor speed</td>
+		<td align=center><bold>1 gHz</bold></td>
+		<td align=center>2 gHz</td>
+	</tr>
+	<tr>
+		<td>RAM</td>
+		<td align=center><bold>256 MB</bold></td>
+		<td align=center>512 MB</td>
+	</tr>
+	<tr>
+		<td>Operating system</td>
+		<td align=center><bold>Windows 2000</bold></td>
+		<td align=center>Windows XP</td>
+	</tr>
+	<tr>
+		<td>Hard disk</td>
+		<td align=center><bold>100 MB</bold></td>
+		<td align=center>100 MB</td>
+	</tr>
+	<tr>
+		<td>Monitors</td>
+		<td align=center><bold>1</bold></td>
+		<td align=center>
+			<a>
+				2
+				<xHoverHelp>
+					<xSN/> supports multiple monitors. See "Multiple monitors" in Windows help,
+					or talk to your local computer guru.
+				</xHoverHelp>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>Printer</td>
+		<td align=center><bold>-</bold></td>
+		<td align=center>Color printer recommended</td>
+	</tr>
+	<tr>
+		<td>Mouse</td>
+		<td align=center><bold>Mouse</bold></td>
+		<td align=center>Mouse with wheel</td>
+	</tr>
+</xtablecenter>
+
+<xDefinition>
+	<bold>Feedback question:</bold> <xSN/> doesn't support plotters. How many people
+	use them? Send mail to <xMyEmail/> if you would use a plotter.
+</xDefinition>
+
+
+<xDefinition>
+	<bold>Feedback question:</bold> <xSN/> can produce an image to be used with the red
+	and blue filter glasses from 1950's movies. It doesn't work to well though.
+	However, it wouldn't be too much more work to work with LCD shutter glasses.
+	Send mail to <xMyEmail/> if you would use LCD shutter glasses.
+</xDefinition>
+
+<xsectiontitle>Why is it so slow?</xsectiontitle>
+
+<p>
+	I often get asked this question... <xLN/> requires a fast CPU for the following
+	reasons:
+</p>
+
+<ol>
+	<li>
+		<bold><xSN/> is always in 3D mode;</bold> There isn't (as is typical with
+		house design programs) a faster 2D mode. I didn't put
+		in the 2D plan view because it discourages three-dimensional thinking.
+		Besides, <xSN/> is only slow for computers common in 2002. By 2003/2004 its
+		slowness will be a non-issue.
+	</li>
+	<li>
+		<bold>I don't use 3D accelerator cards but do everything on the main CPU.</bold> Most
+		3D accelerators are designed for game play. Those cards that have the features I need
+		are expensive and only purchased by professionals. Furthermore, if I did use
+		3D accelerators I would get an endless stream of bugs about my software not drawing
+		properly with XYZ's 3D accelerator, even though it works with ABC's accelerator.
+		I don't have the money or time to deal with the hundreds of different cards out there.
+	</li>
+	<li>
+		<bold>I haven't optimized the code much.</bold> Whenever a programmer optimizes code
+		he increases the chance of bugs, many of which only happen under the right phase
+		of the moon. I am the only programmer, and don't have any test staff other than
+		myself. If I optimized my software too much it might run twice as fast, but it would
+		have four times as many bugs.
+	</li>
+</ol>

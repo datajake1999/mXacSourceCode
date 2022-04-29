@@ -1,0 +1,210 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Bones - freedom of motion and envelopes"/>
+
+<xPageTitle>
+	Bones - freedom of motion and envelopes
+</xPageTitle>
+
+<p>
+	Once you have built the skeleton within your body shape, you will need to tell
+	the skeleton how the bones move (shoulder joints can move both up-and-down and
+	left-and-right, while elbow joints are only up-and-down and twist). You
+	also need to indicate which part of the body belongs to which bone.
+</p>
+
+<xsectiontitle>Freedom of motion</xsectiontitle>
+
+<p>
+	To change the freedom of motion of a bone:
+</p>
+
+<ol>
+	<li>
+		Select the skeleton using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Select <xButtonObjControlNSEW/>.
+	</li>
+	<li>
+		Click in the <bold>white triangle</bold> of the bone you wish to modify. This
+		will show its freedom of motion (yellow lines) and envelope (purple lines).
+	</li>
+	<p>
+		A bone "bends" and moves from "side to side" at its base (the thick end of the bone).
+		The bend direction is from top (blue) to bottom (black), and is usually the major
+		type of motion for the joint. The side-to-side motion
+		is from left (green) to right (red), and is usually the secondary motion for
+		a joint. Bones can also twist, and extend or shrink. For example: An upper arm bone,
+		and associated elbow joint, has a bend (moving the arm up and down) and side-to-side
+		motion (moving the arm forward and backwards). The lower leg bone and associated knee
+		joint only has a bend. The forearm and associated elbow joint, can bend and twist,
+		but has no side-to-side motion.
+	</p>
+	<li>
+		Since both the bending motion and side-to-side motion are affected by what the
+		bone thinks of as a "top", you'll need to change this if the bone isn't oriented
+		correctly. To move the top of the bone, drag the yellow <bold>"Bend top"</bold> control
+		point. As you do so you'll see the bone rotate, along with the envelope and
+		freedom-of-motion lines.
+	</li>
+</ol>
+
+<p>
+	To change the amount that a bone can bend, move side-to-side, twist, or extend:
+</p>
+
+<ol>
+	<li>
+		Selec the <xButtonObjDialog/> tool and <bold>click on the skeleton</bold>.
+	</li>
+	<li>
+		In the "Bone settings" dialog, find the "Choose a bone" section. <bold>Slide</bold> the
+		scrollbars so you can clearly see the bone structure.
+	</li>
+	<li>
+		In the "Choose a bone" section, <bold>click</bold> on the bone you wish to modify.
+	</li>
+	<p>
+		The "Modify a bone" dialog will appear.
+	</p>
+	<li>
+		While you're here, type in the <bold>"Name"</bold> for the bone. Naming the bone
+		makes it easier to identify when doing animation.
+	</li>
+	<li>
+		Under the "Limits" section you'll see a number of edit fields. You can use these
+		to control the bone's freedom of motion. <bold>Type</bold> in some new values
+		for the minimum and maximum. You'll see the yellow freedom-of-motion lines move
+		on the main display as the numbers are changed.
+	</li>
+	<li>
+		Tip: If you have <bold>symmetry</bold> turned on then changing the freedom of motion
+		for one bone will also affect it's mirror. Symmetry is very useful for human and
+		animal skeletons because you only need to design the left side of the character;
+		symmetry copies this to the right.
+	</li>
+</ol>
+
+<p>
+	You can test a skeleton's motion by playing with its attributes:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjAttrib/> tool.
+	</li>
+	<li>
+		<bold>Click</bold> on the skeleton.
+	</li>
+	<li>
+		You will find at least one slider for every bone, named after the bone. If the
+		bone can do more than just bend, it will have extra sliders. <bold>Move</bold> the
+		sliders and watch the skeleton move.
+	</li>
+	<li>
+		<bold>You can only modify a skeleton's control points if the all the skeleton's
+		bones are in their default position.</bold> Chaning the attributes will move them
+		out of default position. To restore them, use <xButtonObjDialog/>, <bold>click</bold> on
+		the skeleton, and press the <bold>Return all bones to default position</bold> button.
+	</li>
+</ol>
+
+
+<xsectiontitle>Envelopes</xsectiontitle>
+
+<p>
+	Each bone has an "envelope" that specifies which surrounding objects it affects.
+	You can also think of this as what "flesh" is attached to which bone.
+	Envelopes can overlap, in which case the "flesh" is partialy affected by each
+	of the overlapping bones.
+</p>
+
+<p>
+	To modify a bone's envelope:
+</p>
+
+<ol>
+	<li>
+		Select the skeleton using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Select <xButtonObjControlNSEW/>.
+	</li>
+	<li>
+		Click in the <bold>white triangle</bold> of the bone you wish to modify. This
+		will show its freedom of motion (yellow lines) and envelope (purple lines).
+	</li>
+	<li>
+		<bold>Move</bold> the purple control points around to enlarge or shrink the
+		envelope at various points.
+	</li>
+	<p>
+		The envelope should be large enough that it encompasses all the surrounding
+		flesh and clothes (as would be affected by motion of the bone), but not so large
+		that it affects flesh associated with other bones.
+	</p>
+	<p>
+		Envelopes will overlap at the joints; this makes for smoother bends.
+	</p>
+</ol>
+
+<p>
+	To test that your envelopes work you need to:
+</p>
+
+<ol>
+	<li>
+		Save the object (in the object editor) using <xButtonSave/>.
+	</li>
+	<li>
+		In the world view, you need to create an instance of the object
+		using <xButtonObjNew/>.
+	</li>
+	<li>
+		Select the <xButtonObjAttrib/> tool and <bold>click</bold> on the object.
+	</li>
+	<li>
+		In the "Attributes" dialog <bold>move</bold> the sliders for the bones just
+		like you did to test their freedom of motion when you were in the object editor.
+	</li>
+	<p>
+		You won't actually see the bones but you will see the object's other components
+		move as if attached to the bones. (If you do see some bones then you need to go
+		back to the object editor and <xButtonObjMerge/> them all together. Objects can
+		only have one skeleton in them.)
+	</p>
+	<p>
+		As you move the bone for a limb, the associated flesh and clothes should move with
+		it. If parts of the flesh or clothes stay behind you'll need to increase the
+		size of the envelope. If portions of other limbs unintenionally move you'll need
+		to decrease the envelope's size.
+	</p>
+	<p>
+		You should also examine how well the joints bend. If the envelopes at a joint
+		don't overlap much the bend will be very angular. The larger the overlap, the
+		more curved the bend.
+	</p>
+</ol>
+
+
+<xsectiontitle>Skeletal motion</xsectiontitle>
+
+<p align=right>
+	<button style=rightarrow href=r:532><bold>Next</bold></button>
+</p>
+
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:530>Basics</a></li>
+	<li><a href=r:536>Conventions</a></li>
+	<li><a href=r:533>Face forwards control point</a></li>
+	<li><a href=r:534>Keeping feet on the ground</a></li>
+	<li><a href=r:535>Rigid surfaces</a></li>
+	<li><a href=r:532>Skeletal motion</a></li>
+	<li><a href=r:529>Symmetry</a></li>
+</xul>

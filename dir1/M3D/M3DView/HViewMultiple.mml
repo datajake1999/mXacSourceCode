@@ -1,0 +1,107 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Multiple view windows"/>
+
+<xPageTitle>
+	Multiple view windows
+</xPageTitle>
+
+<p>
+	<xLN/> supports multiple <bold>view windows</bold>, all looking at the same file.
+	The windows can either be on the same computer screen, or if your computer
+	has two or more monitors attached, different screens. (Personally, I like this
+	option best since there never seems to be enough computer screen to go around.)
+	If you have no idea how to connect an extra monitor (or two) to your computer
+	then see your local computer guru.
+</p>
+
+<p>
+	You will probably want to have several view windows running at once. Typical
+	configurations include:
+</p>
+
+<xul>
+	<li>
+		One view window, using the <xButtonViewFlat/> looking "From above".
+	</li>
+	<li>
+		One view window, using the <xButtonViewFlat/> looking from the south or north.
+	</li>
+	<li>
+		One view window, using the <xButtonViewFlat/> looking from the east or west.
+	</li>
+	<li>
+		A perspective view, using <xButtonView3D/> or <xButtonViewWalkthrough/> that
+		you move around as needed.
+	</li>
+</xul>
+
+<xSectionTitle>Creating a new view</xSectionTitle>
+
+<p>
+	To create a new view:
+</p>
+
+<xul>
+	<li>
+		Press the <xButtonCloneView/> button.
+	</li>
+	<li>
+		The new view will appear as a "Small window". (See <a href=r:248>Small view windows</a>).
+		You can resize it to use the entire screen if you want.
+	</li>
+	<li>
+		You may want to move it to another monitor.
+		See <a href=r:249>Move a view window to another monitor</a>.
+	</li>
+</xul>
+
+<xSectionTitle>Moving the camera remotely</xSectionTitle>
+
+<p>
+	Every view has a different camera location. From within the view you can
+	move the camera the normal way, using the camera and rotation tools
+	at the top of the screen. Or, you can move the camera from another view.
+</p>
+
+<p>
+	Everytime you add a new view window (except when it's a flattened view) you'll
+	see an overside red-colored camera drawn in all the other views. (This assumes that
+	the other views are looking at the area where the camera is.)
+</p>
+
+<p>
+	You can manipulate this camera just as if it were an object:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonSelIndividual/> tool and click on the camera to select it.
+	</li>
+	<li>
+		Use the <xButtonMoveNSEWUD/>, <xButtonMoveNSEW/> and <xButtonMoveUD/> tools to move the camera.
+		As you move it in one view, you'll see the view (to which the camera belongs)
+		redraw from the new camera location.
+	</li>
+	<li>
+		<xButtonMoveRotZ/> and <xButtonMoveRotY/> will rotate
+		the camera.
+	</li>
+	<li>
+		<xButtonDelete/> will delete the camera and the view along with it.
+	</li>
+</ol>
+
+<p>
+	Remotely moving the camera is a fast way of repositioning it. Often times
+	it's quicker to do this than to use the normal camera movement and rotation
+	tools.
+</p>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:410>Thumbnail images</a></li>
+</xul>

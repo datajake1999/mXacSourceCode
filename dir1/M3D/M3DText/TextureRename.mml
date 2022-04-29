@@ -1,0 +1,48 @@
+<?Include resource=500?>
+<PageInfo index=false title="Rename a texture"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+
+<td>
+	<p>
+		Please type in a new category, sub-category, and name for the texture.
+	</p>
+	<p align=center><table width=100% border=0 innerlines=0>
+		<tr>
+			<td width=33%>
+				<bold>Name</bold>
+			</td>
+			<td width=66%><bold><font color=#000000><edit maxchars=64 width=100% selall=true defcontrol=true name=name/></font></bold></td>
+		</tr>
+		<tr>
+			<td width=33%>
+				<bold>Category</bold>
+			</td>
+			<td width=66%><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=category/></font></bold></td>
+		</tr>
+		<tr>
+			<td width=33%>
+				<bold>Sub-category</bold>
+			</td>
+			<td width=66%><bold><font color=#000000><edit maxchars=64 width=100% selall=true name=subcategory/></font></bold></td>
+		</tr>
+	</table></p>
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

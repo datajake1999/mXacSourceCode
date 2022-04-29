@@ -1,0 +1,63 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Texture settings"/>
+
+<xPageTitle>
+	Tutorial - Texture settings
+</xPageTitle>
+
+<p>
+	You briefly visited the "Texture settings" dialog to add a bump map to your
+	texture. The texture settings dialogs provides a number of other useful settings.
+</p>
+
+<p>
+	To get to a texture's settings:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonPVDialog/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the texture you wish to modify.
+	</li>
+</ol>
+
+<p>
+	Some settings to point out:
+</p>
+
+<xul>
+	<li>
+		The "Maps" section lets you add or remove different maps. You cannot paint on
+		a map until you've added it.
+	</li>
+	<li>
+		If there isn't enough detail in your texture, use the "Resolution" group to
+		increase (or decrease) your texture's resolution. The larger the width and
+		height the more memory and hard disk the texture will use. If you are going
+		to change a texture's resolution, do so early on since changing the resolution
+		degrades the image a bit.
+	</li>
+	<li>
+		Use the "Material" settings to change the object's glossiness, transparency,
+		and other properties without requiring a memory-consuming map.
+	</li>
+	<li>
+		May textures (such as leaves) use a color to indicate a transparency. This saves
+		on the memory and disk space required for an extra transparency map.
+		You can use this feature by checking the "Use transparency" button
+		in the "Transparency from the color image" section.
+	</li>
+	<li>
+		If you don't want to save you changes to the texture, press the "Discard changes
+		to the texture" button.
+	</li>
+</xul>
+
+
+<p align=right>
+	<button style=rightarrow href=r:807><bold>Next</bold></button>
+</p>
+

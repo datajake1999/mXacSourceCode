@@ -1,0 +1,81 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Editor"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Editor
+</xPageTitle>
+
+<p>
+	To edit a polygon mesh, you need to pull up the polygon mesh editor. To do this:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjShowEditor/> tool.
+	</li>
+	<li>
+		<bold>Click on</bold> the polygon mesh.
+	</li>
+</ol>
+
+<p>
+	The polygon mesh editor looks very similar to the main world editor. Most of the buttons
+	are the same. I will only go into detail about the buttons that are unique to
+	the polygon mesh editor.
+</p>
+
+<p>
+	The first thing you'll notice about the polygon mesh editor is that it only shows
+	the polygon mesh. It doesn't draw anything else in the world. For the most part
+	this is good because the image is less cluttered. However, if you wish
+	to display the rest of the world in the polygon mesh editor (perhaps so you can
+	see the polygon mesh in context) then press the <xButtonPMShowBackground/> button.
+	Pressing it a second time returns to showing only the polygon mesh.
+</p>
+
+<p>
+	Along the right hand side of the screen are a number of modes for polygon mesh editing.
+	Pressing these will allow you to edit different features of the polygon mesh.
+</p>
+
+<xul>
+	<li>
+		<xButtonPMModePoly/> - This lets you move individual vertices, edges, and sides around.
+	</li>
+	<li>
+		<xButtonPMModeClay/> - Instead of moving individual vertices, edges, or sides, this
+		mode lets you move groups of them. The experience is similar to sculpting clay.
+	</li>
+	<li>
+		<xButtonPMModeMorph/> - "Morphs" are a technique used to create facial animation.
+		Basically, using morphs a polygon mesh can "remember" several different shapes.
+		In the case of facial animation, it would have one shape for each mouth position (closed,
+		open, opened wide, etc.) The animation system then blends these basic shapes
+		together in the right combination to make it look the the head is talking.
+	</li>
+	<li>
+		<xButtonPMModeTexture/> - Use this mode to "paint" the polygon mesh with more than
+		one texture and to control how the texture is applied (techincal term is "mapped") to
+		the surface.
+	</li>
+	<li>
+		<xButtonPMModeBone/> - To animate a character you will need to build a skeleton (called
+		"bones") and then attach the skin (the polygon mesh) to the bones. This mode
+		lets you control what skin is attached to what bones.
+	</li>
+	<li>
+		<xButtonPMModeTailor/> - This mode lets you paint the regions of the character that
+		will be covered with clothing and then automatically create polygon meshes for the
+		clothing.
+	</li>
+</xul>
+
+<p>
+	The tutorial will cover each of these modes in turn. First will be <xButtonPMModePoly/>.
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:896><bold>Next</bold></button>
+</p>
+

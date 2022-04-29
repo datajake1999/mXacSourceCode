@@ -1,0 +1,94 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Morph editing 2"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Morph editing 2
+</xPageTitle>
+
+<p>
+	But wait, there's more...
+</p>
+
+<xSectionTitle>Other tools</xSectionTitle>
+
+<p>
+	The morph editing mode provides some other useful tools:
+</p>
+
+<xul>
+	<li>
+		<xButtonBrush64/> and other brushes - If you select one of the brushes and "paint"
+		onto the morph you will increase the effect of the morph in the area you painted.
+		As I stated earier, morphs are stored as a change against the basic polygon mesh
+		shape. These brushes increase the change.
+	</li>
+	<li>
+		<xButtonBrushShape/>, <xButtonBrushEffect/>, and <xButtonBrushStrength/> - These
+		control the shape, effect, and strength of the painting with the brushes.
+	</li>
+	<li>
+		<xButtonPMMorphScale/> - When you click on the polygon mesh and drag to the right
+		the effects of the morph (on all points which are affected) will increase.
+		Dragging to the left will decrease the effect.
+	</li>
+</xul>
+
+
+<xSectionTitle>Combo-morphs</xSectionTitle>
+
+<p>
+	When you double-clicked "Double-click to add a new morph" you were given the option
+	of creating a combo-morph with "Add a combo-morph".
+	A combo-morph is a special morph that combines the effects of two or more morphs.
+	Use these to simplify animation and posing.
+</p>
+
+<p>
+	For example: When you build the morphs for a face you may wish to have one morph
+	to lift up the right eyebrow and a different one to lift the left eyebrow.
+	This makes the eyebrows independent, providing for more flexible and realistic
+	animation. However, there are times when you want to raise and lower both
+	eyebrows at the same time. To do this, create a combo-morph that affects both
+	the left and right eyebrow morphs at the same time.
+</p>
+
+<p>
+	To do this:
+</p>
+
+<ol>
+	<li>
+		Double click <bold>"Double-click to add a new morph"</bold>.
+	</li>
+	<li>
+		In the "Polygon mesh add morph" dialog, press <bold>"Add combo-morph"</bold>.
+	</li>
+	<li>
+		The page will switch to "Modify a morph". In the middle of the page is a section
+		for "Affected sub-morphs". Immediately below that is a table; the title of the
+		table has a drop-down menu that lets you specify what morph is
+		affected. <bold>Select</bold> the first morph (such as "Right eyebrow") you want affected.
+	</li>
+	<li>
+		Further down the page is a button, <bold>"Affect an additonal sub-morph"</bold>. Press
+		it.
+	</li>
+	<li>
+		A second table with a drop-down menu appears. <bold>Change</bold> this
+		to the second morph (such as "Left eyebrow").
+	</li>
+	<li>
+		<bold>Close</bold> the "Modify a morph" dialog.
+	</li>
+	<p>
+		You'll see your new morph added to the list. If you click on it you'll notice
+		that both morphs will be turned on. The same thing will happen if you change
+		the morph's attribute.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:907><bold>Next</bold></button>
+</p>
+

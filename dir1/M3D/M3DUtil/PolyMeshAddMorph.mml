@@ -1,0 +1,18 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Polygon mesh add morph"/>
+
+<xchoicebutton href=addmorph>
+	<bold>Add a new morph</bold><br/>
+	Create a new morph and add it to the list. To shape the morph you select
+	it in the list box and then shape it using the normal polygon or organic
+	tools.
+</xchoicebutton>
+
+<xchoicebutton name=addmorphcombo>
+	<bold>Add a combo-morph</bold><br/>
+	A combo-morph combines two or more morphs together into one attribute without
+	requiring you to reshape the object. For example: If you have two morphs, "left
+	eyebrow up" and "right eyebrow up", you could make a combo-morph called
+	"eyebrows up" that raises both left and right at the same time.
+</xchoicebutton>

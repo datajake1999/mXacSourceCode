@@ -1,0 +1,35 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Add an overlay based on intersections"/>
+
+<p>
+	With this page you can add an overlay using the intersection of
+	other surfaces (such as walls) with the surface to determine the boundaries.
+	This page is useful for adding overlays for floors in a room, since the floor
+	colors/textures usually cover the entire room (which is enclosed by four walls).
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Intersections</xtrheader>
+	<tr><td>
+		<p>
+			Click on the edges that enclose the area you wish to use for an overlay.
+			When you've completely enclosed an area, press "Add overlay."
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+		<br/>
+		<italic>If you only see the edge of the surface drawn then there may not be
+		any other surfaces that intersect it.</italic>
+	</td></tr>
+</xtablecenter>
+
+
+<xchoicebutton name=add>
+	<bold>Add overlay</bold><br/>
+	Create a new overlay based on the edges you've selected above.
+</xchoicebutton>

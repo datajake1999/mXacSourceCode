@@ -1,0 +1,25 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify edge control points"/>
+
+<p>
+	This page lets you add or remove control points to the outline of the overlay.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Add/remove control points</xtrheader>
+	<tr><td>
+		<p>
+			Click on a grey edge to split into two, or click on a red edge control point to
+			delete it and merge the adjacent edges.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=edgeaddremove>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+	</td></tr>
+</xtablecenter>
+
+

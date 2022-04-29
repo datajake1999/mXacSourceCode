@@ -1,0 +1,35 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Transplanted prosody review"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Check the transplanted prosody</xtrheader>
+	<tr><td>
+		<xChoiceButton style=righttriangle accel=enter href=next>
+			<bold>Next</bold><br/>
+			Keep the selected transplanted prosody setting and continue.
+		</xChoiceButton>
+	</td></tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle name=playorig>
+			<bold>Play original</bold><br/>
+			Play the original recording.
+		</xChoiceButton>
+		<xChoiceButton style=righttriangle name=playtp>
+			<bold>Play transplanted prosody</bold><br/>
+			Play the transplanted prosody.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xChoiceButton name=newttsfile>
+	<bold>Change text-to-speech voice</bold><br/>
+	If you haven't already done so, you need to select the text-to-speech voice to
+	transplant onto.
+	The text-to-speech voice
+	should use the <bold>same language and lexicon</bold> as the
+	speech recognition training file.
+	You can usually find some text-to-speech voices in "c:\program files\mXac\CircumReality".
+</xChoiceButton>
+
+<xeditoneline enabled=false name=ttsfile/>

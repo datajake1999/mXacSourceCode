@@ -1,0 +1,77 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Adding leaves"/>
+
+<xPageTitle>
+	Tutorial - Adding leaves
+</xPageTitle>
+
+<p>
+	Next you need to add leaves to your branch.
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click on</bold> your branch. (This
+		is all within the object editor.)
+	</li>
+	<li>
+		In the "Branch settings" dialog, press the <bold>"Add a new object"</bold> button.
+	</li>
+	<li>
+		The "Add a new object" dialog will appear. Find your leaf under "Object pieces",
+		"Leaves" and <bold>select</bold> it.
+	</li>
+	<p>
+		The "Add a new object" dialog will close and return you to the "Branch
+		settings" dialog. There you'll find a picture of your leaf under "Leaves and
+		sub-branches."
+	</p>
+	<li>
+		<bold>Close</bold> the "Branch settings" page.
+	</li>
+	<p>
+		Looking back at your branch, you may notice that a new "green triangle" has appeared.
+		This will let you add a leaf.
+	</p>
+	<li>
+		Click on a <bold>white triangle</bold> to select a portion of the branch where you
+		wish to add your leaf.
+	</li>
+	<li>
+		Click on the <bold>green triangle</bold> to add your leaf.
+	</li>
+	<p>
+		When you click on the green triangle, a new leaf will be created using the
+		same orientation that you creating the leaf with. (Which is why creating it
+		in a "typical" orientation and size makes life easier.)
+	</p>
+	<li>
+		Continuing to <bold>click on</bold> the <bold>green triangle</bold> will add
+		more leaves.
+	</li>
+	<li>
+		To rotate or resize a leaf, <bold>click on</bold> the leaf's <bold>white triangle</bold> to
+		select it.
+	</li>
+	<li>
+		<bold>Click and drag</bold> the <bold>green circle</bold> to rotate and size the leaf.
+	</li>
+	<li>
+		To twist the leaf left/right, or to rotate it up/down, <bold>click and drag</bold> on
+		the leaf's <bold>blue square</bold>.
+	</li>
+	<li>
+		<bold>Repeat the process</bold> of adding leaves until you get the hang of it.
+		Don't bother with too many leaves since there's an easier way.
+	</li>
+</ol>
+
+<p>
+	Alternatively, you can always use an existing branch from "Object pieces", "Branches".
+</p>
+
+<p align=right>
+	<button style=rightarrow href=r:638><bold>Next</bold></button>
+</p>
+

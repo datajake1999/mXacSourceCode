@@ -1,0 +1,208 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#define VER_FILE_TYPE VFT_DLL
+#define VER_FILE_DESC "3D Outside the Box"
+#define VER_FILE_SUBTYPE 0
+#define VER_FILE_INITNAME "M3DObj.dll\0"
+#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME
+
+#include "..\buildnum.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#define VER_FILE_TYPE VFT_DLL\r\n"
+    "#define VER_FILE_DESC ""3D Outside the Box""\r\n"
+    "#define VER_FILE_SUBTYPE 0\r\n"
+    "#define VER_FILE_INITNAME ""M3DObj.dll\\0""\r\n"
+    "#define VER_ORIGINAL_FILENAME VER_FILE_INITNAME\r\n"
+    "\r\n"
+    "#include ""..\\buildnum.rc""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MML
+//
+
+IDR_MMLMACROS           MML                     "..\\Macros.mml"
+IDR_MMLTEMPLATEBACK     MML                     "..\\TemplateBack.mml"
+IDR_MMLUNIHOLE          MML                     "UniHole.mml"
+IDR_MMLGROUNDDIALOG     MML                     "GroundDialog.mml"
+IDR_MMLBUILDBLOCKDIALOG MML                     "BuildBlockDialog.mml"
+IDR_MMLBUILDBLOCKDISPLAY MML                     "BuildBlockDisplay.mml"
+IDR_MMLBUILDBLOCKROOF   MML                     "BuildBlockRoof.mml"
+IDR_MMLBUILDBLOCKWALLS  MML                     "BuildBlockWalls.mml"
+IDR_MMLBUILDBLOCKFLOORS MML                     "BuildBlockFloors.mml"
+IDR_MMLBUILDBLOCKFOUNDATION MML                     "BuildBlockFoundation.mml"
+IDR_MMLBUILDBLOCKCEILING MML                     "BuildBlockCeiling.mml"
+IDR_MMLBUILDBLOCKLEVELS MML                     "BuildBlockLevels.mml"
+IDR_MMLBUILDBLOCKWALLSANY MML                     "BuildBlockWallsAny.mml"
+IDR_MMLBUILDBLOCKWALLANGLE MML                     "BuildBlockWallAngle.mml"
+IDR_MMLBUILDBLOCKVERANDAH MML                     "BuildBlockVerandah.mml"
+IDR_MMLBUILDBLOCKVERANDAHANY MML                     "BuildBlockVerandahAny.mml"
+IDR_MMLBUILDBLOCKINTEL  MML                     "BuildBlockIntel.mml"
+IDR_MMLGROUNDCUTOUTMAIN MML                     "GroundCutoutMain.mml"
+IDR_MMLCOLUMN           MML                     "Column.mml"
+IDR_MMLBALAPPEARANCE    MML                     "BalAppearance.mml"
+IDR_MMLBALCUSTOM        MML                     "BalCustom.mml"
+IDR_MMLBALOPENINGS      MML                     "BalOpenings.mml"
+IDR_MMLBALDIALOG        MML                     "BalDialog.mml"
+IDR_MMLBALDISPLAY       MML                     "BalDisplay.mml"
+IDR_MMLBALCORNERS       MML                     "BalCorners.mml"
+IDR_MMLPIERSOPENINGS    MML                     "PiersOpenings.mml"
+IDR_MMLPIERSCORNERS     MML                     "PiersCorners.mml"
+IDR_MMLPIERSCUSTOM      MML                     "PiersCustom.mml"
+IDR_MMLPIERSDIALOG      MML                     "PiersDialog.mml"
+IDR_MMLPIERSDISPLAY     MML                     "PiersDisplay.mml"
+IDR_MMLPIERSAPPEARANCE  MML                     "PiersAppearance.mml"
+IDR_MMLSTAIRSPATH       MML                     "StairsPath.mml"
+IDR_MMLSTAIRSDIALOG     MML                     "StairsDialog.mml"
+IDR_MMLSTAIRSTREADS     MML                     "StairsTreads.mml"
+IDR_MMLSTAIRSBAL        MML                     "StairsBal.mml"
+IDR_MMLSTAIRSWALLS      MML                     "StairsWalls.mml"
+IDR_MMLSTAIRSRAILS      MML                     "StairsRails.mml"
+IDR_MMLDOORDIALOG       MML                     "DoorDialog.mml"
+IDR_MMLDOORFRAMESHAPE   MML                     "DoorFrameShape.mml"
+IDR_MMLDOORFRAMEWD      MML                     "DoorFrameWD.mml"
+IDR_MMLDOOROPENING      MML                     "DoorOpening.mml"
+IDR_MMLDOORCUSTOM       MML                     "DoorCustom.mml"
+IDR_MMLDOORKNOB         MML                     "DoorKnob.mml"
+IDR_MMLTREEDIALOG       MML                     "TreeDialog.mml"
+IDR_MMLLIGHT            MML                     "Light.mml"
+IDR_MMLNOODLEDIALOG     MML                     "NoodleDialog.mml"
+IDR_MMLNOODLEDISPLAY    MML                     "NoodleDisplay.mml"
+IDR_MMLNOODLECURVE      MML                     "NoodleCurve.mml"
+IDR_MMLREVDIALOG        MML                     "RevDialog.mml"
+IDR_MMLREVCURVE         MML                     "RevCurve.mml"
+IDR_MMLREVDISPLAY       MML                     "RevDisplay.mml"
+IDR_MMLSINGLEDIALOG     MML                     "SingleDialog.mml"
+IDR_MMLPOLYHEDRONDISPLAY MML                     "PolyhedronDisplay.mml"
+IDR_MMLPAINTINGDIALOG   MML                     "PaintingDialog.mml"
+IDR_MMLTABLECLOTHDIALOG MML                     "TableClothDialog.mml"
+IDR_MMLCURTAINDIALOG    MML                     "CurtainDialog.mml"
+IDR_MMLCUSHIONDIALOG    MML                     "CushionDialog.mml"
+IDR_MMLBOOKSDIALOG      MML                     "BooksDialog.mml"
+IDR_MMLCABINETDIALOG    MML                     "CabinetDialog.mml"
+IDR_MMLDRAWERDIALOG     MML                     "DrawerDialog.mml"
+IDR_MMLPATHWAYDIALOG    MML                     "PathwayDialog.mml"
+IDR_MMLPOOLDIALOG       MML                     "PoolDialog.mml"
+IDR_MMLTRUSSDIALOG      MML                     "TrussDialog.mml"
+IDR_MMLPOLYMESHDIALOG1  MML                     "PolyMeshDialog1.mml"
+IDR_MMLBONEDIALOG       MML                     "BoneDialog.mml"
+IDR_MMLBONEEDIT         MML                     "BoneEdit.mml"
+IDR_MMLSKYDOME          MML                     "Skydome.mml"
+IDR_MMLSKYDOMECIRRUS    MML                     "SkydomeCirrus.mml"
+IDR_MMLSKYDOMECUMULUS   MML                     "SkydomeCumulus.mml"
+IDR_MMLSKYDOMEATMOSPHERE MML                     "SkydomeAtmosphere.mml"
+IDR_MMLSKYDOMESUN       MML                     "SkydomeSun.mml"
+IDR_MMLSKYDOMEPLANETS   MML                     "SkydomePlanets.mml"
+IDR_MMLSKYDOMEPLANETSEDIT MML                     "SkydomePlanetsEdit.mml"
+IDR_MMLLEAF             MML                     "Leaf.mml"
+IDR_MMLBRANCH           MML                     "Branch.mml"
+IDR_MMLBRANCHAUTO       MML                     "BranchAuto.mml"
+IDR_MMLSURFACEDIALOG    MML                     "SurfaceDialog.mml"
+IDR_MMLSURFACEDISPLAY   MML                     "SurfaceDisplay.mml"
+IDR_MMLOBJECTLIBRARY    MML                     "ObjectLibrary.mml"
+IDR_MMLOBJECTCLASSNEW   MML                     "ObjectClassNew.mml"
+IDR_MMLOBJECTRENAME     MML                     "ObjectRename.mml"
+IDR_MMLOBJECTCLASSEDIT  MML                     "ObjectClassEdit.mml"
+IDR_MMLANIMCAMERADIALOG MML                     "AnimCameraDialog.mml"
+IDR_MMLGROUNDFORESTCANOPY MML                     "GroundForestCanopy.mml"
+IDR_MMLPOLYMESHDIALOG2  MML                     "PolyMeshDialog2.mml"
+IDR_MMLEYE              MML                     "Eye.mml"
+IDR_MMLHAIRLOCK         MML                     "HairLock.mml"
+IDR_MMLHAIRHEAD         MML                     "HairHead.mml"
+IDR_MMLHAIRHEADCP       MML                     "HairHeadCP.mml"
+IDR_MMLTOOTH            MML                     "Tooth.mml"
+IDR_MMLJAW              MML                     "Jaw.mml"
+IDR_MMLLIGHTGENERIC     MML                     "LightGeneric.mml"
+IDR_MMLWATERFALL        MML                     "Waterfall.mml"
+IDR_MMLROCK             MML                     "Rock.mml"
+IDR_MMLCAVE             MML                     "Cave.mml"
+IDR_MMLCAVEMETASURFACE  MML                     "CaveMetaSurface.mml"
+IDR_MMLCAVECANOPY       MML                     "CaveCanopy.mml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_OBJSHOWEDITOR       BITMAP                  "ObjShowEditor.bmp"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,404 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Table of contents"/>
+
+<xPageTitle>
+	Table of contents
+</xPageTitle>
+
+<p>
+	<big><bold>Animation timeline</bold></big><br/>
+	<blockquote>
+		<italic>See the tutorial for more topics</italic><br/>
+		<a href=r:815>Animating mouth shapes</a><br/>
+		<a href=r:564>Bookmarks</a><br/>
+		<a href=r:565>Deconstruct</a><br/>
+		<a href=r:569>Framerate</a><br/>
+		<a href=r:566>Merge</a><br/>
+		<a href=r:816>Playing audio objects</a><br/>
+		<a href=r:571>Resizing animation objects</a><br/>
+		<a href=r:568>Scenes</a><br/>
+		<a href=r:567>Select changing objects</a><br/>
+		<a href=r:570>Starting attributes</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Balustrade object</bold></big><br/>
+	<blockquote>
+		<a href=r:344>Balustrades</a><br/>
+		<a href=r:343>Customized balustrades</a><br/>
+		<a href=r:346>Fencing</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Bones object</bold></big><br/>
+	<blockquote>
+		<italic>See the tutorial for more topics</italic><br/>
+		<a href=r:536>Conventions</a><br/>
+		<a href=r:533>Face forwards control point</a><br/>
+		<a href=r:534>Keeping feet on the ground</a><br/>
+		<a href=r:535>Rigid surfaces</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Building block objects</bold></big><br/>
+	<blockquote>
+		<a href=r:334>Balustrades in building blocks</a><br/>
+		<a href=r:256>Building location and style</a><br/>
+		<a href=r:278>Bypassing building blocks and using "Basic structures"</a><br/>
+		<a href=r:273>Cathedral ceilings</a><br/>
+		<a href=r:271>Changing roof styles</a><br/>
+		<a href=r:267>Controlling wall shape</a><br/>
+		<a href=r:279>Deconstructing building blocks</a><br/>
+		<a href=r:270>Floor elevations</a><br/>
+		<a href=r:472>Framing (studs, beams, joists, purlins)</a><br/>
+		<a href=r:269>Foundations</a><br/>
+		<a href=r:268>Limiting building block elevations to stories</a><br/>
+		<a href=r:283>Overlays</a><br/>
+		<a href=r:342>Piers in building blocks</a><br/>
+		<a href=r:469>Removing joints from building block intersections</a><br/>
+		<a href=r:272>Under-roof verandas</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Cabinets</bold></big><br/>
+	<blockquote>
+		<a href=r:454>Cabinets</a><br/>
+		<a href=r:455>Cabinet pieces</a><br/>
+		<a href=r:457>Drawers</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Doors, doorways, and windows</bold></big><br/>
+	<blockquote>
+		<a href=r:337>Customized doors and windows</a><br/>
+		<a href=r:347>Door and window size</a><br/>
+		<a href=r:348>Opening and closing doors and windows</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Grid</bold></big><br/>
+	<blockquote>
+		<a href=r:286>Displaying the grid</a><br/>
+		<a href=r:287>Setting the grid center and orientation</a><br/>
+		<a href=r:285>Setting the grid size</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Ground object</bold></big><br/>
+	<blockquote>
+		<italic>See the tutorial for more topics</italic><br/>
+		<a href=r:632>Paint based on elevation and slope</a><br/>
+		<a href=r:631>Rain and wind erosion</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>How to...</bold></big><br/>
+	<blockquote>
+		<a href=r:466>Build a bathroom</a><br/>
+		<a href=r:467>Build a kitchen</a><br/>
+		<a href=r:473>Create exposed eaves</a><br/>
+		<a href=r:538>Have a character hold something</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Lights</bold></big><br/>
+	<blockquote>
+		<a href=r:400>Customizing lights</a><br/>
+		<a href=r:401>Creating lights</a><br/>
+		<a href=r:399>Turning lights on and off</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Miscellaneous</bold></big><br/>
+	<blockquote>
+		<a href=r:238>About box</a><br/>
+		<a href=r:537>Attach objects</a><br/>
+		<a href=r:524>Attributes</a><br/>
+		<a href=r:241>Bugs and feature requests</a><br/>
+		<a href=r:929>Effects</a><br/>
+		<a href=r:297>Future plans</a><br/>
+		<a href=r:299>If you like <xLN/>...</a><br/>
+		<a href=r:523>Object list</a><br/>
+		<a href=r:481>Printing</a><br/>
+		<a href=r:526>Product comparison</a><br/>
+		<a href=r:242>Revision history</a><br/>
+		<a href=r:489>Right and middle mouse buttons</a><br/>
+		<a href=r:480>Saving JPEG and bitmap images</a><br/>
+		<a href=r:237>Search</a><br/>
+		<a href=r:243>System requirements</a><br/>
+		<a href=r:402>The sun, moon, and weather</a><br/>
+		<a href=r:244>Theory</a><br/>
+		<a href=r:485>Tracing paper</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Objects, misc.</bold></big><br/>
+	<blockquote>
+		<a href=r:432>Column objects</a><br/>
+		<a href=r:448>Curtains, drapes, and blinds</a><br/>
+		<a href=r:450>Cushions and pillows</a><br/>
+		<a href=r:427>Extrusion objects</a><br/>
+		<a href=r:922>Eyes objects</a><br/>
+		<a href=r:926>Jaw object</a><br/>
+		<a href=r:463>Fireplaces</a><br/>
+		<a href=r:930>Grass, fast-drawing</a><br/>
+		<a href=r:924>Hair, head of</a><br/>
+		<a href=r:923>Hair, length of</a><br/>
+		<a href=r:431>Lathe objects</a><br/>
+		<a href=r:275>Movement and rotation reference points</a><br/>
+		<a href=r:444>Paintings and rugs</a><br/>
+		<a href=r:459>Pathways, roads, and planting beds</a><br/>
+		<a href=r:439>Polyhedron objects (simple shapes)</a><br/>
+		<a href=r:462>Pools, ponds, sinks, and bathtubs</a><br/>
+		<a href=r:932>Rivers and streams</a><br/>
+		<a href=r:933>Rocks and boulders</a><br/>
+		<a href=r:452>Row of books or videos</a><br/>
+		<a href=r:581>Sky-dome object</a><br/>
+		<a href=r:437>Spline surface objects</a><br/>
+		<a href=r:446>Tablecloth</a><br/>
+		<a href=r:460>Tarps and sails</a><br/>
+		<a href=r:925>Tooth or claw object</a><br/>
+		<a href=r:465>Trusses</a><br/>
+		<a href=r:931>Waterfalls</a><br/>
+	</blockquote>
+</p>
+
+
+
+<p>
+	<big><bold>Piers</bold></big><br/>
+	<blockquote>
+		<a href=r:340>Customized piers</a><br/>
+		<a href=r:341>Piers</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Polygon mesh object</bold></big><br/>
+	<blockquote>
+		<italic>See the tutorial for more topics</italic><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Registration and payment</bold></big><br/>
+	<blockquote>
+		<a href=r:486>Registration and payment</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Staircases</bold></big><br/>
+	<blockquote>
+		<a href=r:338>Customized staircases</a><br/>
+		<a href=r:339>Staircases</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Surfaces (walls, roofs, floors)</bold></big><br/>
+	<blockquote>
+		<a href=r:305>Curved walls, roofs, and floors</a><br/>
+		<a href=r:472>Framing (studs, beams, joists, purlins)</a><br/>
+		<a href=r:468>Merging walls, floors, and roofs</a><br/>
+		<a href=r:304>Overlaying textures on walls, roofs, and floors</a><br/>
+		<a href=r:303>Wall, roof, and floor edges</a><br/>
+		<a href=r:302>Wall, roof, and floor thickness</a><br/>
+	</blockquote>
+</p>
+
+
+<p>
+	<big><bold>Textures</bold></big><br/>
+	<blockquote>
+		<a href=r:404>Creating a new texture</a><br/>
+		<a href=r:406>Materials</a><br/>
+		<a href=r:405>Modifying a texture</a><br/>
+	</blockquote>
+</p>
+
+<p>
+	<big><bold>Tutorial</bold></big><br/>
+	<blockquote>
+		<a href=r:240>Start</a><br/>
+		<a href=r:554>Contents</a><br/>
+		<big><bold>Maneuvering around</bold></big><br/>
+		<blockquote>
+		<a href=r:247>Buttons</a><br/>
+		<a href=r:351>Open a sample file</a><br/>
+		<a href=r:257>Views</a><br/>
+		<a href=r:352>Flattened (isometric) view</a><br/>
+		<a href=r:353>Image quality</a><br/>
+		<a href=r:354>Model view</a><br/>
+		<a href=r:355>Walkthrough view</a><br/>
+		<a href=r:274>Clipping</a><br/>
+		<a href=r:350>Finished</a><br/>
+		</blockquote>
+		<big><bold>Building a house</bold></big><br/>
+		<blockquote>
+		<a href=r:246>Start building</a><br/>
+		<a href=r:251>Building blocks (1)</a><br/>
+		<a href=r:258>Building blocks (2)</a><br/>
+		<a href=r:266>Building blocks (3)</a><br/>
+		<a href=r:276>Building blocks (4)</a><br/>
+		<a href=r:277>Building blocks (5)</a><br/>
+		<a href=r:280>Saving</a><br/>
+		<a href=r:281>Color and texture</a><br/>
+		<a href=r:282>Internal walls (1)</a><br/>
+		<a href=r:301>Internal walls (2)</a><br/>
+		<a href=r:284>Doors and windows</a><br/>
+		<a href=r:407>Inside</a><br/>
+		<a href=r:349>Outside</a><br/>
+		<a href=r:288>Finished</a><br/>
+		</blockquote>
+		
+		<big><bold>Painting</bold></big><br/>
+		<blockquote>
+		<a href=r:814>Create a texture to paint on</a><br/>
+		<a href=r:813>The painting view</a><br/>
+		<a href=r:812>Painting color</a><br/>
+		<a href=r:811>Adding to the palette</a><br/>
+		<a href=r:810>Painting beyond colors</a><br/>
+		<a href=r:809>Painting only one object or map</a><br/>
+		<a href=r:808>Texture settings</a><br/>
+		<a href=r:807>Finished</a><br/>
+		</blockquote>
+
+		<big><bold>Making your own objects</bold></big><br/>
+		<blockquote>
+		<a href=r:416>Making your own objects</a><br/>
+		<a href=r:417>Theory</a><br/>
+		<a href=r:418>Creating a custom object</a><br/>
+		<a href=r:419>Editing a custom object (1)</a><br/>
+		<a href=r:420>Editing a custom object (2)</a><br/>
+		<a href=r:421>Saving a custom object</a><br/>
+		<a href=r:525>Custom object attributes</a><br/>
+		<a href=r:426>Template objects</a><br/>
+		<a href=r:422>Finished</a><br/>
+		</blockquote>
+
+		<big><bold>Bones</bold></big><br/>
+		<blockquote>
+		<a href=r:914>Introduction</a><br/>
+		<a href=r:915>Editor</a><br/>
+		<a href=r:916>Orientation</a><br/>
+		<a href=r:917>Freedom of motion</a><br/>
+		<a href=r:918>Sizing and envelopes</a><br/>
+		<a href=r:919>Other tools</a><br/>
+		<a href=r:920>Moving other objects</a><br/>
+		<a href=r:519>Inverse kinematics</a><br/>
+		<a href=r:913>Finished</a><br/>
+		</blockquote>
+
+		<big><bold>Polygon mesh</bold></big><br/>
+		<blockquote>
+		<a href=r:893>Introduction</a><br/>
+		<a href=r:894>Creating</a><br/>
+		<a href=r:895>Editor</a><br/>
+		<a href=r:896>Vertices 1</a><br/>
+		<a href=r:897>Vertices 2</a><br/>
+		<a href=r:898>Vertices 3</a><br/>
+		<a href=r:899>Edges</a><br/>
+		<a href=r:900>Sides</a><br/>
+		<a href=r:901>Subdivision</a><br/>
+		<a href=r:902>Organic modelling 1</a><br/>
+		<a href=r:903>Organic modelling 2</a><br/>
+		<a href=r:904>Organic modelling 3</a><br/>
+		<a href=r:905>Morph editing 1</a><br/>
+		<a href=r:906>Morph editing 2</a><br/>
+		<a href=r:907>Texture editing 1</a><br/>
+		<a href=r:908>Texture editing 2</a><br/>
+		<a href=r:909>Texture editing 3</a><br/>
+		<a href=r:910>Bone association 1</a><br/>
+		<a href=r:911>Bone association 2</a><br/>
+		<a href=r:912>Cut out clothes</a><br/>
+		<a href=r:829>Finished</a><br/>
+		</blockquote>
+
+		<big><bold>Creating characters</bold></big><br/>
+		<blockquote>
+		<a href=r:927>Creating characters</a><br/>
+		</blockquote>
+		
+		<big><bold>Creating your own trees</bold></big><br/>
+		<blockquote>
+		<a href=r:643>Theory behind trees</a><br/>
+		<a href=r:642>Scanning in a leaf</a><br/>
+		<a href=r:640>Leaf object</a><br/>
+		<a href=r:641>Creating branches</a><br/>
+		<a href=r:639>Adding leaves</a><br/>
+		<a href=r:638>Automatic tree/branch generation</a><br/>
+		<a href=r:637>Combining branches into a tree</a><br/>
+		<a href=r:636>Finished with trees</a><br/>
+		</blockquote>
+
+		<big><bold>Ground object</bold></big><br/>
+		<blockquote>
+		<a href=r:630>Showing the ground editor</a><br/>
+		<a href=r:629>Overview of the ground editor</a><br/>
+		<a href=r:628>Creating a mountain</a><br/>
+		<a href=r:627>Ground resolution</a><br/>
+		<a href=r:626>Painting elevation</a><br/>
+		<a href=r:625>Water</a><br/>
+		<a href=r:624>Painting ground textures</a><br/>
+		<a href=r:623>Forests</a><br/>
+		<a href=r:622>Finished with the ground</a><br/>
+		</blockquote>
+
+		<big><bold>Caves</bold></big><br/>
+		<blockquote>
+		<a href=r:934>Theory behind caves</a><br/>
+		<a href=r:935>Creating cave segments</a><br/>
+		<a href=r:936>Moving cave segments</a><br/>
+		<a href=r:937>Texturing</a><br/>
+		<a href=r:938>Looking more like caves</a><br/>
+		<a href=r:939>Stalagtites</a><br/>
+		<a href=r:940>Finished</a><br/>
+		</blockquote>
+
+		<big><bold>Animation</bold></big><br/>
+		<blockquote>
+		<a href=r:555>Set up for animation</a><br/>
+		<a href=r:556>Animation timeline</a><br/>
+		<a href=r:557>Animating movement</a><br/>
+		<a href=r:558>Playing animations</a><br/>
+		<a href=r:559>Moving animation keyframes</a><br/>
+		<a href=r:560>Creating keyframes manually</a><br/>
+		<a href=r:561>Attribute graph</a><br/>
+		<a href=r:562>Animating cameras</a><br/>
+		<a href=r:563>Making a movie</a><br/>
+		</blockquote>
+	</blockquote>
+</p>
+
+
+<p>
+	<big><bold>Views</bold></big><br/>
+	<blockquote>
+		<a href=r:265>Fog</a><br/>
+		<a href=r:261>Lighting</a><br/>
+		<a href=r:403>Lighting exposure</a><br/>
+		<a href=r:264>Modifying image quality settings</a><br/>
+		<a href=r:249>Move a view window to another monitor</a><br/>
+		<a href=r:250>Multiple view windows</a><br/>
+		<a href=r:262>Object outlines</a><br/>
+		<a href=r:263>Perspective</a><br/>
+		<a href=r:260>Red-blue 3D glasses</a><br/>
+		<a href=r:259>Rotating in fixed amounts</a><br/>
+		<a href=r:248>Small view windows</a><br/>
+		<a href=r:410>Thumbnail images</a><br/>
+	</blockquote>
+</p>
+

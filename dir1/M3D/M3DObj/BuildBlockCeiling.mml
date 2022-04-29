@@ -1,0 +1,57 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Ceiling"/>
+
+<p>
+	These settings are <bold>only used for the ceiling of the top level of the structure</bold>.
+	If a level has a floor above it then the ceiling used is based upon the floor
+	joists/structure.
+</p>
+
+<xChoiceButton style=x checkbox=true name=cathedral>
+	<bold>Cathedral ceilings</bold><br/>
+	Rather than provide a flat ceiling for the top floor, use the roof structure for the
+	ceiling, producing a cathedral ceiling. <italic>(If you have checked the box which
+	allows floors to rise into the roof space then cathedral ceilings will automatically
+	be used.)</italic>
+</xChoiceButton>
+
+<xtablecenter width=100%>
+	<xtrheader>Top-level ceiling thickness</xtrheader>
+	<tr><td>
+		<italic>(Not used if cathedral ceilings are specified.)</italic>
+	</td></tr>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Above-ceiling framework cladding thickness</bold> - Usually this
+			is 0 (since there won't be any cladding above the ceiling), but if you
+			want it to be a small crawl space with a weight-bearing floor then enter
+			a value.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Ceiling cladding thickness</bold> - Thickness of the ceilings (since floors
+			also act as ceilings.)
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+

@@ -1,0 +1,45 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Drawers"/>
+
+<xPageTitle>
+	Drawers
+</xPageTitle>
+
+<p>
+	The "drawer" object can be used to place drawers into cabinets.
+</p>
+
+<p>
+	To add a drawer to a cabinet:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined drawer that is closest to
+		your needs. Look under "Drawers" in "Cabinets".
+	</li>
+	<li>
+		<bold>Add</bold> it to your cabinet by clicking on the cabinet.
+	</li>
+	<li>
+		To change a drawer's height, width, depth, or handle, use the <xButtonObjDialog/> tool.
+	</li>
+	<li>
+		Use the <xButtonMoveEmbed/> tool to move your drawer into position.
+	</li>
+	<li>
+		You can use <xButtonObjAttrib/> tool to open the drawer and make sure it doesn't
+		collide with any other objects.
+	</li>
+</ol>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:454>Cabinets</a></li>
+</xul>

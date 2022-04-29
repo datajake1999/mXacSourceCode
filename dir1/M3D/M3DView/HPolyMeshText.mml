@@ -1,0 +1,58 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh objects - textures"/>
+
+<xPageTitle>
+	Polygon mesh objects - textures
+</xPageTitle>
+
+<p>
+	Textures on polygon mesh objects are a bit complicated because polygon meshes can
+	be any shape. Most textures are like pieces of wallpaper. Just imagine trying to
+	apply a piece of wallpaper onto a shape as complex as a human body; you can see
+	where the difficulty lies.
+</p>
+
+<p>
+	The polygon mesh object does provide some tools for applying a texture, however:
+</p>
+
+<ol>
+	<li>
+		<bold>Don't</bold> worry about a polygon mesh's texture until you have finished
+		merging (using <xButtonObjMerge/>) everything you're going to merge with it.
+	</li>
+	<li>
+		<bold>Do</bold> apply a texture as soon as you have the general shape
+		constructed, but before you have all the detail.
+	</li>
+	<li>
+		Select <xButtonObjPaint/> and <bold>click on</bold> the mesh. Select a texture
+		so you can see how it is overlaid on the object. (A checkerboard texture is
+		particularly good for seeing this.)
+	</li>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click on</bold> the mesh.
+	</li>
+	<p>
+		In the "Polygon mesh (phase II) settings" look for the "Textures" section.
+	</p>
+	<li>
+		<bold>Click on</bold> the "Cylindrical", "Projected from the front", 
+		"Projected from the top", and "Spherical" buttons to try the different
+		ways a texture can be applied.
+	</li>
+	<li>
+		Once you have a texture, it will stay "glued" to the surface, even if
+		you reshape the mesh using <xButtonObjControlNSEWUD/>.
+	</li>
+</ol>
+
+
+
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:442>Polygon mesh objects - basics</a></li>
+	<li><a href=r:521>Polygon mesh objects - merging</a></li>
+	<li><a href=r:522>Polygon mesh objects - morphs</a></li>
+</xul>

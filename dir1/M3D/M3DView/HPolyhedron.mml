@@ -1,0 +1,45 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polyhedron objects (simple shapes)"/>
+
+<xPageTitle>
+	Polyhedron objects (simple shapes)
+</xPageTitle>
+
+<p>
+	A "polyhedron" is a 3-dimensional shape built from smaller polygon pieces. For example:
+	Both cubes and pyramids are polyhedrons.
+</p>
+
+<p>
+	In <xSN/>, the polyhedron is the most memory efficient and spediest way of creating
+	a cube, rectangular stud, square, or any box section. It can also be used
+	for triangles, pyramids, and some diamond-like shapes.
+</p>
+
+<p>
+	You will find a collection of pre-defined polyhedrons under the "Simple shapes" section
+	in "Object pieces".
+</p>
+
+<p>
+	If you want to make your own polyhedrons then:
+</p>
+
+<ol>
+	<li>
+		<bold>Find</bold> the pre-defined extrusion (under "Simple shapes" in the "Object pieces"
+		section of <xButtonObjNew/>) that is closest to your needs.
+	</li>
+	<li>
+		<bold>Add</bold> it to your house.
+	</li>
+	<li>
+		Use the <xButtonObjControlDialog/> dialog on the polyhedron objects to
+		display different control points. (You may want to reduce the control-point
+		movement constraints to create skewed cubes, etc.)
+	</li>
+	<li>
+		Adjust the control points using <xButtonObjControlNSEWUD/>.
+	</li>
+</ol>

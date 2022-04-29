@@ -1,0 +1,18 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - finished edting an object"/>
+
+<xPageTitle>
+	Tutorial - finished editing an object
+</xPageTitle>
+
+
+<p>
+	You've just finished the object editing tutorial.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:554><bold>Next</bold></button>
+</p>
+

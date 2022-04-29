@@ -1,0 +1,29 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify an overlay based on intersections"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Intersections</xtrheader>
+	<tr><td>
+		<p>
+			Click on the edges that enclose the new area for the overlay overlay.
+			When you've completely enclosed an area, press "Modify overlay", or press "Back"
+			if you don't want to change it.
+		</p>
+		<threed width=90% height=90% scrollrotx=scrollcolx scrollroty=scrollcoly name=overlayedit>
+			<shapeteapot/>
+		</threed>
+		<scrollbar orient=vert name=scrollcolx height=90% width=10%/>
+		<br/>
+		<scrollbar orient=horz name=scrollcoly height=10% width=90%/>
+		<br/>
+		<italic>If you only see the edge of the surface drawn then there may not be
+		any other surfaces that intersect it.</italic>
+	</td></tr>
+</xtablecenter>
+
+
+<xchoicebutton name=add>
+	<bold>Modify overlay</bold><br/>
+	Use these edges for the overlay's outline.
+</xchoicebutton>

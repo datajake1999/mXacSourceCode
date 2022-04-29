@@ -1,0 +1,100 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="High-level clouds"/>
+
+<p>
+	Use this page to draw the whispy clouds high in the atmosphere, either cirrus
+	or altocumulus.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Clouds</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=draw>
+			<bold>Draw high-level clouds</bold><br/>
+			Check this to draw the high-level clouds.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Detail</bold> - Amount of detail in the clouds.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=detail/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Cover</bold> - (Approximately) the percent of the sky the
+			clouds cover.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=cover/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Size</bold> - Size of the clouds.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=50 max=400 name=scale/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness</bold> - Thickness of the clouds. This affects
+			how much light gets through.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=thick/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Elevation</bold> - Height of the clouds.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=loc2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>EW movement</bold> - The distance the clouds are moved to the
+			east/west. Changing this during animation will move the clouds.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=loc0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>NS movement</bold> - The distance the clouds are moved to the
+			north/south. Changing this during animation will move the clouds.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=loc1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Version</bold> - Typing a different number here will create a different
+			version of the clouds. Use this as a rough control for the pattern of clouds
+			to use for the day.
+		</td>
+		<td valign=center>
+			<edit width=100% maxchars=32 name=seed/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changecirrus>
+				<bold>Change cloud color</bold><br/>
+				This is the color used by the clouds.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=cirruscolor/>
+		</td>
+	</tr>
+</xtablecenter>
+

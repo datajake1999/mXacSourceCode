@@ -1,0 +1,47 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Scale the map"/>
+
+<p>
+	Changing the values in this page will adjust the scale (NS and EW size, and
+	elevation) of the topography by stretching or shrinking the size and elevation.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Scale</xtrheader>
+	<tr>
+		<td>
+			<bold>Maximum elevation</bold> - Highest point in your terrain.
+		</td>
+		<td><edit maxchars=32 width=100% name=max/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Minimum elevation</bold> - Lowest point in your terrain.
+		</td>
+		<td><edit maxchars=32 width=100% name=min/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Width (distance)</bold> - Number of km (miles, etc.) east and west.
+			Note: Changing the width will also adjust the height because the map
+			will keep the same shape.
+		</td>
+		<td><edit maxchars=32 width=100% name=widthd/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height (distance)</bold> - Number of km (miles, etc.) north and south.
+			Note: Changing the height will also adjust the width because the map
+			will keep the same shape.
+		</td>
+		<td><edit maxchars=32 width=100% name=heightd/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=righttriangle href=keep>
+			<bold>Keep these changes</bold><br/>
+			Press this after you have typed in new values for the width and height.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

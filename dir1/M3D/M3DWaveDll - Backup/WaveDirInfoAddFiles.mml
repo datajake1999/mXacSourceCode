@@ -1,0 +1,35 @@
+<?Include resource=500?>
+<PageInfo index=false title="Type in the text spoken"/>
+
+<colorblend tcolor=#000040 bcolor=#000080 posn=background/>
+
+<font color=#ffffff><table width=100% bordercolor=#c0c0c0 valign=top><tr>
+
+<td>
+	<p>
+		Please <bold>type in the text spoken in the recording.</bold> You must type in the transcription
+		for the audio.
+	</p>
+	<bold><font color=#000000><xEditOneLine defcontrol=true maxchars=512 name=name/></font></bold>
+</td>
+</tr></table>
+
+<table width=100% innerlines=0 border=0><tr>
+	<td align=left>
+		<button href=cancel accel=escape>
+			Cancel
+		</button>
+	</td>
+	<td align=center>
+		<button name=play>
+			Play recording
+		</button>
+	</td>
+	<td align=right>
+		<button href=ok accel=enter>
+			OK
+		</button>
+	</td>
+</tr></table>
+
+</font>

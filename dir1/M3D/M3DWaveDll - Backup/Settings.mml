@@ -1,0 +1,82 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Settings"/>
+
+<p>
+	This page lets you change the quality (samples per second), number of channels (mono
+	or stereo), and how much space the wave takes when saved to disk (compression).
+	Press "Convert" to keep your changes.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Information</xtrheader>
+	<tr><td>
+		<bold>Text spoken</bold> - Type in a transcription of the the audio recording here:
+		<br/>
+		<edit width=100% multiline=true defcontrol=true wordwrap=true name=spoken>
+		</edit>
+	</td></tr>
+	<tr>
+		<td><bold>Speaker</bold> - Type in the speaker's name.</td>
+		<td><edit width=100% maxchars=64 name=speaker/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Audio fidelity</xtrheader>
+	<tr><td>
+		If you wish to change the samples per second, number of channels, or type
+		of compression then change the settings below and press "Convert".
+		<br/>
+		<p align=right>
+			<button style=righttriangle name=convert><bold>Convert</bold></button>
+		</p>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Samples per second</bold> - The higher the number, the crisper the sound
+			will be, but the more disk space it will use.
+		</td>
+		<td><combobox width=100% cbheight=150 name=samples>
+			<elem name=8000><bold>Telephone quality</bold> (8 kHz)</elem>
+			<elem name=11025><bold>AM-radio quality</bold> (11 kHz)</elem>
+			<elem name=16000><bold>Low-voice quality</bold> (16 kHz)</elem>
+			<elem name=22050><bold>FM-radio quality</bold> (22 kHz)</elem>
+			<elem name=44100><bold>CD quality</bold> (44 kHz)</elem>
+		</combobox></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Channels</bold> - This controls whether it's mono or stereo.
+			Stereo audio uses more disk space than mono.
+		</td>
+		<td><combobox width=100% cbheight=150 name=channels>
+			<elem name=1><bold>Mono</bold></elem>
+			<elem name=2><bold>Stereo</bold></elem>
+			<elem name=3><bold>3 channels</bold></elem>
+			<elem name=4><bold>4 channels</bold></elem>
+			<elem name=5><bold>5 channels</bold></elem>
+			<elem name=6><bold>6 channels</bold></elem>
+			<elem name=7><bold>7 channels</bold></elem>
+			<elem name=8><bold>8 channels</bold></elem>
+		</combobox></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Compression</bold> - Selecting a compression format will (theoretically)
+			reduce the wave file size without (much) loss of sound quality. You
+			should test that the sound produced by the compression you chose is
+			acceptable by saving to a new file (after selecting the compression)
+			and reloading it. (Also note that some compressions will only work
+			with certain sampling rates, or may not work with stereo files.)
+			<p/>
+			<combobox width=100% cbheight=150 name=compression>
+				<elem name=1><bold>A very long string to make sure the combo is large enough</bold></elem>
+			</combobox>
+			<p/>
+			<status width=100% height=25% border=0 align=left name=status>
+			</status>
+		</td>
+	</tr>
+</xtablecenter>
+

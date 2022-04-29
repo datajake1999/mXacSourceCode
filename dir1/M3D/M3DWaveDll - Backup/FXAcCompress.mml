@@ -1,0 +1,31 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Acoustic compression effect"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Acoustic compression</xtrheader>
+	<tr><td>
+		Acoustic compression is a common technique used to make speech brighter
+		and easier to understand. It works by amplifying quiet areas.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Amount of compression</bold> - The futher to the right, the more acoustic
+			compression.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=99 name=loop/></td>
+	</tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

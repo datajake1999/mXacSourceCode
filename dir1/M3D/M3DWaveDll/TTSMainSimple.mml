@@ -1,0 +1,92 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Record sentences for a text-to-speech voice"/>
+
+
+<xSectionTitle>Record sentences</xSectionTitle>
+
+<p>
+	You have recorded <status border=1 width=15% height=25 name=recordcount>0 sentences</status>
+</p>
+
+<p>
+	The more sentences you record, the better.
+</p>
+
+<ul>
+	<li>
+		You need to record at least 10 sentences before you can create a text-to-speech voice.
+		At 10 sentences, your voice will be difficult to understand and won't sound much like you.
+	</li>
+	<li>
+		If you record 100 sentences, you voice will sound like you, but won't always speak words clearly.
+	</li>
+	<li>
+		Most of the CircumReality voices are generated from 1000 sentences.
+	</li>
+	<li>
+		A professional text-to-speech voice requires around 10,000 sentences.
+	</li>
+</ul>
+
+<xChoiceButton name=recordall>
+	<bold>Record more sentences</bold><br/>
+	Press this to record more sentences. You don't need to record all the
+	sentences at once; you can stop at any time.
+</xChoiceButton>
+
+
+<xbr/>
+
+<xSectionTitle>Create a text-to-speech voice</xSectionTitle>
+
+<p>
+	After you have recorded some sentences, you can create a text-to-speech voice from those sentences.
+</p>
+
+<p>
+	As mentioned above, the more recordings you do, the better your text-to-speech voice
+	will sound. Additionally, the larger your text-to-speech file, the better
+	your text-to-speech voice will sound.
+</p>
+
+<p>
+	You can decide what file size you want your text-to-speech voice to be:
+</p>
+
+
+<xChoiceButton href=createtiny>
+	Create a <bold>tiny</bold> text-to-speech voice<br/>
+	The voice you create will only be a few megabytes. It won't sound very good though.
+</xChoiceButton>
+
+
+<xChoiceButton href=createsmall>
+	Create a <bold>small</bold> text-to-speech voice<br/>
+	The voice sounds okay. It won't get any larger than 40 megabytes.
+</xChoiceButton>
+
+<xChoiceButton href=createmedium>
+	Create a <bold>medium</bold> text-to-speech voice<br/>
+	This voice sounds very good (assuming you have recorded enough sentences).
+	The file can get up to 130 megabytes.
+</xChoiceButton>
+
+<xChoiceButton href=createlarge>
+	Create a <bold>large</bold> text-to-speech voice<br/>
+	This voice sounds very good (assuming you have recorded enough sentences).
+	The file can get up to 800 megabytes.
+</xChoiceButton>
+
+
+<xChoiceButton href=createhuge>
+	Create a <bold>huge</bold> text-to-speech voice<br/>
+	This voice is created at the best possible quality (although it won't sound that
+	much better than a "medium" voice.)
+	The file can get up to several gigabytes.
+</xChoiceButton>
+
+<p align=right>
+	You are modifying the file: <bold><<<SRFILE>>></bold>
+</p>
+

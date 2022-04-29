@@ -1,0 +1,33 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Blend for loop effect"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Blend for loop</xtrheader>
+	<tr><td>
+		This blends the end portion of the wave with the starting portion so the
+		wave can be played back as a loop without any disjoints at the loop connection.
+		Use this to create loops for engine noise, background wind sounds, etc.
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Size of blend</bold> - The futher to the right, the larger the portion
+			of the wave that will be blended together and the smoother the transition.
+			The wave will also be shortened further to the right.
+		</td>
+		<td><scrollbar orient=horz width=100% min=1 max=50 name=loop/></td>
+	</tr>
+</xtablecenter>
+
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

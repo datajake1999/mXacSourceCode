@@ -1,0 +1,94 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Animation timeline"/>
+
+<xPageTitle>
+	Tutorial - Animation timeline
+</xPageTitle>
+
+<xsectiontitle>Display the animation timeline</xsectiontitle>
+
+<p>
+	To start an animation, show the animation timeline:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonAnim/> button.
+	</li>
+	<li>
+		Select the <bold>"Show timeline"</bold> menu item.
+	</li>
+</ol>
+
+<p>
+	The animation timeline window will appear. It sits on top of the main view window.
+	(Tip: This is where two monitors really comes in useful because you can move the
+	animation timeline window to the second monitor, allowing you to see more of the
+	animation's 3D and the timeline.)
+</p>
+
+<xsectiontitle>Parts of the animation timeline</xsectiontitle>
+
+<p>
+	The animation timeline has several parts:
+</p>
+
+<xul>
+	<li>
+		<bold>Buttons</bold> - The timeline's buttons are on the top and bottom of the
+		window. They behave just like the buttons in the main view window.
+	</li>
+	<li>
+		<bold>Playback bar</bold> - This bar is immediately below the top row of buttons.
+		It has a down-pointing arrow that lets you set the current time (or frame) of
+		a scene that you wish to view or modify. It also has two small squares that
+		control the playback range (discussed later), and a vertical arrow at the
+		end that allows you to control the length of the scene.
+	</li>
+	<li>
+		<bold>Object timelines</bold> - The timeline displays one or more object timelines.
+		They show how each object is animated over time. At first, only one object
+		is displayed. If you want more press the <xButtonSceneBays/> button.
+	</li>
+	<li>
+		<bold>Timeline scrollbar</bold> - This control lets you scroll your timeline if
+		the entire scene's duration doesn't fit into the window.
+	</li>
+</xul>
+
+<xsectiontitle>Displaying an object in the timeline</xsectiontitle>
+
+<p>
+	To show an object in the timeline you need to select it in the main view:
+</p>
+
+<ol>
+	<li>
+		<bold>Switch</bold> back to the main view window. (<bold>Not</bold> the animation timeline.)
+	</li>
+	<li>
+		Select the table using the <xButtonSelIndividual/> tool.
+	</li>
+	<li>
+		<bold>Switch</bold> back to the animation timeline.
+	</li>
+	<p>
+		You'll notice that the object timeline turns white and displays vertical time ticks,
+		starting as 0 seconds, and working up to about 60 seconds.
+		The field is labelled with the object's name so you know which object is being
+		modified.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:557><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:568>Scenes</a></li>
+	<li><a href=r:567>Select changing objects</a></li>
+</xul>

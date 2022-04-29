@@ -1,0 +1,122 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Morph editing 1"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Morph editing 1
+</xPageTitle>
+
+<xSectionTitle>What is a morph?</xSectionTitle>
+
+<p>
+	Polygon meshes support a useful feature called "morphing". Morphs allow
+	for facial animations, bulging muscles, and other minor shape changes
+	to a polygon mesh.
+</p>
+
+<p>
+	A morph is just an alternate shape that the polygon mesh can take on.
+	To create a head whose lips can move you'd create several different morphs,
+	one with the mouth wide open, another with it puckered into an "o" shape,
+	along with a few others.
+</p>
+
+<p>
+	The morph displays this alternate shape when an attribute (using the same name as the
+	morph) is set to 1.0. (Normally the attribute is 0.) If an attribute is
+	set to an in-between value (such as 0.5) then the polygon mesh takes on a shape
+	half way between the default and the morph. If the attribute is higher than
+	1.0 then the polygon mesh takes on an exaggerated shape.
+</p>
+
+<p>
+	Several morphs can be "blended" together to form more complex shapes by setting
+	the attributes for more than one morph on. Some phonemes require that several mouth
+	shapes be blended together. Or, a morph that affects the eyebrows could be blending
+	in with one or more morphs that affect the mouth.
+</p>
+
+<xSectionTitle>Creating and editing a morph</xSectionTitle>
+
+<p>
+	Creating and editing a morph is easy:
+</p>
+
+<ol>
+	<li>
+		In the polygon mesh editor, press the <xButtonPMModeMorph/> button.
+	</li>
+	<p>
+		The buttons at the bottom of the screen will change to morph editing buttons
+		and a list of morphs will be inserted at the right side of the screen.
+	</p>
+	<li>
+		In the morph list (which doesn't list any morphs), double click
+		the <bold>"Double-click to add a new morph"</bold> item.
+	</li>
+	<li>
+		The "Polygon mesh add morph" dialog will appear. Press
+		the <bold>"Add a new morph"</bold> button.
+	</li>
+	<li>
+		The page will switch to "Modify a morph". Type in a <bold>Name</bold> for
+		your morph and <bold>close</bold> the dialog.
+	</li>
+	<p>
+		The list of morphs now shows your new morph (whatever you named it) along with
+		a colored box so you can identify what portion of the polygon mesh surface it
+		affects. Because it doesn't affect any of the polygon mesh yet, the entire
+		surface is black.
+	</p>
+	<li>
+		Switch to the <xButtonPMModePoly/> or <xButtonPMModeClay/> editing mode. Either
+		one will work with morphs.
+	</li>
+	<li>
+		Choose a tool and <bold>modify the shape</bold> of your polygon mesh.
+	</li>
+	<li>
+		Return to the <xButtonPMModeMorph/> mode.
+	</li>
+	<p>
+		The black polygon mesh now has color on it. The brighter the color the more
+		your effect your morph has on the shape.
+	</p>
+	<li>
+		<bold>Repeat the process</bold>; create another morph, modify it to a different
+		shape than the other morph, and return back to the
+		morph editing mode.
+	</li>
+	<li>
+		Now that you have two (or more) morphs, trying <bold>clicking</bold> on the different
+		morphs in the morph list. Notice how the polygon mesh changes to the shape of the morph
+		as you click.
+	</li>
+	<li>
+		You can edit the original shape by selecting <bold>"Modify the basic
+		shape without any morphs"</bold>. The polygon mesh will revert to its original shape.
+		The coloration will show a combination of all the morphs so you can see what morphs
+		affect which regions of the objects.
+	</li>
+	<p>
+		<bold>Important:</bold> If you go back and modify the original shape you will affect
+		the morphs also. <xSN/> stores the morphs as a set of changes to the original shape,
+		so any changes to the original show up. This is actually a good thing since if you make
+		the morph for "Raised eyebrows" and then decide that the character's forehead needs to
+		stick out more, the forehead enlargement will also appear in the "Raised eyebrows" morph.
+		If it didn't then whenever the character raised his eyebrows his forehead would sink
+		back in to the old size.
+	</p>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:906><bold>Next</bold></button>
+</p>
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:815>Animating mouth shapes</a></li>
+	<li><a href=r:524>Attributes</a></li>
+</xul>

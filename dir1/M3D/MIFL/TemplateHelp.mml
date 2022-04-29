@@ -1,0 +1,66 @@
+<colorblend posn=background tcolor=#ffffe0 bcolor=#e0e0b0/>
+<small><align tab=24>
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=25% valign=center align=left lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=leftarrow href=back accel=alt-b>
+			<u>B</u>ack
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=teapot href=gototoc accel=alt-h>
+			<u>H</u>ome
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button href=r:636 accel=alt-i>
+			<u>I</u>ndex
+		</button></font>
+	</td>
+	<td width=25% valign=center align=right lrmargin=8 tbmargin=0>
+		<font color=#c0c0c0><big><italic>
+			MIFL Help
+		</italic></big></font>
+	</td>
+</tr>
+</table>
+<br/>
+
+<?TemplateSubst?>
+
+<br/>
+
+
+<table width=100% innerlines=0 border=0 tbmargin=8>
+<colorblend posn=background lcolor=#000040 rcolor=#000000/>
+<tr>
+	<td width=25% valign=center align=left lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button style=leftarrow href=back>
+			Back
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button href=r:631 accel=alt-s>
+			<u>S</u>earch
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button href=r:636>
+			<u>I</u>ndex
+		</button></font>
+	</td>
+	<td width=25% valign=center align=center lrmargin=0 tbmargin=0>
+		<font color=#8080ff><button href=rebuildhelp>
+			Rebuild help
+			<xHoverHelp>
+				This rebuilds the help documentation. Press this is you add or remove
+				libraries (which each include their own help documentation),
+				or significantly change your own code.
+			</xHoverHelp>
+		</button></font>
+	</td>
+</tr>
+
+</table>
+</align></small>

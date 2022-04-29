@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Threads"/>
+
+<p>
+	Fabric, being made out of vertical and horizontal threads, will have some slight
+	variations in the thread thickness in coloration. This effect tries to simulate that.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Use this effect</bold><br/>
+			This effect will only be used if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Amount of variation</bold> - Moving the slider all the way to the right
+			will increase the amount of variation from thread to thread.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varamt/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Maximum variation</bold> - Maximum that one thread can differ from
+			the next.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=varmax/></td>
+	</tr>
+</xtablecenter>

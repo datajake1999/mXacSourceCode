@@ -1,0 +1,91 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Pier appearance"/>
+
+<!xListBalAppear>
+	<listbox sort=false tbmargin=16 macroattribute=1>
+		<elem name="5">
+			<bold>Concrete, round</bold><br/>
+			<small>Round concrete piers.</small>
+		</elem>
+		<elem name="4">
+			<bold>Concrete, square</bold><br/>
+			<small>Square concrete piers.</small>
+		</elem>
+		<elem name="0">
+			<font color=#800000><bold>Custom</bold><br/>
+			<small>If you select this the "Modify custom pier" buttons is enabled, providing
+			for a much larger variety of piers.</small></font>
+		</elem>
+		<elem name="6">
+			<bold>Greek</bold><br/>
+			<small>Greek columns.</small>
+		</elem>
+		<elem name="1">
+			<bold>Log stumps</bold><br/>
+			<small>Thick log stumps set in concrete.</small>
+		</elem>
+		<elem name="2">
+			<bold>Steel</bold><br/>
+			<small>75m box-section steel in concrete.</small>
+		</elem>
+		<elem name="3">
+			<bold>Wood</bold><br/>
+			<small>100m (4") square wood in concrete.</small>
+		</elem>
+	</listbox>
+</xListBalAppear>
+
+<xTableCenter width=100%>
+	<xtrHeader>Pier style</xtrHeader>
+	<tr><td>
+		<xListBalAppear name=appear width=90% height=90% vscroll=lscroll/>
+		<scrollbar orient=vert height=90% width=8% name=lscroll/>
+		<p/>
+		<xChoiceButton enabled=false name=modify href=modify>
+			<bold>Modify custom pier</bold><br/>
+			If you have selected a "Custom" pier, press this to modify
+			the settings for it.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+
+<xTableCenter width=100%>
+	<xtrHeader>Settings</xtrHeader>
+	<tr>
+		<td>
+			<bold>Distance between piers</bold> - If two piers
+			are further apart than this then one or more piers will be placed between
+			these.
+		</td>
+		<td>
+			<edit name=maxbigdist maxchars=32 width=100%/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Below ground</bold> - Number of meters (or feet) the pier extends
+			below the ground.
+		</td>
+		<td>
+			<edit name=depthbelow maxchars=32 width=100%/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Height</bold> - Height of the pier if there's no ground below.
+			(Not a common occurance.)
+		</td>
+		<td>
+			<edit name=height maxchars=32 width=100%/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=showskirting>
+			<bold>Show skirting around piers</bold><br/>
+			If set, then a skirting (such as a trellis) will be drawn around the piers
+			to visually obstruct them.
+		</xChoiceButton>
+	</td></tr>
+</xTableCenter>
+

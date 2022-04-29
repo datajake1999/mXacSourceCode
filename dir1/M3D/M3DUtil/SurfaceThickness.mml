@@ -1,0 +1,45 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Thickness"/>
+
+
+
+<xtablecenter width=100%>
+	<xtrheader>Surface thickness</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Structure thickness</bold> - This is the amount of thickness caused
+			by the structure (studs, cement block, bricks, etc.). For example: If it's
+			a 100mm x 75mm wood stud, enter "100mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=stud/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Cladding A thickness</bold> - Thickness of the cladding on side A.
+			For example: If it's 8mm thick plywood nailed onto the stud, enter "8mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sidea/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Cladding B thickness</bold> - Thickness of the cladding on side B.
+			For example: If it's 10mm thick sheetrock screwed into the stud, enter "10mm".
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=sideb/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<p>
+	The total thickness of the surface is a combination of the structure thickness
+	and cladding thicknesses. The depthwise "center" of the structure is half way
+	through the framework. This is not necessarily the exact center of the wall because
+	the cladding on one side may be thicker than on the other.
+</p>

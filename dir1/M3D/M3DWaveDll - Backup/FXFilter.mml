@@ -1,0 +1,114 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Filter effect"/>
+
+<p>
+	Adjust the settings and then press "Do effect".
+</p>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Starting filter</xtrheader>
+	<tr><td>
+		The sliders work like a graphic equalizer; moving them to the right increases the
+		volume at the frequencies, while to the left decreases it. These sliders affect
+		the filtering at the start of the effect.
+	</td></tr>
+	<tr>
+		<td width=20% valign=center><bold>30 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s0/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>60 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s1/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>125 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s2/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>250 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s3/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>500 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s4/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>1 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s5/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>2 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s6/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>4 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s7/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>8 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s8/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>16 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=s9/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Ending filter</xtrheader>
+	<tr><td>
+		These sliders affect the filtering at the end of the selection. If you wish
+		to use the same filter throughout, then just check <button style=x
+		checkbox=true name=noend><bold>Ignore ending filters</bold></button> and
+		adjust only the starting filters.
+	</td></tr>
+	<tr>
+		<td width=20% valign=center><bold>30 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e0/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>60 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e1/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>125 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e2/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>250 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e3/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>500 Hz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e4/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>1 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e5/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>2 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e6/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>4 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e7/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>8 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e8/></td>
+	</tr>
+	<tr>
+		<td width=20% valign=center><bold>16 kHz</bold></td>
+		<td width=80%><scrollbar orient=horz width=100% min=0 max=200 name=e9/></td>
+	</tr>
+</xtablecenter>
+
+<p align=right>
+	<button style=righttriangle href=doeffect><bold>Do effect</bold></button>
+</p>

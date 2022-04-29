@@ -1,0 +1,129 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Length-of-hair object"/>
+
+<xPageTitle>
+	Length-of-hair object
+</xPageTitle>
+
+
+<p>
+	The "length-of-hair" object lets you easily create a length of hair, such as
+	for a moustache or long braid. If you wish to create an an entire head of
+	hair, then see the "head-of-hair object".
+</p>
+
+<xsectiontitle>Creating a length-of-hair</xsectiontitle>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Maneuver</bold> to the "Hair" section under "Object pieces".
+	</li>
+	<li>
+		<bold>Click</bold> on the "Length of hair" to add it.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>Resizing the length</xsectiontitle>
+
+<p>
+	To resize the length:
+</p>
+
+<ol>
+	<li>
+		Select the length-of-hair object using <xButtonSelIndividual/>.
+	</li>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> the
+		yellow circular control-point.
+		This will lengthen the hair.
+	</li>
+	<p>
+		If the lengthening process doesn't feel fluid, it may be that you have the
+		grid turned on. Use <xButtonGridSelect/> menu to turn off the grid.
+	</p>
+	<li>
+		If you made your hair too long, you can <bold>click on</bold> the
+		red triangle control-point to delete part of the length.
+	</li>
+</ol>
+
+
+<xSectionTitle>Arranging your length of hair</xSectionTitle>
+
+<p>
+	To arrange the hair:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjControlNSEWUD/> tool.
+	</li>
+	<li>
+		<bold>Click on and drag</bold> the blue-green circular control points. This
+		simulates grabbind the hair at that location and moving it.
+	</li>
+	<li>
+		You can twist the lengths of hair by <bold>dragging</bold> the blue square
+		control points. You will only notice the twist if your hair's shape (as
+		set in the "Length-of-hair settings" dialog) is elliptical, or if you have a
+		texture drawn on your hair. Applying slight twists will make your hair
+		look a lot more realistic.
+	</li>
+</ol>
+
+
+
+<xsectiontitle>Making your hair look realistic</xsectiontitle>
+
+<p>
+	The most realistic way for a 3D modeller to draw hair is to draw one individual
+	strand of hair at a time. Many do this, but because the human head has so many hairs
+	(hundreds of thousands to millions), this can take quite a long time.
+</p>
+
+<p>
+	The length-of-hair is a compromise, since it draws a length of hair (strand of thousands
+	of hairs) at once. This makes the hair look less realistic. However, there are some
+	tricks that will make the hair look more realistic:
+</p>
+
+<xul>
+	<li>
+		Use one of the <bold>hair textures</bold> from "Hair and fur" under the "Animal" textures.
+	</li>
+	<li>
+		Each hair length is normally drawn as single tube. Under the "Length-of-hair
+		settings" dialog, you'll find the <bold>"Hair layers"</bold> section. Set
+		the <bold>"Number of tubes"</bold> to "three". This will cause three tubes to
+		be drawn for every length of hair, one inside the other. Once you have done
+		this, apply semi-transpreant textures to the two outer tubes, and maybe
+		even the innermost tube. Your hair will suddlenly look much more realistic; it will
+		also take longer to draw.
+	</li>
+	<li>
+		If you have semi-transparent hair you may want turn turn
+		off <bold>"Use backface culling"</bold> in the "Length-of-hair settings".
+	</li>
+	<li>
+		Add twists to your hair. You can do this manually by dragging individual
+		control points.
+	</li>
+</xul>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:924>Head-of-hair object</a></li>
+</xul>

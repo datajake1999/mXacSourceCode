@@ -1,0 +1,174 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Mix textures"/>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr>
+		<td>
+			<bold>Texture width</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternwidth/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Texture height</bold> - The texture will repeat itself beyond
+			this distance. (If you make this very large your textures will look
+			more realistic, but will take up more memory and be slower.)
+		</td>
+		<td><edit maxchars=64 width=100% name=patternheight/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Pixel width and height</bold> - The texture is stored a an image, divided
+			into pixels. The smaller the pixels, the better the texture will look when you
+			look closely at it, but the larger (and slower) the texture.
+		</td>
+		<td><edit maxchars=64 width=100% name=pixellen/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Texture A</xtrheader>
+	<tr><td>
+		Select which texture will be used as "Texture A" for puposes of mixing.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=TextureAButton>
+			<bold>Change the texture A</bold><br/>
+			Press this to change the texture.
+		</xChoiceButton>
+		<<<$TEXTUREAIMAGE>>>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Texture B</xtrheader>
+	<tr><td>
+		Select which texture will be used as "Texture B" for puposes of mixing.
+	</td></tr>
+	<tr><td>
+		<xChoiceButton name=TextureBButton>
+			<bold>Change the texture B</bold><br/>
+			Press this to change the texture.
+		</xChoiceButton>
+		<<<$TEXTUREBIMAGE>>>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Mix</xtrheader>
+	<tr>
+		<td>
+			<bold>Color</bold> - Where the color for the mixed texture comes from.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mixcolor>
+			<elem name=0>Texture A</elem>
+			<elem name=1>Texture B</elem>
+			<elem name=2>(Texture A + Texture B)/2</elem>
+			<elem name=3>None</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Specularity</bold> - Controls how speculary (shiny) the texture is.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mixspec>
+			<elem name=0>Texture A</elem>
+			<elem name=1>Texture B</elem>
+			<elem name=2>(Texture A + Texture B)/2</elem>
+			<elem name=3>None</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency</bold> - Use this to determine the texture's transparent areas.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mixtrans>
+			<elem name=0>Texture A</elem>
+			<elem name=1>Texture B</elem>
+			<elem name=2>(Texture A + Texture B)/2</elem>
+			<elem name=3>None</elem>
+			<elem name=10>Texture A's color (white = trans)</elem>
+			<elem name=11>Texture B's color (white = trans)</elem>
+			<elem name=12>Texture A's color (black = trans)</elem>
+			<elem name=13>Texture B's color (black = trans)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bump map</bold> - Controls where the bump map comes from.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mixbump>
+			<elem name=0>Texture A</elem>
+			<elem name=1>Texture B</elem>
+			<elem name=2>(Texture A + Texture B)/2</elem>
+			<elem name=3>None</elem>
+			<elem name=10>Texture A's color (full range = 1 cm)</elem>
+			<elem name=11>Texture B's color (full range = 1 cm)</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bump scale</bold> - This makes the bumps deeper or more shallow.
+			1.0 is no change. 2.0 is twice as deep, etc.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=mixbumpscale/></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Glow</bold> - This causes the object to glow.
+		</td>
+		<td><bold><combobox width=100% cbheight=150 name=mixglow>
+			<elem name=0>Texture A's glow</elem>
+			<elem name=1>Texture B's glow</elem>
+			<elem name=2>(Texture A's glow + Texture B's glow)/2</elem>
+			<elem name=3>None</elem>
+			<elem name=10>Texture A's color</elem>
+			<elem name=11>Texture B's color</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Glow scale</bold> - This scales the amount of glow. 1.0 is no change. 2.0
+			is twice as bright, etc.
+		</td>
+		<td><bold><edit width=100% maxchars=32 name=mixglowscale/></bold></td>
+	</tr>
+</xtablecenter>
+
+
+<comment><xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter></comment>
+

@@ -1,0 +1,33 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Move polygon-mesh texture"/>
+
+<p>
+	Type in the coordinates for the texture. Depending upon the scaling setting
+	you have for the texture, the measurement may be in distance (meters or feet),
+	or a number from 0 to 1, where 0 is the left/upper corner of the texture and
+	1 is the right/lower corner of the texture.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Vertex location</xtrheader>
+	<tr>
+		<td>
+			<bold>Right/left</bold> - Position the texture. Use negative numbers for left.
+		</td>
+		<td valign=center>
+			<bold><edit maxchars=32 width=100% name=transx/></bold>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<bold>Top/bottom</bold> - Position the texture. Use negative numbers for top.
+		</td>
+		<td valign=center>
+			<bold><edit maxchars=32 width=100% name=transy/></bold>
+		</td>
+	</tr>
+	
+</xtablecenter>

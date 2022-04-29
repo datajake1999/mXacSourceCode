@@ -1,0 +1,74 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - image quality"/>
+
+<xPageTitle>
+	Tutorial - image quality
+</xPageTitle>
+
+
+<p>
+	<xLN/> <bold>draws all its images
+	in 3D.</bold> Other house design applications have two different modes - one is a two dimensional
+	plan (blue-print) and the other is 3D. Generally, the <xSN/>'s competitors treat the 3D
+	view as an afterthought. They intend for users do to most of the design on plan and only
+	use the 3D as a way of seeing what they designed. In <xSN/>, all of the design is in 3D.
+	This has advantages and disadvantages:
+</p>
+
+<xul>
+	<li>
+		Because you design in 3D, <bold>your designs will naturally take advantage of the
+		3rd dimension (elevation)</bold> and will tend to contain more levels and careful placement
+		of elements in 3D than if you design in a 2D plan view. (One of the reasons competing
+		programs tend to produce houses that all look alike is that the houses don't take
+		advantage of elevation.)
+	</li>
+	<li>
+		The competitors often have a <bold>"can't get there from here"</bold> user interface problems.
+		Some features are only available in 2D plan view while others are only available in
+		3D view. This is mostly an annoyance.
+	</li>
+	<li>
+		<bold>Drawing in 3D is slow.</bold> That's why <xLN/> requires such
+		a fast computer.
+	</li>
+</xul>
+
+<p>
+	<bold>If <xSN/>'s drawing is too slow for your computer,</bold> or if you have a really fast computer and
+	want to find ways of slowing it down:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonViewQuality/> button.
+	</li>
+	<li>
+		<bold>Select one of the menu option to best suit your computer's speed,</bold> and the quality
+		requirements you have for the moment. The faster the drawing the lower the quality,
+		and vice versa. You can change this setting at any time.
+	</li>
+</ol>
+
+<p>
+	<bold>Tip:</bold> Drawing will also be faster if there are fewer pixels to draw. The easiest way
+	to do this is to click on the <xButtonSmallWindow/> button, which will reduce the
+	size the the <xSN/> window from the full screen to only part of it.
+</p>
+
+
+<p align=right>
+	<button style=rightarrow href=r:354><bold>Next</bold></button>
+</p>
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:264>Modifying image quality settings</a></li>
+	<li><a href=r:403>Lighting exposure</a></li>
+	<li><a href=r:260>Red-blue 3D glasses</a></li>
+	<li><a href=r:263>Perspective</a></li>
+	<li><a href=r:399>Turning lights on and off</a></li>
+	<li><a href=r:402>The sun, moon, and weather</a></li>
+</xul>

@@ -1,0 +1,111 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Batch-processed text-to-speech"/>
+
+<p>
+	Use this effect to synthesize a voice using text-to-speech, and have it speak
+	tens of hundreds of sentences in a batch process.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Text-to-speech</xtrheader>
+	<tr><td>
+		<bold>Text spoken</bold> - Type in the text spoken here, with a newline for every file to be spoken.
+		<br/>
+		<edit width=85% height=50% defcontrol=true multiline=true wordwrap=false vscroll=textscroll name=soundslike/>
+		<scrollbar orient=vert height=50% name=textscroll/>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Quality</bold> - Tradeoff between sound quality
+			and speed of processing.
+		</td>
+		<td><bold><combobox width=100% cbheight=250 name=ttsquality>
+			<elem name=0>Low quality but fast</elem>
+			<elem name=1>Normal quality</elem>
+			<elem name=2>High quality but slow</elem>
+			<elem name=3>The best, but very slow</elem>
+			<elem name=4>Multipass, extremely slow</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton name=nottspcm checkbox=true style=x>
+				<bold>Disable PCM synthesis</bold><br/>
+				Checking this forces synthesis using additive sine-wave synthesis.
+			</xChoiceButton>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=normalize>
+			<bold>Normalize the volume</bold><br/>
+			If checked, the volume will be normalized.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>File directory and prefix</bold> - This is the <bold>first part</bold> of the filename
+			that the samples will be saved at. For example, if you want to save
+			to "c:\myfiles\tts0003.wav", then type in "c:\myfiles\tts".
+		</td>
+		<td><bold>
+			<edit width=100% maxchars=256 name=file text="c:\tts"/>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton checkbox=true style=x name=autoname>
+			<bold>First "word" in the sentence is the filename and number</bold><br/>
+			If this is checked, then the first word in the sentence will be appended to the prefix
+			and used for the file name (plus an additional .wav). The automatic
+			numbering will be ignored. For example: "conv_0062 This is a test" causes the file to
+			be "c:\ttsconv_0062.wav".
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Number of digits</bold> - Files numbers will be generated starting from 1. You
+			may want to have them rounded out with 0's to make sure the same number
+			of digits are displayed for each file.
+		</td>
+		<td><bold>
+			<combobox width=100% cbheight=150 name=digits>
+				<elem name=1>1 digit, c:\myfiles\tts3.wav</elem>
+				<elem name=2>2 digits, c:\myfiles\tts03.wav</elem>
+				<elem name=3>3 digits, c:\myfiles\tts003.wav</elem>
+				<elem name=4>4 digits, c:\myfiles\tts0003.wav</elem>
+				<elem name=5>5 digits, c:\myfiles\tts00003.wav</elem>
+				<elem name=6>6 digits, c:\myfiles\tts000003.wav</elem>
+			</combobox>
+		</bold></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton accel=enter name=recog>
+			<bold>Do text-to-speech</bold><br/>
+			Press this to synthesize the speech, saving the audio into several wave files
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Voice file</xtrheader>
+	<tr><td>
+		To use text-to-speech you must specify a text-to-speech voice. <xSN/> doesn't
+		come with one, but you may be able to download a text-to-speech voice or
+		create your own using the "mXac NLP Editor".
+		<p/>
+		The current TTS file is:<br/>
+		<xeditoneline enabled=false name=trainfile/>
+		<p/>
+		To change the file, click the following:
+		<p/>
+		<xChoiceButton name=open>
+			<bold>Load in a different text-to-speech voice</bold><br/>
+			Press this to open a TTS voice file.
+			You can create a voice using the "mXac
+			NLP Editor".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+

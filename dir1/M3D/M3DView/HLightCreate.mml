@@ -1,0 +1,42 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Creating lights"/>
+
+<xPageTitle>
+	Creating lights
+</xPageTitle>
+
+
+<p>
+	To create a light (such as a floor lamp, wall sconce, ceiling light,
+	chandelier, etc.):
+</p>
+<ol>
+	<li>
+		<bold>Move your camera</bold> so it's looking at the floor, wall, or ceiling where you want
+		to add the light. If you are adding a ceiling light, you'll need to orient the
+		camera so it's looking up at the ceiling.
+	</li>
+	<li>
+		Press the <xButtonObjNew/> button and select the "Lights" category.
+	</li>
+	<li>
+		Find a light you want and <bold>click on it.</bold>
+	</li>
+	<li>
+		Once you have chosen a light, <bold>click on</bold> the wall, floor, or
+		ceiling where you want the light placed.
+	</li>
+	<p>
+		The light will appear, intially turned off.
+	</p>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:401>Customizing lights</a></li>
+	<li><a href=r:399>Turning lights on and off</a></li>
+</xul>

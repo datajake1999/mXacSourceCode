@@ -1,0 +1,199 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - building blocks (1)"/>
+
+<xPageTitle>
+	Tutorial - building blocks (1)
+</xPageTitle>
+
+<xSectionTitle>How the competitors build houses</xSectionTitle>
+
+<p>
+	Most house design programs let users build you house in the computer using the following
+	steps: <italic>(<xSN/> uses a different approach, but I'm explaining about the other
+	applications to illustrate why I use that approach.)</italic>
+</p>
+
+<ol>
+	<li>
+		Users are shown a blank "blue-print".
+	</li>
+	<li>
+		After selecting the "wall creation" tool, users click the mouse on a point and
+		drag it along to create a wall.
+	</li>
+	<li>
+		Create four connecting walls to form a room. Build several rooms adjacent to one
+		another to construct a house (or at least one level of the house).
+	</li>
+	<li>
+		Once all the walls are built, the user clicks on the "create roof" button that
+		determines which walls are external and then builds flat roof section extending
+		from the edge of the wall in towards the house.
+	</li>
+	<li>
+		That's it. The house is built (except for the windows, doors, cabinets, etc.).
+	</li>
+</ol>
+
+<xSectionTitle>The problems</xSectionTitle>
+
+<p>
+	Designing houses like this has several <bold>advantages</bold>:
+</p>
+
+<xul>
+	<li>
+		It's obviously <bold>very easy</bold> to construct a house with external and internal walls,
+		a roof, and a floor.
+	</li>
+	<li>
+		Any house that a user constructs will end up <bold>looking (more or less) like a
+		contemporary north-American subdivision house.</bold> (I list this as an advantage since
+		most people seem to want this style.) There are two reasons for this: 1) The
+		applications are intentionally written to easily produce the most popular designs.
+		2) Being the easiest designs to create on a computer (which most
+		subdivision designers/architects use), such designs are inevitably the ones
+		produced. In other words: The tool (house design applications) can only easily
+		produce common design styles, and as a result of the applications being widely
+		used, only common design styles are ever created.
+	</li>
+</xul>
+
+<p>
+	But, there are many <bold>disadvantages</bold>:
+</p>
+
+<xul>
+	<li>
+		Unless users really make an effort, <bold>all designs produced by the competitors look more
+		or less the same.</bold>
+	</li>
+	<li>
+		Users are encouraged to design rooms that fit together like a jigsaw pizzle.
+		It's very easy to design non-rectangular rooms (although curved rooms aren't encouraged) such as L-shapes,
+		T-shapes, and worse. These complex room shapes affect the exterior wall shapes of the
+		house significantly: While traditional houses commonly have a rectangular, L-shaped,
+		or T-shaped exterior, <bold>design applications produce exterior walls look they were
+		built on an Etch-a-sketch...</bold> Instead of house's exterior having 4 corners
+		(or 6 for an L-shaped, 8 for T-shaped), they have dozens of corners. <bold>Each corner
+		adds thousands of dollars to the building's cost.</bold>
+	</li>
+	<li>
+		The over-zealous construction of corners, combined with the roof-generation tool's
+		approach of creating one roof section per wall, <bold>creates unimaginably complex
+		roof lines.</bold> This adds even more to the building's cost.
+	</li>
+	<li>
+		The house is <bold>vertically divided into non-overlapping floors.</bold> While some products
+		support split-level homes (with a floor half way between two others) they're
+		not particularly encouraged by the user interface.
+	</li>
+	<li>
+		When the roof's shape is determined by the walls, it becomes very difficult, both
+		technically and from a user-interface design, to add curved roofs. <bold>Most
+		competitors limit roofs and walls to flat sections without curves.</bold> If curved roofs
+		and walls are supported they're usually difficult to get to.
+	</li>
+</xul>
+
+<xDefinition>
+	<bold>Feedback question:</bold> Every design approach has
+	its advantages and disadvantages. <xSN/>'s approach has difficulty
+	reproducing some of the designs easily constructed using wall outlines to produce
+	a roof shape. If you like what the competitors are doing better, please tell me
+	so I know if I need to include it in <xSN/>. E-mail me at <xMyEmail/>.
+</xDefinition>
+
+<xSectionTitle>
+	<xSN/>'s design approach
+</xSectionTitle>
+
+<p>
+	<xLN/> takes a different approach. Instead of starting with the walls,
+	users put together <bold>"building blocks"</bold> which are similar to the large building
+	blocks you played with as a kid.
+</p>
+
+<p>
+	<bold>Each building block is a house in itself with relatively simple structure.</bold> Most of them
+	have four external walls. Of course, a roof (with a variety of shapes) covers the walls.
+	The floor and foundation are also included.
+</p>
+
+<p>
+	Although it will be a basic-looking house, an entire house can be created
+	from just one building block. Most people want a more complex design though,
+	<bold>two or more building blocks can be combined together</bold> to form an interesting looking house.
+	Just like the blocks you had when you were a kid... put enough cubes, rectangles, and
+	triangular pieces together an you can build any house. Convince your parents to buy
+	you a few more sets and you can even build a castle.
+</p>
+
+<p>
+	<bold>This construction technique mimics the way houses were "designed"
+	throughout most of history</bold> (before
+	the last decade when computers
+	are architectural CAD programs came around and encouraged Etch-a-sketch designs.)
+	Traditionally, the people that bought the vacant block of land and built a house on it
+	didn't have much money so they built a box with a roof on top of it. Twenty years later,
+	after they saved up enough cash, they expanded their house, appending another box (usually
+	smaller than the first and behind the first one) with a different roof. Subsequent
+	generations would add living space in the same way until the house would be an
+	aggregate of two to four boxes, each with different roof styles reflective of the
+	generation that build them. (This is, I think, what modern builders are trying to
+	duplicate when they build contemporary sub-division houses with twelve corners and
+	complex roof lines - the "lived-in" look.)
+</p>
+
+<xSectionTitle>Your first building block</xSectionTitle>
+
+<p>
+	It's time to build something:
+</p>
+
+<ol>
+	<li>
+		Click on the <xButtonObjNew/> button.
+	</li>
+	<p>
+		A dialog box will appear showing two columns on the left for the major object
+		category and minor object category. On the right are several images of the
+		different objects in the category.
+	</p>
+	<li>
+		If it isn't already highlighted, select the <bold>"Building blocks"</bold> menu
+		item.
+	</li>
+	<li>
+		In the minor category (just to the right), find the <bold>"House blocks
+		(common)"</bold> sub-menu, and click it.
+	</li>
+	<p>
+		The images to the right will change to show you common house blocks.
+	</p>
+	<li>
+		For the purposes of this tutorial, click on the <bold>"Hip roof, peaked"</bold>
+		building block.
+	</li>
+	<li>
+		The dialog box will disappear and you'll notice that the mouse pointer (while
+		over the display window (aka: grass) will change to a hammer.)
+		This means you're adding an object to the site.
+	</li>
+	<li>
+		<bold>Click on a point in the center of the window.</bold> Within half a second
+		you'll be looking down on the roof of your building block.
+	</li>
+	<li>
+		The <bold>reddish tint,
+		red line, and small boxes at the object's corners tell you that
+		the object is "selected."</bold> Because the next page doesn't need a selected objects,
+		click on the <xButtonSelNone/> button to get rid of the selection. (More on selection buttons later.)
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:258><bold>Next</bold></button>
+</p>
+

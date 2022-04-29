@@ -1,0 +1,108 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Types of microphones"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Types of microphones</xtrheader>
+	<tr>
+		<td>
+			<p>
+				<bold>Your new computer probably came bundled with a small
+				microphone.</bold> Unfortunately, this microphone won't work very well for
+				voice chat. <bold>It won't pick up your voice very well, and
+				will pick up too many sounds from the computer's speakers</bold> as
+				well as background noise.
+			</p>
+			
+			<p>
+				You can use bundled microphone to experiment with voice chat,
+				but if you end up using voice chat, you'll want to
+				get a better microphone.
+			</p>
+			
+			<p>
+				The <bold>best type of microphone</bold> to buy, in order of
+				preference, is:
+			</p>
+			
+			<ol>
+				<li>
+					<bold>USB noise-cancelling headset microphone</bold> - This microphone
+					is a headset that includes a microphone on a boom. The boom
+					gets placed just off to the side of your lips.
+					It plugs into a USB port on your computer, not your sound card.
+				</li>
+				<p>
+					The microphone is preferred because:
+				</p>
+				<ol>
+					<li>
+						<bold>The microphone next to your mouth</bold> will result in good quality recordings
+						of your speech, while minimizing any background noise, especially
+						from your computer speakers.
+					</li>
+					<li>
+						<bold>The noise-cancelling</bold> feature reducing background noise even more.
+					</li>
+					<li>
+						<bold>The USB port</bold> ensures that your microphone will work while your
+						sound card is playing audio. (Not all sound cards can play sound and record at the
+						same time.) USB headset microphones, because they target a more discerning
+						customer, have better recording quality than other microphones.
+					</li>
+					<li>
+						<bold>If audio from your speakers is still affecting voice chat</bold> you
+						can always play the audio through the headset.
+					</li>
+				</ol>
+				<p>
+					Unfortunately, <bold>USB noise-cancelling headset microphones</bold> are
+					expensive. They cost around <bold>$80</bold> US dollars or Euros.
+					Headsets are often <bold>uncomfortable</bold> when worn for long periods,
+					although some manufacturers offer special comfort features.
+				</p>
+				
+				<li>
+					<bold>Noise-cancelling headset microphone</bold> - This is like the
+					USB version except it plugs into the <bold>sound card</bold> on your
+					computer. These microphones are cheaper than their USB cousins,
+					about <bold>$60</bold> US dollars or Euros.
+				</li>
+				
+				<li>
+					<bold>Headset microphon</bold> - Notice that this doesn't have
+					any "noise cancellation". It's much more likely to pick up
+					sound from your speakers than the noise cancelling variety.
+					A low-end headset microphone costs around <bold>$40</bold> US
+					dollars or Euros.
+				</li>
+				
+				<li>
+					<bold>Boom microphone</bold> - A boom microphone is a microphone
+					on a long stick (about 20 cm or 8") that sits on your desktop
+					and points towards you. They are often bundled with computers,
+					or can be purchased for around <bold>$20</bold> US dollars
+					or Euros. Boom microphones won't produce very good recordings,
+					won't filter out the sounds from your speakers,
+					and probably won't have acceptable quality.
+				</li>
+				
+				<li>
+					<bold>Clip-on microphone</bold> - These are small microphones that
+					can be attached to your shirt, or onto your computer's monitor.
+					They work even more poorly than boom microphones.
+				</li>
+			</ol>
+			
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle href="p:1010">
+				<bold>Next</bold><br/>
+				The next page lets you test how well your microphone works and
+				to adjust the volume levels.
+			</xChoiceButton>
+		</td>
+	</tr>
+</xtablecenter>
+
+

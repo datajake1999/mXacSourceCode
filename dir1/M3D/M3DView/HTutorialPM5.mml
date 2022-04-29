@@ -1,0 +1,111 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Vertices 2"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Vertices 2
+</xPageTitle>
+
+<xSectionTitle>Moving vertices</xSectionTitle>
+
+<p>
+	This part of the tutorial will show you how to manipulate the vertices:
+</p>
+
+<ol>
+	<li>
+		To move a vertex, select the <xButtonPMMoveAnyDir/> tool.
+	</li>
+	<li>
+		<bold>Click and drag</bold> on a vertex to move it.
+	</li>
+	<p>
+		The vertex will move as expected. However, other vertices will also move. This
+		is because polygon meshes support "mirroring". Anytime you move one vertex the
+		other ones move so that the cube maintains a mirror image of itself. This
+		is very useful for building objects since objects are often symmetrical.
+	</p>
+	<li>
+		To turn off mirroring, press the <xButtonPMMirror/> button and uncheck the
+		mirror settings from the menu. If you return to using <xButtonPMMoveAnyDir/> then
+		only the selected point will move.
+	</li>
+	<li>
+		The <xButtonPMMoveInOut/> tool lets you drag vertices towards or away from you.
+	</li>
+	<li>
+		The <xButtonPMBevel/> tool creates a bevel on an corner vertex. To use this,
+		<bold>click on a corner vertex and drag</bold> the mouse to the right. You
+		will see the corner increasingly bevelled as you move to the right.
+	</li>
+	<li>
+		If you wish to set a vertex's location exactly, select
+		the <xButtonPMMoveDialog/> tool and <bold>click on</bold> the vertex.
+		A dialog will appear that will let you type in the coordinates for the vertex.
+	</li>
+	<li>
+		By the way, you may want to use <xButtonUndo/> after your experiments so that you
+		keep the cubes shape throughout the tutorial.
+	</li>
+</ol>
+
+<xSectionTitle>Moving groups of vertices</xSectionTitle>
+
+<p>
+	The next set of tools work best if you have several vertices selected:
+</p>
+
+<ol>
+	<li>
+		Choose the <xButtonSelIndividual/> tool and select all the vertices in one
+		of the rectangles on the cube's side. Remember to hold the <bold>control</bold> button
+		down.
+	</li>
+	<li>
+		Select the <xButtonPMMovePerp/> tool.
+	</li>
+	<li>
+		<bold>Click on the mesh and drag</bold> the mouse to the right.
+	</li>
+	<p>
+		The set of points will move in one group. The direction they move will be determined
+		by the average of each points' "normal". The "normal" is a technical term for an
+		imaginary line sticking out perpendicular from the surface.
+	</p>
+	<p>
+		If the rectangle you selected on was on the edge of a side it will move off at an angle
+		because the normals of the points on the edges of the cube point diagonally out.
+		If the rectangle was in the center then the points move straight out because all
+		the normals face in the same direction.
+	</p>
+	<p>
+		You can see what the normal is more clearly if you only have one point selected because
+		it will move in or out according to only its normal.
+	</p>
+	<li>
+		The <xButtonPMMovePerpInd/> tool is similar to the <xButtonPMMovePerp/> tool except
+		that each point moves according to its own normal. The best way to see the difference
+		is to select the 4 vertices or a rectangle on the edge of a side. Try the two
+		tools and see how they behave slightly different.
+	</li>
+	<p>
+		Although similar, each of these tools has its uses. Experience will tell you which
+		tool is best.
+	</p>
+	<li>
+		The <xButtonPMMoveScale/> tool will scale a set of points. <bold>Click on
+		the mesh and drag</bold> the mouse to the right or left see how this behaves.
+	</li>
+	<li>
+		<xButtonPMMoveRotPerp/> will rotate (twist) the set of points around their normal.
+	</li>
+	<li>
+		<xButtonPMMoveRotNotPerp/> will rotate the set of points. Move the mouse left/right
+		will rotate in a different direction than moving the mouse up/down.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:898><bold>Next</bold></button>
+</p>
+

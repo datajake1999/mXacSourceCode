@@ -1,0 +1,43 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Speech recognition training"/>
+
+<p>
+	"Speech recognition training" makes the speech recognition in <xSN/> work
+	better for your voice. The training allows <xSN/> to learn what your
+	voice sounds like, and particularly what each phoneme sounds like.
+	This will make the phoneme start and stop detection for
+	animation lip synchronization and producing a text-to-speech voice.
+</p>
+
+<p>
+	You don't really need to do speech recognition training if you just want
+	to do animation lip synchronization because
+	it will work okay (but not perfectly) without it.
+	You do need to do speech recognition training
+	if you wish to create your own text-to-speech voice because the better <xSN/> can
+	locate the start and stop of phonemes the better text-to-speech will sound.
+</p>
+
+<p>
+	Speech recognition training will have you record 10 to 20 sentences. Using
+	existing speech recognition training, <xSN/> will guess where the phonemes begin
+	and end. However, because it will make some mistakes, you will need to correct
+	the phonemes' beginning and end by hand; this will make speech recognition more
+	accurate for your voice.
+</p>
+
+
+<xbr/>
+
+<xChoiceButton href=newsrtrain>
+	<bold>Create a new speech recognition training file</bold><br/>
+	If you haven't already begun a speech recognition training file for your
+	voice then press this button.
+</xChoiceButton>
+
+<xChoiceButton href=editsrtrain>
+	<bold>Modify an existing speech recognition training file</bold><br/>
+	Press this to modify a speech recognition training file you have already
+	begun.
+</xChoiceButton>

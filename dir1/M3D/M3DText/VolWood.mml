@@ -1,0 +1,140 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Volumetric wood"/>
+
+<p>
+	This page lets you specify information about the tree, such as the ring size.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tree rings</xtrheader>
+	<tr><td>
+		Tree rings, laid down one a year, are what give wood it's appearance. This table
+		lets you adjust the coloration of the rings. The coloration of the ring transitions
+		from lightest (spring growth) to darkest (fall/winter growth). Adjusting these
+		colors will emphasize or de-emphasize the rings.
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton0>
+				<bold>Ring color, 1 (lightest)</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor0/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton1>
+				<bold>Ring color, 2</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor1/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton2>
+				<bold>Ring color, 3</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor2/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton3>
+				<bold>Ring color, 4</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor3/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton4>
+				<bold>Ring color, 5 (darkest)</bold>
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor4/>
+		</td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Tree circumfrence</xtrheader>
+	<tr>
+		<td>
+			<bold>Ring thickness</bold> - Amount of wood the tree puts on in a year, the
+			smaller this number the finer the grain.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringthickness/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variablity amount</bold> - Tree rings do not form in perfect circle. This
+			affects how variable the size is. Use a value between 0 and 1, 0 being a perfectly
+			round tree trunk.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoisescale3/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variablity detail</bold> - Tree rings do not form in perfect circle. This
+			affects how variable the detail is (in meters). Smaller number create smaller (in
+			size) variations.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoisescale0/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variablity smoothness</bold> - The higher this number the rougher the tree
+			ring variations will be (and the longer the drawing time). Use a number from 1 to 5.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoiseiter/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Variablity decay</bold> - The higher this number the rougher the tree
+			ring variations will be (and the longer the drawing time). Use a number from 0 to 1.
+		</td>
+		<td><edit maxchars=64 width=100% name=ringnoisedecay/></td>
+	</tr>
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Material</xtrheader>
+	<tr>
+		<td>
+			<bold>Change material</bold> - Affects the surface's glossiness and
+			transparency. <italic>(Some settings may be overridden by details
+			within the texture.)</italic>
+		</td>
+		<td><xcombomaterial width=100% name=material/></td>
+	</tr>
+	<tr><td>
+		<xchoicebutton name=editmaterial>
+			<bold>Modify custom material</bold><br/>
+			If you select the "Custom" material from above, then press this button to
+			hand-modify the glossiness, transparency, translucency, and self-illumination.
+		</xchoicebutton>
+	</td></tr>
+</xtablecenter>
+

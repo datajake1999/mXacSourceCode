@@ -1,0 +1,32 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Building location and style"/>
+
+<xPageTitle>
+	Building location and style
+</xPageTitle>
+
+<p>
+	The "Locations" setting dialog lets you tell <xSN/> some general information
+	about where you're building and the type of structure you're building.
+	This includes: latitude (important for the sun), climate (building shape),
+	typical roofing material, typical external wall material, typical floor material,
+	where floor levels are, and whether you're using metric of English
+	measurement. <bold>I strongly suggest that you visit this dialog</bold> for
+	every new file.
+</p>
+
+<p>
+	To visit the dialog:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonLocale/> button.
+	</li>
+	<li>
+		In the "Location settings" dialog that appears, go through each of
+		the <bold>"Building information"</bold>, <bold>"Levels/floors"</bold>, and <bold>"Metric
+		or English measurement"</bold> pages.
+	</li>
+</ol>

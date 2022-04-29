@@ -1,0 +1,85 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Review recording"/>
+
+
+<p>
+	Please review the <big><bold>"<<<TEXT>>>"</bold></big> recording:
+</p>
+
+<ol>
+	<li>
+		<bold><a href=playsynth>Play synthesized</a></bold>
+	</li>
+	<li>
+		Test word start/stop: <bold><<<$WORDWAVE>>></bold>
+	</li>
+	<li>
+		Test phoneme start/stop (optional): <bold><<<$PHONEWAVE>>></bold>
+	</li>
+</ol>
+
+<table width=100% border=0 innerlines=0><tr>
+	<td align=left><button name=edit><bold>Edit</bold></button></td>
+	<td align=center><button href=rerecord><bold>Re-record</bold></button></td>
+	<td align=right><button href=keep><bold>Keep this</bold></button></td>
+</tr></table>
+
+<xbr/>
+<xSectionTitle>Instructions</xSectionTitle>
+
+<p>
+	Please review the sentence you just spoke to make sure it recorded alright:
+</p>
+
+<ol>
+	<li>
+		Press the <bold>"Play synthesized"</bold> link to hear what the sentence
+		will sound like when synthesized using TTS. (This is a sample of what
+		"Transplanted prosody" might sound like, which will sound better than
+		general synthesis.) The synthesized version should sound almost as good
+		as the original. Look for problems with the pitch
+		not matching yours, or bursts of noise. If these occur then re-record then sentence
+		because they will mess up the text-to-speech voice.
+	</li>
+	<li>
+		<bold>Click on all the words</bold> in the "Test word start/stop" section.
+		If any of the words are incorrectly matched to your recording then you will either
+		need to re-record or press "Edit" and fix the problem.
+	</li>
+	<li>
+		Optionally, <bold>click on all the phonemes</bold> in the "Test phoneme start/stop" section.
+		If any of the phonemes are incorrectly matched to your recording then you
+		can re-record or press "Edit" and fix the problem. As a general rule, you can ignore
+		errors in phoneme start/stops since with multiple recordings of each phoneme the
+		TTS analysis will take the best phoneme out of the lot, usually ignoring errors.
+	</li>
+	<li>
+		Press <bold>"Keep"</bold>, <bold>"Re-record"</bold>, or <bold>"Edit"</bold>.
+	</li>
+	<li>
+		In time you'll subconsciously modify your speaking style after speech recognition
+		mis-marks a few phonemes; You'll end up speaking more clearly. By the time you
+		have recorded a few hundred sentences you'll just playback every third word to make sure
+		that speech recognition has worked, and won't bother listening to individual phonemes
+		or the synthesized voice. (Though you may use the phoneme transcription to determine if you spoke
+		a word with the correct pronunciation.)
+	</li>
+</ol>
+
+
+<xChoiceButton style=righttriangle name=playorig>
+	<bold>Play original recording</bold><br/>
+	Normally you don't need to playback the original, but this button is available just
+	in case.
+</xChoiceButton>
+
+
+<xChoiceButton style=righttriangle name=dontreviewmore>
+	<bold>Don't review any more recordings</bold><br/>
+	If you press this, the recording will be accepted, and no more recordings will be reviewed.
+	<p/>
+	Only press this if speech recognition seems to be doing a good job identifying
+	the word and phoneme locations.
+</xChoiceButton>
+

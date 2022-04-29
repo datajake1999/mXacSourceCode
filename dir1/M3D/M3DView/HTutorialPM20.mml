@@ -1,0 +1,80 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Polygon mesh tutorial - Cut out clothes"/>
+
+<xPageTitle>
+	Polygon mesh tutorial - Cut out clothes
+</xPageTitle>
+
+<p>
+	The "Cut out clothes" mode ("Tailor" mode for short) makes it easier to create clothing for your characters.
+	Use this mode only after you have finished with all the morphs and bone weighting
+	for your characters. If you modify your character's morphs or bone weights after
+	you have created your clothing you may run into problems where the clothing does
+	not move in sync with your character.
+</p>
+
+<p>
+	The tailor mode lets you paint the sides of the polygon mesh (your character's body) that
+	will be covered by an article of clothing. This then extrudes it slightly (since clothes
+	never rest directly against a body) and copies the selected area into a new polygon
+	mesh.
+</p>
+
+<p>
+	In the process it also copies all the morphs and bone bone weights. This is
+	the most useful feature of the tailor mode because when the clothing has all the bone
+	weights and morphs of the main character the clothing will move in sync with the
+	character as the bones are moved.
+</p>
+
+
+<p>
+	Below is sample usage assuming that the polygon mesh is a character:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonBrush64/> tool (or another brush).
+	</li>
+	<li>
+		Make sure that left/right mirroring is turned on in <xButtonPMMirror/> since
+		automatic mirroring will make your life easier.
+	</li>
+	<li>
+		<bold>Click and drag</bold> the mouse over the upper torso and the upper
+		arms to select the area the shirt will cover. You will see the selected polygons
+		highlighted in red.
+	</li>
+	<li>
+		If you accidentally paint something you shouldn't then hold the <bold>control</bold> key
+		down and paint. This will remove the selection.
+	</li>
+	<li>
+		When you've finished selecting the area covered by the clothing,
+		select the <xButtonPMTailorNew/> tool.
+	</li>
+	<li>
+		<bold>Click on the polygon mesh and drag</bold> the cursor to the right; you
+		will see the selected are extrude out a slight amount.
+	</li>
+	<li>
+		When you have extruded the clothing about 0.5 cm (or whatever you
+		choose), <bold>release</bold> the mouse button.
+	</li>
+	<li>
+		<bold>Return</bold> to the main world view to see your new article of clothing.
+		It will be a blue polygon mesh.
+	</li>
+	<li>
+		Use <xButtonObjShowEditor/> to pull up a polygon mesh editor for it. Change
+		the color, add wrinkles, or whatever you wish. Because the polygon mesh retains
+		the morphs and bone weights of the character it was created from, the clothing
+		will move along with the character. (Although you may need to do some tweaking.)
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:892><bold>Next</bold></button>
+</p>
+

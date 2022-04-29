@@ -1,0 +1,68 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Select a voice to mimic"/>
+
+<xtablecenter width=80%>
+	<xtrheader>Select a voice to mimic</xtrheader>
+	<tr>
+		<td>
+			<p>
+				You will need a <bold>recording of the voice you
+				wish to convert your voice into</bold>. This recording
+				should be:
+			</p>
+			
+			<ul>
+				<li>
+					<bold>It should contain one or two sentences of speech,
+					and be about 10 seconds long.</bold> A longer recording is
+					not an issue, but a shorter one might make it more
+					difficult to mimic the voice.
+				</li>
+				<li>
+					The speech should be <bold>moderately slow</bold> so the
+					vowels are easily heard. The speech should be clearly
+					annunciated; very rapid speech won't work well.
+				</li>
+				<li>
+					<bold>The recording should be free of backround
+					noise and hiss.</bold>
+				</li>
+				<li>
+					<bold>The speaker should use the same dialect/accent as
+					yours.</bold> If the dialect/accent is different than the conversion
+					will be difficult because even though you may speak
+					the same sentence, you won't be using the same sounds,
+					especially for vowels.
+				</li>
+				<li>
+					<bold>The recording should be at least 22 kHz sampling rate;</bold> which
+					basically means it has a high quality. If you provide a recording
+					with a lower sampling rate you will be notified.
+				</li>
+			</ul>
+		</td>
+		<td>
+			<xChoiceButton style=righttriangle name=open>
+				<bold>Open</bold><br/>
+				Opens a recording. If you haven't recorded any voices to mimic, you
+				can find some sample ones in the MIF directory.
+			</xChoiceButton>
+			<xChoiceButton style=righttriangle name=skip>
+				<bold>Proceed without a voice to mimic</bold><br/>
+				You can procede without a voice to mimic and just "wing it". You
+				will find creating a realistic voice more difficult though.
+			</xChoiceButton>
+			<p>
+				<bold>Tip:</bold> MIF comes with an application
+				called <bold>M3DWave.exe</bold>, located in the directory where
+				you installed MIF. You can use this application to record
+				a voice off an audio CD, or from the sound card's line-in.
+				Alternatively, your sound card probably came with a similar
+				program.
+			</p>
+		</td>
+	</tr>
+</xtablecenter>
+
+

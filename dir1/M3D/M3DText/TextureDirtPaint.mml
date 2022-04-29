@@ -1,0 +1,81 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Dirt or paint"/>
+
+<p>
+	This page lets you apply a layer of paint to the texture - which basically smooths out
+	some of the bumps, changes the color, and specularity. Alternatively, you can add dirt,
+	which can be thought of as thinned down paint (somewhat transparent) and not shiny.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Sample</xtrheader>
+	<tr><td>
+	<p align=center>
+		<bold>Click on</bold> the image to redraw it using any changes you made.
+		<br/>
+		<image width=204 height=204 border=2 href=refresh hbitmap=<<<HBITMAP>>> name=image/>
+	</p>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>General</xtrheader>
+	<tr><td>
+		<xchoicebutton style=x checkbox=true name=turnon>
+			<bold>Use this effect</bold><br/>
+			This effect will only be used if this box is checked.
+		</xchoicebutton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Filter size</bold> - Size of the filter (in meters). Basically,
+			how much the paint/dirt smooths out the surface. Larger numbers smooth
+			things out more.
+		</td>
+		<td><edit maxchars=64 width=100% name=filtersize/></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=colorbutton>
+				<bold>Paint/dirt color</bold><br/>
+				Click this to change the color of the dirt/paint.
+			</xChoiceButton>
+		</td>
+		<td>
+			<xStatusColor width=100% name=colorcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency at thinnest</bold> - Transparency at the paint/dirt's thinnest
+			point.
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=transatnone/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Transparency at thickess A</bold> - Transparency of the paint/dirt
+			if it is thickness A (see below).
+		</td>
+		<td><scrollbar orient=horz width=100% min=0 max=100 pos=50 name=transata/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Thickness A</bold> - How thick thick is "A", in meters?
+		</td>
+		<td><edit maxchars=64 width=100% name=aheight/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Paint/dirt shininess</xtrheader>
+	<tr>
+		<td>
+			<bold>Shininess</bold> - Select a material whose shininess is closest to
+			the paint's/dirt's.
+		</td>
+		<td><xcombomaterial2 width=100% name=material/></td>
+	</tr>
+</xtablecenter>
+

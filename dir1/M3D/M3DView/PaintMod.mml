@@ -1,0 +1,151 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Modify tracing paper"/>
+
+<xChoiceButton name=delete href=delete>
+	<bold>Remove this tracing paper</bold><br/>
+	Deletes the current tracing paper from the palette.
+</xChoiceButton>
+
+
+<!xComboColor>
+	<bold><combobox width=100% cbheight=150 MACROATTRIBUTE=1>
+		<elem name=0>None</elem>
+		<elem name=1><font color=#800000>Red</font></elem>
+		<elem name=2><font color=#008000>Green</font></elem>
+		<elem name=3><font color=#000080>Blue</font></elem>
+	</combobox></bold>
+</xComboColor>
+
+<p>
+	The following settings use the color of the image to produce bumps, specular areas,
+	transparent areas, or glow. Use these settings to produce a bump, specular, etc.
+	texture from an ordinary bitmap.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Bump-map modifications</xtrheader>
+	<tr>
+		<td>
+			<bold>Bump color</bold> - This is the color from the original image that
+			affects the bump height of the surface. Brighter colors are higher.
+		</td>
+		<td><xcombocolor name=colorasbump/></td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Bump range</bold> - The distance between the highest and lowest
+			possible bumps. (Only used if the "Bump color" is set.)
+		</td>
+		<td><edit width=100% maxchars=32 name=bumpheight/></td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=bumpadds>
+			<bold>Painting adds bump height</bold><br/>
+			Normally, when a tracing paper image containing a bump map is used to paint
+			onto a surface, the bump height of the surface is averaged in with the
+			bump height of the tracing paper. If checked, the bump height gets added or
+			subtracted, allowing the height to be added/subtracted rather than averaged.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency-map modifications</xtrheader>
+	<tr>
+		<td>
+			<bold>Transparency color</bold> - This is the color from the original image that
+			affects how transparent the surface is. Brighter colors are more transparent.
+			Black is opaque.
+		</td>
+		<td><xcombocolor name=colorastrans/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Transparency from the color image</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=transuse>
+			<bold>Use transparency</bold><br/>
+			If checked, then any color in the image that matches the following color will
+			be made transparent. Usually this color will be a white or black background.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<xChoiceButton style=righttriangle name=changetrans>
+				<bold>Change transparency color</bold><br/>
+				This is the color that is turned transparent.
+			</xChoiceButton>
+		</td>
+		<td valign=center>
+			<xStatusColor width=100% name=transcolor/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<bold>Color match</bold> - The further to the left, the more exact the color
+			match must be for it to be made transparent. Moving the slider to the right
+			will allow close matches to be made transparent.
+		</td>
+		<td valign=center>
+			<scrollbar orient=horz min=0 max=100 name=transdist/>
+		</td>
+	</tr>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=paintignoretrans>
+			<bold>Don't transfer over transparent surfaces</bold><br/>
+			If a surface on the tracing paper is transparent then whatever color, bump,
+			glow, or transparency is in the region <bold>won't</bold> be tranferred
+			when painting. Use this to mask out portions of the image (such as around text)
+			that you don't want to transfer.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Color-map modifications</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=nocolor>
+			<bold>Don't use the original color when painting</bold><br/>
+			If checked, the color from this tracing paper will <bold>not</bold> be painted
+			onto the surface even though other maps (bumps, specular, glow, etc.) will be.
+			For example: Check this if you are using the colors from a JPEG file as a glow
+			map, but you don't wish to affect the color of the surface.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Glow-map modifications</xtrheader>
+	<tr><td>
+		<xChoiceButton style=x checkbox=true name=colorasglow>
+			<bold>Use the original color to paint glow</bold><br/>
+			If checked, painting will affect glow (as well as the normal surface) so that
+			objects emit their own light.
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Specularity-map (glossiness) modifications</xtrheader>
+	<tr>
+		<td>
+			<bold>Specularity color</bold> - This is the color from the original image that
+			affects how glossy the surface is. Brighter colors are shinier.
+		</td>
+		<td><xcombocolor name=colorasspec/></td>
+	</tr>
+</xtablecenter>
+
+<xtablecenter width=100%>
+	<xtrheader>Contents</xtrheader>
+	<tr><td>
+		This tracing paper is <bold><<<TPSIZE>>></bold>, and contains the following maps:
+		<p/>
+		<xul>
+			<<<$TPCONTENTS>>>
+		</xul>
+	</td></tr>
+</xtablecenter>
+

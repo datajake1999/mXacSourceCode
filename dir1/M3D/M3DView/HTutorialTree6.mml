@@ -1,0 +1,57 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Tutorial - Automatic tree/branch generation"/>
+
+<xPageTitle>
+	Tutorial - Automatic tree/branch generation
+</xPageTitle>
+
+<p>
+	<xSN/> provides a tool that lets you automatically generate branches (or even whole
+	trees) by dragging a few sliders around. It's a quick way to produce a tree, but
+	has it's problems: The results are difficult to control, and in the end you may have
+	to fine-tune some of its branch and leaf placements yourself.
+</p>
+
+<p>
+	To automatically create a tree/branch:
+</p>
+
+<ol>
+	<li>
+		Select the <xButtonObjDialog/> tool and <bold>click on</bold> the branch object
+		in the object editor.
+	</li>
+	<li>
+		Scroll to the bottom of the "Branch settings" page and press
+		the <bold>"Procedural branch/tree generator"</bold>.
+	</li>
+	<p>
+		<bold>Warning:</bold> Pressing this button will wipe out any changes you have
+		made to your branch. For the purposes of your tutorial you probably don't care,
+		but watch out when you're building a tree for real. (Undo will work though, so
+		don't worry too much.)
+	</p>
+	<li>
+		The "Procedural branch/tree generator" page will appear. It's fairly well documented,
+		although in some cases, no amount of documentation will be able to convey
+		exactly what a slider does. The best way to learn is to play around. I
+		recommend you do just that: <bold>Fiddle with the sliders</bold> until you have
+		something that looks like a branch. Make sure the <bold>"Initial angle"</bold> is
+		adjusted to the angle that a "typical" branch would leave the trunk.
+	</li>
+	<li>
+		When you finish, <bold>close</bold> the dialog.
+	</li>
+	<li>
+		<xButtonSave/> your branch object.
+	</li>
+	<li>
+		<xButtonClose/> the object editor.
+	</li>
+</ol>
+
+<p align=right>
+	<button style=rightarrow href=r:637><bold>Next</bold></button>
+</p>
+

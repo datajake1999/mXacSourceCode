@@ -1,0 +1,292 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Text-to-speech"/>
+
+<p>
+	Use this effect to synthesize a voice using text-to-speech.
+</p>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Text-to-speech</xtrheader>
+	<tr><td>
+		<bold>Text spoken</bold> - Type in a transcription of the the audio recording here.
+		<br/>
+		<edit width=85% height=50% defcontrol=true multiline=true wordwrap=true vscroll=textscroll name=soundslike/>
+		<scrollbar orient=vert height=50% name=textscroll/>
+		
+		<br/>
+		<p align=right>
+			<button style=x checkbox=true name=tagged><bold>Tagged</bold> (See below)</button>
+		</p>
+	
+		<xChoiceButton accel=enter name=recog>
+			<bold>Do text-to-speech</bold><br/>
+			Press this to synthesize the speech into the current wave.
+		</xChoiceButton>
+	</td></tr>
+	<tr>
+		<td>
+			<bold>Quality</bold> - Tradeoff between sound quality
+			and speed of processing.
+		</td>
+		<td><bold><combobox width=100% cbheight=250 name=ttsquality>
+			<elem name=0>Low quality but fast</elem>
+			<elem name=1>Normal quality</elem>
+			<elem name=2>High quality but slow</elem>
+			<elem name=3>The best, but very slow</elem>
+			<elem name=4>Multipass, extremely slow</elem>
+		</combobox></bold></td>
+	</tr>
+	<tr>
+		<td>
+			<xChoiceButton name=nottspcm checkbox=true style=x>
+				<bold>Disable PCM synthesis</bold><br/>
+				Checking this forces synthesis using additive sine-wave synthesis.
+			</xChoiceButton>
+		</td>
+	</tr>
+	
+</xtablecenter>
+
+
+<xtablecenter width=100%>
+	<xtrheader>Voice file</xtrheader>
+	<tr><td>
+		To use text-to-speech you must specify a text-to-speech voice. <xSN/> doesn't
+		come with one, but you may be able to download a text-to-speech voice or
+		create your own using the "mXac NLP Editor".
+		<p/>
+		The current TTS file is:<br/>
+		<xeditoneline enabled=false name=trainfile/>
+		<p/>
+		To change the file, click the following:
+		<p/>
+		<xChoiceButton name=open>
+			<bold>Load in a different text-to-speech voice</bold><br/>
+			Press this to open a TTS voice file.
+			You can create a voice using the "mXac
+			NLP Editor".
+		</xChoiceButton>
+	</td></tr>
+</xtablecenter>
+
+
+<xbr/>
+<xSectionTitle>Tagged text</xSectionTitle>
+
+<p>
+	If you have the "Tagged" button checked, then the TTS voice will interpret the
+	following text "tags". (For those technical people out there, the tags are
+	very close to HTML or XML.)
+</p>
+
+<p>
+	Make sure to start and finish the tags properly; All tags must have a <bold>"&lt;tag name&gt;"</bold>
+	section followed by a <bold>"&lt;/tag name&gt;"</bold>. If you forget one then the
+	text won't speak.
+</p>
+
+<xTableCenter width=100%>
+	<xtrheader>Tags</xtrheader>
+	<tr>
+		<td width=33%>
+			<bold>&lt;Break time="</bold>time<bold>"&gt;</bold>
+		</td>
+		<td width=66%>
+			Pauses the speaking for awhile. "Time" can be a number followed by "s" to indicate
+			second, or followed by "ms" for milliseconds. "Time" can also be
+			"none", "x-small", "small", "medium", "large", or "x-large".
+		</td>
+	</tr>
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;Emotion </bold>attributes<bold>&gt;</bold> Words <bold>&lt;/Emotion&gt;</bold>
+		</td>
+		<td width=66%>
+			Adds some emotion to the text-to-speech.
+			The "attributes" can be one or more of the following:
+			<p/>
+			<xul>
+				<li>
+					<bold>Afraid="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to sound
+					afraid.
+				</li>
+				<li>
+					<bold>Drunk="</bold>X<bold>"</bold> - X is 0..100. Creates a voice
+					that sounds drunk.
+				</li>
+				<li>
+					<bold>Happy="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to speak with
+					a happy voice.
+				</li>
+				<li>
+					<bold>Quiet="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to speak quietly.
+				</li>
+				<li>
+					<bold>Sad="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to speak
+					with a sad voice.
+				</li>
+				<li>
+					<bold>Shout="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to shout.
+				</li>
+				<li>
+					<bold>Whisper="</bold>X<bold>"</bold> - X is 0..100. Causes the voice to whisper.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;Emphasis level=</bold>level<bold>&gt;</bold> Word <bold>&lt;/Emphasis&gt;</bold>
+		</td>
+		<td width=66%>
+			Emphasizes the word (or words) in the tag. The possible values for "level" are
+			"strong", "moderate", "none", or "reduced".
+			<p/>
+			Alternatively, the tag can have attributes for:
+			<p/>
+			<xul>
+				<li>
+					<bold>DurAbs=</bold>X - Sets the duration in seconds.
+				</li>
+				<li>
+					<bold>DurRel=</bold>X - Sets the duration relative to the speaking voice's
+					average. If X=1.0 then use the average, X=2.0 then twice as long, etc.
+				</li>
+				<li>
+					<bold>PitchAbs=</bold>X - Sets the absolute pitch. X is the pitch in Hz.
+				</li>
+				<li>
+					<bold>PitchRel=</bold>X - Sets the pitch relative to the speaking voice's
+					average. If X=1.0 then use the average, X=2.0 then twice the pitch, etc.
+				</li>
+				<li>
+					<bold>VolAbs=</bold>X - Sets the volume to an absolute level.
+					Numbers between 20 and 50 are typical.
+				</li>
+				<li>
+					<bold>VolRel=</bold>X - Sets the volume relative to the speaking voice's
+					average. If X=1.0 then use the average, X=2.0 then twice the volume, etc.
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;Phoneme ph="</bold>phonemes<bold>"&gt;</bold> Word <bold>&lt;/Phoneme&gt;</bold>
+		</td>
+		<td width=66%>
+			Rather than using the text-to-speech engine's lexicon for pronouncing the word,
+			this uses the pronunciation in the "ph" string. The phonemes are those
+			used by the TTS voice, and will vary with each voice. For example:
+			<p/>
+			<bold>&lt;Phoneme ph="hh iy1 l ow0"&gt;Hello&lt;/Phoneme&gt;</bold> - Will speak "he-low"
+			instead of "hell-o".
+			<p/>
+			If you mistype a phoneme then the word won't be spoken at all.
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;POS major="</bold>major<bold>"&gt;</bold> Word <bold>&lt;/POS&gt;</bold>
+		</td>
+		<td width=66%>
+			Indicates the word's part-of-speech. If the POS is incorrectly guessed by the
+			text-to-speech then this will improve the prosody and correct some prounciations that
+			are POS dependent. (Such as "invalid" which is "in-vah-id" or "in-vuh-lid" depending
+			upon the POS.)
+			<p/>
+			The part of speech ("major") can be: "noun" (or "n"), "pronoun" (or "pron"),
+			"adjective" (or "adj"), "preposition" (or "prep"), "article" (or "art"),
+			"verb" (or "v"), "adverb" (or "adv"), "auxiliary verb" (or "aux v"),
+			"conjunction" (or "conj"), or "interjection" (or "interj").
+		</td>
+	</tr>
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;Prosody </bold>attributes<bold>&gt;</bold> Words <bold>&lt;/Prosody&gt;</bold>
+		</td>
+		<td width=66%>
+			This affects the prosody (pitch, duration, and volume) of the words within the
+			"Prosody" tags. The "attributes" can be:
+			<p/>
+			<xul>
+				<li>
+					<bold>Pitch="</bold>X<bold>"</bold> - Sets the base pitch of the voice.
+					X can be the frequency followed by "Hz" (such as "120hz"), a change (+/-)
+					to the frequency (such as "+16Hz"), a percent of the default frequency
+					("88%"), a change in percent ("+16%"), or a change in semitones followed by
+					"st" (+4st). X can also be "x-high", "high", "medium", "low", "x-low", or "default".
+				</li>
+				<li>
+					<bold>Range="</bold>X<bold>"</bold> - Sets the base pitch range of the voice.
+					X can be a percent of the default range
+					("88%"), or a change in percent ("+16%")
+					X can also be "x-high", "high", "medium", "low", "x-low", or "default".
+				</li>
+				<li>
+					<bold>Rate="</bold>X<bold>"</bold> - Sets the speaking rate of the voice.
+					X can be the words-per-minute (such as "134"), a change (+/-)
+					to the words-per-minute (such as "+16"), a percent of the default WPM
+					("88%"), or a change in percent ("+16%").
+					X can also be "x-fast", "fast", "medium", "slow", "x-slow", or "default".
+				</li>
+				<li>
+					<bold>Volume="</bold>X<bold>"</bold> - Sets the volume rate of the voice.
+					X can be a number (such as "150") where 100 is the default volume, a change (+/-)
+					to the volume (such as "+16"), a percent of the default volume
+					("88%"), or a change in percent ("+16%").
+					X can also be "x-loud", "loud", "medium", "soft", "x-soft", "silent", or "default".
+				</li>
+			</xul>
+		</td>
+	</tr>
+
+	<tr>
+		<td width=33%>
+			<bold>&lt;SubVoice </bold>attributes<bold>/&gt;</bold>
+		</td>
+		<td width=66%>
+			Causes the current text to use the given sub-voice or a mix of sub-voices.
+			The "attributes" can be:
+			<p/>
+			<xul>
+				<li>
+					<bold>SubVoice="</bold>X<bold>"</bold> - X can be 1 through 9, using that
+					subvoice entirely. If this isn't specified then the mix settings are used.
+				</li>
+				<li>
+					<bold>MixVoice="</bold>X<bold>"</bold> - A number. Each digit of the number
+					if a sub-voice number that's blended together to make up the voice. For
+					example: "668" mixes two parts voice 6 and one part voice 8.
+				</li>
+				<li>
+					<bold>MixPros="</bold>X<bold>"</bold> - Like MixVoice except this mixes the
+					prosody of the voice.
+				</li>
+				<li>
+					<bold>MixPron="</bold>X<bold>"</bold> - Like MixVoice, except this mixes the
+					pronunciations of the voice. At the moment, only the least-significant digit
+					is used... which means there's no mixing.
+				</li>
+			</xul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width=33%>
+			<bold>&lt;TransPros&gt;</bold> Transplanted prosody <bold>&lt;/TransPros&gt;</bold>
+		</td>
+		<td width=66%>
+			The "TransPros" tag is automatically generated by the transplanted prosody tool.
+			In general, you won't be typing this in by hand, so no documentation is included.
+		</td>
+	</tr>
+</xTableCenter>

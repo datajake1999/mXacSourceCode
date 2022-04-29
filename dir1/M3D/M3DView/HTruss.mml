@@ -1,0 +1,47 @@
+<?template resource=502?>
+<?Include resource=500?>
+<PageInfo title="Trusses"/>
+
+<xPageTitle>
+	Trusses
+</xPageTitle>
+
+<p>
+	<xSN/> provides the "truss" object that makes it easy to add realistic looking
+	trusses.
+</p>
+
+<p>
+	To add a truss to your house:
+</p>
+
+<ol>
+	<li>
+		Press the <xButtonObjNew/> button.
+	</li>
+	<li>
+		<bold>Find</bold> the pre-defined truss that most closely meets your
+		needs. You can find them in "Trusses" under "Building blocks".
+	</li>
+	<li>
+		<bold>Add</bold> it to your house by clicking on the ceiling where you want it.
+	</li>
+	<li>
+		Move the truss to the approriate placing using the <xButtonMoveNSEWUD/> tool.
+	</li>
+	<li>
+		Reshape the truss using the <xButtonObjControlNSEWUD/> tool to move its control points around.
+	</li>
+	<li>
+		You can change the truss's curvature, or number of braces by
+		using the <xButtonObjDialog/> tool.
+	</li>
+</ol>
+
+
+
+<xbr/>
+<xSectionTitle>See also...</xSectionTitle>
+<xul>
+	<li><a href=r:472>Framing (studs, beams, joists, purlins)</a></li>
+</xul>

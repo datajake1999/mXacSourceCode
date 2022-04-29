@@ -1,0 +1,81 @@
+<?template resource=501?>
+<?Include resource=500?>
+<PageInfo index=false title="Levels"/>
+
+<p>
+	Use this page to tell <xSN/> what the elevation of the levels (aka: floors) of the
+	building block are. It's recommended that you <bold>do not change level elevations after
+	populating the stories with windows, doors, furniture, etc.</bold> Because <xSN/> is
+	not always entirely sure what belongs to a floor, changing levels may cause
+	objects to be placed incorrectly, requiring you move all the objects later.
+</p>
+
+<p>
+	Because accidentally changing the levels may cause you difficulties, unlike other
+	pages, you must press the "Commit" button at the bottom of the page to actually
+	use the new settings.
+</p>
+
+<xtablecenter width=100%>
+	<xtrheader>Levels</xtrheader>
+	<tr>
+		<td width=66%>
+			<bold>Basement</bold> - If the structure has a basement (see foundations) then
+			this is the elevation of the basement. (Basements are usually at negative
+			elevations.)
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level0/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Ground floor</bold> - The elevation of the lowest floor. In the case
+			of a cement pad this is pretty close to 0 (ground level). However, for any
+			other type of foundation ground level can be any value.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level1/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>1st floor</bold> - Elevation of the second-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level2/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>2st floor</bold> - Elevation of the third-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level3/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>3rd floor</bold> - Elevation of the fourth-lowest floor.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=level4/></bold>
+		</td>
+	</tr>
+	<tr>
+		<td width=66%>
+			<bold>Subsequent floors</bold> - If the building block is tall enough,
+			extra floors will be added this many meters (or feet) in elevation
+			apart.
+		</td>
+		<td width=33%>
+			<bold><edit maxchars=32 width=100% selall=true name=upperlevels/></bold>
+		</td>
+	</tr>
+
+</xtablecenter>
+
+<xchoicebutton name=commit>
+	<bold>Commit</bold><br/>
+	Click this to incorporate any changes you've made.
+</xchoicebutton>
